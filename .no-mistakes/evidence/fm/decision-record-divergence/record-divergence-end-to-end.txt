@@ -1,0 +1,67 @@
+END-TO-END RECORD DIVERGENCE DEMONSTRATION
+Synthetic reconstruction of the 2026-08-06 user-visible failure shape.
+
+=== Open held records before presentation ===
+  id: sample-route-call
+  title: "Choose route: north or south"
+  state: queued
+  held: yes
+  hold_kind: captain
+  id: sample-standalone-call
+  title: Adopt the naming convention
+  state: queued
+  held: yes
+  hold_kind: captain
+  id: sample-transfer-call
+  title: Choose retention window
+  state: queued
+  held: yes
+  hold_kind: captain
+  id: sample-open-call
+  title: Choose refresh cadence
+  state: queued
+  held: yes
+  hold_kind: captain
+
+=== Status journal before presentation ===
+working: report drafted
+needs-decision [key=sample-route-call]: north or south
+resolved [key=sample-route-call]: answered: north
+needs-decision [key=sample-transfer-call]: choose retention window
+captain-held [key=sample-transfer-call]: tracked by sample-transfer-call
+needs-decision [key=sample-open-call]: choose refresh cadence
+
+=== Firstmate wake presentation (actual fm-wake-drain.sh output) ===
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+sample-review [key=sample-open-call] needs-decision: choose refresh cadence
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+RECORD DIVERGENCE (answered in the status log, still held in the backlog - nothing was closed automatically):
+sample-route-call [key=sample-route-call] reads resolved in sample-review's status log but is still held for the captain: Choose route: north or south
+RECORD DIVERGENCE: reconcile each one - record the captain's own words with bin/fm-captain-hold.sh answer <task> --decision-file <path>, or re-open the status decision when that resolution was not the captain's word.
+
+=== Read-only guard rows (actual fm-captain-hold.sh diverged output) ===
+sample-route-call	sample-review	sample-route-call	Choose route: north or south
+
+=== State after presentation ===
+  id: sample-route-call
+  title: "Choose route: north or south"
+  state: queued
+  held: yes
+  hold_kind: captain
+backlog unchanged: yes
+status journal unchanged: yes
+diverged rows emitted: 1
+ (only sample-route-call; standalone/no-route, captain-held transfer, and still-open states are absent)
+
+=== Slow-backlog timeout demonstration ===
+Fixture: tasks-axi list sleeps 5 seconds; FM_DIVERGENCE_TIMEOUT=1.
+Observed wake-drain elapsed seconds: 2.702
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+sample-timeout [key=still-visible] needs-decision: this wake must still be presented
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+Result: wake presentation remained available and the timed-out divergence probe stayed silent.
+
+=== Active-home boundary demonstration ===
+Guard output bytes with FM_HOME=home-a and FM_STATE_OVERRIDE=home-b/state: 0
+Backlog tool invoked: no
+Result: journals from one home were not compared with another home's backlog.
