@@ -1,0 +1,27 @@
+$ FM_HOME=<isolated-home> bin/fm-inbox.sh note texte
+queued 1787399839-hNup1H
+  texte
+  firstmate will pick this up at its next check.
+exit=0
+
+$ FM_HOME=<isolated-home> bin/fm-inbox.sh list
+1787399839-hNup1H
+    texte
+
+$ persisted note record
+id=1787399839-hNup1H
+at=2026-08-22T11:57:19Z
+source=text
+--
+texte
+
+$ persisted wake entry
+1787399839	1	check	inbox:1787399839-hNup1H	check: captain inbox note 1787399839-hNup1H - texte
+
+$ FM_HOME=<read-only-inbox-home> bin/fm-inbox.sh note "must not vanish"
+mktemp: mkstemp failed on /var/folders/yk/hpylg6r976qgbphydj66gt9h0000gn/T/no-mistakes-evidence/01M0MMAKDXXGB9QRWAW19BR92K/e2e-failure-home/state/inbox/.staging-ONuIgL: Permission denied
+fm-inbox: cannot open a staging file in /var/folders/yk/hpylg6r976qgbphydj66gt9h0000gn/T/no-mistakes-evidence/01M0MMAKDXXGB9QRWAW19BR92K/e2e-failure-home/state/inbox; nothing was queued
+exit=1
+$ remaining inbox entries
+$ wake file exists
+no

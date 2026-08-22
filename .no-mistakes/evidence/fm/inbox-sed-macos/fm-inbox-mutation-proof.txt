@@ -1,0 +1,22 @@
+Mutation proof on macOS (Darwin 24.6.0)
+
+Fixture: current tests/fm-inbox.test.sh and tests/lib.sh, current
+bin/fm-wake-lib.sh, and bin/fm-inbox.sh restored from base commit
+1231b6ae7fd4c5ff7e94d2f5ca2159536c4c41cb.
+
+$ FM_HOME=<isolated-home> <base fm-inbox.sh> note texte
+base_exit=1
+base_staging=1
+sed: 1: "/var/folders/yk/hpylg6r ...": invalid command code f
+
+The original command was already non-zero, but exposed only BSD sed jargon and
+left one orphaned staging file with no published note.
+
+$ /bin/bash <isolated-fixture>/tests/fm-inbox.test.sh
+mutation_exit=1
+not ok - note failed on a writable home
+--- output ---
+sed: 1: "/var/folders/yk/hpylg6r ...": invalid command code f
+
+Result: reintroducing the original GNU-only `sed -i` implementation makes the
+new behavioral test fail at the end-user note-capture path on BSD/macOS sed.
