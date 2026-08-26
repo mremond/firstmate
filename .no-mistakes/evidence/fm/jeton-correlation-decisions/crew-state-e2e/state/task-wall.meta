@@ -1,0 +1,5 @@
+window=fm:fm-task-wall
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M0YMZ6YVDWVZQJJZD3Y7PXBQ
+kind=secondmate
+harness=codex
+backend=tmux

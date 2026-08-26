@@ -1,0 +1,6 @@
+Baseline commit: 07bf0c8556c70b5241516efad0e51f802484c748
+Public interface: status_open_decisions <append-only status log>
+Status event: needs-decision corr=c44897ee2db4326b [key=texte-du-mur]: propose the wall text
+Observed open decisions: <none>
+Expected after fix: texte-du-mur\tneeds-decision\tpropose the wall text
+Regression reproduced: yes

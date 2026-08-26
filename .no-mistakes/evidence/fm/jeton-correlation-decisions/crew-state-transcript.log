@@ -1,0 +1,4 @@
+Target commit: a936d8276fe7b2fc2aaa9279296ccdf534a0f72c
+Status event: needs-decision corr=d24448d48c6ac3e4 [key=texte-du-mur]: propose the wall text
+Command: FM_STATE_OVERRIDE=<isolated-state> bin/fm-crew-state.sh task-wall
+Output: state: parked · source: status-log · propose the wall text
