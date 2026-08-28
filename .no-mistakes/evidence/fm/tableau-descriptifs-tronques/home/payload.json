@@ -1,0 +1,47 @@
+{
+  "schema": "fm-bearings-board.v1",
+  "home": "capitaine",
+  "generated": "2026-08-28T09:00:00+02:00",
+  "prs_live": true,
+  "captains_call": [
+    {
+      "key": "merge-fleet-board",
+      "type": "merge",
+      "repo": "firstmate",
+      "title": "Fusionner le tableau après validation de la lisibilité",
+      "about": "Le tableau Bearings présente les décisions et les travaux en cours.",
+      "decide": "Confirmer que le niveau de risque et sa justification restent lisibles.",
+      "risk": "Faible. La justification se trouve désormais dans le corps de la carte afin de rester lisible au toucher et à l’impression.",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/3225",
+      "options": [
+        {
+          "value": "merge",
+          "label": "Fusionner",
+          "hint": "Les contrôles de comportement et de mise en page sont verts."
+        }
+      ],
+      "recommend_value": "merge"
+    }
+  ],
+  "underway": [
+    {
+      "id": "lisibilite-tableau",
+      "repo": "firstmate",
+      "state": "validation locale",
+      "doing": "Vérifier le rendu du tableau à plusieurs largeurs sans perdre le contexte utile.",
+      "kind": "ship"
+    }
+  ],
+  "landed": [],
+  "charted": [
+    {
+      "id": "cinq-chemins",
+      "repo": "firstmate",
+      "title": "Cinq chemins d’acceptation sur six sont atomiques. La revue durcit la frontière entre les décisions du capitaine et les corrections automatiques du tableau.",
+      "reason": "Le texte complet reste présent et se déploie maintenant sur plusieurs lignes, avec une limite explicite qui protège toujours la largeur de la carte.",
+      "dispatchable": true
+    }
+  ],
+  "charted_more": 0,
+  "charted_warning_more": 0
+}
