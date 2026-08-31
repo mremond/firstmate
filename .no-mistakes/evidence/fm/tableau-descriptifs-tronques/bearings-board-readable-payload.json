@@ -1,0 +1,36 @@
+{
+  "schema": "fm-bearings-board.v1",
+  "home": "review-evidence",
+  "generated": "2026-08-31T18:45:00+02:00",
+  "prs_live": false,
+  "captains_call": [
+    {
+      "key": "merge-readable-board",
+      "type": "merge",
+      "repo": "firstmate",
+      "title": "Merge the readable bearings board",
+      "detail": "The board now keeps the captain-facing description visible instead of clipping it to a single line.",
+      "risk": "Faible. La justification est visible dans le corps de la carte, fonctionne au toucher et à l’impression, et reste contenue même lorsqu’elle devient longue.",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/0000",
+      "options": [
+        {
+          "value": "merge",
+          "label": "Merge"
+        }
+      ]
+    }
+  ],
+  "underway": [],
+  "landed": [],
+  "charted": [
+    {
+      "id": "readable-row",
+      "repo": "firstmate",
+      "title": "Cinq chemins d’acceptation sur six sont atomiques. La revue durcit la frontière de validation et conserve assez de texte pour identifier précisément le travail sans ouvrir une autre vue.",
+      "reason": "Le titre peut occuper jusqu’à trois lignes et ce contexte secondaire jusqu’à deux lignes, même lorsque le texte est long ou contient un identifiant impossible à couper proprement.",
+      "dispatchable": true
+    }
+  ],
+  "charted_more": 0,
+  "charted_warning_more": 0
+}
