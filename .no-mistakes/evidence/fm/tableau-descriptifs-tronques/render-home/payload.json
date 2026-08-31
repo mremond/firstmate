@@ -1,0 +1,34 @@
+{
+  "schema": "fm-bearings-board.v1",
+  "home": "validation visuelle",
+  "generated": "2026-08-31T07:00:00Z",
+  "prs_live": false,
+  "captains_call": [
+    {
+      "key": "merge-readable-board",
+      "type": "merge",
+      "repo": "kunchenguid/firstmate",
+      "title": "Publier le tableau de flotte lisible",
+      "risk": "Faible. La justification reste dans le corps de la carte, lisible au toucher comme à l'impression, sans déborder de son conteneur.",
+      "options": [
+        {
+          "value": "merge",
+          "label": "Merge"
+        }
+      ]
+    }
+  ],
+  "underway": [],
+  "landed": [],
+  "charted": [
+    {
+      "id": "readable-row",
+      "repo": "kunchenguid/firstmate",
+      "title": "Cinq chemins sur six sont atomiques. La revue durcit la frontière afin que chaque étape restante soit lisible avant la livraison.",
+      "reason": "Le travail conserve tout le contexte nécessaire pour décider sans ouvrir une autre vue, même lorsque la description contient plusieurs propositions importantes.",
+      "dispatchable": true
+    }
+  ],
+  "charted_more": 0,
+  "charted_warning_more": 0
+}
