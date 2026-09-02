@@ -1,0 +1,11 @@
+Focused executable regression: replacement waits and live declared-wait throttling
+Interface under test: bin/fm-watch.sh via tests/fm-watch-triage.test.sh fixtures
+Expected: fresh replacements are absorbed; aged replacements resurface on their own cadence; live waits still surface once and remain bounded.
+ok - absorbed paused and captain-held replacements are absorbed while fresh, then start their own re-surface cadence
+ok - a parked live worker surfaces once, absorbs pane churn for the whole re-surface window, then re-surfaces when it elapses
+
+Focused shared-helper compatibility checks
+
+Expected: an ordinary paused wait and the scope-less worktree-write deferral remain absorbed then boundedly resurface.
+ok - a declared pause is absorbed on first sight, then re-surfaced as a recheck past the threshold, never wedge-escalated
+ok - a write deferral re-surfaces once on the bounded pause cadence, so a churning worktree cannot stay invisible
