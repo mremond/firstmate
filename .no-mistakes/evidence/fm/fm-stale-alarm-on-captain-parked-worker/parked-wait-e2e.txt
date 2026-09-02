@@ -1,0 +1,11 @@
+observed form=paused-pipeline-churn phase=first wake_count=1 plain_wake_count=1
+observed form=paused-pipeline-churn phase=churn-2 wake_count=0 throttle=present
+observed form=paused-pipeline-churn phase=churn-3 wake_count=0 throttle=present
+observed form=paused-pipeline-churn phase=churn-4 wake_count=0 throttle=present
+observed form=paused-pipeline-churn phase=expired wake_count=1 plain_wake_count=1 payload=stale: test:fm-parked
+observed form=captain-held-churn phase=first wake_count=1 plain_wake_count=1
+observed form=captain-held-churn phase=churn-2 wake_count=0 throttle=present
+observed form=captain-held-churn phase=churn-3 wake_count=0 throttle=present
+observed form=captain-held-churn phase=churn-4 wake_count=0 throttle=present
+observed form=captain-held-churn phase=expired wake_count=1 plain_wake_count=1 payload=stale: test:fm-parked
+ok - a parked live worker surfaces once, absorbs pane churn for the whole re-surface window, then re-surfaces when it elapses
