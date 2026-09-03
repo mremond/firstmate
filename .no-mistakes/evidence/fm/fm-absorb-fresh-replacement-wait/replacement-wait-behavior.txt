@@ -1,0 +1,12 @@
+CASE paused
+fresh replacement survived completed watcher cycles: yes
+fresh replacement queued rechecks: 0
+aged replacement queued rechecks: 1
+aged replacement notification: stale: test:fm-held (paused 120s, awaiting external - declared pause, rechecked on a long cadence not a wedge; confirm the wait still holds)
+
+CASE captain-held
+fresh replacement survived completed watcher cycles: yes
+fresh replacement queued rechecks: 0
+aged replacement queued rechecks: 1
+aged replacement notification: stale: test:fm-held (captain-held 121s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold)
+
