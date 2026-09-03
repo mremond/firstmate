@@ -1,0 +1,10 @@
+TARGET 14588883651371f91ca1c7a703758a6a09fab430
+OBSERVED scenario=paused-replacement phase=fresh stale_wakes=0 queue=<empty>
+OBSERVED scenario=paused-replacement phase=aged stale_wakes=1 queue=1788425763|2|stale|test:fm-held|stale: test:fm-held (paused 500s, awaiting external - declared pause, rechecked on a long cadence not a wedge; confirm the wait still holds)
+OBSERVED scenario=captain-held-replacement phase=fresh stale_wakes=0 queue=<empty>
+OBSERVED scenario=captain-held-replacement phase=aged stale_wakes=1 queue=1788425770|2|stale|test:fm-held|stale: test:fm-held (captain-held 500s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold)
+ok - absorbed paused and captain-held replacements are absorbed while fresh, then start their own re-surface cadence
+
+BASELINE 28fb5acaf32c4ed5cf2c64c2e16d7350b5661a09 (expected regression reproduction)
+not ok - [paused-replacement] a freshly declared replacement wait was alarmed instead of absorbed
+BASELINE_EXIT=1
