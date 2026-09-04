@@ -549,7 +549,7 @@ close_answered() {  # <task-id> <release-0-or-1>
   if [ "$2" = 1 ]; then
     tasks_axi unhold "$1" >/dev/null || fail "could not release captain-held task $1"
   else
-    tasks_axi "done" "$1" >/dev/null || fail "could not close answered captain-held task $1"
+    fm_backlog_done "$DATA" "$1" || fail "could not close answered captain-held task $1: $FM_BACKLOG_TRANSITION_ERROR"
   fi
 }
 
