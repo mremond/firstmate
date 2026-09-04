@@ -1151,6 +1151,43 @@ EOF
   pass "captain-held tasks of any kind reach Captain's Call, deferral is honored, and landed excludes answered calls"
 }
 
+# A merge the captain personally approved keeps its hold record on the closed row:
+# tasks-axi clears the held flag on close but retains hold-kind/hold reason as the
+# history of that call, and the recorded answer stays as an indented block under the
+# entry. Recently Landed is delivered work, so a captain-approved merge belongs in it
+# in every home; only a captain question that closed with no delivery of its own stays
+# out. Local, deterministic, no GitHub call.
+test_captain_approved_delivery_stays_in_landed() {
+  local home mate fakebin json
+  home=$(make_home captain-approved); write_fixture "$home"
+  mate=$(fixture_mate_home "$home")
+  cat >> "$home/data/backlog.md" <<'EOF'
+- [x] approved-merge - Fix the anchor https://github.com/kunchenguid/firstmate/pull/1365 (repo: firstmate) (kind: ship) (merged 2026-07-10) (hold: PR 1365 open, all green; awaiting your merge word) (hold-kind: captain)
+  Resolution recorded by fm-captain-hold.
+  Captain decision:
+  Merge now, chosen on the board on 2026-07-10.
+- [x] approved-scout - Trace the redirect data/scout-x/report.md (repo: firstmate) (kind: scout) (reported 2026-07-10) (hold: report ready; awaiting your read) (hold-kind: captain)
+- [x] approved-local - Land it locally (repo: firstmate) (kind: ship) (done 2026-07-10) - local main (hold: ready on the local branch; awaiting your word) (hold-kind: captain)
+- [x] answered-question - Which order should we subscribe in (repo: firstmate) (kind: captain) (done 2026-07-10) (hold: captain choice pending) (hold-kind: captain)
+EOF
+  cat >> "$mate/data/backlog.md" <<'EOF'
+- [x] mate-approved-merge - Secondmate fix https://github.com/kunchenguid/firstmate/pull/1361 (repo: firstmate) (kind: ship) (merged 2026-07-11) (hold: PR 1361 open, all green; awaiting your merge word) (hold-kind: captain)
+  Captain decision:
+  Merge now.
+EOF
+  fakebin=$(make_fakebin "$home"); : > "$home/net.log"
+  json=$(run "$home" "$fakebin" --json --all-landed)
+  printf '%s' "$json" | jq -e '
+    (.landed | any(.[]; .id == "approved-merge" and (.artifact | test("/pull/1365"))))
+      and (.landed | any(.[]; .id == "approved-scout"))
+      and (.landed | any(.[]; .id == "approved-local"))
+      and (.landed | any(.[]; .id == "mate-approved-merge" and (.artifact | test("/pull/1361"))))
+      and (.landed | any(.[]; .id == "answered-question") | not)
+  ' >/dev/null || fail "captain-approved deliveries must stay in landed in every home: $json"
+  [ ! -s "$home/net.log" ] || fail "landed must make no gh/gh-axi call, got: $(cat "$home/net.log")"
+  pass "captain-approved deliveries stay in landed while an answered question does not"
+}
+
 test_include_prs_is_the_only_fetch_path() {
   local home fakebin json
   home=$(make_home prs); write_fixture "$home"
@@ -2595,6 +2632,7 @@ test_partial_github_failure_degrades
 test_perl_fallback_bounds_github_call
 test_section_caps_and_expansion_flags
 test_collapsed_captain_call_deferral_and_landed
+test_captain_approved_delivery_stays_in_landed
 test_pr_repository_cap_and_expansion
 test_per_repository_pr_cap_is_disclosed
 test_projection_and_toon_fail_closed
