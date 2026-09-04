@@ -1,0 +1,75 @@
+{
+  "schema": "fm-bearings.v1",
+  "home": ".nm-bearings-e2e.cxWwg5/home",
+  "generated": "2026-09-04T12:00:00Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [],
+  "secondmates": [],
+  "secondmate_reconcile": [],
+  "decisions_open": [],
+  "landed": [
+    {
+      "id": "approved-pr-1368",
+      "what": "Ship approved pull request 1368",
+      "artifact": "https://github.com/kunchenguid/firstmate/pull/1368",
+      "owner": "(main)"
+    },
+    {
+      "id": "approved-pr-1365",
+      "what": "Ship approved pull request 1365",
+      "artifact": "https://github.com/kunchenguid/firstmate/pull/1365",
+      "owner": "(main)"
+    },
+    {
+      "id": "approved-pr-1364",
+      "what": "Ship approved pull request 1364",
+      "artifact": "https://github.com/kunchenguid/firstmate/pull/1364",
+      "owner": "(main)"
+    },
+    {
+      "id": "approved-pr-1363",
+      "what": "Ship approved pull request 1363",
+      "artifact": "https://github.com/kunchenguid/firstmate/pull/1363",
+      "owner": "(main)"
+    },
+    {
+      "id": "approved-pr-1361",
+      "what": "Ship approved pull request 1361",
+      "artifact": "https://github.com/kunchenguid/firstmate/pull/1361",
+      "owner": "(main)"
+    }
+  ],
+  "gates": [],
+  "reports": [],
+  "recorded_prs": [],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "superseded or prose-deferred queued items",
+      "reveal": "--all-queued"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+$ fm-captain-hold.sh answer <task> --release --decision-file decision.txt
+Observed for every PR after approval: state=in_flight, held=no, Resolution mode=released.
+
+$ fm-teardown.sh <task>
+Observed for every PR after landing: completion recorded with its PR deliverable.
+
+$ fm-bearings-snapshot.sh --json | jq -r ' .landed[] | [.id, .artifact] | @tsv '
+approved-pr-1368	https://github.com/kunchenguid/firstmate/pull/1368
+approved-pr-1365	https://github.com/kunchenguid/firstmate/pull/1365
+approved-pr-1364	https://github.com/kunchenguid/firstmate/pull/1364
+approved-pr-1363	https://github.com/kunchenguid/firstmate/pull/1363
+approved-pr-1361	https://github.com/kunchenguid/firstmate/pull/1361
+
+$ jq '[.landed[].artifact | capture("/pull/(?<number>[0-9]+)$").number] | sort_by(tonumber)'
+[
+  "1361",
+  "1363",
+  "1364",
+  "1365",
+  "1368"
+]

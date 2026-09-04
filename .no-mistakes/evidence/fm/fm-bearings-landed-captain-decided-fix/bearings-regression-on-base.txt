@@ -1,0 +1,30 @@
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  5 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WARNING: watcher still down (same stale episode; last beat: 4s ago, grace 300s) - full banner already printed this episode.
+not ok - approved merge backfill did not record completion provenance (missing: 'Deliverable of the finished work: PR https://github.com/kunchenguid/firstmate/pull/1365')
+--- output ---
+task:
+  id: approved-merge
+  title: "Fix the anchor https://github.com/kunchenguid/firstmate/pull/1365"
+  state: done
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: firstmate
+  priority: "-"
+  created: "-"
+  closed: 2026-09-04
+  deps: none
+  links: "pr:https://github.com/kunchenguid/firstmate/pull/1365"
+  body: "Resolution recorded by fm-captain-hold.\nDecision digest: 282fdd578e67d5f4e90fd09b4862e7764c9e3eccb28f8a5c76ecf6f3acd9bf8c\nResolution mode: released\n\nCaptain decision:\nMerge now."
+
+Expected historical result: focused regression failed on base 8f7b79c77c2198a71a01082215227a64500015e3 (exit 1).
