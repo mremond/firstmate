@@ -45,9 +45,10 @@
 # act. It requires a non-empty captain decision file of at most 8192 bytes,
 # writes a resolution block at the top of the task body (the previous body is
 # preserved below the block and archived through tasks-axi --archive-body),
-# then closes the task with `tasks-axi done` - or, with `--release`, lifts the
-# hold with `tasks-axi unhold` so a captain-gated WORK item resumes instead of
-# closing. An exact retry is idempotent only when its requested close mode
+# then delegates the close to bin/fm-backlog-transition-lib.sh so its
+# completion-provenance contract also applies. With `--release`, it instead
+# lifts the hold with `tasks-axi unhold` so a captain-gated WORK item resumes
+# instead of closing. An exact retry is idempotent only when its requested close mode
 # matches the newest record; a changed decision or a mode mismatch is rejected.
 # A re-held task may record a new answer on top. On a task already closed outside this script,
 # `answer` records the missing resolution block (the old `repair` path) only
