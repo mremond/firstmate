@@ -1,0 +1,48 @@
+VOICE GUARD END-USER TRANSCRIPT
+
+1. Default pre-push scan of a real feature branch carrying internal voice
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the commits not yet on the default branch.
+This text would become permanent public history under the repository owner's name.
+
+  commit a72ddb281991 - fix(ci): Captain, fixed the stale-throttle inheritance. Changes remain uncommitted for the outer executor
+    line 1 matched captain-address-opening
+      in:      fix(ci): Captain, fixed the stale-throttle inheritance. Changes remain uncommitted for the outer executor
+      matched: : Captain,
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+    line 1 matched delivery-machinery-handoff
+      in:      fix(ci): Captain, fixed the stale-throttle inheritance. Changes remain uncommitted for the outer executor
+      matched:  outer executor
+      fix:     Published history must not narrate how the change was validated or which agent finishes it. State what the change does.
+
+  How to clear this refusal:
+    Reword the message so it states what the change does, then re-run this check:
+      git commit --amend        for the tip commit
+      git rebase -i <base>      then mark the named commits "reword"
+    Inside a no-mistakes run, respond to the gate and let the pipeline reword; do not push around this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+exit status: 1
+
+2. Default pre-push scan of a real feature branch using required technical vocabulary
+exit status: 0 (clean scans are intentionally silent)
+
+3. Pull-request text scan carrying the required session-pointer form
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched internal-session-pointer
+      in:      Claude-Session: https://claude.ai/code/session_01HoVE1w6AQB5qritmXc1aLC
+      matched: Claude-Session: https://
+      fix:     Published history must not link the working session that produced the change. Delete the trailer.
+    line 1 matched internal-session-link
+      in:      Claude-Session: https://claude.ai/code/session_01HoVE1w6AQB5qritmXc1aLC
+      matched: https://claude.ai/code/session_01HoVE1w6AQB5qritmXc1aLC
+      fix:     Published history must not link the working session that produced the change. Remove the link.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+exit status: 1
+
+4. Pull-request text scan using repository vocabulary and ordinary session language
+exit status: 0 (clean scans are intentionally silent)

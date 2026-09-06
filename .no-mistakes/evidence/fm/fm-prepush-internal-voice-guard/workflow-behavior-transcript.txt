@@ -1,0 +1,33 @@
+VOICE GUARD WORKFLOW TRANSCRIPT
+
+Parsed checkout ref: ${{ github.event.pull_request.base.ref }}
+Parsed checkout path: trusted-scanner
+
+1. Bootstrap: PR tree has bin/fm-prepush-voice-guard.sh, trusted checkout does not
+::warning title=Voice guard did not scan this pull request::bin/fm-prepush-voice-guard.sh is not on the base branch, so this pull request's title and description were NOT scanned. This check becomes effective once the scanner is on the base branch.
+Voice guard: NOT APPLIED. bin/fm-prepush-voice-guard.sh is not on the base branch, so this pull request's title and description were NOT scanned. This check becomes effective once the scanner is on the base branch.
+exit status: 0
+GitHub step summary:
+Voice guard: **NOT APPLIED**. bin/fm-prepush-voice-guard.sh is not on the base branch, so this pull request's title and description were NOT scanned. This check becomes effective once the scanner is on the base branch.
+
+2. Trusted base scanner present; leaking PR title/body
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched captain-address-line
+      in:      Captain, this PR rewrites the throttle
+      matched: Captain,
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+    line 2 matched delivery-machinery-handoff
+      in:      Changes remain uncommitted for the outer executor
+      matched:  outer executor
+      fix:     Published history must not narrate how the change was validated or which agent finishes it. State what the change does.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+exit status: 1
+
+3. Trusted base scanner present; legitimate PR title/body
+exit status: 0 (clean scans are intentionally silent)
