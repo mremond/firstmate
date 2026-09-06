@@ -1,0 +1,33 @@
+SCENARIO A: delivered ordinary crew task; captain hold exists only in backlog
+STATUS LINE: done: PR https://example.invalid/pull/1 checks green
+BACKLOG RECORD:
+task:
+  id: held-merge
+  title: delivered work
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: awaiting the captain on the merge
+  hold_kind: captain
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-06
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-09-06T12:34:23Z"
+STEP A1: first stale sighting
+QUEUED WAKE: kind=stale window=test:fm-held-merge payload=stale: test:fm-held-merge
+STEP A2: two new pane hashes while the same captain call remains open
+QUEUED STALE WAKES: 0
+WATCHER RESULT: stayed in its poll loop through both absorbed hashes
+STEP A3: next new pane hash after the cadence expires
+QUEUED WAKE: kind=stale window=test:fm-held-merge payload=stale: test:fm-held-merge
+SCENARIO A RESULT: first sight alarms; in-window pane churn is absorbed; post-window pane churn alarms once.
+SCENARIO B: identical delivered task with no open captain call
+FIRST NEW HASH WAKE COUNT: 1
+SECOND NEW HASH WAKE COUNT: 1
+SCENARIO B RESULT: without a proven open call, every new stale hash still alarms.

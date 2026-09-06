@@ -1,0 +1,2 @@
+not ok - [held-delivery] watcher exited during pane churn instead of supervising through it
+BASE COMMIT TEST EXIT: 1 (non-zero expected)
