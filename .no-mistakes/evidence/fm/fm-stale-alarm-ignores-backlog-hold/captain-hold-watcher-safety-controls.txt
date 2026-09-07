@@ -1,0 +1,8 @@
+FOCUSED SAFETY CONTROLS: target 3a6b5783
+ok - unreadable captain-call backlog left both changed-pane notifications unsuppressed
+  surfaced notifications across two sightings: 2
+ok - backlog consultation stayed off the ordinary poll path and occurred only when a changed-pane notification was due
+  tasks-axi invocations during three stable ordinary polls: 0
+  tasks-axi invocations after changed-pane notification became due: 5
+  notifications queued for the held changed-pane sighting inside cadence: 0
+RESULT: only a proven readable open captain call bounds a due notification; ordinary polls remain backlog-free.

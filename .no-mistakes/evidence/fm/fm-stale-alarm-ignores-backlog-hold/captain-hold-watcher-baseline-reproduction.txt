@@ -1,0 +1,3 @@
+BASELINE REPRODUCTION: supplied base commit 6d396da7
+not ok - [held-delivery] watcher exited during pane churn instead of supervising through it
+baseline runner exit code: 1 (non-zero expected because the regression must reproduce)

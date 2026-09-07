@@ -1,0 +1,29 @@
+FOCUSED TARGET WATCHER ACCEPTANCE RUN: 3a6b5783
+ok - a parked live worker surfaces once, absorbs pane churn for the whole re-surface window, then re-surfaces when it elapses
+ok - work under an open captain call surfaces once, absorbs pane churn, then re-surfaces when the window elapses
+ok - a stale window with no open captain call keeps alarming on every new hash
+ok - a wake that never reached the durable queue arms no re-surface throttle
+ok - a released-then-re-held task is a distinct captain call whose first sight still alarms
+ok - a non-paused secondmate retains normal stale suppression
+
+OBSERVABLE OUTCOMES
+held case: held-delivery
+  surfaced notifications (first sight plus elapsed cadence): 2
+  changed-pane events absorbed while captain call remained open: 2
+  queued notification after cadence elapsed: 1
+held case: held-worker-line
+  surfaced notifications (first sight plus elapsed cadence): 2
+  changed-pane events absorbed while captain call remained open: 4
+  queued notification after cadence elapsed: 1
+unheld control: unheld-delivery
+  surfaced notifications across two changed-pane sightings: 2
+unheld control: unheld-blocker
+  surfaced notifications across two changed-pane sightings: 2
+unheld control: unheld-worker-line
+  surfaced notifications across two changed-pane sightings: 2
+released and re-held lifecycle control:
+  surfaced notifications (first call, then distinct re-held call): 2
+  second call notification currently queued: 1
+durability control after failed queue append:
+  successful retry notification currently queued: 1
+RESULT: accepted watcher behavior demonstrated end to end through fm-watch.sh, fm-captain-hold.sh, tasks-axi, and the durable notification queue.
