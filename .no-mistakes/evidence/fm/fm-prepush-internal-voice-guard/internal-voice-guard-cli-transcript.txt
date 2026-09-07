@@ -1,0 +1,14 @@
+Internal voice guard end-to-end CLI evidence
+Target: 5c00c59e0a415157918e07a525300d8ea3758b5a
+
+[PR title/description text: refuses a captain address and session pointer]
+exit: 1
+
+[Legitimate repository vocabulary: accepted]
+exit: 0
+
+[Default pre-push scan: refuses the unpublished leaking commit]
+exit: 1
+
+[No authoritative publication ref: fails closed with a recovery command]
+exit: 3
