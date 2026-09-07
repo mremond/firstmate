@@ -1,20 +1,44 @@
 End-to-end watcher evidence
 ===========================
 
-Command:
-  bin/fm-test-run.sh tests/fm-watch-triage.test.sh
+Target
+------
 
-This focused behavior suite launches the real bin/fm-watch.sh, creates its
-backlog through tasks-axi, and opens/releases captain calls through
-bin/fm-captain-hold.sh. The assertions inspect durable wake-queue entries and
-whether the watcher exits to surface an alarm or remains in its poll loop.
+Commit: d09f953c358c5047ffa7fb823c14ee5d3e8a486e
 
-Observed behavior:
-  ok - work under an open captain call surfaces once, absorbs pane churn, then re-surfaces when the window elapses
-  ok - a stale window with no open captain call keeps alarming on every new hash
-  ok - a wake that never reached the durable queue arms no re-surface throttle
-  ok - a released-then-re-held task is a distinct captain call whose first sight still alarms
+Method
+------
 
-Runner result:
-  FM_TEST_END 2026-09-06T14:01:14Z tests/fm-watch-triage.test.sh exit=0 duration_ms=500576 gate_skip=false
-  FM_TEST_SUMMARY total=1 failed=0 skipped_gate=0 duration_ms=500645
+The check launched the real bin/fm-watch.sh against a hermetic tmux surface.
+It created the work item through tasks-axi, opened the hold through
+bin/fm-captain-hold.sh, changed the pane text while one watcher stayed in its
+poll loop, and inspected the durable state/.wake-queue after each user-visible
+decision point.
+
+Observed CLI transcript
+-----------------------
+
+OPEN_CAPTAIN_CALL identity=2026-09-07T01:47:25Z#0
+FIRST_SIGHT watcher_exit=surfaced durable_stale_wakes=1
+  QUEUED kind=stale key=test:fm-held-merge payload=stale: test:fm-held-merge
+SAME_CALL_CHURN watcher=remained_in_poll_loop changes=2 durable_stale_wakes=0
+  THROTTLE_SCOPE=captain-hold:2026-09-07T01:47:25Z#0:<status-signature>
+AFTER_CADENCE watcher_exit=surfaced durable_stale_wakes=1
+  QUEUED kind=stale key=test:fm-held-merge payload=stale: test:fm-held-merge
+NO_HOLD_FIRST_HASH watcher_exit=surfaced durable_stale_wakes=1
+NO_HOLD_SECOND_HASH watcher_exit=surfaced durable_stale_wakes=1
+
+Focused automated regressions on the same target
+-------------------------------------------------
+
+ok - work under an open captain call surfaces once, absorbs pane churn, then re-surfaces when the window elapses
+ok - a stale window with no open captain call keeps alarming on every new hash
+ok - a wake that never reached the durable queue arms no re-surface throttle
+ok - a released-then-re-held task is a distinct captain call whose first sight still alarms
+
+Result
+------
+
+The watcher preserves the first stale alarm, suppresses repeated new-hash noise
+only while the same captain call is inside its cadence window, re-surfaces after
+that window, and leaves unheld stale alarms unchanged.
