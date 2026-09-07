@@ -1,0 +1,46 @@
+{
+  "schema": "fm-bearings-board.v1",
+  "home": "visual-evidence",
+  "generated": "2026-09-07T00:00Z",
+  "prs_live": false,
+  "captains_call": [
+    {
+      "key": "merge-readable-risk",
+      "type": "merge",
+      "repo": "kunchenguid/firstmate",
+      "title": "Merge the readable fleet-board text correction",
+      "risk": "Faible. The safety checks cover the board builder and the renderer; the correction preserves all existing decision choices.",
+      "detail": "The merge decision has a readable risk justification in the card rather than a badge that spills outside it.",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/3173",
+      "options": [{"value": "merge", "label": "Merge"}]
+    }
+  ],
+  "underway": [
+    {
+      "id": "board-layout-verification",
+      "repo": "kunchenguid/firstmate",
+      "state": "testing",
+      "doing": "Checking the rendered rows at desktop and narrow widths",
+      "kind": "test"
+    }
+  ],
+  "landed": [
+    {
+      "id": "risk-contract",
+      "repo": "kunchenguid/firstmate",
+      "what": "Merge risk values now separate their level from their explanation",
+      "owner": "captain"
+    }
+  ],
+  "charted": [
+    {
+      "id": "long-readable-row",
+      "repo": "kunchenguid/firstmate",
+      "title": "Rows now keep enough of a detailed work title visible for the captain to understand the work without opening another surface",
+      "reason": "The secondary context wraps across a few lines instead of ending as a single-line ellipsis, keeping the decision useful at a glance.",
+      "dispatchable": true
+    }
+  ],
+  "charted_more": 0,
+  "charted_warning_more": 0
+}

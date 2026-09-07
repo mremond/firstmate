@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+case "${1-}" in
+  --version) printf '0.1.61\n' ;;
+  '')
+    printf 'sessions[1]{file,status,url,pending_prompts}:\n'
+    [ ! -s "$FM_HOME/lavish-open" ] || printf '  %s,open,"http://127.0.0.1/session/visual",0\n' "$(cat "$FM_HOME/lavish-open")"
+    ;;
+  poll) while :; do sleep 1; done ;;
+  *)
+    real=$(cd "$(dirname "$1")" && pwd -P)/$(basename "$1")
+    printf '%s\n' "$real" > "$FM_HOME/lavish-open"
+    printf 'session:\n  status: opened\n'
+    ;;
+esac
