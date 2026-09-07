@@ -1,0 +1,24 @@
+schema: fm-bearings.v1
+home: 01M1YG9XWGBM2W7DQ5QMYFTS17/landed-cli
+generated: "2026-09-04T09:00:00Z"
+prs: "not_requested (run: /bearings include PRs)"
+in_flight: []
+secondmates: []
+secondmate_reconcile: []
+decisions_open: []
+landed[5]{id,what,artifact,owner}:
+  approved-pr-1368,Merge approved pull request 1368,"https://github.com/kunchenguid/firstmate/pull/1368",(main)
+  approved-pr-1365,Merge approved pull request 1365,"https://github.com/kunchenguid/firstmate/pull/1365",(main)
+  approved-pr-1364,Merge approved pull request 1364,"https://github.com/kunchenguid/firstmate/pull/1364",(main)
+  approved-pr-1363,Merge approved pull request 1363,"https://github.com/kunchenguid/firstmate/pull/1363",(main)
+  approved-pr-1361,Merge approved pull request 1361,"https://github.com/kunchenguid/firstmate/pull/1361",(main)
+gates: []
+reports: []
+recorded_prs: []
+omitted[6]{surface,reveal}:
+  backlog item bodies,"--fields bodies"
+  task paths,"--fields paths"
+  watch/steer actions,"--fields actions"
+  healthy endpoint detail,"--fields endpoints"
+  full scout-report inventory,"--all-reports"
+  live PR discovery + checks,"--include-prs"
