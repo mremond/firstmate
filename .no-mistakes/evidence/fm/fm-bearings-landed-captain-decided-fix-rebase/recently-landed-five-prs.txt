@@ -1,0 +1,25 @@
+$ FM_HOME=<isolated-home> FM_BEARINGS_NOW=2026-09-07T12:00:00Z bin/fm-bearings-snapshot.sh --all-landed
+schema: fm-bearings.v1
+home: 01M1XQWG6WEV78120C4CH68VWZ/recently-landed-fixture-home
+generated: "2026-09-07T12:00:00Z"
+prs: "not_requested (run: /bearings include PRs)"
+in_flight: []
+secondmates: []
+secondmate_reconcile: []
+decisions_open: []
+landed[5]{id,what,artifact,owner}:
+  pr-1368,Merge PR 1368,"https://github.com/kunchenguid/firstmate/pull/1368",(main)
+  pr-1365,Merge PR 1365,"https://github.com/kunchenguid/firstmate/pull/1365",(main)
+  pr-1364,Merge PR 1364,"https://github.com/kunchenguid/firstmate/pull/1364",(main)
+  pr-1363,Merge PR 1363,"https://github.com/kunchenguid/firstmate/pull/1363",(main)
+  pr-1361,Merge PR 1361,"https://github.com/kunchenguid/firstmate/pull/1361",(main)
+gates: []
+reports: []
+recorded_prs: []
+omitted[6]{surface,reveal}:
+  backlog item bodies,"--fields bodies"
+  task paths,"--fields paths"
+  watch/steer actions,"--fields actions"
+  healthy endpoint detail,"--fields endpoints"
+  full scout-report inventory,"--all-reports"
+  live PR discovery + checks,"--include-prs"
