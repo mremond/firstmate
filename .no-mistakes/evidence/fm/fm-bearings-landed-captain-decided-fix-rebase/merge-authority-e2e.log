@@ -1,0 +1,16 @@
+LOCAL-ONLY MERGE: absent authority record
+exit=1
+error: captain-hold authority record is unavailable for task e2e-local; refusing to merge
+main=6f488c9
+LOCAL-ONLY MERGE: readable backlog with no task row
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+merged fm/e2e-local into local main (6f488c9 -> aee1bed) in /tmp/fm-merge-authority-e2e.wSlss9/local-home/projects/sample
+PR MERGE: absent authority record
+exit=1
+error: captain-hold authority record is unavailable for task e2e-pr; refusing to merge
+FORGE_NOT_CALLED
+PR MERGE: readable backlog with no task row
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/e2e-pr.check.sh
+verified: https://github.com/sample/sample/pull/43 is merged (state=MERGED, merged=true, isInMergeQueue=false)
+FORGE_CALLED pr merge 43 --repo sample/sample --squash
