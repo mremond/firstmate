@@ -1,0 +1,152 @@
+{
+  "schema": "fm-bearings-board.v1",
+  "home": "Isolated two-home verification",
+  "generated": "2026-09-08T18:15:55Z",
+  "prs_live": false,
+  "underway": [
+    {
+      "id": "main-approval",
+      "kind": "ship",
+      "state": "paused",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "doing": "waiting on review"
+    },
+    {
+      "id": "main-prose",
+      "kind": "ship",
+      "state": "paused",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "doing": "dependency https://github.com/kunchenguid/firstmate/pull/4016 is still under review"
+    },
+    {
+      "id": "main-queued",
+      "kind": "ship",
+      "state": "blocked",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "doing": "waiting for dependency"
+    },
+    {
+      "id": "main-work",
+      "kind": "ship",
+      "state": "working",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "doing": "harness busy (claude-hook)"
+    },
+    {
+      "id": "mate/mate-work",
+      "kind": "ship",
+      "state": "working",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "doing": "harness busy (claude-hook)"
+    },
+    {
+      "id": "mate/mate-approval",
+      "kind": "ship",
+      "state": "paused",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "doing": "waiting on review"
+    }
+  ],
+  "awaiting": [
+    {
+      "id": "main-delivered",
+      "what": "Delivered",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "age_days": 3,
+      "nudge": false
+    },
+    {
+      "id": "mate/mate-delivered",
+      "what": "Delivered",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "age_days": 3,
+      "nudge": false
+    }
+  ],
+  "awaiting_nudge_days": 7,
+  "landed": [],
+  "charted": [
+    {
+      "id": "main-queued",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "title": "Queued",
+      "reason": "Waiting for dependency",
+      "dispatchable": false,
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015"
+    },
+    {
+      "id": "mate-queued",
+      "repo": "firstmate",
+      "owner": "mate",
+      "title": "Queued",
+      "reason": "Waiting for dependency",
+      "dispatchable": false,
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015"
+    }
+  ],
+  "captains_call": [
+    {
+      "key": "merge.main-approval",
+      "repo": "firstmate",
+      "type": "merge",
+      "title": "(main) approval still owed",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "risk": "Approval remains with the captain",
+      "options": [
+        {
+          "value": "leave",
+          "label": "Leave open"
+        }
+      ]
+    },
+    {
+      "key": "merge.mate-mate-approval",
+      "repo": "firstmate",
+      "type": "merge",
+      "title": "mate approval still owed",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "risk": "Approval remains with the captain",
+      "options": [
+        {
+          "value": "leave",
+          "label": "Leave open"
+        }
+      ]
+    },
+    {
+      "key": "https://github.com/kunchenguid/firstmate/pull/4016",
+      "type": "nudge",
+      "repo": "firstmate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4016",
+      "title": "Outside maintainer has not merged",
+      "age_days": 23,
+      "detail": "23 days waiting \u00b7 delivered from main and mate",
+      "options": [
+        {
+          "value": "leave",
+          "label": "Leave it"
+        },
+        {
+          "value": "nudge",
+          "label": "Nudge maintainer"
+        }
+      ]
+    }
+  ]
+}

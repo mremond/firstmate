@@ -1,0 +1,15 @@
+{
+  "before": {
+    "left": 154.515625,
+    "right": 415.171875,
+    "width": 390,
+    "text": "NUDGE-WORTHY AFTER 7 DAYS"
+  },
+  "after": {
+    "left": 28,
+    "right": 288.65625,
+    "width": 390,
+    "text": "NUDGE-WORTHY AFTER 7 DAYS"
+  },
+  "method": "Temporarily undo only the heading flex-wrap property in the running DOM, then restore shipped CSS."
+}

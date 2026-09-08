@@ -1,0 +1,65 @@
+{
+  "desktop": {
+    "width": 1080,
+    "stats": [
+      "3\nNEED YOU",
+      "6\nUNDERWAY\n4 (main) · 2 mate",
+      "2\nDELIVERED\n1 (main) · 1 mate",
+      "0\nLANDED RECENTLY",
+      "2\nCHARTED NEXT\n1 (main) · 1 mate"
+    ],
+    "calls": "checks greenrisk Approval remains with the captain(main) approval still owedhttps://github.com/kunchenguid/firstmate/pull/4011Leave openQueue answer queuedchecks greenrisk Approval remains with the captainmate approval still owedhttps://github.com/kunchenguid/firstmate/pull/4011Leave openQueue answer queuedwaiting 23dfirstmateOutside maintainer has not merged23 days waiting · delivered from main and matehttps://github.com/kunchenguid/firstmate/pull/4016Leave itNudge maintainerQueue answer queued",
+    "awaiting": "DELIVERED\nDelivered\nfirstmate · (main) · waiting on a merge we do not control\n3d\n#4015\nDELIVERED\nDelivered\nfirstmate · mate · waiting on a merge we do not control\n3d\n#4015",
+    "underway": "PAUSED\nwaiting on review\nship · firstmate · (main)\n#4011\nPAUSED\ndependency https://github.com/kunchenguid/firstmate/pull/4016 is still under review\nship · firstmate · (main)\nBLOCKED\nwaiting for dependency\nship · firstmate · (main)\n#4015\nWORKING\nharness busy (claude-hook)\nship · firstmate · (main)\n#4011\nWORKING\nharness busy (claude-hook)\nship · firstmate · mate\n#4011\nPAUSED\nwaiting on review\nship · firstmate · mate\n#4011",
+    "charted": "Queued\nWaiting for dependency · firstmate · (main)\n#4015\nWAITING\nQueued\nWaiting for dependency · firstmate · mate\n#4015\nWAITING",
+    "links": [
+      {
+        "label": "#4015",
+        "href": "https://github.com/kunchenguid/firstmate/pull/4015"
+      },
+      {
+        "label": "#4015",
+        "href": "https://github.com/kunchenguid/firstmate/pull/4015"
+      },
+      {
+        "label": "#4011",
+        "href": "https://github.com/kunchenguid/firstmate/pull/4011"
+      },
+      {
+        "label": "#4015",
+        "href": "https://github.com/kunchenguid/firstmate/pull/4015"
+      },
+      {
+        "label": "#4011",
+        "href": "https://github.com/kunchenguid/firstmate/pull/4011"
+      },
+      {
+        "label": "#4011",
+        "href": "https://github.com/kunchenguid/firstmate/pull/4011"
+      },
+      {
+        "label": "#4011",
+        "href": "https://github.com/kunchenguid/firstmate/pull/4011"
+      },
+      {
+        "label": "#4015",
+        "href": "https://github.com/kunchenguid/firstmate/pull/4015"
+      },
+      {
+        "label": "#4015",
+        "href": "https://github.com/kunchenguid/firstmate/pull/4015"
+      }
+    ]
+  },
+  "mobile": {
+    "width": 390,
+    "text": "NUDGE-WORTHY AFTER 7 DAYS",
+    "rect": {
+      "left": 28,
+      "right": 288.65625,
+      "top": 451.796875,
+      "bottom": 464.796875
+    },
+    "documentWidth": 375
+  }
+}

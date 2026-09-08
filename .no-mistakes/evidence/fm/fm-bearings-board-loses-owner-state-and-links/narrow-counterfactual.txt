@@ -1,0 +1,4 @@
+Script ran on page and returned:
+```json
+{"viewport":390,"change":"Temporary live DOM wrap on Delivered header only; source unchanged","before":[{"text":"Delivered","right":142.515625},{"text":"nudge-worthy after 7 days","right":415.171875}],"after":[{"text":"Delivered","right":142.515625},{"text":"nudge-worthy after 7 days","right":288.65625}]}
+```

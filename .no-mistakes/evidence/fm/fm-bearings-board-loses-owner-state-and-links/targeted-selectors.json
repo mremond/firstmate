@@ -1,0 +1,24 @@
+{
+  "fm-bearings-snapshot": [
+    "test_delivered_work_leaves_underway_for_its_own_bucket",
+    "test_an_armed_merge_watch_does_not_move_work_that_is_still_running",
+    "test_an_underway_row_carries_its_owner_and_its_recorded_request",
+    "test_the_delivered_exit_rule_fires_at_its_threshold_and_never_reverses",
+    "test_a_secondmate_child_is_told_apart_from_main_work_in_the_same_repo",
+    "test_delivery_requires_a_declaration_and_eligible_current_state_in_both_homes",
+    "test_configured_wait_declarations_reach_both_delivery_projections",
+    "test_delivery_requires_matching_poll_evidence_and_no_open_decision",
+    "test_long_request_links_survive_all_child_projections",
+    "test_status_urls_never_become_child_request_links",
+    "test_cached_deliveries_age_before_the_consuming_bound",
+    "test_overdue_deliveries_survive_ledger_and_presentation_bounds",
+    "test_a_request_waiting_on_the_captain_never_lands_in_the_waiting_state",
+    "test_a_delivery_that_resumed_and_failed_keeps_its_own_state",
+    "test_a_secondmate_queued_row_carries_its_recorded_request_link"
+  ],
+  "fm-pr-check-security": [
+    "test_rerecording_the_same_pr_preserves_the_delivery_clock",
+    "test_delivery_clock_is_preserved_at_publication_and_interruption",
+    "test_delivery_clock_failure_does_not_publish"
+  ]
+}

@@ -1,0 +1,3 @@
+ok - re-recording one PR keeps its delivery clock while a different PR starts its own
+ok - the preserved delivery clock is visible at publication and survives interruption
+ok - failed and ineffective timestamp updates preserve the original registration and return failure

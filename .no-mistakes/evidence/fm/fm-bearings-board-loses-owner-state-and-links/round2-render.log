@@ -1,0 +1,17 @@
+ok - a warning row badges needs repair while queued work keeps waiting
+ok - the charted next count counts queued work only, and still renders warnings
+ok - a warning-only board reports nothing queued and still shows the warning
+ok - omitted warnings remain separate from omitted queued work
+ok - an omitted kind renders exactly as queued work always did
+ok - an underway row names the home that owns it, not just its repo
+ok - the tiles carry an ownership sub-line rather than an ownership tile
+ok - all valid owner labels count even when they name inherited properties
+ok - the main home and a mate named main retain distinct structural labels
+ok - long request-keyed nudge submissions route separately and cannot close a task-shaped collision
+ok - a tile whose rows share one home still says which home
+ok - a truncated tile counts every row but says its breakdown covers the shown ones
+ok - the needs-you tile counts every home's calls in one undivided tile
+ok - delivered rows lead with the wait, carry their request link, and count separately
+ok - a delivered row counts once, in the delivered tile, not as work in the air
+ok - the delivered section always renders, with its own empty state
+ok - an aged delivery rises into the captain's call carrying its wait and its link

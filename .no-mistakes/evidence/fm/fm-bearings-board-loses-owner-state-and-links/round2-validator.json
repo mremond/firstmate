@@ -1,0 +1,26 @@
+[
+  {
+    "case": "missing_owner",
+    "exit": 1,
+    "stderr": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20RM7ENZX5ZKSTYK5K3EFEG/.nm-live2/invalid.json\n",
+    "existing_board_preserved": true
+  },
+  {
+    "case": "missing_link",
+    "exit": 1,
+    "stderr": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20RM7ENZX5ZKSTYK5K3EFEG/.nm-live2/invalid.json\n",
+    "existing_board_preserved": true
+  },
+  {
+    "case": "overdue_in_delivered",
+    "exit": 1,
+    "stderr": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20RM7ENZX5ZKSTYK5K3EFEG/.nm-live2/invalid.json\n",
+    "existing_board_preserved": true
+  },
+  {
+    "case": "missing_awaiting",
+    "exit": 1,
+    "stderr": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20RM7ENZX5ZKSTYK5K3EFEG/.nm-live2/invalid.json\n",
+    "existing_board_preserved": true
+  }
+]

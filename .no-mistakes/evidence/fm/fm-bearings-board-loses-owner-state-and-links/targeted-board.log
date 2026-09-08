@@ -1,0 +1,6 @@
+ok - build refuses an underway or charted row that does not say whose it is
+ok - build refuses a delivered row that cannot be looked at or aged
+ok - build refuses to leave an aged delivery sitting in the delivered box
+ok - build accepts a delivered row under the threshold and a nudge card above it
+ok - build refuses a nudge card that cannot say how long or point where
+ok - request identities pass validation and reach nudge cards intact

@@ -1,0 +1,193 @@
+{
+  "schema": "fm-bearings.v1",
+  "home": ".nm-live2/main",
+  "generated": "2026-09-08T18:17:01Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [
+    {
+      "id": "main-approval",
+      "kind": "ship",
+      "state": "paused",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "doing": "waiting on review"
+    },
+    {
+      "id": "main-prose",
+      "kind": "ship",
+      "state": "paused",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": null,
+      "doing": "dependency https://github.com/kunchenguid/firstmate/pull/4016 is still under review"
+    },
+    {
+      "id": "main-queued",
+      "kind": "ship",
+      "state": "blocked",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "doing": "waiting for dependency"
+    },
+    {
+      "id": "main-work",
+      "kind": "ship",
+      "state": "working",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "doing": "harness busy (claude-hook)"
+    },
+    {
+      "id": "mate/mate-work",
+      "kind": "ship",
+      "state": "working",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "doing": "harness busy (claude-hook)"
+    },
+    {
+      "id": "mate/mate-approval",
+      "kind": "ship",
+      "state": "paused",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "doing": "waiting on review"
+    }
+  ],
+  "awaiting_nudge_days": 7,
+  "awaiting": [
+    {
+      "id": "main-old",
+      "what": "Old",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4016",
+      "age_days": 23,
+      "nudge": true
+    },
+    {
+      "id": "mate/mate-old",
+      "what": "Old",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4016",
+      "age_days": 23,
+      "nudge": true
+    },
+    {
+      "id": "main-delivered",
+      "what": "Delivered",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "age_days": 3,
+      "nudge": false
+    },
+    {
+      "id": "mate/mate-delivered",
+      "what": "Delivered",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "age_days": 3,
+      "nudge": false
+    }
+  ],
+  "secondmates": [
+    {
+      "id": "mate",
+      "state": "active_child_work",
+      "doing": "mate-work: harness busy (claude-hook); mate-approval: waiting on review",
+      "provenance": "structured-home",
+      "freshness": "fresh",
+      "age_seconds": 1,
+      "contradiction": false,
+      "reason": "structured home state invalid: live child state has no in-flight backlog item: mate-queued=blocked"
+    }
+  ],
+  "secondmate_reconcile": [
+    {
+      "id": "mate",
+      "spawn_gen": null,
+      "host": null,
+      "kind": "unowned_current",
+      "ids": [
+        "mate-queued"
+      ]
+    }
+  ],
+  "decisions_open": [],
+  "landed": [],
+  "gates": [
+    {
+      "id": "main-queued",
+      "title": "Queued",
+      "blocked_by": "-",
+      "reason": "-",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015"
+    },
+    {
+      "id": "mate-queued",
+      "title": "Queued",
+      "blocked_by": "-",
+      "reason": "-",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015"
+    }
+  ],
+  "reports": [],
+  "recorded_prs": [
+    {
+      "id": "main-approval",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4011"
+    },
+    {
+      "id": "main-delivered",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4015"
+    },
+    {
+      "id": "main-old",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4016"
+    },
+    {
+      "id": "main-queued",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4015"
+    },
+    {
+      "id": "main-work",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4011"
+    }
+  ],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "schema": "fm-bearings-board.v1",
+  "home": "Isolated two-home verification",
+  "generated": "2026-09-08T17:47:36Z",
+  "prs_live": false,
+  "captains_call": [
+    {
+      "key": "nudge.foo",
+      "type": "decision",
+      "repo": "firstmate",
+      "title": "Unrelated captain choice",
+      "about": "Main home choice remains open",
+      "decide": "Choose a route",
+      "options": [
+        {
+          "value": "leave",
+          "label": "Leave open"
+        }
+      ]
+    },
+    {
+      "key": "merge.main-approval",
+      "type": "merge",
+      "repo": "firstmate",
+      "title": "(main) approval still owed",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "options": [
+        {
+          "value": "leave",
+          "label": "Leave open"
+        }
+      ],
+      "risk": "Approval remains with the captain; this check leaves it open."
+    },
+    {
+      "key": "merge.mate-mate-approval",
+      "type": "merge",
+      "repo": "firstmate",
+      "title": "mate approval still owed",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "options": [
+        {
+          "value": "leave",
+          "label": "Leave open"
+        }
+      ],
+      "risk": "Approval remains with the captain; this check leaves it open."
+    },
+    {
+      "key": "https://github.com/kunchenguid/firstmate/pull/4016",
+      "type": "nudge",
+      "repo": "firstmate",
+      "title": "Outside maintainer has not merged",
+      "age_days": 23,
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4016",
+      "detail": "23 days waiting \u00b7 delivered from main and mate",
+      "options": [
+        {
+          "value": "leave",
+          "label": "Leave it",
+          "hint": "Keep the wait visible without contacting anyone"
+        },
+        {
+          "value": "nudge",
+          "label": "Nudge maintainer"
+        }
+      ]
+    }
+  ],
+  "underway": [
+    {
+      "id": "main-approval",
+      "kind": "ship",
+      "state": "paused",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "doing": "Waiting after a completed delivery"
+    },
+    {
+      "id": "main-prose",
+      "kind": "ship",
+      "state": "paused",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "doing": "Dependency https://github.com/kunchenguid/firstmate/pull/4016 is relevant"
+    },
+    {
+      "id": "main-queued",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "doing": "harness state unavailable (unknown missing)"
+    },
+    {
+      "id": "main-work",
+      "kind": "ship",
+      "state": "working",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "doing": "harness busy (claude-hook)"
+    },
+    {
+      "id": "mate/mate-work",
+      "kind": "ship",
+      "state": "working",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "doing": "harness busy (claude-hook)"
+    },
+    {
+      "id": "mate/mate-approval",
+      "kind": "ship",
+      "state": "paused",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "doing": "Waiting after a completed delivery"
+    }
+  ],
+  "awaiting": [
+    {
+      "id": "main-delivered",
+      "what": "Waiting for outside maintainer",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "age_days": 3,
+      "nudge": false
+    },
+    {
+      "id": "mate/mate-delivered",
+      "what": "Waiting for outside maintainer",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "age_days": 3,
+      "nudge": false
+    }
+  ],
+  "landed": [],
+  "charted": [
+    {
+      "id": "main-queued",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "title": "Queued follow-up",
+      "reason": "Queued follow-up",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "dispatchable": false
+    },
+    {
+      "id": "mate-queued",
+      "repo": "firstmate",
+      "owner": "mate",
+      "title": "Queued follow-up",
+      "reason": "Queued follow-up",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "dispatchable": false
+    }
+  ],
+  "charted_more": 2,
+  "awaiting_nudge_days": 7
+}

@@ -1,0 +1,214 @@
+{
+  "schema": "fm-secondmate-home-summary.v1",
+  "hold_classifier_schema": "fm-captain-hold-buckets.v1",
+  "generated": "2026-09-08T17:45:56Z",
+  "generated_epoch": 1788889556,
+  "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20RM7ENZX5ZKSTYK5K3EFEG/.nm-live/mate",
+  "valid": false,
+  "reason": "live child state has no in-flight backlog item: mate-queued=paused",
+  "invalidity": {
+    "kind": "unowned_current",
+    "ids": [
+      "mate-queued"
+    ]
+  },
+  "state": "captain_decision",
+  "active_children": [
+    {
+      "id": "mate-work",
+      "kind": "ship",
+      "state": "working",
+      "repo": "firstmate",
+      "source": "pane",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
+      "doing": "harness busy (claude-hook)"
+    },
+    {
+      "id": "mate-approval",
+      "kind": "ship",
+      "state": "paused",
+      "repo": "firstmate",
+      "source": "status-log",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4012",
+      "doing": "Waiting after a completed delivery"
+    }
+  ],
+  "awaiting_merge": [
+    {
+      "id": "mate-old",
+      "kind": "ship",
+      "state": "paused",
+      "repo": "firstmate",
+      "title": "Outside delivery ready for a nudge",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4016",
+      "delivered_epoch": 1786902354
+    },
+    {
+      "id": "mate-delivered",
+      "kind": "ship",
+      "state": "paused",
+      "repo": "firstmate",
+      "title": "Waiting for outside maintainer",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "delivered_epoch": 1788630352
+    }
+  ],
+  "decisions_open": [
+    {
+      "id": "mate-approval",
+      "key": "approval",
+      "verb": "needs-decision",
+      "summary": "Captain approval is still owed",
+      "reason": null,
+      "source": "status"
+    }
+  ],
+  "holds": [
+    {
+      "id": "mate-delivered",
+      "title": "mate-delivered",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "reason": "declared outside maintainer wait",
+      "source": "child-state"
+    },
+    {
+      "id": "mate-old",
+      "title": "mate-old",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "reason": "declared outside maintainer wait",
+      "source": "child-state"
+    },
+    {
+      "id": "mate-approval",
+      "title": "mate-approval",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "reason": "Waiting after a completed delivery",
+      "source": "child-state"
+    },
+    {
+      "id": "mate-prose",
+      "title": "mate-prose",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "reason": "Dependency https://github.com/kunchenguid/firstmate/pull/4016 is relevant",
+      "source": "child-state"
+    }
+  ],
+  "queued": [
+    {
+      "id": "mate-queued",
+      "title": "Queued follow-up",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "blocked_reason": null,
+      "hold_reason": null,
+      "hold_kind": null,
+      "hold_until": null,
+      "hold_bucket": null,
+      "hold_age_days": null,
+      "captain_actionable": false,
+      "repo": "firstmate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/3996",
+      "kind": "ship"
+    }
+  ],
+  "landed": [],
+  "endpoints": [
+    {
+      "id": "mate-approval",
+      "state": "paused",
+      "source": "status-log",
+      "endpoint": {
+        "target": "nm-live:mate-idle",
+        "exists": true,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-09-08T17:45:56Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "mate-delivered",
+      "state": "paused",
+      "source": "status-log",
+      "endpoint": {
+        "target": "nm-live:mate-idle",
+        "exists": true,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-09-08T17:45:56Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "mate-old",
+      "state": "paused",
+      "source": "status-log",
+      "endpoint": {
+        "target": "nm-live:mate-idle",
+        "exists": true,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-09-08T17:45:56Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "mate-prose",
+      "state": "paused",
+      "source": "status-log",
+      "endpoint": {
+        "target": "nm-live:mate-idle",
+        "exists": true,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-09-08T17:45:56Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "mate-queued",
+      "state": "paused",
+      "source": "status-log",
+      "endpoint": {
+        "target": "nm-live:mate-idle",
+        "exists": true,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-09-08T17:45:56Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "mate-work",
+      "state": "working",
+      "source": "pane",
+      "endpoint": {
+        "target": "nm-live:mate-work",
+        "exists": true,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-09-08T17:45:56Z",
+        "freshness": "fresh"
+      }
+    }
+  ],
+  "counts": {
+    "active_children": 2,
+    "awaiting_merge": 2,
+    "decisions_open": 1,
+    "holds": 4,
+    "queued": 1,
+    "landed": 0,
+    "endpoints": 6
+  },
+  "omitted": []
+}
