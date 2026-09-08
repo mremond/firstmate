@@ -1,0 +1,6 @@
+{
+  "stale-identity.16777234-49326909.last-launch": "3000147.280141\n",
+  "stale-identity.runner": "83151\n",
+  "stale-identity.source": "adapter=lavish\nargc=3\nargv:\n/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh\n/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-stale-identity/poll\nresistant\n",
+  "claim": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-stale-identity\n83151\n.claim.ANGkh7-83151\nknown-old-generation\n/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-stale-identity/state/procevent\n16777234:49326909\nactive\n/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-stale-identity/state\n16777234\n49326903\n501\n755\n"
+}

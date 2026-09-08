@@ -1,0 +1,27 @@
+[   0.002s] Host Darwin mac-mini 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:22 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T8132 arm64
+[   0.002s] Base b84e0e362face25f3dd8945297a3df1320d7668c; target 46e578847c6a8ce11c18b2d48e5b6ffdb7d9d930
+[   0.002s] SCENARIO target guard expiry corrected clock
+[   0.003s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-clock /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish guard-clock -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-clock/poll resistant
+[   0.183s] exit=0 elapsed=0.180s stdout='registered: guard-clock (lavish)' stderr=''
+[   0.184s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-clock /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
+[   0.308s] exit=0 elapsed=0.124s stdout='reconciled: published=0 started=1 stopped=0 uncertain=0' stderr=''
+[   1.106s] running guard-clock
+PID PPID PGID STAT COMMAND
+92534     1 92534 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start guard-clock
+93123     1 93123 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog guard-clock 92534 Tue Sep  8 16:54:26 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start guard-clock /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-clock/state/procevent/.owner-guard-ready.h2V73C 16777234 49329201
+93766 92534 92534 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-clock/poll resistant
+93806 92534 92534 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
+93827 93766 92534 S    sleep 0.1
+[   5.674s] PASS expired owner guard sends TERM to registered blocking command
+[   5.756s] after guard TERM
+PID PPID PGID STAT COMMAND
+ 3660 93766 92534 S    sleep 0.1
+93123     1 93123 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog guard-clock 92534 Tue Sep  8 16:54:26 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start guard-clock /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-clock/state/procevent/.owner-guard-ready.h2V73C 16777234 49329201
+93766     1 92534 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-clock/poll resistant
+[  10.360s] PASS target guard escalates and stops all group members
+[  10.360s] PASS short lease/check guard ends workload within observed lease + checks + stop grace allowance
+[  11.004s] PASS work log ceases after guard cleanup
+[  11.081s] target group reaped
+PID PPID PGID STAT COMMAND
+(no group members or guard)
+[  13.225s] Remaining test process groups: []

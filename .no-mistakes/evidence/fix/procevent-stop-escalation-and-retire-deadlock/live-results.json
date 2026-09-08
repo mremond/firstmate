@@ -1,0 +1,116 @@
+{
+  "results": [
+    {
+      "name": "base healthy reproduction",
+      "result": "pass",
+      "observations": {
+        "start_exit": 137,
+        "retire_seconds": 5.429,
+        "group_gone": true
+      }
+    },
+    {
+      "name": "target healthy retirement",
+      "result": "pass",
+      "observations": {
+        "start_exit": 143,
+        "retire_seconds": 0.487,
+        "group_gone": true
+      }
+    },
+    {
+      "name": "base guard reproduction",
+      "result": "pass",
+      "observations": {
+        "term_after_seconds": 4.544,
+        "leader_gone": true,
+        "child_survives": true,
+        "ticks_before": 21,
+        "ticks_after": 38
+      }
+    },
+    {
+      "name": "target guard expiry",
+      "result": "pass",
+      "observations": {
+        "term_after_seconds": 4.495,
+        "group_gone": true,
+        "after_ready_seconds": 9.285,
+        "since_last_lease_seconds": -1436280.603
+      }
+    },
+    {
+      "name": "target absent leader",
+      "result": "pass",
+      "observations": {
+        "retire_exit": 0,
+        "child_survived_term": true,
+        "group_gone": true
+      }
+    },
+    {
+      "name": "target Darwin zombie leader",
+      "result": "pass",
+      "observations": {
+        "retire_exit": 0,
+        "child_survived_term": true,
+        "group_gone": true
+      }
+    },
+    {
+      "name": "healthy reconcile cleanup",
+      "result": "pass",
+      "observations": {
+        "start_exit": 143,
+        "stdout": "reconciled: published=0 started=0 stopped=1 uncertain=0"
+      }
+    },
+    {
+      "name": "healthy home sweep",
+      "result": "pass",
+      "observations": {
+        "start_exit": 143,
+        "stdout": "retired: cleanup-sweep-home\nswept: attempted=1"
+      }
+    },
+    {
+      "name": "readable stale identity refusal",
+      "result": "pass",
+      "observations": {
+        "retire_exit": 1,
+        "term_received": false,
+        "leader_preserved": true
+      }
+    },
+    {
+      "name": "external crash refusal all callers",
+      "result": "pass",
+      "observations": {
+        "retire": {
+          "exit": 1,
+          "stdout": "",
+          "stderr": "error: cannot confirm runner identity; source remains registered: crashed-leader"
+        },
+        "reconcile": {
+          "exit": 0,
+          "stdout": "reconciled: published=0 started=0 stopped=0 uncertain=1",
+          "stderr": ""
+        },
+        "sweep-home": {
+          "exit": 1,
+          "stdout": "",
+          "stderr": "error: cannot confirm runner identity; source remains registered: crashed-leader\nerror: process-event home sweep incomplete: attempted=1 failed=1"
+        }
+      }
+    },
+    {
+      "name": "independent home scope",
+      "result": "pass",
+      "observations": {
+        "expired_group_gone": true,
+        "live_home_unsignalled": true
+      }
+    }
+  ],
+  "leftover_groups": []
+}

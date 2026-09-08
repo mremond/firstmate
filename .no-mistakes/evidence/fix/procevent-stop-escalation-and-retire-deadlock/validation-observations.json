@@ -1,0 +1,162 @@
+{
+  "base": "b84e0e362face25f3dd8945297a3df1320d7668c",
+  "target": "46e578847c6a8ce11c18b2d48e5b6ffdb7d9d930",
+  "host": "macOS Darwin 25.5.0 arm64",
+  "results": [
+    {
+      "name": "base healthy reproduction",
+      "result": "pass",
+      "observations": {
+        "start_exit": 137,
+        "retire_seconds": 5.429,
+        "group_gone": true
+      }
+    },
+    {
+      "name": "target healthy retirement",
+      "result": "pass",
+      "observations": {
+        "start_exit": 143,
+        "retire_seconds": 0.487,
+        "group_gone": true
+      }
+    },
+    {
+      "name": "base guard reproduction",
+      "result": "pass",
+      "observations": {
+        "term_after_seconds": 4.544,
+        "leader_gone": true,
+        "child_survives": true,
+        "ticks_before": 21,
+        "ticks_after": 38
+      }
+    },
+    {
+      "name": "target absent leader",
+      "result": "pass",
+      "observations": {
+        "retire_exit": 0,
+        "child_survived_term": true,
+        "group_gone": true
+      }
+    },
+    {
+      "name": "target Darwin zombie leader",
+      "result": "pass",
+      "observations": {
+        "retire_exit": 0,
+        "child_survived_term": true,
+        "group_gone": true
+      }
+    },
+    {
+      "name": "healthy reconcile cleanup",
+      "result": "pass",
+      "observations": {
+        "start_exit": 143,
+        "stdout": "reconciled: published=0 started=0 stopped=1 uncertain=0"
+      }
+    },
+    {
+      "name": "healthy home sweep",
+      "result": "pass",
+      "observations": {
+        "start_exit": 143,
+        "stdout": "retired: cleanup-sweep-home\nswept: attempted=1"
+      }
+    },
+    {
+      "name": "readable stale identity refusal",
+      "result": "pass",
+      "observations": {
+        "retire_exit": 1,
+        "term_received": false,
+        "leader_preserved": true
+      }
+    },
+    {
+      "name": "external crash refusal all callers",
+      "result": "pass",
+      "observations": {
+        "retire": {
+          "exit": 1,
+          "stdout": "",
+          "stderr": "error: cannot confirm runner identity; source remains registered: crashed-leader"
+        },
+        "reconcile": {
+          "exit": 0,
+          "stdout": "reconciled: published=0 started=0 stopped=0 uncertain=1",
+          "stderr": ""
+        },
+        "sweep-home": {
+          "exit": 1,
+          "stdout": "",
+          "stderr": "error: cannot confirm runner identity; source remains registered: crashed-leader\nerror: process-event home sweep incomplete: attempted=1 failed=1"
+        }
+      }
+    },
+    {
+      "name": "independent home scope",
+      "result": "pass",
+      "observations": {
+        "expired_group_gone": true,
+        "live_home_unsignalled": true
+      }
+    },
+    {
+      "name": "target guard expiry corrected clock",
+      "result": "pass",
+      "observations": {
+        "term_after_seconds": 4.568,
+        "group_gone": true,
+        "after_ready_seconds": 9.254,
+        "since_last_lease_seconds": 10.107
+      }
+    },
+    {
+      "name": "unreadable identity before and after proof",
+      "result": "pass",
+      "observations": {
+        "unproved_retire_exit": 1,
+        "proved_retire_exit": 0,
+        "group_gone": true,
+        "ps_is_real_missing_executable": true
+      }
+    },
+    {
+      "name": "live nonleader refusal",
+      "result": "pass",
+      "observations": {
+        "retire_exit": 1,
+        "term_received": false,
+        "nonleader_pid_pgid": "60173 59015"
+      }
+    },
+    {
+      "name": "single lease miss debounce",
+      "result": "pass",
+      "observations": {
+        "one_failed_check_survived": true,
+        "lease_recovery_survived": true
+      }
+    }
+  ],
+  "measurement_correction": "The first guard run mixed Python time.monotonic with the Perl CLOCK_MONOTONIC lease timestamp. Its negative lease age and associated bound assertion are invalid and superseded by guard-clock-results.json. OS signal, process-group and child-work observations from that run remain valid.",
+  "targeted_regressions": {
+    "source": "tests/fm-procevent.test.sh",
+    "selector": "for post_term_case in mismatch unreadable unreadable-pgid nonleader",
+    "exit": 0,
+    "live": false,
+    "note": "ps-shim regressions are supplementary; the actual missing-ps, stale-claim and nonleader scenarios above use real OS behavior."
+  },
+  "linux": {
+    "result": "untested",
+    "reason": "Docker daemon is Linux, but cached ghost:6-alpine lacks Perl and Python; ejabberd/ecs:latest lacks Bash, Perl and Python. No packages or images were installed. Provide a ready Linux execution image with Bash, Perl and procps to run the same CLI reproductions."
+  },
+  "cleanup": {
+    "remaining_owned_processes": [],
+    "remaining_groups": [],
+    "transient_worktree_files_removed": true
+  }
+}

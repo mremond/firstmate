@@ -1,0 +1,6 @@
+{
+  "crashed-leader.16777234-49326980.last-launch": "3000151.692932\n",
+  "crashed-leader.source": "adapter=lavish\nargc=3\nargv:\n/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh\n/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-crashed-leader/poll\nresistant\n",
+  "crashed-leader.runner": "90223\n",
+  "claim": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-crashed-leader\n90223\n.claim.NuAElW-90223\nTue Sep  8 16:52:18 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start crashed-leader\n/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-crashed-leader/state/procevent\n16777234:49326980\nactive\n/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-crashed-leader/state\n16777234\n49326974\n501\n755\n"
+}

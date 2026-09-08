@@ -1,0 +1,78 @@
+[   0.004s] Host Darwin mac-mini 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:22 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T8132 arm64
+[   0.004s] Base b84e0e362face25f3dd8945297a3df1320d7668c; target 46e578847c6a8ce11c18b2d48e5b6ffdb7d9d930
+[   0.004s] SCENARIO unreadable identity before and after proof
+[   0.005s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-ps-unavailable /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish ps-unavailable -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-ps-unavailable/poll resistant
+[   0.163s] exit=0 elapsed=0.158s stdout='registered: ps-unavailable (lavish)' stderr=''
+[   0.981s] running ps-unavailable
+PID PPID PGID STAT COMMAND
+43438 43435 43438 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start ps-unavailable
+43819     1 43819 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog ps-unavailable 43438 Tue Sep  8 16:54:54 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start ps-unavailable /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-ps-unavailable/state/procevent/.owner-guard-ready.DykdrG 16777234 49330581
+44754 43438 43438 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-ps-unavailable/poll resistant
+44805 43438 43438 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
+44834 44754 43438 S    sleep 0.1
+[   1.323s] identity read pid=43438 exit=1 value=''
+[   1.323s] PASS live identity cannot be read when local ps executable is unavailable
+[   1.323s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-ps-unavailable /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh retire ps-unavailable
+[   1.434s] exit=1 elapsed=0.111s stdout='' stderr='error: cannot confirm runner identity; source remains registered: ps-unavailable'
+[   1.435s] PASS unproved stop refuses unreadable identity
+[   1.435s] PASS unproved unreadable identity delivers no TERM
+[   1.435s] Restored real ps for initial ownership proof; the runner remains stopped and live
+[   1.627s] PASS proved first TERM reached the blocking child
+[   1.647s] identity read pid=43438 exit=1 value=''
+[   1.647s] PASS ps becomes genuinely unavailable during proved escalation
+[   1.647s] PASS unreadable leader remains live during escalation
+[   6.682s] late-identity stop output: retired: ps-unavailable
+[   6.682s] PASS proved stop completes KILL despite loss of ps
+[   6.682s] SCENARIO live nonleader refusal
+[   6.682s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-nonleader /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish nonleader -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-nonleader/poll resistant
+[   6.947s] exit=0 elapsed=0.264s stdout='registered: nonleader (lavish)' stderr=''
+[   7.774s] running nonleader
+PID PPID PGID STAT COMMAND
+59015 59011 59015 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start nonleader
+59500     1 59500 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog nonleader 59015 Tue Sep  8 16:55:01 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start nonleader /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-nonleader/state/procevent/.owner-guard-ready.VPWMGj 16777234 49332975
+60173 59015 59015 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-nonleader/poll resistant
+60186 60173 59015 S    sleep 0.1
+60210 59015 59015 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
+[   7.793s] identity read pid=60173 exit=0 value='Tue Sep  8 16:55:01 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-nonleader/poll resistant'
+[   7.793s] PASS actual nonleader process identity is readable
+[   7.796s] real nonleader PID PGID: 60173 59015
+[   7.797s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-nonleader /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh retire nonleader
+[   7.912s] exit=1 elapsed=0.116s stdout='' stderr='error: cannot confirm runner identity; source remains registered: nonleader'
+[   7.912s] PASS first signal refuses readable matching identity that does not lead its group
+[   7.912s] PASS nonleader refusal delivered no TERM
+[   7.913s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-nonleader /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh retire nonleader
+[  13.225s] exit=0 elapsed=5.312s stdout='retired: nonleader' stderr=''
+[  13.225s] SCENARIO single lease miss debounce
+[  13.226s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-lease-debounce /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish lease-debounce -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-lease-debounce/poll resistant
+[  13.550s] exit=0 elapsed=0.324s stdout='registered: lease-debounce (lavish)' stderr=''
+[  13.551s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-lease-debounce /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
+[  13.744s] exit=0 elapsed=0.193s stdout='reconciled: published=0 started=1 stopped=0 uncertain=0' stderr=''
+[  14.675s] running lease-debounce
+PID PPID PGID STAT COMMAND
+75468     1 75468 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start lease-debounce
+76831     1 76831 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog lease-debounce 75468 Tue Sep  8 16:55:07 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start lease-debounce /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-lease-debounce/state/procevent/.owner-guard-ready.2xCeVZ 16777234 49333443
+78022 75468 75468 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-lease-debounce/poll resistant
+78091 78022 75468 S    sleep 0.1
+78157 75468 75468 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
+[  14.814s] PASS guard enters its real two-second check sleep
+[  14.967s] Removed private owner lease for one guard evaluation
+[  16.757s] PASS guard completed one failed lease check and began next sleep
+[  16.757s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-lease-debounce /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
+[  16.930s] exit=0 elapsed=0.173s stdout='reconciled: published=0 started=0 stopped=0 uncertain=0' stderr=''
+[  16.930s] PASS one failed lease check did not stop the runner
+[  16.930s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-lease-debounce /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
+[  17.093s] exit=0 elapsed=0.162s stdout='reconciled: published=0 started=0 stopped=0 uncertain=0' stderr=''
+[  17.726s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-lease-debounce /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
+[  18.011s] exit=0 elapsed=0.285s stdout='reconciled: published=0 started=0 stopped=0 uncertain=0' stderr=''
+[  18.656s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-lease-debounce /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
+[  18.950s] exit=0 elapsed=0.294s stdout='reconciled: published=0 started=0 stopped=0 uncertain=0' stderr=''
+[  19.600s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-lease-debounce /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
+[  19.828s] exit=0 elapsed=0.228s stdout='reconciled: published=0 started=0 stopped=0 uncertain=0' stderr=''
+[  20.459s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-lease-debounce /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
+[  20.656s] exit=0 elapsed=0.196s stdout='reconciled: published=0 started=0 stopped=0 uncertain=0' stderr=''
+[  21.294s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-lease-debounce /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
+[  21.564s] exit=0 elapsed=0.269s stdout='reconciled: published=0 started=0 stopped=0 uncertain=0' stderr=''
+[  22.208s] PASS fresh owner lease resets failed-check debounce
+[  22.208s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-lease-debounce /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh retire lease-debounce
+[  27.207s] exit=0 elapsed=4.998s stdout='retired: lease-debounce' stderr=''
+[  29.346s] Remaining test process groups: []

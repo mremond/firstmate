@@ -1,0 +1,15 @@
+{
+  "results": [
+    {
+      "name": "target guard expiry corrected clock",
+      "result": "pass",
+      "observations": {
+        "term_after_seconds": 4.568,
+        "group_gone": true,
+        "after_ready_seconds": 9.254,
+        "since_last_lease_seconds": 10.107
+      }
+    }
+  ],
+  "leftover_groups": []
+}

@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "name": "unreadable identity before and after proof",
+      "result": "pass",
+      "observations": {
+        "unproved_retire_exit": 1,
+        "proved_retire_exit": 0,
+        "group_gone": true,
+        "ps_is_real_missing_executable": true
+      }
+    },
+    {
+      "name": "live nonleader refusal",
+      "result": "pass",
+      "observations": {
+        "retire_exit": 1,
+        "term_received": false,
+        "nonleader_pid_pgid": "60173 59015"
+      }
+    },
+    {
+      "name": "single lease miss debounce",
+      "result": "pass",
+      "observations": {
+        "one_failed_check_survived": true,
+        "lease_recovery_survived": true
+      }
+    }
+  ],
+  "leftover_groups": []
+}
