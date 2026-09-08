@@ -1,0 +1,8 @@
+$ bin/fm-test-run.sh --check-shard-balance
+fm-test-run: --check-shard-balance requires at least one timing JSON
+exit=2
+
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M20TE28ZPPZJ712ASRP3J3S9/absent-cancelled-shard.json
+fm-test-run: shard balance input not found: /Users/mremond/.no-mistakes/evidence/01M20TE28ZPPZJ712ASRP3J3S9/absent-cancelled-shard.json
+exit=2
+

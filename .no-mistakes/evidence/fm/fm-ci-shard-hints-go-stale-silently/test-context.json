@@ -1,0 +1,37 @@
+{
+  "target": "d0866aa569c25bf3a5a0d70e27b3ee68a0501544",
+  "tree": "b0424592a572768bfdce23cf9795a157e2ddfd97",
+  "base": "b84e0e362face25f3dd8945297a3df1320d7668c",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "python": "3.14.4",
+  "bash": "GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)",
+  "focused_suite": {
+    "command": "TMPDIR=\"$PWD/.test-phase-tmp\" bash tests/fm-test-run.test.sh",
+    "exit": 0,
+    "log": "runner-contract.log"
+  },
+  "historical_source_runs": [
+    "34180535832",
+    "34167501605",
+    "34167485767",
+    "34156531229"
+  ],
+  "live_scope": "The actual CLI and its newly emitted timing artifacts. The six complete GitHub CI shards are not executed here. The healthy and delayed runs use the public --exclude-family option to select two scripts from portable-serial-5of6. No timing values, lane labels, clock sources, or runner implementation are mocked or changed. The slow run uses SIGSTOP/SIGCONT on its own isolated process group.",
+  "live_results": {
+    "healthy": {
+      "runner_exit": 0,
+      "guard_exit": 0,
+      "wall_ms": 4007,
+      "artifact": "/Users/mremond/.no-mistakes/evidence/01M20TE28ZPPZJ712ASRP3J3S9/live-healthy.json"
+    },
+    "paused": {
+      "runner_exit": 0,
+      "guard_exit": 1,
+      "wall_ms": 1083605,
+      "artifact": "/Users/mremond/.no-mistakes/evidence/01M20TE28ZPPZJ712ASRP3J3S9/live-paused.json"
+    }
+  },
+  "temporary_worktree_files_removed": true,
+  "final_worktree_clean": true,
+  "source_changes": false
+}

@@ -1,0 +1,28 @@
+Source 34180535832: 5/5 serial artifacts, 152 script paths, no script failure. All five serial jobs and overall CI verified completed/success using gh-axi run view.
+Current guard replay on original five-shard artifacts (recorded evidence, not live): exit=1
+shard balance guard failed: portable-serial-4of5 ran 19.19 min, 96.0% of the 20 min job cap (max 90%); repack the lane (docs/fm-test-portable-shards.md)
+Source 34167501605: 5/5 serial artifacts, 152 script paths, no script failure. All five serial jobs and overall CI verified completed/success using gh-axi run view.
+Current guard replay on original five-shard artifacts (recorded evidence, not live): exit=1
+shard balance guard failed: portable-serial-4of5 ran 18.49 min, 92.5% of the 20 min job cap (max 90%); repack the lane (docs/fm-test-portable-shards.md)
+Source 34167485767: 5/5 serial artifacts, 152 script paths, no script failure. All five serial jobs and overall CI verified completed/success using gh-axi run view.
+Current guard replay on original five-shard artifacts (recorded evidence, not live): exit=1
+shard balance guard failed: portable-serial-4of5 ran 18.50 min, 92.5% of the 20 min job cap (max 90%); repack the lane (docs/fm-test-portable-shards.md)
+Source 34156531229: 5/5 serial artifacts, 151 script paths, no script failure. All five serial jobs and overall CI verified completed/success using gh-axi run view.
+Current guard replay on original five-shard artifacts (recorded evidence, not live): exit=1
+shard balance guard failed: portable-serial-1of5 ran 19.51 min, 97.6% of the 20 min job cap (max 90%); repack the lane (docs/fm-test-portable-shards.md)
+
+Retained maxima: 152 paths, 4,974,498 ms including the documented 5,121 ms Windows measurement.
+Number of source runs per path: {4: 151, 3: 1}
+Public --list --lane results exactly match longest-first packing of the source maxima:
+portable-serial-1of6: 23 scripts, 829090 ms; agrees with published table.
+portable-serial-2of6: 26 scripts, 829094 ms; agrees with published table.
+portable-serial-3of6: 26 scripts, 829097 ms; agrees with published table.
+portable-serial-4of6: 26 scripts, 829079 ms; agrees with published table.
+portable-serial-5of6: 25 scripts, 829059 ms; agrees with published table.
+portable-serial-6of6: 26 scripts, 829079 ms; agrees with published table.
+
+Regrouped recorded durations under the actual six-shard selection (replay only):
+34180535832: worst shard=13.37 min (66.83% of 20 min); 0 missing path(s) in this historical run.
+34167501605: worst shard=13.36 min (66.78% of 20 min); 0 missing path(s) in this historical run.
+34167485767: worst shard=13.31 min (66.57% of 20 min); 0 missing path(s) in this historical run.
+34156531229: worst shard=13.14 min (65.71% of 20 min); 1 missing path(s) in this historical run.

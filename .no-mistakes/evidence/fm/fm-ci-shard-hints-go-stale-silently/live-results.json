@@ -1,0 +1,14 @@
+{
+  "healthy": {
+    "runner_exit": 0,
+    "guard_exit": 0,
+    "wall_ms": 4007,
+    "artifact": "/Users/mremond/.no-mistakes/evidence/01M20TE28ZPPZJ712ASRP3J3S9/live-healthy.json"
+  },
+  "paused": {
+    "runner_exit": 0,
+    "guard_exit": 1,
+    "wall_ms": 1083605,
+    "artifact": "/Users/mremond/.no-mistakes/evidence/01M20TE28ZPPZJ712ASRP3J3S9/live-paused.json"
+  }
+}

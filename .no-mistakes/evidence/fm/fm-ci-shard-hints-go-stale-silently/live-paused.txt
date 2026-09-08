@@ -1,0 +1,51 @@
+$ bin/fm-test-run.sh --lane portable-serial-5of6 --exclude-family watcher-wake-lock --exclude-family real-herdr-gated --exclude-family secondmate --exclude-family session-bootstrap --exclude-family live-harness-optin --exclude-family backend-dispatch --exclude-family pr-forge --exclude-family afk --exclude-family snapshot-bearings --exclude-family cmux --exclude-family zellij --exclude-family orca --exclude-family standalone --exclude-family unclassified --json /Users/mremond/.no-mistakes/evidence/01M20TE28ZPPZJ712ASRP3J3S9/live-paused.json
+FM_TEST_BEGIN 2026-09-08T15:41:48Z tests/fm-subagent-pretool-check.test.sh family=pure-contract-unit expected_gate_skip=none
+[driver] SIGSTOP own process group 36272; controlled delay 1082s; wall clock unchanged.
+[driver] SIGCONT; resumed own process group.
+ok - the guard independently denies every work-creating delegation tool by shape
+ok - the guard denies delegation-shaped tools that no deny list knows about yet
+ok - the guard leaves ordinary tools and observe-or-stop operations alone
+ok - the guard leaves the session-local todo list alone
+ok - the plan-only exclusion releases exactly two names and nothing that merely contains them
+ok - MCP tool names are never classified as harness delegation
+ok - deny defers to intake classification and degrades gracefully without fm-scout.sh
+ok - the single documented escape hatch releases the guard only on the exact opt-in value
+ok - the guard is inert in a crewmate task worktree and in a non-firstmate repo
+ok - a marked secondmate home is guarded even though it is a linked worktree
+ok - both stdin transports classify correctly and Claude's deny keeps stdout empty
+ok - malformed, empty, and tool-name-less payloads fail open rather than blocking every tool call
+ok - missing jq for stdin transport fails open rather than denying every tool call
+FM_TEST_END 2026-09-08T15:59:51Z tests/fm-subagent-pretool-check.test.sh exit=0 duration_ms=1082183 gate_skip=false
+FM_TEST_BEGIN 2026-09-08T15:59:51Z tests/fm-trace-context-lib.test.sh family=pure-contract-unit expected_gate_skip=none
+ok - fm_trace_context_valid accepts a conformant W3C traceparent
+ok - fm_trace_context_valid rejects all-zero ids, ff version, uppercase, wrong length, missing field, shell metacharacters, and empty
+ok - a command-substitution-shaped value is rejected as inert data, never executed
+ok - fm_trace_context_hex yields exact-length lowercase hex, distinct per call
+ok - fm_trace_context_mint starts a valid sampled root trace
+ok - every mint is an unrelated fresh root - one trace per task, no parent adoption
+ok - a minted root is the fixed 55-char W3C form (hex and hyphens only), so firstmate originates no free-form content in the carrier
+ok - enablement is default-off; FM_TRACE_CONTEXT overrides with truthy/other precedence, and unset or empty defers to config/trace-context
+ok - session start normalizes config and environment precedence into frozen on/off state
+ok - session state is atomically published through a same-directory replacement
+ok - a stale on record is inactive when publication fails in a new locked session
+ok - missing or invalid frozen session state defaults off
+ok - resolve omits the carrier and returns success when the capability is off (byte-identical default)
+ok - resolve mints a valid traceparent when enabled
+ok - Secondmate home-session state stays off or on despite later file state; ambient TRACEPARENT is never adopted, so each routed task roots its own trace
+ok - resolve reuses a valid recorded traceparent verbatim on relaunch (stable identity across restarts)
+ok - disabling the capability omits the carrier even for a task with a recorded identity
+ok - a corrupt recorded traceparent is re-minted rather than propagated
+ok - resolve yields exactly one carrier per logical task, so the recorded and injected values are identical by construction
+ok - entropy failure omits telemetry safely: mint reports failure, resolve returns success with no carrier
+ok - the resolver has no sleep/timeout/command hang source and always returns success
+ok - the carrier is minted identically for every harness, backend, and spawn kind (no such branching in the lib code)
+ok - the lib code never reads a brief, prompt, report, or status - it cannot leak content
+ok - config/trace-context is inherited into secondmate homes, keeping the nested chain enabled end to end
+# fm-trace-context-lib.test.sh: all assertions passed
+FM_TEST_END 2026-09-08T15:59:51Z tests/fm-trace-context-lib.test.sh exit=0 duration_ms=289 gate_skip=false
+FM_TEST_SUMMARY total=2 failed=0 skipped_gate=0 duration_ms=1083605
+FM_TEST_SUMMARY_FAMILY family=pure-contract-unit count=2 duration_ms=1082472 failed=0
+FM_TEST_SLOWEST rank=1 script=tests/fm-subagent-pretool-check.test.sh duration_ms=1082183
+FM_TEST_SLOWEST rank=2 script=tests/fm-trace-context-lib.test.sh duration_ms=289
+fm-test-run: wrote timing artifact: /Users/mremond/.no-mistakes/evidence/01M20TE28ZPPZJ712ASRP3J3S9/live-paused.json
+exit=0

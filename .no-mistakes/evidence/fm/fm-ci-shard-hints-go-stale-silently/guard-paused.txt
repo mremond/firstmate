@@ -1,0 +1,7 @@
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M20TE28ZPPZJ712ASRP3J3S9/live-paused.json
+shard balance guard failed: portable-serial-5of6 ran 18.06 min, 90.3% of the 20 min job cap (max 90%); repack the lane (docs/fm-test-portable-shards.md)
+  re-measure the scripts furthest over their hints:
+    tests/fm-subagent-pretool-check.test.sh measured 1082.2s hint 1.1s (+1081.1s)
+    tests/fm-trace-context-lib.test.sh measured 0.3s hint 0.2s (+0.0s)
+FM_TEST_SHARD_BALANCE partial 1 of 6 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+exit=1
