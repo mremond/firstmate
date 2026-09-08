@@ -1,0 +1,23 @@
+FM_TEST_BEGIN 2026-09-08T13:15:37Z tests/fm-test-fixture-cleanup.test.sh family=standalone expected_gate_skip=none
+ok - fm_test_tmproot cleans up its fixture root on normal exit
+ok - fm_test_tmproot cleans up its fixture root on SIGTERM
+ok - a failed test retires the listener it armed
+ok - an interrupted run retires the listener it armed
+ok - an undeclared home's claims stay inside the suite-owned claim root
+ok - the cleanup registry cannot be injected through path precreation
+ok - failed fixture registration rolls back the new root
+ok - the orphan sweep reaps only old fixtures without a live owner
+ok - the orphan sweep reaps read-only package fixtures
+FM_TEST_END 2026-09-08T13:18:35Z tests/fm-test-fixture-cleanup.test.sh exit=0 duration_ms=177450 gate_skip=false
+FM_TEST_BEGIN 2026-09-08T13:18:35Z tests/fm-bearings-board-render.test.sh family=snapshot-bearings expected_gate_skip=optional-binary
+ok - a warning row badges needs repair while queued work keeps waiting
+ok - the charted next count counts queued work only, and still renders warnings
+ok - a warning-only board reports nothing queued and still shows the warning
+ok - omitted warnings remain separate from omitted queued work
+ok - an omitted kind renders exactly as queued work always did
+FM_TEST_END 2026-09-08T13:25:56Z tests/fm-bearings-board-render.test.sh exit=0 duration_ms=439840 gate_skip=false
+FM_TEST_SUMMARY total=2 failed=0 skipped_gate=0 duration_ms=620389
+FM_TEST_SUMMARY_FAMILY family=snapshot-bearings count=1 duration_ms=439840 failed=0
+FM_TEST_SUMMARY_FAMILY family=standalone count=1 duration_ms=177450 failed=0
+FM_TEST_SLOWEST rank=1 script=tests/fm-bearings-board-render.test.sh duration_ms=439840
+FM_TEST_SLOWEST rank=2 script=tests/fm-test-fixture-cleanup.test.sh duration_ms=177450

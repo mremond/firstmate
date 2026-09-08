@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-08T13:29:41.615333+00:00",
+  "completed_suites": [
+    "fm-test-fixture-cleanup",
+    "fm-bearings-board-render",
+    "fm-bearings-board-lavish-live-e2e"
+  ],
+  "surviving_polls": [],
+  "surviving_board_fixture_roots": []
+}

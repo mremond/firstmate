@@ -1,0 +1,8 @@
+target=3cea357284a5419aeacb0ad823b6e48091a4f826
+suite_sha256=2da181c8692f5e1559c429c2c7d7222c049b25314c628748d2c07d5f914749c8
+probe_parent=32621 foreign_sleep_pid=40604
+suite_pid=40625 tracked_pid=49693 observed_parent=40625 guard_permits=true fixture=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2082V2RRVRBS459RBJ4K0BY/.test-phase/guard/own-tmp/fm-guard-probe.cHsBJf
+mode=own suite_exit=0 tracked_pid=49693 alive_after_teardown=false fixture_exists_after_teardown=False
+suite_pid=54747 tracked_pid=40604 observed_parent=32621 guard_permits=false fixture=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2082V2RRVRBS459RBJ4K0BY/.test-phase/guard/foreign-tmp/fm-guard-probe.dgBZna
+mode=foreign suite_exit=0 tracked_pid=40604 alive_after_teardown=true fixture_exists_after_teardown=False
+probe_cleanup foreign_sleep_pid=40604 reaped=true

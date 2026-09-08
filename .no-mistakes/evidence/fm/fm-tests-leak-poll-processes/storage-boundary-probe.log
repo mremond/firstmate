@@ -1,0 +1,18 @@
+owner_pid=53256 old_live_owner_preserved=true fresh_unowned_preserved=true old_reused_identity_removed=true
+inherited_claim_root=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2082V2RRVRBS459RBJ4K0BY/.test-phase/storage-tmp/fm-test-procevent-claims.37jUL3 child_cleanup_preserved_parent_root=true
+registered: claim-store-probe (lavish)
+reconciled: published=0 started=1 stopped=0 uncertain=0
+claim_path=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2082V2RRVRBS459RBJ4K0BY/.test-phase/storage-tmp/fm-test-procevent-claims.37jUL3/claim-store-probe.claim fallback_claim_store_exists=false
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2082V2RRVRBS459RBJ4K0BY/.test-phase/storage-tmp/fm-probe-claim-store.JQTMf4/home
+14115
+.claim.LjkgFH-14115
+Tue Sep  8 15:29:01 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2082V2RRVRBS459RBJ4K0BY/bin/fm-procevent.sh _start claim-store-probe
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2082V2RRVRBS459RBJ4K0BY/.test-phase/storage-tmp/fm-probe-claim-store.JQTMf4/home/state/procevent
+16777234:48758370
+active
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2082V2RRVRBS459RBJ4K0BY/.test-phase/storage-tmp/fm-probe-claim-store.JQTMf4/home/state
+16777234
+48757744
+501
+755
+after_cleanup fixture_exists=false claim_root_exists=false
