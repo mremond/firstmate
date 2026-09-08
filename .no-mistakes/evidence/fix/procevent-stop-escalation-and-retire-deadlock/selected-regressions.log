@@ -1,0 +1,11 @@
+ok - stop mismatch evidence preserves the proved-stop boundary
+ok - stop unreadable evidence preserves the proved-stop boundary
+ok - stop unreadable-pgid evidence preserves the proved-stop boundary
+ok - stop nonleader evidence preserves the proved-stop boundary
+ok - an ambiguous leaderless group is preserved without replacement
+ok - retirement escalates after TERM leaves a surviving child (absent leader)
+ok - retirement escalates after TERM leaves a surviving child (zombie leader)
+ok - an expired runner's guard escalates past a signal-proof child
+ordinary stop: start status=143 retirement=496ms sampled windows=4872/4896ms
+ok - a runner exits on the ordinary stop signal instead of outliving it
+ok - a group whose leader died to something else is still refused, not signalled

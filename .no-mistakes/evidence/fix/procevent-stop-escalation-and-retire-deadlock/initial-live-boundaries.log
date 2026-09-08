@@ -1,0 +1,14 @@
+[target-first-signal-nonleader] $ fm-procevent.sh register lavish target-first-signal-nonleader -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-first-signal-nonleader/poll => status=0 elapsed=0.169s
+registered: target-first-signal-nonleader (lavish)
+
+[target-first-signal-nonleader] $ fm-procevent.sh reconcile => status=0 elapsed=0.120s
+reconciled: published=0 started=1 stopped=0 uncertain=0
+
+[target-first-signal-nonleader] runner: 98670     1 98670 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/bin/fm-procevent.sh _start target-first-signal-nonleader
+[target-first-signal-nonleader] listener/descendant: 99932 98670 98670 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-first-signal-nonleader/poll
+[target-first-signal-nonleader] claim now identifies actual live nonleader: 99932 98670 98670 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-first-signal-nonleader/poll
+[target-first-signal-nonleader] $ fm-procevent.sh retire target-first-signal-nonleader => status=1 elapsed=0.115s
+
+error: cannot confirm runner identity; source remains registered: target-first-signal-nonleader
+OBSERVATION {"name": "target-first-signal-nonleader", "passed": true, "cli_status": 1, "runner_alive": true, "nonleader_alive": true, "signals": [], "registration_preserved": true, "claim_preserved": true}
+[target-first-signal-nonleader] teardown-only KILL of test-owned group 98670

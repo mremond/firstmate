@@ -1,0 +1,26 @@
+[target-first-signal-nonleader-fresh] $ fm-procevent.sh register lavish target-first-signal-nonleader-fresh -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-first-signal-nonleader-fresh/poll => status=0 elapsed=0.144s
+registered: target-first-signal-nonleader-fresh (lavish)
+
+[target-first-signal-nonleader-fresh] $ fm-procevent.sh reconcile => status=0 elapsed=0.105s
+reconciled: published=0 started=1 stopped=0 uncertain=0
+
+[target-first-signal-nonleader-fresh] runner: 20729     1 20729 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/bin/fm-procevent.sh _start target-first-signal-nonleader-fresh
+[target-first-signal-nonleader-fresh] listener/descendant: 21562 20729 20729 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-first-signal-nonleader-fresh/poll
+[target-first-signal-nonleader-fresh] claim now identifies actual live nonleader: 21562 20729 20729 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-first-signal-nonleader-fresh/poll
+[target-first-signal-nonleader-fresh] $ fm-procevent.sh retire target-first-signal-nonleader-fresh => status=1 elapsed=0.105s
+
+error: cannot confirm runner identity; source remains registered: target-first-signal-nonleader-fresh
+OBSERVATION {"name": "target-first-signal-nonleader-fresh", "passed": true, "cli_status": 1, "runner_alive": true, "nonleader_alive": true, "signals": [], "registration_preserved": true, "claim_preserved": true}
+[target-first-signal-nonleader-fresh] teardown-only KILL of test-owned group 20729
+[base-abandoned-guard-proof] $ fm-procevent.sh register lavish base-abandoned-guard-proof -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base-abandoned-guard-proof/poll => status=0 elapsed=0.153s
+registered: base-abandoned-guard-proof (lavish)
+
+[base-abandoned-guard-proof] $ fm-procevent.sh reconcile => status=0 elapsed=0.130s
+reconciled: published=0 started=1 stopped=0 uncertain=0
+
+[base-abandoned-guard-proof] runner: 22680     1 22680 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base/bin/fm-procevent.sh _start base-abandoned-guard-proof
+[base-abandoned-guard-proof] listener/descendant: 23450 22680 22680 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base-abandoned-guard-proof/poll
+[base-abandoned-guard-proof] live guard before expiry: 23004     1 23004 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base/bin/fm-procevent.sh _owner-watchdog base-abandoned-guard-proof 22680 Tue Sep  8 17:52:37 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base/bin/fm-procevent.sh _start base-abandoned-guard-proof /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base-abandoned-guard-proof/state/procevent/.owner-guard-ready.NnOylb 16777234 49550900
+OBSERVATION {"name": "base-abandoned-guard-proof", "passed": true, "baseline_defect_reproduced": true, "guard_gone": true, "runner_gone": true, "child_alive": true, "signals": ["signalled"]}
+[base-abandoned-guard-proof] guard=absent; runner=absent; survivor=23450     1 22680 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base-abandoned-guard-proof/poll
+[base-abandoned-guard-proof] teardown-only KILL of test-owned group 22680

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "target-first-signal-nonleader-fresh",
+    "passed": true,
+    "cli_status": 1,
+    "runner_alive": true,
+    "nonleader_alive": true,
+    "signals": [],
+    "registration_preserved": true,
+    "claim_preserved": true
+  },
+  {
+    "name": "base-abandoned-guard-proof",
+    "passed": true,
+    "baseline_defect_reproduced": true,
+    "guard_gone": true,
+    "runner_gone": true,
+    "child_alive": true,
+    "signals": [
+      "signalled"
+    ]
+  }
+]

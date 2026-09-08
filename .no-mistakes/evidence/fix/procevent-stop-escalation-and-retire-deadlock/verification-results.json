@@ -1,0 +1,176 @@
+{
+  "verified_at": "2026-09-08T17:53:29.788401+02:00",
+  "base": "b84e0e362face25f3dd8945297a3df1320d7668c",
+  "target": "64fa4b726f64f57a428b685eb906206d8dc6e7cd",
+  "observations": [
+    {
+      "name": "base-healthy-retire",
+      "passed": false,
+      "cli_status": 0,
+      "start_exit_status": 137,
+      "retirement_seconds": 5.302,
+      "group_gone": true,
+      "claim_removed": true
+    },
+    {
+      "name": "base-owner-expiry",
+      "passed": false,
+      "term_after_seconds": 7.869,
+      "observed_seconds": 19.972,
+      "group_gone": false,
+      "child_alive": true,
+      "other_home_alive": true,
+      "lease_seconds": 5,
+      "check_seconds": 1,
+      "signals": [
+        "signalled"
+      ]
+    },
+    {
+      "name": "target-healthy-retire",
+      "passed": true,
+      "cli_status": 0,
+      "start_exit_status": 143,
+      "retirement_seconds": 0.516,
+      "group_gone": true,
+      "claim_removed": true
+    },
+    {
+      "name": "target-owner-expiry",
+      "passed": true,
+      "term_after_seconds": 8.098,
+      "observed_seconds": 12.957,
+      "group_gone": true,
+      "child_alive": false,
+      "other_home_alive": true,
+      "lease_seconds": 5,
+      "check_seconds": 1,
+      "signals": [
+        "signalled"
+      ]
+    },
+    {
+      "name": "target-resistant-retire",
+      "passed": true,
+      "leader_transition_observed": true,
+      "survivor_after_TERM": true,
+      "child_gone": true,
+      "group_gone": true,
+      "cli_status": 0,
+      "seconds": 5.075,
+      "claim_removed": true
+    },
+    {
+      "name": "target-resistant-reconcile",
+      "passed": true,
+      "leader_transition_observed": true,
+      "survivor_after_TERM": true,
+      "child_gone": true,
+      "group_gone": true,
+      "cli_status": 0,
+      "seconds": 5.067,
+      "claim_removed": true
+    },
+    {
+      "name": "target-healthy-reconcile",
+      "passed": true,
+      "cli_status": 0,
+      "start_exit_status": 143,
+      "retirement_seconds": 0.44,
+      "group_gone": true,
+      "claim_removed": true
+    },
+    {
+      "name": "target-resistant-sweep-home",
+      "passed": true,
+      "leader_transition_observed": true,
+      "survivor_after_TERM": true,
+      "child_gone": true,
+      "group_gone": true,
+      "cli_status": 0,
+      "seconds": 5.385,
+      "claim_removed": true
+    },
+    {
+      "name": "target-healthy-sweep-home",
+      "passed": true,
+      "cli_status": 0,
+      "start_exit_status": 143,
+      "retirement_seconds": 0.73,
+      "group_gone": true,
+      "claim_removed": true
+    },
+    {
+      "name": "target-zombie-retire",
+      "passed": true,
+      "leader_transition_observed": true,
+      "survivor_after_TERM": true,
+      "child_gone": true,
+      "group_gone": true,
+      "cli_status": 0,
+      "seconds": 5.131,
+      "claim_removed": true
+    },
+    {
+      "name": "target-first-signal-mismatch",
+      "passed": true,
+      "cli_status": 1,
+      "leader_alive": true,
+      "child_alive": true,
+      "signals": [],
+      "registration_preserved": true,
+      "claim_preserved": true
+    },
+    {
+      "name": "target-external-leader-crash",
+      "passed": true,
+      "callers": {
+        "retire": {
+          "status": 1,
+          "group_alive": true,
+          "claim_preserved": true,
+          "registration_preserved": true
+        },
+        "reconcile": {
+          "status": 0,
+          "group_alive": true,
+          "claim_preserved": true,
+          "registration_preserved": true
+        },
+        "sweep-home": {
+          "status": 1,
+          "group_alive": true,
+          "claim_preserved": true,
+          "registration_preserved": true
+        }
+      },
+      "guard_did_not_signal": true,
+      "completed_child_output_lost": true
+    },
+    {
+      "name": "target-first-signal-nonleader-fresh",
+      "passed": true,
+      "cli_status": 1,
+      "runner_alive": true,
+      "nonleader_alive": true,
+      "signals": [],
+      "registration_preserved": true,
+      "claim_preserved": true
+    },
+    {
+      "name": "base-abandoned-guard-proof",
+      "passed": true,
+      "baseline_defect_reproduced": true,
+      "guard_gone": true,
+      "runner_gone": true,
+      "child_alive": true,
+      "signals": [
+        "signalled"
+      ]
+    }
+  ],
+  "selected_regressions_exit_status": 0,
+  "driver_setup_retries": "A teardown kill(0) probe returned EPERM after its group disappeared; independent ps inspection found no group. The driver now checks actual membership on a denied probe. Retry reused old marker files; reran in a fresh isolated home successfully.",
+  "probe_failure_live_limit": "Unreadable identity/PGID after TERM was tested with deterministic ps shims only; real absent and macOS zombie transitions were driven live.",
+  "cleanup": "All test runtime data removed; worktree clean."
+}

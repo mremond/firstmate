@@ -1,0 +1,8 @@
+[target-first-signal-nonleader] $ fm-procevent.sh register lavish target-first-signal-nonleader -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-first-signal-nonleader/poll => status=0 elapsed=0.170s
+registered: target-first-signal-nonleader (lavish)
+
+[target-first-signal-nonleader] $ fm-procevent.sh reconcile => status=0 elapsed=0.161s
+reconciled: published=0 started=1 stopped=0 uncertain=0
+
+[target-first-signal-nonleader] runner: 
+[target-first-signal-nonleader] listener/descendant: 
