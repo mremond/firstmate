@@ -1,0 +1,22 @@
+run:
+  id: 34156531229
+  title: "fix(bin): gate secondmate wake-loop stall alerts on real queue no-pro…"
+  status: completed
+  conclusion: success
+  workflow: CI
+  branch: main
+  created: 18h ago
+jobs[13]{id,name,status,conclusion}:
+  101849418521,Lint,completed,success
+  101849418654,Repo invariants,completed,success
+  101849418668,Behavior portable serial 4,completed,success
+  101849418670,Behavior portable parallel 2,completed,success
+  101849418682,Stock macOS Bash snapshot compatibility,completed,success
+  101849418697,Behavior tests (Herdr),completed,success
+  101849418725,Behavior portable parallel 1,completed,success
+  101849418728,Behavior portable serial 1,completed,success
+  101849418755,Behavior portable serial 3,completed,success
+  101849418788,Test coverage guard,completed,success
+  101849418791,Behavior portable serial 5,completed,success
+  101849418794,Behavior portable serial 2,completed,success
+  101853066681,Behavior timing aggregate,completed,success

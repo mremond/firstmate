@@ -1,0 +1,22 @@
+run:
+  id: 34167485767
+  title: "fix(bin): use system stat for Darwin BSD formats (#3305)"
+  status: completed
+  conclusion: success
+  workflow: CI
+  branch: main
+  created: 15h ago
+jobs[13]{id,name,status,conclusion}:
+  101881318678,Behavior portable parallel 2,completed,success
+  101881318764,Behavior tests (Herdr),completed,success
+  101881318769,Repo invariants,completed,success
+  101881318790,Stock macOS Bash snapshot compatibility,completed,success
+  101881318792,Lint,completed,success
+  101881318797,Behavior portable serial 4,completed,success
+  101881318833,Behavior portable serial 2,completed,success
+  101881318838,Test coverage guard,completed,success
+  101881318846,Behavior portable parallel 1,completed,success
+  101881318853,Behavior portable serial 5,completed,success
+  101881318917,Behavior portable serial 3,completed,success
+  101881318960,Behavior portable serial 1,completed,success
+  101884225320,Behavior timing aggregate,completed,success

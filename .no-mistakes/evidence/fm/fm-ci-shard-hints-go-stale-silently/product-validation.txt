@@ -1,0 +1,111 @@
+Firstmate shard CLI validation
+Target: f7f83b011e5633c0f6a3fe96ad2e4b26d0d3b89e
+
+PLANNER: Runtime --list --lane output matched a packing from four green runs, with the unchanged documented native-Windows measurement retained.
+portable-serial-1of6 scripts=23 weight_ms=829090
+portable-serial-2of6 scripts=26 weight_ms=829094
+portable-serial-3of6 scripts=26 weight_ms=829097
+portable-serial-4of6 scripts=26 weight_ms=829079
+portable-serial-5of6 scripts=25 weight_ms=829059
+portable-serial-6of6 scripts=26 weight_ms=829079
+All 152 scripts appear once; six documentation rows match; weight imbalance=38 ms.
+The full six-shard Linux workload was not executed locally.
+
+INVALID LANE / CONCURRENCY REFUSALS
+$ bin/fm-test-run.sh --list --lane portable-serial-1of5
+fm-test-run: lane 'portable-serial-1of5' asks for 5 portable serial shards but this runner is configured for 6 (see --list-lanes)
+exit=2
+
+$ bin/fm-test-run.sh --list --lane portable-serial-7of6
+fm-test-run: lane 'portable-serial-7of6' shard index is outside 1..6 (see --list-lanes)
+exit=2
+
+$ bin/fm-test-run.sh --jobs 2 --lane portable-serial-1of6
+fm-test-run: --jobs 2 refused: tests/fm-backend.test.sh is not in the proven-isolated set (see bin/fm-test-isolation-proof.sh --list) and its family has no recorded concurrent proof. Unproven stateful scripts stay serial.
+exit=2
+
+
+FRESH HEALTHY RUNNER ARTIFACT
+FM_TEST_SHARD_BALANCE partial 1 of 6 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-5of6@3.6% bound=20min
+
+exit=0
+
+WALL-TIME NUMERATOR FROM FRESH OUTPUT
+{
+  "recorded_wall_ms": 42686,
+  "sum_of_scripts_ms": 29532,
+  "printed_share_percent": 3.6,
+  "share_from_wall_percent": 3.6,
+  "share_from_script_sum_percent": 2.5,
+  "result": "Fresh actual runner output demonstrates that the guard measures recorded wall time, not summed script durations."
+}
+
+GENUINE ELAPSED-TIME STRESS
+FM_TEST_SHARD_BALANCE partial 1 of 6 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+shard balance guard failed: portable-serial-5of6 ran 18.36 min, 91.8% of the 20 min job cap (max 90%); repack the lane (docs/fm-test-portable-shards.md)
+  re-measure the scripts furthest over their hints:
+    tests/fm-subagent-pretool-check.test.sh measured 1083.5s hint 1.1s (+1082.4s)
+    tests/fm-trace-context-lib.test.sh measured 0.4s hint 0.2s (+0.2s)
+
+exit=1
+
+AGGREGATE STEP: NO ARTIFACTS
+Local execution of YAML-parsed aggregate/check shell steps; GitHub download/upload actions are not simulated.
+Build aggregate timing summary
+::warning::no per-lane timing JSON found to aggregate
+exit=0
+
+Check portable serial shard balance
+::warning::no portable serial timing JSON found; shard balance unchecked
+exit=0
+
+
+AGGREGATE STEP: FRESH HEALTHY ARTIFACT
+Local execution of YAML-parsed aggregate/check shell steps; GitHub download/upload actions are not simulated.
+Build aggregate timing summary
+FM_TEST_AGGREGATE lanes=1 total=2 failed=0 skipped_gate=0 critical_path_duration_ms=42686
+exit=0
+
+Check portable serial shard balance
+FM_TEST_SHARD_BALANCE partial 1 of 6 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-5of6@3.6% bound=20min
+exit=0
+
+
+AGGREGATE STEP: FRESH SLOW ARTIFACT
+Local execution of the YAML-parsed shell steps with a fresh, unmodified runner artifact.
+Build aggregate timing summary
+FM_TEST_AGGREGATE lanes=1 total=2 failed=0 skipped_gate=0 critical_path_duration_ms=1101843
+exit=0
+
+Check portable serial shard balance
+FM_TEST_SHARD_BALANCE partial 1 of 6 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+shard balance guard failed: portable-serial-5of6 ran 18.36 min, 91.8% of the 20 min job cap (max 90%); repack the lane (docs/fm-test-portable-shards.md)
+  re-measure the scripts furthest over their hints:
+    tests/fm-subagent-pretool-check.test.sh measured 1083.5s hint 1.1s (+1082.4s)
+    tests/fm-trace-context-lib.test.sh measured 0.4s hint 0.2s (+0.2s)
+exit=1
+
+
+HISTORICAL REPLAY (NOT LIVE)
+Historical artifact replay, source CI run 34156531229:
+shard balance guard failed: portable-serial-1of5 ran 19.51 min, 97.6% of the 20 min job cap (max 90%); repack the lane (docs/fm-test-portable-shards.md)
+exit=1
+
+Historical artifact replay, source CI run 34167485767:
+shard balance guard failed: portable-serial-4of5 ran 18.50 min, 92.5% of the 20 min job cap (max 90%); repack the lane (docs/fm-test-portable-shards.md)
+exit=1
+
+Historical artifact replay, source CI run 34167501605:
+shard balance guard failed: portable-serial-4of5 ran 18.49 min, 92.5% of the 20 min job cap (max 90%); repack the lane (docs/fm-test-portable-shards.md)
+exit=1
+
+Historical artifact replay, source CI run 34180535832:
+shard balance guard failed: portable-serial-4of5 ran 19.19 min, 96.0% of the 20 min job cap (max 90%); repack the lane (docs/fm-test-portable-shards.md)
+exit=1
+
+
+The stress run was a real --lane portable-serial-5of6 invocation, narrowed with --exclude-family to two existing scripts; its isolated process group received SIGSTOP for 1081 seconds, then SIGCONT. No clock, code, or timing artifact was modified.
+The existing focused tests/fm-test-run.test.sh passed, including its fixture-based guard regressions. No repository-wide suite, lint, remote workflow dispatch, or source edits were performed.
+Remote follow-up: the outer executor owns the complete six-shard GitHub Actions run and hosted download/upload verification.

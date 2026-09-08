@@ -1,0 +1,4 @@
+FM_TEST_SHARD_BALANCE partial 1 of 6 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-5of6@3.6% bound=20min
+
+exit=0

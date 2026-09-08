@@ -1,0 +1,2 @@
+fm-test-run: unknown option: --check-shard-balance
+exit=2

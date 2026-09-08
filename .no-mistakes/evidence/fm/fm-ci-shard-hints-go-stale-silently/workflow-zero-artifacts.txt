@@ -1,0 +1,9 @@
+Local execution of YAML-parsed aggregate/check shell steps; GitHub download/upload actions are not simulated.
+Build aggregate timing summary
+::warning::no per-lane timing JSON found to aggregate
+exit=0
+
+Check portable serial shard balance
+::warning::no portable serial timing JSON found; shard balance unchecked
+exit=0
+

@@ -1,0 +1,22 @@
+run:
+  id: 34167501605
+  title: "fix(spawn): carry attribution-off policy in every claude launch (#3945)"
+  status: completed
+  conclusion: success
+  workflow: CI
+  branch: main
+  created: 15h ago
+jobs[13]{id,name,status,conclusion}:
+  101881364356,Repo invariants,completed,success
+  101881364478,Stock macOS Bash snapshot compatibility,completed,success
+  101881364489,Behavior tests (Herdr),completed,success
+  101881364519,Lint,completed,success
+  101881364558,Behavior portable serial 2,completed,success
+  101881364585,Behavior portable parallel 2,completed,success
+  101881364619,Behavior portable parallel 1,completed,success
+  101881364622,Behavior portable serial 3,completed,success
+  101881364650,Test coverage guard,completed,success
+  101881364668,Behavior portable serial 5,completed,success
+  101881364783,Behavior portable serial 4,completed,success
+  101881364930,Behavior portable serial 1,completed,success
+  101884283838,Behavior timing aggregate,completed,success

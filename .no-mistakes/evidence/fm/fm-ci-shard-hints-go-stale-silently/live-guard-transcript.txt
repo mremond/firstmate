@@ -1,0 +1,59 @@
+2026-09-08T14:27:47Z Target f7f83b011e5633c0f6a3fe96ad2e4b26d0d3b89e
+2026-09-08T14:27:47Z $ bin/fm-test-run.sh --lane portable-serial-5of6 --exclude-family watcher-wake-lock --exclude-family real-herdr-gated --exclude-family secondmate --exclude-family session-bootstrap --exclude-family live-harness-optin --exclude-family backend-dispatch --exclude-family pr-forge --exclude-family afk --exclude-family snapshot-bearings --exclude-family cmux --exclude-family zellij --exclude-family orca --exclude-family standalone --exclude-family unclassified --json /Users/mremond/.no-mistakes/evidence/01M20P1RQF711N8XQS8YPKN43T/fresh-healthy-shard.json
+2026-09-08T14:28:30Z fresh-healthy-shard runner exit=0 independent elapsed=43.503s
+2026-09-08T14:28:30Z Fresh runner summary: {"duration_ms": 42686, "failed": 0, "skipped_gate": 0, "total": 2}
+2026-09-08T14:28:30Z Fresh runner script measurements: [{"path": "tests/fm-subagent-pretool-check.test.sh", "duration_ms": 26965, "exit": 0}, {"path": "tests/fm-trace-context-lib.test.sh", "duration_ms": 2567, "exit": 0}]
+2026-09-08T14:28:30Z $ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M20P1RQF711N8XQS8YPKN43T/fresh-healthy-shard.json
+2026-09-08T14:28:31Z FM_TEST_SHARD_BALANCE partial 1 of 6 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-5of6@3.6% bound=20min
+exit=0
+2026-09-08T14:28:31Z $ bin/fm-test-run.sh --lane portable-serial-5of6 --exclude-family watcher-wake-lock --exclude-family real-herdr-gated --exclude-family secondmate --exclude-family session-bootstrap --exclude-family live-harness-optin --exclude-family backend-dispatch --exclude-family pr-forge --exclude-family afk --exclude-family snapshot-bearings --exclude-family cmux --exclude-family zellij --exclude-family orca --exclude-family standalone --exclude-family unclassified --json /Users/mremond/.no-mistakes/evidence/01M20P1RQF711N8XQS8YPKN43T/fresh-starved-shard.json
+2026-09-08T14:28:49Z SIGSTOP isolated runner process group at first script BEGIN; simulate scheduler starvation without modifying code, artifact, or clock
+2026-09-08T14:29:19Z Starvation probe remaining seconds: 1051
+2026-09-08T14:29:49Z Starvation probe remaining seconds: 1021
+2026-09-08T14:30:19Z Starvation probe remaining seconds: 991
+2026-09-08T14:30:49Z Starvation probe remaining seconds: 961
+2026-09-08T14:31:19Z Starvation probe remaining seconds: 931
+2026-09-08T14:31:49Z Starvation probe remaining seconds: 901
+2026-09-08T14:32:19Z Starvation probe remaining seconds: 870
+2026-09-08T14:32:50Z Starvation probe remaining seconds: 840
+2026-09-08T14:33:20Z Starvation probe remaining seconds: 810
+2026-09-08T14:33:50Z Starvation probe remaining seconds: 780
+2026-09-08T14:34:20Z Starvation probe remaining seconds: 750
+2026-09-08T14:34:50Z Starvation probe remaining seconds: 719
+2026-09-08T14:35:21Z Starvation probe remaining seconds: 689
+2026-09-08T14:35:51Z Starvation probe remaining seconds: 659
+2026-09-08T14:36:21Z Starvation probe remaining seconds: 629
+2026-09-08T14:36:51Z Starvation probe remaining seconds: 599
+2026-09-08T14:37:21Z Starvation probe remaining seconds: 569
+2026-09-08T14:37:51Z Starvation probe remaining seconds: 539
+2026-09-08T14:38:21Z Starvation probe remaining seconds: 509
+2026-09-08T14:38:51Z Starvation probe remaining seconds: 478
+2026-09-08T14:39:21Z Starvation probe remaining seconds: 448
+2026-09-08T14:39:51Z Starvation probe remaining seconds: 418
+2026-09-08T14:40:22Z Starvation probe remaining seconds: 388
+2026-09-08T14:40:52Z Starvation probe remaining seconds: 358
+2026-09-08T14:41:22Z Starvation probe remaining seconds: 328
+2026-09-08T14:41:52Z Starvation probe remaining seconds: 298
+2026-09-08T14:42:22Z Starvation probe remaining seconds: 268
+2026-09-08T14:42:52Z Starvation probe remaining seconds: 238
+2026-09-08T14:43:22Z Starvation probe remaining seconds: 208
+2026-09-08T14:43:52Z Starvation probe remaining seconds: 178
+2026-09-08T14:44:22Z Starvation probe remaining seconds: 148
+2026-09-08T14:44:52Z Starvation probe remaining seconds: 117
+2026-09-08T14:45:22Z Starvation probe remaining seconds: 87
+2026-09-08T14:45:53Z Starvation probe remaining seconds: 57
+2026-09-08T14:46:23Z Starvation probe remaining seconds: 27
+2026-09-08T14:46:50Z Starvation probe remaining seconds: 0
+2026-09-08T14:46:50Z SIGCONT isolated runner process group
+2026-09-08T14:46:53Z fresh-starved-shard runner exit=0 independent elapsed=1102.092s
+2026-09-08T14:46:53Z Fresh runner summary: {"duration_ms": 1101843, "failed": 0, "skipped_gate": 0, "total": 2}
+2026-09-08T14:46:53Z Fresh runner script measurements: [{"path": "tests/fm-subagent-pretool-check.test.sh", "duration_ms": 1083508, "exit": 0}, {"path": "tests/fm-trace-context-lib.test.sh", "duration_ms": 408, "exit": 0}]
+2026-09-08T14:46:53Z $ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M20P1RQF711N8XQS8YPKN43T/fresh-starved-shard.json
+2026-09-08T14:46:53Z FM_TEST_SHARD_BALANCE partial 1 of 6 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+shard balance guard failed: portable-serial-5of6 ran 18.36 min, 91.8% of the 20 min job cap (max 90%); repack the lane (docs/fm-test-portable-shards.md)
+  re-measure the scripts furthest over their hints:
+    tests/fm-subagent-pretool-check.test.sh measured 1083.5s hint 1.1s (+1082.4s)
+    tests/fm-trace-context-lib.test.sh measured 0.4s hint 0.2s (+0.2s)
+exit=1
+2026-09-08T14:46:53Z Fresh healthy, partial-coverage, and pre-cap rejection scenarios completed

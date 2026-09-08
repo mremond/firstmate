@@ -1,0 +1,337 @@
+{
+  "families": [
+    {
+      "count": 3,
+      "duration_ms": 172882,
+      "failed": 0,
+      "name": "backend-dispatch"
+    },
+    {
+      "count": 1,
+      "duration_ms": 32,
+      "failed": 0,
+      "name": "cmux"
+    },
+    {
+      "count": 4,
+      "duration_ms": 166,
+      "failed": 0,
+      "name": "live-harness-optin"
+    },
+    {
+      "count": 4,
+      "duration_ms": 45322,
+      "failed": 0,
+      "name": "pure-contract-unit"
+    },
+    {
+      "count": 2,
+      "duration_ms": 42992,
+      "failed": 0,
+      "name": "secondmate"
+    },
+    {
+      "count": 1,
+      "duration_ms": 4587,
+      "failed": 0,
+      "name": "snapshot-bearings"
+    },
+    {
+      "count": 5,
+      "duration_ms": 84368,
+      "failed": 0,
+      "name": "standalone"
+    },
+    {
+      "count": 1,
+      "duration_ms": 1170,
+      "failed": 0,
+      "name": "unclassified"
+    },
+    {
+      "count": 7,
+      "duration_ms": 687867,
+      "failed": 0,
+      "name": "watcher-wake-lock"
+    },
+    {
+      "count": 1,
+      "duration_ms": 8707,
+      "failed": 0,
+      "name": "zellij"
+    }
+  ],
+  "finished_at": "2026-09-07T22:58:54Z",
+  "run_id": "fm-test-run-1788820884679-2377",
+  "scripts": [
+    {
+      "duration_ms": 476324,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "watcher-wake-lock",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-watch-triage.test.sh"
+    },
+    {
+      "duration_ms": 62532,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "watcher-wake-lock",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-watcher-lock.test.sh"
+    },
+    {
+      "duration_ms": 102499,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "backend-dispatch",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-spawn-dispatch-profile.test.sh"
+    },
+    {
+      "duration_ms": 58810,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "watcher-wake-lock",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-watch-recovery-loop.test.sh"
+    },
+    {
+      "duration_ms": 54947,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "watcher-wake-lock",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-cursor-primary.test.sh"
+    },
+    {
+      "duration_ms": 43279,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "pure-contract-unit",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-vendor-auth-probe.test.sh"
+    },
+    {
+      "duration_ms": 38684,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "backend-dispatch",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-send-inbox.test.sh"
+    },
+    {
+      "duration_ms": 16856,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "watcher-wake-lock",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-wake-drain-unread-status.test.sh"
+    },
+    {
+      "duration_ms": 28785,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "standalone",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-voice-relay.test.sh"
+    },
+    {
+      "duration_ms": 1170,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "unclassified",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-nm-test-contract.test.sh"
+    },
+    {
+      "duration_ms": 37659,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "secondmate",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-secondmate-restart.test.sh"
+    },
+    {
+      "duration_ms": 27030,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "standalone",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-pending-reply.test.sh"
+    },
+    {
+      "duration_ms": 18036,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "standalone",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-procevent-when.test.sh"
+    },
+    {
+      "duration_ms": 11048,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "watcher-wake-lock",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-guard-stale-banner.test.sh"
+    },
+    {
+      "duration_ms": 8707,
+      "exit": 0,
+      "expected_gate_skip": "optional-binary",
+      "family": "zellij",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-backend-zellij.test.sh"
+    },
+    {
+      "duration_ms": 7350,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "watcher-wake-lock",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-wake-daemon-lifecycle-e2e.test.sh"
+    },
+    {
+      "duration_ms": 5333,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "secondmate",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-shared-captain-inheritance.test.sh"
+    },
+    {
+      "duration_ms": 8675,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "standalone",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-branch-supervision.test.sh"
+    },
+    {
+      "duration_ms": 31699,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "backend-dispatch",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-teardown-endpoint-safety.test.sh"
+    },
+    {
+      "duration_ms": 1842,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "standalone",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-procevent-quota.test.sh"
+    },
+    {
+      "duration_ms": 4587,
+      "exit": 0,
+      "expected_gate_skip": "optional-binary",
+      "family": "snapshot-bearings",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-bearings-board-render.test.sh"
+    },
+    {
+      "duration_ms": 1080,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "pure-contract-unit",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-classify-decision-key.test.sh"
+    },
+    {
+      "duration_ms": 767,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "pure-contract-unit",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-documentation-audiences.test.sh"
+    },
+    {
+      "duration_ms": 196,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "pure-contract-unit",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "path": "tests/fm-trace-context-lib.test.sh"
+    },
+    {
+      "duration_ms": 41,
+      "exit": 0,
+      "expected_gate_skip": "live-capability",
+      "family": "live-harness-optin",
+      "gate_skip": true,
+      "gate_skip_reason": "live: opt-in; set FM_AFK_PI_HERDR_E2E=1 to run",
+      "path": "tests/fm-afk-pi-herdr-return-e2e.test.sh"
+    },
+    {
+      "duration_ms": 32,
+      "exit": 0,
+      "expected_gate_skip": "optional-binary",
+      "family": "cmux",
+      "gate_skip": true,
+      "gate_skip_reason": "cmux CLI not found on PATH or at the bundle path",
+      "path": "tests/fm-backend-cmux-smoke.test.sh"
+    },
+    {
+      "duration_ms": 43,
+      "exit": 0,
+      "expected_gate_skip": "live-capability",
+      "family": "live-harness-optin",
+      "gate_skip": true,
+      "gate_skip_reason": "live: opt-in; set FM_MUSE_SIGNALS_LIVE=1 to run",
+      "path": "tests/fm-muse-signals-live-e2e.test.sh"
+    },
+    {
+      "duration_ms": 41,
+      "exit": 0,
+      "expected_gate_skip": "live-capability",
+      "family": "live-harness-optin",
+      "gate_skip": true,
+      "gate_skip_reason": "live: opt-in; set FM_CURSOR_PRIMARY_LIVE_E2E=1 to run",
+      "path": "tests/fm-cursor-primary-live-e2e.test.sh"
+    },
+    {
+      "duration_ms": 41,
+      "exit": 0,
+      "expected_gate_skip": "live-capability",
+      "family": "live-harness-optin",
+      "gate_skip": true,
+      "gate_skip_reason": "live: opt-in; set FM_QUOTA_ARRAY_DISPATCH_LIVE_E2E=1 to run",
+      "path": "tests/fm-quota-array-dispatch-live-e2e.test.sh"
+    }
+  ],
+  "selection": "lane=portable-serial-1of5;fail-on-gate-skip=Pi extension typecheck prerequisite not found",
+  "started_at": "2026-09-07T22:41:24Z",
+  "summary": {
+    "duration_ms": 1049794,
+    "failed": 0,
+    "skipped_gate": 5,
+    "total": 29
+  }
+}

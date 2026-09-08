@@ -1,0 +1,26 @@
+$ bin/fm-test-run.sh --list --lane portable-serial-5of6
+tests/fm-session-start.test.sh
+tests/fm-public-followup.test.sh
+tests/fm-secondmate-reconcile.test.sh
+tests/fm-secondmate-safety.test.sh
+tests/fm-watch-recovery-loop.test.sh
+tests/fm-control-relaunch.test.sh
+tests/fm-trace-context-spawn.test.sh
+tests/fm-remote-backlog-handoff.test.sh
+tests/fm-home-summary-refresh.test.sh
+tests/fm-send-resolve-key.test.sh
+tests/fm-send-remote-delivery.test.sh
+tests/fm-wake-drain-unread-status.test.sh
+tests/fm-procevent-when.test.sh
+tests/fm-extension-binding.test.sh
+tests/fm-wake-daemon-lifecycle-e2e.test.sh
+tests/fm-herdr-session-cleanup.test.sh
+tests/fm-tmux-agent-liveness.test.sh
+tests/fm-stow-cascade.test.sh
+tests/fm-subagent-pretool-check.test.sh
+tests/fm-supervision-events.test.sh
+tests/fm-trace-context-lib.test.sh
+tests/fm-grok-stop-live-e2e.test.sh
+tests/fm-pi-primary-live-e2e.test.sh
+tests/fm-codex-continuity-live-e2e.test.sh
+tests/fm-muse-signals-live-e2e.test.sh

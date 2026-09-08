@@ -1,0 +1,27 @@
+$ bin/fm-test-run.sh --list --lane portable-serial-2of6
+tests/fm-remote-secondmate-lifecycle-e2e.test.sh
+tests/fm-watcher-lock.test.sh
+tests/fm-inactive-reconcile.test.sh
+tests/fm-startup-network.test.sh
+tests/fm-remote-secondmate-trace-context.test.sh
+tests/fm-backlog-handoff.test.sh
+tests/fm-busy-adapter-wiring.test.sh
+tests/fm-muse-harness.test.sh
+tests/fm-afk-inject-e2e.test.sh
+tests/fm-voice-relay.test.sh
+tests/fm-wake-drain-open-decisions-cursor.test.sh
+tests/fm-backend-orca.test.sh
+tests/fm-bootstrap-network-parallel.test.sh
+tests/fm-branch-supervision.test.sh
+tests/fm-spawn-worktree-settle.test.sh
+tests/fm-shared-captain-inheritance.test.sh
+tests/fm-remote-job-orphan-reap.test.sh
+tests/fm-afk-return.test.sh
+tests/fm-session-lock-ancestry.test.sh
+tests/fm-test-fixture-cleanup.test.sh
+tests/fm-check-unregister.test.sh
+tests/fm-cmux-claude-composer-live-e2e.test.sh
+tests/fm-grok-continuity-live-e2e.test.sh
+tests/fm-backend-cmux-smoke.test.sh
+tests/fm-omp-primary-live-e2e.test.sh
+tests/fm-cursor-primary-live-e2e.test.sh

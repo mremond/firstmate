@@ -1,0 +1,8 @@
+{
+  "recorded_wall_ms": 42686,
+  "sum_of_scripts_ms": 29532,
+  "printed_share_percent": 3.6,
+  "share_from_wall_percent": 3.6,
+  "share_from_script_sum_percent": 2.5,
+  "result": "Fresh actual runner output demonstrates that the guard measures recorded wall time, not summed script durations."
+}

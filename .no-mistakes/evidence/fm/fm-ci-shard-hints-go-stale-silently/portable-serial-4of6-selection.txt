@@ -1,0 +1,27 @@
+$ bin/fm-test-run.sh --list --lane portable-serial-4of6
+tests/fm-pr-check-security.test.sh
+tests/fm-teardown.test.sh
+tests/fm-procevent.test.sh
+tests/fm-remote-transport-lanes.test.sh
+tests/fm-remote-job.test.sh
+tests/fm-daemon.test.sh
+tests/fm-pi-watch-extension.test.sh
+tests/fm-vendor-auth-probe.test.sh
+tests/fm-fleet-sync.test.sh
+tests/fm-kimi-harness.test.sh
+tests/fm-turnend-guard.test.sh
+tests/fm-classify-corr-token.test.sh
+tests/fm-send-secondmate-marker.test.sh
+tests/fm-on.test.sh
+tests/fm-backend-zellij.test.sh
+tests/fm-pi-windows-shell-invocation.test.sh
+tests/fm-bearings-board-render.test.sh
+tests/fm-documentation-audiences.test.sh
+tests/fm-quota-choose.test.sh
+tests/fm-harness-liveness-drift-live-e2e.test.sh
+tests/fm-test-fixtures.test.sh
+tests/fm-stat-shadowing.test.sh
+tests/fm-sessionstart-hook-live-e2e.test.sh
+tests/fm-harness-adapter-references.test.sh
+tests/fm-send-secondmate-marker-herdr-e2e.test.sh
+tests/fm-pi-branch-live-e2e.test.sh

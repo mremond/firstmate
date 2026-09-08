@@ -1,0 +1,12 @@
+$ bin/fm-test-run.sh --list --lane portable-serial-1of5
+fm-test-run: lane 'portable-serial-1of5' asks for 5 portable serial shards but this runner is configured for 6 (see --list-lanes)
+exit=2
+
+$ bin/fm-test-run.sh --list --lane portable-serial-7of6
+fm-test-run: lane 'portable-serial-7of6' shard index is outside 1..6 (see --list-lanes)
+exit=2
+
+$ bin/fm-test-run.sh --jobs 2 --lane portable-serial-1of6
+fm-test-run: --jobs 2 refused: tests/fm-backend.test.sh is not in the proven-isolated set (see bin/fm-test-isolation-proof.sh --list) and its family has no recorded concurrent proof. Unproven stateful scripts stay serial.
+exit=2
+

@@ -1,0 +1,24 @@
+$ bin/fm-test-run.sh --list --lane portable-serial-1of6
+tests/fm-watch-triage.test.sh
+tests/fm-secondmate-sync.test.sh
+tests/fm-calm-pi-extension.test.sh
+tests/fm-bootstrap.test.sh
+tests/fm-backend.test.sh
+tests/fm-teardown-endpoint-safety.test.sh
+tests/fm-tool-update-check.test.sh
+tests/fm-update.test.sh
+tests/fm-task-delivery.test.sh
+tests/fm-guard-stale-banner.test.sh
+tests/fm-fleet-snapshot-view.test.sh
+tests/fm-remote-doctor.test.sh
+tests/fm-busy-state.test.sh
+tests/fm-procevent-quota.test.sh
+tests/fm-gotmp.test.sh
+tests/fm-lint-workflows.test.sh
+tests/fm-backend-tmux-smoke.test.sh
+tests/fm-project-origin.test.sh
+tests/fm-send-inbox-doorbell-live-e2e.test.sh
+tests/fm-herdr-submit-confirm-live-e2e.test.sh
+tests/fm-herdr-version-floor-live-e2e.test.sh
+tests/fm-rovo-signals-live-e2e.test.sh
+tests/fm-sessionstart-instruction-refresh-live-e2e.test.sh

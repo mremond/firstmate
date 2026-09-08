@@ -1,0 +1,103 @@
+{
+  "target": "f7f83b011e5633c0f6a3fe96ad2e4b26d0d3b89e",
+  "source_runs": [
+    "34156531229",
+    "34167485767",
+    "34167501605",
+    "34180535832"
+  ],
+  "source_artifacts": 20,
+  "ci_maxima_paths": 152,
+  "native_windows_override_ms": 5121,
+  "native_windows_max_ci_skip_ms": 165,
+  "native_windows_limitation": "Retained documented pre-existing measurement; not independently re-measured on macOS.",
+  "weight_total_ms": 4974498,
+  "imbalance_ms": 38,
+  "shards": [
+    {
+      "lane": "portable-serial-1of6",
+      "scripts": 23,
+      "weight_ms": 829090
+    },
+    {
+      "lane": "portable-serial-2of6",
+      "scripts": 26,
+      "weight_ms": 829094
+    },
+    {
+      "lane": "portable-serial-3of6",
+      "scripts": 26,
+      "weight_ms": 829097
+    },
+    {
+      "lane": "portable-serial-4of6",
+      "scripts": 26,
+      "weight_ms": 829079
+    },
+    {
+      "lane": "portable-serial-5of6",
+      "scripts": 25,
+      "weight_ms": 829059
+    },
+    {
+      "lane": "portable-serial-6of6",
+      "scripts": 26,
+      "weight_ms": 829079
+    }
+  ],
+  "repacked_source_run_durations": [
+    {
+      "run": "34156531229",
+      "per_shard_script_sum_ms": [
+        788484,
+        784646,
+        689110,
+        787651,
+        771049,
+        732110
+      ],
+      "worst_minutes": 13.1414,
+      "worst_cap_percent": 65.707
+    },
+    {
+      "run": "34167485767",
+      "per_shard_script_sum_ms": [
+        727644,
+        753135,
+        788618,
+        761788,
+        798854,
+        778279
+      ],
+      "worst_minutes": 13.314233333333334,
+      "worst_cap_percent": 66.57116666666667
+    },
+    {
+      "run": "34167501605",
+      "per_shard_script_sum_ms": [
+        726055,
+        740214,
+        778636,
+        745844,
+        801345,
+        796164
+      ],
+      "worst_minutes": 13.35575,
+      "worst_cap_percent": 66.77875
+    },
+    {
+      "run": "34180535832",
+      "per_shard_script_sum_ms": [
+        759574,
+        745494,
+        791560,
+        731737,
+        802002,
+        766504
+      ],
+      "worst_minutes": 13.3667,
+      "worst_cap_percent": 66.8335
+    }
+  ],
+  "result": "All six runtime CLI memberships match a packing from measured per-path maxima; all six documentation rows match those memberships and weights."
+}

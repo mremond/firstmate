@@ -1,0 +1,15 @@
+{
+  "base": "b84e0e362face25f3dd8945297a3df1320d7668c",
+  "target": "f7f83b011e5633c0f6a3fe96ad2e4b26d0d3b89e",
+  "target_tree": "d5c5cf1fe8462b7e4e84628731464a1407d2257d",
+  "scope": "Assigned local test phase; no lint, full repository suite, remote workflow dispatch, pipeline control, push, PR, or source changes.",
+  "fresh_evidence": "Original runner-produced JSON is preserved without editing; SIGSTOP/SIGCONT injects elapsed-time pressure into a dedicated process group.",
+  "non_live_evidence": "Focused contract tests use fixtures. Four green source-run artifact sets are historical data, not new six-shard CI executions. YAML shell steps were executed locally; hosted artifact actions were not run.",
+  "remaining_external_validation": "Outer CI must execute all six complete Linux shards on the exact target commit. The pre-existing native-Windows 5121 ms measurement was retained, not re-measured on macOS.",
+  "focused_test": {
+    "duration_ms": 758704,
+    "failed": 0,
+    "skipped_gate": 0,
+    "total": 1
+  }
+}

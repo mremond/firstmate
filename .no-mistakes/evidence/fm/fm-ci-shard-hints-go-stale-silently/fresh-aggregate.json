@@ -1,0 +1,73 @@
+{
+  "kind": "aggregate",
+  "lanes": [
+    {
+      "finished_at": "2026-09-08T14:28:29Z",
+      "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20P1RQF711N8XQS8YPKN43T/.local-shard-validation/workflow-fresh-partial/fm-test-aggregate/fm-test-timing-portable-serial-5.json",
+      "run_id": "fm-test-run-1788877667258-39286",
+      "selection": "lane=portable-serial-5of6;exclude-family=watcher-wake-lock,real-herdr-gated,secondmate,session-bootstrap,live-harness-optin,backend-dispatch,pr-forge,afk,snapshot-bearings,cmux,zellij,orca,standalone,unclassified",
+      "started_at": "2026-09-08T14:27:47Z",
+      "summary": {
+        "duration_ms": 42686,
+        "failed": 0,
+        "skipped_gate": 0,
+        "total": 2
+      }
+    }
+  ],
+  "scripts": [
+    {
+      "duration_ms": 26965,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "pure-contract-unit",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "lane_run_id": "fm-test-run-1788877667258-39286",
+      "lane_selection": "lane=portable-serial-5of6;exclude-family=watcher-wake-lock,real-herdr-gated,secondmate,session-bootstrap,live-harness-optin,backend-dispatch,pr-forge,afk,snapshot-bearings,cmux,zellij,orca,standalone,unclassified",
+      "path": "tests/fm-subagent-pretool-check.test.sh"
+    },
+    {
+      "duration_ms": 2567,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "pure-contract-unit",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "lane_run_id": "fm-test-run-1788877667258-39286",
+      "lane_selection": "lane=portable-serial-5of6;exclude-family=watcher-wake-lock,real-herdr-gated,secondmate,session-bootstrap,live-harness-optin,backend-dispatch,pr-forge,afk,snapshot-bearings,cmux,zellij,orca,standalone,unclassified",
+      "path": "tests/fm-trace-context-lib.test.sh"
+    }
+  ],
+  "slowest": [
+    {
+      "duration_ms": 26965,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "pure-contract-unit",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "lane_run_id": "fm-test-run-1788877667258-39286",
+      "lane_selection": "lane=portable-serial-5of6;exclude-family=watcher-wake-lock,real-herdr-gated,secondmate,session-bootstrap,live-harness-optin,backend-dispatch,pr-forge,afk,snapshot-bearings,cmux,zellij,orca,standalone,unclassified",
+      "path": "tests/fm-subagent-pretool-check.test.sh"
+    },
+    {
+      "duration_ms": 2567,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "pure-contract-unit",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "lane_run_id": "fm-test-run-1788877667258-39286",
+      "lane_selection": "lane=portable-serial-5of6;exclude-family=watcher-wake-lock,real-herdr-gated,secondmate,session-bootstrap,live-harness-optin,backend-dispatch,pr-forge,afk,snapshot-bearings,cmux,zellij,orca,standalone,unclassified",
+      "path": "tests/fm-trace-context-lib.test.sh"
+    }
+  ],
+  "summary": {
+    "critical_path_duration_ms": 42686,
+    "failed": 0,
+    "lanes": 1,
+    "skipped_gate": 0,
+    "total": 2
+  }
+}

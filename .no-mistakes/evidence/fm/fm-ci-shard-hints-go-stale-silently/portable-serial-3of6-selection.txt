@@ -1,0 +1,27 @@
+$ bin/fm-test-run.sh --list --lane portable-serial-3of6
+tests/fm-pi-branch-extension.test.sh
+tests/fm-bearings-snapshot.test.sh
+tests/fm-spawn-dispatch-profile.test.sh
+tests/fm-watch-arm.test.sh
+tests/fm-claude-stop-autoarm.test.sh
+tests/fm-spawn-pool-base-freshen.test.sh
+tests/fm-control.test.sh
+tests/fm-wake-drain-outcome-backstop.test.sh
+tests/fm-send-inbox.test.sh
+tests/fm-cursor-harness.test.sh
+tests/fm-task-inbox.test.sh
+tests/fm-secondmate-liveness.test.sh
+tests/fm-rovo-harness.test.sh
+tests/fm-pi-branch-responsiveness-live-e2e.test.sh
+tests/fm-tangle-guard.test.sh
+tests/fm-gate-refuse.test.sh
+tests/fm-live-gate.test.sh
+tests/fm-test-isolation-proof.test.sh
+tests/fm-peek-remote.test.sh
+tests/fm-no-mistakes-required.test.sh
+tests/fm-ask-user-authority.test.sh
+tests/fm-bearings-board-lavish-live-e2e.test.sh
+tests/fm-opencode-primary-live-e2e.test.sh
+tests/fm-gitignore-config.test.sh
+tests/fm-harness-adapter-instructions-live-e2e.test.sh
+tests/fm-quota-array-dispatch-live-e2e.test.sh

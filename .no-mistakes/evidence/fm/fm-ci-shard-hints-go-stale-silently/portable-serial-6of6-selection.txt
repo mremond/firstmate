@@ -1,0 +1,27 @@
+$ bin/fm-test-run.sh --list --lane portable-serial-6of6
+tests/fm-backlog-atomicity.test.sh
+tests/fm-secondmate-harness.test.sh
+tests/fm-wake-queue.test.sh
+tests/fm-sessionstart-nudge.test.sh
+tests/fm-omp-harness.test.sh
+tests/fm-cursor-primary.test.sh
+tests/fm-remote-reply.test.sh
+tests/fm-secondmate-restart.test.sh
+tests/fm-bearings-board.test.sh
+tests/fm-remote-secondmate-parent-binding.test.sh
+tests/fm-pending-reply.test.sh
+tests/fm-secondmate-lifecycle-e2e.test.sh
+tests/fm-startup-memory-budget.test.sh
+tests/fm-watch-checkpoint.test.sh
+tests/fm-wake-drain-open-decisions.test.sh
+tests/fm-claude-trust.test.sh
+tests/fm-backend-cmux.test.sh
+tests/fm-classify-decision-key.test.sh
+tests/fm-nm-test-contract.test.sh
+tests/fm-gemini-harness.test.sh
+tests/fm-operational-input.test.sh
+tests/fm-remote-entrypoint.test.sh
+tests/fm-claude-stop-autoarm-live-e2e.test.sh
+tests/fm-afk-pi-herdr-return-e2e.test.sh
+tests/fm-composer-matrix-live-e2e.test.sh
+tests/fm-backend-zellij-smoke.test.sh
