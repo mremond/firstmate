@@ -1,0 +1,5 @@
+Captured at 2026-09-08T15:39:11.492612+00:00
+WARNING: watcher still down (same stale episode; last beat: 55s ago, grace 300s) - full banner already printed this episode.
+spawned ios harness=codex kind=secondmate mode=secondmate yolo=off window=remote:ios worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20T4ZN7H0BNK630CKNGV56A/.no-mistakes/local-test-alpha/current-full-isolated-master/fm-remote-secondmate-e2e.uT0aKl/remote-home remote=remote-mac backend=herdr
+
+Blocked-write marker exists: True

@@ -1,0 +1,18 @@
+Process-local Git default: main
+Command: bash tests/.local-alpha-pinned-prefix-main.sh
+ok - overlapping remote home provisioning serializes through publication and rollback
+ok - remote seed rollback preserves serialized competing routes
+ok - unknown readiness preserves its route and brief for reconciliation
+ok - remote seeding checks, repairs, and re-checks readiness, then stops on a remaining gap
+ok - remote seeding proceeds once the repair closes every gap
+ok - remote seeding provisions a supplied origin without touching the primary project tree
+ok - remote provisioning re-validates a supplied origin at the receiving host
+ok - seeding carries bitbucket, self-hosted, and scp-like origins through to the remote clone
+ALPHA_EVIDENCE origin_HEAD=refs/heads/main checkout_HEAD=refs/heads/main
+ALPHA_EVIDENCE .git=present
+ALPHA_EVIDENCE README.md=alpha
+BETA_EVIDENCE origin_HEAD=refs/heads/main checkout_HEAD=refs/heads/main README.md=# beta-src
+ok - remote seed registers the route and provisions the whole home and project clone on that host
+TARGETED_ALPHA_PREFIX_COMPLETE
+
+RUN_RESULT exit_code=0 elapsed_seconds=22.27
