@@ -1,0 +1,4 @@
+Bash: GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)
+Applied workflow guard to real suite stdout captured in this test phase.
+snapshot: expected: 18 observed: 18; exit=0
+bearings: expected: 74 observed: 74; exit=0

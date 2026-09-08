@@ -1,143 +1,112 @@
 {
   "schema": "fm-bearings-board.v1",
-  "home": "Isolated two-home verification",
-  "generated": "2026-09-08T17:47:36Z",
+  "home": "Isolated Bearings validation",
+  "generated": "2026-09-08T20:46:59Z",
   "prs_live": false,
   "captains_call": [
     {
-      "key": "nudge.foo",
-      "type": "decision",
-      "repo": "firstmate",
-      "title": "Unrelated captain choice",
-      "about": "Main home choice remains open",
-      "decide": "Choose a route",
-      "options": [
-        {
-          "value": "leave",
-          "label": "Leave open"
-        }
-      ]
-    },
-    {
-      "key": "merge.main-approval",
-      "type": "merge",
-      "repo": "firstmate",
-      "title": "(main) approval still owed",
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
-      "options": [
-        {
-          "value": "leave",
-          "label": "Leave open"
-        }
-      ],
-      "risk": "Approval remains with the captain; this check leaves it open."
-    },
-    {
-      "key": "merge.mate-mate-approval",
-      "type": "merge",
-      "repo": "firstmate",
-      "title": "mate approval still owed",
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
-      "options": [
-        {
-          "value": "leave",
-          "label": "Leave open"
-        }
-      ],
-      "risk": "Approval remains with the captain; this check leaves it open."
-    },
-    {
-      "key": "https://github.com/kunchenguid/firstmate/pull/4016",
+      "key": "https://github.com/acme/repo/pull/4",
       "type": "nudge",
       "repo": "firstmate",
-      "title": "Outside maintainer has not merged",
-      "age_days": 23,
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4016",
-      "detail": "23 days waiting \u00b7 delivered from main and mate",
+      "title": "Nudge the outside maintainer",
+      "age_days": 8,
+      "pr_url": "https://github.com/acme/repo/pull/4",
+      "detail": "(main) \u00b7 Long outside maintainer wait",
       "options": [
         {
           "value": "leave",
           "label": "Leave it",
-          "hint": "Keep the wait visible without contacting anyone"
+          "hint": "Keep the original waiting clock"
         },
         {
           "value": "nudge",
           "label": "Nudge maintainer"
         }
       ]
+    },
+    {
+      "key": "https://github.com/acme/repo/pull/5",
+      "type": "nudge",
+      "repo": "firstmate",
+      "title": "Nudge the outside maintainer",
+      "age_days": 8,
+      "pr_url": "https://github.com/acme/repo/pull/5",
+      "detail": "review-mate \u00b7 Long outside maintainer wait",
+      "options": [
+        {
+          "value": "leave",
+          "label": "Leave it",
+          "hint": "Keep the original waiting clock"
+        },
+        {
+          "value": "nudge",
+          "label": "Nudge maintainer"
+        }
+      ]
+    },
+    {
+      "key": "approval",
+      "type": "credential",
+      "repo": "firstmate",
+      "title": "Approval still owed",
+      "detail": "(main) \u00b7 Approval still owed: dependency https://github.com/acme/repo/pull/99 is still under review",
+      "options": [
+        {
+          "value": "review",
+          "label": "Review request"
+        }
+      ]
+    },
+    {
+      "key": "review-mate.approval",
+      "type": "credential",
+      "repo": "firstmate",
+      "title": "Approval still owed",
+      "detail": "review-mate \u00b7 Approval still owed: dependency https://github.com/acme/repo/pull/99 is still under review",
+      "options": [
+        {
+          "value": "review",
+          "label": "Review request"
+        }
+      ]
     }
   ],
   "underway": [
     {
-      "id": "main-approval",
-      "kind": "ship",
-      "state": "paused",
-      "repo": "firstmate",
-      "owner": "(main)",
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
-      "doing": "Waiting after a completed delivery"
-    },
-    {
-      "id": "main-prose",
-      "kind": "ship",
-      "state": "paused",
-      "repo": "firstmate",
-      "owner": "(main)",
-      "doing": "Dependency https://github.com/kunchenguid/firstmate/pull/4016 is relevant"
-    },
-    {
-      "id": "main-queued",
+      "id": "in-flight",
       "kind": "ship",
       "state": "unknown",
       "repo": "firstmate",
       "owner": "(main)",
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
-      "doing": "harness state unavailable (unknown missing)"
+      "pr_url": "https://github.com/acme/repo/pull/1",
+      "doing": "backend target gone: nm-test-no-session:in-flight"
     },
     {
-      "id": "main-work",
+      "id": "review-mate/in-flight",
       "kind": "ship",
-      "state": "working",
+      "state": "unknown",
       "repo": "firstmate",
-      "owner": "(main)",
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
-      "doing": "harness busy (claude-hook)"
-    },
-    {
-      "id": "mate/mate-work",
-      "kind": "ship",
-      "state": "working",
-      "repo": "firstmate",
-      "owner": "mate",
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
-      "doing": "harness busy (claude-hook)"
-    },
-    {
-      "id": "mate/mate-approval",
-      "kind": "ship",
-      "state": "paused",
-      "repo": "firstmate",
-      "owner": "mate",
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4011",
-      "doing": "Waiting after a completed delivery"
+      "owner": "review-mate",
+      "pr_url": "https://github.com/acme/repo/pull/1",
+      "doing": "backend target gone: nm-test-no-session:in-flight"
     }
   ],
   "awaiting": [
     {
-      "id": "main-delivered",
-      "what": "Waiting for outside maintainer",
+      "id": "review-mate/young",
+      "what": "Delivered to outside maintainer",
       "repo": "firstmate",
-      "owner": "(main)",
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "owner": "review-mate",
+      "pr_url": "https://github.com/acme/repo/pull/3",
       "age_days": 3,
       "nudge": false
     },
     {
-      "id": "mate/mate-delivered",
-      "what": "Waiting for outside maintainer",
+      "id": "young",
+      "what": "Delivered to outside maintainer",
       "repo": "firstmate",
-      "owner": "mate",
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "owner": "(main)",
+      "pr_url": "https://github.com/acme/repo/pull/3",
       "age_days": 3,
       "nudge": false
     }
@@ -145,24 +114,39 @@
   "landed": [],
   "charted": [
     {
-      "id": "main-queued",
+      "id": "main.recorded",
       "repo": "firstmate",
       "owner": "(main)",
-      "title": "Queued follow-up",
-      "reason": "Queued follow-up",
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "title": "Held delivery",
+      "reason": "dependency https://github.com/acme/repo/\u2026",
+      "pr_url": "https://github.com/acme/repo/pull/2",
       "dispatchable": false
     },
     {
-      "id": "mate-queued",
+      "id": "main.unrecorded",
       "repo": "firstmate",
-      "owner": "mate",
-      "title": "Queued follow-up",
-      "reason": "Queued follow-up",
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4015",
+      "owner": "(main)",
+      "title": "Held without own request",
+      "reason": "dependency https://github.com/acme/repo/\u2026",
+      "dispatchable": false
+    },
+    {
+      "id": "review-mate.recorded",
+      "repo": "firstmate",
+      "owner": "review-mate",
+      "title": "Held delivery",
+      "reason": "dependency https://github.com/acme/repo/\u2026",
+      "pr_url": "https://github.com/acme/repo/pull/2",
+      "dispatchable": false
+    },
+    {
+      "id": "review-mate.unrecorded",
+      "repo": "firstmate",
+      "owner": "review-mate",
+      "title": "Held without own request",
+      "reason": "dependency https://github.com/acme/repo/\u2026",
       "dispatchable": false
     }
   ],
-  "charted_more": 2,
   "awaiting_nudge_days": 7
 }

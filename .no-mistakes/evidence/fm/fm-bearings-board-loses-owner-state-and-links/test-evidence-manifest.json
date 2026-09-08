@@ -1,0 +1,26 @@
+{
+  "target": "59c7f705390300d1b02f816b6032e6e7947841c5",
+  "suites": [
+    {
+      "suite_output": "board-render-tests.log",
+      "completed": 17
+    },
+    {
+      "suite_output": "fleet-view-tests.log",
+      "completed": 18
+    },
+    {
+      "suite_output": "bearings-snapshot-isolated-tests.log",
+      "completed": 74
+    }
+  ],
+  "environment_correction": "First snapshot run inherited the enclosing worktree Git origin. Re-running with GIT_CEILING_DIRECTORIES set to the worktree passed.",
+  "live_setup": "Two disposable FM_HOME directories, real PR registration and snapshots, shipped board built with real Lavish 0.1.62 and rendered in isolated Brave/Chromium. Agent endpoints are deliberately absent; no pipeline lifecycle was controlled.",
+  "ui": "Desktop and 390px screenshots saved; original Firstmate design tokens from the shipped template.",
+  "guard_validation": "Normalized workflow YAML through Ruby YAML, ran its count logic under stock Bash 3.2.57. Complete-run stdout: 18/18 and 74/74. Actual suites with injected early/empty execution and empty derivation each failed the guard. No workflow-wide lint, install, or CI job executed.",
+  "not_driven_live": [
+    "A real green no-mistakes run followed by a pending approval: new pipeline control forbidden in this phase; targeted stubbed regression passed.",
+    "Remote cached-ledger aging: no authorized disposable SSH home; targeted stubbed regression passed."
+  ],
+  "cleanup": "Disposable homes, mutation suites, local Lavish server/listener, browser profile and browser process removed; source unchanged."
+}

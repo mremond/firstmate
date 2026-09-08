@@ -1,0 +1,66 @@
+not ok - a backlog reason URL became a main request link: {
+  "schema": "fm-bearings.v1",
+  "home": "fm-bearings.s6EqVa/backlog-reason-link-children",
+  "generated": "2026-07-11T18:00:00Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [],
+  "awaiting_nudge_days": 7,
+  "awaiting": [],
+  "secondmates": [],
+  "secondmate_reconcile": [],
+  "decisions_open": [],
+  "landed": [],
+  "gates": [
+    {
+      "id": "recorded-child",
+      "title": "Held delivery",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "(main)",
+      "pr_url": "https://github.com/acme/repo/pull/99"
+    },
+    {
+      "id": "unrecorded-child",
+      "title": "Held delivery",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "(main)",
+      "pr_url": "https://github.com/acme/repo/pull/99"
+    }
+  ],
+  "reports": [],
+  "recorded_prs": [
+    {
+      "id": "recorded-child",
+      "url": "https://github.com/acme/repo/pull/2"
+    }
+  ],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}
+
+exit: 1

@@ -1,0 +1,38 @@
+$ bin/fm-procevent-lavish.sh read <live browser result>
+SESSION-ENDING MESSAGE: (none)
+
+declared_items: 1
+presented_items: 1
+malformed_items: 0
+complete: yes
+lifecycle: feedback
+session_ended: (unset)
+annotation_count: 1
+session_ending_message_count: 0
+
+ANNOTATIONS
+ANNOTATION 1 of 1
+element_uid: 1
+element_selector: div#bb-call > div:nth-of-type(1) > div > form
+tag: nudge
+text:
+| Nudge the outside maintainer -> leave
+prompt:
+| Captain's Call answer - Nudge the outside maintainer: leave
+| 
+| Context data:
+| {
+|   "schema": "fm-bearings-nudge.v1",
+|   "selection": "leave",
+|   "note": "",
+|   "pr_url": "https://github.com/acme/repo/pull/4"
+| }
+END ANNOTATIONS
+END LAVISH RESULT (1 of 1)
+
+$ bin/fm-procevent-lavish.sh nudges <live browser result>
+{"note":"","selection":"leave","label":"Nudge the outside maintainer -> leave","pr_url":"https://github.com/acme/repo/pull/4"}
+
+$ bin/fm-procevent-lavish.sh answers <live browser result>
+
+$ bin/fm-procevent-lavish.sh reconciles <live browser result>

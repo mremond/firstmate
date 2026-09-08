@@ -1,0 +1,114 @@
+not ok - a backlog reason URL became a child request link: {
+  "schema": "fm-secondmate-home-summary.v1",
+  "hold_classifier_schema": "fm-captain-hold-buckets.v1",
+  "generated": "2026-09-08T20:56:39Z",
+  "generated_epoch": 1788900999,
+  "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWNDZ2WVGJ/.test-phase/tmp/fm-bearings.JTYxjU/backlog-reason-link-children",
+  "valid": true,
+  "reason": null,
+  "invalidity": {
+    "kind": null,
+    "ids": []
+  },
+  "state": "externally_held",
+  "active_children": [],
+  "awaiting_merge": [],
+  "decisions_open": [],
+  "holds": [
+    {
+      "id": "recorded-child",
+      "title": "Held delivery",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "source": "backlog"
+    },
+    {
+      "id": "unrecorded-child",
+      "title": "Held delivery",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "source": "backlog"
+    }
+  ],
+  "queued": [
+    {
+      "id": "recorded-child",
+      "title": "Held delivery",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "blocked_reason": null,
+      "hold_reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "hold_kind": "external",
+      "hold_until": null,
+      "hold_bucket": null,
+      "hold_age_days": 69,
+      "captain_actionable": false,
+      "repo": "firstmate",
+      "pr_url": "https://github.com/acme/repo/pull/99",
+      "kind": "ship"
+    },
+    {
+      "id": "unrecorded-child",
+      "title": "Held delivery",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "blocked_reason": null,
+      "hold_reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "hold_kind": "external",
+      "hold_until": null,
+      "hold_bucket": null,
+      "hold_age_days": 69,
+      "captain_actionable": false,
+      "repo": "firstmate",
+      "pr_url": "https://github.com/acme/repo/pull/99",
+      "kind": "ship"
+    }
+  ],
+  "landed": [],
+  "endpoints": [
+    {
+      "id": "recorded-child",
+      "state": "paused",
+      "source": "status-log",
+      "endpoint": {
+        "target": "firstmate:fm-recorded-child",
+        "exists": true,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-09-08T20:56:39Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "unrecorded-child",
+      "state": "paused",
+      "source": "status-log",
+      "endpoint": {
+        "target": "firstmate:fm-unrecorded-child",
+        "exists": true,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-09-08T20:56:39Z",
+        "freshness": "fresh"
+      }
+    }
+  ],
+  "counts": {
+    "active_children": 0,
+    "awaiting_merge": 0,
+    "decisions_open": 0,
+    "holds": 2,
+    "queued": 2,
+    "landed": 0,
+    "endpoints": 2
+  },
+  "omitted": []
+}
+
+exit: 1

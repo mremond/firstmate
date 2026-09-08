@@ -1,0 +1,1 @@
+MCP error -32602: Input validation error: Invalid arguments for tool evaluate_script: Expected string, received object at args[0]

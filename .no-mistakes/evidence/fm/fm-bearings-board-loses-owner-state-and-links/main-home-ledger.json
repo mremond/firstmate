@@ -1,0 +1,260 @@
+{
+  "schema": "fm-secondmate-home-summary.v1",
+  "hold_classifier_schema": "fm-captain-hold-buckets.v1",
+  "generated": "2026-09-08T20:46:52Z",
+  "generated_epoch": 1788900412,
+  "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWNDZ2WVGJ/.test-phase/main-home",
+  "valid": false,
+  "reason": "child current state unavailable: approval, in-flight, overdue, recorded, review-mate, unrecorded, young",
+  "invalidity": {
+    "kind": "child_current_unavailable",
+    "ids": [
+      "approval",
+      "in-flight",
+      "overdue",
+      "recorded",
+      "review-mate",
+      "unrecorded",
+      "young"
+    ]
+  },
+  "state": "unknown",
+  "active_children": [
+    {
+      "id": "in-flight",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "source": "endpoint-gone",
+      "pr_url": "https://github.com/acme/repo/pull/1",
+      "doing": "backend target gone: nm-test-no-session:in-flight"
+    }
+  ],
+  "awaiting_merge": [
+    {
+      "id": "overdue",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "title": "Long outside maintainer wait",
+      "pr_url": "https://github.com/acme/repo/pull/4",
+      "delivered_epoch": 1788209211
+    },
+    {
+      "id": "young",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "title": "Delivered to outside maintainer",
+      "pr_url": "https://github.com/acme/repo/pull/3",
+      "delivered_epoch": 1788641210
+    }
+  ],
+  "decisions_open": [
+    {
+      "id": "approval",
+      "key": "approval",
+      "verb": "captain-hold",
+      "summary": "Approval still owed",
+      "reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "hold_until": null,
+      "hold_bucket": "live",
+      "hold_age_days": 7,
+      "source": "backlog"
+    },
+    {
+      "id": "approval",
+      "key": "approval",
+      "verb": "needs-decision",
+      "summary": "captain approval required",
+      "reason": null,
+      "source": "status"
+    }
+  ],
+  "holds": [
+    {
+      "id": "approval",
+      "title": "Approval still owed",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "source": "backlog"
+    },
+    {
+      "id": "recorded",
+      "title": "Held delivery",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "source": "backlog"
+    },
+    {
+      "id": "unrecorded",
+      "title": "Held without own request",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "source": "backlog"
+    }
+  ],
+  "queued": [
+    {
+      "id": "approval",
+      "title": "Approval still owed",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "blocked_reason": null,
+      "hold_reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "hold_kind": "captain",
+      "hold_until": null,
+      "hold_bucket": "live",
+      "hold_age_days": 7,
+      "captain_actionable": true,
+      "repo": "firstmate",
+      "pr_url": "https://github.com/acme/repo/pull/6",
+      "kind": "ship"
+    },
+    {
+      "id": "recorded",
+      "title": "Held delivery",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "blocked_reason": null,
+      "hold_reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "hold_kind": "external",
+      "hold_until": null,
+      "hold_bucket": null,
+      "hold_age_days": 7,
+      "captain_actionable": false,
+      "repo": "firstmate",
+      "pr_url": "https://github.com/acme/repo/pull/2",
+      "kind": "ship"
+    },
+    {
+      "id": "unrecorded",
+      "title": "Held without own request",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "blocked_reason": null,
+      "hold_reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "hold_kind": "external",
+      "hold_until": null,
+      "hold_bucket": null,
+      "hold_age_days": 7,
+      "captain_actionable": false,
+      "repo": "firstmate",
+      "pr_url": null,
+      "kind": "ship"
+    }
+  ],
+  "landed": [],
+  "endpoints": [
+    {
+      "id": "approval",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-test-no-session:approval",
+        "exists": false,
+        "agent_alive": "not_checked",
+        "status": "absent",
+        "observed_at": "2026-09-08T20:46:52Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "in-flight",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-test-no-session:in-flight",
+        "exists": false,
+        "agent_alive": "not_checked",
+        "status": "absent",
+        "observed_at": "2026-09-08T20:46:52Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "overdue",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-test-no-session:overdue",
+        "exists": false,
+        "agent_alive": "not_checked",
+        "status": "absent",
+        "observed_at": "2026-09-08T20:46:52Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "recorded",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-test-no-session:recorded",
+        "exists": false,
+        "agent_alive": "not_checked",
+        "status": "absent",
+        "observed_at": "2026-09-08T20:46:52Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "review-mate",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-test-no-session:mate",
+        "exists": false,
+        "agent_alive": "dead",
+        "status": "absent",
+        "observed_at": "2026-09-08T20:46:52Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "unrecorded",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-test-no-session:unrecorded",
+        "exists": false,
+        "agent_alive": "not_checked",
+        "status": "absent",
+        "observed_at": "2026-09-08T20:46:52Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "young",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-test-no-session:young",
+        "exists": false,
+        "agent_alive": "not_checked",
+        "status": "absent",
+        "observed_at": "2026-09-08T20:46:52Z",
+        "freshness": "fresh"
+      }
+    }
+  ],
+  "counts": {
+    "active_children": 1,
+    "awaiting_merge": 2,
+    "decisions_open": 2,
+    "holds": 3,
+    "queued": 3,
+    "landed": 0,
+    "endpoints": 7
+  },
+  "omitted": []
+}

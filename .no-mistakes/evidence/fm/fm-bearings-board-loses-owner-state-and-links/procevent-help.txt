@@ -1,0 +1,117 @@
+Lavish adapter for the generic process-to-event runner.
+
+Usage:
+  fm-procevent-lavish.sh arm <artifact.html>
+  fm-procevent-lavish.sh classify <result-file>
+  fm-procevent-lavish.sh terminal <result-file>
+  fm-procevent-lavish.sh silent <result-file>
+  fm-procevent-lavish.sh answers <result-file>
+  fm-procevent-lavish.sh reconciles <result-file>
+  fm-procevent-lavish.sh nudges <result-file>
+  fm-procevent-lavish.sh read <result-file>
+  fm-procevent-lavish.sh source-id <artifact.html>
+  fm-procevent-lavish.sh retire <artifact.html>
+  fm-procevent-lavish.sh poll <artifact.html>
+
+classify   Print the lifecycle state a handler should act on: feedback, ended,
+           waiting, missing, or unknown.
+read       Print a structured presentation of one already-captured result so a
+           handler consumes every queued item without grepping the raw file.
+           It is read-only over the capture: it does not arm, poll, or change
+           what Lavish delivered. The session-ending freeform message
+           (tag=message) is its own labeled field, printed first and distinct
+           from per-element annotations. Declared and presented item counts,
+           plus a completeness verdict, follow before all annotations so a
+           partial read is obvious. Each annotation retains its element uid,
+           selector, tag, and text. A non-choice freeform comment (`prompt`)
+           is printed as its own field even when a selector is also present
+           and even when that comment matches the element text, so typed
+           words are never dropped. Choice Context data is not a comment.
+           Captain-supplied body lines are visibly prefixed so they cannot
+           forge structural labels. Empty message and annotation sections
+           are reported explicitly.
+poll       The registered listener command `arm` publishes, not a command to
+           run in a conversational turn. It runs the published blocking poll
+           and prints its response verbatim, absorbing only the one exact
+           transient interruption described below.
+terminal   Exit 0 when the captured result means this Lavish source will never
+           produce another result, so the runner may retire it; any other exit
+           keeps it armed. This is the generic adapter contract bin/fm-procevent.sh
+           calls, and the only place Lavish's notion of "ended" is decided.
+silent     Exit 0 when the captured result is a routine no-op the runner should
+           record and never announce; any other exit publishes the wake. This
+           is the generic no-op contract bin/fm-procevent.sh calls, and the
+           only place Lavish's notion of "nothing was said" is decided.
+
+AN EMPTY BOARD CLOSE IS NOT NEWS, and that is what `silent` exists to say.
+Closing a review surface that carried nothing is the single most common Lavish
+result: the captain reads a board, says nothing, and closes it. Announcing that
+put a wake in front of the handler whose entire content was that nothing
+happened. `silent` therefore holds one narrow, positively-determined shape -
+a session this adapter classifies `ended` that carries no queued content block
+at all - and every other result stays announced.
+
+Deliberately narrow, in both directions. A `Send & End` close carrying the
+captain's actual answer arrives as `status: feedback` with `session_ended`, so
+it classifies `feedback`, never `ended`, and is announced exactly as before; so
+is any `ended` result that still carries a `prompts` or `feedback` block, which
+the published poll is not expected to produce but which must never be dropped
+on that expectation. A `waiting` session, a `missing` one, an `unknown` or
+unreadable result, and any error all stay announced, because none of them
+positively proves nothing was said. Silence is only ever an absence this
+adapter can see in the result, never an absence it assumes.
+
+This adapter is deliberately thin. It owns only what is specific to Lavish:
+canonical source identity, the argv for the currently published poll command,
+and how to read a completed result. Ownership, durable capture, publication,
+and restart recovery all belong to bin/fm-procevent.sh.
+
+`answers` is this adapter's half of the generic keyed-answer contract in
+bin/fm-procevent.sh. It reports what the captain actually chose, as
+`<task-id>\t<answer>\t<label>` lines, and stops there. It maps nothing to a
+task, records no decision, and closes nothing: a captain answer is not special
+to Lavish, so every rule about what a keyed answer DOES belongs to the one
+intake in bin/fm-captain-hold.sh, which the runner feeds. A Lavish review is
+just an ephemeral discussion format that happens to carry answers.
+
+`answers` and `reconciles` read only rows tagged `choice`.
+`nudges` reads only tag `nudge` with schema `fm-bearings-nudge.v1`, a full HTTPS
+pr_url, selection, and note, rejecting captures with a close field. It prints
+one JSON line per request with pr_url, selection, note, and label. These
+request-keyed answers never enter the task-answer or reconcile intakes.
+A freeform captain message is prose that may
+contain anything, and must never be able to forge a decision key.
+
+`read` is the presentation command summarized above; keyed intake remains
+the separate `answers` contract described here.
+
+It wraps ONLY the currently published interface, verified against 0.1.45:
+  Usage: lavish-axi poll <html-file> [--agent-reply "..."]
+and that command "long-polls indefinitely" server-side. The adapter therefore
+runs the plain blocking form with no timeout flag, so results arrive as real
+server-side events. It adds no periodic discovery, no timer fallback, and no
+dependency on any unreleased capability.
+
+BOUNDED QUIET RETRY, owned here and nowhere else. A live listener can be cut
+short by the server with exactly this two-line response while the session's
+marks remain available:
+
+  error: Lavish Editor poll response was interrupted
+  code: SERVER_ERROR
+
+That is an internal retry, not news, so registering the raw poll made the
+generic runner capture it and wake the whole fleet. `poll` therefore re-runs
+the published poll up to POLL_RETRY_LIMIT times for that exact response, with
+attempt starts at least POLL_RETRY_DELAY_DEFAULT seconds apart. The match is exact and
+deliberately narrow: real feedback, ended and missing sessions, any other
+SERVER_ERROR, and the same interruption still standing after the bound is
+spent are all printed straight through and captured normally. The retry is a
+Lavish fact, so the generic runner in bin/fm-procevent.sh stays
+adapter-agnostic and learns nothing about it.
+
+LOSS LIMITATION, stated plainly. The published poll destructively clears
+feedback before returning it. A result lost after that clearing and before the
+runner reads the process output is unrecoverable, and no Firstmate wrapper can
+close that source-side handoff window. Never describe this path as
+at-least-once, no-loss, or lossless. The only durability this proves is the
+runner's own: output that reached the runner is stored before it is announced.

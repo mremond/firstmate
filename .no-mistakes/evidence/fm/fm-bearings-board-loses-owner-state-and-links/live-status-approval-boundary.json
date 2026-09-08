@@ -1,0 +1,289 @@
+{
+  "schema": "fm-bearings.v1",
+  "home": ".test-phase/main-home",
+  "generated": "2026-09-08T20:55:49Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [
+    {
+      "id": "approval",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/acme/repo/pull/6",
+      "doing": "backend target gone: nm-test-no-session:approval"
+    },
+    {
+      "id": "in-flight",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/acme/repo/pull/1",
+      "doing": "backend target gone: nm-test-no-session:in-flight"
+    },
+    {
+      "id": "review-mate/in-flight",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "review-mate",
+      "pr_url": "https://github.com/acme/repo/pull/1",
+      "doing": "backend target gone: nm-test-no-session:in-flight"
+    },
+    {
+      "id": "review-mate/approval",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "review-mate",
+      "pr_url": "https://github.com/acme/repo/pull/6",
+      "doing": "backend target gone: nm-test-no-session:approval"
+    }
+  ],
+  "awaiting_nudge_days": 7,
+  "awaiting": [
+    {
+      "id": "overdue",
+      "what": "Long outside maintainer wait",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/acme/repo/pull/4",
+      "age_days": 8,
+      "nudge": true
+    },
+    {
+      "id": "review-mate/overdue",
+      "what": "Long outside maintainer wait",
+      "repo": "firstmate",
+      "owner": "review-mate",
+      "pr_url": "https://github.com/acme/repo/pull/5",
+      "age_days": 8,
+      "nudge": true
+    },
+    {
+      "id": "review-mate/young",
+      "what": "Delivered to outside maintainer",
+      "repo": "firstmate",
+      "owner": "review-mate",
+      "pr_url": "https://github.com/acme/repo/pull/3",
+      "age_days": 3,
+      "nudge": false
+    },
+    {
+      "id": "young",
+      "what": "Delivered to outside maintainer",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/acme/repo/pull/7",
+      "age_days": 0,
+      "nudge": false
+    }
+  ],
+  "secondmates": [
+    {
+      "id": "review-mate",
+      "state": "unknown",
+      "doing": "structured home state invalid: child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, youn\u2026",
+      "provenance": "structured-home",
+      "freshness": "fresh",
+      "age_seconds": 1,
+      "contradiction": false,
+      "reason": "structured home state invalid: child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, young"
+    }
+  ],
+  "secondmate_reconcile": [
+    {
+      "id": "review-mate",
+      "spawn_gen": null,
+      "host": null,
+      "kind": "child_current_unavailable",
+      "ids": [
+        "approval",
+        "in-flight",
+        "overdue",
+        "recorded",
+        "unrecorded",
+        "young"
+      ]
+    }
+  ],
+  "decisions_open": [],
+  "landed": [],
+  "gates": [
+    {
+      "id": "recorded",
+      "title": "Held delivery",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/\u2026",
+      "owner": "(main)",
+      "pr_url": "https://github.com/acme/repo/pull/2"
+    },
+    {
+      "id": "unrecorded",
+      "title": "Held without own request",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/\u2026",
+      "owner": "(main)",
+      "pr_url": null
+    },
+    {
+      "id": "recorded",
+      "title": "Held delivery",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/\u2026",
+      "owner": "review-mate",
+      "pr_url": "https://github.com/acme/repo/pull/2"
+    },
+    {
+      "id": "unrecorded",
+      "title": "Held without own request",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/\u2026",
+      "owner": "review-mate",
+      "pr_url": null
+    }
+  ],
+  "reports": [],
+  "recorded_prs": [
+    {
+      "id": "approval",
+      "url": "https://github.com/acme/repo/pull/6"
+    },
+    {
+      "id": "in-flight",
+      "url": "https://github.com/acme/repo/pull/1"
+    },
+    {
+      "id": "overdue",
+      "url": "https://github.com/acme/repo/pull/4"
+    },
+    {
+      "id": "recorded",
+      "url": "https://github.com/acme/repo/pull/2"
+    },
+    {
+      "id": "young",
+      "url": "https://github.com/acme/repo/pull/7"
+    }
+  ],
+  "unhealthy_endpoints": [
+    {
+      "id": "approval",
+      "backend": "tmux",
+      "target": "nm-test-no-session:approval",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "in-flight",
+      "backend": "tmux",
+      "target": "nm-test-no-session:in-flight",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "overdue",
+      "backend": "tmux",
+      "target": "nm-test-no-session:overdue",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "recorded",
+      "backend": "tmux",
+      "target": "nm-test-no-session:recorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "review-mate",
+      "backend": "tmux",
+      "target": "nm-test-no-session:mate",
+      "exists": false,
+      "agent": "dead"
+    },
+    {
+      "id": "unrecorded",
+      "backend": "tmux",
+      "target": "nm-test-no-session:unrecorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "young",
+      "backend": "tmux",
+      "target": "nm-test-no-session:young",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "review-mate/approval",
+      "backend": "secondmate-home",
+      "target": "nm-test-no-session:approval",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "review-mate/in-flight",
+      "backend": "secondmate-home",
+      "target": "nm-test-no-session:in-flight",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "review-mate/overdue",
+      "backend": "secondmate-home",
+      "target": "nm-test-no-session:overdue",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "review-mate/recorded",
+      "backend": "secondmate-home",
+      "target": "nm-test-no-session:recorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "review-mate/unrecorded",
+      "backend": "secondmate-home",
+      "target": "nm-test-no-session:unrecorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "review-mate/young",
+      "backend": "secondmate-home",
+      "target": "nm-test-no-session:young",
+      "exists": false,
+      "agent": "not_checked"
+    }
+  ],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}
