@@ -1,0 +1,102 @@
+[
+  {
+    "case": "root-state-absent",
+    "interface": "real fm-spawn.sh CLI; no tool doubles",
+    "result": "pass"
+  },
+  {
+    "case": "root-state-absent",
+    "interface": "real spawn CLI plus direct lock resolution",
+    "result": "pass"
+  },
+  {
+    "case": "root-home-absent",
+    "interface": "real fm-spawn.sh CLI; no tool doubles",
+    "result": "pass"
+  },
+  {
+    "case": "parent-depth-1",
+    "interface": "real fm-spawn.sh CLI; no tool doubles",
+    "result": "pass"
+  },
+  {
+    "case": "parent-depth-1",
+    "interface": "real fm-spawn.sh CLI; no tool doubles",
+    "result": "pass"
+  },
+  {
+    "case": "parent-depth-1",
+    "interface": "real spawn CLI plus direct lock resolution",
+    "result": "pass"
+  },
+  {
+    "case": "parent-depth-2",
+    "interface": "real fm-spawn.sh CLI; no tool doubles",
+    "result": "pass"
+  },
+  {
+    "case": "parent-depth-2",
+    "interface": "real fm-spawn.sh CLI; no tool doubles",
+    "result": "pass"
+  },
+  {
+    "case": "parent-depth-2",
+    "interface": "real spawn CLI plus direct lock resolution",
+    "result": "pass"
+  },
+  {
+    "case": "absolute-origin-permission",
+    "interface": "real fm-spawn.sh CLI; no tool doubles",
+    "result": "pass"
+  },
+  {
+    "case": "absolute-origin-permission",
+    "interface": "real spawn CLI plus direct lock resolution",
+    "result": "pass"
+  },
+  {
+    "case": "relative-origin-permission",
+    "interface": "real fm-spawn.sh CLI; no tool doubles",
+    "result": "pass"
+  },
+  {
+    "case": "relative-origin-permission",
+    "interface": "real spawn CLI plus direct lock resolution",
+    "result": "pass"
+  },
+  {
+    "case": "not-a-git-project",
+    "interface": "real fm-spawn.sh CLI; no tool doubles",
+    "result": "pass"
+  },
+  {
+    "case": "malformed-parent",
+    "interface": "real fm-spawn.sh CLI; no tool doubles",
+    "result": "pass"
+  },
+  {
+    "case": "parent-cycle",
+    "interface": "real fm-spawn.sh CLI; no tool doubles",
+    "result": "pass"
+  },
+  {
+    "case": "remote-parent-terminates-locally",
+    "interface": "real spawn CLI plus direct lock resolution",
+    "result": "pass"
+  },
+  {
+    "case": "origin-17",
+    "interface": "real spawn CLI plus direct lock resolution",
+    "result": "pass"
+  },
+  {
+    "case": "origin-18",
+    "interface": "real spawn CLI plus direct lock resolution",
+    "result": "pass"
+  },
+  {
+    "case": "origin-19",
+    "interface": "real spawn CLI plus direct lock resolution",
+    "result": "pass"
+  }
+]

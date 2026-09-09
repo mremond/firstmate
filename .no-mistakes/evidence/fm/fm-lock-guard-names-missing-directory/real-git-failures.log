@@ -1,0 +1,111 @@
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure
+$ git init -q -b main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/project
+exit=0
+stdout: <empty>
+stderr: <empty>
+
+[real-hash-failure / base] FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/external-state FM_BACKEND=orca
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/cwd
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/project
+
+
+[real-hash-failure / target] FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/external-state FM_BACKEND=orca
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/cwd
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: fm_treehouse_project_lock_path: cannot hash the project lock identity, so git is unusable here: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/project
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/project
+
+
+[real-hash-failure / base] FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/external-state FM_BACKEND=orca
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/cwd
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/data/lock-check/brief.md
+
+
+[real-hash-failure / target] FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/external-state FM_BACKEND=orca
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/cwd
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-hash-failure/data/lock-check/brief.md
+
+After repairing only the named cause, both commands advanced to the missing-brief guard.
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top
+$ git init -q -b main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/project
+exit=0
+stdout: <empty>
+stderr: <empty>
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/cwd
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/project config core.worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/vanished
+exit=0
+stdout: <empty>
+stderr: <empty>
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/cwd
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/project rev-parse --show-toplevel
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/vanished
+
+stderr: <empty>
+
+[real-vanished-worktree-top / base] FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/external-state FM_BACKEND=orca
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/cwd
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/project
+
+
+[real-vanished-worktree-top / target] FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/external-state FM_BACKEND=orca
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/cwd
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: fm_treehouse_project_lock_path: project worktree top cannot be entered: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/vanished
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/project
+
+
+[real-vanished-worktree-top / base] FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/external-state FM_BACKEND=orca
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/cwd
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/data/lock-check/brief.md
+
+
+[real-vanished-worktree-top / target] FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/external-state FM_BACKEND=orca
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/cwd
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-vanished-worktree-top/data/lock-check/brief.md
+
+After repairing only the named cause, both commands advanced to the missing-brief guard.
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-missing-project
+$ git init -q -b main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-missing-project/project
+exit=0
+stdout: <empty>
+stderr: <empty>
+
+[real-missing-project / base] FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-missing-project/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-missing-project/external-state FM_BACKEND=orca
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-missing-project/cwd
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-missing-project/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh: line 2178: cd: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-missing-project/project: No such file or directory
+
+
+[real-missing-project / target] FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-missing-project/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-missing-project/external-state FM_BACKEND=orca
+cwd=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-missing-project/cwd
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-missing-project/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh: line 2178: cd: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/real-missing-project/project: No such file or directory
+
+Missing project remains refused by the earlier CLI path guard; no directory was created.

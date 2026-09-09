@@ -1,0 +1,14 @@
+Validated target dc7e8c6acd87badd939e5da56c14424c03a27353 (tree ed966430d92e562d17b80ca04cf92e08be50adf5) against base 40c50ea8843c5b6a5351db8352675537252b653e.
+
+The focused runner passed with FM_BACKEND=orca and isolated HOME, FM_HOME, FM_STATE_OVERRIDE, TMPDIR, GIT_CONFIG_GLOBAL=/dev/null, GIT_CONFIG_NOSYSTEM=1, and GIT_CEILING_DIRECTORIES rooted below the gate worktree:
+  bin/fm-test-run.sh tests/fm-treehouse-lock-naming.test.sh --jobs 1
+
+Manual product commands used unmodified fm-spawn.sh, the real Git executable, --scout --backend tmux --harness codex, and isolated private homes. FM_GATE_REFUSE_BYPASS=1 is the test helper's exemption for executing the production CLI inside a gate; FM_SPAWN_NO_GUARD=1 disables unrelated fleet monitoring. No tools were mocked in the live CLI checks, and no agent was launched. Successful project-guard checks deliberately stopped at the following missing-brief guard; direct library calls additionally verified byte-identical lock paths and empty stderr. Refusal outputs, exact commands, missing-directory observations, and repair counterfactuals are in live-cli-transcript.log and real-git-failures.log.
+
+The before versions were disposable bin directories under the gate worktree, with fm-wake-lib.sh taken through git show from the supplied base or 2da46792 (before the review fix); unchanged bin dependencies linked to this worktree. Production source was never modified.
+
+The existing tests were also executed against disposable copies with diagnostics suppressed, an unconditional diagnostic, the old parent resolver, or the removed --backend tmux test flag. All selected tests failed for the specified assertion; the depth-two parent case was exercised independently so the depth-one failure could not mask it. These are regression-sensitivity checks, not live product evidence. See regression-sensitivity.log.
+
+Setup probes established that a real core.worktree setting can return a missing top path, and that a malformed .git file in the invocation directory can break hash-object while git -C <project> remains usable. An initial GIT_DEFAULT_HASH=invalid probe did not trigger a hash failure; it was not used as evidence of that scenario.
+
+No linters, formatters, static-analysis tools, full suite, pipeline controls, publication commands, or CI phases were run. No UI surface changed, so CLI transcripts are the product evidence. All disposable worktree fixtures were removed after commands completed.

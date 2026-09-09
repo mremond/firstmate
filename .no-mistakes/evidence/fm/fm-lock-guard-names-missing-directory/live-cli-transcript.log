@@ -1,0 +1,490 @@
+
+[root-state-absent / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/project
+
+
+[root-state-absent / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: fm_treehouse_project_lock_path: the root firstmate home has no state directory: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/home/state
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/project
+
+filesystem: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/home/state remains absent
+
+[root-state-absent / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/data/lock-check/brief.md
+
+
+[root-state-absent / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/data/lock-check/brief.md
+
+
+[root-state-absent / base / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/home/state/.treehouse-project-3336bc32d79ee1c3dffaa1a6c3baea7f4d30aa79.lock
+
+stderr: <empty>
+
+[root-state-absent / target / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-state-absent/home/state/.treehouse-project-3336bc32d79ee1c3dffaa1a6c3baea7f4d30aa79.lock
+
+stderr: <empty>
+CLI advanced past the project guard to the independently missing brief; task creation never began. Old and new lock paths match byte-for-byte.
+
+[root-home-absent / base / spawn]
+Environment: 'FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-home-absent/missing home' FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-home-absent/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-home-absent/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-home-absent/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-home-absent/project
+
+
+[root-home-absent / target / spawn]
+Environment: 'FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-home-absent/missing home' FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-home-absent/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-home-absent/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-home-absent/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: fm_treehouse_project_lock_path: cannot resolve the root firstmate home from FM_HOME: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-home-absent/missing home
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-home-absent/project
+
+filesystem: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/root-home-absent/missing home remains absent
+
+[parent-depth-1 / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/project
+
+
+[parent-depth-1 / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: fm_treehouse_project_lock_path: cannot resolve the recorded parent firstmate home: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/absent parent
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/project
+
+filesystem: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/absent parent remains absent
+
+[parent-depth-1 / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/project
+
+
+[parent-depth-1 / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: fm_treehouse_project_lock_path: the root firstmate home has no state directory: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/absent parent/state
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/project
+
+filesystem: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/absent parent/state remains absent
+
+[parent-depth-1 / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/data/lock-check/brief.md
+
+
+[parent-depth-1 / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/data/lock-check/brief.md
+
+
+[parent-depth-1 / base / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/absent parent/state/.treehouse-project-0fa6ea9949670e3d6d1ebbf91e8675d1b5b17b0a.lock
+
+stderr: <empty>
+
+[parent-depth-1 / target / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-1/absent parent/state/.treehouse-project-0fa6ea9949670e3d6d1ebbf91e8675d1b5b17b0a.lock
+
+stderr: <empty>
+CLI advanced past the project guard to the independently missing brief; task creation never began. Old and new lock paths match byte-for-byte.
+
+[parent-depth-2 / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/project
+
+
+[parent-depth-2 / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: fm_treehouse_project_lock_path: cannot resolve the recorded parent firstmate home: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/absent parent
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/project
+
+filesystem: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/absent parent remains absent
+
+[parent-depth-2 / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/project
+
+
+[parent-depth-2 / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: fm_treehouse_project_lock_path: the root firstmate home has no state directory: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/absent parent/state
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/project
+
+filesystem: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/absent parent/state remains absent
+
+[parent-depth-2 / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/data/lock-check/brief.md
+
+
+[parent-depth-2 / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/data/lock-check/brief.md
+
+
+[parent-depth-2 / base / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/absent parent/state/.treehouse-project-6b71c77910775d7fcd811e175be2af77e88d3e02.lock
+
+stderr: <empty>
+
+[parent-depth-2 / target / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-depth-2/absent parent/state/.treehouse-project-6b71c77910775d7fcd811e175be2af77e88d3e02.lock
+
+stderr: <empty>
+CLI advanced past the project guard to the independently missing brief; task creation never began. Old and new lock paths match byte-for-byte.
+
+[absolute-origin-permission / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/project
+
+
+[absolute-origin-permission / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: fm_treehouse_project_lock_path: project origin directory cannot be entered: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/origin
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/project
+
+
+[absolute-origin-permission / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/data/lock-check/brief.md
+
+
+[absolute-origin-permission / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/data/lock-check/brief.md
+
+
+[absolute-origin-permission / base / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/home/state/.treehouse-project-71caf066fd2ef5256d3b17d75613f3727f01d33e.lock
+
+stderr: <empty>
+
+[absolute-origin-permission / target / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/absolute-origin-permission/home/state/.treehouse-project-71caf066fd2ef5256d3b17d75613f3727f01d33e.lock
+
+stderr: <empty>
+CLI advanced past the project guard to the independently missing brief; task creation never began. Old and new lock paths match byte-for-byte.
+
+[relative-origin-permission / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/project
+
+
+[relative-origin-permission / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: fm_treehouse_project_lock_path: project origin directory cannot be entered: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/project/origin
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/project
+
+
+[relative-origin-permission / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/data/lock-check/brief.md
+
+
+[relative-origin-permission / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/data/lock-check/brief.md
+
+
+[relative-origin-permission / base / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/home/state/.treehouse-project-a522f4beed1669d7fe5955e6c558ef6de3bf1fba.lock
+
+stderr: <empty>
+
+[relative-origin-permission / target / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/relative-origin-permission/home/state/.treehouse-project-a522f4beed1669d7fe5955e6c558ef6de3bf1fba.lock
+
+stderr: <empty>
+CLI advanced past the project guard to the independently missing brief; task creation never began. Old and new lock paths match byte-for-byte.
+
+[not-a-git-project / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/not-a-git-project/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/not-a-git-project/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/not-a-git-project/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/not-a-git-project/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/not-a-git-project/project
+
+
+[not-a-git-project / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/not-a-git-project/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/not-a-git-project/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/not-a-git-project/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/not-a-git-project/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: fm_treehouse_project_lock_path: project has no origin and is not inside a git worktree: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/not-a-git-project/project
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/not-a-git-project/project
+
+
+[malformed-parent / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/malformed-parent/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/malformed-parent/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/malformed-parent/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/malformed-parent/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/malformed-parent/project
+
+
+[malformed-parent / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/malformed-parent/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/malformed-parent/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/malformed-parent/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/malformed-parent/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: fm_treehouse_project_lock_path: cannot resolve the root firstmate home from FM_HOME: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/malformed-parent/home
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/malformed-parent/project
+
+
+[parent-cycle / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-cycle/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-cycle/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-cycle/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-cycle/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-cycle/project
+
+
+[parent-cycle / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-cycle/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-cycle/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-cycle/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-cycle/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: fm_treehouse_project_lock_path: cannot resolve the root firstmate home from FM_HOME: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-cycle/home
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/parent-cycle/project
+
+
+[remote-parent-terminates-locally / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/data/lock-check/brief.md
+
+
+[remote-parent-terminates-locally / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/data/lock-check/brief.md
+
+
+[remote-parent-terminates-locally / base / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/home/state/.treehouse-project-edc1ba495c6d45b4ec6a67144b54cb68cec55c10.lock
+
+stderr: <empty>
+
+[remote-parent-terminates-locally / target / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/remote-parent-terminates-locally/home/state/.treehouse-project-edc1ba495c6d45b4ec6a67144b54cb68cec55c10.lock
+
+stderr: <empty>
+CLI advanced past the project guard to the independently missing brief; task creation never began. Old and new lock paths match byte-for-byte.
+
+[origin-17 / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/data/lock-check/brief.md
+
+
+[origin-17 / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/data/lock-check/brief.md
+
+
+[origin-17 / base / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/home/state/.treehouse-project-d036aeed0891ce07f517281691d7aff4974faef9.lock
+
+stderr: <empty>
+
+[origin-17 / target / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-17/home/state/.treehouse-project-d036aeed0891ce07f517281691d7aff4974faef9.lock
+
+stderr: <empty>
+CLI advanced past the project guard to the independently missing brief; task creation never began. Old and new lock paths match byte-for-byte.
+
+[origin-18 / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/data/lock-check/brief.md
+
+
+[origin-18 / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/data/lock-check/brief.md
+
+
+[origin-18 / base / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/home/state/.treehouse-project-a7715ce9a14d16bbba7f12acad66b0eb882a1995.lock
+
+stderr: <empty>
+
+[origin-18 / target / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-18/home/state/.treehouse-project-a7715ce9a14d16bbba7f12acad66b0eb882a1995.lock
+
+stderr: <empty>
+CLI advanced past the project guard to the independently missing brief; task creation never began. Old and new lock paths match byte-for-byte.
+
+[origin-19 / base / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/data/lock-check/brief.md
+
+
+[origin-19 / target / spawn]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/data FM_BACKEND=orca
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-spawn.sh lock-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/project --scout --backend tmux --harness codex
+exit=1
+stdout: <empty>
+stderr: error: task lock-check has no brief at inaccessible data path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/data/lock-check/brief.md
+
+
+[origin-19 / base / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/base/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/home/state/.treehouse-project-e7a54bbf7debe187cb80576abefd756280922d45.lock
+
+stderr: <empty>
+
+[origin-19 / target / library]
+Environment: FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/home FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/external-state FM_DATA_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/data FM_BACKEND=orca
+$ /bin/bash -c '. "$1"; fm_treehouse_project_lock_path "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/project
+exit=0
+stdout: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/live/origin-19/home/state/.treehouse-project-e7a54bbf7debe187cb80576abefd756280922d45.lock
+
+stderr: <empty>
+CLI advanced past the project guard to the independently missing brief; task creation never began. Old and new lock paths match byte-for-byte.

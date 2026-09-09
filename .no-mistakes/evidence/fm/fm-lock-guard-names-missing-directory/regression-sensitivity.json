@@ -1,0 +1,86 @@
+[
+  {
+    "mutation": "mutant-silent",
+    "case": "test_missing_project_directory_is_named",
+    "observed": "not ok - the refusal did not name the absent project directory (missing: 'project directory does not exist: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.2et9I9/project-absent/no-such-project')\n--- output ---",
+    "result": "expected failure"
+  },
+  {
+    "mutation": "mutant-silent",
+    "case": "test_unresolvable_root_home_is_named",
+    "observed": "not ok - the refusal did not name the home it could not resolve (missing: 'cannot resolve the root firstmate home from FM_HOME: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.YfMsMT/root-home-absent/no-such-home')\n--- output ---",
+    "result": "expected failure"
+  },
+  {
+    "mutation": "mutant-silent",
+    "case": "test_broken_secondmate_parent_chain_names_the_home",
+    "observed": "not ok - a broken secondmate parent chain did not name the home whose chain broke (missing: 'cannot resolve the root firstmate home from FM_HOME: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.siZKBm/secondmate-chain/home')\n--- output ---",
+    "result": "expected failure"
+  },
+  {
+    "mutation": "mutant-silent",
+    "case": "test_missing_recorded_parent_home_is_named",
+    "observed": "not ok - the refusal did not name the missing recorded parent home at depth 1 (missing: 'cannot resolve the recorded parent firstmate home: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.dAAhNU/missing-parent-1/absent parent')\n--- output ---",
+    "result": "expected failure"
+  },
+  {
+    "mutation": "mutant-silent",
+    "case": "test_unenterable_absolute_origin_is_named",
+    "observed": "not ok - the refusal did not name the origin directory it could not enter (missing: 'project origin directory cannot be entered: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.w90jbv/origin-absolute/origin')\n--- output ---",
+    "result": "expected failure"
+  },
+  {
+    "mutation": "mutant-silent",
+    "case": "test_unenterable_relative_origin_is_named",
+    "observed": "not ok - the refusal did not name the relative origin directory it could not enter (missing: 'project origin directory cannot be entered: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.C37Bnf/origin-relative/project/sibling')\n--- output ---",
+    "result": "expected failure"
+  },
+  {
+    "mutation": "mutant-silent",
+    "case": "test_originless_non_git_project_is_named",
+    "observed": "not ok - the refusal did not say the project has no origin and no worktree (missing: 'project has no origin and is not inside a git worktree: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.i9D7O9/originless-non-git/project')\n--- output ---",
+    "result": "expected failure"
+  },
+  {
+    "mutation": "mutant-silent",
+    "case": "test_unenterable_worktree_top_is_named",
+    "observed": "not ok - the refusal did not name the worktree top it could not enter (missing: 'project worktree top cannot be entered: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.IrbTXi/worktree-top/vanished')\n--- output ---",
+    "result": "expected failure"
+  },
+  {
+    "mutation": "mutant-silent",
+    "case": "test_unhashable_identity_is_named",
+    "observed": "not ok - the refusal did not say the project identity could not be hashed (missing: 'cannot hash the project lock identity')\n--- output ---",
+    "result": "expected failure"
+  },
+  {
+    "mutation": "mutant-silent",
+    "case": "test_missing_root_state_directory_is_named",
+    "observed": "not ok - the refusal did not name the home's missing state directory (missing: 'the root firstmate home has no state directory: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.nwddpJ/root-state-missing/home/state')\n--- output ---",
+    "result": "expected failure"
+  },
+  {
+    "mutation": "mutant-silent",
+    "case": "test_spawn_refusal_carries_the_named_cause",
+    "observed": "not ok - the spawn refusal did not carry the named cause to the operator (missing: 'the root firstmate home has no state directory: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.w6RrJO/spawn-e2e/spawn-home/state')\n--- output ---\nerror: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.w6RrJO/spawn-e2e/project",
+    "result": "expected failure"
+  },
+  {
+    "mutation": "mutant-noisy",
+    "case": "test_resolved_lock_path_stays_silent",
+    "observed": "fm_treehouse_project_lock_path: unconditional diagnosis\nnot ok - a resolved lock path emitted a refusal diagnostic (unexpected: 'fm_treehouse_project_lock_path:')\n--- output ---\nfm_treehouse_project_lock_path: unconditional diagnosis\n/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.b2kkqy/resolves/home/state/.treehouse-project-f3cefe3a0d966beb0c56838d0c668606044581ba.lock",
+    "result": "expected failure"
+  },
+  {
+    "mutation": "regression-parent",
+    "case": "test_missing_recorded_parent_home_is_named",
+    "observed": "not ok - the refusal did not name the missing recorded parent home at depth 1 (missing: 'cannot resolve the recorded parent firstmate home: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.URYRaa/missing-parent-1/absent parent')\n--- output ---\nfm_treehouse_project_lock_path: cannot resolve the root firstmate home from FM_HOME: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.URYRaa/missing-parent-1/home",
+    "result": "expected failure"
+  },
+  {
+    "mutation": "mutant-unpinned-backend",
+    "case": "test_spawn_refusal_carries_the_named_cause",
+    "observed": "not ok - the spawn refusal did not carry the named cause to the operator (missing: 'the root firstmate home has no state directory: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J6W2BJAVGZZ9NSGWD23SR/.local-test-lock-naming/tmp/fm-treehouse-lock-naming.jw9aAn/spawn-e2e/spawn-home/state')\n--- output ---\nerror: invalid Orca status JSON: Unexpected end of JSON input",
+    "result": "expected failure"
+  }
+]
