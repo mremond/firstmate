@@ -1,0 +1,10 @@
+{
+  "baseline_commit": "40c50ea8843c5b6a5351db8352675537252b653e",
+  "baseline_local_artifact": "-",
+  "baseline_reportless_scout_listed": true,
+  "pre_r2_commit": "626bfa85",
+  "pre_r2_exit": 0,
+  "pre_r2_default_backlog_changed": true,
+  "target_dangling_refused": true,
+  "target_preserved_both_backlogs": true
+}

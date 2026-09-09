@@ -1,0 +1,2 @@
+teardown local-delivery complete (window firstmate:fm-local-delivery, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-work)
+Backlog: local-delivery is closed in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/backlog.md. Run tasks-axi ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.

@@ -1,0 +1,11 @@
+[
+  {
+    "suite": "fm-bearings-snapshot",
+    "exit": 1,
+    "seconds": 279.2,
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/tests/.phase-r2-fm-bearings-snapshot.sh"
+    ]
+  }
+]

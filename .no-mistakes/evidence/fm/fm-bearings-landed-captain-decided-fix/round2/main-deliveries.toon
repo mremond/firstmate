@@ -1,0 +1,26 @@
+schema: fm-bearings.v1
+home: live/main
+generated: "2026-09-09T11:17:45Z"
+prs: "not_requested (run: /bearings include PRs)"
+in_flight: []
+secondmates: []
+secondmate_reconcile: []
+decisions_open: []
+landed[5]{id,what,artifact,owner}:
+  verified-pr,Track the merged AFK posture delivery,"https://github.com/kunchenguid/firstmate/pull/4048",(main)
+  scout-unicode,SCOUTé inspect local delivery,data/scout-unicode/report.md,(main)
+  scout-colon,"SCOUT: inspect local delivery",data/scout-colon/report.md,(main)
+  local-delivery,Deliver the local artifact,local main,(main)
+  legacy-empty,Legacy completion,"-",(main)
+gates: []
+reports[2]{id,path}:
+  scout-colon,/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-colon/report.md
+  scout-unicode,/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-unicode/report.md
+recorded_prs: []
+omitted[6]{surface,reveal}:
+  backlog item bodies,"--fields bodies"
+  task paths,"--fields paths"
+  watch/steer actions,"--fields actions"
+  healthy endpoint detail,"--fields endpoints"
+  full scout-report inventory,"--all-reports"
+  live PR discovery + checks,"--include-prs"

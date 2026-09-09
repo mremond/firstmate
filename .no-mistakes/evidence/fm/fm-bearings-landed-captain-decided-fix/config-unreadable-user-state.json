@@ -1,0 +1,6 @@
+{
+  "exit": 1,
+  "stderr": "tasks-axi backend configuration cannot be read at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-local/live/user-home/.tasks-axi/config.toml\nfm-captain-hold: could not create task duplicate-id\n",
+  "default_unchanged": true,
+  "configured_unchanged": true
+}

@@ -1,0 +1,222 @@
+FM_TEST_BEGIN 2026-09-09T10:54:16Z tests/.nm-bearings-selected.test.sh family=unclassified expected_gate_skip=none
+ok - kind fallback matches tasks-axi word boundaries and preserves scout deliveries
+ok - kindless v1 summaries retain report artifacts from fresh and cached ledgers
+FM_TEST_END 2026-09-09T10:55:18Z tests/.nm-bearings-selected.test.sh exit=0 duration_ms=61199 gate_skip=false
+FM_TEST_BEGIN 2026-09-09T10:55:18Z tests/.nm-collector-selected.test.sh family=unclassified expected_gate_skip=none
+not ok - one slow home prevented four fresh rows or hid its cache disclosure: {
+  "schema": "fm-bearings.v1",
+  "home": "fm-bearings.K1GZ9H/concurrent-remote-ledgers",
+  "generated": "2026-09-01T22:00:00Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [],
+  "secondmates": [
+    {
+      "id": "ledger-1",
+      "state": "captain_decision",
+      "doing": "Remote parked hold",
+      "provenance": "structured-home-cache",
+      "freshness": "cached",
+      "age_seconds": 1000,
+      "contradiction": false,
+      "reason": "-"
+    },
+    {
+      "id": "ledger-2",
+      "state": "captain_decision",
+      "doing": "Remote parked hold",
+      "provenance": "structured-home",
+      "freshness": "fresh",
+      "age_seconds": 10,
+      "contradiction": false,
+      "reason": "-"
+    },
+    {
+      "id": "ledger-3",
+      "state": "captain_decision",
+      "doing": "Remote parked hold",
+      "provenance": "structured-home-cache",
+      "freshness": "cached",
+      "age_seconds": 1000,
+      "contradiction": false,
+      "reason": "-"
+    },
+    {
+      "id": "ledger-4",
+      "state": "captain_decision",
+      "doing": "Remote parked hold",
+      "provenance": "structured-home",
+      "freshness": "fresh",
+      "age_seconds": 10,
+      "contradiction": false,
+      "reason": "-"
+    },
+    {
+      "id": "ledger-5",
+      "state": "captain_decision",
+      "doing": "Remote parked hold",
+      "provenance": "structured-home",
+      "freshness": "fresh",
+      "age_seconds": 10,
+      "contradiction": false,
+      "reason": "-"
+    }
+  ],
+  "secondmate_reconcile": [
+    {
+      "id": "ledger-1",
+      "spawn_gen": null,
+      "host": "host-1",
+      "kind": null,
+      "ids": []
+    },
+    {
+      "id": "ledger-2",
+      "spawn_gen": null,
+      "host": "host-2",
+      "kind": null,
+      "ids": []
+    },
+    {
+      "id": "ledger-3",
+      "spawn_gen": null,
+      "host": "host-3",
+      "kind": null,
+      "ids": []
+    },
+    {
+      "id": "ledger-4",
+      "spawn_gen": null,
+      "host": "host-4",
+      "kind": null,
+      "ids": []
+    },
+    {
+      "id": "ledger-5",
+      "spawn_gen": null,
+      "host": "host-5",
+      "kind": null,
+      "ids": []
+    }
+  ],
+  "decisions_open": [
+    {
+      "id": "ledger-1/remote-parked",
+      "key": "remote-parked",
+      "verb": "captain-hold",
+      "summary": "Remote parked hold: parked",
+      "owner": "ledger-1"
+    },
+    {
+      "id": "ledger-2/remote-parked",
+      "key": "remote-parked",
+      "verb": "captain-hold",
+      "summary": "Remote parked hold: parked",
+      "owner": "ledger-2"
+    },
+    {
+      "id": "ledger-3/remote-parked",
+      "key": "remote-parked",
+      "verb": "captain-hold",
+      "summary": "Remote parked hold: parked",
+      "owner": "ledger-3"
+    },
+    {
+      "id": "ledger-4/remote-parked",
+      "key": "remote-parked",
+      "verb": "captain-hold",
+      "summary": "Remote parked hold: parked",
+      "owner": "ledger-4"
+    },
+    {
+      "id": "ledger-5/remote-parked",
+      "key": "remote-parked",
+      "verb": "captain-hold",
+      "summary": "Remote parked hold: parked",
+      "owner": "ledger-5"
+    }
+  ],
+  "landed": [],
+  "gates": [
+    {
+      "id": "remote-aged",
+      "title": "Remote aged hold",
+      "blocked_by": "-",
+      "reason": "held 40d: choose a route",
+      "owner": "ledger-1"
+    },
+    {
+      "id": "remote-aged",
+      "title": "Remote aged hold",
+      "blocked_by": "-",
+      "reason": "held 40d: choose a route",
+      "owner": "ledger-2"
+    },
+    {
+      "id": "remote-aged",
+      "title": "Remote aged hold",
+      "blocked_by": "-",
+      "reason": "held 40d: choose a route",
+      "owner": "ledger-3"
+    },
+    {
+      "id": "remote-aged",
+      "title": "Remote aged hold",
+      "blocked_by": "-",
+      "reason": "held 40d: choose a route",
+      "owner": "ledger-4"
+    },
+    {
+      "id": "remote-aged",
+      "title": "Remote aged hold",
+      "blocked_by": "-",
+      "reason": "held 40d: choose a route",
+      "owner": "ledger-5"
+    }
+  ],
+  "reports": [],
+  "recorded_prs": [],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "secondmate ledger-1 served from cached home ledger",
+      "reveal": "inspect the home ledger publication and remote route"
+    },
+    {
+      "surface": "secondmate ledger-3 served from cached home ledger",
+      "reveal": "inspect the home ledger publication and remote route"
+    },
+    {
+      "surface": "captain holds bucketed blocked, dated, or aged: 5",
+      "reveal": "--all-decisions"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}
+FM_TEST_END 2026-09-09T10:58:37Z tests/.nm-collector-selected.test.sh exit=1 duration_ms=198194 gate_skip=false
+FM_TEST_SUMMARY total=2 failed=1 skipped_gate=0 duration_ms=261600
+FM_TEST_SUMMARY_FAMILY family=unclassified count=2 duration_ms=259393 failed=1
+FM_TEST_SLOWEST rank=1 script=tests/.nm-collector-selected.test.sh duration_ms=198194
+FM_TEST_SLOWEST rank=2 script=tests/.nm-bearings-selected.test.sh duration_ms=61199
+fm-test-run: wrote timing artifact: /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/remaining-tests.json

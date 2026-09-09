@@ -1,0 +1,4 @@
+ok - backend resolution preserves unreadable configuration errors for every caller
+ok - backend resolution preserves environment, project, user, and default precedence
+ok - backlog readers and mutations refuse unresolved backends without touching either backlog
+ok - captain hold refuses backend errors and preserves relocated addressing for valid configuration

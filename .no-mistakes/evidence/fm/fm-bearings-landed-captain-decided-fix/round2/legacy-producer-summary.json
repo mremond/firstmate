@@ -1,0 +1,41 @@
+{
+  "schema": "fm-secondmate-home-summary.v1",
+  "hold_classifier_schema": "fm-captain-hold-buckets.v1",
+  "generated": "2026-09-09T11:23:58Z",
+  "generated_epoch": 1788953038,
+  "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/legacy-peer",
+  "valid": true,
+  "reason": null,
+  "invalidity": {
+    "kind": null,
+    "ids": []
+  },
+  "state": "no_active_work",
+  "active_children": [],
+  "decisions_open": [],
+  "holds": [],
+  "queued": [],
+  "landed": [
+    {
+      "id": "legacy-report",
+      "title": "Inspect legacy delivery",
+      "pr_url": null,
+      "report_path": "data/legacy-report/report.md",
+      "local_note": null,
+      "completion": {
+        "verb": "reported",
+        "date": "2026-09-09"
+      }
+    }
+  ],
+  "endpoints": [],
+  "counts": {
+    "active_children": 0,
+    "decisions_open": 0,
+    "holds": 0,
+    "queued": 0,
+    "landed": 1,
+    "endpoints": 0
+  },
+  "omitted": []
+}

@@ -1,0 +1,32 @@
+{
+  "config-dangling-state": {
+    "exit": 1,
+    "stderr": "tasks-axi backend configuration cannot be read at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-local/live/config-dangling/.tasks.toml\nfm-captain-hold: could not create task duplicate-id\n",
+    "default_unchanged": true,
+    "configured_unchanged": true
+  },
+  "config-readable-state": {
+    "exit": 0,
+    "stderr": "",
+    "default_unchanged": true,
+    "configured_unchanged": false
+  },
+  "config-absent-state": {
+    "exit": 0,
+    "stderr": "",
+    "default_unchanged": true,
+    "configured_unchanged": false
+  },
+  "config-unreadable-user-state": {
+    "exit": 1,
+    "stderr": "tasks-axi backend configuration cannot be read at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-local/live/user-home/.tasks-axi/config.toml\nfm-captain-hold: could not create task duplicate-id\n",
+    "default_unchanged": true,
+    "configured_unchanged": true
+  },
+  "config-unreadable-project-state": {
+    "exit": 1,
+    "stderr": "tasks-axi backend configuration cannot be read at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-local/live/config-unreadable-project/.tasks.toml\nfm-captain-hold: could not create task duplicate-id\n",
+    "default_unchanged": true,
+    "configured_unchanged": true
+  }
+}

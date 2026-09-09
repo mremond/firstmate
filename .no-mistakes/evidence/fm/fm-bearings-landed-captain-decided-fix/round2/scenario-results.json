@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Recording a verified merged PR after releasing a past captain hold includes it in Recently Landed; approval alone does not",
+    "result": "pass",
+    "live": true,
+    "evidence": "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/verified-merged-pr.txt; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/before-delivery.json; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/main-deliveries.toon",
+    "reason": ""
+  },
+  {
+    "name": "Fast-forwarding a local delivery and finishing interrupted cleanup records local main and displays the delivery",
+    "result": "pass",
+    "live": true,
+    "evidence": "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/local-merge.txt; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/local-cleanup.txt; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/main-backlog.md; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/main-deliveries.toon",
+    "reason": ""
+  },
+  {
+    "name": "Answering questions that mention a PR or local main does not create a delivery",
+    "result": "pass",
+    "live": true,
+    "evidence": "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/main-backlog.md; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/main-deliveries.json",
+    "reason": ""
+  },
+  {
+    "name": "Completed SCOUT: and SCOUT\u00e9 reports remain visible; longer words and reportless explicit scouts stay excluded while kindless legacy completions remain",
+    "result": "pass",
+    "live": true,
+    "evidence": "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/main-backlog.md; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/main-deliveries.json",
+    "reason": ""
+  },
+  {
+    "name": "Reading a delegated home includes its released merged delivery and excludes its answered captain question",
+    "result": "pass",
+    "live": true,
+    "evidence": "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/mate-home-summary.json; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/fleet-deliveries.toon",
+    "reason": ""
+  },
+  {
+    "name": "Holding a task with unreadable or dangling backend configuration refuses without changing either backlog; absent and readable configurations still address the relocated backlog",
+    "result": "pass",
+    "live": true,
+    "evidence": "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/live-cli-transcript.txt; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/config-*-state.json",
+    "reason": ""
+  },
+  {
+    "name": "Cleaning up a completed scout retains its unanswered captain call; answering later preserves its report in Recently Landed",
+    "result": "pass",
+    "live": true,
+    "evidence": "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/held-scout-cleanup.txt; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/held-scout-before-answer.txt; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/retained-report-final.toon",
+    "reason": ""
+  },
+  {
+    "name": "Attempting a local merge while captain-held preserves main; releasing the same task allows the fast-forward",
+    "result": "pass",
+    "live": true,
+    "evidence": "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/held-local-refusal.txt; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/released-local-merge.txt; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/live-cli-transcript.txt",
+    "reason": ""
+  },
+  {
+    "name": "Merge entrypoints reject malformed IDs and missing state promptly; captain-call reads distinguish absent tasks from unreadable records",
+    "result": "pass",
+    "live": true,
+    "evidence": "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/live-cli-transcript.txt",
+    "reason": ""
+  },
+  {
+    "name": "Reading a local v1 summary produced by the base version preserves its report artifact despite omitted kind",
+    "result": "pass",
+    "live": true,
+    "evidence": "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/legacy-producer-summary.json; /Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/legacy-live-local.toon",
+    "reason": ""
+  },
+  {
+    "name": "A waiting merge refuses a replacement task incarnation in both merge entrypoints",
+    "result": "pass",
+    "live": true,
+    "evidence": "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/incarnation-refusals.json",
+    "reason": ""
+  },
+  {
+    "name": "A remote v1 report retains its artifact after fresh collection and cache fallback",
+    "result": "untested",
+    "live": false,
+    "evidence": "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/round2/isolated-remote-readiness.txt",
+    "reason": "The isolated account lacks the Firstmate remote-job worker and dedicated Herdr LaunchAgents. Installing or starting them changes host state outside the allowed worktree. Provide a preconfigured isolated remote worker/home, or authorize that setup in a subsequent run."
+  },
+  {
+    "name": "Merging a released GitHub PR through the guarded entrypoint records the delivered artifact after cleanup",
+    "result": "untested",
+    "live": false,
+    "evidence": "Guarded PR lifecycle is exercised with a stubbed forge by test_released_merge_passes_the_entrypoint_and_lands; recording a real already-merged PR is covered live separately.",
+    "reason": "No disposable GitHub PR and authority to merge it outside the worktree were supplied. Provide an isolated forge test PR and explicit merge authorization for this live mutation."
+  }
+]

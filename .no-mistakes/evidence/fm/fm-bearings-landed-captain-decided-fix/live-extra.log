@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/live-extra.py", line 108, in <module>
+    p=run([ROOT/'.test-local/pre-r2/bin/fm-captain-hold.sh','hold','duplicate-id','--title','Task in records','--reason','Choose safely'],h,env_extra={'FM_DATA_OVERRIDE':records},out='pre-r2-wrong-backlog.txt')
+  File "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/live-extra.py", line 22, in run
+    if expect is not None: assert p.returncode==expect, (args,p.returncode,p.stdout,p.stderr)
+                                  ^^^^^^^^^^^^^^^^^^^^
+AssertionError: (['/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-local/pre-r2/bin/fm-captain-hold.sh', 'hold', 'duplicate-id', '--title', 'Task in records', '--reason', 'Choose safely'], 1, '', 'fm-captain-hold: existing task duplicate-id has a different title\n')

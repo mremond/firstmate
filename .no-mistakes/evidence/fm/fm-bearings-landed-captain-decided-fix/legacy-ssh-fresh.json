@@ -1,0 +1,55 @@
+{
+  "schema": "fm-bearings.v1",
+  "home": "live/ssh-parent",
+  "generated": "2026-09-09T10:57:02Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [],
+  "secondmates": [
+    {
+      "id": "legacy-peer",
+      "state": "unknown",
+      "doing": "structured home ledger is missing, unreadable, or invalid and no valid cached copy is available",
+      "provenance": "unknown",
+      "freshness": "unknown",
+      "age_seconds": null,
+      "contradiction": false,
+      "reason": "structured home ledger is missing, unreadable, or invalid and no valid cached copy is available"
+    }
+  ],
+  "secondmate_reconcile": [],
+  "decisions_open": [],
+  "landed": [],
+  "gates": [],
+  "reports": [],
+  "recorded_prs": [],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "secondmate home(s) with unreadable structured state: 1",
+      "reveal": "inspect the listed secondmate home ledgers"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}

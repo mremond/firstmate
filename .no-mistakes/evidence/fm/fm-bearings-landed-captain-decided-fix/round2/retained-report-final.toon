@@ -1,0 +1,31 @@
+schema: fm-bearings.v1
+home: live/main
+generated: "2026-09-09T11:21:51Z"
+prs: "not_requested (run: /bearings include PRs)"
+in_flight: []
+secondmates[1]{id,state,doing,provenance,freshness,age_seconds,contradiction,reason}:
+  mate,no_active_work,No active child work,structured-home,fresh,185,false,"-"
+secondmate_reconcile[1]{id,spawn_gen,host,kind,ids}:
+  mate,null,null,null,"[]"
+decisions_open: []
+landed[7]{id,what,artifact,owner}:
+  verified-pr,Track the merged AFK posture delivery,"https://github.com/kunchenguid/firstmate/pull/4048",(main)
+  scout-unicode,SCOUTé inspect local delivery,data/scout-unicode/report.md,(main)
+  scout-colon,"SCOUT: inspect local delivery",data/scout-colon/report.md,(main)
+  retained-report,Inspect the recorded delivery,data/retained-report/report.md,(main)
+  mate-pr,Track a verified delivery in the delegated home,"https://github.com/kunchenguid/firstmate/pull/4048",mate
+  local-delivery,Deliver the local artifact,local main,(main)
+  legacy-empty,Legacy completion,"-",(main)
+gates: []
+reports[3]{id,path}:
+  retained-report,/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/retained-report/report.md
+  scout-colon,/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-colon/report.md
+  scout-unicode,/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-unicode/report.md
+recorded_prs: []
+omitted[6]{surface,reveal}:
+  backlog item bodies,"--fields bodies"
+  task paths,"--fields paths"
+  watch/steer actions,"--fields actions"
+  healthy endpoint detail,"--fields endpoints"
+  full scout-report inventory,"--all-reports"
+  live PR discovery + checks,"--include-prs"

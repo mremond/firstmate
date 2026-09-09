@@ -1,0 +1,62 @@
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/live-checks.py", line 77, in <module>
+    run([ROOT/'bin/fm-teardown.sh','local-delivery'],main,out='local-cleanup.txt')
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/live-checks.py", line 22, in run
+    if expect is not None: assert p.returncode==expect, (args,p.returncode,p.stdout,p.stderr)
+                                  ^^^^^^^^^^^^^^^^^^^^
+AssertionError: (['/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-teardown.sh', 'local-delivery'], 1, '', "REFUSED: tmux endpoint 'nm-validation-live:local-delivery' is malformed or does not belong to task local-delivery; preserving task state.\n")
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/live-resume.py", line 95, in <module>
+    assert any(r['id']=='mate-pr' and r['owner']=='mate' and r['artifact']==pr for r in parent['landed']),parent
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'schema': 'fm-bearings.v1', 'home': 'live/main', 'generated': '2026-09-09T10:50:41Z', 'prs': 'not_requested (run: /bearings include PRs)', 'in_flight': [], 'secondmates': [{'id': 'mate', 'state': 'unknown', 'doing': 'invalid home: not a seeded secondmate home', 'provenance': 'unknown', 'freshness': 'unknown', 'age_seconds': None, 'contradiction': False, 'reason': 'invalid home: not a seeded secondmate home'}], 'secondmate_reconcile': [], 'decisions_open': [], 'landed': [{'id': 'verified-pr', 'what': 'Track the merged AFK posture delivery', 'artifact': 'https://github.com/kunchenguid/firstmate/pull/4048', 'owner': '(main)'}, {'id': 'scout-unicode', 'what': 'SCOUTé inspect local delivery', 'artifact': 'data/scout-unicode/report.md', 'owner': '(main)'}, {'id': 'scout-colon', 'what': 'SCOUT: inspect local delivery', 'artifact': 'data/scout-colon/report.md', 'owner': '(main)'}, {'id': 'local-delivery', 'what': 'Deliver the local artifact', 'artifact': 'local main', 'owner': '(main)'}, {'id': 'legacy-empty', 'what': 'Legacy completion', 'artifact': '-', 'owner': '(main)'}], 'gates': [], 'reports': [{'id': 'scout-colon', 'path': '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-local/live/main/data/scout-colon/report.md'}, {'id': 'scout-unicode', 'path': '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-local/live/main/data/scout-unicode/report.md'}], 'recorded_prs': [], 'omitted': [{'surface': 'backlog item bodies', 'reveal': '--fields bodies'}, {'surface': 'task paths', 'reveal': '--fields paths'}, {'surface': 'watch/steer actions', 'reveal': '--fields actions'}, {'surface': 'healthy endpoint detail', 'reveal': '--fields endpoints'}, {'surface': 'full scout-report inventory', 'reveal': '--all-reports'}, {'surface': 'secondmate home(s) with unreadable structured state: 1', 'reveal': 'inspect the listed secondmate home ledgers'}, {'surface': 'live PR discovery + checks', 'reveal': '--include-prs'}]}
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M22J3ZVNCRVXG5Q4HD5QXABZ/live-resume-config.py", line 73, in <module>
+    assert p.returncode!=0 and 'cannot be read' in p.stderr+p.stdout
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+[
+  {
+    "name": "Recording a verified merged PR after releasing a past captain hold includes it in Recently Landed; approval alone does not",
+    "result": "pass",
+    "live": true,
+    "evidence": "verified-merged-pr.txt; before-delivery.json; main-deliveries.toon",
+    "reason": ""
+  },
+  {
+    "name": "Fast-forwarding a local delivery and finishing interrupted cleanup records local main and displays the delivery",
+    "result": "pass",
+    "live": true,
+    "evidence": "local-merge.txt; local-cleanup.txt; main-backlog.md; main-deliveries.toon",
+    "reason": ""
+  },
+  {
+    "name": "Answering questions that mention a PR or local main does not create a delivery",
+    "result": "pass",
+    "live": true,
+    "evidence": "main-backlog.md; main-deliveries.json",
+    "reason": ""
+  },
+  {
+    "name": "Completed SCOUT: and SCOUT\u00e9 reports remain visible; longer words and reportless explicit scouts stay excluded while kindless legacy completions remain",
+    "result": "pass",
+    "live": true,
+    "evidence": "main-backlog.md; main-deliveries.json",
+    "reason": ""
+  },
+  {
+    "name": "Reading a delegated home includes its released merged delivery and excludes its answered captain question",
+    "result": "pass",
+    "live": true,
+    "evidence": "mate-home-summary.json; fleet-deliveries.toon",
+    "reason": ""
+  },
+  {
+    "name": "Holding a task with unreadable or dangling backend configuration refuses without changing either backlog; absent and readable configurations still address the relocated backlog",
+    "result": "pass",
+    "live": true,
+    "evidence": "live-cli-transcript.txt; config-*-state.json",
+    "reason": ""
+  }
+]

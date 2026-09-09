@@ -1,0 +1,43 @@
+{
+  "schema": "fm-secondmate-home-summary.v1",
+  "hold_classifier_schema": "fm-captain-hold-buckets.v1",
+  "generated": "2026-09-09T11:18:46Z",
+  "generated_epoch": 1788952726,
+  "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/mate",
+  "valid": true,
+  "reason": null,
+  "invalidity": {
+    "kind": null,
+    "ids": []
+  },
+  "state": "no_active_work",
+  "active_children": [],
+  "decisions_open": [],
+  "holds": [],
+  "queued": [],
+  "landed": [
+    {
+      "id": "mate-pr",
+      "title": "Track a verified delivery in the delegated home",
+      "kind": "ship",
+      "hold_kind": null,
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4048",
+      "report_path": null,
+      "local_note": null,
+      "completion": {
+        "verb": "merged",
+        "date": "2026-09-09"
+      }
+    }
+  ],
+  "endpoints": [],
+  "counts": {
+    "active_children": 0,
+    "decisions_open": 0,
+    "holds": 0,
+    "queued": 0,
+    "landed": 1,
+    "endpoints": 0
+  },
+  "omitted": []
+}

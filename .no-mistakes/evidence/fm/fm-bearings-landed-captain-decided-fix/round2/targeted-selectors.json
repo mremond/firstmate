@@ -1,0 +1,16 @@
+{
+  "fm-bearings-snapshot": [
+    "test_remote_ledgers_share_one_concurrent_budget_and_fall_back_to_cache",
+    "test_landed_preserves_kindless_v1_summary_reports"
+  ],
+  "fm-backlog-atomicity": [
+    "test_backend_resolution_preserves_config_errors",
+    "test_backend_resolution_preserves_precedence_and_defaults",
+    "test_backlog_callers_refuse_unreadable_backend_config",
+    "test_captain_hold_preserves_relocated_backlog_on_backend_error"
+  ],
+  "fm-captain-hold-lifecycle": [
+    "test_pr_merge_entrypoint_refuses_a_captain_held_task",
+    "test_released_merge_passes_the_entrypoint_and_lands"
+  ]
+}

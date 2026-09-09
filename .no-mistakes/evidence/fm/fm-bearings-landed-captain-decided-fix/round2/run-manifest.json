@@ -1,0 +1,27 @@
+{
+  "target": "49d395d908c7e506f373743127045e2907282deb",
+  "tree": "b3076f1a629fbe3b7a2219cb980a56198f9c5c26",
+  "base": "40c50ea8843c5b6a5351db8352675537252b653e",
+  "live_tools": "Real Firstmate scripts, tasks-axi, Git; no command stubs in live drivers. GitHub query is read-only.",
+  "worktree_lab": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2",
+  "scope_exclusions": [
+    "queued merge after captain rejection",
+    "deferred local-note completion and resolution-provenance cases",
+    "inaccessible user-config ancestor R3"
+  ],
+  "prior_round": "Collector failed with the prior three-second test budget; all prior results are historical until rerun here.",
+  "harness_note": "Standalone CLI checks use disposable homes without a supervising worker. Expected watcher-down warnings do not prevent guarded commands. The first lock-wait observer could not observe a short-lived sleep child; the revised observer accepted macOS parenthesized process names and a longer observation bound, then both entrypoints passed.",
+  "selection_setup_issue": "The first abbreviated Bearings runner called collector then legacy-v1 in one process, skipping the normal intervening missing-ledger test that clears the slow-ledger-read marker. Collector passed, but inherited marker made legacy collection intentionally time out. Rerun legacy-v1 in its own fresh fixture root; production and repository test sources remain untouched.",
+  "tasks_axi_version": "0.2.5",
+  "live_scenarios_passed": 11,
+  "live_external_gaps": [
+    "Remote worker collection and cache path",
+    "Mutating a disposable GitHub PR through the merge entrypoint"
+  ],
+  "evidence_surface": "CLI-only change: actual TOON/JSON reports, CLI transcript, persisted-state checks and runtime refusals; no graphical UI was modified.",
+  "source_changes": false,
+  "transient_worktree_artifacts_removed": true,
+  "final_tree": "b3076f1a629fbe3b7a2219cb980a56198f9c5c26",
+  "targeted_results": "Collector passed; legacy-v1 passed in a fresh fixture process; four backend selectors and two PR-guard selectors passed.",
+  "verdict": "go"
+}

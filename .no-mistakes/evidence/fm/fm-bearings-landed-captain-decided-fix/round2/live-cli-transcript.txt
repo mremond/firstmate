@@ -1,0 +1,1981 @@
+Real Firstmate CLI checks; isolated data, real tasks-axi 0.2.5 and Git; no external-command stubs.
+$ git init -q -b main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/code-root
+exit=0
+
+$ gh-axi pr view 4048 --repo kunchenguid/firstmate
+exit=0
+pull_request:
+  number: 4048
+  title: "feat: add durable AFK posture lifecycle"
+  state: merged
+  author: kunchenguid
+  draft: no
+  merged: "2026-09-09T07:09:57Z"
+  checks: "15 passed, 0 failed, 15 total"
+  body: "## Intent\n\nThe captain approved the AFK away-mode redesign plan on 2026-09-08 and directed firstmate to implement it, one PR per phase, phases 1 to 4 in order, phase 5 deferred. This is PHASE 1: the away-posture record and its lifecycle.\n\nThe settled design the captain approved: away mode is a POSTURE of the one supervision session, not a separate architecture. Being away changes only two things - how the captain is informed, and what happens at a captain-owned decision point (hold, pre-answered\n... (truncated, 37080 chars total - use --full to see complete body)"
+  comment_count: 1 — use --comments to see full comments
+  review_count: 1 — use --reviews to see full reviews
+
+$ tasks-axi add verified-pr 'Track the merged AFK posture delivery' --kind ship --start
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added verified-pr (ship) -> In flight
+task:
+  id: verified-pr
+  title: Track the merged AFK posture delivery
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done verified-pr --pr <url>` when it ships
+  - Run `tasks-axi block verified-pr --by <other>` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold verified-pr --reason 'Review this isolated validation task'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+verified-pr
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh answer verified-pr --decision-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/verified-pr-answer.txt --release
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+released: verified-pr
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-bearings-snapshot.sh --json --all-landed
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+{
+  "schema": "fm-bearings.v1",
+  "home": "live/main",
+  "generated": "2026-09-09T11:15:11Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [],
+  "secondmates": [],
+  "secondmate_reconcile": [],
+  "decisions_open": [],
+  "landed": [],
+  "gates": [
+    {
+      "id": "(main-inventory)",
+      "title": "in-flight backlog item has no child metadata",
+      "blocked_by": "-",
+      "reason": "main inventory",
+      "owner": "(main)"
+    }
+  ],
+  "reports": [],
+  "recorded_prs": [],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "main in-flight backlog item(s) have no child metadata: 1",
+      "reveal": "inspect main data/backlog.md In flight vs state/*.meta"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-bearings-snapshot.sh --all-landed
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+schema: fm-bearings.v1
+home: live/main
+generated: "2026-09-09T11:15:12Z"
+prs: "not_requested (run: /bearings include PRs)"
+in_flight: []
+secondmates: []
+secondmate_reconcile: []
+decisions_open: []
+landed: []
+gates[1]{id,title,blocked_by,reason,owner}:
+  (main-inventory),in-flight backlog item has no child metadata,"-",main inventory,(main)
+reports: []
+recorded_prs: []
+omitted[7]{surface,reveal}:
+  backlog item bodies,"--fields bodies"
+  task paths,"--fields paths"
+  watch/steer actions,"--fields actions"
+  healthy endpoint detail,"--fields endpoints"
+  full scout-report inventory,"--all-reports"
+  "main in-flight backlog item(s) have no child metadata: 1",inspect main data/backlog.md In flight vs state/*.meta
+  live PR discovery + checks,"--include-prs"
+
+$ tasks-axi done verified-pr --pr https://github.com/kunchenguid/firstmate/pull/4048
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: done verified-pr -> Done (pr https://github.com/kunchenguid/firstmate/pull/4048)
+help[1]:
+  - Run `tasks-axi ready` to dispatch work unblocked by this
+
+$ git init -q -b main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-project
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-project add README.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-project commit -qm Baseline
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-project worktree add -q -b fm/local-delivery /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-work
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-work add delivery.txt
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-work commit -qm 'Deliver local artifact'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+
+$ tasks-axi add local-delivery 'Deliver the local artifact' --kind ship --start
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added local-delivery (ship) -> In flight
+task:
+  id: local-delivery
+  title: Deliver the local artifact
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done local-delivery --pr <url>` when it ships
+  - Run `tasks-axi block local-delivery --by <other>` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-merge-local.sh local-delivery
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+merged fm/local-delivery into local main (967e89f -> 35ab895) in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-project
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-project worktree remove /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-work
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-teardown.sh local-delivery
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+teardown local-delivery complete (window firstmate:fm-local-delivery, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-work)
+Backlog: local-delivery is closed in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/backlog.md. Run tasks-axi ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+$ tasks-axi show local-delivery --full
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+task:
+  id: local-delivery
+  title: Deliver the local artifact
+  state: done
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: "-"
+  closed: 2026-09-09
+  deps: none
+  links: none
+  body: local main
+
+$ tasks-axi add scout-colon 'SCOUT: inspect local delivery' --start
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added scout-colon -> In flight
+task:
+  id: scout-colon
+  title: "SCOUT: inspect local delivery"
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done scout-colon --pr <url>` when it ships
+  - Run `tasks-axi block scout-colon --by <other>` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold scout-colon --reason 'Review this isolated validation task'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+scout-colon
+
+$ tasks-axi done scout-colon --report data/scout-colon/report.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: done scout-colon -> Done (report data/scout-colon/report.md)
+help[1]:
+  - Run `tasks-axi ready` to dispatch work unblocked by this
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh answer scout-colon --decision-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/scout-colon-answer.txt
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+repaired: scout-colon
+
+$ tasks-axi add scout-unicode 'SCOUTé inspect local delivery' --start
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added scout-unicode -> In flight
+task:
+  id: scout-unicode
+  title: SCOUTé inspect local delivery
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done scout-unicode --pr <url>` when it ships
+  - Run `tasks-axi block scout-unicode --by <other>` to record a dependency
+
+$ tasks-axi done scout-unicode --report data/scout-unicode/report.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: done scout-unicode -> Done (report data/scout-unicode/report.md)
+help[1]:
+  - Run `tasks-axi ready` to dispatch work unblocked by this
+
+$ tasks-axi add answer-pr 'Decide about https://github.com/kunchenguid/firstmate/pull/4048' --kind ship
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added answer-pr (ship) -> Queued
+task:
+  id: answer-pr
+  title: "Decide about https://github.com/kunchenguid/firstmate/pull/4048"
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: "pr:https://github.com/kunchenguid/firstmate/pull/4048"
+  body: ""
+help[2]:
+  - Run `tasks-axi start answer-pr` to move it to in flight
+  - Run `tasks-axi block answer-pr --by <other>` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold answer-pr --reason 'Review this isolated validation task'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+answer-pr
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh answer answer-pr --decision-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/answer-pr-answer.txt
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+answered: answer-pr
+
+$ tasks-axi add answer-local 'Decide about local main' --kind ship
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added answer-local (ship) -> Queued
+task:
+  id: answer-local
+  title: Decide about local main
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start answer-local` to move it to in flight
+  - Run `tasks-axi block answer-local --by <other>` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold answer-local --reason 'Review this isolated validation task'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+answer-local
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh answer answer-local --decision-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/answer-local-answer.txt
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+answered: answer-local
+
+$ tasks-axi add scout-empty 'Inspect without producing a report' --kind scout
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added scout-empty (scout) -> Queued
+task:
+  id: scout-empty
+  title: Inspect without producing a report
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start scout-empty` to move it to in flight
+  - Run `tasks-axi block scout-empty --by <other>` to record a dependency
+
+$ tasks-axi done scout-empty
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: done scout-empty -> Done
+help[1]:
+  - Run `tasks-axi ready` to dispatch work unblocked by this
+
+$ tasks-axi add legacy-empty 'Legacy completion'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added legacy-empty -> Queued
+task:
+  id: legacy-empty
+  title: Legacy completion
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start legacy-empty` to move it to in flight
+  - Run `tasks-axi block legacy-empty --by <other>` to record a dependency
+
+$ tasks-axi done legacy-empty
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: done legacy-empty -> Done
+help[1]:
+  - Run `tasks-axi ready` to dispatch work unblocked by this
+
+$ tasks-axi add longer-scout 'SCOUTING investigation'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added longer-scout -> Queued
+task:
+  id: longer-scout
+  title: SCOUTING investigation
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start longer-scout` to move it to in flight
+  - Run `tasks-axi block longer-scout --by <other>` to record a dependency
+
+$ tasks-axi done longer-scout --report data/longer-scout/report.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: done longer-scout -> Done (report data/longer-scout/report.md)
+help[1]:
+  - Run `tasks-axi ready` to dispatch work unblocked by this
+
+$ tasks-axi add underscore-scout SCOUT_investigation
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added underscore-scout -> Queued
+task:
+  id: underscore-scout
+  title: SCOUT_investigation
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start underscore-scout` to move it to in flight
+  - Run `tasks-axi block underscore-scout --by <other>` to record a dependency
+
+$ tasks-axi done underscore-scout --report data/underscore-scout/report.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: done underscore-scout -> Done (report data/underscore-scout/report.md)
+help[1]:
+  - Run `tasks-axi ready` to dispatch work unblocked by this
+
+$ tasks-axi add digit-scout 'SCOUT7 investigation'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added digit-scout -> Queued
+task:
+  id: digit-scout
+  title: SCOUT7 investigation
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start digit-scout` to move it to in flight
+  - Run `tasks-axi block digit-scout --by <other>` to record a dependency
+
+$ tasks-axi done digit-scout --report data/digit-scout/report.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: done digit-scout -> Done (report data/digit-scout/report.md)
+help[1]:
+  - Run `tasks-axi ready` to dispatch work unblocked by this
+
+$ tasks-axi add lower-scout 'scout: investigation'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added lower-scout -> Queued
+task:
+  id: lower-scout
+  title: "scout: investigation"
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start lower-scout` to move it to in flight
+  - Run `tasks-axi block lower-scout --by <other>` to record a dependency
+
+$ tasks-axi done lower-scout --report data/lower-scout/report.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: done lower-scout -> Done (report data/lower-scout/report.md)
+help[1]:
+  - Run `tasks-axi ready` to dispatch work unblocked by this
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-bearings-snapshot.sh --json --all-landed
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+{
+  "schema": "fm-bearings.v1",
+  "home": "live/main",
+  "generated": "2026-09-09T11:17:43Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [],
+  "secondmates": [],
+  "secondmate_reconcile": [],
+  "decisions_open": [],
+  "landed": [
+    {
+      "id": "verified-pr",
+      "what": "Track the merged AFK posture delivery",
+      "artifact": "https://github.com/kunchenguid/firstmate/pull/4048",
+      "owner": "(main)"
+    },
+    {
+      "id": "scout-unicode",
+      "what": "SCOUTé inspect local delivery",
+      "artifact": "data/scout-unicode/report.md",
+      "owner": "(main)"
+    },
+    {
+      "id": "scout-colon",
+      "what": "SCOUT: inspect local delivery",
+      "artifact": "data/scout-colon/report.md",
+      "owner": "(main)"
+    },
+    {
+      "id": "local-delivery",
+      "what": "Deliver the local artifact",
+      "artifact": "local main",
+      "owner": "(main)"
+    },
+    {
+      "id": "legacy-empty",
+      "what": "Legacy completion",
+      "artifact": "-",
+      "owner": "(main)"
+    }
+  ],
+  "gates": [],
+  "reports": [
+    {
+      "id": "scout-colon",
+      "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-colon/report.md"
+    },
+    {
+      "id": "scout-unicode",
+      "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-unicode/report.md"
+    }
+  ],
+  "recorded_prs": [],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-bearings-snapshot.sh --all-landed
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+schema: fm-bearings.v1
+home: live/main
+generated: "2026-09-09T11:17:45Z"
+prs: "not_requested (run: /bearings include PRs)"
+in_flight: []
+secondmates: []
+secondmate_reconcile: []
+decisions_open: []
+landed[5]{id,what,artifact,owner}:
+  verified-pr,Track the merged AFK posture delivery,"https://github.com/kunchenguid/firstmate/pull/4048",(main)
+  scout-unicode,SCOUTé inspect local delivery,data/scout-unicode/report.md,(main)
+  scout-colon,"SCOUT: inspect local delivery",data/scout-colon/report.md,(main)
+  local-delivery,Deliver the local artifact,local main,(main)
+  legacy-empty,Legacy completion,"-",(main)
+gates: []
+reports[2]{id,path}:
+  scout-colon,/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-colon/report.md
+  scout-unicode,/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-unicode/report.md
+recorded_prs: []
+omitted[6]{surface,reveal}:
+  backlog item bodies,"--fields bodies"
+  task paths,"--fields paths"
+  watch/steer actions,"--fields actions"
+  healthy endpoint detail,"--fields endpoints"
+  full scout-report inventory,"--all-reports"
+  live PR discovery + checks,"--include-prs"
+
+ASSERTED: Recording a verified merged PR after releasing a past captain hold includes it in Recently Landed; approval alone does not
+ASSERTED: Fast-forwarding a local delivery and finishing interrupted cleanup records local main and displays the delivery
+ASSERTED: Answering questions that mention a PR or local main does not create a delivery
+ASSERTED: Completed SCOUT: and SCOUTé reports remain visible; longer words and reportless explicit scouts stay excluded while kindless legacy completions remain
+$ tasks-axi add mate-pr 'Track a verified delivery in the delegated home' --kind ship --start
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/mate
+exit=0
+ok: added mate-pr (ship) -> In flight
+task:
+  id: mate-pr
+  title: Track a verified delivery in the delegated home
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done mate-pr --pr <url>` when it ships
+  - Run `tasks-axi block mate-pr --by <other>` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold mate-pr --reason 'Review this isolated validation task'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/mate
+exit=0
+mate-pr
+actionable: task mate-pr is held for the captain in this home but that did not reach the parent channel (rc=3)
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh answer mate-pr --decision-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/mate/mate-pr-answer.txt --release
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/mate
+exit=0
+released: mate-pr
+actionable: task mate-pr is held for the captain in this home but that did not reach the parent channel (rc=3)
+
+$ tasks-axi done mate-pr --pr https://github.com/kunchenguid/firstmate/pull/4048
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/mate
+exit=0
+ok: done mate-pr -> Done (pr https://github.com/kunchenguid/firstmate/pull/4048)
+help[1]:
+  - Run `tasks-axi ready` to dispatch work unblocked by this
+
+$ tasks-axi add mate-question 'Choose local main' --kind ship
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/mate
+exit=0
+ok: added mate-question (ship) -> Queued
+task:
+  id: mate-question
+  title: Choose local main
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start mate-question` to move it to in flight
+  - Run `tasks-axi block mate-question --by <other>` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold mate-question --reason 'Review this isolated validation task'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/mate
+exit=0
+mate-question
+actionable: task mate-question is held for the captain in this home but that did not reach the parent channel (rc=3)
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh answer mate-question --decision-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/mate/mate-question-answer.txt
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/mate
+exit=0
+answered: mate-question
+actionable: task mate-question is held for the captain in this home but that did not reach the parent channel (rc=3)
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-home-summary-refresh.sh
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/mate
+exit=0
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-bearings-snapshot.sh --json --all-landed
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+{
+  "schema": "fm-bearings.v1",
+  "home": "live/main",
+  "generated": "2026-09-09T11:18:47Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [],
+  "secondmates": [
+    {
+      "id": "mate",
+      "state": "no_active_work",
+      "doing": "No active child work",
+      "provenance": "structured-home",
+      "freshness": "fresh",
+      "age_seconds": 1,
+      "contradiction": false,
+      "reason": "-"
+    }
+  ],
+  "secondmate_reconcile": [
+    {
+      "id": "mate",
+      "spawn_gen": null,
+      "host": null,
+      "kind": null,
+      "ids": []
+    }
+  ],
+  "decisions_open": [],
+  "landed": [
+    {
+      "id": "verified-pr",
+      "what": "Track the merged AFK posture delivery",
+      "artifact": "https://github.com/kunchenguid/firstmate/pull/4048",
+      "owner": "(main)"
+    },
+    {
+      "id": "scout-unicode",
+      "what": "SCOUTé inspect local delivery",
+      "artifact": "data/scout-unicode/report.md",
+      "owner": "(main)"
+    },
+    {
+      "id": "scout-colon",
+      "what": "SCOUT: inspect local delivery",
+      "artifact": "data/scout-colon/report.md",
+      "owner": "(main)"
+    },
+    {
+      "id": "mate-pr",
+      "what": "Track a verified delivery in the delegated home",
+      "artifact": "https://github.com/kunchenguid/firstmate/pull/4048",
+      "owner": "mate"
+    },
+    {
+      "id": "local-delivery",
+      "what": "Deliver the local artifact",
+      "artifact": "local main",
+      "owner": "(main)"
+    },
+    {
+      "id": "legacy-empty",
+      "what": "Legacy completion",
+      "artifact": "-",
+      "owner": "(main)"
+    }
+  ],
+  "gates": [],
+  "reports": [
+    {
+      "id": "scout-colon",
+      "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-colon/report.md"
+    },
+    {
+      "id": "scout-unicode",
+      "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-unicode/report.md"
+    }
+  ],
+  "recorded_prs": [],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-bearings-snapshot.sh --all-landed
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+schema: fm-bearings.v1
+home: live/main
+generated: "2026-09-09T11:18:50Z"
+prs: "not_requested (run: /bearings include PRs)"
+in_flight: []
+secondmates[1]{id,state,doing,provenance,freshness,age_seconds,contradiction,reason}:
+  mate,no_active_work,No active child work,structured-home,fresh,4,false,"-"
+secondmate_reconcile[1]{id,spawn_gen,host,kind,ids}:
+  mate,null,null,null,"[]"
+decisions_open: []
+landed[6]{id,what,artifact,owner}:
+  verified-pr,Track the merged AFK posture delivery,"https://github.com/kunchenguid/firstmate/pull/4048",(main)
+  scout-unicode,SCOUTé inspect local delivery,data/scout-unicode/report.md,(main)
+  scout-colon,"SCOUT: inspect local delivery",data/scout-colon/report.md,(main)
+  mate-pr,Track a verified delivery in the delegated home,"https://github.com/kunchenguid/firstmate/pull/4048",mate
+  local-delivery,Deliver the local artifact,local main,(main)
+  legacy-empty,Legacy completion,"-",(main)
+gates: []
+reports[2]{id,path}:
+  scout-colon,/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-colon/report.md
+  scout-unicode,/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-unicode/report.md
+recorded_prs: []
+omitted[6]{surface,reveal}:
+  backlog item bodies,"--fields bodies"
+  task paths,"--fields paths"
+  watch/steer actions,"--fields actions"
+  healthy endpoint detail,"--fields endpoints"
+  full scout-report inventory,"--all-reports"
+  live PR discovery + checks,"--include-prs"
+
+ASSERTED: Reading a delegated home includes its released merged delivery and excludes its answered captain question
+$ tasks-axi add duplicate-id 'Task in records' --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/records/backlog.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling
+exit=0
+ok: added duplicate-id -> Queued
+task:
+  id: duplicate-id
+  title: Task in records
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start duplicate-id --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/records/backlog.md` to move it to in flight
+  - Run `tasks-axi block duplicate-id --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/records/backlog.md` to record a dependency
+
+$ tasks-axi add duplicate-id 'Task in data' --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/data/backlog.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling
+exit=0
+ok: added duplicate-id -> Queued
+task:
+  id: duplicate-id
+  title: Task in data
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start duplicate-id --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block duplicate-id --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/data/backlog.md` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold duplicate-id --title 'Task in records' --reason 'Choose safely'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling
+exit=1
+tasks-axi backend configuration cannot be read at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/.tasks.toml
+fm-captain-hold: could not create task duplicate-id
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh open duplicate-id --distinguish-absent
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling
+exit=2
+tasks-axi backend configuration cannot be read at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/.tasks.toml
+
+$ tasks-axi add duplicate-id 'Task in records' --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-project/records/backlog.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-project
+exit=0
+ok: added duplicate-id -> Queued
+task:
+  id: duplicate-id
+  title: Task in records
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start duplicate-id --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-project/records/backlog.md` to move it to in flight
+  - Run `tasks-axi block duplicate-id --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-project/records/backlog.md` to record a dependency
+
+$ tasks-axi add duplicate-id 'Task in data' --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-project/data/backlog.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-project
+exit=0
+ok: added duplicate-id -> Queued
+task:
+  id: duplicate-id
+  title: Task in data
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start duplicate-id --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-project/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block duplicate-id --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-project/data/backlog.md` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold duplicate-id --title 'Task in records' --reason 'Choose safely'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-project
+exit=1
+tasks-axi backend configuration cannot be read at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-project/.tasks.toml
+fm-captain-hold: could not create task duplicate-id
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh open duplicate-id --distinguish-absent
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-project
+exit=2
+tasks-axi backend configuration cannot be read at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-project/.tasks.toml
+
+$ tasks-axi add duplicate-id 'Task in records' --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-user/records/backlog.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-user
+exit=0
+ok: added duplicate-id -> Queued
+task:
+  id: duplicate-id
+  title: Task in records
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start duplicate-id --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-user/records/backlog.md` to move it to in flight
+  - Run `tasks-axi block duplicate-id --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-user/records/backlog.md` to record a dependency
+
+$ tasks-axi add duplicate-id 'Task in data' --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-user/data/backlog.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-user
+exit=0
+ok: added duplicate-id -> Queued
+task:
+  id: duplicate-id
+  title: Task in data
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start duplicate-id --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-user/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block duplicate-id --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-user/data/backlog.md` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold duplicate-id --title 'Task in records' --reason 'Choose safely'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-user
+exit=1
+tasks-axi backend configuration cannot be read at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/user-home/.tasks-axi/config.toml
+fm-captain-hold: could not create task duplicate-id
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh open duplicate-id --distinguish-absent
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-unreadable-user
+exit=2
+tasks-axi backend configuration cannot be read at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/user-home/.tasks-axi/config.toml
+
+$ tasks-axi add duplicate-id 'Task in records' --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-absent/records/backlog.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-absent
+exit=0
+ok: added duplicate-id -> Queued
+task:
+  id: duplicate-id
+  title: Task in records
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start duplicate-id --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-absent/records/backlog.md` to move it to in flight
+  - Run `tasks-axi block duplicate-id --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-absent/records/backlog.md` to record a dependency
+
+$ tasks-axi add duplicate-id 'Task in data' --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-absent/data/backlog.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-absent
+exit=0
+ok: added duplicate-id -> Queued
+task:
+  id: duplicate-id
+  title: Task in data
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start duplicate-id --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-absent/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block duplicate-id --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-absent/data/backlog.md` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold duplicate-id --title 'Task in records' --reason 'Choose safely'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-absent
+exit=0
+duplicate-id
+
+$ tasks-axi add duplicate-id 'Task in records' --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-readable/records/backlog.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-readable
+exit=0
+ok: added duplicate-id -> Queued
+task:
+  id: duplicate-id
+  title: Task in records
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start duplicate-id --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-readable/records/backlog.md` to move it to in flight
+  - Run `tasks-axi block duplicate-id --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-readable/records/backlog.md` to record a dependency
+
+$ tasks-axi add duplicate-id 'Task in data' --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-readable/data/backlog.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-readable
+exit=0
+ok: added duplicate-id -> Queued
+task:
+  id: duplicate-id
+  title: Task in data
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start duplicate-id --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-readable/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block duplicate-id --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-readable/data/backlog.md` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold duplicate-id --title 'Task in records' --reason 'Choose safely'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-readable
+exit=0
+duplicate-id
+
+ASSERTED: Holding a task with unreadable or dangling backend configuration refuses without changing either backlog; absent and readable configurations still address the relocated backlog
+$ tasks-axi add retained-report 'Inspect the recorded delivery' --kind scout --start
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added retained-report (scout) -> In flight
+task:
+  id: retained-report
+  title: Inspect the recorded delivery
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done retained-report --pr <url>` when it ships
+  - Run `tasks-axi block retained-report --by <other>` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold retained-report --reason 'Review this isolated validation task'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+retained-report
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh complete retained-report retained-report
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+complete: retained-report captain-call inventory reviewed (retained-report)
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-teardown.sh retained-report
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+teardown retained-report complete (window firstmate:fm-retained-report, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/retired-scout-copy)
+Backlog: retained-report stays open in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/backlog.md, still held for the captain with its deliverable recorded. Relay the question and close it only with bin/fm-captain-hold.sh answer.
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+$ tasks-axi show retained-report --full
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+task:
+  id: retained-report
+  title: Inspect the recorded delivery data/retained-report/report.md
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: Review this isolated validation task
+  hold_kind: captain
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: "report:data/retained-report/report.md"
+  body: "Captain hold set: 2026-09-09T11:20:04Z\n\nDeliverable of the finished work: report data/retained-report/report.md"
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh answer retained-report --decision-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/retained-report-answer.txt
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+answered: retained-report
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-bearings-snapshot.sh --json --all-landed
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+{
+  "schema": "fm-bearings.v1",
+  "home": "live/main",
+  "generated": "2026-09-09T11:21:45Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [],
+  "secondmates": [
+    {
+      "id": "mate",
+      "state": "no_active_work",
+      "doing": "No active child work",
+      "provenance": "structured-home",
+      "freshness": "fresh",
+      "age_seconds": 179,
+      "contradiction": false,
+      "reason": "-"
+    }
+  ],
+  "secondmate_reconcile": [
+    {
+      "id": "mate",
+      "spawn_gen": null,
+      "host": null,
+      "kind": null,
+      "ids": []
+    }
+  ],
+  "decisions_open": [],
+  "landed": [
+    {
+      "id": "verified-pr",
+      "what": "Track the merged AFK posture delivery",
+      "artifact": "https://github.com/kunchenguid/firstmate/pull/4048",
+      "owner": "(main)"
+    },
+    {
+      "id": "scout-unicode",
+      "what": "SCOUTé inspect local delivery",
+      "artifact": "data/scout-unicode/report.md",
+      "owner": "(main)"
+    },
+    {
+      "id": "scout-colon",
+      "what": "SCOUT: inspect local delivery",
+      "artifact": "data/scout-colon/report.md",
+      "owner": "(main)"
+    },
+    {
+      "id": "retained-report",
+      "what": "Inspect the recorded delivery",
+      "artifact": "data/retained-report/report.md",
+      "owner": "(main)"
+    },
+    {
+      "id": "mate-pr",
+      "what": "Track a verified delivery in the delegated home",
+      "artifact": "https://github.com/kunchenguid/firstmate/pull/4048",
+      "owner": "mate"
+    },
+    {
+      "id": "local-delivery",
+      "what": "Deliver the local artifact",
+      "artifact": "local main",
+      "owner": "(main)"
+    },
+    {
+      "id": "legacy-empty",
+      "what": "Legacy completion",
+      "artifact": "-",
+      "owner": "(main)"
+    }
+  ],
+  "gates": [],
+  "reports": [
+    {
+      "id": "retained-report",
+      "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/retained-report/report.md"
+    },
+    {
+      "id": "scout-colon",
+      "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-colon/report.md"
+    },
+    {
+      "id": "scout-unicode",
+      "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-unicode/report.md"
+    }
+  ],
+  "recorded_prs": [],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-bearings-snapshot.sh --all-landed
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+schema: fm-bearings.v1
+home: live/main
+generated: "2026-09-09T11:21:51Z"
+prs: "not_requested (run: /bearings include PRs)"
+in_flight: []
+secondmates[1]{id,state,doing,provenance,freshness,age_seconds,contradiction,reason}:
+  mate,no_active_work,No active child work,structured-home,fresh,185,false,"-"
+secondmate_reconcile[1]{id,spawn_gen,host,kind,ids}:
+  mate,null,null,null,"[]"
+decisions_open: []
+landed[7]{id,what,artifact,owner}:
+  verified-pr,Track the merged AFK posture delivery,"https://github.com/kunchenguid/firstmate/pull/4048",(main)
+  scout-unicode,SCOUTé inspect local delivery,data/scout-unicode/report.md,(main)
+  scout-colon,"SCOUT: inspect local delivery",data/scout-colon/report.md,(main)
+  retained-report,Inspect the recorded delivery,data/retained-report/report.md,(main)
+  mate-pr,Track a verified delivery in the delegated home,"https://github.com/kunchenguid/firstmate/pull/4048",mate
+  local-delivery,Deliver the local artifact,local main,(main)
+  legacy-empty,Legacy completion,"-",(main)
+gates: []
+reports[3]{id,path}:
+  retained-report,/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/retained-report/report.md
+  scout-colon,/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-colon/report.md
+  scout-unicode,/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-unicode/report.md
+recorded_prs: []
+omitted[6]{surface,reveal}:
+  backlog item bodies,"--fields bodies"
+  task paths,"--fields paths"
+  watch/steer actions,"--fields actions"
+  healthy endpoint detail,"--fields endpoints"
+  full scout-report inventory,"--all-reports"
+  live PR discovery + checks,"--include-prs"
+
+ASSERTED: Cleaning up a completed scout retains its unanswered captain call; answering later preserves its report in Recently Landed
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-project worktree add -q -b fm/held-local /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/held-local-copy
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/held-local-copy add held.txt
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/held-local-copy commit -qm 'Held local delivery'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+
+$ tasks-axi add held-local 'Deliver after approval' --kind ship --start
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+ok: added held-local (ship) -> In flight
+task:
+  id: held-local
+  title: Deliver after approval
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done held-local --pr <url>` when it ships
+  - Run `tasks-axi block held-local --by <other>` to record a dependency
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold held-local --reason 'Review this isolated validation task'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+held-local
+
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-project rev-parse main
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+35ab895be2ebae3dc5c0e1ffb8ee6334d4e12884
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-merge-local.sh held-local
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=1
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+error: task held-local is still held for the captain; release it before merging
+
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-project rev-parse main
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+35ab895be2ebae3dc5c0e1ffb8ee6334d4e12884
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh answer held-local --decision-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/held-local-answer.txt --release
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+released: held-local
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-merge-local.sh held-local
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+merged fm/held-local into local main (35ab895 -> 3c6b3c2) in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-project
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+ASSERTED: Attempting a local merge while captain-held preserves main; releasing the same task allows the fast-forward
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-merge-local.sh bad/id
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=2
+error: invalid local merge request
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-pr-merge.sh bad/id https://github.com/kunchenguid/firstmate/pull/4048
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=2
+error: invalid PR merge request
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-merge-local.sh missing
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/missing-state-home
+exit=1
+error: local merge refused: state directory is not a real directory at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/missing-state-home/state
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-pr-merge.sh missing https://github.com/kunchenguid/firstmate/pull/4048
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/missing-state-home
+exit=1
+error: PR merge refused: state directory is not a real directory at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/missing-state-home/state
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh open absent --distinguish-absent
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/authority-read
+exit=3
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh open absent --distinguish-absent
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/authority-read
+exit=2
+fm-captain-hold: error: "EACCES: permission denied, open '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/authority-read/data/backlog.md'"
+
+ASSERTED: Merge entrypoints reject malformed IDs and missing state promptly; captain-call reads distinguish absent tasks from unreadable records
+$ tasks-axi add legacy-report 'Inspect legacy delivery' --kind scout --start
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/legacy-peer
+exit=0
+ok: added legacy-report (scout) -> In flight
+task:
+  id: legacy-report
+  title: Inspect legacy delivery
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done legacy-report --pr <url>` when it ships
+  - Run `tasks-axi block legacy-report --by <other>` to record a dependency
+
+$ tasks-axi done legacy-report --report data/legacy-report/report.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/legacy-peer
+exit=0
+ok: done legacy-report -> Done (report data/legacy-report/report.md)
+help[1]:
+  - Run `tasks-axi ready` to dispatch work unblocked by this
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/base/bin/fm-fleet-snapshot.sh --secondmate-home-summary
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/legacy-peer
+exit=0
+{
+  "schema": "fm-secondmate-home-summary.v1",
+  "hold_classifier_schema": "fm-captain-hold-buckets.v1",
+  "generated": "2026-09-09T11:23:58Z",
+  "generated_epoch": 1788953038,
+  "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/legacy-peer",
+  "valid": true,
+  "reason": null,
+  "invalidity": {
+    "kind": null,
+    "ids": []
+  },
+  "state": "no_active_work",
+  "active_children": [],
+  "decisions_open": [],
+  "holds": [],
+  "queued": [],
+  "landed": [
+    {
+      "id": "legacy-report",
+      "title": "Inspect legacy delivery",
+      "pr_url": null,
+      "report_path": "data/legacy-report/report.md",
+      "local_note": null,
+      "completion": {
+        "verb": "reported",
+        "date": "2026-09-09"
+      }
+    }
+  ],
+  "endpoints": [],
+  "counts": {
+    "active_children": 0,
+    "decisions_open": 0,
+    "holds": 0,
+    "queued": 0,
+    "landed": 1,
+    "endpoints": 0
+  },
+  "omitted": []
+}
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-bearings-snapshot.sh --json --all-landed
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/legacy-parent
+exit=0
+{
+  "schema": "fm-bearings.v1",
+  "home": "live/legacy-parent",
+  "generated": "2026-09-09T11:23:59Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [],
+  "secondmates": [
+    {
+      "id": "legacy-peer",
+      "state": "no_active_work",
+      "doing": "No active child work",
+      "provenance": "structured-home",
+      "freshness": "fresh",
+      "age_seconds": 1,
+      "contradiction": false,
+      "reason": "-"
+    }
+  ],
+  "secondmate_reconcile": [
+    {
+      "id": "legacy-peer",
+      "spawn_gen": null,
+      "host": null,
+      "kind": null,
+      "ids": []
+    }
+  ],
+  "decisions_open": [],
+  "landed": [
+    {
+      "id": "legacy-report",
+      "what": "Inspect legacy delivery",
+      "artifact": "data/legacy-report/report.md",
+      "owner": "legacy-peer"
+    }
+  ],
+  "gates": [],
+  "reports": [],
+  "recorded_prs": [],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-bearings-snapshot.sh --all-landed
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/legacy-parent
+exit=0
+schema: fm-bearings.v1
+home: live/legacy-parent
+generated: "2026-09-09T11:24:10Z"
+prs: "not_requested (run: /bearings include PRs)"
+in_flight: []
+secondmates[1]{id,state,doing,provenance,freshness,age_seconds,contradiction,reason}:
+  legacy-peer,no_active_work,No active child work,structured-home,fresh,12,false,"-"
+secondmate_reconcile[1]{id,spawn_gen,host,kind,ids}:
+  legacy-peer,null,null,null,"[]"
+decisions_open: []
+landed[1]{id,what,artifact,owner}:
+  legacy-report,Inspect legacy delivery,data/legacy-report/report.md,legacy-peer
+gates: []
+reports: []
+recorded_prs: []
+omitted[6]{surface,reveal}:
+  backlog item bodies,"--fields bodies"
+  task paths,"--fields paths"
+  watch/steer actions,"--fields actions"
+  healthy endpoint detail,"--fields endpoints"
+  full scout-report inventory,"--all-reports"
+  live PR discovery + checks,"--include-prs"
+
+ASSERTED: Reading a local v1 summary produced by the base version preserves its report artifact despite omitted kind
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-remote-doctor.sh
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/legacy-peer
+exit=1
+mode=check
+path=/opt/homebrew/Caskroom/codex/0.153.4/codex-path:/Users/mremond/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/usr/local/MacGPG2/bin:/Users/mremond/.codex/tmp/arg0/codex-arg0YD3l3l:/opt/homebrew/Caskroom/codex/0.153.4/codex-path:/Users/mremond/.local/bin:/Users/mremond/go/bin:/Users/mremond/.cargo/bin:/Users/mremond/bin:/usr/local/sbin
+entrypoint=no
+platform=darwin
+required git=/opt/homebrew/bin/git
+required jq=/opt/homebrew/bin/jq
+required herdr=/Users/mremond/.local/bin/herdr
+required tasks-axi=/opt/homebrew/bin/tasks-axi
+required treehouse=/Users/mremond/.local/bin/treehouse
+required harness=claude:/Users/mremond/.local/bin/claude
+optional tmux=/opt/homebrew/bin/tmux
+optional no-mistakes=/Users/mremond/.local/bin/no-mistakes
+optional gh=/opt/homebrew/bin/gh
+check herdr=ok: /Users/mremond/.local/bin/herdr
+check gui-session=ok: gui/501
+check remote-job-worker=fixable: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/user-home/Library/LaunchAgents/dev.firstmate.remote-job.plist does not match the Firstmate-owned Aqua worker contract
+check remote-job-worker-loaded=fixable: dev.firstmate.remote-job is not loaded in gui/501
+check remote-job-probe=fixable: the remote job worker has not reported a fresh probe
+check launchagent=fixable: no Firstmate herdr launch agent at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/user-home/Library/LaunchAgents/dev.firstmate.herdr.fm-remote.plist
+check launchagent-scope=skip: no launch agent is installed yet
+check launchagent-loaded=fixable: dev.firstmate.herdr.fm-remote is not loaded into gui/501
+check herdr-server=fixable: the herdr server for session fm-remote is not running
+check entrypoint-link=fixable: no entrypoint symlink at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/user-home/.local/bin/fm-remote-entrypoint.sh
+action: remote-job-worker: rerun this command with --fix to write dev.firstmate.remote-job
+action: remote-job-worker-loaded: rerun this command with --fix to bootstrap the worker
+action: remote-job-probe: rerun this command with --fix to restart the worker, then rerun through fm-on.sh
+action: launchagent: rerun this command with --fix to install it
+action: launchagent-loaded: rerun this command with --fix to bootstrap and start it
+action: herdr-server: rerun this command with --fix to start it
+action: entrypoint-link: rerun this command with --fix to create it
+note: not launched through the fixed remote entrypoint; the reported PATH is this caller environment.
+error: this host is not ready for a remote second mate; unresolved: remote-job-worker remote-job-worker-loaded remote-job-probe launchagent launchagent-loaded herdr-server entrypoint-link
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/base/bin/fm-bearings-snapshot.sh --json --all-landed
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main
+exit=0
+{
+  "schema": "fm-bearings.v1",
+  "home": "live/main",
+  "generated": "2026-09-09T11:24:27Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [
+    {
+      "id": "held-local",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/projects/local-project",
+      "doing": "backend unreachable (tmux endpoint state: unreadable)"
+    }
+  ],
+  "secondmates": [
+    {
+      "id": "mate",
+      "state": "no_active_work",
+      "doing": "No active child work",
+      "provenance": "structured-home",
+      "freshness": "fresh",
+      "age_seconds": 341,
+      "contradiction": false,
+      "reason": "-"
+    }
+  ],
+  "secondmate_reconcile": [
+    {
+      "id": "mate",
+      "spawn_gen": null,
+      "host": null,
+      "kind": null,
+      "ids": []
+    }
+  ],
+  "decisions_open": [],
+  "landed": [
+    {
+      "id": "verified-pr",
+      "what": "Track the merged AFK posture delivery",
+      "artifact": "https://github.com/kunchenguid/firstmate/pull/4048",
+      "owner": "(main)"
+    },
+    {
+      "id": "underscore-scout",
+      "what": "SCOUT_investigation",
+      "artifact": "data/underscore-scout/report.md",
+      "owner": "(main)"
+    },
+    {
+      "id": "scout-unicode",
+      "what": "SCOUTé inspect local delivery",
+      "artifact": "data/scout-unicode/report.md",
+      "owner": "(main)"
+    },
+    {
+      "id": "scout-empty",
+      "what": "Inspect without producing a report",
+      "artifact": "-",
+      "owner": "(main)"
+    },
+    {
+      "id": "mate-pr",
+      "what": "Track a verified delivery in the delegated home",
+      "artifact": "https://github.com/kunchenguid/firstmate/pull/4048",
+      "owner": "mate"
+    },
+    {
+      "id": "lower-scout",
+      "what": "scout: investigation",
+      "artifact": "data/lower-scout/report.md",
+      "owner": "(main)"
+    },
+    {
+      "id": "longer-scout",
+      "what": "SCOUTING investigation",
+      "artifact": "data/longer-scout/report.md",
+      "owner": "(main)"
+    },
+    {
+      "id": "local-delivery",
+      "what": "Deliver the local artifact",
+      "artifact": "-",
+      "owner": "(main)"
+    },
+    {
+      "id": "legacy-empty",
+      "what": "Legacy completion",
+      "artifact": "-",
+      "owner": "(main)"
+    },
+    {
+      "id": "digit-scout",
+      "what": "SCOUT7 investigation",
+      "artifact": "data/digit-scout/report.md",
+      "owner": "(main)"
+    }
+  ],
+  "gates": [],
+  "reports": [
+    {
+      "id": "scout-unicode",
+      "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/main/data/scout-unicode/report.md"
+    }
+  ],
+  "recorded_prs": [],
+  "unhealthy_endpoints": [
+    {
+      "id": "held-local",
+      "backend": "tmux",
+      "target": "firstmate:fm-held-local",
+      "exists": false,
+      "agent": "not_checked"
+    }
+  ],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}
+
+$ tasks-axi update duplicate-id --title 'Hold regression' --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/records/backlog.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling
+exit=0
+ok: updated duplicate-id (title)
+task:
+  id: duplicate-id
+  title: Hold regression
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[1]:
+  - Run `tasks-axi show duplicate-id --full --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/records/backlog.md` to see the result
+
+$ tasks-axi update duplicate-id --title 'Hold regression' --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/data/backlog.md
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling
+exit=0
+ok: updated duplicate-id (title)
+task:
+  id: duplicate-id
+  title: Hold regression
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-09-09
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[1]:
+  - Run `tasks-axi show duplicate-id --full --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/data/backlog.md` to see the result
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/bin/fm-captain-hold.sh hold duplicate-id --title 'Hold regression' --reason 'Choose safely'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling
+exit=1
+tasks-axi backend configuration cannot be read at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/.tasks.toml
+fm-captain-hold: could not create task duplicate-id
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/pre-r2/bin/fm-captain-hold.sh hold duplicate-id --title 'Hold regression' --reason 'Choose safely'
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling
+exit=0
+duplicate-id
+tasks-axi backend configuration cannot be read at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/.tasks.toml
+tasks-axi backend configuration cannot be read at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/config-dangling/.tasks.toml
+

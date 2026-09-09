@@ -1,0 +1,22 @@
+schema: fm-bearings.v1
+home: live/legacy-parent
+generated: "2026-09-09T11:24:10Z"
+prs: "not_requested (run: /bearings include PRs)"
+in_flight: []
+secondmates[1]{id,state,doing,provenance,freshness,age_seconds,contradiction,reason}:
+  legacy-peer,no_active_work,No active child work,structured-home,fresh,12,false,"-"
+secondmate_reconcile[1]{id,spawn_gen,host,kind,ids}:
+  legacy-peer,null,null,null,"[]"
+decisions_open: []
+landed[1]{id,what,artifact,owner}:
+  legacy-report,Inspect legacy delivery,data/legacy-report/report.md,legacy-peer
+gates: []
+reports: []
+recorded_prs: []
+omitted[6]{surface,reveal}:
+  backlog item bodies,"--fields bodies"
+  task paths,"--fields paths"
+  watch/steer actions,"--fields actions"
+  healthy endpoint detail,"--fields endpoints"
+  full scout-report inventory,"--all-reports"
+  live PR discovery + checks,"--include-prs"

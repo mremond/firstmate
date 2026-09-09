@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Recording a verified merged PR after releasing a past captain hold includes it in Recently Landed; approval alone does not",
+    "result": "pass",
+    "live": true,
+    "evidence": "verified-merged-pr.txt; before-delivery.json; main-deliveries.toon",
+    "reason": ""
+  },
+  {
+    "name": "Fast-forwarding a local delivery and finishing interrupted cleanup records local main and displays the delivery",
+    "result": "pass",
+    "live": true,
+    "evidence": "local-merge.txt; local-cleanup.txt; main-backlog.md; main-deliveries.toon",
+    "reason": ""
+  },
+  {
+    "name": "Answering questions that mention a PR or local main does not create a delivery",
+    "result": "pass",
+    "live": true,
+    "evidence": "main-backlog.md; main-deliveries.json",
+    "reason": ""
+  },
+  {
+    "name": "Completed SCOUT: and SCOUT\u00e9 reports remain visible; longer words and reportless explicit scouts stay excluded while kindless legacy completions remain",
+    "result": "pass",
+    "live": true,
+    "evidence": "main-backlog.md; main-deliveries.json",
+    "reason": ""
+  },
+  {
+    "name": "Reading a delegated home includes its released merged delivery and excludes its answered captain question",
+    "result": "pass",
+    "live": true,
+    "evidence": "mate-home-summary.json; fleet-deliveries.toon",
+    "reason": ""
+  },
+  {
+    "name": "Holding a task with unreadable or dangling backend configuration refuses without changing either backlog; absent and readable configurations still address the relocated backlog",
+    "result": "pass",
+    "live": true,
+    "evidence": "live-cli-transcript.txt; config-*-state.json",
+    "reason": ""
+  },
+  {
+    "name": "Cleaning up a completed scout retains its unanswered captain call; answering later preserves its report in Recently Landed",
+    "result": "pass",
+    "live": true,
+    "evidence": "held-scout-cleanup.txt; held-scout-before-answer.txt; retained-report-final.toon",
+    "reason": ""
+  },
+  {
+    "name": "Attempting a local merge while captain-held preserves main; releasing the same task allows the fast-forward",
+    "result": "pass",
+    "live": true,
+    "evidence": "held-local-refusal.txt; released-local-merge.txt; live-cli-transcript.txt",
+    "reason": ""
+  },
+  {
+    "name": "Merge entrypoints reject malformed IDs and missing state promptly; captain-call reads distinguish absent tasks from unreadable records",
+    "result": "pass",
+    "live": true,
+    "evidence": "live-cli-transcript.txt",
+    "reason": ""
+  },
+  {
+    "name": "Reading a local v1 summary produced by the base version preserves its report artifact despite omitted kind",
+    "result": "pass",
+    "live": true,
+    "evidence": "legacy-producer-summary.json; legacy-live-local.toon",
+    "reason": ""
+  }
+]

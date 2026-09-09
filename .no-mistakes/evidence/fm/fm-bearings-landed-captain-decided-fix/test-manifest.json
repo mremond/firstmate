@@ -1,0 +1,29 @@
+{
+  "target": "e950f99ef94e64be6777c70b7db9674a49763ae3",
+  "tree": "ee1d5b1d436af41420f9ec1e2fad773f949d8f7a",
+  "base": "40c50ea8843c5b6a5351db8352675537252b653e",
+  "selectors": {
+    "tests/fm-bearings-snapshot.test.sh": [
+      "test_landed_accepts_only_kind_owned_delivery_artifacts",
+      "test_kind_fallback_matches_tasks_axi_word_boundaries",
+      "test_landed_preserves_kindless_v1_summary_reports",
+      "test_remote_ledgers_share_one_concurrent_budget_and_fall_back_to_cache"
+    ],
+    "tests/fm-backlog-atomicity.test.sh": [
+      "test_backend_resolution_preserves_config_errors",
+      "test_backend_resolution_preserves_precedence_and_defaults",
+      "test_backlog_callers_refuse_unreadable_backend_config",
+      "test_captain_hold_preserves_relocated_backlog_on_backend_error"
+    ]
+  },
+  "selection_method": "Temporary shell files alongside tests/lib.sh loaded the unchanged suite function definitions and invoked only these named functions. No implementation-source assertions were added. Temporary selectors will be removed after verification.",
+  "initial_attempt": "Full subject Bearings run failed at remote collector budget assertion under host load 29.81. Subsequent captain-hold subject execution was stopped to narrow remaining work. Selected Bearings run completed kind-owned delivery assertions but hit the agent-selected 300s process bound; remaining functions rerun with 600s.",
+  "final_results": {
+    "kind_owned_delivery": "passed before selected-run time bound",
+    "word_boundaries": "passed on isolated selector rerun",
+    "legacy_v1_fresh_and_cached": "passed with stubbed SSH",
+    "backend_error_selectors": "passed",
+    "collector_budget": "failed twice at different freshness assertions; host load sampled near 30",
+    "full_subjects": "Bearings stopped at its first failure; captain-hold lifecycle was interrupted after its first reported pass; backlog subject was replaced by four named selectors"
+  }
+}

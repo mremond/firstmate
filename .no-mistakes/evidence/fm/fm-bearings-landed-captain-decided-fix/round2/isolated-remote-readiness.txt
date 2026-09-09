@@ -1,0 +1,30 @@
+mode=check
+path=/opt/homebrew/Caskroom/codex/0.153.4/codex-path:/Users/mremond/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/usr/local/MacGPG2/bin:/Users/mremond/.codex/tmp/arg0/codex-arg0YD3l3l:/opt/homebrew/Caskroom/codex/0.153.4/codex-path:/Users/mremond/.local/bin:/Users/mremond/go/bin:/Users/mremond/.cargo/bin:/Users/mremond/bin:/usr/local/sbin
+entrypoint=no
+platform=darwin
+required git=/opt/homebrew/bin/git
+required jq=/opt/homebrew/bin/jq
+required herdr=/Users/mremond/.local/bin/herdr
+required tasks-axi=/opt/homebrew/bin/tasks-axi
+required treehouse=/Users/mremond/.local/bin/treehouse
+required harness=claude:/Users/mremond/.local/bin/claude
+optional tmux=/opt/homebrew/bin/tmux
+optional no-mistakes=/Users/mremond/.local/bin/no-mistakes
+optional gh=/opt/homebrew/bin/gh
+check herdr=ok: /Users/mremond/.local/bin/herdr
+check gui-session=ok: gui/501
+check remote-job-worker=fixable: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/user-home/Library/LaunchAgents/dev.firstmate.remote-job.plist does not match the Firstmate-owned Aqua worker contract
+check remote-job-worker-loaded=fixable: dev.firstmate.remote-job is not loaded in gui/501
+check remote-job-probe=fixable: the remote job worker has not reported a fresh probe
+check launchagent=fixable: no Firstmate herdr launch agent at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/user-home/Library/LaunchAgents/dev.firstmate.herdr.fm-remote.plist
+check launchagent-scope=skip: no launch agent is installed yet
+check launchagent-loaded=fixable: dev.firstmate.herdr.fm-remote is not loaded into gui/501
+check herdr-server=fixable: the herdr server for session fm-remote is not running
+check entrypoint-link=fixable: no entrypoint symlink at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/.test-phase-r2/live/user-home/.local/bin/fm-remote-entrypoint.sh
+action: remote-job-worker: rerun this command with --fix to write dev.firstmate.remote-job
+action: remote-job-worker-loaded: rerun this command with --fix to bootstrap the worker
+action: remote-job-probe: rerun this command with --fix to restart the worker, then rerun through fm-on.sh
+action: launchagent: rerun this command with --fix to install it
+action: launchagent-loaded: rerun this command with --fix to bootstrap and start it
+action: herdr-server: rerun this command with --fix to start it
+action: entrypoint-link: rerun this command with --fix to create it

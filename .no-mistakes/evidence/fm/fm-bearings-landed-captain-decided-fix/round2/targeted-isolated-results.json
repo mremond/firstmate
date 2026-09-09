@@ -1,0 +1,29 @@
+[
+  {
+    "suite": "legacy-isolated",
+    "exit": 0,
+    "seconds": 25.92,
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/tests/.phase-r2-legacy-isolated.sh"
+    ]
+  },
+  {
+    "suite": "fm-backlog-atomicity",
+    "exit": 0,
+    "seconds": 71.86,
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/tests/.phase-r2-fm-backlog-atomicity.sh"
+    ]
+  },
+  {
+    "suite": "fm-captain-hold-lifecycle",
+    "exit": 0,
+    "seconds": 186.44,
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22J3ZVNCRVXG5Q4HD5QXABZ/tests/.phase-r2-fm-captain-hold-lifecycle.sh"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+pull_request:
+  number: 4048
+  title: "feat: add durable AFK posture lifecycle"
+  state: merged
+  author: kunchenguid
+  draft: no
+  merged: "2026-09-09T07:09:57Z"
+  checks: "15 passed, 0 failed, 15 total"
+  body: "## Intent\n\nThe captain approved the AFK away-mode redesign plan on 2026-09-08 and directed firstmate to implement it, one PR per phase, phases 1 to 4 in order, phase 5 deferred. This is PHASE 1: the away-posture record and its lifecycle.\n\nThe settled design the captain approved: away mode is a POSTURE of the one supervision session, not a separate architecture. Being away changes only two things - how the captain is informed, and what happens at a captain-owned decision point (hold, pre-answered\n... (truncated, 37080 chars total - use --full to see complete body)"
+  comment_count: 1 — use --comments to see full comments
+  review_count: 1 — use --reviews to see full reviews
