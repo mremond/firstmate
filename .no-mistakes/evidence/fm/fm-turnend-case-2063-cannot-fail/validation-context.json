@@ -1,0 +1,16 @@
+{
+  "recorded_utc": "2026-09-09T07:28:30.140144+00:00",
+  "worktree": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF",
+  "base": "40c50ea8843c5b6a5351db8352675537252b653e",
+  "target": "c4c2314ae98784915d0cffa7b60fdfc487e5fc29",
+  "target_tree": "f01885d0b49d7e0eb7c7f65a0e7ac5101c46b2dd",
+  "platform": "Darwin 25.5.0 arm64",
+  "source_sha256": {
+    "tests/fm-turnend-guard.test.sh": "f617af52b9f1209afaf04c4e43e01ca844c87b5c35514bcae501af0f70106f5a",
+    "bin/fm-turnend-guard.sh": "c50d276674079ae80b9f47611a5e621ba4bbb37f005c4de98a533e8c89b9df44",
+    "bin/fm-wake-lib.sh": "3c305d18608a3443da650e314245e0e18c28009e06db7d14dc1f8096def48c5c",
+    "bin/fm-watch.sh": "f28a74976551243c9cdb058b6d56b6e93e4acd5bb37a3ef467fa22aea4dd2927"
+  },
+  "remaining_worktree_changes": "",
+  "transient_test_directories": []
+}

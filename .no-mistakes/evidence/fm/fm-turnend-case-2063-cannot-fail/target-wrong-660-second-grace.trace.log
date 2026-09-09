@@ -1,0 +1,193 @@
++ set -u
+++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/tests/selected.sh
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/tests/lib.sh
+++ '[' -n '' ']'
+++ FM_TEST_LIB_SOURCED=1
+++ umask 022
+++ export FM_GATE_REFUSE_BYPASS=1
+++ FM_GATE_REFUSE_BYPASS=1
+++ unset FM_TASK_ID
+++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/tests/lib.sh
++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/tests/..
++++ pwd
+++ ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product
+++ FM_TEST_CLEANUP_DIRS=()
++++ mktemp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/.fm-test-cleanup.15432.XXXXXX
+++ FM_TEST_CLEANUP_REGISTRY=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/.fm-test-cleanup.15432.TK8Hh8
++++ fm_test_pid_identity 15432
++++ local pid=15432
++++ FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6
++++ bash -c '. "$1"; fm_pid_identity "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/bin/fm-wake-lib.sh 15432
+++ FM_TEST_OWNER_IDENTITY='Wed Sep  9 09:26:40 2026     bash -x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/tests/selected.sh'
++++ mktemp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/.fm-test-procevent.15432.XXXXXX
+++ FM_TEST_PROCEVENT_REGISTRY=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/.fm-test-procevent.15432.05ysTc
+++ FM_TEST_STUB_MAX_BLOCK_SECONDS=120
+++ export FM_TEST_STUB_MAX_BLOCK_SECONDS
+++ trap fm_test_cleanup EXIT
+++ trap 'fm_test_cleanup; exit 130' INT
+++ trap 'fm_test_cleanup; exit 143' TERM
+++ trap 'fm_test_cleanup; exit 129' HUP
+++ trap 'fm_test_cleanup; exit 131' QUIT
+++ FM_TEST_ORPHAN_MAX_AGE_SECONDS=3600
+++ '[' 0 '!=' 1 ']'
+++ fm_test_reap_orphans
+++ local marker dir mtime now owner_pid owner_identity current_identity
++++ date +%s
+++ now=1788938800
+++ for marker in "${TMPDIR:-/tmp}"/fm-*/.fm-test-fixture
+++ '[' -e '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-*/.fm-test-fixture' ']'
+++ continue
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/bin/fm-supervision-lib.sh
+++ fm_test_tmproot fm-turnend-guard
+++ local prefix=fm-turnend-guard root tmp_base
+++ tmp_base=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6
+++ tmp_base=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6
++++ mktemp -d /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.XXXXXX
+++ root=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn
++++ cd -P -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn
++++ pwd -P
+++ root=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn
+++ printf '%s\n%s\n' 15432 'Wed Sep  9 09:26:40 2026     bash -x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/tests/selected.sh'
+++ printf '%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn
+++ printf '%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn
++ TMP_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn
++ fm_git_identity fmtest fmtest@example.invalid
++ export GIT_AUTHOR_NAME=fmtest GIT_AUTHOR_EMAIL=fmtest@example.invalid
++ GIT_AUTHOR_NAME=fmtest
++ GIT_AUTHOR_EMAIL=fmtest@example.invalid
++ export GIT_COMMITTER_NAME=fmtest GIT_COMMITTER_EMAIL=fmtest@example.invalid
++ GIT_COMMITTER_NAME=fmtest
++ GIT_COMMITTER_EMAIL=fmtest@example.invalid
++ REQUIRED_REASON='watcher supervision needs Stop-owned automatic recovery; inspect the hook registration and startup status before ending the turn'
++ AWAY_REQUIRED_REASON='Away mode owns watcher supervision'
++ test_hook_no_afk_ignores_poll_derived_grace
++ local dir pid identity out status beat fresh_out fresh_status restored_out restored_status
+++ make_primary_dir /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
+++ local dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
+++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/state
+++ git init -q /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
+++ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace commit -q --allow-empty -m init
+++ :
+++ install_guard_scripts /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
+++ local dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
+++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin
+++ cp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/bin/fm-turnend-guard.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-turnend-guard.sh
+++ cp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/bin/fm-turnend-guard-grok.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-turnend-guard-grok.sh
+++ cp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/bin/fm-operational-input.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-operational-input.sh
+++ cp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/bin/fm-supervision-instructions.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-supervision-instructions.sh
+++ cp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/bin/fm-harness.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-harness.sh
+++ cp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/bin/fm-primary-scope-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-primary-scope-lib.sh
+++ cp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/bin/fm-supervision-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-supervision-lib.sh
+++ cp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-wake-lib.sh
+++ cp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/bin/fm-hook-host-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-hook-host-lib.sh
+++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/docs
+++ cp -R /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/product/docs/supervision-protocols /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/docs/supervision-protocols
+++ chmod +x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-turnend-guard.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-turnend-guard-grok.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-operational-input.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-supervision-instructions.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-harness.sh
+++ printf '%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
++ dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
++ :
++ pid=15633
++ sleep 60
+++ watcher_identity /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace 15633
+++ local dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace pid=15633
+++ FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/state
+++ bash -c '. "$1"; fm_pid_identity "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-wake-lib.sh 15633
++ identity='Wed Sep  9 09:26:40 2026     sleep 60'
++ record_watcher_lock /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace 15633 'Wed Sep  9 09:26:40 2026     sleep 60'
++ local dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace pid=15633 'identity=Wed Sep  9 09:26:40 2026     sleep 60' root bin_dir
+++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
+++ pwd
++ root=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
+++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin
+++ pwd
++ bin_dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin
++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/state/.watch.lock
++ printf '%s\n' 15633
++ printf '%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
++ printf '%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-watch.sh
++ printf '%s\n' 'Wed Sep  9 09:26:40 2026     sleep 60'
++ touch /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/state/.last-watcher-beat
+++ FM_GUARD_GRACE=
+++ FM_POLL=600
+++ run_hook /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace false
+++ local dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace stop_active=false home
++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
++++ pwd
+++ home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
+++ printf '{"stop_hook_active":%s}' false
+++ CLAUDECODE=1
+++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
+++ bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-turnend-guard.sh
++ fresh_out=
++ fresh_status=0
+++ date +%s
++ beat=1788938401
++ fm_touch_epoch 1788938401 /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/state/.last-watcher-beat
++ local epoch=1788938401 stamp
++ shift
+++ TZ=UTC0
+++ date -d @1788938401 +%Y%m%d%H%M.%S
++ stamp=
+++ TZ=UTC0
+++ date -r 1788938401 +%Y%m%d%H%M.%S
++ stamp=202609090720.01
++ TZ=UTC0
++ touch -t 202609090720.01 /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/state/.last-watcher-beat
+++ FM_GUARD_GRACE=
+++ FM_POLL=600
+++ run_hook /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace false
+++ local dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace stop_active=false home
++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
++++ pwd
+++ home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
+++ printf '{"stop_hook_active":%s}' false
+++ CLAUDECODE=1
+++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
+++ bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-turnend-guard.sh
++ out=
++ status=0
++ touch /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/state/.last-watcher-beat
+++ FM_GUARD_GRACE=
+++ FM_POLL=600
+++ run_hook /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace false
+++ local dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace stop_active=false home
++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
++++ pwd
+++ home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
+++ printf '{"stop_hook_active":%s}' false
+++ CLAUDECODE=1
+++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace
+++ bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn/hook-no-afk-poll-grace/bin/fm-turnend-guard.sh
++ restored_out=
++ restored_status=0
++ kill 15633
++ wait 15633
++ true
++ expect_code 0 0 'without .afk, a live watcher with a fresh beacon must allow before aging'
++ local expected=0 actual=0 'label=without .afk, a live watcher with a fresh beacon must allow before aging'
++ '[' 0 = 0 ']'
++ '[' -z '' ']'
++ expect_code 2 0 'without .afk, FM_POLL must not widen the strict watcher predicate'\''s grace'
++ local expected=2 actual=0 'label=without .afk, FM_POLL must not widen the strict watcher predicate'\''s grace'
++ '[' 0 = 2 ']'
++ fail 'without .afk, FM_POLL must not widen the strict watcher predicate'\''s grace: expected exit 2, got 0'
++ printf 'not ok - %s\n' 'without .afk, FM_POLL must not widen the strict watcher predicate'\''s grace: expected exit 2, got 0'
++ exit 1
++ fm_test_cleanup
++ local d
++ fm_test_reap_procevent_homes
++ local home claim_root $'seen=\n'
++ '[' -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/.fm-test-procevent.15432.05ysTc ']'
++ IFS=$'\t'
++ read -r home claim_root
++ rm -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/.fm-test-procevent.15432.05ysTc
++ for d in "${FM_TEST_CLEANUP_DIRS[@]:-}"
++ '[' -n '' ']'
++ '[' -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/.fm-test-cleanup.15432.TK8Hh8 ']'
++ IFS=
++ read -r d
++ '[' -n /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn ']'
++ rm -rf /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/fm-turnend-guard.heA7cn
++ IFS=
++ read -r d
++ rm -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22GJM13BYHFAZ319P7Z0YVF/.turnend-phase-plij5hg6/.fm-test-cleanup.15432.TK8Hh8
