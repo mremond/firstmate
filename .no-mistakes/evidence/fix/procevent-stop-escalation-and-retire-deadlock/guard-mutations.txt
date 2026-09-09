@@ -1,0 +1,16 @@
+Guard regression execution and mutation evidence
+Target: 7d00287b5e8145ac6e72f6de21015fdf01fab7ae
+The same focused executable regression body is used for all four variants.
+Assertions: 2-second lease + two 1-second checks + four seconds of stop windows; a 2x scheduling allowance gives a 16-second failure deadline.
+
+Variant target: process exit 0; invocation 8.614 seconds
+ok - an expired runner's guard escalates past a signal-proof child
+
+Variant base: process exit 1; invocation 18.215 seconds
+not ok - the guard exceeded its bound: still holding the group after 16s, against a documented bound of 8s
+
+Variant old-escalation: process exit 1; invocation 18.805 seconds
+not ok - the guard exceeded its bound: still holding the group after 16s, against a documented bound of 8s
+
+Variant delayed-guard: process exit 1; invocation 18.308 seconds
+not ok - the guard exceeded its bound: still holding the group after 16s, against a documented bound of 8s

@@ -1,0 +1,968 @@
+{
+  "validated_at": "2026-09-09T09:48:04.852291+00:00",
+  "base": "40c50ea8843c5b6a5351db8352675537252b653e",
+  "target": "7d00287b5e8145ac6e72f6de21015fdf01fab7ae",
+  "target_tree": "83a3ff3ccfafba85152424ad1dfbedc253b0f0b7",
+  "live_scenarios": [
+    {
+      "scenario": "healthy",
+      "code_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+      "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-healthy-final/healthy",
+      "lease_seconds": "600",
+      "check_seconds": "15",
+      "commands": [
+        {
+          "argv": [
+            "register",
+            "lavish",
+            "live-healthy",
+            "--",
+            "/usr/bin/perl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-healthy-final/healthy/source.pl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-healthy-final/healthy",
+            "0",
+            ""
+          ],
+          "exit": 0,
+          "seconds": 6.894,
+          "stdout": "registered: live-healthy (lavish)",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "start",
+            "live-healthy"
+          ],
+          "mode": "background"
+        },
+        {
+          "argv": [
+            "list"
+          ],
+          "exit": 0,
+          "seconds": 2.87,
+          "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-healthy                 lavish       live       0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "retire",
+            "live-healthy"
+          ],
+          "exit": 0,
+          "seconds": 5.136,
+          "stdout": "retired: live-healthy",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "retire",
+            "live-healthy"
+          ],
+          "exit": 0,
+          "seconds": 1.741,
+          "stdout": "retired: live-healthy",
+          "stderr": ""
+        }
+      ],
+      "runner": 97947,
+      "child": 29586,
+      "descendant": 30417,
+      "before": [
+        "29586 97947 97947 S    /usr/bin/perl",
+        "30417 29586 97947 S    /usr/bin/perl",
+        "30968 97947 97947 S    perl",
+        "97947 97546 97947 S    bash"
+      ],
+      "start_exit": 143,
+      "group_gone": true,
+      "signals": "",
+      "after": [],
+      "result": "pass",
+      "evidence_log": "live-healthy-final.log",
+      "runtime": "Darwin 25.5.0"
+    },
+    {
+      "scenario": "retire",
+      "code_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+      "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-retry/retire",
+      "commands": [
+        {
+          "argv": [
+            "register",
+            "lavish",
+            "live-retire",
+            "--",
+            "/usr/bin/perl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-retry/retire/source.pl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-retry/retire",
+            "1"
+          ],
+          "exit": 0,
+          "seconds": 5.92,
+          "stdout": "registered: live-retire (lavish)",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "start",
+            "live-retire"
+          ],
+          "mode": "background"
+        },
+        {
+          "argv": [
+            "list"
+          ],
+          "exit": 0,
+          "seconds": 3.792,
+          "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-retire                  lavish       live       0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "retire",
+            "live-retire"
+          ],
+          "mode": "background to observe transition"
+        },
+        {
+          "argv": [
+            "retire",
+            "live-retire"
+          ],
+          "exit": 0,
+          "seconds": 2.776,
+          "stdout": "retired: live-retire",
+          "stderr": ""
+        }
+      ],
+      "runner": 93252,
+      "child": 20318,
+      "descendant": 20380,
+      "before": [
+        "20318 93252 93252 S    /usr/bin/perl",
+        "20380 20318 93252 S    /usr/bin/perl",
+        "20697 93252 93252 S    perl",
+        "93252 93179 93252 S    bash"
+      ],
+      "leader_transition": true,
+      "transition_group": [
+        "20318     1 93252 S    /usr/bin/perl",
+        "20380 20318 93252 S    /usr/bin/perl"
+      ],
+      "child_survived_term": true,
+      "child_reaped": true,
+      "retire_exit": 0,
+      "retire_seconds": 11.4,
+      "retire_output": "retired: live-retire\n",
+      "signals": "TERM 20318\nTERM 20380\n",
+      "after": [],
+      "result": "pass",
+      "evidence_log": "live-target.log",
+      "runtime": "Darwin 25.5.0",
+      "lease_seconds": "3",
+      "check_seconds": "1"
+    },
+    {
+      "scenario": "zombie",
+      "code_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+      "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-zombie-final/zombie",
+      "lease_seconds": "600",
+      "check_seconds": "15",
+      "commands": [
+        {
+          "argv": [
+            "register",
+            "lavish",
+            "live-zombie",
+            "--",
+            "/usr/bin/perl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-zombie-final/zombie/source.pl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-zombie-final/zombie",
+            "1"
+          ],
+          "exit": 0,
+          "seconds": 2.857,
+          "stdout": "registered: live-zombie (lavish)",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "_start",
+            "live-zombie"
+          ],
+          "mode": "real child with parent delaying waitpid"
+        },
+        {
+          "argv": [
+            "list"
+          ],
+          "exit": 0,
+          "seconds": 2.391,
+          "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-zombie                  lavish       live       0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "retire",
+            "live-zombie"
+          ],
+          "mode": "background to observe transition"
+        },
+        {
+          "argv": [
+            "retire",
+            "live-zombie"
+          ],
+          "exit": 0,
+          "seconds": 0.706,
+          "stdout": "retired: live-zombie",
+          "stderr": ""
+        }
+      ],
+      "runner": 74006,
+      "child": 93069,
+      "descendant": 93676,
+      "before": [
+        "74006 73514 74006 S    bash",
+        "93069 74006 74006 S    /usr/bin/perl",
+        "93676 93069 74006 S    /usr/bin/perl",
+        "94985 74006 74006 S    perl"
+      ],
+      "leader_transition": true,
+      "child_survived_term": true,
+      "transition_group": [
+        "74006 73514 74006 Z    <defunct>",
+        "93069     1 74006 S    /usr/bin/perl",
+        "93676 93069 74006 S    /usr/bin/perl"
+      ],
+      "child_reaped": true,
+      "retire_exit": 0,
+      "retire_seconds": 9.19,
+      "retire_output": "retired: live-zombie\n",
+      "signals": "TERM 93069\nTERM 93676\n",
+      "after": [],
+      "result": "pass",
+      "evidence_log": "live-zombie-final.log",
+      "runtime": "Darwin 25.5.0"
+    },
+    {
+      "scenario": "guard",
+      "code_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+      "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/guard",
+      "lease_seconds": "5",
+      "check_seconds": "1",
+      "commands": [
+        {
+          "argv": [
+            "register",
+            "lavish",
+            "live-guard",
+            "--",
+            "/usr/bin/perl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/guard/source.pl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/guard",
+            "1"
+          ],
+          "exit": 0,
+          "seconds": 7.66,
+          "stdout": "registered: live-guard (lavish)",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "reconcile"
+          ],
+          "exit": 0,
+          "seconds": 2.21,
+          "stdout": "reconciled: published=0 started=1 stopped=0 uncertain=0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "reconcile"
+          ],
+          "exit": 0,
+          "seconds": 6.221,
+          "stdout": "reconciled: published=0 started=0 stopped=0 uncertain=0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "reconcile"
+          ],
+          "exit": 0,
+          "seconds": 4.696,
+          "stdout": "reconciled: published=0 started=0 stopped=0 uncertain=0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "list"
+          ],
+          "exit": 0,
+          "seconds": 3.248,
+          "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-guard                   lavish       live       0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "reconcile"
+          ],
+          "exit": 0,
+          "seconds": 3.515,
+          "stdout": "reconciled: published=0 started=0 stopped=0 uncertain=0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "retire",
+            "live-guard"
+          ],
+          "exit": 0,
+          "seconds": 3.158,
+          "stdout": "retired: live-guard",
+          "stderr": ""
+        }
+      ],
+      "runner": 42324,
+      "child": 63987,
+      "descendant": 64365,
+      "before": [
+        "42324     1 42324 S    bash",
+        "63987 42324 42324 S    /usr/bin/perl",
+        "64365 63987 42324 S    /usr/bin/perl",
+        "65821 42324 42324 S    perl"
+      ],
+      "nominal_bound_seconds": 11,
+      "loaded_deadline_seconds": 22,
+      "group_gone": true,
+      "elapsed_seconds": 14.016,
+      "signals": "TERM 64365\nTERM 63987\n",
+      "after": [],
+      "result": "pass",
+      "evidence_log": "live-target-ready.log",
+      "runtime": "Darwin 25.5.0"
+    },
+    {
+      "scenario": "crash",
+      "code_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+      "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-cold-guard-final/crash",
+      "lease_seconds": "600",
+      "check_seconds": "15",
+      "commands": [
+        {
+          "argv": [
+            "register",
+            "lavish",
+            "live-crash",
+            "--",
+            "/usr/bin/perl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-cold-guard-final/crash/source.pl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-cold-guard-final/crash",
+            "1",
+            ""
+          ],
+          "exit": 0,
+          "seconds": 1.841,
+          "stdout": "registered: live-crash (lavish)",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "reconcile"
+          ],
+          "exit": 0,
+          "seconds": 1.858,
+          "stdout": "reconciled: published=0 started=1 stopped=0 uncertain=0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "list"
+          ],
+          "exit": 0,
+          "seconds": 1.978,
+          "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-crash                   lavish       live       0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "retire",
+            "live-crash"
+          ],
+          "exit": 1,
+          "seconds": 2.053,
+          "stdout": "",
+          "stderr": "error: cannot confirm runner identity; source remains registered: live-crash"
+        },
+        {
+          "argv": [
+            "reconcile"
+          ],
+          "exit": 0,
+          "seconds": 1.338,
+          "stdout": "reconciled: published=0 started=0 stopped=0 uncertain=1",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "sweep-home"
+          ],
+          "exit": 1,
+          "seconds": 5.037,
+          "stdout": "",
+          "stderr": "error: cannot confirm runner identity; source remains registered: live-crash\nerror: process-event home sweep incomplete: attempted=1 failed=1"
+        },
+        {
+          "argv": [
+            "retire",
+            "live-crash"
+          ],
+          "exit": 0,
+          "seconds": 2.074,
+          "stdout": "retired: live-crash",
+          "stderr": ""
+        }
+      ],
+      "runner": 56696,
+      "child": 68318,
+      "descendant": 69205,
+      "before": [
+        "56696     1 56696 S    bash",
+        "68318 56696 56696 S    /usr/bin/perl",
+        "69205 68318 56696 S    /usr/bin/perl",
+        "70122 56696 56696 S    perl"
+      ],
+      "guard_pid": 63202,
+      "after_crash": [
+        "68318     1 56696 S    /usr/bin/perl",
+        "69205 68318 56696 S    /usr/bin/perl",
+        "70122     1 56696 S    perl"
+      ],
+      "guard_exited_without_signal": true,
+      "signals": "",
+      "after": [
+        "68318     1 56696 S    /usr/bin/perl",
+        "69205 68318 56696 S    /usr/bin/perl",
+        "70122     1 56696 S    perl"
+      ],
+      "result": "pass",
+      "cleanup": "test-owned group SIGKILL",
+      "evidence_log": "live-cold-guard-final.log",
+      "runtime": "Darwin 25.5.0"
+    },
+    {
+      "scenario": "mismatch",
+      "code_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+      "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-retry/mismatch",
+      "commands": [
+        {
+          "argv": [
+            "register",
+            "lavish",
+            "live-mismatch",
+            "--",
+            "/usr/bin/perl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-retry/mismatch/source.pl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-retry/mismatch",
+            "1"
+          ],
+          "exit": 0,
+          "seconds": 4.277,
+          "stdout": "registered: live-mismatch (lavish)",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "start",
+            "live-mismatch"
+          ],
+          "mode": "background"
+        },
+        {
+          "argv": [
+            "list"
+          ],
+          "exit": 0,
+          "seconds": 4.402,
+          "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-mismatch                lavish       live       0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "retire",
+            "live-mismatch"
+          ],
+          "exit": 1,
+          "seconds": 3.515,
+          "stdout": "",
+          "stderr": "error: cannot confirm runner identity; source remains registered: live-mismatch"
+        },
+        {
+          "argv": [
+            "retire",
+            "live-mismatch"
+          ],
+          "exit": 0,
+          "seconds": 4.16,
+          "stdout": "retired: live-mismatch",
+          "stderr": ""
+        }
+      ],
+      "runner": 40173,
+      "child": 67874,
+      "descendant": 67903,
+      "before": [
+        "40173 39877 40173 S    bash",
+        "67874 40173 40173 S    /usr/bin/perl",
+        "67903 67874 40173 S    /usr/bin/perl",
+        "69243 40173 40173 S    perl"
+      ],
+      "signals": "",
+      "after": [
+        "40173 39877 40173 S    bash",
+        "67874 40173 40173 S    /usr/bin/perl",
+        "67903 67874 40173 S    /usr/bin/perl",
+        "69243 40173 40173 S    perl"
+      ],
+      "result": "pass",
+      "cleanup": "test-owned group SIGKILL",
+      "evidence_log": "live-target.log",
+      "runtime": "Darwin 25.5.0",
+      "lease_seconds": "3",
+      "check_seconds": "1"
+    },
+    {
+      "scenario": "nonleader",
+      "code_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+      "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-retry/nonleader",
+      "commands": [
+        {
+          "argv": [
+            "register",
+            "lavish",
+            "live-nonleader",
+            "--",
+            "/usr/bin/perl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-retry/nonleader/source.pl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-retry/nonleader",
+            "1"
+          ],
+          "exit": 0,
+          "seconds": 3.295,
+          "stdout": "registered: live-nonleader (lavish)",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "start",
+            "live-nonleader"
+          ],
+          "mode": "background"
+        },
+        {
+          "argv": [
+            "list"
+          ],
+          "exit": 0,
+          "seconds": 2.501,
+          "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-nonleader               lavish       live       0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "retire",
+            "live-nonleader"
+          ],
+          "exit": 1,
+          "seconds": 3.422,
+          "stdout": "",
+          "stderr": "error: cannot confirm runner identity; source remains registered: live-nonleader"
+        },
+        {
+          "argv": [
+            "retire",
+            "live-nonleader"
+          ],
+          "exit": 0,
+          "seconds": 6.174,
+          "stdout": "retired: live-nonleader",
+          "stderr": ""
+        }
+      ],
+      "runner": 27015,
+      "child": 47599,
+      "descendant": 47632,
+      "before": [
+        "27015 26916 27015 S    bash",
+        "47599 27015 27015 S    /usr/bin/perl",
+        "47632 47599 27015 S    /usr/bin/perl",
+        "47960 27015 27015 S    perl"
+      ],
+      "signals": "",
+      "after": [
+        "27015 26916 27015 S    bash",
+        "47599 27015 27015 S    /usr/bin/perl",
+        "47632 47599 27015 S    /usr/bin/perl",
+        "47960 27015 27015 S    perl"
+      ],
+      "result": "pass",
+      "cleanup": "test-owned group SIGKILL",
+      "evidence_log": "live-target.log",
+      "runtime": "Darwin 25.5.0",
+      "lease_seconds": "3",
+      "check_seconds": "1"
+    },
+    {
+      "scenario": "unreadable-cold",
+      "code_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+      "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/linux-actual-ps-failure/unreadable-cold",
+      "lease_seconds": "600",
+      "check_seconds": "15",
+      "commands": [
+        {
+          "argv": [
+            "register",
+            "lavish",
+            "live-unreadable-cold",
+            "--",
+            "/usr/bin/perl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/linux-actual-ps-failure/unreadable-cold/source.pl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/linux-actual-ps-failure/unreadable-cold",
+            "1",
+            ""
+          ],
+          "exit": 0,
+          "seconds": 0.141,
+          "stdout": "registered: live-unreadable-cold (lavish)",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "start",
+            "live-unreadable-cold"
+          ],
+          "mode": "background"
+        },
+        {
+          "argv": [
+            "list"
+          ],
+          "exit": 0,
+          "seconds": 0.102,
+          "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-unreadable-cold         lavish       live       0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "retire",
+            "live-unreadable-cold"
+          ],
+          "exit": 1,
+          "seconds": 0.071,
+          "stdout": "",
+          "stderr": "error: cannot confirm runner identity; source remains registered: live-unreadable-cold"
+        },
+        {
+          "argv": [
+            "retire",
+            "live-unreadable-cold"
+          ],
+          "exit": 0,
+          "seconds": 0.187,
+          "stdout": "retired: live-unreadable-cold",
+          "stderr": ""
+        }
+      ],
+      "runner": 138,
+      "child": 360,
+      "descendant": 368,
+      "before": [
+        "138     136     138 S    bash",
+        "360     138     138 S    perl",
+        "368     360     138 S    perl",
+        "375     138     138 S    perl"
+      ],
+      "real_ps_failure": "[Errno 13] Permission denied: '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/linux-actual-ps-failure/unreadable-cold/tools/ps'",
+      "signals": "",
+      "after": [
+        "138     136     138 S    bash",
+        "360     138     138 S    perl",
+        "368     360     138 S    perl",
+        "375     138     138 S    perl"
+      ],
+      "result": "pass",
+      "cleanup": "test-owned group SIGKILL",
+      "evidence_log": "live-linux-ps-failure.log",
+      "runtime": "Linux container with real init"
+    },
+    {
+      "scenario": "unreadable-proved",
+      "code_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+      "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/linux-actual-ps-failure/unreadable-proved",
+      "lease_seconds": "600",
+      "check_seconds": "15",
+      "commands": [
+        {
+          "argv": [
+            "register",
+            "lavish",
+            "live-unreadable-proved",
+            "--",
+            "/usr/bin/perl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/linux-actual-ps-failure/unreadable-proved/source.pl",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/linux-actual-ps-failure/unreadable-proved",
+            "1",
+            "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/linux-actual-ps-failure/unreadable-proved/tools/ps"
+          ],
+          "exit": 0,
+          "seconds": 0.133,
+          "stdout": "registered: live-unreadable-proved (lavish)",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "start",
+            "live-unreadable-proved"
+          ],
+          "mode": "background"
+        },
+        {
+          "argv": [
+            "list"
+          ],
+          "exit": 0,
+          "seconds": 0.165,
+          "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-unreadable-proved       lavish       live       0",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "retire",
+            "live-unreadable-proved"
+          ],
+          "exit": 0,
+          "seconds": 2.409,
+          "stdout": "retired: live-unreadable-proved",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "retire",
+            "live-unreadable-proved"
+          ],
+          "exit": 0,
+          "seconds": 0.103,
+          "stdout": "retired: live-unreadable-proved",
+          "stderr": ""
+        }
+      ],
+      "runner": 766,
+      "child": 988,
+      "descendant": 991,
+      "before": [
+        "766     765     766 S    bash",
+        "988     766     766 S    perl",
+        "991     988     766 S    perl",
+        "1011     766     766 S    perl"
+      ],
+      "real_ps_failure": "[Errno 13] Permission denied: '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/linux-actual-ps-failure/unreadable-proved/tools/ps'",
+      "signals": "TERM 991\nTERM 988\n",
+      "after": [],
+      "result": "pass",
+      "evidence_log": "live-linux-ps-failure.log",
+      "runtime": "Linux container with real init"
+    }
+  ],
+  "baseline_healthy": {
+    "scenario": "healthy",
+    "code_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/base",
+    "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-base/healthy",
+    "commands": [
+      {
+        "argv": [
+          "register",
+          "lavish",
+          "live-healthy",
+          "--",
+          "/usr/bin/perl",
+          "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-base/healthy/source.pl",
+          "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-base/healthy",
+          "0"
+        ],
+        "exit": 0,
+        "seconds": 6.49,
+        "stdout": "registered: live-healthy (lavish)",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "start",
+          "live-healthy"
+        ],
+        "mode": "background"
+      },
+      {
+        "argv": [
+          "list"
+        ],
+        "exit": 0,
+        "seconds": 3.972,
+        "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-healthy                 lavish       live       0",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "retire",
+          "live-healthy"
+        ],
+        "exit": 0,
+        "seconds": 12.007,
+        "stdout": "retired: live-healthy",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "retire",
+          "live-healthy"
+        ],
+        "exit": 0,
+        "seconds": 4.481,
+        "stdout": "retired: live-healthy",
+        "stderr": ""
+      }
+    ],
+    "runner": 51838,
+    "child": 82187,
+    "descendant": 82539,
+    "before": [
+      "51838 51465 51838 S    bash",
+      "82187 51838 51838 S    /usr/bin/perl",
+      "82539 82187 51838 S    /usr/bin/perl",
+      "83582 51838 51838 S    perl"
+    ],
+    "start_exit": 137,
+    "group_gone": true,
+    "result": "fail",
+    "error": "healthy stop must exit 143 on TERM",
+    "after": []
+  },
+  "guard_mutations": [
+    {
+      "variant": "target",
+      "exit": 0,
+      "seconds": 8.614,
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--init",
+        "--network",
+        "none",
+        "-v",
+        "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX:/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+        "-v",
+        "/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX:/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX:ro",
+        "-w",
+        "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+        "-e",
+        "NM_TEST_CODE_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+        "-e",
+        "TMPDIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/tmp",
+        "fmlab:latest",
+        "bash",
+        "/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX/focused-guard-regression.sh"
+      ]
+    },
+    {
+      "variant": "base",
+      "exit": 1,
+      "seconds": 18.215,
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--init",
+        "--network",
+        "none",
+        "-v",
+        "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX:/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+        "-v",
+        "/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX:/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX:ro",
+        "-w",
+        "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+        "-e",
+        "NM_TEST_CODE_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/base",
+        "-e",
+        "TMPDIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/tmp",
+        "fmlab:latest",
+        "bash",
+        "/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX/focused-guard-regression.sh"
+      ]
+    },
+    {
+      "variant": "old-escalation",
+      "exit": 1,
+      "seconds": 18.805,
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--init",
+        "--network",
+        "none",
+        "-v",
+        "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX:/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+        "-v",
+        "/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX:/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX:ro",
+        "-w",
+        "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+        "-e",
+        "NM_TEST_CODE_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/old-escalation",
+        "-e",
+        "TMPDIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/tmp",
+        "fmlab:latest",
+        "bash",
+        "/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX/focused-guard-regression.sh"
+      ]
+    },
+    {
+      "variant": "delayed-guard",
+      "exit": 1,
+      "seconds": 18.308,
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--init",
+        "--network",
+        "none",
+        "-v",
+        "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX:/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+        "-v",
+        "/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX:/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX:ro",
+        "-w",
+        "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX",
+        "-e",
+        "NM_TEST_CODE_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/delayed-guard",
+        "-e",
+        "TMPDIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/tmp",
+        "fmlab:latest",
+        "bash",
+        "/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX/focused-guard-regression.sh"
+      ]
+    }
+  ],
+  "setup_corrections": [
+    "The first driver used multiline argv; registration correctly rejected it. The corrected driver writes a source file.",
+    "The full fm-procevent subject file was deliberately interrupted under high host load at 340 seconds before the affected sections; focused sections were executed independently instead. Its exit 143 is an operator interruption, not a product failure.",
+    "Short-lease startup fixtures expired under host load (load average observed at 59.27); ordinary-stop tests use shipped defaults and guard tests refresh until startup is ready.",
+    "The first zombie observer missed the transition under load. Single-PID ps sampling captured a real zombie with both children alive on rerun.",
+    "An initial cleanup observer raised PermissionError after killing its test-owned group; cleanup observation was corrected and the crashed-leader case was rerun, including a witnessed guard exit.",
+    "The private ps toolset initially lacked utilities; these were supplied as local symlinks. A copied macOS system ps exited 137 before startup, so real executable-permission fault injection was driven successfully using the existing isolated Linux image.",
+    "The --help command returns status 2 on both revisions; comparing its output and status showed no change."
+  ],
+  "source_changes": false
+}

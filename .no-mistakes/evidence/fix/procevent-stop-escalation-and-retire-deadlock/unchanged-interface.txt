@@ -1,0 +1,6 @@
+Owned byte contracts checked against 40c50ea...:
+CLI --help output identical: True
+CLI --help exit codes (base, target): [2, 2]
+help SHA256: e60bd07464e2c69c243981cb59d9dd0ed5ab41278da366b140a1aad012bb259e
+script header identical: True
+.agents/skills/ identical: True

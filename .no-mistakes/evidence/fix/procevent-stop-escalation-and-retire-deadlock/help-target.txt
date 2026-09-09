@@ -1,0 +1,180 @@
+Generic process-to-event runner: supervise a registered long-polling child
+outside the agent's foreground turn and turn completed results into normalized
+durable wakes.
+
+Usage:
+  fm-procevent.sh register <adapter> <source-id> -- <argv>...
+  fm-procevent.sh register-extension <adapter> <source-id> --config-ref <reference>
+  fm-procevent.sh start <source-id>
+  fm-procevent.sh reconcile
+  fm-procevent.sh classify <result-file>
+  fm-procevent.sh handled <source-id> <sequence>
+  fm-procevent.sh retire <source-id> [--if-absent|--if-matches <adapter> -- <argv>...|--if-owner <registration-token>]
+  fm-procevent.sh sweep-home [--preflight]
+  fm-procevent.sh binding-retirement-preflight <binding-digest>
+  fm-procevent.sh extension-retirement <binding|transfer> <retirement-arguments...>
+  fm-procevent.sh extension-bind <bind|receive-transfer-bind> <binding-arguments...>
+  fm-procevent.sh extension-process-event <process-event-arguments...>
+  fm-procevent.sh list
+
+register   Record a built-in source: its adapter, its canonical id, and the
+           exact argv to execute. argv is stored one argument per line and
+           executed directly, so there is no shell surface and no argument
+           splitting. Built-in adapters register sources; nothing here parses
+           user text.
+register-extension
+           Resolve an explicitly enabled home-local process-event-adapter/1
+           binding, verify its package and handshake, and record the source
+           configuration reference with the exact extension id/version,
+           capability version, package digest, binding digest, and a fresh
+           registration token. The tracked extension host constructs every
+           invocation; no package argv or shell command is stored.
+classify   Ask the immutable adapter owner captured beside <result-file> for a
+           bounded classification. Built-in results keep their existing
+           script command; extension results must still match the exact bound
+           package identity captured with them.
+start      Claim the source, run its child to completion, durably capture the
+           output, publish normalized wakes for pending results, then release
+           the claim. It blocks for as long as the source blocks and is meant
+           to run as a supervised background process, never in a conversational
+           turn. After publishing, it asks the source's own adapter whether the
+           captured result ends the source and retires the registration when it
+           says so, so a source that has ended stops being restarted.
+reconcile  Idempotent liveness entry the watcher calls on its ordinary cycle:
+           republish every durably captured result with no handled
+           acknowledgement yet - regardless of any earlier publication - and
+           start a runner for any registered source that has no live owner.
+           This is liveness repair only - it never discovers results by
+           polling the source, because the child blocks on the source itself.
+handled    Durably and idempotently record that a captured result has been
+           fully handled: <source-id> <sequence>. Prints "handled: id seq"
+           the first time for that exact source-and-sequence generation and
+           "already-handled: id seq" on every repeat call, atomically
+           deduplicated so a paired external effect is never authorized
+           twice. Until this is called, the result stays eligible for
+           bounded re-announcement on every reconcile. Marking a result
+           handled does not retire its source registration or claim.
+retire     Drop a registration, stop a runner this home owns, release the claim.
+           Idempotent, and still the supported explicit path after a source has
+           already retired itself on its adapter's terminal verdict. Existing
+           unconditional built-in retirement remains compatible. An external
+           registration requires --if-owner. --if-matches compares a complete
+           built-in registration, --if-absent refuses while any registration
+           exists, and --if-owner removes only the exact extension registration
+           token printed by register-extension, so a stale owner cannot retire
+           a replacement generation.
+sweep-home Retire a bounded snapshot of this home's registrations and owned
+           claims, then refuse unless no registration, runner record, or owned
+           claim remains. Used by supported Firstmate home retirement.
+binding-retirement-preflight
+           Refuse while an extension registration or unhandled captured result
+           still owns the exact enabled binding digest. Called by the tracked
+           extension host before identity-conditional binding retirement.
+extension-retirement
+           Serialize one tracked binding or transfer retirement against
+           extension resolution and registration publication in this home.
+extension-bind
+           Serialize tracked binding publication against extension resolution,
+           registration publication, and retirement in this home.
+list       Show registered sources, owners, and pending captured results.
+
+Terminal knowledge is adapter-owned. This runner never inspects a result and
+never names an adapter-specific status: built-ins keep the existing
+`bin/fm-procevent-<adapter>.sh terminal <result-file>` path, while an external
+result uses the exact process-event-adapter/1 package identity captured beside
+it. Exit 0 is the only terminal verdict. A missing command, an error, or any
+other exit keeps the registration armed, so an adapter that has no notion of
+ending needs no change.
+
+Routine no-op knowledge is adapter-owned through the same kind of seam. Some
+sources produce a result that carries no news at all - a review surface that
+simply closed with nothing said - and announcing it makes the handler read a
+wake to learn that nothing happened. So before publishing, this runner asks
+the immutable captured adapter owner - the built-in `silent` command or the
+bound extension operation - and treats exit 0 as the only silence verdict: the
+result is recorded handled and never announced, so it neither wakes a handler
+now nor returns on a later reconcile. A missing command, an error, or any other
+exit publishes the wake exactly as before, so an adapter with no notion of a
+no-op needs no change and an unknown or degraded result always reaches its
+handler. This runner still inspects nothing and still names no adapter-specific
+condition. For built-ins, silence remains independent of the keyed-answer feed
+below: suppressing an announcement never suppresses the captain's own answer.
+
+Applying a built-in result is adapter-owned through the same kind of seam. Some results
+carry no judgement at all - they must simply be applied idempotently to the
+home's own durable state - and leaving that to an agent that has to remember
+means it silently does not happen. So after publishing, `start` calls
+`bin/fm-procevent-<adapter>.sh autohandle <source-id> <sequence> <result-file>`
+and lets the adapter apply and acknowledge its own result. Exit 0 means the
+adapter fully handled it. A missing command, an error, or any other exit is not
+a failure of capture: the result stays unacknowledged and therefore eligible
+for re-announcement, so the handler still receives it exactly as before. This
+runner still inspects nothing and still names no adapter-specific condition.
+External bindings deliberately receive no autohandle operation.
+
+Built-in announcement is adapter-owned through one more seam of the same kind. An
+adapter that answers exit 0 to `bin/fm-procevent-<adapter>.sh self-announcing`
+declares that every result its autohandle fully applies is announced through a
+durable downstream channel of its own (for remote-reply, the mirrored parent
+status append the watcher's signal scan detects). For such an adapter, `start`
+runs autohandle FIRST and publishes a check wake only for what remains
+unhandled afterwards, so a fully autohandled capture never produces a second
+announcement and a byte-identical replay produces none at all. Every other
+adapter keeps the strict publish-before-apply order, because without a
+declared downstream channel an applied-and-acknowledged result would otherwise
+go silent. An unhandled result stays eligible for bounded re-announcement on
+every reconcile in both modes, exactly as before.
+
+Keyed captain answers from built-in adapters use one more seam of the same kind,
+and this runner still decides nothing about them. Some sources carry the
+captain's answer to a captain-held task. What such an answer MEANS is owned
+once, by bin/fm-captain-hold.sh's keyed-answer intake, and reaching it must not
+depend on an agent remembering. So after capture, a bound source
+has its result passed to
+`bin/fm-procevent-<adapter>.sh answers <result-file>`, and whatever that prints
+is piped straight into that one intake. The adapter reports only what the
+captain chose; the intake owns every rule about what happens next. This runner
+names no adapter, parses no result, and knows no decision rule, so a future
+built-in source needs nothing here beyond an `answers` command and a binding.
+Reconcile selections use the parallel `reconciles` adapter command and the
+binding-verified `reconcile-requests` intake, never the keyed-answer value.
+External binding responses never enter either authority-bearing intake.
+
+Feeding is deliberately independent of handling: it never acknowledges a result
+and never suppresses a wake. Recording the captain's answer is transcription,
+while ACTING on it is firstmate's judgement, so the capture stays unacknowledged
+and its `check` wake reaches the handler exactly as it would have anyway.
+
+A runner is bound to the HOME that owns it, not to the one session that armed
+it: a persistent source is meant to outlive that session, so reconcile stops a
+runner whose source is retired in a live home, and this lease is the backstop
+for a home that is GONE. Detaching a runner into its own
+process group is what lets a persistent source outlive the turn that armed it,
+and with nothing else it is also what lets a runner outlive its whole home:
+reparented to init, it keeps its blocking child - and everything that child
+spawns - running with nobody left to reap it. So every runner starts a small
+guard beside it, in its own separate process group, which re-reads the owning
+state root's lease on a bounded cadence and stops the runner's whole process
+group once that lease can no longer be proved fresh. Owner-presence operations
+refresh the lease, an attached public start keeps it fresh while its caller
+remains attached, and the watcher's reconcile cycle keeps it fresh in a live
+home. A runner exports the inherited FM_PROCEVENT_IN_RUNNER marker and every
+refresh is skipped under it, so a runner and its ordinary children do not
+certify their own owner. That rule is CONFUSED-AGENT-GRADE, the grade
+bin/fm-lease-lib.sh documents: a source that DELIBERATELY strips the marker
+can still refresh, and adversarial-grade unforgeability is out of scope (see
+docs/configuration.md). Scope is the owning state root and one runner
+generation, never a script or process name, so a live source in
+another home is untouched. See bin/fm-procevent-lib.sh for the lease itself.
+
+Ownership is machine-wide per canonical source, because separate Firstmate
+homes can share one underlying source store. A live owner is never displaced;
+only a claim whose stale owner and independently absent process group prove
+its whole generation gone is reclaimed. A crashed leader or reused pid whose
+process group still has members cannot relax ownership cleanup. Reconcile
+signals only a live identity-matched runner group and otherwise keeps the
+claim without starting a replacement.
+
+Durability boundary: see bin/fm-procevent-lib.sh. This runner proves capture
+before publication and bounded re-announcement until handled, and nothing
+about the source side of the handoff.

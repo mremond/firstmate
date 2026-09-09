@@ -1,0 +1,42 @@
+
+SCENARIO zombie
+{"argv": ["register", "lavish", "live-zombie", "--", "/usr/bin/perl", "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/zombie/source.pl", "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/zombie", "1"], "exit": 0, "seconds": 5.794, "stdout": "registered: live-zombie (lavish)", "stderr": ""}
+{"argv": ["list"], "exit": 0, "seconds": 4.516, "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-zombie                  lavish       live       0", "stderr": ""}
+before=["27273 95070 95070 S    /usr/bin/perl", "27970 27273 95070 S    /usr/bin/perl", "29380 95070 95070 S    perl", "95070 94586 95070 S    bash"]
+after TERM=["95070 94586 95070 Z    <defunct>"]
+{"argv": ["retire", "live-zombie"], "exit": 0, "seconds": 9.558, "stdout": "retired: live-zombie", "stderr": ""}
+RESULT {"scenario": "zombie", "code_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX", "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/zombie", "lease_seconds": "600", "check_seconds": "15", "commands": [{"argv": ["register", "lavish", "live-zombie", "--", "/usr/bin/perl", "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/zombie/source.pl", "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/zombie", "1"], "exit": 0, "seconds": 5.794, "stdout": "registered: live-zombie (lavish)", "stderr": ""}, {"argv": ["_start", "live-zombie"], "mode": "real child with parent delaying waitpid"}, {"argv": ["list"], "exit": 0, "seconds": 4.516, "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-zombie                  lavish       live       0", "stderr": ""}, {"argv": ["retire", "live-zombie"], "mode": "background to observe transition"}, {"argv": ["retire", "live-zombie"], "exit": 0, "seconds": 9.558, "stdout": "retired: live-zombie", "stderr": ""}], "runner": 95070, "child": 27273, "descendant": 27970, "before": ["27273 95070 95070 S    /usr/bin/perl", "27970 27273 95070 S    /usr/bin/perl", "29380 95070 95070 S    perl", "95070 94586 95070 S    bash"], "leader_transition": false, "transition_group": ["95070 94586 95070 Z    <defunct>"], "child_survived_term": false, "child_reaped": true, "retire_exit": 0, "retire_seconds": 46.495, "retire_output": "retired: live-zombie\n", "result": "fail", "error": "escalation abandoned group", "after": []}
+
+SCENARIO guard
+{"argv": ["register", "lavish", "live-guard", "--", "/usr/bin/perl", "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/guard/source.pl", "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/guard", "1"], "exit": 0, "seconds": 7.66, "stdout": "registered: live-guard (lavish)", "stderr": ""}
+{"argv": ["reconcile"], "exit": 0, "seconds": 2.21, "stdout": "reconciled: published=0 started=1 stopped=0 uncertain=0", "stderr": ""}
+{"argv": ["reconcile"], "exit": 0, "seconds": 6.221, "stdout": "reconciled: published=0 started=0 stopped=0 uncertain=0", "stderr": ""}
+{"argv": ["reconcile"], "exit": 0, "seconds": 4.696, "stdout": "reconciled: published=0 started=0 stopped=0 uncertain=0", "stderr": ""}
+{"argv": ["list"], "exit": 0, "seconds": 3.248, "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-guard                   lavish       live       0", "stderr": ""}
+before=["42324     1 42324 S    bash", "63987 42324 42324 S    /usr/bin/perl", "64365 63987 42324 S    /usr/bin/perl", "65821 42324 42324 S    perl"]
+{"argv": ["reconcile"], "exit": 0, "seconds": 3.515, "stdout": "reconciled: published=0 started=0 stopped=0 uncertain=0", "stderr": ""}
+{"argv": ["retire", "live-guard"], "exit": 0, "seconds": 3.158, "stdout": "retired: live-guard", "stderr": ""}
+RESULT {"scenario": "guard", "code_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX", "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/guard", "lease_seconds": "5", "check_seconds": "1", "commands": [{"argv": ["register", "lavish", "live-guard", "--", "/usr/bin/perl", "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/guard/source.pl", "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/guard", "1"], "exit": 0, "seconds": 7.66, "stdout": "registered: live-guard (lavish)", "stderr": ""}, {"argv": ["reconcile"], "exit": 0, "seconds": 2.21, "stdout": "reconciled: published=0 started=1 stopped=0 uncertain=0", "stderr": ""}, {"argv": ["reconcile"], "exit": 0, "seconds": 6.221, "stdout": "reconciled: published=0 started=0 stopped=0 uncertain=0", "stderr": ""}, {"argv": ["reconcile"], "exit": 0, "seconds": 4.696, "stdout": "reconciled: published=0 started=0 stopped=0 uncertain=0", "stderr": ""}, {"argv": ["list"], "exit": 0, "seconds": 3.248, "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-guard                   lavish       live       0", "stderr": ""}, {"argv": ["reconcile"], "exit": 0, "seconds": 3.515, "stdout": "reconciled: published=0 started=0 stopped=0 uncertain=0", "stderr": ""}, {"argv": ["retire", "live-guard"], "exit": 0, "seconds": 3.158, "stdout": "retired: live-guard", "stderr": ""}], "runner": 42324, "child": 63987, "descendant": 64365, "before": ["42324     1 42324 S    bash", "63987 42324 42324 S    /usr/bin/perl", "64365 63987 42324 S    /usr/bin/perl", "65821 42324 42324 S    perl"], "nominal_bound_seconds": 11, "loaded_deadline_seconds": 22, "group_gone": true, "elapsed_seconds": 14.016, "signals": "TERM 64365\nTERM 63987\n", "after": [], "result": "pass"}
+
+SCENARIO crash
+{"argv": ["register", "lavish", "live-crash", "--", "/usr/bin/perl", "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/crash/source.pl", "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22QEF43MQK49D0C6ZV1W9CX/.test-stop-validation/live-target-ready/crash", "1"], "exit": 0, "seconds": 2.547, "stdout": "registered: live-crash (lavish)", "stderr": ""}
+{"argv": ["reconcile"], "exit": 0, "seconds": 2.657, "stdout": "reconciled: published=0 started=1 stopped=0 uncertain=0", "stderr": ""}
+{"argv": ["list"], "exit": 0, "seconds": 3.141, "stdout": "SOURCE                       ADAPTER      OWNER      PENDING\nlive-crash                   lavish       live       0", "stderr": ""}
+before=["55174     1 55174 S    bash", "70648 55174 55174 R    /usr/bin/perl", "70994 70648 55174 R    /usr/bin/perl", "72357 55174 55174 S    perl"]
+{"argv": ["retire", "live-crash"], "exit": 1, "seconds": 0.856, "stdout": "", "stderr": "error: cannot confirm runner identity; source remains registered: live-crash"}
+{"argv": ["reconcile"], "exit": 0, "seconds": 2.544, "stdout": "reconciled: published=0 started=0 stopped=0 uncertain=1", "stderr": ""}
+{"argv": ["sweep-home"], "exit": 1, "seconds": 6.391, "stdout": "", "stderr": "error: cannot confirm runner identity; source remains registered: live-crash\nerror: process-event home sweep incomplete: attempted=1 failed=1"}
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX/live-stop-driver.py", line 159, in <module>
+    if runner: wait_until(lambda:not alive(-runner),10)
+               ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX/live-stop-driver.py", line 33, in wait_until
+    if fn(): return True
+       ~~^^
+  File "/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX/live-stop-driver.py", line 159, in <lambda>
+    if runner: wait_until(lambda:not alive(-runner),10)
+                                     ~~~~~^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M22QEF43MQK49D0C6ZV1W9CX/live-stop-driver.py", line 27, in alive
+    try: os.kill(pid, 0); return True
+         ~~~~~~~^^^^^^^^
+PermissionError: [Errno 1] Operation not permitted
