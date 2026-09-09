@@ -1,0 +1,13 @@
+os=Darwin bash=3.2.57(1)-release date=/bin/date touch=/usr/bin/touch caller_TZ=Europe/Paris
+requested_epoch=1761438600 observed_mtime=1761438600 file=beacon caller_TZ=Europe/Paris
+requested_epoch=1761438600 observed_mtime=1761438600 file=beacon with spaces caller_TZ=Europe/Paris
+requested_epoch=1761442200 observed_mtime=1761442200 file=beacon caller_TZ=Europe/Paris
+requested_epoch=1761442200 observed_mtime=1761442200 file=beacon with spaces caller_TZ=Europe/Paris
+requested_epoch=1788913586 observed_mtime=1788913586 file=beacon caller_TZ=Europe/Paris
+requested_epoch=1788913586 observed_mtime=1788913586 file=beacon with spaces caller_TZ=Europe/Paris
+requested_epoch=1788913286 observed_mtime=1788913286 file=beacon caller_TZ=Europe/Paris
+requested_epoch=1788913286 observed_mtime=1788913286 file=beacon with spaces caller_TZ=Europe/Paris
+invalid_epoch exit=1 output=not ok - fm_touch_epoch: date(1) accepted neither -d @<epoch> nor -r <epoch>
+missing_parent exit=1 output=touch: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21RJT04BJFXQS2RBZ90GAC4/.nm-test-phase/tmp/fm-epoch-probe.WKz97H/missing-parent/beacon: No such file or directory
+not ok - fm_touch_epoch: touch -t 202510260030.00 failed for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21RJT04BJFXQS2RBZ90GAC4/.nm-test-phase/tmp/fm-epoch-probe.WKz97H/missing-parent/beacon
+stale_backlog_lock stamp=202001010000 observed_mtime=1577833200 older_than_now=211080786

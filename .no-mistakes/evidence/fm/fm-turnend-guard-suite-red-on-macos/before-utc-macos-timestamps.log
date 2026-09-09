@@ -1,0 +1,9 @@
+Pre-UTC helper from commit 6182c507; native macOS tools; TZ=Europe/Paris
+Command: /bin/bash .nm-test-phase/timestamp-probe.sh tests/.nm-preutc-lib.sh
+os=Darwin bash=3.2.57(1)-release date=/bin/date touch=/usr/bin/touch caller_TZ=Europe/Paris
+requested_epoch=1761438600 observed_mtime=1761438600 file=beacon caller_TZ=Europe/Paris
+requested_epoch=1761438600 observed_mtime=1761438600 file=beacon with spaces caller_TZ=Europe/Paris
+requested_epoch=1761442200 observed_mtime=1761438600 file=beacon caller_TZ=Europe/Paris
+not ok - epoch changed during round-trip
+
+exit=1
