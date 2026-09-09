@@ -1,0 +1,2 @@
+Selectors: test_self_held_lock_reclaims_instead_of_deadlocking
+ok - an abandoned same-process lock hold is reclaimed; a parent's live hold is not

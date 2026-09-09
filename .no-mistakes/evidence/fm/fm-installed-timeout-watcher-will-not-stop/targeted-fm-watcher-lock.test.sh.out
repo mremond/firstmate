@@ -1,0 +1,7 @@
+ok - signaled watcher stops on a held recovery marker lock and reports what it could not persist
+ok - lock acquisition returns nonzero when owner-directory creation fails
+ok - signaled watcher reaches its deadline on owner-directory creation failure (5s)
+ok - dead-pid stale lock is reclaimed by a single acquirer
+ok - live steal mutex is not reclaimed
+ok - empty mid-acquire lock keeps a minimum grace
+ok - paused mid-acquire claimant backs off to active stealer

@@ -1,0 +1,7 @@
+START resource-mutant: pid=75046 command=['/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/mutant-resource/bin/fm-watch.sh']
+FAULT uid=501; state_mode=0o555; marker absent=True; owner-directory creation failed
+START resource-mutant-primitive: pid=78062 command=['bash', '-eu', '-c', '. "$1"; if fm_lock_try_acquire "$2"; then rc=0; else rc=$?; fi; printf "acquire returned %s\\n" "$rc"; exit "$rc"', '_', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/mutant-resource/bin/fm-wake-lib.sh', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/resource-mutant/state/.resource.lock']
+EXPECTED RED: resource-error mutant primitive still running after 6s
+BEFORE TERM: 75046 74565 75046 Ss   -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/mutant-resource/bin/fm-watch.sh
+REMAINED LIVE after 20s: 75046 74565 75046 Ss   -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/mutant-resource/bin/fm-watch.sh
+EXPECTED RED: resource-error mutant watcher exceeds unchanged 20s ceiling

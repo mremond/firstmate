@@ -1,0 +1,19 @@
+START targeted-fm-test-fixtures.test.sh: pid=7550 command=['bash', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/tests/.phase-fm-test-fixtures.test.sh']
+TARGETED fm-test-fixtures.test.sh: selectors=['test_is_live_non_zombie_separates_gone_from_unreadable']; exit=0
+ok - is_live_non_zombie separates live, gone, and an unreadable ps
+
+START targeted-fm-watcher-lock.test.sh: pid=10010 command=['bash', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/tests/.phase-fm-watcher-lock.test.sh']
+TARGETED fm-watcher-lock.test.sh: selectors=['test_shutdown_is_bounded_when_marker_lock_is_held', 'test_lock_resource_failure_returns || exit $?', 'test_shutdown_is_bounded_when_state_is_unwritable || exit $?', 'test_lock_steals_dead_pid_lock', 'test_lock_live_steal_mutex_is_not_reclaimed', 'test_lock_empty_pid_uses_minimum_grace', 'test_lock_paused_mid_acquire_claim_fails_during_steal']; exit=0
+ok - signaled watcher stops on a held recovery marker lock and reports what it could not persist
+ok - lock acquisition returns nonzero when owner-directory creation fails
+ok - signaled watcher reaches its deadline on owner-directory creation failure (5s)
+ok - dead-pid stale lock is reclaimed by a single acquirer
+ok - live steal mutex is not reclaimed
+ok - empty mid-acquire lock keeps a minimum grace
+ok - paused mid-acquire claimant backs off to active stealer
+
+START targeted-fm-pr-check-security.test.sh: pid=40363 command=['bash', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/tests/.phase-fm-pr-check-security.test.sh']
+TARGETED fm-pr-check-security.test.sh: selectors=['set -e', 'test_custom_snapshot_cleanup_on_signal', 'test_returned_custom_check_descendants_are_drained']; exit=0
+ok - watcher signals promptly stop custom checks and clean private state
+ok - returned custom check descendants are drained on installed and fallback timeout paths
+

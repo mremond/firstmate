@@ -1,0 +1,40 @@
+START normal: pid=22152 command=['/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-watch.sh']
+BEFORE TERM: 22152 18806 22152 Ss   -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-watch.sh
+AFTER TERM normal: exit=1; elapsed=0.948s; (pid gone)
+STDERR normal: (empty)
+PERSISTED normal recovery marker:
+pending:downtime:28766.1788955867.wk365a
+
+PASS ordinary signal shutdown publishes downtime and releases singleton
+START held: pid=29795 command=['/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-watch.sh']
+START holder: pid=35683 command=['bash', '-eu', '-c', '. "$1"; fm_lock_acquire_wait "$2"; printf "ready\\n" > "$3"; sleep 300', '_', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-wake-lib.sh', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/held/state/.watcher-down.lock', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/held/ready']
+BEFORE TERM: 29795 18806 29795 Ss   -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-watch.sh
+AFTER TERM held: exit=1; elapsed=5.451s; (pid gone)
+STDERR held: watcher: recovery state could not be persisted within 5s (marker lock held by pid 35683); stopping and retaining stale lock evidence
+PRESERVED marker holder=35683, holder state=35683 18806 35683 Ss   -      sleep 300, stale watcher owner=29795
+START held-restart: pid=44787 command=['/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-watch.sh']
+RESTART exit=0; stdout=check: rearm-resurface; stderr=
+PASS held lock bounds shutdown, leaves foreign holder intact, and allows recovery on next start
+START resource: pid=67737 command=['/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-watch.sh']
+FAULT uid=501; state_mode=0o555; marker absent=True; owner-directory creation failed
+START resource-primitive: pid=74100 command=['bash', '-eu', '-c', '. "$1"; if fm_lock_try_acquire "$2"; then rc=0; else rc=$?; fi; printf "acquire returned %s\\n" "$rc"; exit "$rc"', '_', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-wake-lib.sh', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/resource/state/.resource.lock']
+PRIMITIVE returned rc=1 in 0.146s; stdout=acquire returned 1
+BEFORE TERM: 67737 18806 67737 Ss   -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-watch.sh
+AFTER TERM resource: exit=1; elapsed=4.464s; (pid gone)
+STDERR resource: watcher: recovery state could not be persisted within 5s (marker lock held by pid unknown); stopping and retaining stale lock evidence
+PASS resource failure returns from acquisition and signalled watcher reaches reporting deadline
+seed owner=82556
+START abandoned-stealer: pid=83116 command=['bash', '-eu', '-c', '. "$1"; fm_lock_try_acquire "$2"', '_', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-wake-lib.sh', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/abandoned/state/.watch.lock']
+CRASH POINT: primary absent; .steal owner=83116; 83116 18806 83116 Ts   -      bash -eu -c . "$1"; fm_lock_try_acquire "$2" _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/abandoned/state/.watch.lock
+Killed stealer after primary removal and before replacement
+NEXT ACQUIRER exit=0; stdout=acquired pid=84222 stored=84222; stderr=
+START abandoned-restart: pid=85815 command=['/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-watch.sh']
+NEXT WATCHER exit=0; stdout=check: rearm-resurface; stderr=
+PASS abandoned steal recovery permits next acquisition and watcher startup
+REGISTER custom exit=0; output=registered: state/custom.check.sh 
+START custom-fallback: pid=92707 command=['/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-watch.sh']
+RETURNED CHECK: watcher=92707 18806 92707 Ss   -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-watch.sh; recorded descendant=(pid gone)
+BEFORE TERM: 92707 18806 92707 Ss   -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/bin/fm-watch.sh
+AFTER TERM custom-fallback: exit=1; elapsed=0.535s; (pid gone)
+STDERR custom-fallback: (empty)
+PASS real fallback custom check returns, watcher exits in 0.535s, child state=gone, no sentinel or snapshot remains

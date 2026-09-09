@@ -1,0 +1,2 @@
+Selectors: test_wedge_alarm_backgrounded_command_times_out_and_reaps_descendant
+ok - a backgrounded command notifier remains bounded until its process group is reaped

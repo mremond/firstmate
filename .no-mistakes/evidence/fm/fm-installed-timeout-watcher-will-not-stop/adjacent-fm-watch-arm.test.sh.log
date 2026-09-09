@@ -1,0 +1,3 @@
+Selectors: test_marker_publish_failure_retains_recovery_evidence
+watcher: recovery state could not be persisted; retaining stale lock evidence
+ok - watch-arm: marker publication failure retains stale-lock recovery evidence

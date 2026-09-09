@@ -1,0 +1,180 @@
+diagnostic-live: expected rejection exit=1
+# fallback-timeout watcher still live 19s after TERM (150 polls); state below
+# descendant tree (watcher pid 19229; recorded child pid 36543): pid ppid pgid stat wchan args
+19229 15983 15983 S    -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/diagnostic-runtime/bin/fm-watch.sh
+  71853 19229 15983 R    -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/diagnostic-runtime/bin/fm-watch.sh
+  37097 19229 15983 S    -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/diagnostic-branch.sh
+    37104 37097 15983 S    -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/diagnostic-leaf.sh
+      37154 37104 15983 S    -      sleep 90
+36543     1 36521 S    -      perl -e $SIG{TERM}="IGNORE"; open my $ready, ">", $ENV{FM_TEST_DESCENDANT_READY} or die $!; print {$ready} "ready\n"; close $ready; select undef, undef, undef, 90; open my $sentinel, ">", $ENV{FM_TEST_DESCENDANT_SENTINEL} or die $!; print {$sentinel} "late\n"; close $sentinel; select undef, undef, undef, 1
+# fallback-timeout watcher stderr tail:
+injected-stop-refusal
+not ok - fallback-timeout watcher did not stop after the direct check returned
+
+diagnostic-unknown: expected rejection exit=1
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 74276; UNKNOWN, not live
+# fallback-timeout watcher still unreadable 17s after TERM (150 polls); state below
+# descendant tree (watcher pid 74276; recorded child pid 80007): pid ppid pgid stat wchan args
+74276 72898 72898 S    -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/diagnostic-runtime/bin/fm-watch.sh
+  10839 74276 72898 S    -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/diagnostic-runtime/bin/fm-watch.sh
+    10840 10839 72898 S    -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/diagnostic-runtime/bin/fm-inactive-reconcile.sh scan
+      10923 10840 72898 S    -      (bash)
+        10927 10923 72898 S    -      (bash)
+          10933 10927 72898 R    -      (bash)
+  80601 74276 72898 S    -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/diagnostic-branch.sh
+    80611 80601 72898 S    -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22Z7YQYD4K70MWCSC6FV3P4/.test-phase/diagnostic-leaf.sh
+      80626 80611 72898 S    -      sleep 90
+80007     1 79966 S    -      perl -e $SIG{TERM}="IGNORE"; open my $ready, ">", $ENV{FM_TEST_DESCENDANT_READY} or die $!; print {$ready} "ready\n"; close $ready; select undef, undef, undef, 90; open my $sentinel, ">", $ENV{FM_TEST_DESCENDANT_SENTINEL} or die $!; print {$sentinel} "late\n"; close $sentinel; select undef, undef, undef, 1
+# fallback-timeout watcher stderr tail:
+injected-stop-refusal
+not ok - fallback-timeout watcher liveness was unreadable after the direct check returned
