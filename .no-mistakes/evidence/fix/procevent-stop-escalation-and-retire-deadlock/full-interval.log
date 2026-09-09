@@ -1,0 +1,1 @@
+not ok - the guard exceeded its bound: group still running 17.3s after the last owner activity, against a documented bound of 15s (lease term 8s + one 6s check interval + 1s stop)

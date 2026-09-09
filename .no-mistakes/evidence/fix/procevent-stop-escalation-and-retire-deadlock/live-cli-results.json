@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Expired blocked source is reaped by its owner guard",
+    "result": "pass",
+    "live": true,
+    "detail": "Owner expiry triggered TERM then KILL; blocked child and group gone after 11.529s"
+  },
+  {
+    "name": "Reconcile stops blocked unregistered source before re-registration",
+    "result": "pass",
+    "live": true,
+    "detail": "Reconcile stopped blocked unregistered group in 5.153s; later re-registration started one new generation after old group extinction"
+  },
+  {
+    "name": "Unproved cold leaderless group is refused without signalling",
+    "result": "pass",
+    "live": true,
+    "detail": "Unrelated leader death refused retirement, preserved registration, and left the unproved group untouched; test owner then cleaned it up"
+  }
+]

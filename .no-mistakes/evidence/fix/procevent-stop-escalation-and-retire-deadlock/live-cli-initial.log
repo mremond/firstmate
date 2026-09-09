@@ -1,0 +1,145 @@
+
+SCENARIO: Deferred TERM trap with a genuinely blocked foreground tail
+TERM sent to shell pid=84421; blocked tail pid=84938; after 0.5s both alive, trap has not run
+OBSERVED: Shell deferred its TERM trap until the genuinely blocked tail child was killed; TERM trap handled
+
+SCENARIO: Retire healthy source without forced-kill deadlock
+$ FM_HOME=healthy fm-procevent.sh register lavish live-healthy -- /usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-healthy (lavish) [exit 0]
+Before retire
+(88431, 88418, 88431, 'S', 'bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _start live-healthy')
+(89242, 1, 89242, 'S', 'bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _owner-watchdog live-healthy 88431 Wed Sep  9 23:37:25 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _start live-healthy /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/healthy/state/procevent/.owner-guard-ready.stCaK3 16777234 54002600')
+(89751, 88431, 88431, 'S', '/usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log')
+(89837, 88431, 88431, 'S', 'perl -e \\012      use strict;\\012      use warnings;\\012      my $limit = shift;\\012      my ($written, $truncated) = (0, 0);\\012      while (1) {\\012        my $count = sysread(STDIN, my $buffer, 65536);\\012        exit 2 unless defined $count;\\012        last if $count == 0;\\012        my $take = $written < $limit ? $limit - $written : 0;\\012        $take = $count if $take > $count;\\012        if ($take > 0) {\\012          my $offset = 0;\\012          while ($offset < $take) {\\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\\012            exit 2 unless defined $count_written;\\012            $offset += $count_written;\\012          }\\012          $written += $take;\\012        }\\012        $truncated = 1 if $take < $count;\\012      }\\012      exit($truncated ? 3 : 0);\\012     1048576')
+$ FM_HOME=healthy fm-procevent.sh retire live-healthy
+retired: live-healthy [exit 0]
+attached start exit=143; retire=0.648s
+OBSERVED: Healthy tail source and group exited on TERM; attached start=143, retirement=0.648s
+
+SCENARIO: Retire blocked source after TERM ends its proved leader
+$ FM_HOME=blocked-retire fm-procevent.sh register lavish live-blocked -- /Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/deferred-poll.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/blocked-retire/poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-blocked (lavish) [exit 0]
+Blocked foreground child before retirement
+(91692, 91688, 91692, 'S', 'bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _start live-blocked')
+(92293, 1, 92293, 'S', 'bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _owner-watchdog live-blocked 91692 Wed Sep  9 23:37:27 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _start live-blocked /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/blocked-retire/state/procevent/.owner-guard-ready.HwSTwM 16777234 54002685')
+(92886, 91692, 91692, 'S', '/bin/bash /Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/deferred-poll.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/blocked-retire/poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log')
+(92893, 92886, 91692, 'S', '/usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log')
+(92972, 91692, 91692, 'S', 'perl -e \\012      use strict;\\012      use warnings;\\012      my $limit = shift;\\012      my ($written, $truncated) = (0, 0);\\012      while (1) {\\012        my $count = sysread(STDIN, my $buffer, 65536);\\012        exit 2 unless defined $count;\\012        last if $count == 0;\\012        my $take = $written < $limit ? $limit - $written : 0;\\012        $take = $count if $take > $count;\\012        if ($take > 0) {\\012          my $offset = 0;\\012          while ($offset < $take) {\\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\\012            exit 2 unless defined $count_written;\\012            $offset += $count_written;\\012          }\\012          $written += $take;\\012        }\\012        $truncated = 1 if $take < $count;\\012      }\\012      exit($truncated ? 3 : 0);\\012     1048576')
+Runner gone, real tail still survives TERM before escalation
+(92293, 1, 92293, 'S', 'bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _owner-watchdog live-blocked 91692 Wed Sep  9 23:37:27 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _start live-blocked /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/blocked-retire/state/procevent/.owner-guard-ready.HwSTwM 16777234 54002685')
+(92886, 1, 91692, 'S', '/bin/bash /Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/deferred-poll.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/blocked-retire/poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log')
+(92893, 92886, 91692, 'S', '/usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log')
+retired: live-blocked [exit 0, 5.300s]
+OBSERVED: TERM ended runner while blocked tail survived; KILL then removed full group in 5.300s
+
+SCENARIO: Accepted decimal and odd intervals run with exact half spacing
+$ FM_HOME=interval-08 fm-procevent.sh register lavish live-interval-08 -- /usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-interval-08 (lavish) [exit 0]
+$ FM_HOME=interval-08 fm-procevent.sh reconcile
+reconciled: published=0 started=1 stopped=0 uncertain=0 [exit 0]
+configured=08; real guard child: (475, 288, 288, 'S', 'sleep 4')
+$ FM_HOME=interval-08 fm-procevent.sh retire live-interval-08
+retired: live-interval-08 [exit 0]
+$ FM_HOME=interval-010 fm-procevent.sh register lavish live-interval-010 -- /usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-interval-010 (lavish) [exit 0]
+$ FM_HOME=interval-010 fm-procevent.sh reconcile
+reconciled: published=0 started=1 stopped=0 uncertain=0 [exit 0]
+configured=010; real guard child: (2702, 2447, 2447, 'S', 'sleep 5')
+$ FM_HOME=interval-010 fm-procevent.sh retire live-interval-010
+retired: live-interval-010 [exit 0]
+$ FM_HOME=interval-1 fm-procevent.sh register lavish live-interval-1 -- /usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-interval-1 (lavish) [exit 0]
+$ FM_HOME=interval-1 fm-procevent.sh reconcile
+reconciled: published=0 started=1 stopped=0 uncertain=0 [exit 0]
+configured=1; real guard child: (5324, 5127, 5127, 'S', 'sleep 0.5')
+$ FM_HOME=interval-1 fm-procevent.sh retire live-interval-1
+retired: live-interval-1 [exit 0]
+$ FM_HOME=interval-3 fm-procevent.sh register lavish live-interval-3 -- /usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-interval-3 (lavish) [exit 0]
+$ FM_HOME=interval-3 fm-procevent.sh reconcile
+reconciled: published=0 started=1 stopped=0 uncertain=0 [exit 0]
+configured=3; real guard child: (8492, 8045, 8045, 'S', 'sleep 1.5')
+$ FM_HOME=interval-3 fm-procevent.sh retire live-interval-3
+retired: live-interval-3 [exit 0]
+OBSERVED: 08 -> 4s; 010 -> 5s; 1 -> 0.5s; 3 -> 1.5s; every listener started and retired
+
+SCENARIO: Isolated unreadable owner inputs preserve service; repeated failure stops it
+$ FM_HOME=debounce fm-procevent.sh register lavish live-debounce -- /usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-debounce (lavish) [exit 0]
+$ FM_HOME=debounce fm-procevent.sh reconcile
+reconciled: published=0 started=1 stopped=0 uncertain=0 [exit 0]
+lease unavailable during guard sleep pid=11760
+guard completed the failed read and started next sleep pid=14676; runner remains alive
+lease restored; two more read cycles completed; group 10960 alive
+state root unavailable during guard sleep pid=26636
+guard completed the failed read and started next sleep pid=31958; runner remains alive
+state root restored; two more read cycles completed; group 10960 alive
+Persistent missing lease: group stopped after 4.213s; alive after first failed read
+$ FM_HOME=debounce fm-procevent.sh retire live-debounce
+retired: live-debounce [exit 0]
+OBSERVED: Single missing lease and single unavailable state-root read each preserved the listener; two consecutive missing lease reads stopped it
+
+SCENARIO: Expired detached source stops while another live home survives
+$ FM_HOME=keep-live fm-procevent.sh register lavish live-keeper -- /usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-keeper (lavish) [exit 0]
+$ FM_HOME=expiry fm-procevent.sh register lavish live-expiry -- /usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-expiry (lavish) [exit 0]
+$ FM_HOME=expiry fm-procevent.sh reconcile
+reconciled: published=0 started=1 stopped=0 uncertain=0 [exit 0]
+Detached expiring source
+(44862, 1, 44862, 'R', 'bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _start live-expiry')
+(45225, 1, 45225, 'S', 'bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _owner-watchdog live-expiry 44862 Wed Sep  9 23:38:04 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _start live-expiry /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/expiry/state/procevent/.owner-guard-ready.wHz72C 16777234 54003272')
+(45699, 44862, 44862, 'R', '(bash)')
+(45721, 45699, 44862, 'Z', '<defunct>')
+Last-owner-activity to observed extinction=5.622s; documented healthy bound=2+1+4+1=8s; deadline with additive slack=10s
+$ FM_HOME=keep-live fm-procevent.sh retire live-keeper
+retired: live-keeper [exit 0]
+attached start exit=143; retire=0.679s
+$ FM_HOME=expiry fm-procevent.sh retire live-expiry
+retired: live-expiry [exit 0]
+OBSERVED: Orphan stopped 5.622s after lease refresh; independently refreshed home remained alive
+
+SCENARIO: Unproved cold leaderless group is refused without signalling
+$ FM_HOME=cold-leaderless fm-procevent.sh register lavish live-cold -- /usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-cold (lavish) [exit 0]
+$ FM_HOME=cold-leaderless fm-procevent.sh reconcile
+reconciled: published=0 started=1 stopped=0 uncertain=0 [exit 0]
+$ FM_HOME=cold-leaderless fm-procevent.sh retire live-cold
+error: cannot confirm runner identity; source remains registered: live-cold [exit 1]
+Unproved surviving group untouched after retirement refusal
+(52640, 1, 52640, 'S', 'bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _owner-watchdog live-cold 52110 Wed Sep  9 23:38:11 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _start live-cold /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/cold-leaderless/state/procevent/.owner-guard-ready.iLxkTq 16777234 54003359')
+(52993, 1, 52110, 'S', '/usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log')
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 75, in case
+    detail=fn();results.append(dict(name=name,result='pass',live=True,detail=detail));log('OBSERVED: '+str(detail))
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 178, in refusal
+    os.killpg(pid,signal.SIGKILL);wait_for(lambda:not group_alive(pid))
+                                  ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 14, in wait_for
+    value=fn()
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 178, in <lambda>
+    os.killpg(pid,signal.SIGKILL);wait_for(lambda:not group_alive(pid))
+                                                      ~~~~~~~~~~~^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 22, in group_alive
+    try:os.killpg(pid,0);return True
+        ~~~~~~~~~^^^^^^^
+PermissionError: [Errno 1] Operation not permitted
+Remaining processes referencing the isolated test home: []
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 189, in <module>
+    case('Unproved cold leaderless group is refused without signalling',refusal)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 75, in case
+    detail=fn();results.append(dict(name=name,result='pass',live=True,detail=detail));log('OBSERVED: '+str(detail))
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 178, in refusal
+    os.killpg(pid,signal.SIGKILL);wait_for(lambda:not group_alive(pid))
+                                  ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 14, in wait_for
+    value=fn()
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 178, in <lambda>
+    os.killpg(pid,signal.SIGKILL);wait_for(lambda:not group_alive(pid))
+                                                      ~~~~~~~~~~~^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 22, in group_alive
+    try:os.killpg(pid,0);return True
+        ~~~~~~~~~^^^^^^^
+PermissionError: [Errno 1] Operation not permitted

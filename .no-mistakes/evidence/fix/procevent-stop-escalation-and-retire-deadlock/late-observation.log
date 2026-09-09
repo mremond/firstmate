@@ -1,0 +1,1 @@
+not ok - the guard's completion was first observed 18.6s after the last owner activity, beyond its 17s deadline

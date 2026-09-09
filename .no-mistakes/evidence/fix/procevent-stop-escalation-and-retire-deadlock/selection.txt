@@ -1,0 +1,3 @@
+Target: 77e799275d351c954a2a8f25e9ce124db0bfaa32
+Tree: 70dbae1532a345d3adbdcd949e621e0be14b0b0e
+Selected executable cases from tests/fm-procevent.test.sh: shared setup before inert-with-nothing-configured; lifetime block from accidentally-orphaned-runner through end. ROOT resolved to this worktree; verdict renamed to identify targeted subset. Assertions unchanged.

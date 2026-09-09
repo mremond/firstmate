@@ -1,0 +1,76 @@
+Process-event live validation
+Target: 77e799275d351c954a2a8f25e9ce124db0bfaa32
+Tree: 70dbae1532a345d3adbdcd949e621e0be14b0b0e
+
+Live surface: the unchanged production fm-procevent.sh public CLI, with isolated FM_HOME and claim storage, running /usr/bin/tail -f as an actual blocking source. No Lavish server or model harness is claimed. Real filesystem interruptions exercise the lease and state-root debounce without substituting dependencies.
+
+Deferred TERM trap with a genuinely blocked foreground tail
+Shell deferred its TERM trap until the genuinely blocked tail child was killed; TERM trap handled
+
+Retire healthy source without forced-kill deadlock
+Healthy tail source and group exited on TERM; attached start=143, retirement=0.648s
+
+Retire blocked source after TERM ends its proved leader
+TERM ended runner while blocked tail survived; KILL then removed full group in 5.300s
+
+Accepted decimal and odd intervals run with exact half spacing
+08 -> 4s; 010 -> 5s; 1 -> 0.5s; 3 -> 1.5s; every listener started and retired
+
+Isolated unreadable owner inputs preserve service; repeated failure stops it
+Single missing lease and single unavailable state-root read each preserved the listener; two consecutive missing lease reads stopped it
+
+Expired detached source stops while another live home survives
+Orphan stopped 5.622s after lease refresh; independently refreshed home remained alive
+
+Unproved cold leaderless group is refused without signalling
+Unrelated leader death refused retirement, preserved registration, and left the unproved group untouched; test owner then cleaned it up
+
+Expired blocked source is reaped by its owner guard
+Owner expiry triggered TERM then KILL; blocked child and group gone after 11.529s
+
+Reconcile stops blocked unregistered source before re-registration
+Reconcile stopped blocked unregistered group in 5.153s; later re-registration started one new generation after old group extinction
+
+Targeted existing lifetime cases (fault-injection evidence, separate from live checks):
+guard phase: fresh read 6.656-6.692s, expiry 8s, two full intervals could not finish before 18.656s (deadline 17s)
+guard bound: lease=7s check=6s reaped 13.6s after the last owner activity, documented bound 15s
+decimal interval: 08 halves to 4s and its listener started
+decimal interval: 010 halves to 5s and its listener started
+ordinary stop: start status=143 retirement=749ms sampled windows=5086/4907ms
+
+Counterfactual and control runs:
+RUN base-healthy
+{"name": "base-healthy", "exit": 1, "expected": "RED", "matched": true, "elapsed": 18.6, "evidence": "base-healthy.log"}
+not ok - the runner did not exit on TERM (start status=137, retirement=5453ms, sampled windows=5029/4984ms)
+RUN no-decimal
+{"name": "no-decimal", "exit": 1, "expected": "RED", "matched": true, "elapsed": 26.41, "evidence": "no-decimal.log"}
+not ok - a zero-prefixed decimal interval (08) prevented the listener from starting
+RUN full-interval
+{"name": "full-interval", "exit": 1, "expected": "RED", "matched": true, "elapsed": 21.65, "evidence": "full-interval.log"}
+not ok - the guard exceeded its bound: group still running 17.3s after the last owner activity, against a documented bound of 15s (lease term 8s + one 6s check interval + 1s stop)
+RUN full-interval-delayed
+{"name": "full-interval-delayed", "exit": 1, "expected": "RED", "matched": true, "elapsed": 24.74, "evidence": "full-interval-delayed.log"}
+not ok - the guard exceeded its bound: group still running 17.2s after the last owner activity, against a documented bound of 15s (lease term 8s + one 6s check interval + 1s stop)
+RUN correct-delayed
+{"name": "correct-delayed", "exit": 0, "expected": "GREEN", "matched": true, "elapsed": 20.1, "evidence": "correct-delayed.log"}
+guard phase: fresh read 6.619-6.636s, expiry 8s, two full intervals could not finish before 18.619s (deadline 17s)
+guard bound: lease=7s check=6s reaped 13.8s after the last owner activity, documented bound 15s
+RUN missing-phase
+{"name": "missing-phase", "exit": 1, "expected": "RED", "matched": true, "elapsed": 16.82, "evidence": "missing-phase.log"}
+not ok - the bound fixture could not establish the required pre-expiry guard-read phase
+RUN single-read-debounce
+{"name": "single-read-debounce", "exit": 1, "expected": "RED", "matched": true, "elapsed": 7.3, "evidence": "single-read-debounce.log"}
+not ok - one unreadable lease read ended a runner whose home was still alive
+RUN single-read-bound
+{"name": "single-read-bound", "exit": 0, "expected": "GREEN", "matched": true, "elapsed": 15.48, "evidence": "single-read-bound.log"}
+guard phase: fresh read 7.620-7.722s, expiry 8s, two full intervals could not finish before 19.620s (deadline 17s)
+guard bound: lease=7s check=6s reaped 12.0s after the last owner activity, documented bound 15s
+
+Driver setup corrections: the first cold-leaderless run verified refusal but its cleanup probe encountered transient EPERM; the retry exposed a missing wait for the tail child. The driver now treats EPERM conservatively as still alive and requires an observed running tail before crashing its leader. The final rerun passed and found no test-home processes. These were evidence-driver setup faults, not production failures. Original transcripts are retained.
+
+Full repository tests, lint, formatting, static analysis, PR/CI and pipeline-control phases were not run.
+
+Late-observation adversary (expected RED, observed exit 1):
+not ok - the guard's completion was first observed 18.6s after the last owner activity, beyond its 17s deadline
+
+Cleanup: no processes reference the isolated test directory; temporary driver homes and mutant source copies removed; worktree clean; target commit and tree unchanged.

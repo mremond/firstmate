@@ -1,0 +1,3 @@
+guard phase: fresh read 7.620-7.722s, expiry 8s, two full intervals could not finish before 19.620s (deadline 17s)
+guard bound: lease=7s check=6s reaped 12.0s after the last owner activity, documented bound 15s
+ok - an orphaned runner is reaped within the lease plus ONE check interval

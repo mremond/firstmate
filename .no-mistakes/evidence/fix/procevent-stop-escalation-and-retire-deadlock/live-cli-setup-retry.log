@@ -1,0 +1,24 @@
+
+SCENARIO: Unproved cold leaderless group is refused without signalling
+$ FM_HOME=cold-leaderless fm-procevent.sh register lavish live-cold -- /usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-cold (lavish) [exit 0]
+$ FM_HOME=cold-leaderless fm-procevent.sh reconcile
+reconciled: published=0 started=1 stopped=0 uncertain=0 [exit 0]
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 77, in case
+    detail=fn();results.append(dict(name=name,result='pass',live=True,detail=detail));log('OBSERVED: '+str(detail))
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 175, in refusal
+    os.kill(pid,signal.SIGKILL);wait_for(lambda:not alive(pid),label='unrelated crash ends leader');assert group_alive(pid)
+                                                                                                           ~~~~~~~~~~~^^^^^
+AssertionError
+Remaining processes referencing the isolated test home: []
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 191, in <module>
+    case('Unproved cold leaderless group is refused without signalling',refusal)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 77, in case
+    detail=fn();results.append(dict(name=name,result='pass',live=True,detail=detail));log('OBSERVED: '+str(detail))
+  File "/Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/live-cli.py", line 175, in refusal
+    os.kill(pid,signal.SIGKILL);wait_for(lambda:not alive(pid),label='unrelated crash ends leader');assert group_alive(pid)
+                                                                                                           ~~~~~~~~~~~^^^^^
+AssertionError

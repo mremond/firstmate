@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Deferred TERM trap with a genuinely blocked foreground tail",
+    "result": "pass",
+    "live": true,
+    "detail": "Shell deferred its TERM trap until the genuinely blocked tail child was killed; TERM trap handled"
+  },
+  {
+    "name": "Retire healthy source without forced-kill deadlock",
+    "result": "pass",
+    "live": true,
+    "detail": "Healthy tail source and group exited on TERM; attached start=143, retirement=0.648s"
+  },
+  {
+    "name": "Retire blocked source after TERM ends its proved leader",
+    "result": "pass",
+    "live": true,
+    "detail": "TERM ended runner while blocked tail survived; KILL then removed full group in 5.300s"
+  },
+  {
+    "name": "Accepted decimal and odd intervals run with exact half spacing",
+    "result": "pass",
+    "live": true,
+    "detail": "08 -> 4s; 010 -> 5s; 1 -> 0.5s; 3 -> 1.5s; every listener started and retired"
+  },
+  {
+    "name": "Isolated unreadable owner inputs preserve service; repeated failure stops it",
+    "result": "pass",
+    "live": true,
+    "detail": "Single missing lease and single unavailable state-root read each preserved the listener; two consecutive missing lease reads stopped it"
+  },
+  {
+    "name": "Expired detached source stops while another live home survives",
+    "result": "pass",
+    "live": true,
+    "detail": "Orphan stopped 5.622s after lease refresh; independently refreshed home remained alive"
+  },
+  {
+    "name": "Unproved cold leaderless group is refused without signalling",
+    "result": "pass",
+    "live": true,
+    "detail": "Unrelated leader death refused retirement, preserved registration, and left the unproved group untouched; test owner then cleaned it up"
+  },
+  {
+    "name": "Expired blocked source is reaped by its owner guard",
+    "result": "pass",
+    "live": true,
+    "detail": "Owner expiry triggered TERM then KILL; blocked child and group gone after 11.529s"
+  },
+  {
+    "name": "Reconcile stops blocked unregistered source before re-registration",
+    "result": "pass",
+    "live": true,
+    "detail": "Reconcile stopped blocked unregistered group in 5.153s; later re-registration started one new generation after old group extinction"
+  }
+]

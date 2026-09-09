@@ -1,154 +1,48 @@
-Host: Darwin mac-mini 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:22 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T8132 arm64
-Base: b84e0e362face25f3dd8945297a3df1320d7668c; target: 64fa4b726f64f57a428b685eb906206d8dc6e7cd
-[base-healthy-retire] $ fm-procevent.sh register lavish base-healthy-retire -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/quiet.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base-healthy-retire/poll => status=0 elapsed=0.311s
-registered: base-healthy-retire (lavish)
 
-[base-healthy-retire] runner: 89882 89872 89882 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base/bin/fm-procevent.sh _start base-healthy-retire
-[base-healthy-retire] listener/descendant: 91672 91334 89882 S    sleep 120
-[base-healthy-retire] $ fm-procevent.sh retire base-healthy-retire => status=0 elapsed=5.302s
-retired: base-healthy-retire
+SCENARIO: Expired blocked source is reaped by its owner guard
+$ FM_HOME=blocked-expiry fm-procevent.sh register lavish live-blocked-expiry -- /Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/deferred-poll.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/blocked-expiry/poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-blocked-expiry (lavish) [exit 0]
+$ FM_HOME=blocked-expiry fm-procevent.sh reconcile
+reconciled: published=0 started=1 stopped=0 uncertain=0 [exit 0]
+Expired-owner test with genuinely blocked foreground child
+(46757, 1, 46757, 'S', 'bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _start live-blocked-expiry')
+(48539, 1, 48539, 'S', 'bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _owner-watchdog live-blocked-expiry 46757 Wed Sep  9 23:40:43 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _start live-blocked-expiry /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/blocked-expiry/state/procevent/.owner-guard-ready.t3iOGy 16777234 54005936')
+(50279, 46757, 46757, 'S', '/bin/bash /Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/deferred-poll.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/blocked-expiry/poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log')
+(50376, 46757, 46757, 'S', 'perl -e \\012      use strict;\\012      use warnings;\\012      my $limit = shift;\\012      my ($written, $truncated) = (0, 0);\\012      while (1) {\\012        my $count = sysread(STDIN, my $buffer, 65536);\\012        exit 2 unless defined $count;\\012        last if $count == 0;\\012        my $take = $written < $limit ? $limit - $written : 0;\\012        $take = $count if $take > $count;\\012        if ($take > 0) {\\012          my $offset = 0;\\012          while ($offset < $take) {\\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\\012            exit 2 unless defined $count_written;\\012            $offset += $count_written;\\012          }\\012          $written += $take;\\012        }\\012        $truncated = 1 if $take < $count;\\012      }\\012      exit($truncated ? 3 : 0);\\012     1048576')
+(50436, 50279, 46757, 'S', '/usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log')
+Guard TERM ended runner 46757, blocked tail 50436 still alive
+Blocked orphan group gone 11.529s after last owner activity; bound=2+1+4+4=11s plus 2s additive slack
+$ FM_HOME=blocked-expiry fm-procevent.sh retire live-blocked-expiry
+retired: live-blocked-expiry [exit 0]
+OBSERVED: Owner expiry triggered TERM then KILL; blocked child and group gone after 11.529s
 
-OBSERVATION {"name": "base-healthy-retire", "passed": false, "cli_status": 0, "start_exit_status": 137, "retirement_seconds": 5.302, "group_gone": true, "claim_removed": true}
-[base-other-live-home] $ fm-procevent.sh register lavish base-other-live-home -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/quiet.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base-other-live-home/poll => status=0 elapsed=0.169s
-registered: base-other-live-home (lavish)
+SCENARIO: Reconcile stops blocked unregistered source before re-registration
+$ FM_HOME=reconcile-stop fm-procevent.sh register lavish live-reconcile -- /Users/mremond/.no-mistakes/evidence/01M2414ECRE7T77CAXN49RSA2F/deferred-poll.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/reconcile-stop/poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-reconcile (lavish) [exit 0]
+$ FM_HOME=reconcile-stop fm-procevent.sh reconcile
+reconciled: published=0 started=1 stopped=0 uncertain=0 [exit 0]
+$ FM_HOME=reconcile-stop fm-procevent.sh reconcile
+reconciled: published=0 started=0 stopped=1 uncertain=0 [exit 0]
+$ FM_HOME=reconcile-stop fm-procevent.sh register lavish live-reconcile -- /usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-reconcile (lavish) [exit 0]
+$ FM_HOME=reconcile-stop fm-procevent.sh reconcile
+reconciled: published=0 started=1 stopped=0 uncertain=0 [exit 0]
+$ FM_HOME=reconcile-stop fm-procevent.sh retire live-reconcile
+retired: live-reconcile [exit 0]
+OBSERVED: Reconcile stopped blocked unregistered group in 5.153s; later re-registration started one new generation after old group extinction
 
-[base-other-live-home] runner: 8192  8183  8192 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base/bin/fm-procevent.sh _start base-other-live-home
-[base-other-live-home] listener/descendant: 9782  9761  8192 S    sleep 120
-[base-owner-expiry] $ fm-procevent.sh register lavish base-owner-expiry -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base-owner-expiry/poll => status=0 elapsed=0.176s
-registered: base-owner-expiry (lavish)
-
-[base-owner-expiry] $ fm-procevent.sh reconcile => status=0 elapsed=0.123s
-reconciled: published=0 started=1 stopped=0 uncertain=0
-
-[base-owner-expiry] runner: 11056     1 11056 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base/bin/fm-procevent.sh _start base-owner-expiry
-[base-owner-expiry] listener/descendant: 12428 11056 11056 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base-owner-expiry/poll
-[base-owner-expiry] $ fm-procevent.sh reconcile => status=0 elapsed=0.241s
-reconciled: published=0 started=0 stopped=0 uncertain=0
-
-[base-owner-expiry] after TERM: runner=absent; child=12428     1 11056 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/base-owner-expiry/poll; signals=['signalled']
-OBSERVATION {"name": "base-owner-expiry", "passed": false, "term_after_seconds": 7.869, "observed_seconds": 19.972, "group_gone": false, "child_alive": true, "other_home_alive": true, "lease_seconds": 5, "check_seconds": 1, "signals": ["signalled"]}
-[base-owner-expiry] teardown-only KILL of test-owned group 11056
-[base-other-live-home] teardown-only KILL of test-owned group 8192
-[target-healthy-retire] $ fm-procevent.sh register lavish target-healthy-retire -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/quiet.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-healthy-retire/poll => status=0 elapsed=0.165s
-registered: target-healthy-retire (lavish)
-
-[target-healthy-retire] runner: 72595 72572 72595 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/bin/fm-procevent.sh _start target-healthy-retire
-[target-healthy-retire] listener/descendant: 74163 74137 72595 S    sleep 120
-[target-healthy-retire] $ fm-procevent.sh retire target-healthy-retire => status=0 elapsed=0.516s
-retired: target-healthy-retire
-
-OBSERVATION {"name": "target-healthy-retire", "passed": true, "cli_status": 0, "start_exit_status": 143, "retirement_seconds": 0.516, "group_gone": true, "claim_removed": true}
-[target-other-live-home] $ fm-procevent.sh register lavish target-other-live-home -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/quiet.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-other-live-home/poll => status=0 elapsed=0.192s
-registered: target-other-live-home (lavish)
-
-[target-other-live-home] runner: 77047 77031 77047 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/bin/fm-procevent.sh _start target-other-live-home
-[target-other-live-home] listener/descendant: 78534 78507 77047 S    sleep 120
-[target-owner-expiry] $ fm-procevent.sh register lavish target-owner-expiry -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-owner-expiry/poll => status=0 elapsed=0.171s
-registered: target-owner-expiry (lavish)
-
-[target-owner-expiry] $ fm-procevent.sh reconcile => status=0 elapsed=0.124s
-reconciled: published=0 started=1 stopped=0 uncertain=0
-
-[target-owner-expiry] runner: 79554     1 79554 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/bin/fm-procevent.sh _start target-owner-expiry
-[target-owner-expiry] listener/descendant: 80715 79554 79554 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-owner-expiry/poll
-[target-owner-expiry] $ fm-procevent.sh reconcile => status=0 elapsed=0.168s
-reconciled: published=0 started=0 stopped=0 uncertain=0
-
-[target-owner-expiry] after TERM: runner=absent; child=absent; signals=['signalled']
-OBSERVATION {"name": "target-owner-expiry", "passed": true, "term_after_seconds": 8.098, "observed_seconds": 12.957, "group_gone": true, "child_alive": false, "other_home_alive": true, "lease_seconds": 5, "check_seconds": 1, "signals": ["signalled"]}
-[target-other-live-home] teardown-only KILL of test-owned group 77047
-[target-resistant-retire] $ fm-procevent.sh register lavish target-resistant-retire -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-resistant-retire/poll => status=0 elapsed=0.153s
-registered: target-resistant-retire (lavish)
-
-[target-resistant-retire] runner: 12006 12001 12006 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/bin/fm-procevent.sh _start target-resistant-retire
-[target-resistant-retire] listener/descendant: 13148 12006 12006 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-resistant-retire/poll
-[target-resistant-retire] TERM transition: runner=absent; child=13148     1 12006 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-resistant-retire/poll; signals=['signalled']
-[target-resistant-retire] $ fm-procevent.sh retire target-resistant-retire => status=0 elapsed=5.075s
-retired: target-resistant-retire
-
-OBSERVATION {"name": "target-resistant-retire", "passed": true, "leader_transition_observed": true, "survivor_after_TERM": true, "child_gone": true, "group_gone": true, "cli_status": 0, "seconds": 5.075, "claim_removed": true}
-[target-resistant-reconcile] $ fm-procevent.sh register lavish target-resistant-reconcile -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-resistant-reconcile/poll => status=0 elapsed=0.145s
-registered: target-resistant-reconcile (lavish)
-
-[target-resistant-reconcile] runner: 23353 23314 23353 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/bin/fm-procevent.sh _start target-resistant-reconcile
-[target-resistant-reconcile] listener/descendant: 24689 23353 23353 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-resistant-reconcile/poll
-[target-resistant-reconcile] TERM transition: runner=absent; child=24689     1 23353 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-resistant-reconcile/poll; signals=['signalled']
-[target-resistant-reconcile] $ fm-procevent.sh reconcile => status=0 elapsed=5.067s
-reconciled: published=0 started=0 stopped=1 uncertain=0
-
-OBSERVATION {"name": "target-resistant-reconcile", "passed": true, "leader_transition_observed": true, "survivor_after_TERM": true, "child_gone": true, "group_gone": true, "cli_status": 0, "seconds": 5.067, "claim_removed": true}
-[target-healthy-reconcile] $ fm-procevent.sh register lavish target-healthy-reconcile -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/quiet.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-healthy-reconcile/poll => status=0 elapsed=0.186s
-registered: target-healthy-reconcile (lavish)
-
-[target-healthy-reconcile] runner: 37666 37661 37666 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/bin/fm-procevent.sh _start target-healthy-reconcile
-[target-healthy-reconcile] listener/descendant: 39242 39211 37666 S    sleep 120
-[target-healthy-reconcile] removed this test source registration before reconcile
-[target-healthy-reconcile] $ fm-procevent.sh reconcile => status=0 elapsed=0.440s
-reconciled: published=0 started=0 stopped=1 uncertain=0
-
-OBSERVATION {"name": "target-healthy-reconcile", "passed": true, "cli_status": 0, "start_exit_status": 143, "retirement_seconds": 0.44, "group_gone": true, "claim_removed": true}
-[target-resistant-sweep-home] $ fm-procevent.sh register lavish target-resistant-sweep-home -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-resistant-sweep-home/poll => status=0 elapsed=0.166s
-registered: target-resistant-sweep-home (lavish)
-
-[target-resistant-sweep-home] runner: 41881 41869 41881 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/bin/fm-procevent.sh _start target-resistant-sweep-home
-[target-resistant-sweep-home] listener/descendant: 43145 41881 41881 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-resistant-sweep-home/poll
-[target-resistant-sweep-home] TERM transition: runner=absent; child=43145     1 41881 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-resistant-sweep-home/poll; signals=['signalled']
-[target-resistant-sweep-home] $ fm-procevent.sh sweep-home => status=0 elapsed=5.385s
-retired: target-resistant-sweep-home
-swept: attempted=1
-
-OBSERVATION {"name": "target-resistant-sweep-home", "passed": true, "leader_transition_observed": true, "survivor_after_TERM": true, "child_gone": true, "group_gone": true, "cli_status": 0, "seconds": 5.385, "claim_removed": true}
-[target-healthy-sweep-home] $ fm-procevent.sh register lavish target-healthy-sweep-home -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/quiet.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-healthy-sweep-home/poll => status=0 elapsed=0.146s
-registered: target-healthy-sweep-home (lavish)
-
-[target-healthy-sweep-home] runner: 55985 55972 55985 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/bin/fm-procevent.sh _start target-healthy-sweep-home
-[target-healthy-sweep-home] listener/descendant: 57220 57206 55985 S    sleep 120
-[target-healthy-sweep-home] $ fm-procevent.sh sweep-home => status=0 elapsed=0.730s
-retired: target-healthy-sweep-home
-swept: attempted=1
-
-OBSERVATION {"name": "target-healthy-sweep-home", "passed": true, "cli_status": 0, "start_exit_status": 143, "retirement_seconds": 0.73, "group_gone": true, "claim_removed": true}
-[target-zombie-retire] $ fm-procevent.sh register lavish target-zombie-retire -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-zombie-retire/poll => status=0 elapsed=0.143s
-registered: target-zombie-retire (lavish)
-
-[target-zombie-retire] runner: 59366 59359 59366 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/bin/fm-procevent.sh _start target-zombie-retire
-[target-zombie-retire] listener/descendant: 60554 59366 59366 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-zombie-retire/poll
-[target-zombie-retire] TERM transition: runner=59366 59359 59366 Z    <defunct>; child=60554     1 59366 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-zombie-retire/poll; signals=['signalled']
-[target-zombie-retire] $ fm-procevent.sh retire target-zombie-retire => status=0 elapsed=5.131s
-retired: target-zombie-retire
-
-OBSERVATION {"name": "target-zombie-retire", "passed": true, "leader_transition_observed": true, "survivor_after_TERM": true, "child_gone": true, "group_gone": true, "cli_status": 0, "seconds": 5.131, "claim_removed": true}
-[target-first-signal-mismatch] $ fm-procevent.sh register lavish target-first-signal-mismatch -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-first-signal-mismatch/poll => status=0 elapsed=0.186s
-registered: target-first-signal-mismatch (lavish)
-
-[target-first-signal-mismatch] $ fm-procevent.sh reconcile => status=0 elapsed=0.112s
-reconciled: published=0 started=1 stopped=0 uncertain=0
-
-[target-first-signal-mismatch] runner: 73853     1 73853 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/bin/fm-procevent.sh _start target-first-signal-mismatch
-[target-first-signal-mismatch] listener/descendant: 74915 73853 73853 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-first-signal-mismatch/poll
-[target-first-signal-mismatch] $ fm-procevent.sh retire target-first-signal-mismatch => status=1 elapsed=0.104s
-
-error: cannot confirm runner identity; source remains registered: target-first-signal-mismatch
-OBSERVATION {"name": "target-first-signal-mismatch", "passed": true, "cli_status": 1, "leader_alive": true, "child_alive": true, "signals": [], "registration_preserved": true, "claim_preserved": true}
-[target-first-signal-mismatch] teardown-only KILL of test-owned group 73853
-[target-external-leader-crash] $ fm-procevent.sh register lavish target-external-leader-crash -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-external-leader-crash/poll => status=0 elapsed=0.152s
-registered: target-external-leader-crash (lavish)
-
-[target-external-leader-crash] $ fm-procevent.sh reconcile => status=0 elapsed=0.116s
-reconciled: published=0 started=1 stopped=0 uncertain=0
-
-[target-external-leader-crash] runner: 76508     1 76508 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/bin/fm-procevent.sh _start target-external-leader-crash
-[target-external-leader-crash] listener/descendant: 77696 76508 76508 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-external-leader-crash/poll
-[target-external-leader-crash] external KILL of leader only; child still running: 77696     1 76508 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/resistant.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20TSCZM0KDMYBZKD1S7KSYQ/.local-test-procevent/target-external-leader-crash/poll
-[target-external-leader-crash] $ fm-procevent.sh retire target-external-leader-crash => status=1 elapsed=0.098s
-
-error: cannot confirm runner identity; source remains registered: target-external-leader-crash
-[target-external-leader-crash] $ fm-procevent.sh reconcile => status=0 elapsed=0.159s
-reconciled: published=0 started=0 stopped=0 uncertain=1
-
-[target-external-leader-crash] $ fm-procevent.sh sweep-home => status=1 elapsed=0.382s
-
-error: cannot confirm runner identity; source remains registered: target-external-leader-crash
-error: process-event home sweep incomplete: attempted=1 failed=1
-OBSERVATION {"name": "target-external-leader-crash", "passed": true, "callers": {"retire": {"status": 1, "group_alive": true, "claim_preserved": true, "registration_preserved": true}, "reconcile": {"status": 0, "group_alive": true, "claim_preserved": true, "registration_preserved": true}, "sweep-home": {"status": 1, "group_alive": true, "claim_preserved": true, "registration_preserved": true}}, "guard_did_not_signal": true, "completed_child_output_lost": true}
-Both baseline failures reproduced; all target observations satisfied.
+SCENARIO: Unproved cold leaderless group is refused without signalling
+$ FM_HOME=cold-leaderless fm-procevent.sh register lavish live-cold -- /usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log
+registered: live-cold (lavish) [exit 0]
+$ FM_HOME=cold-leaderless fm-procevent.sh reconcile
+reconciled: published=0 started=1 stopped=0 uncertain=0 [exit 0]
+$ FM_HOME=cold-leaderless fm-procevent.sh retire live-cold
+error: cannot confirm runner identity; source remains registered: live-cold [exit 1]
+Unproved surviving group untouched after retirement refusal
+(74625, 1, 74625, 'S', 'bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _owner-watchdog live-cold 74251 Wed Sep  9 23:41:05 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/bin/fm-procevent.sh _start live-cold /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/cold-leaderless/state/procevent/.owner-guard-ready.4O2ZP4 16777234 54006467')
+(75203, 1, 74251, 'S', '/usr/bin/tail -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2414ECRE7T77CAXN49RSA2F/.test-phase-tmp/live-cli/follow.log')
+(75363, 1, 74251, 'S', 'perl -e \\012      use strict;\\012      use warnings;\\012      my $limit = shift;\\012      my ($written, $truncated) = (0, 0);\\012      while (1) {\\012        my $count = sysread(STDIN, my $buffer, 65536);\\012        exit 2 unless defined $count;\\012        last if $count == 0;\\012        my $take = $written < $limit ? $limit - $written : 0;\\012        $take = $count if $take > $count;\\012        if ($take > 0) {\\012          my $offset = 0;\\012          while ($offset < $take) {\\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\\012            exit 2 unless defined $count_written;\\012            $offset += $count_written;\\012          }\\012          $written += $take;\\012        }\\012        $truncated = 1 if $take < $count;\\012      }\\012      exit($truncated ? 3 : 0);\\012     1048576')
+$ FM_HOME=cold-leaderless fm-procevent.sh retire live-cold
+retired: live-cold [exit 0]
+OBSERVED: Unrelated leader death refused retirement, preserved registration, and left the unproved group untouched; test owner then cleaned it up
+Remaining processes referencing the isolated test home: []

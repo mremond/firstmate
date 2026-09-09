@@ -1,0 +1,26 @@
+RUN base-healthy
+{"name": "base-healthy", "exit": 1, "expected": "RED", "matched": true, "elapsed": 18.6, "evidence": "base-healthy.log"}
+not ok - the runner did not exit on TERM (start status=137, retirement=5453ms, sampled windows=5029/4984ms)
+RUN no-decimal
+{"name": "no-decimal", "exit": 1, "expected": "RED", "matched": true, "elapsed": 26.41, "evidence": "no-decimal.log"}
+not ok - a zero-prefixed decimal interval (08) prevented the listener from starting
+RUN full-interval
+{"name": "full-interval", "exit": 1, "expected": "RED", "matched": true, "elapsed": 21.65, "evidence": "full-interval.log"}
+not ok - the guard exceeded its bound: group still running 17.3s after the last owner activity, against a documented bound of 15s (lease term 8s + one 6s check interval + 1s stop)
+RUN full-interval-delayed
+{"name": "full-interval-delayed", "exit": 1, "expected": "RED", "matched": true, "elapsed": 24.74, "evidence": "full-interval-delayed.log"}
+not ok - the guard exceeded its bound: group still running 17.2s after the last owner activity, against a documented bound of 15s (lease term 8s + one 6s check interval + 1s stop)
+RUN correct-delayed
+{"name": "correct-delayed", "exit": 0, "expected": "GREEN", "matched": true, "elapsed": 20.1, "evidence": "correct-delayed.log"}
+guard phase: fresh read 6.619-6.636s, expiry 8s, two full intervals could not finish before 18.619s (deadline 17s)
+guard bound: lease=7s check=6s reaped 13.8s after the last owner activity, documented bound 15s
+RUN missing-phase
+{"name": "missing-phase", "exit": 1, "expected": "RED", "matched": true, "elapsed": 16.82, "evidence": "missing-phase.log"}
+not ok - the bound fixture could not establish the required pre-expiry guard-read phase
+RUN single-read-debounce
+{"name": "single-read-debounce", "exit": 1, "expected": "RED", "matched": true, "elapsed": 7.3, "evidence": "single-read-debounce.log"}
+not ok - one unreadable lease read ended a runner whose home was still alive
+RUN single-read-bound
+{"name": "single-read-bound", "exit": 0, "expected": "GREEN", "matched": true, "elapsed": 15.48, "evidence": "single-read-bound.log"}
+guard phase: fresh read 7.620-7.722s, expiry 8s, two full intervals could not finish before 19.620s (deadline 17s)
+guard bound: lease=7s check=6s reaped 12.0s after the last owner activity, documented bound 15s

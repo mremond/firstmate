@@ -1,0 +1,21 @@
+ok - a detached listener starts reparented, with a live descendant tree under it
+ok - a listener whose owning session is gone stops itself and its whole process group
+ok - reaping the listener stops the process churn under it
+ok - an identical listener in a home whose session is still there is untouched
+ok - retiring a source reaps its reparented listener and every descendant under it
+ok - a stop the guard cannot prove is retried until the expired runner is reaped
+ok - retirement escalates after TERM leaves a surviving child (absent leader)
+ok - retirement escalates after TERM leaves a surviving child (zombie leader)
+ok - an expired runner's guard escalates past a signal-proof child
+guard phase: fresh read 6.656-6.692s, expiry 8s, two full intervals could not finish before 18.656s (deadline 17s)
+guard bound: lease=7s check=6s reaped 13.6s after the last owner activity, documented bound 15s
+ok - an orphaned runner is reaped within the lease plus ONE check interval
+decimal interval: 08 halves to 4s and its listener started
+decimal interval: 010 halves to 5s and its listener started
+ok - a zero-prefixed decimal interval starts its listener and halves as decimal
+ok - one unreadable read does not end a live runner
+ordinary stop: start status=143 retirement=749ms sampled windows=5086/4907ms
+ok - a runner exits on the ordinary stop signal instead of outliving it
+ok - a group whose leader died to something else is still refused, not signalled
+
+targeted procevent lifetime cases passed
