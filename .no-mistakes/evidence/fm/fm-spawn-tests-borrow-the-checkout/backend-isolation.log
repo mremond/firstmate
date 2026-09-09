@@ -1,0 +1,268 @@
+Started 2026-09-09T06:27:21.543295+00:00
+BASE=0fe226c93efdd12a38f1c3936d758571e40111b7
+TARGET=28e89fb9221cf6f07918ca1c8c41b1649411d0de
+Only tests changed. This transcript is non-live behavioral regression evidence.
+
+EXPERIMENT: baseline full portable backend script, fresh checkout
+COMMAND: bash tests/.nm-backend-base-full.sh
+checkout state before=absent; FM_HOME unset; real tmux/Treehouse replaced by existing test fakes
+ok - fm_backend_name: FM_BACKEND env > config/backend > default tmux
+ok - fm_backend_detect: no markers -> undetected, HERDR_ENV=1 -> herdr, $TMUX -> tmux, CMUX_WORKSPACE_ID -> cmux, nested combinations resolve innermost-first
+ok - fm_backend_detect: falls back to __CFBundleIdentifier=com.cmuxterm.app when CMUX_WORKSPACE_ID is absent (signal bundle-id; foreign bundle ids rejected)
+ok - fm_backend_detect: the cmux fallback signals are macOS-only (inert on a non-Darwin uname)
+ok - fm_backend_detect: an inherited cmux bundle id never outranks $TMUX or HERDR_ENV (tmux/herdr-inside-cmux false positive absorbed)
+ok - fm_backend_detect: ancestry fallback matches the lsappinfo-resolved (bundle-id) cmux app pid in the parent chain
+ok - fm_backend_detect: ancestry fallback matches a bundle-shaped cmux comm path at any install location when lsappinfo cannot resolve a pid
+ok - fm_backend_detect: ancestry fallback stops undetected at launchd (a reparented tmux server never reaches cmux)
+ok - fm_backend_name: a fallback-detected cmux prints a NOTICE naming the fallback signal; the primary-marker notice is unchanged
+ok - fm_backend_name: auto-detect selects herdr or cmux (loud notice) or tmux (silent, including nested tmux-in-herdr/tmux-in-cmux)
+ok - fm_backend_name: an explicit FM_BACKEND or config/backend setting always wins over runtime auto-detection, including an ambient cmux marker
+ok - fm_backend_validate: implemented adapters accepted, unknown and blocked codex-app backends refused loudly
+ok - zsh: fm_backend_source recognizes known backends and rejects unknown ones
+ok - bash: fm_backend_source recognizes known backends and rejects unknown ones
+ok - fm_backend_validate_spawn: all implemented lifecycle backends are spawn-supported
+ok - fm_meta_get / fm_backend_of_meta: read last key=value and default backend to tmux
+ok - fm_backend_resolve_selector: session:window literal, exact task id first, legacy fm-<id> label fallback, ad hoc bare name via tmux list-windows
+ok - fm_backend_of_selector: exact task ids, legacy fm-<id> labels, and matching explicit targets inherit metadata backend
+ok - fm-send.sh: explicit tmux targets are verified; text types once and submits with Enter
+ok - fm-peek.sh: capture-pane invocation and output are byte-identical old vs new
+not ok - fm-spawn.sh should succeed for a project reached through a symlinked prefix when the backend reports physical cwd
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.9Rqfec/symlink-link-physical/proj: expected exit 0, got 1
+EXIT: 1; checkout state after=absent
+
+EXPERIMENT: baseline isolated: symlink physical cwd
+COMMAND: bash tests/.nm-backend-base-cases.sh run_spawn_symlink_case physical physical
+checkout state before=absent; FM_HOME unset; real tmux/Treehouse replaced by existing test fakes
+PRODUCT RESULT: fm-spawn.sh should succeed for a project reached through a symlinked prefix when the backend reports physical cwd
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.ETincd/symlink-link-physical/proj
+observed exit=1 expected=0
+not ok - fm-spawn.sh should succeed for a project reached through a symlinked prefix when the backend reports physical cwd
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.ETincd/symlink-link-physical/proj: expected exit 0, got 1
+EXIT: 1; checkout state after=absent
+
+EXPERIMENT: baseline isolated: symlink logical cwd
+COMMAND: bash tests/.nm-backend-base-cases.sh run_spawn_symlink_case logical logical
+checkout state before=absent; FM_HOME unset; real tmux/Treehouse replaced by existing test fakes
+PRODUCT RESULT: fm-spawn.sh should succeed for a project reached through a symlinked prefix when the backend reports logical cwd
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.nwjz30/symlink-link-logical/proj
+observed exit=1 expected=0
+not ok - fm-spawn.sh should succeed for a project reached through a symlinked prefix when the backend reports logical cwd
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.nwjz30/symlink-link-logical/proj: expected exit 0, got 1
+EXIT: 1; checkout state after=absent
+
+EXPERIMENT: baseline isolated: explicit default tmux metadata
+COMMAND: bash tests/.nm-backend-base-cases.sh test_spawn_default_backend_writes_no_meta_field
+checkout state before=absent; FM_HOME unset; real tmux/Treehouse replaced by existing test fakes
+PRODUCT RESULT: explicit --backend tmux should spawn successfully
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.W9SA1E/nobackend-project
+observed exit=1 expected=0
+not ok - explicit --backend tmux should spawn successfully
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.W9SA1E/nobackend-project: expected exit 0, got 1
+EXIT: 1; checkout state after=absent
+
+EXPERIMENT: baseline isolated: explicit tmux beats Herdr marker
+COMMAND: bash tests/.nm-backend-base-cases.sh test_spawn_explicit_backend_flag_beats_autodetect_herdr_env
+checkout state before=absent; FM_HOME unset; real tmux/Treehouse replaced by existing test fakes
+PRODUCT RESULT: explicit --backend tmux should spawn successfully even with HERDR_ENV=1 set
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.YqhyBr/explicit-backend-project
+observed exit=1 expected=0
+not ok - explicit --backend tmux should spawn successfully even with HERDR_ENV=1 set
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.YqhyBr/explicit-backend-project: expected exit 0, got 1
+EXIT: 1; checkout state after=absent
+
+EXPERIMENT: baseline isolated: nested tmux autodetection stays silent
+COMMAND: bash tests/.nm-backend-base-cases.sh test_spawn_autodetect_nesting_resolves_tmux_silently
+checkout state before=absent; FM_HOME unset; real tmux/Treehouse replaced by existing test fakes
+PRODUCT RESULT: fm-spawn.sh should auto-detect tmux and spawn successfully for nested tmux-in-herdr
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.ULJOtk/nest-project
+observed exit=1 expected=0
+not ok - fm-spawn.sh should auto-detect tmux and spawn successfully for nested tmux-in-herdr
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.ULJOtk/nest-project: expected exit 0, got 1
+EXIT: 1; checkout state after=absent
+
+EXPERIMENT: baseline counterfactual: symlink physical cwd with checkout state present
+COMMAND: bash tests/.nm-backend-base-cases.sh run_spawn_symlink_case physical physical
+checkout state before=present; FM_HOME unset; real tmux/Treehouse replaced by existing test fakes
+PRODUCT RESULT: fm-spawn.sh should succeed for a project reached through a symlinked prefix when the backend reports physical cwd
+warning: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.YSiLhy/symlink-data-physical/spawnsymlinkphysical/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned spawnsymlinkphysical harness=claude kind=ship mode=no-mistakes yolo=off window=firstmate:fm-spawnsymlinkphysical worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.YSiLhy/symlink-wt-physical
+observed exit=0 expected=0
+PERSISTED TASK METADATA: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.YSiLhy/symlink-state-physical/spawnsymlinkphysical.meta
+window=firstmate:fm-spawnsymlinkphysical
+endpoint_task_id=spawnsymlinkphysical
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.YSiLhy/symlink-wt-physical
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.YSiLhy/symlink-link-physical/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-spawnsymlinkphysical
+model=default
+effort=default
+busy_gen=g1788935257.22421.24287
+spawn_gen=s1788935257.16472.390
+EXIT: 0; checkout state after=present
+
+EXPERIMENT: target isolated: nested tmux autodetection stays silent
+COMMAND: bash tests/.nm-backend-target-cases.sh test_spawn_autodetect_nesting_resolves_tmux_silently
+checkout state before=absent; FM_HOME unset; real tmux/Treehouse replaced by existing test fakes
+PRODUCT RESULT: fm-spawn.sh should auto-detect tmux and spawn successfully for nested tmux-in-herdr
+warning: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.UWHKos/nest-data/nestbackendz5/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned nestbackendz5 harness=claude kind=ship mode=no-mistakes yolo=off window=firstmate:fm-nestbackendz5 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.UWHKos/nest-wt
+observed exit=0 expected=0
+ok - fm-spawn.sh: auto-detect resolves nested tmux-in-herdr to tmux and stays silent end to end
+PRIVATE HOME EXISTS: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.UWHKos/case-home-nest/state
+PERSISTED TASK METADATA: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.UWHKos/nest-state/nestbackendz5.meta
+window=firstmate:fm-nestbackendz5
+endpoint_task_id=nestbackendz5
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.UWHKos/nest-wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.UWHKos/nest-project
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-nestbackendz5
+model=default
+effort=default
+busy_gen=g1788935262.33944.31487
+spawn_gen=s1788935262.30448.26239
+EXIT: 0; checkout state after=absent
+
+EXPERIMENT: target isolated: explicit tmux beats Herdr marker
+COMMAND: bash tests/.nm-backend-target-cases.sh test_spawn_explicit_backend_flag_beats_autodetect_herdr_env
+checkout state before=absent; FM_HOME unset; real tmux/Treehouse replaced by existing test fakes
+PRODUCT RESULT: explicit --backend tmux should spawn successfully even with HERDR_ENV=1 set
+warning: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.9BMsM5/explicit-backend-data/explicitbackendz4/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned explicitbackendz4 harness=claude kind=ship mode=no-mistakes yolo=off window=firstmate:fm-explicitbackendz4 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.9BMsM5/explicit-backend-wt
+observed exit=0 expected=0
+ok - fm-spawn.sh: explicit --backend tmux wins over an ambient HERDR_ENV=1 auto-detect marker
+PRIVATE HOME EXISTS: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.9BMsM5/case-home-explicit-backend/state
+PERSISTED TASK METADATA: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.9BMsM5/explicit-backend-state/explicitbackendz4.meta
+window=firstmate:fm-explicitbackendz4
+endpoint_task_id=explicitbackendz4
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.9BMsM5/explicit-backend-wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.9BMsM5/explicit-backend-project
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-explicitbackendz4
+model=default
+effort=default
+busy_gen=g1788935266.41351.19754
+spawn_gen=s1788935266.37352.2070
+EXIT: 0; checkout state after=absent
+
+EXPERIMENT: target isolated: explicit default tmux metadata
+COMMAND: bash tests/.nm-backend-target-cases.sh test_spawn_default_backend_writes_no_meta_field
+checkout state before=absent; FM_HOME unset; real tmux/Treehouse replaced by existing test fakes
+PRODUCT RESULT: explicit --backend tmux should spawn successfully
+warning: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.r9z7qo/nobackend-data/nobackendz3/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned nobackendz3 harness=claude kind=ship mode=no-mistakes yolo=off window=firstmate:fm-nobackendz3 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.r9z7qo/nobackend-wt
+observed exit=0 expected=0
+ok - fm-spawn.sh: an explicit --backend tmux resolves silently and writes no backend= (missing means tmux)
+PRIVATE HOME EXISTS: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.r9z7qo/case-home-nobackend/state
+PERSISTED TASK METADATA: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.r9z7qo/nobackend-state/nobackendz3.meta
+window=firstmate:fm-nobackendz3
+endpoint_task_id=nobackendz3
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.r9z7qo/nobackend-wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.r9z7qo/nobackend-project
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-nobackendz3
+model=default
+effort=default
+busy_gen=g1788935270.46801.29452
+spawn_gen=s1788935270.43890.27387
+EXIT: 0; checkout state after=absent
+
+EXPERIMENT: target isolated: symlink logical cwd
+COMMAND: bash tests/.nm-backend-target-cases.sh run_spawn_symlink_case logical logical
+checkout state before=absent; FM_HOME unset; real tmux/Treehouse replaced by existing test fakes
+PRODUCT RESULT: fm-spawn.sh should succeed for a project reached through a symlinked prefix when the backend reports logical cwd
+warning: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.MWLRQK/symlink-data-logical/spawnsymlinklogical/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned spawnsymlinklogical harness=claude kind=ship mode=no-mistakes yolo=off window=firstmate:fm-spawnsymlinklogical worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.MWLRQK/symlink-wt-logical
+observed exit=0 expected=0
+PRIVATE HOME EXISTS: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.MWLRQK/case-home-symlink-logical/state
+PERSISTED TASK METADATA: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.MWLRQK/symlink-state-logical/spawnsymlinklogical.meta
+window=firstmate:fm-spawnsymlinklogical
+endpoint_task_id=spawnsymlinklogical
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.MWLRQK/symlink-wt-logical
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.MWLRQK/symlink-link-logical/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-spawnsymlinklogical
+model=default
+effort=default
+busy_gen=g1788935275.54263.13816
+spawn_gen=s1788935275.49526.23088
+EXIT: 0; checkout state after=absent
+
+EXPERIMENT: target isolated: symlink physical cwd
+COMMAND: bash tests/.nm-backend-target-cases.sh run_spawn_symlink_case physical physical
+checkout state before=absent; FM_HOME unset; real tmux/Treehouse replaced by existing test fakes
+PRODUCT RESULT: fm-spawn.sh should succeed for a project reached through a symlinked prefix when the backend reports physical cwd
+warning: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.GflOuv/symlink-data-physical/spawnsymlinkphysical/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned spawnsymlinkphysical harness=claude kind=ship mode=no-mistakes yolo=off window=firstmate:fm-spawnsymlinkphysical worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.GflOuv/symlink-wt-physical
+observed exit=0 expected=0
+PRIVATE HOME EXISTS: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.GflOuv/case-home-symlink-physical/state
+PERSISTED TASK METADATA: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.GflOuv/symlink-state-physical/spawnsymlinkphysical.meta
+window=firstmate:fm-spawnsymlinkphysical
+endpoint_task_id=spawnsymlinkphysical
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.GflOuv/symlink-wt-physical
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22CWXBPJDKDAMCBR4YS0HF6/.nm-backend-validation-tmp/fm-backend-tests.GflOuv/symlink-link-physical/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-spawnsymlinkphysical
+model=default
+effort=default
+busy_gen=g1788935280.62089.29906
+spawn_gen=s1788935280.57789.9751
+EXIT: 0; checkout state after=absent
+
+EXPERIMENT: target full portable backend script
+COMMAND: bin/fm-test-run.sh --jobs 1 --per-script-timeout-secs 180 tests/fm-backend.test.sh
+checkout state before=absent; FM_HOME unset; real tmux/Treehouse replaced by existing test fakes
+FM_TEST_BEGIN 2026-09-09T06:28:02Z tests/fm-backend.test.sh family=backend-dispatch expected_gate_skip=none
+ok - fm_backend_name: FM_BACKEND env > config/backend > default tmux
+ok - fm_backend_detect: no markers -> undetected, HERDR_ENV=1 -> herdr, $TMUX -> tmux, CMUX_WORKSPACE_ID -> cmux, nested combinations resolve innermost-first
+ok - fm_backend_detect: falls back to __CFBundleIdentifier=com.cmuxterm.app when CMUX_WORKSPACE_ID is absent (signal bundle-id; foreign bundle ids rejected)
+ok - fm_backend_detect: the cmux fallback signals are macOS-only (inert on a non-Darwin uname)
+ok - fm_backend_detect: an inherited cmux bundle id never outranks $TMUX or HERDR_ENV (tmux/herdr-inside-cmux false positive absorbed)
+ok - fm_backend_detect: ancestry fallback matches the lsappinfo-resolved (bundle-id) cmux app pid in the parent chain
+ok - fm_backend_detect: ancestry fallback matches a bundle-shaped cmux comm path at any install location when lsappinfo cannot resolve a pid
+ok - fm_backend_detect: ancestry fallback stops undetected at launchd (a reparented tmux server never reaches cmux)
+ok - fm_backend_name: a fallback-detected cmux prints a NOTICE naming the fallback signal; the primary-marker notice is unchanged
+ok - fm_backend_name: auto-detect selects herdr or cmux (loud notice) or tmux (silent, including nested tmux-in-herdr/tmux-in-cmux)
+ok - fm_backend_name: an explicit FM_BACKEND or config/backend setting always wins over runtime auto-detection, including an ambient cmux marker
+ok - fm_backend_validate: implemented adapters accepted, unknown and blocked codex-app backends refused loudly
+ok - zsh: fm_backend_source recognizes known backends and rejects unknown ones
+ok - bash: fm_backend_source recognizes known backends and rejects unknown ones
+ok - fm_backend_validate_spawn: all implemented lifecycle backends are spawn-supported
+ok - fm_meta_get / fm_backend_of_meta: read last key=value and default backend to tmux
+ok - fm_backend_resolve_selector: session:window literal, exact task id first, legacy fm-<id> label fallback, ad hoc bare name via tmux list-windows
+ok - fm_backend_of_selector: exact task ids, legacy fm-<id> labels, and matching explicit targets inherit metadata backend
+ok - fm-send.sh: explicit tmux targets are verified; text types once and submits with Enter
+ok - fm-peek.sh: capture-pane invocation and output are byte-identical old vs new
+ok - fm-spawn.sh: a project reached through a symlinked prefix (e.g. macOS /tmp -> /private/tmp) does not trip the isolation guard's false refusal
+ok - fm-teardown.sh: treehouse return remains compatible while tmux cleanup uses exact selectors
+ok - fm-spawn.sh --backend bogus is refused loudly
+ok - fm-spawn.sh --backend codex-app is refused
+ok - fm-spawn.sh honors FM_BACKEND and refuses an unimplemented value loudly
+ok - fm-spawn.sh: an explicit --backend tmux resolves silently and writes no backend= (missing means tmux)
+ok - fm-spawn.sh: explicit --backend tmux wins over an ambient HERDR_ENV=1 auto-detect marker
+ok - fm-spawn.sh: auto-detect resolves nested tmux-in-herdr to tmux and stays silent end to end
+FM_TEST_END 2026-09-09T06:28:40Z tests/fm-backend.test.sh exit=0 duration_ms=38063 gate_skip=false
+FM_TEST_SUMMARY total=1 failed=0 skipped_gate=0 duration_ms=38135
+FM_TEST_SUMMARY_FAMILY family=backend-dispatch count=1 duration_ms=38063 failed=0
+FM_TEST_SLOWEST rank=1 script=tests/fm-backend.test.sh duration_ms=38063
+EXIT: 0; checkout state after=present
+Full-script checkout state inventory (deliberate default-home refusal cases):
+All expected RED/GREEN observations confirmed. No Herdr-gated script executed.
+Removed only the transient paths verified absent at experiment start; checkout state is absent again.

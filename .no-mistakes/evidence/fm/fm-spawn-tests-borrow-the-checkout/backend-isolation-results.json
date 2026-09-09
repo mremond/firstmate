@@ -1,0 +1,110 @@
+{
+  "base": "0fe226c93efdd12a38f1c3936d758571e40111b7",
+  "target": "28e89fb9221cf6f07918ca1c8c41b1649411d0de",
+  "experiments": [
+    {
+      "label": "baseline full portable backend script, fresh checkout",
+      "command": "bash tests/.nm-backend-base-full.sh",
+      "exit": 1,
+      "expected_exit": 1,
+      "checkout_state_after": false,
+      "live": false
+    },
+    {
+      "label": "baseline isolated: symlink physical cwd",
+      "command": "bash tests/.nm-backend-base-cases.sh run_spawn_symlink_case physical physical",
+      "exit": 1,
+      "expected_exit": 1,
+      "checkout_state_after": false,
+      "live": false
+    },
+    {
+      "label": "baseline isolated: symlink logical cwd",
+      "command": "bash tests/.nm-backend-base-cases.sh run_spawn_symlink_case logical logical",
+      "exit": 1,
+      "expected_exit": 1,
+      "checkout_state_after": false,
+      "live": false
+    },
+    {
+      "label": "baseline isolated: explicit default tmux metadata",
+      "command": "bash tests/.nm-backend-base-cases.sh test_spawn_default_backend_writes_no_meta_field",
+      "exit": 1,
+      "expected_exit": 1,
+      "checkout_state_after": false,
+      "live": false
+    },
+    {
+      "label": "baseline isolated: explicit tmux beats Herdr marker",
+      "command": "bash tests/.nm-backend-base-cases.sh test_spawn_explicit_backend_flag_beats_autodetect_herdr_env",
+      "exit": 1,
+      "expected_exit": 1,
+      "checkout_state_after": false,
+      "live": false
+    },
+    {
+      "label": "baseline isolated: nested tmux autodetection stays silent",
+      "command": "bash tests/.nm-backend-base-cases.sh test_spawn_autodetect_nesting_resolves_tmux_silently",
+      "exit": 1,
+      "expected_exit": 1,
+      "checkout_state_after": false,
+      "live": false
+    },
+    {
+      "label": "baseline counterfactual: symlink physical cwd with checkout state present",
+      "command": "bash tests/.nm-backend-base-cases.sh run_spawn_symlink_case physical physical",
+      "exit": 0,
+      "expected_exit": 0,
+      "checkout_state_after": true,
+      "live": false
+    },
+    {
+      "label": "target isolated: nested tmux autodetection stays silent",
+      "command": "bash tests/.nm-backend-target-cases.sh test_spawn_autodetect_nesting_resolves_tmux_silently",
+      "exit": 0,
+      "expected_exit": 0,
+      "checkout_state_after": false,
+      "live": false
+    },
+    {
+      "label": "target isolated: explicit tmux beats Herdr marker",
+      "command": "bash tests/.nm-backend-target-cases.sh test_spawn_explicit_backend_flag_beats_autodetect_herdr_env",
+      "exit": 0,
+      "expected_exit": 0,
+      "checkout_state_after": false,
+      "live": false
+    },
+    {
+      "label": "target isolated: explicit default tmux metadata",
+      "command": "bash tests/.nm-backend-target-cases.sh test_spawn_default_backend_writes_no_meta_field",
+      "exit": 0,
+      "expected_exit": 0,
+      "checkout_state_after": false,
+      "live": false
+    },
+    {
+      "label": "target isolated: symlink logical cwd",
+      "command": "bash tests/.nm-backend-target-cases.sh run_spawn_symlink_case logical logical",
+      "exit": 0,
+      "expected_exit": 0,
+      "checkout_state_after": false,
+      "live": false
+    },
+    {
+      "label": "target isolated: symlink physical cwd",
+      "command": "bash tests/.nm-backend-target-cases.sh run_spawn_symlink_case physical physical",
+      "exit": 0,
+      "expected_exit": 0,
+      "checkout_state_after": false,
+      "live": false
+    },
+    {
+      "label": "target full portable backend script",
+      "command": "bin/fm-test-run.sh --jobs 1 --per-script-timeout-secs 180 tests/fm-backend.test.sh",
+      "exit": 0,
+      "expected_exit": 0,
+      "checkout_state_after": true,
+      "live": false
+    }
+  ]
+}
