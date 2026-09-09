@@ -345,6 +345,10 @@
       "audience": "operator-example"
     },
     {
+      "path": "docs/fm-checkout-write-guard.md",
+      "audience": "maintainer-architecture"
+    },
+    {
       "path": "docs/fm-test-isolation-proof.md",
       "audience": "maintainer-verification"
     },
@@ -431,6 +435,10 @@
     {
       "path": "docs/turnend-guard.md",
       "audience": "operator-current"
+    },
+    {
+      "path": "docs/verification/checkout-write-guard.md",
+      "audience": "maintainer-verification"
     },
     {
       "path": "docs/verification/dispatch-auth.md",

@@ -99,9 +99,28 @@
 #   against. Inspection modes execute nothing and stay available, and a run with
 #   no FM_TASK_ID set is unchanged.
 #
+# Checkout write guard:
+#   The repository checkout is the one piece of state every script shares and
+#   no temporary directory covers. bin/fm-checkout-write-guard.sh owns that
+#   prohibition, its pinned pre-existing debt, and the reasoning; this runner is
+#   its single enforcement point and is where a violation becomes a failing
+#   script. A serial run - which is every CI lane - guards each script on its
+#   own, so the refusal names the script that wrote. A concurrent run shares one
+#   checkout between workers, so per-script attribution is impossible and the
+#   guard is applied once around the whole concurrent phase instead; the serial
+#   remainder after it is still guarded per script. That phase carries the pins
+#   of every script admitted to it, so a script writing exactly what its own pin
+#   records does not fail a run that merely happened to schedule it
+#   concurrently; a path no admitted script is pinned for is still a violation.
+#   Set
+#   FM_CHECKOUT_WRITE_GUARD=off to disable it; it then says so rather than
+#   passing quietly. This runner refuses to start if the guard script is
+#   missing, so deleting the enforcement is loud rather than silent.
+#
 # Exit status is non-zero if any selected script exits non-zero, a configured
 # --fail-on-gate-skip token appears, the measured duration exceeds
-# --max-wall-ms, timing-artifact finalization fails, or a concurrent worker
+# --max-wall-ms, timing-artifact finalization fails, a selected script changed
+# the repository checkout outside its recorded pins, or a concurrent worker
 # violates its isolation check. Other gate skips (first meaningful line
 # matching ^skip:) remain successful and are counted as skipped_gate; each one
 # is logged with its reason and recorded in the timing artifact.
@@ -272,7 +291,8 @@ family_for_basename() {
     fm-supervision-instructions.test.sh|fm-task-delivery.test.sh|\
     fm-tmux-submit-busy.test.sh|fm-trace-context-lib.test.sh|\
     fm-transition-lib.test.sh|\
-    fm-test-run.test.sh|fm-test-isolation-proof.test.sh)
+    fm-test-run.test.sh|fm-test-isolation-proof.test.sh|\
+    fm-checkout-write-guard.test.sh)
       printf '%s\n' pure-contract-unit
       ;;
     fm-daemon.test.sh|fm-guard-stale-banner.test.sh|fm-pi-watch-extension.test.sh|\
@@ -1216,11 +1236,13 @@ families_for_changed_path() {
       # resolution in the caller; emit a marker family of __script__
       printf '%s\n' "__script__:$(basename "$path")"
       ;;
-    bin/fm-test-run.sh|bin/fm-test-isolation-proof.sh)
-      # Deliberately the WHOLE family, not just the two contract tests. This
-      # runner executes every pure-contract-unit script, so a change to it is
-      # only proven by running them: its own contract test passing says the
-      # runner's logic is right, not that the suite it drives still runs.
+    bin/fm-test-run.sh|bin/fm-test-isolation-proof.sh|bin/fm-checkout-write-guard.sh)
+      # Deliberately the WHOLE family, not just the contract tests. This runner
+      # executes every pure-contract-unit script, so a change to it is only
+      # proven by running them: its own contract test passing says the runner's
+      # logic is right, not that the suite it drives still runs. The checkout
+      # write guard is on that same path - every script in the family runs
+      # through it - so it selects the family for the same reason.
       printf '%s\n' pure-contract-unit
       ;;
     bin/backends/herdr*|bin/fm-herdr-lab.sh|tests/herdr-test-safety.sh)
@@ -2091,6 +2113,29 @@ cleanup_run() {
 
 trap cleanup_run EXIT
 
+# --- checkout write guard ---------------------------------------------------
+#
+# bin/fm-checkout-write-guard.sh is the single owner of what "writing into the
+# checkout" means, of the pinned pre-existing leaks, and of the reasoning behind
+# both. This runner only decides WHEN to ask it and what a refusal costs.
+CHECKOUT_GUARD="$ROOT/bin/fm-checkout-write-guard.sh"
+[ -x "$CHECKOUT_GUARD" ] || die "missing $CHECKOUT_GUARD; the suite runs without its checkout write guarantee until that script is restored"
+
+checkout_guard_snapshot() {  # <path>
+  "$CHECKOUT_GUARD" --root "$ROOT" snapshot "$1" \
+    || die "checkout write guard could not inventory $ROOT"
+}
+
+# Returns non-zero when <label> changed the checkout outside its pins. Streams
+# the guard's own marker lines so the refusal is readable in the lane log.
+# Trailing arguments are passed to the guard unchanged; the concurrent phase
+# uses them to name the pins of every script admitted to it.
+checkout_guard_compare() {  # <label> <before> <after> [guard args...]
+  local label=$1 before=$2 after=$3
+  shift 3
+  "$CHECKOUT_GUARD" --root "$ROOT" compare "$before" "$after" --label "$label" "$@"
+}
+
 RUN_ID="fm-test-run-${RUN_STARTED_MS}-$$"
 TOTAL=0
 FAILED=0
@@ -2205,11 +2250,15 @@ run_script_bounded() {  # <script> <out> <stream> <id>
 
 run_one_serial() {
   local script=$1
-  local base family expected out begin_iso begin_ms end_ms end_iso duration rc
+  local base family expected out begin_iso begin_ms end_ms end_iso duration rc guard_rc
   base=$(basename "$script")
   family=$(family_for_basename "$base")
   expected=$(expected_gate_skip_for_family "$family")
   out="$RUN_TMP/out.$TOTAL"
+  # The inventory is taken outside the measured window on both sides, so the
+  # recorded duration stays a statement about the script and the shard-balance
+  # hints it feeds do not drift with the guard.
+  checkout_guard_snapshot "$RUN_TMP/checkout.before"
   begin_iso=$(now_iso)
   begin_ms=$(now_ms)
 
@@ -2222,8 +2271,18 @@ run_one_serial() {
   rc=$?
   set -e
   : "${rc:=1}"
-
   end_ms=$(now_ms)
+
+  checkout_guard_snapshot "$RUN_TMP/checkout.after"
+  set +e
+  checkout_guard_compare "$base" "$RUN_TMP/checkout.before" "$RUN_TMP/checkout.after"
+  guard_rc=$?
+  set -e
+  if [ "$guard_rc" -ne 0 ]; then
+    printf 'not ok - %s wrote into the repository checkout\n' "$script" | tee -a "$out"
+    rc=1
+  fi
+
   end_iso=$(now_iso)
   duration=$((end_ms - begin_ms))
   if [ "$duration" -lt 0 ]; then
@@ -2237,6 +2296,25 @@ if [ "$JOBS" -eq 1 ]; then
     run_one_serial "$script"
   done
 else
+  # Concurrent workers share this one checkout, so a write cannot be attributed
+  # to the script that made it. Guard the phase as a unit instead of pretending
+  # otherwise; the serial remainder below is still guarded per script.
+  #
+  # The phase carries the pins of every script admitted to it. Without that, a
+  # script writing exactly what its own pin records - which is what the pinned
+  # pre-existing leaks all do - would fail the phase, so the ordinary default
+  # run of a selection containing any pinned script would go red on debt the
+  # guard has already accepted. That is a spurious refusal, and a guard that
+  # cries wolf gets switched off. The union tolerates nothing that is not
+  # already recorded debt: a path no admitted script is pinned for is still a
+  # violation, and attribution is still lost, which is why the message says to
+  # rerun serially.
+  PHASE_PIN_ARGS=()
+  for script in "${CONCURRENT_SCRIPTS[@]+"${CONCURRENT_SCRIPTS[@]}"}"; do
+    [ "$script" = "$CONCURRENT_PHASE_BREAK" ] && continue
+    PHASE_PIN_ARGS+=(--also-pinned "$(basename "$script")")
+  done
+  checkout_guard_snapshot "$RUN_TMP/checkout.phase-before"
   # Bounded concurrent execution for admitted scripts. Each worker gets a
   # private mode-0700 TMPDIR so mktemp roots cannot collide. Native Windows
   # Bash layers report synthetic POSIX modes, so retain chmod there but enforce
@@ -2362,6 +2440,17 @@ else
   while [ "$active_workers" -gt 0 ]; do
     wait_one_completed_job_worker
   done
+  checkout_guard_snapshot "$RUN_TMP/checkout.phase-after"
+  set +e
+  checkout_guard_compare "concurrent-phase" \
+    "$RUN_TMP/checkout.phase-before" "$RUN_TMP/checkout.phase-after" \
+    ${PHASE_PIN_ARGS[@]+"${PHASE_PIN_ARGS[@]}"}
+  phase_guard_rc=$?
+  set -e
+  if [ "$phase_guard_rc" -ne 0 ]; then
+    log "a script in the concurrent phase wrote into the repository checkout; rerun serially to attribute it"
+    AGG_RC=1
+  fi
   # Unproven remainder, after every concurrent worker has finished.
   for script in "${SERIAL_TAIL_SCRIPTS[@]+"${SERIAL_TAIL_SCRIPTS[@]}"}"; do
     run_one_serial "$script"

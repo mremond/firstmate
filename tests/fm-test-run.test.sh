@@ -11,9 +11,20 @@ set -u
 . "$(dirname "${BASH_SOURCE[0]}")/lib.sh"
 
 RUNNER="$ROOT/bin/fm-test-run.sh"
+CHECKOUT_GUARD="$ROOT/bin/fm-checkout-write-guard.sh"
 
 assert_present "$RUNNER" "bin/fm-test-run.sh is missing"
 [ -x "$RUNNER" ] || fail "bin/fm-test-run.sh must be executable"
+assert_present "$CHECKOUT_GUARD" "bin/fm-checkout-write-guard.sh is missing"
+
+# The runner refuses to execute without its checkout write guard beside it, so
+# every fixture repository that RUNS the runner needs both scripts installed.
+install_runner_fixture() {  # <repo-root>
+  mkdir -p "$1/bin"
+  cp "$RUNNER" "$1/bin/fm-test-run.sh"
+  cp "$CHECKOUT_GUARD" "$1/bin/fm-checkout-write-guard.sh"
+  chmod +x "$1/bin/fm-test-run.sh" "$1/bin/fm-checkout-write-guard.sh"
+}
 
 test_list_all_exact_suite_coverage() {
   local listed expected missing extra f
@@ -91,8 +102,7 @@ test_changed_file_selection_is_conservative() {
 init_changed_fixture_repo() {
   local repo=$1 script
   mkdir -p "$repo/bin" "$repo/tests"
-  cp "$RUNNER" "$repo/bin/fm-test-run.sh"
-  chmod +x "$repo/bin/fm-test-run.sh"
+  install_runner_fixture "$repo"
   for script in \
     fm-brief.test.sh \
     fm-ask-user-authority.test.sh \
@@ -173,12 +183,14 @@ init_primary_and_linked_worktree() {
   git -C "$repo" worktree add --quiet -b linked-probe "$linked"
   for tree in "$repo" "$linked"; do
     mkdir -p "$tree/bin" "$tree/tests"
-    cp "$RUNNER" "$tree/bin/fm-test-run.sh"
-    chmod +x "$tree/bin/fm-test-run.sh"
+    install_runner_fixture "$tree"
+    # The marker records that the probe ran, so it must live OUTSIDE the tree:
+    # a suite that writes into its own checkout is exactly what the runner's
+    # checkout write guard refuses.
     cat >"$tree/tests/probe.test.sh" <<PROBE
 #!/usr/bin/env bash
 echo "ok - probe suite"
-: >"$tree/ran"
+: >"$tree.ran"
 PROBE
     chmod +x "$tree/tests/probe.test.sh"
   done
@@ -202,25 +214,25 @@ test_task_marker_refuses_the_primary_checkout() {
   assert_contains "$out" "FM_TASK_ID=probe-task" "refusal did not name the task marker"
   assert_contains "$out" "task worktree" "refusal did not point at the task worktree"
   assert_not_contains "$out" "FM_TEST_BEGIN" "the refusal must happen before any suite runs"
-  assert_absent "$repo/ran" "the refused run still executed a suite"
+  assert_absent "$repo.ran" "the refused run still executed a suite"
 
   # Marker set, linked worktree: the assigned placement, so the suite runs.
   FM_TASK_ID=probe-task "$linked/bin/fm-test-run.sh" tests/probe.test.sh >/dev/null 2>&1 \
     || { rm -rf "$tmp"; fail "the runner must still run in a linked task worktree"; }
-  assert_present "$linked/ran" "the linked-worktree run did not execute its suite"
+  assert_present "$linked.ran" "the linked-worktree run did not execute its suite"
 
   # No marker: a person in their own checkout is unaffected.
   "$repo/bin/fm-test-run.sh" tests/probe.test.sh >/dev/null 2>&1 \
     || { rm -rf "$tmp"; fail "an unmarked run in the primary checkout must be unchanged"; }
-  assert_present "$repo/ran" "the unmarked run did not execute its suite"
+  assert_present "$repo.ran" "the unmarked run did not execute its suite"
 
   # Inspection executes nothing, so it stays available even in the primary.
-  rm -f "$repo/ran"
+  rm -f "$repo.ran"
   out=$(FM_TASK_ID=probe-task "$repo/bin/fm-test-run.sh" --list tests/probe.test.sh 2>&1) \
     || { rm -rf "$tmp"; fail "--list must remain available under a task marker"; }
   [ "$out" = "tests/probe.test.sh" ] \
     || { rm -rf "$tmp"; fail "--list under a task marker printed: $out"; }
-  assert_absent "$repo/ran" "--list must not execute a suite"
+  assert_absent "$repo.ran" "--list must not execute a suite"
 
   rm -rf "$tmp"
   pass "a task marker refuses execution in the primary checkout and leaves worktrees and inspection alone"
@@ -483,7 +495,7 @@ PY
   timeout_repo="$tmp/timeout-repo"
   timeout_script=tests/fm-calm-pi-extension.test.sh
   mkdir -p "$timeout_repo/bin" "$timeout_repo/tests"
-  cp "$RUNNER" "$timeout_repo/bin/fm-test-run.sh"
+  install_runner_fixture "$timeout_repo"
   cat >"$timeout_repo/bin/fm-timeout-lib.sh" <<'SH'
 fm_run_timed() {
   [ "$1" -eq 900 ] || return 99
@@ -634,9 +646,8 @@ test_family_proofs_run_in_separate_concurrent_phases() {
   tmp=$(mktemp -d "${TMPDIR:-/tmp}/fm-test-run-family-phases.XXXXXX")
   repo="$tmp/repo"
   mkdir -p "$repo/bin" "$repo/tests"
-  cp "$RUNNER" "$repo/bin/fm-test-run.sh"
+  install_runner_fixture "$repo"
   cp "$ROOT/bin/fm-timeout-lib.sh" "$repo/bin/fm-timeout-lib.sh"
-  chmod +x "$repo/bin/fm-test-run.sh"
   for script in \
     fm-calm-pi-extension.test.sh fm-vendor-auth-probe.test.sh \
     fm-pr-check-security.test.sh fm-teardown.test.sh; do
@@ -1179,8 +1190,7 @@ test_unmapped_new_test_never_inherits_family_concurrency() {
   tmp=$(mktemp -d "${TMPDIR:-/tmp}/fm-test-run-unmapped.XXXXXX")
   repo="$tmp/repo"
   mkdir -p "$repo/bin" "$repo/tests"
-  cp "$RUNNER" "$repo/bin/fm-test-run.sh"
-  chmod +x "$repo/bin/fm-test-run.sh"
+  install_runner_fixture "$repo"
   # Two members of the proven residual family, plus a test basename the family
   # map has never seen - the shape of any test added tomorrow.
   for script in fm-procevent.test.sh fm-quota-choose.test.sh fm-zz-unmapped-fixture.test.sh; do
@@ -1256,7 +1266,7 @@ test_per_script_timeout_bounds_a_hang() {
   runner="$repo/bin/fm-test-run.sh"
   hang=tests/fm-hang-fixture.test.sh
   mkdir -p "$repo/bin" "$repo/tests"
-  cp "$RUNNER" "$runner"
+  install_runner_fixture "$repo"
   cp "$ROOT/bin/fm-timeout-lib.sh" "$repo/bin/fm-timeout-lib.sh"
   grandchild_pid="$tmp/grandchild.pid"
   cat >"$repo/$hang" <<'SH'
@@ -1319,7 +1329,7 @@ test_max_wall_ms_is_a_result_not_advice() {
   runner="$repo/bin/fm-test-run.sh"
   fast=tests/fm-budget-fixture.test.sh
   mkdir -p "$repo/bin" "$repo/tests"
-  cp "$RUNNER" "$runner"
+  install_runner_fixture "$repo"
   cat >"$repo/$fast" <<'SH'
 #!/usr/bin/env bash
 sleep 1
@@ -1383,7 +1393,7 @@ test_jobs_parallel_scheduler_and_failure_propagation() {
   c=tests/fm-lint.test.sh
   d=tests/fm-supervision-instructions.test.sh
   mkdir -p "$repo/bin" "$repo/tests" "$evidence" "$fake_bin"
-  cp "$RUNNER" "$runner"
+  install_runner_fixture "$repo"
   cat >"$fake_bin/stat" <<'SH'
 #!/usr/bin/env bash
 if [ "$1" = "-c" ] && [ "$2" = "%a" ]; then
@@ -1429,7 +1439,7 @@ fi
 touch "$SCHED_EVIDENCE/replacement-started"
 echo "ok - replacement fixture started before slow fixture finished"
 SH
-  chmod +x "$runner" "$repo/$a" "$repo/$b" "$repo/$c" "$fake_bin/stat"
+  chmod +x "$repo/$a" "$repo/$b" "$repo/$c" "$fake_bin/stat"
   set +e
   PATH="$fake_bin:$PATH" SCHED_EVIDENCE="$evidence" SCHED_WAIT_FOR_REPLACEMENT=1 \
     "$runner" --jobs 2 --json "$tmp/timing.json" \

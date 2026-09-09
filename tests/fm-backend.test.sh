@@ -1023,11 +1023,29 @@ test_teardown_conformance_old_vs_new() {
 
 # --- backend selection loudly refuses an unknown backend --------------------
 
+# The three refusal cases below deliberately clear every FM_*_OVERRIDE test hook
+# so fm-spawn resolves its home the way it does in production. Keep that. What
+# must not stay is the side effect: with no home named at all, bin/fm-wake-lib.sh
+# resolves STATE to the repository checkout and creates state/ there at source
+# time, which is the sharing channel bin/fm-checkout-write-guard.sh forbids.
+#
+# FM_HOME is not one of those test hooks - it is the ordinary production selector
+# for a home's state/, data/, config/ and projects/, while the scripts still come
+# from the tracked code root (AGENTS.md, "Layout and state") - so naming a
+# temporary home leaves every default-resolution path these cases exercise
+# intact. Measured, along with the alternative that was rejected, in
+# docs/verification/checkout-write-guard.md.
+default_resolution_home() {  # <label> -> a private FM_HOME for a cleared-override case
+  local home="$TMP_ROOT/default-resolution-$1"
+  mkdir -p "$home"
+  printf '%s\n' "$home"
+}
+
 test_spawn_refuses_unknown_backend_flag() {
   local out status
   # bogus names a backend with no adapter at all; zellij and orca both
   # graduated to real adapters and have their own spawn tests.
-  out=$(FM_ROOT_OVERRIDE='' FM_HOME='' FM_STATE_OVERRIDE='' FM_DATA_OVERRIDE='' \
+  out=$(FM_ROOT_OVERRIDE='' FM_HOME="$(default_resolution_home unknown-backend-flag)" FM_STATE_OVERRIDE='' FM_DATA_OVERRIDE='' \
     FM_PROJECTS_OVERRIDE='' FM_CONFIG_OVERRIDE='' FM_SPAWN_NO_GUARD=1 \
     "$ROOT/bin/fm-spawn.sh" nope-backend-z1 projects/none claude --mode no-mistakes --yolo off --backend bogus 2>&1)
   status=$?
@@ -1038,7 +1056,7 @@ test_spawn_refuses_unknown_backend_flag() {
 
 test_spawn_refuses_codex_app_backend_flag() {
   local out status
-  out=$(FM_ROOT_OVERRIDE='' FM_HOME='' FM_STATE_OVERRIDE='' FM_DATA_OVERRIDE='' \
+  out=$(FM_ROOT_OVERRIDE='' FM_HOME="$(default_resolution_home codex-app-backend-flag)" FM_STATE_OVERRIDE='' FM_DATA_OVERRIDE='' \
     FM_PROJECTS_OVERRIDE='' FM_CONFIG_OVERRIDE='' FM_SPAWN_NO_GUARD=1 \
     "$ROOT/bin/fm-spawn.sh" nope-codex-app-z1 projects/none claude --mode no-mistakes --yolo off --backend codex-app 2>&1)
   status=$?
@@ -1049,7 +1067,7 @@ test_spawn_refuses_codex_app_backend_flag() {
 
 test_spawn_refuses_unknown_fm_backend_env() {
   local out status
-  out=$(FM_ROOT_OVERRIDE='' FM_HOME='' FM_STATE_OVERRIDE='' FM_DATA_OVERRIDE='' \
+  out=$(FM_ROOT_OVERRIDE='' FM_HOME="$(default_resolution_home unknown-fm-backend-env)" FM_STATE_OVERRIDE='' FM_DATA_OVERRIDE='' \
     FM_PROJECTS_OVERRIDE='' FM_CONFIG_OVERRIDE='' FM_SPAWN_NO_GUARD=1 FM_BACKEND=bogus \
     "$ROOT/bin/fm-spawn.sh" nope-backend-z2 projects/none claude --mode no-mistakes --yolo off 2>&1)
   status=$?

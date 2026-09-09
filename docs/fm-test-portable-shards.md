@@ -59,6 +59,7 @@ On green CI run [30725985757](https://github.com/kunchenguid/firstmate/actions/r
 On [PR 1495](https://github.com/kunchenguid/firstmate/pull/1495), its main step ran about 19m51s before the job was cancelled at that boundary.
 `portable-serial-<k>of<n>` splits it across `n` separate CI runners.
 Each shard is still strictly serial in itself, and separate runners mean no two of these stateful scripts ever share a machine, so the split needs no concurrency isolation proof.
+Separate runners remove concurrency, not sharing: inside one shard every script still runs from the same checkout in an order this packing decides, which is how a verdict came to depend on which neighbour had run first (see [the checkout write guarantee](fm-checkout-write-guard.md)).
 
 `bin/fm-test-run.sh` owns `n` and refuses any lane whose `of<n>` disagrees with it.
 `.github/workflows/ci.yml` derives the same `n` from `strategy.job-total` rather than a literal, so changing the shard count in either file without the other fails the lane loudly instead of leaving part of the required suite unrun.

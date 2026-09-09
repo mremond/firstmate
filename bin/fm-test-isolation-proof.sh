@@ -40,6 +40,12 @@
 #   - no global git config mutation (snapshot before/after)
 #   - no production sharding and no retry-until-green
 #
+# Writes into the repository checkout - the other piece of state every worker
+# shares - are deliberately NOT checked here. bin/fm-test-run.sh is that
+# guarantee's single enforcement point and runs every candidate in this pool
+# serially in the portable CI lanes, where a violation is attributable to one
+# script; see bin/fm-checkout-write-guard.sh and docs/fm-checkout-write-guard.md.
+#
 # Markers (stdout):
 #   FM_ISOLATION_BEGIN <iso8601> concurrency=<n> candidates=<n>
 #   FM_ISOLATION_CANDIDATE_BEGIN <iso8601> <script> worker=<i>
