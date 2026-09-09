@@ -1,0 +1,843 @@
++ set -u
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/tests/lib.sh
+++ '[' -n '' ']'
+++ FM_TEST_LIB_SOURCED=1
+++ umask 022
+++ export FM_GATE_REFUSE_BYPASS=1
+++ FM_GATE_REFUSE_BYPASS=1
+++ unset FM_TASK_ID
+++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/tests/lib.sh
++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/tests/..
++++ pwd
+++ ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C
+++ FM_TEST_CLEANUP_DIRS=()
++++ mktemp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-cleanup.9761.XXXXXX
+++ FM_TEST_CLEANUP_REGISTRY=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-cleanup.9761.aNF9mU
++++ fm_test_pid_identity 9761
++++ local pid=9761
++++ FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp
++++ bash -c '. "$1"; fm_pid_identity "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-wake-lib.sh 9761
+++ FM_TEST_OWNER_IDENTITY='Wed Sep  9 10:08:08 2026     bash -x /Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/selected-probes.sh'
++++ mktemp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-procevent.9761.XXXXXX
+++ FM_TEST_PROCEVENT_REGISTRY=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-procevent.9761.DrN9Bb
+++ FM_TEST_STUB_MAX_BLOCK_SECONDS=120
+++ export FM_TEST_STUB_MAX_BLOCK_SECONDS
+++ trap fm_test_cleanup EXIT
+++ trap 'fm_test_cleanup; exit 130' INT
+++ trap 'fm_test_cleanup; exit 143' TERM
+++ trap 'fm_test_cleanup; exit 129' HUP
+++ trap 'fm_test_cleanup; exit 131' QUIT
+++ FM_TEST_ORPHAN_MAX_AGE_SECONDS=3600
+++ '[' 0 '!=' 1 ']'
+++ fm_test_reap_orphans
+++ local marker dir mtime now owner_pid owner_identity current_identity
++++ date +%s
+++ now=1788941289
+++ for marker in "${TMPDIR:-/tmp}"/fm-*/.fm-test-fixture
+++ '[' -e '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-*/.fm-test-fixture' ']'
+++ continue
++ ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C
+++ fm_test_tmproot fm-procevent-tests
+++ local prefix=fm-procevent-tests root tmp_base
+++ tmp_base=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp
+++ tmp_base=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp
++++ mktemp -d /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.XXXXXX
+++ root=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft
++++ cd -P -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft
++++ pwd -P
+++ root=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft
+++ printf '%s\n%s\n' 9761 'Wed Sep  9 10:08:08 2026     bash -x /Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/selected-probes.sh'
+++ printf '%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft
+++ printf '%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft
++ TMP_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft
++ export FM_PROCEVENT_CLAIM_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims
++ FM_PROCEVENT_CLAIM_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims
++ BLOCKER=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/blocker.sh
++ cat
++ chmod +x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/blocker.sh
++ for post_term_case in mismatch unreadable unreadable-pgid nonleader
++ HPOST_TERM=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch
++ new_home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch
++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/state
++ POST_TERM_SOURCE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/source.sh
++ POST_TERM_PID=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid
++ POST_TERM_SIGNALS=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.signals
++ cat
++ chmod +x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/source.sh
+++ fm_fakebin /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/tools
+++ local dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/tools fakebin=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/tools/fakebin
+++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/tools/fakebin
+++ printf '%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/tools/fakebin
++ POST_TERM_BIN=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/tools/fakebin
+++ command -v ps
++ REAL_PS=/bin/ps
++ pe_register /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch lavish post-term-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/source.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.signals
++ local home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch adapter=lavish id=post-term-src
++ shift 3
++ fm_test_track_procevent_home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch
++ '[' -n /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch ']'
++ printf '%s\t%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch ''
++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch register lavish post-term-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/source.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.signals
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh register lavish post-term-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/source.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.signals
++ FM_PROC_ROOT_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/no-post-term-proc
++ FM_PROCEVENT_OWNER_CHECK_SECONDS=5
++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch reconcile
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh reconcile
++ wait_for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid
++ local f=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid n=100
+++ seq 1 100
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.pid ']'
++ return 0
++ wait_for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim
++ local f=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim n=100
+++ seq 1 100
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim ']'
++ return 0
+++ sed -n 2p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim
++ POST_TERM_RUNNER=19464
++ kill -STOP 19464
++ cat
++ chmod +x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/tools/fakebin/ps
++ post_term_status=0
+++ PATH=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/tools/fakebin:/opt/homebrew/Caskroom/codex/0.153.4/codex-path:/Users/mremond/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/usr/local/MacGPG2/bin:/Users/mremond/.codex/tmp/arg0/codex-arg08Wd7IQ:/opt/homebrew/Caskroom/codex/0.153.4/codex-path:/Users/mremond/.local/bin:/Users/mremond/go/bin:/Users/mremond/.cargo/bin:/Users/mremond/bin:/usr/local/sbin
+++ FM_PROC_ROOT_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/no-post-term-proc
+++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch retire post-term-src
++ post_term_out=$'++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch\n++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh retire post-term-src\nerror: cannot confirm runner identity; source remains registered: post-term-src'
++ post_term_status=1
++ case "$post_term_case" in
++ assert_absent /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.signals 'the first signal refuses mismatch evidence'
++ '[' '!' -e /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/child.signals ']'
++ '[' 1 -ne 0 ']'
++ assert_contains $'++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch\n++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh retire post-term-src\nerror: cannot confirm runner identity; source remains registered: post-term-src' 'cannot confirm runner identity' 'first-signal mismatch evidence refuses retirement'
++ case "$1" in
++ :
++ kill -0 19464
++ kill -0 -19464
++ assert_present /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/state/procevent/post-term-src.source 'first-signal mismatch evidence preserves registration'
++ '[' -e /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/state/procevent/post-term-src.source ']'
++ assert_present /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim 'first-signal mismatch evidence preserves its claim'
++ '[' -e /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim ']'
++ kill -KILL -19464
+++ seq 1 50
++ for _ in $(seq 1 50)
++ kill -0 -19464
++ break
++ kill -0 -19464
++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch retire post-term-src
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh retire post-term-src
++ pass 'stop mismatch evidence preserves the proved-stop boundary'
++ printf 'ok - %s\n' 'stop mismatch evidence preserves the proved-stop boundary'
+ok - stop mismatch evidence preserves the proved-stop boundary
++ for post_term_case in mismatch unreadable unreadable-pgid nonleader
++ HPOST_TERM=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable
++ new_home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable
++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/state
++ POST_TERM_SOURCE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/source.sh
++ POST_TERM_PID=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid
++ POST_TERM_SIGNALS=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.signals
++ cat
++ chmod +x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/source.sh
+++ fm_fakebin /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/tools
+++ local dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/tools fakebin=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/tools/fakebin
+++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/tools/fakebin
+++ printf '%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/tools/fakebin
++ POST_TERM_BIN=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/tools/fakebin
+++ command -v ps
++ REAL_PS=/bin/ps
++ pe_register /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable lavish post-term-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/source.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.signals
++ local home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable adapter=lavish id=post-term-src
++ shift 3
++ fm_test_track_procevent_home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable
++ '[' -n /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable ']'
++ printf '%s\t%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable ''
++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable register lavish post-term-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/source.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.signals
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh register lavish post-term-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/source.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.signals
++ FM_PROC_ROOT_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/no-post-term-proc
++ FM_PROCEVENT_OWNER_CHECK_SECONDS=5
++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable reconcile
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh reconcile
++ wait_for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid
++ local f=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid n=100
+++ seq 1 100
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.pid ']'
++ return 0
++ wait_for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim
++ local f=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim n=100
+++ seq 1 100
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim ']'
++ return 0
+++ sed -n 2p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim
++ POST_TERM_RUNNER=71220
++ kill -STOP 71220
++ cat
++ chmod +x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/tools/fakebin/ps
++ post_term_status=0
+++ PATH=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/tools/fakebin:/opt/homebrew/Caskroom/codex/0.153.4/codex-path:/Users/mremond/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/usr/local/MacGPG2/bin:/Users/mremond/.codex/tmp/arg0/codex-arg08Wd7IQ:/opt/homebrew/Caskroom/codex/0.153.4/codex-path:/Users/mremond/.local/bin:/Users/mremond/go/bin:/Users/mremond/.cargo/bin:/Users/mremond/bin:/usr/local/sbin
+++ FM_PROC_ROOT_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/no-post-term-proc
+++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable retire post-term-src
++ post_term_out=$'++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable\n++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh retire post-term-src\nretired: post-term-src'
++ case "$post_term_case" in
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/child.signals ']'
++ '[' 0 -eq 0 ']'
++ assert_absent /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/state/procevent/post-term-src.source 'proved escalation retires the source after unreadable identity'
++ '[' '!' -e /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/state/procevent/post-term-src.source ']'
++ assert_absent /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim 'proved escalation releases its claim after unreadable identity'
++ '[' '!' -e /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim ']'
+++ seq 1 50
++ for _ in $(seq 1 50)
++ kill -0 -71220
++ break
++ kill -0 -71220
++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable retire post-term-src
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh retire post-term-src
++ pass 'stop unreadable evidence preserves the proved-stop boundary'
++ printf 'ok - %s\n' 'stop unreadable evidence preserves the proved-stop boundary'
+ok - stop unreadable evidence preserves the proved-stop boundary
++ for post_term_case in mismatch unreadable unreadable-pgid nonleader
++ HPOST_TERM=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid
++ new_home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid
++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/state
++ POST_TERM_SOURCE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/source.sh
++ POST_TERM_PID=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid
++ POST_TERM_SIGNALS=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.signals
++ cat
++ chmod +x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/source.sh
+++ fm_fakebin /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/tools
+++ local dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/tools fakebin=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/tools/fakebin
+++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/tools/fakebin
+++ printf '%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/tools/fakebin
++ POST_TERM_BIN=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/tools/fakebin
+++ command -v ps
++ REAL_PS=/bin/ps
++ pe_register /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid lavish post-term-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/source.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.signals
++ local home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid adapter=lavish id=post-term-src
++ shift 3
++ fm_test_track_procevent_home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid
++ '[' -n /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid ']'
++ printf '%s\t%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid ''
++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid register lavish post-term-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/source.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.signals
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh register lavish post-term-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/source.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.signals
++ FM_PROC_ROOT_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/no-post-term-proc
++ FM_PROCEVENT_OWNER_CHECK_SECONDS=5
++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid reconcile
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh reconcile
++ wait_for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid
++ local f=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid n=100
+++ seq 1 100
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.pid ']'
++ return 0
++ wait_for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim
++ local f=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim n=100
+++ seq 1 100
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim ']'
++ return 0
+++ sed -n 2p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim
++ POST_TERM_RUNNER=15811
++ kill -STOP 15811
++ cat
++ chmod +x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/tools/fakebin/ps
++ post_term_status=0
+++ PATH=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/tools/fakebin:/opt/homebrew/Caskroom/codex/0.153.4/codex-path:/Users/mremond/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/usr/local/MacGPG2/bin:/Users/mremond/.codex/tmp/arg0/codex-arg08Wd7IQ:/opt/homebrew/Caskroom/codex/0.153.4/codex-path:/Users/mremond/.local/bin:/Users/mremond/go/bin:/Users/mremond/.cargo/bin:/Users/mremond/bin:/usr/local/sbin
+++ FM_PROC_ROOT_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/no-post-term-proc
+++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid retire post-term-src
++ post_term_out=$'++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid\n++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh retire post-term-src\nretired: post-term-src'
++ case "$post_term_case" in
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/child.signals ']'
++ '[' 0 -eq 0 ']'
++ assert_absent /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/state/procevent/post-term-src.source 'proved escalation retires the source after unreadable-pgid identity'
++ '[' '!' -e /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/state/procevent/post-term-src.source ']'
++ assert_absent /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim 'proved escalation releases its claim after unreadable-pgid identity'
++ '[' '!' -e /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim ']'
+++ seq 1 50
++ for _ in $(seq 1 50)
++ kill -0 -15811
++ break
++ kill -0 -15811
++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid retire post-term-src
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh retire post-term-src
++ pass 'stop unreadable-pgid evidence preserves the proved-stop boundary'
++ printf 'ok - %s\n' 'stop unreadable-pgid evidence preserves the proved-stop boundary'
+ok - stop unreadable-pgid evidence preserves the proved-stop boundary
++ for post_term_case in mismatch unreadable unreadable-pgid nonleader
++ HPOST_TERM=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader
++ new_home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader
++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/state
++ POST_TERM_SOURCE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/source.sh
++ POST_TERM_PID=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid
++ POST_TERM_SIGNALS=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.signals
++ cat
++ chmod +x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/source.sh
+++ fm_fakebin /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/tools
+++ local dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/tools fakebin=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/tools/fakebin
+++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/tools/fakebin
+++ printf '%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/tools/fakebin
++ POST_TERM_BIN=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/tools/fakebin
+++ command -v ps
++ REAL_PS=/bin/ps
++ pe_register /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader lavish post-term-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/source.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.signals
++ local home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader adapter=lavish id=post-term-src
++ shift 3
++ fm_test_track_procevent_home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader
++ '[' -n /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader ']'
++ printf '%s\t%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader ''
++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader register lavish post-term-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/source.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.signals
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh register lavish post-term-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/source.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.signals
++ FM_PROC_ROOT_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/no-post-term-proc
++ FM_PROCEVENT_OWNER_CHECK_SECONDS=5
++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader reconcile
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh reconcile
++ wait_for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid
++ local f=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid n=100
+++ seq 1 100
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ sleep 0.1
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.pid ']'
++ return 0
++ wait_for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim
++ local f=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim n=100
+++ seq 1 100
++ for _ in $(seq 1 "$n")
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim ']'
++ return 0
+++ sed -n 2p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim
++ POST_TERM_RUNNER=75433
++ kill -STOP 75433
++ cat
++ chmod +x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/tools/fakebin/ps
++ post_term_status=0
+++ PATH=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/tools/fakebin:/opt/homebrew/Caskroom/codex/0.153.4/codex-path:/Users/mremond/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/usr/local/MacGPG2/bin:/Users/mremond/.codex/tmp/arg0/codex-arg08Wd7IQ:/opt/homebrew/Caskroom/codex/0.153.4/codex-path:/Users/mremond/.local/bin:/Users/mremond/go/bin:/Users/mremond/.cargo/bin:/Users/mremond/bin:/usr/local/sbin
+++ FM_PROC_ROOT_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/no-post-term-proc
+++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader retire post-term-src
++ post_term_out=$'++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader\n++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh retire post-term-src\nerror: cannot confirm runner identity; source remains registered: post-term-src'
++ post_term_status=1
++ case "$post_term_case" in
++ assert_absent /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.signals 'the first signal refuses nonleader evidence'
++ '[' '!' -e /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/child.signals ']'
++ '[' 1 -ne 0 ']'
++ assert_contains $'++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader\n++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh retire post-term-src\nerror: cannot confirm runner identity; source remains registered: post-term-src' 'cannot confirm runner identity' 'first-signal nonleader evidence refuses retirement'
++ case "$1" in
++ :
++ kill -0 75433
++ kill -0 -75433
++ assert_present /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/state/procevent/post-term-src.source 'first-signal nonleader evidence preserves registration'
++ '[' -e /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/state/procevent/post-term-src.source ']'
++ assert_present /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim 'first-signal nonleader evidence preserves its claim'
++ '[' -e /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/claims/post-term-src.claim ']'
++ kill -KILL -75433
+++ seq 1 50
++ for _ in $(seq 1 50)
++ kill -0 -75433
++ break
++ kill -0 -75433
++ pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader retire post-term-src
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh retire post-term-src
++ pass 'stop nonleader evidence preserves the proved-stop boundary'
++ printf 'ok - %s\n' 'stop nonleader evidence preserves the proved-stop boundary'
+ok - stop nonleader evidence preserves the proved-stop boundary
++ fm_test_cleanup
++ local d
++ fm_test_reap_procevent_homes
++ local home claim_root $'seen=\n'
++ '[' -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-procevent.9761.DrN9Bb ']'
++ IFS=$'\t'
++ read -r home claim_root
++ '[' -n /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch ']'
++ case "$seen" in
++ seen+=$'/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch\n'
++ '[' -d /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/state/procevent ']'
++ '[' -n '' ']'
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch
++ FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-mismatch/state
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh sweep-home
++ IFS=$'\t'
++ read -r home claim_root
++ '[' -n /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable ']'
++ case "$seen" in
++ seen+=$'/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable\n'
++ '[' -d /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/state/procevent ']'
++ '[' -n '' ']'
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable
++ FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable/state
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh sweep-home
++ IFS=$'\t'
++ read -r home claim_root
++ '[' -n /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid ']'
++ case "$seen" in
++ seen+=$'/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid\n'
++ '[' -d /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/state/procevent ']'
++ '[' -n '' ']'
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid
++ FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-unreadable-pgid/state
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh sweep-home
++ IFS=$'\t'
++ read -r home claim_root
++ '[' -n /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader ']'
++ case "$seen" in
++ seen+=$'/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader\n'
++ '[' -d /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/state/procevent ']'
++ '[' -n '' ']'
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader
++ FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft/post-term-nonleader/state
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh sweep-home
++ IFS=$'\t'
++ read -r home claim_root
++ rm -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-procevent.9761.DrN9Bb
++ for d in "${FM_TEST_CLEANUP_DIRS[@]:-}"
++ '[' -n '' ']'
++ '[' -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-cleanup.9761.aNF9mU ']'
++ IFS=
++ read -r d
++ '[' -n /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft ']'
++ rm -rf /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.SZ8Zft
++ IFS=
++ read -r d
++ rm -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-cleanup.9761.aNF9mU

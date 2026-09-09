@@ -1,0 +1,3 @@
+Header comment block: byte-identical to base.
+Public --help exit code/stdout/stderr: byte-identical to base.
+.agents/skills/: unchanged from base.

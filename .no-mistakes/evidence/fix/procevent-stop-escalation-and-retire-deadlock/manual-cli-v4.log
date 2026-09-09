@@ -1,0 +1,25 @@
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v4/mismatched-live fm-procevent.sh register lavish mismatched-live -- /bin/sleep 180
+registered: mismatched-live (lavish)
+[exit=0, elapsed=4.667s]
+START mismatched-live 32083     1 32083 R    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh _start mismatched-live
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v4/mismatched-live fm-procevent.sh retire mismatched-live
+error: cannot confirm runner identity; source remains registered: mismatched-live
+[exit=1, elapsed=1.428s]
+Unproved first signal: group_alive=True, registration_exists=True, claim_unchanged=True
+SCENARIO PASSED: mismatched-live
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v4/mismatched-live fm-procevent.sh retire mismatched-live
+retired: mismatched-live
+[exit=0, elapsed=2.669s]
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v4/nonleader-live fm-procevent.sh register lavish nonleader-live -- /bin/sleep 180
+registered: nonleader-live (lavish)
+[exit=0, elapsed=2.245s]
+START nonleader-live 58288     1 58288 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh _start nonleader-live
+Recorded real nonleader pid=63526, kernel pgid=58288
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v4/nonleader-live fm-procevent.sh retire nonleader-live
+error: cannot confirm runner identity; source remains registered: nonleader-live
+[exit=1, elapsed=0.874s]
+Unproved first signal: group_alive=True, registration_exists=True, claim_unchanged=True
+SCENARIO PASSED: nonleader-live
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v4/nonleader-live fm-procevent.sh retire nonleader-live
+retired: nonleader-live
+[exit=0, elapsed=1.234s]

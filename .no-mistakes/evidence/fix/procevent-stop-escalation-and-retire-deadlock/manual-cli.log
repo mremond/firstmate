@@ -1,0 +1,49 @@
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual/reconcile-healthy fm-procevent.sh register lavish reconcile-healthy -- /bin/sleep 180
+registered: reconcile-healthy (lavish)
+[exit=0, elapsed=4.142s]
+START reconcile-healthy 17816 17477 17816 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh _start reconcile-healthy
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual/reconcile-healthy fm-procevent.sh reconcile
+reconciled: published=0 started=0 stopped=0 uncertain=1
+[exit=0, elapsed=9.086s]
+Attached start returned 0; group_alive=False; claim_exists=False
+SCENARIO FAILED: reconcile-healthy AssertionError()
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual/reconcile-healthy fm-procevent.sh retire reconcile-healthy
+retired: reconcile-healthy
+[exit=0, elapsed=4.423s]
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual/crashed-group fm-procevent.sh register lavish crashed-group -- /bin/sleep 180
+registered: crashed-group (lavish)
+[exit=0, elapsed=3.447s]
+SCENARIO FAILED: crashed-group AssertionError('condition did not become true within 60s')
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual/mismatched-live fm-procevent.sh register lavish mismatched-live -- /bin/sleep 180
+registered: mismatched-live (lavish)
+[exit=0, elapsed=5.863s]
+START mismatched-live 85137     1 85137 R    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh _start mismatched-live
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual/mismatched-live fm-procevent.sh retire mismatched-live
+SCENARIO FAILED: mismatched-live TimeoutExpired(['/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh', 'retire', 'mismatched-live'], 75)
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual/mismatched-live fm-procevent.sh retire mismatched-live
+retired: mismatched-live
+[exit=0, elapsed=18.917s]
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual/nonleader-live fm-procevent.sh register lavish nonleader-live -- /bin/sleep 180
+registered: nonleader-live (lavish)
+[exit=0, elapsed=3.087s]
+START nonleader-live 45466     1 45466 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh _start nonleader-live
+Recorded real nonleader pid=59188, kernel pgid=45466
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual/nonleader-live fm-procevent.sh retire nonleader-live
+SCENARIO FAILED: nonleader-live TimeoutExpired(['/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh', 'retire', 'nonleader-live'], 75)
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/manual-cli.py", line 110, in <module>
+    if h: cleanup(h,pid,launch,log)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/manual-cli.py", line 55, in cleanup
+    wait_for(lambda:not alive(-pid),20)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/manual-cli.py", line 17, in wait_for
+    if f(): return
+       ~^^
+  File "/Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/manual-cli.py", line 55, in <lambda>
+    wait_for(lambda:not alive(-pid),20)
+                        ~~~~~^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/manual-cli.py", line 11, in alive
+    try: os.kill(pid,0); return True
+         ~~~~~~~^^^^^^^
+PermissionError: [Errno 1] Operation not permitted

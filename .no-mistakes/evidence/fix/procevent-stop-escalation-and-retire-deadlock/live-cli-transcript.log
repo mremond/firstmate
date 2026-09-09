@@ -1,231 +1,86 @@
-[   0.003s] Host Darwin mac-mini 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:22 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T8132 arm64
-[   0.003s] Base b84e0e362face25f3dd8945297a3df1320d7668c; target 46e578847c6a8ce11c18b2d48e5b6ffdb7d9d930
-[   0.003s] SCENARIO base healthy reproduction
-[   0.003s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-healthy /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh register lavish healthy -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-healthy/poll healthy
-[   0.517s] exit=0 elapsed=0.514s stdout='registered: healthy (lavish)' stderr=''
-[   1.564s] running healthy
-PID PPID PGID STAT COMMAND
-12935 12925 12935 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh _start healthy
-13749     1 13749 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh _owner-watchdog healthy 12935 Tue Sep  8 16:51:32 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh _start healthy /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-healthy/state/procevent/.owner-guard-ready.CjinqO 16777234 49326023
-14789 12935 12935 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-healthy/poll healthy
-14902 12935 12935 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
-15435 14789 12935 S    sleep 120
-15437 14789 12935 S    sleep 0.1
-[   1.564s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-healthy /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh retire healthy
-[   6.992s] exit=0 elapsed=5.428s stdout='retired: healthy' stderr=''
-[   6.992s] base healthy public start exit=137; TERM=143, KILL=137; retirement=5.429s
-[   6.993s] PASS healthy retirement leaves no process-group members
-[   6.993s] PASS base healthy runner has expected observed signal status
-[   6.996s] SCENARIO target healthy retirement
-[   6.997s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-healthy /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish healthy -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-healthy/poll healthy
-[   7.141s] exit=0 elapsed=0.144s stdout='registered: healthy (lavish)' stderr=''
-[   7.779s] running healthy
-PID PPID PGID STAT COMMAND
-23718 23716 23718 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start healthy
-24056     1 24056 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog healthy 23718 Tue Sep  8 16:51:38 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start healthy /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-healthy/state/procevent/.owner-guard-ready.iQAHNC 16777234 49326132
-24527 23718 23718 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-healthy/poll healthy
-24545 24527 23718 S    sleep 120
-24550 24527 23718 S    sleep 0.1
-24583 23718 23718 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
-[   7.779s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-healthy /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh retire healthy
-[   8.266s] exit=0 elapsed=0.487s stdout='retired: healthy' stderr=''
-[   8.266s] target healthy public start exit=143; TERM=143, KILL=137; retirement=0.487s
-[   8.266s] PASS healthy retirement leaves no process-group members
-[   8.266s] PASS target healthy runner has expected observed signal status
-[   8.266s] SCENARIO base guard reproduction
-[   8.267s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-guard-expiry /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh register lavish guard-expiry -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-guard-expiry/poll resistant
-[   8.443s] exit=0 elapsed=0.177s stdout='registered: guard-expiry (lavish)' stderr=''
-[   8.444s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-guard-expiry /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh reconcile
-[   8.603s] exit=0 elapsed=0.159s stdout='reconciled: published=0 started=1 stopped=0 uncertain=0' stderr=''
-[   9.452s] running guard-expiry
-PID PPID PGID STAT COMMAND
-26112     1 26112 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh _start guard-expiry
-26696     1 26696 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh _owner-watchdog guard-expiry 26112 Tue Sep  8 16:51:40 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh _start guard-expiry /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-guard-expiry/state/procevent/.owner-guard-ready.w4Hmw8 16777234 49326208
-27501 26112 26112 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-guard-expiry/poll resistant
-27522 27501 26112 S    sleep 0.1
-27592 26112 26112 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
-[  13.995s] PASS expired owner guard sends TERM to registered blocking command
-[  14.058s] after guard TERM
-PID PPID PGID STAT COMMAND
-26696     1 26696 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh _owner-watchdog guard-expiry 26112 Tue Sep  8 16:51:40 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh _start guard-expiry /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-guard-expiry/state/procevent/.owner-guard-ready.w4Hmw8 16777234 49326208
-27501     1 26112 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-guard-expiry/poll resistant
-35065 27501 26112 S    sleep 0.1
-[  14.058s] PASS base guard loses the leader to its own TERM
-[  18.293s] base abandoned survivor after TERM grace
-PID PPID PGID STAT COMMAND
-26696     1 26696 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh _owner-watchdog guard-expiry 26112 Tue Sep  8 16:51:40 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/baseline/bin/fm-procevent.sh _start guard-expiry /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-guard-expiry/state/procevent/.owner-guard-ready.w4Hmw8 16777234 49326208
-27501     1 26112 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/base-guard-expiry/poll resistant
-42707 27501 26112 S    (sleep)
-[  18.293s] PASS base guard abandons live child with ongoing work after its own TERM
-[  18.294s] SCENARIO target guard expiry
-[  18.295s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-expiry /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish guard-expiry -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-expiry/poll resistant
-[  18.652s] exit=0 elapsed=0.357s stdout='registered: guard-expiry (lavish)' stderr=''
-[  18.652s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-expiry /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
-[  18.778s] exit=0 elapsed=0.126s stdout='reconciled: published=0 started=1 stopped=0 uncertain=0' stderr=''
-[  19.614s] running guard-expiry
-PID PPID PGID STAT COMMAND
-44273     1 44273 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start guard-expiry
-44907     1 44907 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog guard-expiry 44273 Tue Sep  8 16:51:50 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start guard-expiry /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-expiry/state/procevent/.owner-guard-ready.ZC75Iz 16777234 49326427
-45647 44273 44273 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-expiry/poll resistant
-45688 45647 44273 S    sleep 0.1
-45716 44273 44273 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
-[  24.109s] PASS expired owner guard sends TERM to registered blocking command
-[  24.167s] after guard TERM
-PID PPID PGID STAT COMMAND
-44273     1 44273 R    (bash)
-44907     1 44907 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog guard-expiry 44273 Tue Sep  8 16:51:50 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start guard-expiry /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-expiry/state/procevent/.owner-guard-ready.ZC75Iz 16777234 49326427
-45647 44273 44273 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-guard-expiry/poll resistant
-53582 45647 44273 S    sleep 0.1
-[  28.889s] PASS target guard escalates and stops all group members
-[  28.899s] PASS short lease/check guard ends workload within observed lease + checks + stop grace allowance
-[  29.470s] PASS work log ceases after guard cleanup
-[  29.594s] target group reaped
-PID PPID PGID STAT COMMAND
-(no group members or guard)
-[  29.601s] SCENARIO target absent leader
-[  29.601s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-retire-attached /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish retire-attached -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-retire-attached/poll resistant
-[  29.917s] exit=0 elapsed=0.316s stdout='registered: retire-attached (lavish)' stderr=''
-[  30.582s] running retire-attached
-PID PPID PGID STAT COMMAND
-62322 62317 62322 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start retire-attached
-62805     1 62805 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog retire-attached 62322 Tue Sep  8 16:52:01 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start retire-attached /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-retire-attached/state/procevent/.owner-guard-ready.S3wsP8 16777234 49326611
-63188 62322 62322 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-retire-attached/poll resistant
-63243 63188 62322 S    sleep 0.1
-63258 62322 62322 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
-[  30.706s] PASS TERM leaves a real attached runner leader
-[  30.706s] PASS blocking child survives leader transition and needs escalation
-[  30.767s] TERM transition attached
-PID PPID PGID STAT COMMAND
-62805     1 62805 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog retire-attached 62322 Tue Sep  8 16:52:01 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start retire-attached /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-retire-attached/state/procevent/.owner-guard-ready.S3wsP8 16777234 49326611
-63188     1 62322 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-retire-attached/poll resistant
-63570 63188 62322 S    sleep 0.1
-[  34.248s] PASS forced escalation reaps child after attached transition
-[  34.276s] PASS retire succeeds after attached transition: retired: retire-attached
-[  34.276s] PASS no remaining group after attached escalation
-[  34.276s] SCENARIO target Darwin zombie leader
-[  34.276s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-retire-zombie /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish retire-zombie -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-retire-zombie/poll resistant
-[  34.422s] exit=0 elapsed=0.146s stdout='registered: retire-zombie (lavish)' stderr=''
-[  34.971s] running retire-zombie
-PID PPID PGID STAT COMMAND
-68407 68406 68407 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start retire-zombie
-68817     1 68817 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog retire-zombie 68407 Tue Sep  8 16:52:06 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start retire-zombie /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-retire-zombie/state/procevent/.owner-guard-ready.LDfFag 16777234 49326656
-69184 68407 68407 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-retire-zombie/poll resistant
-69193 69184 68407 S    sleep 0.1
-69199 68407 68407 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
-[  35.212s] PASS TERM leaves a real zombie runner leader
-[  35.212s] PASS blocking child survives leader transition and needs escalation
-[  35.273s] TERM transition zombie
-PID PPID PGID STAT COMMAND
-68407 68406 68407 Z    <defunct>
-68817     1 68817 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog retire-zombie 68407 Tue Sep  8 16:52:06 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start retire-zombie /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-retire-zombie/state/procevent/.owner-guard-ready.LDfFag 16777234 49326656
-69184     1 68407 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-retire-zombie/poll resistant
-69545 69184 68407 S    (sleep)
-[  38.596s] PASS forced escalation reaps child after zombie transition
-[  38.723s] PASS retire succeeds after zombie transition: retired: retire-zombie
-[  38.723s] PASS no remaining group after zombie escalation
-[  38.724s] SCENARIO healthy reconcile cleanup
-[  38.724s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-cleanup-reconcile /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish cleanup-reconcile -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-cleanup-reconcile/poll healthy
-[  38.892s] exit=0 elapsed=0.167s stdout='registered: cleanup-reconcile (lavish)' stderr=''
-[  39.534s] running cleanup-reconcile
-PID PPID PGID STAT COMMAND
-76323 76313 76323 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start cleanup-reconcile
-76849     1 76849 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog cleanup-reconcile 76323 Tue Sep  8 16:52:10 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start cleanup-reconcile /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-cleanup-reconcile/state/procevent/.owner-guard-ready.xFnsfa 16777234 49326769
-77414 76323 76323 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-cleanup-reconcile/poll healthy
-77456 77414 76323 S    sleep 120
-77457 77414 76323 S    sleep 0.1
-77491 76323 76323 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
-[  39.534s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-cleanup-reconcile /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
-[  39.926s] exit=0 elapsed=0.392s stdout='reconciled: published=0 started=0 stopped=1 uncertain=0' stderr=''
-[  39.926s] PASS reconcile healthy cleanup ends with TERM, not KILL
-[  39.926s] PASS reconcile leaves no remaining group
-[  39.926s] SCENARIO healthy home sweep
-[  39.927s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-cleanup-sweep-home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish cleanup-sweep-home -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-cleanup-sweep-home/poll healthy
-[  40.150s] exit=0 elapsed=0.223s stdout='registered: cleanup-sweep-home (lavish)' stderr=''
-[  40.804s] running cleanup-sweep-home
-PID PPID PGID STAT COMMAND
-79402 79391 79402 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start cleanup-sweep-home
-80006     1 80006 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog cleanup-sweep-home 79402 Tue Sep  8 16:52:12 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start cleanup-sweep-home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-cleanup-sweep-home/state/procevent/.owner-guard-ready.TWynIF 16777234 49326857
-80480 79402 79402 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-cleanup-sweep-home/poll healthy
-80496 80480 79402 S    sleep 120
-80498 80480 79402 S    sleep 0.1
-80531 79402 79402 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
-[  40.804s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-cleanup-sweep-home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh sweep-home
-[  41.541s] exit=0 elapsed=0.736s stdout='retired: cleanup-sweep-home\nswept: attempted=1' stderr=''
-[  41.541s] PASS sweep-home healthy cleanup ends with TERM, not KILL
-[  41.541s] PASS sweep-home leaves no remaining group
-[  41.541s] SCENARIO readable stale identity refusal
-[  41.541s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-stale-identity /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish stale-identity -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-stale-identity/poll resistant
-[  41.714s] exit=0 elapsed=0.173s stdout='registered: stale-identity (lavish)' stderr=''
-[  42.363s] running stale-identity
-PID PPID PGID STAT COMMAND
-83151 83138 83151 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start stale-identity
-83792     1 83792 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog stale-identity 83151 Tue Sep  8 16:52:13 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start stale-identity /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-stale-identity/state/procevent/.owner-guard-ready.gJyr2F 16777234 49326903
-84256 83151 83151 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-stale-identity/poll resistant
-84276 84256 83151 S    sleep 0.1
-84292 83151 83151 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
-[  42.364s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-stale-identity /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh retire stale-identity
-[  42.463s] exit=1 elapsed=0.099s stdout='' stderr='error: cannot confirm runner identity; source remains registered: stale-identity'
-[  42.463s] PASS stale readable identity refuses first signal
-[  42.463s] PASS stale generation refusal preserves live leader and child
-[  42.464s] PASS no TERM delivered through stale claim
-[  42.464s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-stale-identity /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh retire stale-identity
-[  45.991s] exit=0 elapsed=3.527s stdout='retired: stale-identity' stderr=''
-[  45.991s] SCENARIO external crash refusal all callers
-[  45.992s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-crashed-leader /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish crashed-leader -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-crashed-leader/poll resistant
-[  46.143s] exit=0 elapsed=0.152s stdout='registered: crashed-leader (lavish)' stderr=''
-[  46.144s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-crashed-leader /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
-[  46.256s] exit=0 elapsed=0.113s stdout='reconciled: published=0 started=1 stopped=0 uncertain=0' stderr=''
-[  46.809s] running crashed-leader
-PID PPID PGID STAT COMMAND
-90223     1 90223 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start crashed-leader
-90563     1 90563 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog crashed-leader 90223 Tue Sep  8 16:52:18 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start crashed-leader /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-crashed-leader/state/procevent/.owner-guard-ready.oGO2k2 16777234 49326974
-90947 90223 90223 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-crashed-leader/poll resistant
-90967 90947 90223 S    sleep 0.1
-91008 90223 90223 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
-[  46.925s] PASS external KILL removes only runner leader
-[  46.925s] PASS externally killed leader leaves blocking child
-[  51.994s] PASS guard refuses externally created leaderless group after lease expiry
-[  51.994s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-crashed-leader /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh retire crashed-leader
-[  52.092s] exit=1 elapsed=0.097s stdout='' stderr='error: cannot confirm runner identity; source remains registered: crashed-leader'
-[  52.092s] PASS external-crash group is not signalled by retire
-[  52.092s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-crashed-leader /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
-[  52.251s] exit=0 elapsed=0.158s stdout='reconciled: published=0 started=0 stopped=0 uncertain=1' stderr=''
-[  52.251s] PASS external-crash group is not signalled by reconcile
-[  52.251s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-crashed-leader /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh sweep-home
-[  52.613s] exit=1 elapsed=0.363s stdout='' stderr='error: cannot confirm runner identity; source remains registered: crashed-leader\nerror: process-event home sweep incomplete: attempted=1 failed=1'
-[  52.613s] PASS external-crash group is not signalled by sweep-home
-[  52.614s] PASS all callers preserve external-crash refusal without TERM
-[  52.614s] PASS crashed source and claim remain, blocking replacement
-[  52.614s] PASS crashed source produces no captured result
-[  52.673s] permanent refusal residue
-PID PPID PGID STAT COMMAND
-90947     1 90223 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-crashed-leader/poll resistant
-91008     1 90223 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
-99835 90947 90223 S    sleep 0.1
-[  52.674s] SCENARIO independent home scope
-[  52.678s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-scope-expired /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish scope-expired -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-scope-expired/poll resistant
-[  52.822s] exit=0 elapsed=0.144s stdout='registered: scope-expired (lavish)' stderr=''
-[  52.822s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-scope-expired /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh reconcile
-[  52.931s] exit=0 elapsed=0.109s stdout='reconciled: published=0 started=1 stopped=0 uncertain=0' stderr=''
-[  53.472s] running scope-expired
-PID PPID PGID STAT COMMAND
-  573     1   573 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start scope-expired
-  917     1   917 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog scope-expired 573 Tue Sep  8 16:52:24 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start scope-expired /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-scope-expired/state/procevent/.owner-guard-ready.5gMFXW 16777234 49327112
- 1331   573   573 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-scope-expired/poll resistant
- 1349  1331   573 S    sleep 0.1
- 1363   573   573 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
-[  53.472s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-scope-live /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh register lavish scope-live -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-scope-live/poll resistant
-[  53.613s] exit=0 elapsed=0.141s stdout='registered: scope-live (lavish)' stderr=''
-[  54.251s] running scope-live
-PID PPID PGID STAT COMMAND
- 1915  1912  1915 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start scope-live
- 2243     1  2243 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _owner-watchdog scope-live 1915 Tue Sep  8 16:52:25 2026     bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh _start scope-live /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-scope-live/state/procevent/.owner-guard-ready.nQM6pw 16777234 49327141
- 2631  1915  1915 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/poll-command.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-scope-live/poll resistant
- 2643  2631  1915 S    sleep 0.1
- 2662  1915  1915 S    perl -e \012      use strict;\012      use warnings;\012      my $limit = shift;\012      my ($written, $truncated) = (0, 0);\012      while (1) {\012        my $count = sysread(STDIN, my $buffer, 65536);\012        exit 2 unless defined $count;\012        last if $count == 0;\012        my $take = $written < $limit ? $limit - $written : 0;\012        $take = $count if $take > $count;\012        if ($take > 0) {\012          my $offset = 0;\012          while ($offset < $take) {\012            my $count_written = syswrite(STDOUT, $buffer, $take - $offset, $offset);\012            exit 2 unless defined $count_written;\012            $offset += $count_written;\012          }\012          $written += $take;\012        }\012        $truncated = 1 if $take < $count;\012      }\012      exit($truncated ? 3 : 0);\012     1048576
-[  62.445s] PASS expired home group is reaped
-[  62.446s] PASS same workload in an attached live home remains running
-[  62.446s] PASS live home receives no stop signal
-[  62.446s] $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/.procevent-validation/target-scope-live /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M20JG8RNK8A0BPJA70D7QNX2/bin/fm-procevent.sh retire scope-live
-[  67.297s] exit=0 elapsed=4.851s stdout='retired: scope-live' stderr=''
-[  69.446s] Remaining test process groups: []
+Observed CLI and process results on target f8819bf51500b7acd82a902a081f5e84a1eec334.
+
+
+Healthy retirement, base
+not ok - the runner did not exit on TERM (start status=137, retirement=12404ms, sampled windows=4915/6681ms)
+
+Healthy retirement, target
+ordinary stop: start status=143 retirement=4474ms sampled windows=5281/5838ms
+
+Real CLI reconcile and independently crashed leader
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/reconcile-healthy fm-procevent.sh register lavish reconcile-healthy -- /bin/sleep 180
+registered: reconcile-healthy (lavish)
+[exit=0, elapsed=6.762s]
+START reconcile-healthy 63632 63616 63632 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh _start reconcile-healthy
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/reconcile-healthy fm-procevent.sh reconcile
+reconciled: published=0 started=0 stopped=1 uncertain=0
+[exit=0, elapsed=10.564s]
+Attached start returned 143; group_alive=False; claim_exists=False
+SCENARIO PASSED: reconcile-healthy
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/reconcile-healthy fm-procevent.sh retire reconcile-healthy
+retired: reconcile-healthy
+[exit=0, elapsed=11.067s]
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/crashed-group fm-procevent.sh register lavish crashed-group -- /bin/sleep 180
+registered: crashed-group (lavish)
+[exit=0, elapsed=10.783s]
+START crashed-group 41291     1 41291 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh _start crashed-group
+Independent SIGKILL: leader absent; its sleep child and group remain alive.
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/crashed-group fm-procevent.sh retire crashed-group
+error: cannot confirm runner identity; source remains registered: crashed-group
+[exit=1, elapsed=5.306s]
+Preserved the original claim and registration; group still alive; no replacement.
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/crashed-group fm-procevent.sh reconcile
+reconciled: published=0 started=0 stopped=0 uncertain=1
+[exit=0, elapsed=8.498s]
+Preserved the original claim and registration; group still alive; no replacement.
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/crashed-group fm-procevent.sh sweep-home
+error: cannot confirm runner identity; source remains registered: crashed-group
+error: process-event home sweep incomplete: attempted=1 failed=1
+[exit=1, elapsed=18.263s]
+Preserved the original claim and registration; group still alive; no replacement.
+After ten one-second guard-check intervals: group still alive, claim unchanged.
+SCENARIO PASSED: crashed-group
+
+
+Real mismatched identity and nonleader
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v4/mismatched-live fm-procevent.sh register lavish mismatched-live -- /bin/sleep 180
+registered: mismatched-live (lavish)
+[exit=0, elapsed=4.667s]
+START mismatched-live 32083     1 32083 R    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh _start mismatched-live
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v4/mismatched-live fm-procevent.sh retire mismatched-live
+error: cannot confirm runner identity; source remains registered: mismatched-live
+[exit=1, elapsed=1.428s]
+Unproved first signal: group_alive=True, registration_exists=True, claim_unchanged=True
+SCENARIO PASSED: mismatched-live
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v4/mismatched-live fm-procevent.sh retire mismatched-live
+retired: mismatched-live
+[exit=0, elapsed=2.669s]
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v4/nonleader-live fm-procevent.sh register lavish nonleader-live -- /bin/sleep 180
+registered: nonleader-live (lavish)
+[exit=0, elapsed=2.245s]
+START nonleader-live 58288     1 58288 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh _start nonleader-live
+Recorded real nonleader pid=63526, kernel pgid=58288
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v4/nonleader-live fm-procevent.sh retire nonleader-live
+error: cannot confirm runner identity; source remains registered: nonleader-live
+[exit=1, elapsed=0.874s]
+Unproved first signal: group_alive=True, registration_exists=True, claim_unchanged=True
+SCENARIO PASSED: nonleader-live
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v4/nonleader-live fm-procevent.sh retire nonleader-live
+retired: nonleader-live
+[exit=0, elapsed=1.234s]
+
+
+Base guard
+not ok - the guard exceeded its bound: still holding the group after 42s, against a documented bound of 21s
+62058     1 55959 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.VatGp9/signal-proof-stub.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.VatGp9/proof-guard
+
+Escalation removed
+not ok - the guard exceeded its bound: still holding the group after 42s, against a documented bound of 21s
+18510     1 13106 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-stub.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/proof-guard
+
+Guard delayed
+not ok - the guard exceeded its bound: still holding the group after 42s, against a documented bound of 21s
+24407     1 24407 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/slow-guard/bin/fm-procevent.sh _start proof-guard-src
+51809 24407 24407 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.NLFBCd/signal-proof-stub.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.NLFBCd/proof-guard
+
+The full logs retain setup and cleanup iterations; see test-report.md.

@@ -1,0 +1,11 @@
+--- bin/fm-procevent.sh	2026-09-09 09:56:00
++++ .local-procevent-validation/slow-guard/bin/fm-procevent.sh	2026-09-09 10:12:47
+@@ -1162,7 +1162,7 @@
+     fi
+     # Two consecutive misses, so one unreadable read cannot end a live runner.
+     misses=$((misses + 1))
+-    [ "$misses" -ge 2 ] || continue
++    [ "$misses" -ge 100 ] || continue
+     if stop_runner_pid "$pid" "$identity"; then
+       exit 0
+     fi

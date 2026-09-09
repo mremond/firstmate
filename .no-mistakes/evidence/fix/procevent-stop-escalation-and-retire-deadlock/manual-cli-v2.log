@@ -1,0 +1,49 @@
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/reconcile-healthy fm-procevent.sh register lavish reconcile-healthy -- /bin/sleep 180
+registered: reconcile-healthy (lavish)
+[exit=0, elapsed=6.762s]
+START reconcile-healthy 63632 63616 63632 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh _start reconcile-healthy
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/reconcile-healthy fm-procevent.sh reconcile
+reconciled: published=0 started=0 stopped=1 uncertain=0
+[exit=0, elapsed=10.564s]
+Attached start returned 143; group_alive=False; claim_exists=False
+SCENARIO PASSED: reconcile-healthy
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/reconcile-healthy fm-procevent.sh retire reconcile-healthy
+retired: reconcile-healthy
+[exit=0, elapsed=11.067s]
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/crashed-group fm-procevent.sh register lavish crashed-group -- /bin/sleep 180
+registered: crashed-group (lavish)
+[exit=0, elapsed=10.783s]
+START crashed-group 41291     1 41291 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh _start crashed-group
+Independent SIGKILL: leader absent; its sleep child and group remain alive.
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/crashed-group fm-procevent.sh retire crashed-group
+error: cannot confirm runner identity; source remains registered: crashed-group
+[exit=1, elapsed=5.306s]
+Preserved the original claim and registration; group still alive; no replacement.
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/crashed-group fm-procevent.sh reconcile
+reconciled: published=0 started=0 stopped=0 uncertain=1
+[exit=0, elapsed=8.498s]
+Preserved the original claim and registration; group still alive; no replacement.
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/manual-v2/crashed-group fm-procevent.sh sweep-home
+error: cannot confirm runner identity; source remains registered: crashed-group
+error: process-event home sweep incomplete: attempted=1 failed=1
+[exit=1, elapsed=18.263s]
+Preserved the original claim and registration; group still alive; no replacement.
+After ten one-second guard-check intervals: group still alive, claim unchanged.
+SCENARIO PASSED: crashed-group
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/manual-cli-v2.py", line 110, in <module>
+    if h: cleanup(h,pid,launch,log)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/manual-cli-v2.py", line 55, in cleanup
+    wait_for(lambda:not alive(-pid),20)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/manual-cli-v2.py", line 17, in wait_for
+    if f(): return
+       ~^^
+  File "/Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/manual-cli-v2.py", line 55, in <lambda>
+    wait_for(lambda:not alive(-pid),20)
+                        ~~~~~^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/manual-cli-v2.py", line 11, in alive
+    try: os.kill(pid,0); return True
+         ~~~~~~~^^^^^^^
+PermissionError: [Errno 1] Operation not permitted

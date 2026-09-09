@@ -1,0 +1,321 @@
++ set -u
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/tests/lib.sh
+++ '[' -n '' ']'
+++ FM_TEST_LIB_SOURCED=1
+++ umask 022
+++ export FM_GATE_REFUSE_BYPASS=1
+++ FM_GATE_REFUSE_BYPASS=1
+++ unset FM_TASK_ID
+++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/tests/lib.sh
++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/tests/..
++++ pwd
+++ ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C
+++ FM_TEST_CLEANUP_DIRS=()
++++ mktemp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-cleanup.10968.XXXXXX
+++ FM_TEST_CLEANUP_REGISTRY=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-cleanup.10968.AVNvcC
++++ fm_test_pid_identity 10968
++++ local pid=10968
++++ FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp
++++ bash -c '. "$1"; fm_pid_identity "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-wake-lib.sh 10968
+++ FM_TEST_OWNER_IDENTITY='Wed Sep  9 10:13:18 2026     bash -x /Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/selected-guard-15s.sh'
++++ mktemp /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-procevent.10968.XXXXXX
+++ FM_TEST_PROCEVENT_REGISTRY=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-procevent.10968.StOpnG
+++ FM_TEST_STUB_MAX_BLOCK_SECONDS=300
+++ export FM_TEST_STUB_MAX_BLOCK_SECONDS
+++ trap fm_test_cleanup EXIT
+++ trap 'fm_test_cleanup; exit 130' INT
+++ trap 'fm_test_cleanup; exit 143' TERM
+++ trap 'fm_test_cleanup; exit 129' HUP
+++ trap 'fm_test_cleanup; exit 131' QUIT
+++ FM_TEST_ORPHAN_MAX_AGE_SECONDS=3600
+++ '[' 0 '!=' 1 ']'
+++ fm_test_reap_orphans
+++ local marker dir mtime now owner_pid owner_identity current_identity
++++ date +%s
+++ now=1788941598
+++ for marker in "${TMPDIR:-/tmp}"/fm-*/.fm-test-fixture
+++ '[' -e '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-*/.fm-test-fixture' ']'
+++ continue
++ ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/no-escalation
+++ fm_test_tmproot fm-procevent-tests
+++ local prefix=fm-procevent-tests root tmp_base
+++ tmp_base=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp
+++ tmp_base=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp
++++ mktemp -d /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.XXXXXX
+++ root=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA
++++ cd -P -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA
++++ pwd -P
+++ root=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA
+++ printf '%s\n%s\n' 10968 'Wed Sep  9 10:13:18 2026     bash -x /Users/mremond/.no-mistakes/evidence/01M22JMZFHHKDEBP264VCZFC1C/selected-guard-15s.sh'
+++ printf '%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA
+++ printf '%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA
++ TMP_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA
++ export FM_PROCEVENT_CLAIM_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/claims
++ FM_PROCEVENT_CLAIM_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/claims
++ BLOCKER=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/blocker.sh
++ cat
++ chmod +x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/blocker.sh
++ QUIET_STUB=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/quiet-stub.sh
++ cat
++ chmod +x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/quiet-stub.sh
++ PROOF_LEASE_SECONDS=15
++ PROOF_CHECK_SECONDS=1
++ SIGNAL_PROOF_STUB=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-stub.sh
++ cat
++ chmod +x /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-stub.sh
++ trap 'if [ -n "${GUARD_PID:-}" ]; then ps -o pid=,ppid=,pgid=,stat=,command= -g "$GUARD_PID"; kill -KILL -"$GUARD_PID" 2>/dev/null || true; fi; fm_test_cleanup' EXIT
++ HPGUARD=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard
++ new_home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard
++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard/state
++ fm_test_track_procevent_home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard
++ '[' -n /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard ']'
++ printf '%s\t%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard ''
++ orphan_pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard register lavish proof-guard-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-stub.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/proof-guard
++ local home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard
++ shift
++ FM_PROCEVENT_OWNER_LEASE_SECONDS=15
++ FM_PROCEVENT_OWNER_CHECK_SECONDS=1
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/no-escalation/bin/fm-procevent.sh register lavish proof-guard-src -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-stub.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/proof-guard
++ orphan_pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard reconcile
++ local home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard
++ shift
++ FM_PROCEVENT_OWNER_LEASE_SECONDS=15
++ FM_PROCEVENT_OWNER_CHECK_SECONDS=1
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/no-escalation/bin/fm-procevent.sh reconcile
++ deadline=61
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard/state/procevent/proof-guard-src.runner ']'
++ '[' 1 -lt 61 ']'
++ orphan_pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard reconcile
++ sleep 0.25
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard/state/procevent/proof-guard-src.runner ']'
++ '[' 3 -lt 61 ']'
++ orphan_pe /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard reconcile
++ sleep 0.25
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard/state/procevent/proof-guard-src.runner ']'
++ '[' -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/proof-guard.child ']'
+++ cat /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard/state/procevent/proof-guard-src.runner
++ GUARD_PID=13106
+++ cat /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/proof-guard.child
++ GUARD_CHILD=18510
++ guard_bound=21
++ deadline=48
++ guard_started=6
++ kill -0 -13106
++ '[' 6 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 7 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 8 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 8 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 9 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 10 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 10 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 11 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 12 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 12 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 13 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 14 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 14 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 15 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 16 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 16 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 17 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 18 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 18 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 19 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 20 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 21 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 21 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 22 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 23 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 23 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 24 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 25 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 26 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 26 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 27 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 28 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 28 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 29 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 30 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 30 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 31 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 32 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 32 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 33 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 34 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 34 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 35 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 36 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 37 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 38 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 38 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 39 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 40 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 41 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 41 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 42 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 43 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 44 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 45 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 45 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 46 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 47 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 47 -lt 48 ']'
++ sleep 0.5
++ kill -0 -13106
++ '[' 48 -lt 48 ']'
++ fail 'the guard exceeded its bound: still holding the group after 42s, against a documented bound of 21s'
++ printf 'not ok - %s\n' 'the guard exceeded its bound: still holding the group after 42s, against a documented bound of 21s'
+not ok - the guard exceeded its bound: still holding the group after 42s, against a documented bound of 21s
++ exit 1
++ '[' -n 13106 ']'
++ ps -o pid=,ppid=,pgid=,stat=,command= -g 13106
+  584 18510 13106 R    sleep 0.1
+18510     1 13106 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-stub.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/proof-guard
++ kill -KILL -13106
++ fm_test_cleanup
++ local d
++ fm_test_reap_procevent_homes
++ local home claim_root $'seen=\n'
++ '[' -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-procevent.10968.StOpnG ']'
++ IFS=$'\t'
++ read -r home claim_root
++ '[' -n /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard ']'
++ case "$seen" in
++ seen+=$'/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard\n'
++ '[' -d /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard/state/procevent ']'
++ '[' -n '' ']'
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard
++ FM_STATE_OVERRIDE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA/signal-proof-guard/state
++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/no-escalation/bin/fm-procevent.sh sweep-home
++ true
++ IFS=$'\t'
++ read -r home claim_root
++ rm -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-procevent.10968.StOpnG
++ for d in "${FM_TEST_CLEANUP_DIRS[@]:-}"
++ '[' -n '' ']'
++ '[' -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-cleanup.10968.AVNvcC ']'
++ IFS=
++ read -r d
++ '[' -n /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA ']'
++ rm -rf /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/fm-procevent-tests.d9KJEA
++ IFS=
++ read -r d
++ rm -f /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/tmp/.fm-test-cleanup.10968.AVNvcC

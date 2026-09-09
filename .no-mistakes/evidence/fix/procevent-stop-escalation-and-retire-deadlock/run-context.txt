@@ -1,0 +1,4 @@
+target=f8819bf51500b7acd82a902a081f5e84a1eec334
+tree=f2723559c933383bdb02727987a6b10d9f405caa
+Darwin mac-mini 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:22 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T8132 arm64
+Selections execute unchanged assertions from tests/fm-procevent.test.sh; only library/code-root discovery differs. No full repository suite, linter, formatter, or static analyzer is invoked.

@@ -1,0 +1,4 @@
+current exit=0
+no-escalation exit=1
+slow-guard exit=1
+baseline exit=1

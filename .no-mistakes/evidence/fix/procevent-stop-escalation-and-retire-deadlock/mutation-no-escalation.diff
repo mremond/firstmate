@@ -1,0 +1,11 @@
+--- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/bin/fm-procevent.sh	2026-09-09 09:56:00
++++ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M22JMZFHHKDEBP264VCZFC1C/.local-procevent-validation/no-escalation/bin/fm-procevent.sh	2026-09-09 10:03:56
+@@ -1320,7 +1320,7 @@
+     sleep 0.1
+     i=$((i + 1))
+   done
+-  runner_group_signal KILL "$pid" "$identity" proved
++  runner_group_signal KILL "$pid" "$identity"
+   signal_state=$?
+   [ "$signal_state" -eq 0 ] || return "$signal_state"
+   i=0
