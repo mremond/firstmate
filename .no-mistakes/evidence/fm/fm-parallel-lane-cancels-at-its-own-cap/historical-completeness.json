@@ -1,0 +1,26 @@
+{
+  "run_id": 34462758357,
+  "historical_only": true,
+  "enclosing_job_success_not_claimed": true,
+  "lanes": [
+    {
+      "lane": "portable-parallel-1",
+      "all_base_members_completed": true,
+      "total": 11,
+      "invocation_duration_ms": 598225,
+      "script_sum_ms": 597834
+    },
+    {
+      "lane": "portable-parallel-2",
+      "all_base_members_completed": true,
+      "total": 13,
+      "invocation_duration_ms": 192939,
+      "script_sum_ms": 192522
+    }
+  ],
+  "new_membership_sums_using_this_complete_historical_sample_ms": [
+    388449,
+    401907
+  ],
+  "limitation": "Historical timings validate complete inputs; these recomputed sums are predictions, not actual target-head execution times."
+}

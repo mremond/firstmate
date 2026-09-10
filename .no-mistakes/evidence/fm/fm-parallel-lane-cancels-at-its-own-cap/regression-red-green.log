@@ -1,0 +1,18 @@
+base b1ad702fafdd03d94e5ce47cd4ba86e589ad33d6 test_list_scheduled_proven_isolated_uses_serial_weights exit=0
+ok - proven-isolated scheduling ignores parallel hints
+
+base b1ad702fafdd03d94e5ce47cd4ba86e589ad33d6 test_list_scheduled_non_lane_selections_use_serial_weights exit=0
+ok - family, all, changed, and script selections ignore parallel hints
+
+before-R1 f18754d7 test_list_scheduled_proven_isolated_uses_serial_weights exit=1
+not ok - proven-isolated scheduling must break serial-default ties by path
+
+before-R1 f18754d7 test_list_scheduled_non_lane_selections_use_serial_weights exit=1
+not ok - family scheduling must use serial hints and path-ordered default ties
+
+target ec5b37133d40d607cd39042940f0d0d831c38f37 test_list_scheduled_proven_isolated_uses_serial_weights exit=0
+ok - proven-isolated scheduling ignores parallel hints
+
+target ec5b37133d40d607cd39042940f0d0d831c38f37 test_list_scheduled_non_lane_selections_use_serial_weights exit=0
+ok - family, all, changed, and script selections ignore parallel hints
+
