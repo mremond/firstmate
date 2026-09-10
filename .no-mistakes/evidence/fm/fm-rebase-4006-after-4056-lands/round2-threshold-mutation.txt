@@ -1,0 +1,31 @@
+Prior five guard tests with 90% mutant (demonstrates the old hole)
+$ /bin/bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25C6PVFERGFF8VCGKNJPMP3/.test-phase/run-balance-cases.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25C6PVFERGFF8VCGKNJPMP3/.test-phase/mutant-90/bin/fm-test-run.sh test_shard_balance_passes_and_reports_bound test_shard_balance_goes_red_on_an_imbalanced_shard test_shard_balance_goes_red_on_a_stale_hint_table test_shard_balance_measures_the_recorded_wall_time test_shard_balance_reports_missing_artifacts
+ok - shard balance: shards well inside the cap pass and report the bound
+ok - shard balance: a shard near its job cap turns the guard red
+ok - shard balance: a stale hint table turns the guard red and names what drifted
+ok - shard balance: the shard's recorded wall time is what is scored
+ok - shard balance: missing shard artifacts are reported, not assumed green
+EXIT=0; expected=0
+
+New test with 90% mutant
+$ /bin/bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25C6PVFERGFF8VCGKNJPMP3/.test-phase/run-balance-cases.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25C6PVFERGFF8VCGKNJPMP3/.test-phase/mutant-90/bin/fm-test-run.sh test_shard_balance_pins_the_72_percent_threshold
+not ok - a shard just above 72% of the job cap must fail (exit 0): FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-1of1@72.0% bound=30min
+EXIT=1; expected=1
+
+New test with 73% mutant
+$ /bin/bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25C6PVFERGFF8VCGKNJPMP3/.test-phase/run-balance-cases.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25C6PVFERGFF8VCGKNJPMP3/.test-phase/mutant-73/bin/fm-test-run.sh test_shard_balance_pins_the_72_percent_threshold
+not ok - a shard just above 72% of the job cap must fail (exit 0): FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-1of1@72.0% bound=30min
+EXIT=1; expected=1
+
+New test with 71% mutant
+$ /bin/bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25C6PVFERGFF8VCGKNJPMP3/.test-phase/run-balance-cases.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25C6PVFERGFF8VCGKNJPMP3/.test-phase/mutant-71/bin/fm-test-run.sh test_shard_balance_pins_the_72_percent_threshold
+not ok - a shard just below 72% of the job cap must pass: shard balance guard failed: portable-serial-1of1 ran 21.60 min, 72.0% of the 30 min job cap (max 71%); refresh the duration hints or repack the lane (docs/fm-test-portable-shards.md)
+  re-measure the scripts furthest over their hints:
+    tests/a.test.sh measured 1296.0s hint 27.0s (+1269.0s) [no hint, default weight]
+EXIT=1; expected=1
+
+New test with unchanged 72% runner
+$ /bin/bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25C6PVFERGFF8VCGKNJPMP3/.test-phase/run-balance-cases.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25C6PVFERGFF8VCGKNJPMP3/bin/fm-test-run.sh test_shard_balance_pins_the_72_percent_threshold
+ok - shard balance: the threshold is pinned at 72% of the job cap
+EXIT=0; expected=0
+

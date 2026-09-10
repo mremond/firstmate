@@ -1,0 +1,6 @@
+Fresh runner-generated timing artifact from the focused run; intentionally not a numbered portable serial lane.
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M25C6PVFERGFF8VCGKNJPMP3/runner-contract-timing.json
+Traceback (most recent call last):
+  File "<stdin>", line 45, in <module>
+AttributeError: 'NoneType' object has no attribute 'group'
+exit=1

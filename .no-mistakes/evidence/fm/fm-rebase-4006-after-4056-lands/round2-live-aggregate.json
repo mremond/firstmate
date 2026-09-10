@@ -1,0 +1,86 @@
+{
+  "kind": "aggregate",
+  "lanes": [
+    {
+      "finished_at": "2026-09-10T10:31:52Z",
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25C6PVFERGFF8VCGKNJPMP3/round2-live-serial-4of5.json",
+      "run_id": "fm-test-run-1789036309571-57763",
+      "selection": "lane=portable-serial-4of5;exclude-family=pure-contract-unit,watcher-wake-lock,real-herdr-gated,secondmate,session-bootstrap,live-harness-optin,backend-dispatch,afk,snapshot-bearings,cmux,zellij,orca,standalone,unclassified",
+      "started_at": "2026-09-10T10:31:49Z",
+      "summary": {
+        "duration_ms": 2670,
+        "failed": 0,
+        "skipped_gate": 0,
+        "total": 1
+      }
+    },
+    {
+      "finished_at": "2026-09-10T10:30:55Z",
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25C6PVFERGFF8VCGKNJPMP3/round2-focused-runner-timing.json",
+      "run_id": "fm-test-run-1789036127934-54620",
+      "selection": "scripts;jobs=1",
+      "started_at": "2026-09-10T10:28:47Z",
+      "summary": {
+        "duration_ms": 127608,
+        "failed": 0,
+        "skipped_gate": 0,
+        "total": 1
+      }
+    }
+  ],
+  "scripts": [
+    {
+      "duration_ms": 127533,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "pure-contract-unit",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "lane_run_id": "fm-test-run-1789036127934-54620",
+      "lane_selection": "scripts;jobs=1",
+      "path": "tests/fm-test-run.test.sh"
+    },
+    {
+      "duration_ms": 1299,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "pr-forge",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "lane_run_id": "fm-test-run-1789036309571-57763",
+      "lane_selection": "lane=portable-serial-4of5;exclude-family=pure-contract-unit,watcher-wake-lock,real-herdr-gated,secondmate,session-bootstrap,live-harness-optin,backend-dispatch,afk,snapshot-bearings,cmux,zellij,orca,standalone,unclassified",
+      "path": "tests/fm-check-unregister.test.sh"
+    }
+  ],
+  "slowest": [
+    {
+      "duration_ms": 127533,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "pure-contract-unit",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "lane_run_id": "fm-test-run-1789036127934-54620",
+      "lane_selection": "scripts;jobs=1",
+      "path": "tests/fm-test-run.test.sh"
+    },
+    {
+      "duration_ms": 1299,
+      "exit": 0,
+      "expected_gate_skip": "none",
+      "family": "pr-forge",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "lane_run_id": "fm-test-run-1789036309571-57763",
+      "lane_selection": "lane=portable-serial-4of5;exclude-family=pure-contract-unit,watcher-wake-lock,real-herdr-gated,secondmate,session-bootstrap,live-harness-optin,backend-dispatch,afk,snapshot-bearings,cmux,zellij,orca,standalone,unclassified",
+      "path": "tests/fm-check-unregister.test.sh"
+    }
+  ],
+  "summary": {
+    "critical_path_duration_ms": 127608,
+    "failed": 0,
+    "lanes": 2,
+    "skipped_gate": 0,
+    "total": 2
+  }
+}

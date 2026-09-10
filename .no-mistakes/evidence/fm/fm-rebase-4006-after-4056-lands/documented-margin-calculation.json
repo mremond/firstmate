@@ -1,0 +1,10 @@
+{
+  "input_provenance": "User-confirmed run 34460760299 shard 4 summary.duration_ms; no fresh CI artifact downloaded in this phase",
+  "duration_ms": "1231845",
+  "suite_minutes": "20.53075",
+  "share_of_30_minute_cap_percent": "68.43583333333333333333333333",
+  "headroom_below_21_6_minutes": "1.06925",
+  "documented_suite_minutes": "20.53",
+  "documented_share_percent": "68.4",
+  "documented_approximate_headroom_minutes": "1.1"
+}

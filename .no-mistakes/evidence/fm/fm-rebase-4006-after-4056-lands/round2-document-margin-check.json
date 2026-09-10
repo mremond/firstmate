@@ -1,0 +1,8 @@
+{
+  "source": "User-confirmed summary.duration_ms for run 34460760299, shard 4",
+  "suite_duration_ms": 1231845,
+  "suite_minutes": 20.53075,
+  "share_percent": 68.43583333333333,
+  "margin_minutes": 1.06925,
+  "document_contract": "docs/fm-test-portable-shards.md uses 20.53 min for suite-versus-weight and margin comparisons; 20.78 min is explicitly whole-job time. This is a manual document and arithmetic check, not live CI evidence."
+}
