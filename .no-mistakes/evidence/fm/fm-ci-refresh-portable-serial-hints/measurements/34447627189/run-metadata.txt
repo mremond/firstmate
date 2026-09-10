@@ -1,0 +1,22 @@
+run:
+  id: 34447627189
+  title: "fix(bin): prevent receiver wake failures from blocking remote handoff…"
+  status: completed
+  conclusion: cancelled
+  workflow: CI
+  branch: main
+  created: 5h ago
+jobs[13]{id,name,status,conclusion}:
+  102775815664,Test coverage guard,completed,success
+  102775815785,Behavior tests (Herdr),completed,success
+  102775815812,Behavior portable serial 2,completed,success
+  102775815814,Stock macOS Bash snapshot compatibility,completed,success
+  102775815855,Lint,completed,success
+  102775815865,Behavior portable parallel 2,completed,success
+  102775815876,Behavior portable parallel 1,completed,cancelled
+  102775815927,Repo invariants,completed,success
+  102775815936,Behavior portable serial 4,completed,success
+  102775816000,Behavior portable serial 3,completed,success
+  102775816012,Behavior portable serial 5,completed,success
+  102775816036,Behavior portable serial 1,completed,success
+  102781576830,Behavior timing aggregate,completed,success

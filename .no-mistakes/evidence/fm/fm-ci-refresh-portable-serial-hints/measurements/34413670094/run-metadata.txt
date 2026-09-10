@@ -1,0 +1,22 @@
+run:
+  id: 34413670094
+  title: "fix(backlog): route lifecycle transitions through configured adapters…"
+  status: completed
+  conclusion: success
+  workflow: CI
+  branch: main
+  created: 13h ago
+jobs[13]{id,name,status,conclusion}:
+  102673584357,Behavior portable parallel 2,completed,success
+  102673584540,Test coverage guard,completed,success
+  102673584556,Lint,completed,success
+  102673584569,Behavior portable serial 1,completed,success
+  102673584611,Behavior tests (Herdr),completed,success
+  102673584622,Behavior portable serial 3,completed,success
+  102673584627,Behavior portable serial 5,completed,success
+  102673584638,Behavior portable serial 4,completed,success
+  102673584651,Behavior portable parallel 1,completed,success
+  102673584653,Repo invariants,completed,success
+  102673584671,Behavior portable serial 2,completed,success
+  102673584748,Stock macOS Bash snapshot compatibility,completed,success
+  102679064805,Behavior timing aggregate,completed,success

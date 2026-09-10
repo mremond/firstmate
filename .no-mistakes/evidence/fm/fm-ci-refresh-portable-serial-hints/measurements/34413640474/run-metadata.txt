@@ -1,0 +1,22 @@
+run:
+  id: 34413640474
+  title: "fix(bin): prefer a live no-mistakes run over a terminal one (#2881)"
+  status: completed
+  conclusion: cancelled
+  workflow: CI
+  branch: main
+  created: 13h ago
+jobs[13]{id,name,status,conclusion}:
+  102673487472,Behavior tests (Herdr),completed,success
+  102673487724,Behavior portable parallel 1,completed,cancelled
+  102673487763,Behavior portable parallel 2,completed,success
+  102673487767,Behavior portable serial 2,completed,success
+  102673487778,Test coverage guard,completed,success
+  102673487779,Behavior portable serial 4,completed,success
+  102673487784,Lint,completed,success
+  102673487822,Repo invariants,completed,success
+  102673487829,Behavior portable serial 1,completed,success
+  102673487875,Stock macOS Bash snapshot compatibility,completed,success
+  102673487927,Behavior portable serial 3,completed,success
+  102673487950,Behavior portable serial 5,completed,success
+  102679278861,Behavior timing aggregate,completed,success

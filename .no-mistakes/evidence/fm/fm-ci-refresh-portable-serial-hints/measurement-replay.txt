@@ -1,0 +1,16 @@
+Historical measurement replay (not fresh CI)
+Target 13bd493e9927e89e1efbd1e0c212d5033510f441; base b1ad702fafdd03d94e5ce47cd4ba86e589ad33d6
+All 157 hints exactly match maxima across the five source runs; held-out excluded.
+Both real CLI partitions match independent LPT over their hint data. Refreshed weights [1148228, 1148260, 1148251, 1148272, 1148271]; imbalance 44 ms.
+Run | Held out | Previous minutes | Refreshed minutes | Previous worst % cap | Refreshed worst % cap
+34413640474 | False | [22.04, 15.29, 14.42, 11.12, 23.05] | [17.76, 18.3, 16.5, 16.1, 17.27] | 76.8 | 61.0
+34413651260 | False | [22.55, 14.85, 13.77, 13.09, 16.91] | [17.32, 17.89, 14.15, 15.82, 16.0] | 75.2 | 59.6
+34413670094 | False | [21.82, 15.27, 14.49, 11.3, 16.81] | [16.87, 18.1, 14.07, 15.65, 15.0] | 72.7 | 60.3
+34439204619 | False | [20.29, 14.52, 12.15, 14.02, 20.98] | [16.19, 17.64, 15.44, 16.24, 16.44] | 69.9 | 58.8
+34466966385 | False | [24.15, 15.49, 15.28, 14.7, 17.18] | [17.93, 18.58, 14.32, 18.48, 17.49] | 80.5 | 61.9
+34447627189 | True | [21.91, 13.54, 13.25, 13.21, 16.44] | [16.95, 16.83, 13.58, 15.62, 15.36] | 73.0 | 56.5
+FAIL: docs/fm-test-portable-shards.md:90 claims previous range 13.24-21.93 minutes; exact supplied base produces 13.21-21.91 minutes.
+The held-out artifact original shard memberships also match the base CLI memberships, independently corroborating the reproduced baseline.
+Six identified runs replayed; the two other runs in the intent eight-run summary are not identified.
+No fresh CI execution; recorded measurements do not bound a slower runner.
+All source portable-serial jobs succeeded; two source workflows were cancelled in other lanes.

@@ -1,0 +1,324 @@
+{
+  "target": "50bd6fc360f6ae1588534a0d1f2892b028bddf0e",
+  "tree": "8965fab120394e7273cd3056f044b5da45f3ce52",
+  "base": "b1ad702fafdd03d94e5ce47cd4ba86e589ad33d6",
+  "kind": "historical-measurement-replay-not-live-CI",
+  "source_runs": [
+    34413640474,
+    34413651260,
+    34413670094,
+    34439204619,
+    34466966385
+  ],
+  "held_out_run": 34447627189,
+  "hint_count": 157,
+  "all_hints_equal_five_run_maxima": true,
+  "held_out_scripts_exceeding_training_maxima": [
+    "tests/fm-afk-inject-e2e.test.sh",
+    "tests/fm-backend-tmux-smoke.test.sh",
+    "tests/fm-calm-pi-extension.test.sh",
+    "tests/fm-no-mistakes-required.test.sh"
+  ],
+  "held_out_would_change_table": true,
+  "shard_counts": [
+    29,
+    32,
+    32,
+    32,
+    32
+  ],
+  "shard_weights_ms": [
+    1148228,
+    1148260,
+    1148251,
+    1148272,
+    1148271
+  ],
+  "imbalance_ms": 44,
+  "both_CLI_partitions_match_independent_LPT": true,
+  "replays": [
+    {
+      "run": 34413640474,
+      "held_out": false,
+      "base_ms": [
+        1322552,
+        917696,
+        865384,
+        666975,
+        1382872
+      ],
+      "target_ms": [
+        1065687,
+        1097749,
+        989978,
+        966004,
+        1036061
+      ],
+      "base_min_minutes": 11.12,
+      "base_max_minutes": 23.05,
+      "target_min_minutes": 16.1,
+      "target_max_minutes": 18.3,
+      "base_worst_cap_percent": 76.8,
+      "target_worst_cap_percent": 61.0
+    },
+    {
+      "run": 34413651260,
+      "held_out": false,
+      "base_ms": [
+        1353293,
+        891116,
+        826457,
+        785599,
+        1014541
+      ],
+      "target_ms": [
+        1039222,
+        1073508,
+        848915,
+        949300,
+        960061
+      ],
+      "base_min_minutes": 13.09,
+      "base_max_minutes": 22.55,
+      "target_min_minutes": 14.15,
+      "target_max_minutes": 17.89,
+      "base_worst_cap_percent": 75.2,
+      "target_worst_cap_percent": 59.6
+    },
+    {
+      "run": 34413670094,
+      "held_out": false,
+      "base_ms": [
+        1309434,
+        916325,
+        869164,
+        678049,
+        1008383
+      ],
+      "target_ms": [
+        1012003,
+        1086236,
+        844273,
+        938972,
+        899871
+      ],
+      "base_min_minutes": 11.3,
+      "base_max_minutes": 21.82,
+      "target_min_minutes": 14.07,
+      "target_max_minutes": 18.1,
+      "base_worst_cap_percent": 72.7,
+      "target_worst_cap_percent": 60.3
+    },
+    {
+      "run": 34439204619,
+      "held_out": false,
+      "base_ms": [
+        1217501,
+        871217,
+        729139,
+        841147,
+        1258902
+      ],
+      "target_ms": [
+        971581,
+        1058647,
+        926560,
+        974624,
+        986494
+      ],
+      "base_min_minutes": 12.15,
+      "base_max_minutes": 20.98,
+      "target_min_minutes": 15.44,
+      "target_max_minutes": 17.64,
+      "base_worst_cap_percent": 69.9,
+      "target_worst_cap_percent": 58.8
+    },
+    {
+      "run": 34466966385,
+      "held_out": false,
+      "base_ms": [
+        1449237,
+        929376,
+        916799,
+        882053,
+        1030890
+      ],
+      "target_ms": [
+        1075684,
+        1115007,
+        859110,
+        1109044,
+        1049510
+      ],
+      "base_min_minutes": 14.7,
+      "base_max_minutes": 24.15,
+      "target_min_minutes": 14.32,
+      "target_max_minutes": 18.58,
+      "base_worst_cap_percent": 80.5,
+      "target_worst_cap_percent": 61.9
+    },
+    {
+      "run": 34447627189,
+      "held_out": true,
+      "base_ms": [
+        1314342,
+        812608,
+        794870,
+        792401,
+        986257
+      ],
+      "target_ms": [
+        1016929,
+        1009846,
+        814911,
+        937157,
+        921635
+      ],
+      "base_min_minutes": 13.21,
+      "base_max_minutes": 21.91,
+      "target_min_minutes": 13.58,
+      "target_max_minutes": 16.95,
+      "base_worst_cap_percent": 73.0,
+      "target_worst_cap_percent": 56.5
+    }
+  ],
+  "worst_cap_percent_ranges": {
+    "base": [
+      69.9,
+      80.5
+    ],
+    "target": [
+      56.5,
+      61.9
+    ]
+  },
+  "corrected_documentation_figures_reproduced": true,
+  "earlier_runner_contract_reused": "Earlier-round runner-contract.json passed; git diff 13bd493e9927e89e1efbd1e0c212d5033510f441 HEAD changes only docs/fm-test-portable-shards.md. No second contract-suite execution.",
+  "limits": [
+    "Historical artifacts reused from the earlier round; no fresh serial CI run was executed. The outer executor owns CI.",
+    "Only six run IDs are supplied. The remaining two runs from the original eight-run claim cannot be identified or replayed; the current guide makes the reproducible six-run claim.",
+    "Conservative only for measured source runs; weights neither detect hint drift nor bound slower runners."
+  ],
+  "input_artifacts": [
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413640474/1/fm-test-timing-portable-serial-1.json",
+      "sha256": "3e130b6afe1215c7fdb951fbe9cf91855ab186acf50039e7dcef220c09622203"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413640474/2/fm-test-timing-portable-serial-2.json",
+      "sha256": "a4b358795f78bc5b366f853d982af8934748656fe4d8ef73bfd426151300a0cc"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413640474/3/fm-test-timing-portable-serial-3.json",
+      "sha256": "273a4dbc11635653ef0c9dbd8dcea6e17687feafc9b78d62451a3d2ac8dd818c"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413640474/4/fm-test-timing-portable-serial-4.json",
+      "sha256": "ee45f7316b894a4a68ee7731512842927ace3351cabb79ec80f8ac545e5dd3e3"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413640474/5/fm-test-timing-portable-serial-5.json",
+      "sha256": "a9071b2735dba290f66cf27eabf3382c3c9b7655e871cc705fdea905bfec3812"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413651260/1/fm-test-timing-portable-serial-1.json",
+      "sha256": "b161b0fc1102589b7487f41bb7507e7280f036eb9cffad1e7a558d1705c940eb"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413651260/2/fm-test-timing-portable-serial-2.json",
+      "sha256": "20fe71ff979d78d1b971fff332fd3be01575992c03407145b9ea17987e0f0826"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413651260/3/fm-test-timing-portable-serial-3.json",
+      "sha256": "0b2215fc83ccbaa8dfd740cc0f5b6fbbf21b41e167eaa5cf68c4ef53f6e88ad9"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413651260/4/fm-test-timing-portable-serial-4.json",
+      "sha256": "730de0b55f308d371d2336e610434b39d860e1df2788252842ec2499f6bed8e6"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413651260/5/fm-test-timing-portable-serial-5.json",
+      "sha256": "b2e4f107da4e93b5b679bdc885a591d01e274ce9006d32f1230b7b5a870a2a5d"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413670094/1/fm-test-timing-portable-serial-1.json",
+      "sha256": "0e4e86b9c28e1411f6f1669588881881035a35fa3fd04db827dd62815a0d5f62"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413670094/2/fm-test-timing-portable-serial-2.json",
+      "sha256": "7bdb659e7d57f2ae013e1cb4e174ea7ee867b9c26cf9c312b6fc836d332468af"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413670094/3/fm-test-timing-portable-serial-3.json",
+      "sha256": "1e5384e695866e160608b7decf64873ee7fd2b40c52759212d3eddfe3784e9b0"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413670094/4/fm-test-timing-portable-serial-4.json",
+      "sha256": "186bd198112961147c1807905782526218af5edbf6b4c8c1566ac5e347d7563e"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34413670094/5/fm-test-timing-portable-serial-5.json",
+      "sha256": "2498f88f0e1957ce2161ad3c32b679f723c311e4466d3d86c610e4d9491324e6"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34439204619/1/fm-test-timing-portable-serial-1.json",
+      "sha256": "809a4213f6c157d3192434e9bdeb191c05649f686d4d3765352fd92be92291fe"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34439204619/2/fm-test-timing-portable-serial-2.json",
+      "sha256": "a159cced7a1d0120626fe9123fc9fc4992bc32b41749f23a3df0932ac5854bd2"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34439204619/3/fm-test-timing-portable-serial-3.json",
+      "sha256": "bac99f639b9e62a5bca315785d4af4200a61d2f9d4d271837ac87ebf345a559a"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34439204619/4/fm-test-timing-portable-serial-4.json",
+      "sha256": "58bd3c3017626c62e5bca70c7ad050a7aa331a71de4363ae0393289a554dc192"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34439204619/5/fm-test-timing-portable-serial-5.json",
+      "sha256": "c08659998e4a5a1c8fc6ee108bc2bb313e42b4267542fa65de221be6799c2033"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34466966385/1/fm-test-timing-portable-serial-1.json",
+      "sha256": "1220019dde0e9d3f10154ce8aae7eab9320467cfb55c4bc9f3c7c17d9d6afa22"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34466966385/2/fm-test-timing-portable-serial-2.json",
+      "sha256": "4c4c67c0b7397c086554d5f1bc72cc1d3429f5d544a101c593d17113d26f28a8"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34466966385/3/fm-test-timing-portable-serial-3.json",
+      "sha256": "66d232d71074312a35f4bf47dea40a028779e70651610707a9868ddd0f1f547c"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34466966385/4/fm-test-timing-portable-serial-4.json",
+      "sha256": "2ea5ebbd49c69b8286d50f6db31e97f9d41186b9b15e9102481e8f700bdb7fd0"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34466966385/5/fm-test-timing-portable-serial-5.json",
+      "sha256": "88690a69a08bc285a706bfebbf7d24cf7b5f4ffda4dc37b99badfce53971f6e0"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34447627189/1/fm-test-timing-portable-serial-1.json",
+      "sha256": "977cd6c99732f1f3e50c0f98a257d5d8f7811e0dc4df1aff5b4f6097e48424f7"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34447627189/2/fm-test-timing-portable-serial-2.json",
+      "sha256": "cc5f15d51f453172868d57a85a985d7612677fd2c95c55ac6de421438039a582"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34447627189/3/fm-test-timing-portable-serial-3.json",
+      "sha256": "eb9175a0edc9cdd7d999b76cc982bdff4e4594628364909bd206fc924b4d6207"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34447627189/4/fm-test-timing-portable-serial-4.json",
+      "sha256": "eaa556e5d2b871fab96e87c1010b6de9047481d20176efe93f44bcf700989482"
+    },
+    {
+      "path": "/Users/mremond/.no-mistakes/evidence/01M25KCT6379BRQESQY53NVW36/measurements/34447627189/5/fm-test-timing-portable-serial-5.json",
+      "sha256": "2a5af5e55fe9c4b899b7c5a5e60c527c6ba9c0a31d2906e92d31c54fb39832ff"
+    }
+  ]
+}

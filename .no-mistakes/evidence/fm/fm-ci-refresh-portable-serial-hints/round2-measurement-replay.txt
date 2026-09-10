@@ -1,0 +1,17 @@
+Target 50bd6fc360f6ae1588534a0d1f2892b028bddf0e (tree 8965fab120394e7273cd3056f044b5da45f3ce52); base b1ad702fafdd03d94e5ce47cd4ba86e589ad33d6
+Historical replay, not fresh CI execution.
+All 157 hints exactly match the maxima of the five named source runs, with held-out run 34447627189 excluded.
+Including the held-out run would alter 4 hints.
+Actual CLI partitions match independent LPT. Shard counts [29, 32, 32, 32, 32]; weights [1148228, 1148260, 1148251, 1148272, 1148271] ms; imbalance 44 ms.
+Run | Base minutes | Refreshed minutes | Base worst % of cap | Refreshed worst % of cap
+34413640474 | 11.12-23.05 | 16.10-18.30 | 76.8 | 61.0
+34413651260 | 13.09-22.55 | 14.15-17.89 | 75.2 | 59.6
+34413670094 | 11.30-21.82 | 14.07-18.10 | 72.7 | 60.3
+34439204619 | 12.15-20.98 | 15.44-17.64 | 69.9 | 58.8
+34466966385 | 14.70-24.15 | 14.32-18.58 | 80.5 | 61.9
+34447627189 | 13.21-21.91 | 13.58-16.95 | 73.0 | 56.5
+The corrected held-out baseline and six-run ranges in the target guide reproduce exactly.
+Earlier-round runner-contract.json passed; git diff 13bd493e9927e89e1efbd1e0c212d5033510f441 HEAD changes only docs/fm-test-portable-shards.md. No second contract-suite execution.
+Historical artifacts reused from the earlier round; no fresh serial CI run was executed. The outer executor owns CI.
+Only six run IDs are supplied. The remaining two runs from the original eight-run claim cannot be identified or replayed; the current guide makes the reproducible six-run claim.
+Conservative only for measured source runs; weights neither detect hint drift nor bound slower runners.

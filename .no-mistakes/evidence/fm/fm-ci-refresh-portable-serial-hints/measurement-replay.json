@@ -1,0 +1,257 @@
+{
+  "kind": "historical-measurement-replay-not-fresh-CI",
+  "target": "13bd493e9927e89e1efbd1e0c212d5033510f441",
+  "base": "b1ad702fafdd03d94e5ce47cd4ba86e589ad33d6",
+  "source_runs": [
+    34413640474,
+    34413651260,
+    34413670094,
+    34439204619,
+    34466966385
+  ],
+  "held_out_run": 34447627189,
+  "hint_count": 157,
+  "maxima_match_exactly": true,
+  "both_live_CLI_memberships_match_independent_LPT": true,
+  "total_weight_ms": 5741282,
+  "shard_weights_ms": [
+    1148228,
+    1148260,
+    1148251,
+    1148272,
+    1148271
+  ],
+  "old_shard_weights_ms": [
+    922225,
+    922217,
+    922216,
+    922216,
+    922232
+  ],
+  "imbalance_ms": 44,
+  "previous_hints": 146,
+  "changed_existing_hints": 145,
+  "previous_hints_more_than_2x_low": 40,
+  "previous_hints_more_than_5x_low": 11,
+  "newly_hinted": 11,
+  "replays": [
+    {
+      "run": 34413640474,
+      "held_out": false,
+      "old_shards_ms": [
+        1322552,
+        917696,
+        865384,
+        666975,
+        1382872
+      ],
+      "new_shards_ms": [
+        1065687,
+        1097749,
+        989978,
+        966004,
+        1036061
+      ],
+      "old_minutes": [
+        22.04,
+        15.29,
+        14.42,
+        11.12,
+        23.05
+      ],
+      "new_minutes": [
+        17.76,
+        18.3,
+        16.5,
+        16.1,
+        17.27
+      ],
+      "old_worst_cap_percent": 76.8,
+      "new_worst_cap_percent": 61.0
+    },
+    {
+      "run": 34413651260,
+      "held_out": false,
+      "old_shards_ms": [
+        1353293,
+        891116,
+        826457,
+        785599,
+        1014541
+      ],
+      "new_shards_ms": [
+        1039222,
+        1073508,
+        848915,
+        949300,
+        960061
+      ],
+      "old_minutes": [
+        22.55,
+        14.85,
+        13.77,
+        13.09,
+        16.91
+      ],
+      "new_minutes": [
+        17.32,
+        17.89,
+        14.15,
+        15.82,
+        16.0
+      ],
+      "old_worst_cap_percent": 75.2,
+      "new_worst_cap_percent": 59.6
+    },
+    {
+      "run": 34413670094,
+      "held_out": false,
+      "old_shards_ms": [
+        1309434,
+        916325,
+        869164,
+        678049,
+        1008383
+      ],
+      "new_shards_ms": [
+        1012003,
+        1086236,
+        844273,
+        938972,
+        899871
+      ],
+      "old_minutes": [
+        21.82,
+        15.27,
+        14.49,
+        11.3,
+        16.81
+      ],
+      "new_minutes": [
+        16.87,
+        18.1,
+        14.07,
+        15.65,
+        15.0
+      ],
+      "old_worst_cap_percent": 72.7,
+      "new_worst_cap_percent": 60.3
+    },
+    {
+      "run": 34439204619,
+      "held_out": false,
+      "old_shards_ms": [
+        1217501,
+        871217,
+        729139,
+        841147,
+        1258902
+      ],
+      "new_shards_ms": [
+        971581,
+        1058647,
+        926560,
+        974624,
+        986494
+      ],
+      "old_minutes": [
+        20.29,
+        14.52,
+        12.15,
+        14.02,
+        20.98
+      ],
+      "new_minutes": [
+        16.19,
+        17.64,
+        15.44,
+        16.24,
+        16.44
+      ],
+      "old_worst_cap_percent": 69.9,
+      "new_worst_cap_percent": 58.8
+    },
+    {
+      "run": 34466966385,
+      "held_out": false,
+      "old_shards_ms": [
+        1449237,
+        929376,
+        916799,
+        882053,
+        1030890
+      ],
+      "new_shards_ms": [
+        1075684,
+        1115007,
+        859110,
+        1109044,
+        1049510
+      ],
+      "old_minutes": [
+        24.15,
+        15.49,
+        15.28,
+        14.7,
+        17.18
+      ],
+      "new_minutes": [
+        17.93,
+        18.58,
+        14.32,
+        18.48,
+        17.49
+      ],
+      "old_worst_cap_percent": 80.5,
+      "new_worst_cap_percent": 61.9
+    },
+    {
+      "run": 34447627189,
+      "held_out": true,
+      "old_shards_ms": [
+        1314342,
+        812608,
+        794870,
+        792401,
+        986257
+      ],
+      "new_shards_ms": [
+        1016929,
+        1009846,
+        814911,
+        937157,
+        921635
+      ],
+      "old_minutes": [
+        21.91,
+        13.54,
+        13.25,
+        13.21,
+        16.44
+      ],
+      "new_minutes": [
+        16.95,
+        16.83,
+        13.58,
+        15.62,
+        15.36
+      ],
+      "old_worst_cap_percent": 73.0,
+      "new_worst_cap_percent": 56.5
+    }
+  ],
+  "documented_before_range_minutes": [
+    13.24,
+    21.93
+  ],
+  "actual_before_range_minutes": [
+    13.21,
+    21.91
+  ],
+  "documented_before_range_matches": false,
+  "limits": [
+    "Six identified runs replayed; the two other runs in the intent eight-run summary are not identified.",
+    "No fresh CI execution; recorded measurements do not bound a slower runner.",
+    "All source portable-serial jobs succeeded; two source workflows were cancelled in other lanes."
+  ]
+}

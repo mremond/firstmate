@@ -1,0 +1,22 @@
+run:
+  id: 34466966385
+  title: "ci: guard portable serial shard budgets and refresh timing hints"
+  status: completed
+  conclusion: cancelled
+  workflow: CI
+  branch: fm/fm-rebase-4006-after-4056-lands
+  created: 1h ago
+jobs[13]{id,name,status,conclusion}:
+  102837688303,Repo invariants,completed,success
+  102837688438,Behavior portable parallel 1,completed,cancelled
+  102837688439,Lint,completed,success
+  102837688461,Behavior portable serial 4,completed,success
+  102837688509,Behavior portable serial 5,completed,success
+  102837688581,Behavior portable serial 2,completed,success
+  102837688597,Behavior portable parallel 2,completed,success
+  102837688611,Stock macOS Bash snapshot compatibility,completed,success
+  102837688615,Behavior portable serial 3,completed,success
+  102837688628,Test coverage guard,completed,success
+  102837688729,Behavior tests (Herdr),completed,success
+  102837688814,Behavior portable serial 1,completed,success
+  102843783902,Behavior timing aggregate,completed,failure

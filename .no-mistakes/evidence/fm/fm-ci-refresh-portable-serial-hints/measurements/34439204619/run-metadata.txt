@@ -1,0 +1,22 @@
+run:
+  id: 34439204619
+  title: "fix(herdr): recover gone and drifted worker endpoints (#4120)"
+  status: completed
+  conclusion: success
+  workflow: CI
+  branch: main
+  created: 7h ago
+jobs[13]{id,name,status,conclusion}:
+  102750501110,Lint,completed,success
+  102750501269,Behavior portable parallel 2,completed,success
+  102750501289,Stock macOS Bash snapshot compatibility,completed,success
+  102750501300,Test coverage guard,completed,success
+  102750501317,Behavior tests (Herdr),completed,success
+  102750501329,Behavior portable parallel 1,completed,success
+  102750501332,Behavior portable serial 2,completed,success
+  102750501336,Behavior portable serial 3,completed,success
+  102750501370,Behavior portable serial 4,completed,success
+  102750501383,Repo invariants,completed,success
+  102750501436,Behavior portable serial 5,completed,success
+  102750501470,Behavior portable serial 1,completed,success
+  102754661468,Behavior timing aggregate,completed,success
