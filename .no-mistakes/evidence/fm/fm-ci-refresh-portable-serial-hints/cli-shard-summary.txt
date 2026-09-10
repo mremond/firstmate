@@ -1,0 +1,50 @@
+Live CLI evidence for 14bee50376159c3867c1943733fa138e72c26188
+Tree: b689fab37a20b6b65ca3ca8ebb816ef88c94ccb1
+
+The real runner was invoked against the complete repository test inventory, using --list inspection and --check-coverage; the complete test suite was not executed.
+
+base:
+FM_TEST_COVERAGE ok total=194 parallel=24 serial=157 serial_shards=5 serial_unhinted=11 herdr=13
+Listed serial shard sizes: 31, 31, 32, 31, 32
+
+before_comment_restore:
+FM_TEST_COVERAGE ok total=194 parallel=24 serial=157 serial_shards=5 serial_unhinted=0 herdr=13
+Listed serial shard sizes: 29, 32, 32, 32, 32
+
+target:
+FM_TEST_COVERAGE ok total=194 parallel=24 serial=157 serial_shards=5 serial_unhinted=0 herdr=13
+Listed serial shard sizes: 29, 32, 32, 32, 32
+
+CLI output comparison: all five shards are non-empty, deterministic, disjoint, and together equal the 157-script serial lane.
+117 scripts move to a different shard between base and target; the serial inventory is identical.
+Every lane listing and coverage result is identical before and after the comment-restoration commit.
+
+Execution-mode adversarial calls (all exited 2 with empty stdout, before any suite execution):
+$ bin/fm-test-run.sh --lane portable-serial-1of4
+fm-test-run: lane 'portable-serial-1of4' asks for 4 portable serial shards but this runner is configured for 5 (see --list-lanes)
+[exit 2]
+
+$ bin/fm-test-run.sh --lane portable-serial-1of6
+fm-test-run: lane 'portable-serial-1of6' asks for 6 portable serial shards but this runner is configured for 5 (see --list-lanes)
+[exit 2]
+
+$ bin/fm-test-run.sh --lane portable-serial-0of5
+fm-test-run: lane 'portable-serial-0of5' shard index is outside 1..5 (see --list-lanes)
+[exit 2]
+
+$ bin/fm-test-run.sh --lane portable-serial-6of5
+fm-test-run: lane 'portable-serial-6of5' shard index is outside 1..5 (see --list-lanes)
+[exit 2]
+
+$ bin/fm-test-run.sh --lane portable-serial-1
+fm-test-run: unknown lane 'portable-serial-1' (see --list-lanes)
+[exit 2]
+
+$ bin/fm-test-run.sh --jobs 2 --lane portable-serial
+fm-test-run: --jobs 2 refused: tests/fm-afk-contract.test.sh is not in the proven-isolated set (see bin/fm-test-isolation-proof.sh --list) and its family has no recorded concurrent proof. Unproven stateful scripts stay serial.
+[exit 2]
+
+$ bin/fm-test-run.sh --jobs 2 --lane portable-serial-1of5
+fm-test-run: --jobs 2 refused: tests/fm-control.test.sh is not in the proven-isolated set (see bin/fm-test-isolation-proof.sh --list) and its family has no recorded concurrent proof. Unproven stateful scripts stay serial.
+[exit 2]
+
