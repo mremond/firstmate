@@ -1,0 +1,172 @@
+{
+  "base": "b1ad702fafdd03d94e5ce47cd4ba86e589ad33d6",
+  "target": "4c4f2553d3c36ff59d3d571bdd8608ddd88effca",
+  "tree": "cd47e59700a41eb80a87f6e98e357f91c8e4a565",
+  "synthetic_credentials_only": true,
+  "runs": [
+    {
+      "label": "target",
+      "name": "two-credential-origin-mismatch",
+      "exit": 1,
+      "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-target/bin/fm-home-seed.sh origin-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-two-credential-origin-mismatch/seeded alpha",
+      "live": true,
+      "passed": true,
+      "synthetic_origin_components_in_output": [],
+      "source_and_destination_preserved": true,
+      "expected_registry_and_markers": true,
+      "useful_diagnostic": true,
+      "evidence": "target-two-credential-origin-mismatch.log"
+    },
+    {
+      "label": "target",
+      "name": "missing-destination-origin",
+      "exit": 1,
+      "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-target/bin/fm-home-seed.sh origin-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-missing-destination-origin/seeded alpha",
+      "live": true,
+      "passed": true,
+      "synthetic_origin_components_in_output": [],
+      "source_and_destination_preserved": true,
+      "expected_registry_and_markers": true,
+      "useful_diagnostic": true,
+      "evidence": "target-missing-destination-origin.log"
+    },
+    {
+      "label": "target",
+      "name": "rejected-explicit-origin",
+      "exit": 1,
+      "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-target/bin/fm-remote-home-seed.sh origin-check nonexistent-origin-validation-host /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-rejected-explicit-origin/remote-code /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-rejected-explicit-origin/remote-home alpha=https://synthetic-source-user:synthetic-source-password@source-host.invalid:notaport/source-private-repo.git",
+      "live": true,
+      "passed": true,
+      "synthetic_origin_components_in_output": [],
+      "source_and_destination_preserved": true,
+      "expected_registry_and_markers": true,
+      "useful_diagnostic": true,
+      "evidence": "target-rejected-explicit-origin.log"
+    },
+    {
+      "label": "target",
+      "name": "rejected-configured-origin",
+      "exit": 1,
+      "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-target/bin/fm-remote-home-seed.sh origin-check nonexistent-origin-validation-host /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-rejected-configured-origin/remote-code /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-rejected-configured-origin/remote-home alpha",
+      "live": true,
+      "passed": true,
+      "synthetic_origin_components_in_output": [],
+      "source_and_destination_preserved": true,
+      "expected_registry_and_markers": true,
+      "useful_diagnostic": true,
+      "evidence": "target-rejected-configured-origin.log"
+    },
+    {
+      "label": "base",
+      "name": "two-credential-origin-mismatch",
+      "exit": 1,
+      "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-home-seed.sh origin-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-two-credential-origin-mismatch/seeded alpha",
+      "live": true,
+      "passed": true,
+      "synthetic_origin_components_in_output": [
+        "synthetic-source-user",
+        "synthetic-source-password",
+        "source-host.invalid",
+        "/source-private-repo.git",
+        "synthetic-destination-user",
+        "synthetic-destination-password",
+        "destination-host.invalid",
+        "/destination-private-repo.git"
+      ],
+      "source_and_destination_preserved": true,
+      "expected_registry_and_markers": true,
+      "useful_diagnostic": true,
+      "evidence": "base-two-credential-origin-mismatch.log"
+    },
+    {
+      "label": "base",
+      "name": "missing-destination-origin",
+      "exit": 1,
+      "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-home-seed.sh origin-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-missing-destination-origin/seeded alpha",
+      "live": true,
+      "passed": true,
+      "synthetic_origin_components_in_output": [
+        "synthetic-source-user",
+        "synthetic-source-password",
+        "source-host.invalid",
+        "/source-private-repo.git"
+      ],
+      "source_and_destination_preserved": true,
+      "expected_registry_and_markers": true,
+      "useful_diagnostic": true,
+      "evidence": "base-missing-destination-origin.log"
+    },
+    {
+      "label": "base",
+      "name": "rejected-explicit-origin",
+      "exit": 1,
+      "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-remote-home-seed.sh origin-check nonexistent-origin-validation-host /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-explicit-origin/remote-code /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-explicit-origin/remote-home alpha=https://synthetic-source-user:synthetic-source-password@source-host.invalid:notaport/source-private-repo.git",
+      "live": true,
+      "passed": true,
+      "synthetic_origin_components_in_output": [
+        "synthetic-source-user",
+        "synthetic-source-password",
+        "source-host.invalid",
+        "/source-private-repo.git"
+      ],
+      "source_and_destination_preserved": true,
+      "expected_registry_and_markers": true,
+      "useful_diagnostic": true,
+      "evidence": "base-rejected-explicit-origin.log"
+    },
+    {
+      "label": "base",
+      "name": "rejected-configured-origin",
+      "exit": 1,
+      "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-remote-home-seed.sh origin-check nonexistent-origin-validation-host /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-configured-origin/remote-code /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-configured-origin/remote-home alpha",
+      "live": true,
+      "passed": true,
+      "synthetic_origin_components_in_output": [
+        "synthetic-source-user",
+        "synthetic-source-password",
+        "source-host.invalid",
+        "/source-private-repo.git"
+      ],
+      "source_and_destination_preserved": true,
+      "expected_registry_and_markers": true,
+      "useful_diagnostic": true,
+      "evidence": "base-rejected-configured-origin.log"
+    },
+    {
+      "label": "target",
+      "name": "matching-credential-origins",
+      "exit": 0,
+      "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-target/bin/fm-home-seed.sh origin-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-matching-credential-origins/seeded alpha",
+      "live": true,
+      "passed": true,
+      "synthetic_origin_components_in_output": [],
+      "source_and_destination_preserved": true,
+      "expected_registry_and_markers": true,
+      "useful_diagnostic": true,
+      "evidence": "target-matching-credential-origins.log"
+    },
+    {
+      "label": "target",
+      "name": "rejected-newline-origin",
+      "exit": 1,
+      "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-target/bin/fm-remote-home-seed.sh origin-check nonexistent-origin-validation-host /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-rejected-newline-origin/remote-code /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-rejected-newline-origin/remote-home 'alpha=https://synthetic-source-user:synthetic-source-password@source-host.invalid:notaport/source-private-repo.git\nSYNTHETIC-INJECTED-LINE'",
+      "live": true,
+      "passed": true,
+      "synthetic_origin_components_in_output": [],
+      "source_and_destination_preserved": true,
+      "expected_registry_and_markers": true,
+      "useful_diagnostic": true,
+      "evidence": "target-rejected-newline-origin.log"
+    }
+  ],
+  "selected_regressions": {
+    "functions": [
+      "test_home_seed_refuses_existing_remote_backed_project_with_wrong_origin",
+      "test_home_seed_refuses_seeded_project_without_origin_without_printing_source",
+      "test_remote_home_seed_refuses_supplied_origin_without_printing_it",
+      "test_remote_home_seed_refuses_clone_origin_without_printing_it"
+    ],
+    "exit": 0
+  },
+  "passed": true
+}

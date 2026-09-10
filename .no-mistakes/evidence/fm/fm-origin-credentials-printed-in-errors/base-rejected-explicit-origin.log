@@ -1,0 +1,29 @@
+Commit: b1ad702fafdd03d94e5ce47cd4ba86e589ad33d6
+Synthetic credentials only; no real account or server used.
+
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-explicit-origin/main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-remote-home-seed.sh origin-check nonexistent-origin-validation-host /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-explicit-origin/remote-code /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-explicit-origin/remote-home alpha=https://synthetic-source-user:synthetic-source-password@source-host.invalid:notaport/source-private-repo.git
+exit: 1
+stdout:
+(empty)
+
+stderr:
+error: project alpha origin is not an accepted clone URL: https://synthetic-source-user:synthetic-source-password@source-host.invalid:notaport/source-private-repo.git
+
+Checks:
+{
+  "label": "base",
+  "name": "rejected-explicit-origin",
+  "exit": 1,
+  "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-remote-home-seed.sh origin-check nonexistent-origin-validation-host /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-explicit-origin/remote-code /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-explicit-origin/remote-home alpha=https://synthetic-source-user:synthetic-source-password@source-host.invalid:notaport/source-private-repo.git",
+  "live": true,
+  "passed": true,
+  "synthetic_origin_components_in_output": [
+    "synthetic-source-user",
+    "synthetic-source-password",
+    "source-host.invalid",
+    "/source-private-repo.git"
+  ],
+  "source_and_destination_preserved": true,
+  "expected_registry_and_markers": true,
+  "useful_diagnostic": true
+}

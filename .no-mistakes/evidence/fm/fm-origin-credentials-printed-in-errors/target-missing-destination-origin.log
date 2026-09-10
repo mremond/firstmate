@@ -1,0 +1,24 @@
+Commit: 4c4f2553d3c36ff59d3d571bdd8608ddd88effca
+Synthetic credentials only; no real account or server used.
+
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-missing-destination-origin/main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-target/bin/fm-home-seed.sh origin-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-missing-destination-origin/seeded alpha
+exit: 1
+stdout:
+(empty)
+
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-missing-destination-origin/seeded/projects/alpha has no origin remote; it must match the origin of the source clone at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-missing-destination-origin/main/projects/alpha
+
+Checks:
+{
+  "label": "target",
+  "name": "missing-destination-origin",
+  "exit": 1,
+  "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-target/bin/fm-home-seed.sh origin-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/target-missing-destination-origin/seeded alpha",
+  "live": true,
+  "passed": true,
+  "synthetic_origin_components_in_output": [],
+  "source_and_destination_preserved": true,
+  "expected_registry_and_markers": true,
+  "useful_diagnostic": true
+}

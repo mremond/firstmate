@@ -1,0 +1,131 @@
+Base commit: b1ad702fafdd03d94e5ce47cd4ba86e589ad33d6
+Expected regression reproduction: all four old errors printed synthetic origin components. This is not a safe-output pass.
+All credential values are deliberately synthetic. No real-world leak was observed and no credential-bearing production configuration is established.
+
+=== two-credential-origin-mismatch ===
+Commit: b1ad702fafdd03d94e5ce47cd4ba86e589ad33d6
+Synthetic credentials only; no real account or server used.
+
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-two-credential-origin-mismatch/main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-home-seed.sh origin-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-two-credential-origin-mismatch/seeded alpha
+exit: 1
+stdout:
+(empty)
+
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-two-credential-origin-mismatch/seeded/projects/alpha has origin https://synthetic-destination-user:synthetic-destination-password@destination-host.invalid/destination-private-repo.git; expected https://synthetic-source-user:synthetic-source-password@source-host.invalid/source-private-repo.git
+
+Checks:
+{
+  "label": "base",
+  "name": "two-credential-origin-mismatch",
+  "exit": 1,
+  "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-home-seed.sh origin-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-two-credential-origin-mismatch/seeded alpha",
+  "live": true,
+  "passed": true,
+  "synthetic_origin_components_in_output": [
+    "synthetic-source-user",
+    "synthetic-source-password",
+    "source-host.invalid",
+    "/source-private-repo.git",
+    "synthetic-destination-user",
+    "synthetic-destination-password",
+    "destination-host.invalid",
+    "/destination-private-repo.git"
+  ],
+  "source_and_destination_preserved": true,
+  "expected_registry_and_markers": true,
+  "useful_diagnostic": true
+}
+
+=== missing-destination-origin ===
+Commit: b1ad702fafdd03d94e5ce47cd4ba86e589ad33d6
+Synthetic credentials only; no real account or server used.
+
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-missing-destination-origin/main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-home-seed.sh origin-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-missing-destination-origin/seeded alpha
+exit: 1
+stdout:
+(empty)
+
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-missing-destination-origin/seeded/projects/alpha has no origin remote; expected https://synthetic-source-user:synthetic-source-password@source-host.invalid/source-private-repo.git
+
+Checks:
+{
+  "label": "base",
+  "name": "missing-destination-origin",
+  "exit": 1,
+  "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-home-seed.sh origin-check /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-missing-destination-origin/seeded alpha",
+  "live": true,
+  "passed": true,
+  "synthetic_origin_components_in_output": [
+    "synthetic-source-user",
+    "synthetic-source-password",
+    "source-host.invalid",
+    "/source-private-repo.git"
+  ],
+  "source_and_destination_preserved": true,
+  "expected_registry_and_markers": true,
+  "useful_diagnostic": true
+}
+
+=== rejected-explicit-origin ===
+Commit: b1ad702fafdd03d94e5ce47cd4ba86e589ad33d6
+Synthetic credentials only; no real account or server used.
+
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-explicit-origin/main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-remote-home-seed.sh origin-check nonexistent-origin-validation-host /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-explicit-origin/remote-code /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-explicit-origin/remote-home alpha=https://synthetic-source-user:synthetic-source-password@source-host.invalid:notaport/source-private-repo.git
+exit: 1
+stdout:
+(empty)
+
+stderr:
+error: project alpha origin is not an accepted clone URL: https://synthetic-source-user:synthetic-source-password@source-host.invalid:notaport/source-private-repo.git
+
+Checks:
+{
+  "label": "base",
+  "name": "rejected-explicit-origin",
+  "exit": 1,
+  "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-remote-home-seed.sh origin-check nonexistent-origin-validation-host /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-explicit-origin/remote-code /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-explicit-origin/remote-home alpha=https://synthetic-source-user:synthetic-source-password@source-host.invalid:notaport/source-private-repo.git",
+  "live": true,
+  "passed": true,
+  "synthetic_origin_components_in_output": [
+    "synthetic-source-user",
+    "synthetic-source-password",
+    "source-host.invalid",
+    "/source-private-repo.git"
+  ],
+  "source_and_destination_preserved": true,
+  "expected_registry_and_markers": true,
+  "useful_diagnostic": true
+}
+
+=== rejected-configured-origin ===
+Commit: b1ad702fafdd03d94e5ce47cd4ba86e589ad33d6
+Synthetic credentials only; no real account or server used.
+
+$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-configured-origin/main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-remote-home-seed.sh origin-check nonexistent-origin-validation-host /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-configured-origin/remote-code /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-configured-origin/remote-home alpha
+exit: 1
+stdout:
+(empty)
+
+stderr:
+error: project alpha origin is not an accepted clone URL: https://synthetic-source-user:synthetic-source-password@source-host.invalid:notaport/source-private-repo.git
+
+Checks:
+{
+  "label": "base",
+  "name": "rejected-configured-origin",
+  "exit": 1,
+  "command": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/code-base/bin/fm-remote-home-seed.sh origin-check nonexistent-origin-validation-host /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-configured-origin/remote-code /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M25ATVD3PSSRADPY7RVSYKZM/.origin-cli-validation/base-rejected-configured-origin/remote-home alpha",
+  "live": true,
+  "passed": true,
+  "synthetic_origin_components_in_output": [
+    "synthetic-source-user",
+    "synthetic-source-password",
+    "source-host.invalid",
+    "/source-private-repo.git"
+  ],
+  "source_and_destination_preserved": true,
+  "expected_registry_and_markers": true,
+  "useful_diagnostic": true
+}

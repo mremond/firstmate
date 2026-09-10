@@ -1,0 +1,15 @@
+Selected unchanged functions from tests/fm-secondmate-safety.test.sh:
+test_home_seed_refuses_existing_remote_backed_project_with_wrong_origin
+test_home_seed_refuses_seeded_project_without_origin_without_printing_source
+test_remote_home_seed_refuses_supplied_origin_without_printing_it
+test_remote_home_seed_refuses_clone_origin_without_printing_it
+
+FM_TEST_BEGIN 2026-09-10T09:43:07Z tests/fm-origin-selected.test.sh family=unclassified expected_gate_skip=none
+ok - remote-backed subhome seeding names the mismatched clones without repeating their origins
+ok - seeding points at the source clone instead of printing its origin when the seeded clone has none
+ok - remote seeding names the refused command-line argument without echoing the origin back
+ok - remote seeding names the clone that supplied a refused origin without printing it
+FM_TEST_END 2026-09-10T09:43:10Z tests/fm-origin-selected.test.sh exit=0 duration_ms=3909 gate_skip=false
+FM_TEST_SUMMARY total=1 failed=0 skipped_gate=0 duration_ms=4031
+FM_TEST_SUMMARY_FAMILY family=unclassified count=1 duration_ms=3909 failed=0
+FM_TEST_SLOWEST rank=1 script=tests/fm-origin-selected.test.sh duration_ms=3909
