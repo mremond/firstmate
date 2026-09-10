@@ -1,0 +1,4 @@
+Historical artifacts from GitHub run 34447627189, replayed locally; not new lane measurements.
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/held-out/serial-1/fm-test-timing-portable-serial-1.json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/held-out/serial-2/fm-test-timing-portable-serial-2.json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/held-out/serial-3/fm-test-timing-portable-serial-3.json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/held-out/serial-4/fm-test-timing-portable-serial-4.json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/held-out/serial-5/fm-test-timing-portable-serial-5.json
+shard balance guard failed: portable-serial-1of5 ran 21.93 min, 73.1% of the 30 min job cap (max 72%); refresh the duration hints or repack the lane (docs/fm-test-portable-shards.md)
+EXIT_STATUS=1

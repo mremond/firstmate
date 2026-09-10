@@ -1,0 +1,12 @@
+{
+  "timeout_minutes": 30,
+  "shards": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "aggregate_if": "always()",
+  "guard_step": "set -eu\nshopt -s nullglob\nserial=(\"$RUNNER_TEMP\"/fm-test-aggregate/fm-test-timing-portable-serial-*.json)\nif [ \"${#serial[@]}\" -eq 0 ]; then\n  echo \"::warning::no portable serial timing JSON found; shard balance unchecked\"\n  exit 0\nfi\n# The runner owns the cap this share is taken against; the suite parses\n# this workflow and refuses when that record and the\n# tests-portable-serial timeout-minutes disagree, so the cap cannot\n# move in one place only.\nbin/fm-test-run.sh --check-shard-balance \"${serial[@]}\"\n"
+}

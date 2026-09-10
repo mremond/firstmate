@@ -1,0 +1,29 @@
+Actual filtered-lane runner execution and artifact consumption; not a full serial lane performance run.
+$ bin/fm-test-run.sh --check-coverage
+FM_TEST_COVERAGE ok total=194 parallel=24 serial=157 serial_shards=5 serial_unhinted=0 herdr=13
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --list --lane portable-serial-1of5
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --list --lane portable-serial-2of5
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --list --lane portable-serial-3of5
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --list --lane portable-serial-4of5
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --list --lane portable-serial-5of5
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --lane portable-serial-5of5 --exclude-family pure-contract-unit --exclude-family watcher-wake-lock --exclude-family real-herdr-gated --exclude-family secondmate --exclude-family session-bootstrap --exclude-family live-harness-optin --exclude-family backend-dispatch --exclude-family pr-forge --exclude-family afk --exclude-family snapshot-bearings --exclude-family cmux --exclude-family zellij --exclude-family standalone --exclude-family unclassified --json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/fresh-serial-timing.json
+FM_TEST_BEGIN 2026-09-10T09:18:31Z tests/fm-backend-orca.test.sh family=orca expected_gate_skip=optional-binary
+FM_TEST_END 2026-09-10T09:19:41Z tests/fm-backend-orca.test.sh exit=0 duration_ms=70585 gate_skip=false
+FM_TEST_SUMMARY total=1 failed=0 skipped_gate=0 duration_ms=72606
+FM_TEST_SUMMARY_FAMILY family=orca count=1 duration_ms=70585 failed=0
+FM_TEST_SLOWEST rank=1 script=tests/fm-backend-orca.test.sh duration_ms=70585
+fm-test-run: wrote timing artifact: /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/fresh-serial-timing.json
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/fresh-serial-timing.json
+FM_TEST_SHARD_BALANCE partial 1 of 5 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-5of5@4.0% bound=30min
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --aggregate-json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/fresh-aggregate.json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/fresh-serial-timing.json
+FM_TEST_AGGREGATE lanes=1 total=1 failed=0 skipped_gate=0 critical_path_duration_ms=72606
+EXIT_STATUS=0

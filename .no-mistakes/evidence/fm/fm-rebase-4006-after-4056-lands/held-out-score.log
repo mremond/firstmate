@@ -1,0 +1,4 @@
+Held-out GitHub run 34447627189: 157 scripts, exact match with current lane inventory.
+Previous partition: observed worst wall 21.93 min; script sums 13.21-21.91 min; spread 1.66x.
+Current executable partition: predicted script sums 14.47-16.99 min; spread 1.17x.
+This replays held-out measurements; it does not measure a new CI run.

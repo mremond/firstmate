@@ -1,0 +1,63 @@
+{
+  "source_run": 34447627189,
+  "kind": "held-out replay and prediction; not a fresh CI performance measurement",
+  "measured_scripts": 157,
+  "previous_partition": [
+    {
+      "lane": "portable-serial-1of5",
+      "sum_ms": 1314342,
+      "wall_ms": 1316098
+    },
+    {
+      "lane": "portable-serial-2of5",
+      "sum_ms": 812608,
+      "wall_ms": 814097
+    },
+    {
+      "lane": "portable-serial-3of5",
+      "sum_ms": 794870,
+      "wall_ms": 796460
+    },
+    {
+      "lane": "portable-serial-4of5",
+      "sum_ms": 792401,
+      "wall_ms": 794218
+    },
+    {
+      "lane": "portable-serial-5of5",
+      "sum_ms": 986257,
+      "wall_ms": 987596
+    }
+  ],
+  "current_partition_scored_on_same_measurements": [
+    {
+      "lane": "portable-serial-1of5",
+      "scripts": 30,
+      "predicted_sum_ms": 1019615
+    },
+    {
+      "lane": "portable-serial-2of5",
+      "scripts": 31,
+      "predicted_sum_ms": 934934
+    },
+    {
+      "lane": "portable-serial-3of5",
+      "scripts": 32,
+      "predicted_sum_ms": 916638
+    },
+    {
+      "lane": "portable-serial-4of5",
+      "scripts": 31,
+      "predicted_sum_ms": 961145
+    },
+    {
+      "lane": "portable-serial-5of5",
+      "scripts": 33,
+      "predicted_sum_ms": 868146
+    }
+  ],
+  "previous_worst_minutes": 21.9057,
+  "new_worst_minutes": 16.993583333333333,
+  "previous_spread": 1.658682914332516,
+  "new_spread": 1.1744741091936148
+}

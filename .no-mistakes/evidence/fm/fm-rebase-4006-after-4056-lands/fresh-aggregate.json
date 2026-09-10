@@ -1,0 +1,51 @@
+{
+  "kind": "aggregate",
+  "lanes": [
+    {
+      "finished_at": "2026-09-10T09:19:41Z",
+      "path": "/Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/fresh-serial-timing.json",
+      "run_id": "fm-test-run-1789031909128-65866",
+      "selection": "lane=portable-serial-5of5;exclude-family=pure-contract-unit,watcher-wake-lock,real-herdr-gated,secondmate,session-bootstrap,live-harness-optin,backend-dispatch,pr-forge,afk,snapshot-bearings,cmux,zellij,standalone,unclassified",
+      "started_at": "2026-09-10T09:18:29Z",
+      "summary": {
+        "duration_ms": 72606,
+        "failed": 0,
+        "skipped_gate": 0,
+        "total": 1
+      }
+    }
+  ],
+  "scripts": [
+    {
+      "duration_ms": 70585,
+      "exit": 0,
+      "expected_gate_skip": "optional-binary",
+      "family": "orca",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "lane_run_id": "fm-test-run-1789031909128-65866",
+      "lane_selection": "lane=portable-serial-5of5;exclude-family=pure-contract-unit,watcher-wake-lock,real-herdr-gated,secondmate,session-bootstrap,live-harness-optin,backend-dispatch,pr-forge,afk,snapshot-bearings,cmux,zellij,standalone,unclassified",
+      "path": "tests/fm-backend-orca.test.sh"
+    }
+  ],
+  "slowest": [
+    {
+      "duration_ms": 70585,
+      "exit": 0,
+      "expected_gate_skip": "optional-binary",
+      "family": "orca",
+      "gate_skip": false,
+      "gate_skip_reason": "",
+      "lane_run_id": "fm-test-run-1789031909128-65866",
+      "lane_selection": "lane=portable-serial-5of5;exclude-family=pure-contract-unit,watcher-wake-lock,real-herdr-gated,secondmate,session-bootstrap,live-harness-optin,backend-dispatch,pr-forge,afk,snapshot-bearings,cmux,zellij,standalone,unclassified",
+      "path": "tests/fm-backend-orca.test.sh"
+    }
+  ],
+  "summary": {
+    "critical_path_duration_ms": 72606,
+    "failed": 0,
+    "lanes": 1,
+    "skipped_gate": 0,
+    "total": 1
+  }
+}

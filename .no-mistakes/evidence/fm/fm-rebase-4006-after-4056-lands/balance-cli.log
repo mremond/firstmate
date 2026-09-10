@@ -1,0 +1,112 @@
+
+CASE: healthy five-shard lane
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/healthy-1.json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/healthy-2.json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/healthy-3.json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/healthy-4.json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/healthy-5.json
+FM_TEST_SHARD_BALANCE ok shards=5 worst_share=portable-serial-1of5@46.7% bound=30min
+EXIT_STATUS=0
+
+CASE: one-ms-under
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/one-ms-under.json
+FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-1of1@72.0% bound=30min
+EXIT_STATUS=0
+
+CASE: exact-72-percent
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/exact-72-percent.json
+FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-1of1@72.0% bound=30min
+EXIT_STATUS=0
+
+CASE: one-ms-over
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/one-ms-over.json
+shard balance guard failed: portable-serial-1of1 ran 21.60 min, 72.0% of the 30 min job cap (max 72%); refresh the duration hints or repack the lane (docs/fm-test-portable-shards.md)
+  re-measure the scripts furthest over their hints:
+    tests/fm-watch-triage.test.sh measured 1200.0s hint 592.7s (+607.3s)
+EXIT_STATUS=1
+
+CASE: stale-hints-73-percent
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/stale-hints-73-percent.json
+shard balance guard failed: portable-serial-1of5 ran 22.00 min, 73.3% of the 30 min job cap (max 72%); refresh the duration hints or repack the lane (docs/fm-test-portable-shards.md)
+  re-measure the scripts furthest over their hints:
+    tests/fm-watch-triage.test.sh measured 1200.0s hint 592.7s (+607.3s)
+FM_TEST_SHARD_BALANCE partial 1 of 5 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+EXIT_STATUS=1
+
+CASE: stale-hints-93-percent
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/stale-hints-93-percent.json
+shard balance guard failed: portable-serial-1of5 ran 28.00 min, 93.3% of the 30 min job cap (max 72%); refresh the duration hints or repack the lane (docs/fm-test-portable-shards.md)
+  re-measure the scripts furthest over their hints:
+    tests/fm-watch-triage.test.sh measured 1200.0s hint 592.7s (+607.3s)
+FM_TEST_SHARD_BALANCE partial 1 of 5 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+EXIT_STATUS=1
+
+CASE: wall time decides despite tiny script sum
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/wall-not-script-sum.json
+shard balance guard failed: portable-serial-1of1 ran 22.00 min, 73.3% of the 30 min job cap (max 72%); refresh the duration hints or repack the lane (docs/fm-test-portable-shards.md)
+EXIT_STATUS=1
+
+CASE: hint drift alone does not add a second failure bound
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/drift-alone-not-a-gate.json
+FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-1of1@46.7% bound=30min
+EXIT_STATUS=0
+
+CASE: missing artifacts are explicitly unchecked
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/healthy-1.json
+FM_TEST_SHARD_BALANCE partial 1 of 5 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-1of5@46.7% bound=30min
+EXIT_STATUS=0
+
+CASE: recorded partition owns completeness
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/previous-partition.json
+FM_TEST_SHARD_BALANCE partial 1 of 2 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-1of2@0.1% bound=30min
+EXIT_STATUS=0
+
+CASE: foreign input fails loudly
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/foreign.json
+Traceback (most recent call last):
+  File "<stdin>", line 45, in <module>
+AttributeError: 'NoneType' object has no attribute 'group'
+EXIT_STATUS=1
+
+CASE: malformed JSON fails loudly
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/inputs/malformed.json
+Traceback (most recent call last):
+  File "<stdin>", line 38, in <module>
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+EXIT_STATUS=1
+
+CASE: missing input usage
+$ bin/fm-test-run.sh --check-shard-balance
+fm-test-run: --check-shard-balance requires at least one timing JSON
+EXIT_STATUS=2
+
+CASE: workflow healthy
+$ bash /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/balance-workflow-step.sh
+FM_TEST_SHARD_BALANCE ok shards=5 worst_share=portable-serial-1of5@46.7% bound=30min
+EXIT_STATUS=0
+
+CASE: workflow partial
+$ bash /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/balance-workflow-step.sh
+FM_TEST_SHARD_BALANCE partial 1 of 5 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-1of5@46.7% bound=30min
+EXIT_STATUS=0
+
+CASE: workflow empty
+$ bash /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/balance-workflow-step.sh
+::warning::no portable serial timing JSON found; shard balance unchecked
+EXIT_STATUS=0
+
+CASE: workflow over-limit
+$ bash /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/balance-workflow-step.sh
+shard balance guard failed: portable-serial-1of5 ran 22.00 min, 73.3% of the 30 min job cap (max 72%); refresh the duration hints or repack the lane (docs/fm-test-portable-shards.md)
+  re-measure the scripts furthest over their hints:
+    tests/fm-watch-triage.test.sh measured 1200.0s hint 592.7s (+607.3s)
+FM_TEST_SHARD_BALANCE partial 1 of 5 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+EXIT_STATUS=1

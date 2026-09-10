@@ -1,0 +1,4 @@
+Baseline runner b1ad702, unchanged current test inventory
+$ baseline/bin/fm-test-run.sh --check-coverage
+FM_TEST_COVERAGE ok total=194 parallel=24 serial=157 serial_shards=5 serial_unhinted=11 herdr=13
+EXIT_STATUS=0

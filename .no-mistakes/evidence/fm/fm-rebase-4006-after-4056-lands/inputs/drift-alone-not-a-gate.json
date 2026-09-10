@@ -1,0 +1,22 @@
+{
+  "run_id": "drift-alone-not-a-gate",
+  "selection": "lane=portable-serial-1of1",
+  "started_at": "2026-09-10T00:00:00Z",
+  "finished_at": "2026-09-10T00:30:00Z",
+  "summary": {
+    "total": 1,
+    "failed": 0,
+    "skipped_gate": 0,
+    "duration_ms": 840000
+  },
+  "scripts": [
+    {
+      "path": "tests/fm-trace-context-lib.test.sh",
+      "family": "afk",
+      "duration_ms": 830000,
+      "exit": 0,
+      "gate_skip": false,
+      "gate_skip_reason": ""
+    }
+  ]
+}

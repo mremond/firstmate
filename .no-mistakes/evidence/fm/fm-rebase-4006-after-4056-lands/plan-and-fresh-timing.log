@@ -1,0 +1,244 @@
+$ bin/fm-test-run.sh --check-coverage
+FM_TEST_COVERAGE ok total=194 parallel=24 serial=157 serial_shards=5 serial_unhinted=0 herdr=13
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --list --lane portable-serial-1of5
+tests/fm-watch-triage.test.sh
+tests/fm-sessionstart-nudge.test.sh
+tests/fm-pi-branch-extension.test.sh
+tests/fm-watch-recovery-loop.test.sh
+tests/fm-trace-context-spawn.test.sh
+tests/fm-omp-harness.test.sh
+tests/fm-control.test.sh
+tests/fm-teardown-endpoint-safety.test.sh
+tests/fm-send-remote-delivery.test.sh
+tests/fm-rovo-harness.test.sh
+tests/fm-secondmate-liveness.test.sh
+tests/fm-bearings-board-render.test.sh
+tests/fm-mail-check.test.sh
+tests/fm-mail.test.sh
+tests/fm-spawn-worktree-settle.test.sh
+tests/fm-herdr-session-cleanup.test.sh
+tests/fm-claude-trust.test.sh
+tests/fm-test-isolation-proof.test.sh
+tests/fm-session-lock-ancestry.test.sh
+tests/fm-harness-liveness-drift-live-e2e.test.sh
+tests/fm-lint-workflows.test.sh
+tests/fm-operational-input.test.sh
+tests/fm-no-mistakes-required.test.sh
+tests/fm-test-fixtures.test.sh
+tests/fm-pi-windows-shell-invocation.test.sh
+tests/fm-muse-signals-live-e2e.test.sh
+tests/fm-pi-branch-live-e2e.test.sh
+tests/fm-composer-matrix-live-e2e.test.sh
+tests/fm-afk-pi-herdr-return-e2e.test.sh
+tests/fm-sessionstart-instruction-refresh-live-e2e.test.sh
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --list --lane portable-serial-2of5
+tests/fm-remote-secondmate-lifecycle-e2e.test.sh
+tests/fm-bearings-snapshot.test.sh
+tests/fm-spawn-dispatch-profile.test.sh
+tests/fm-watch-arm.test.sh
+tests/fm-wake-queue.test.sh
+tests/fm-claude-stop-autoarm.test.sh
+tests/fm-bearings-board.test.sh
+tests/fm-pi-watch-extension.test.sh
+tests/fm-vendor-auth-probe.test.sh
+tests/fm-send-inbox.test.sh
+tests/fm-voice-relay.test.sh
+tests/fm-daemon.test.sh
+tests/fm-turnend-guard.test.sh
+tests/fm-kimi-harness.test.sh
+tests/fm-afk-return.test.sh
+tests/fm-afk-contract.test.sh
+tests/fm-branch-supervision.test.sh
+tests/fm-fleet-snapshot-view.test.sh
+tests/fm-wake-daemon-lifecycle-e2e.test.sh
+tests/fm-gate-refuse.test.sh
+tests/fm-remote-job-orphan-reap.test.sh
+tests/fm-quota-choose.test.sh
+tests/fm-test-fixture-cleanup.test.sh
+tests/fm-nm-test-contract.test.sh
+tests/fm-backend-tmux-smoke.test.sh
+tests/fm-sessionstart-hook-live-e2e.test.sh
+tests/fm-herdr-version-floor-live-e2e.test.sh
+tests/fm-opencode-primary-live-e2e.test.sh
+tests/fm-bearings-board-lavish-live-e2e.test.sh
+tests/fm-pi-primary-live-e2e.test.sh
+tests/fm-pi-codex-native.test.sh
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --list --lane portable-serial-3of5
+tests/fm-procevent.test.sh
+tests/fm-secondmate-safety.test.sh
+tests/fm-control-relaunch.test.sh
+tests/fm-watcher-lock.test.sh
+tests/fm-remote-transport-lanes.test.sh
+tests/fm-remote-job.test.sh
+tests/fm-remote-reply.test.sh
+tests/fm-inactive-reconcile.test.sh
+tests/fm-remote-backlog-handoff.test.sh
+tests/fm-fleet-sync.test.sh
+tests/fm-remote-secondmate-parent-binding.test.sh
+tests/fm-cursor-harness.test.sh
+tests/fm-busy-adapter-wiring.test.sh
+tests/fm-wake-drain-unread-status.test.sh
+tests/fm-tool-update-check.test.sh
+tests/fm-on.test.sh
+tests/fm-update.test.sh
+tests/fm-secondmate-lifecycle-e2e.test.sh
+tests/fm-startup-memory-budget.test.sh
+tests/fm-send-secondmate-marker.test.sh
+tests/fm-stow-cascade.test.sh
+tests/fm-live-gate.test.sh
+tests/fm-classify-decision-key.test.sh
+tests/fm-documentation-audiences.test.sh
+tests/fm-gemini-harness.test.sh
+tests/fm-send-secondmate-marker-herdr-e2e.test.sh
+tests/fm-gitignore-config.test.sh
+tests/fm-stat-shadowing.test.sh
+tests/fm-quota-array-dispatch-live-e2e.test.sh
+tests/fm-cursor-primary-live-e2e.test.sh
+tests/fm-claude-stop-autoarm-live-e2e.test.sh
+tests/fm-backend-cmux-smoke.test.sh
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --list --lane portable-serial-4of5
+tests/fm-backlog-atomicity.test.sh
+tests/fm-secondmate-harness.test.sh
+tests/fm-public-followup.test.sh
+tests/fm-secondmate-reconcile.test.sh
+tests/fm-secondmate-sync.test.sh
+tests/fm-startup-network.test.sh
+tests/fm-spawn-pool-base-freshen.test.sh
+tests/fm-cursor-primary.test.sh
+tests/fm-secondmate-restart.test.sh
+tests/fm-muse-harness.test.sh
+tests/fm-pending-reply.test.sh
+tests/fm-send-resolve-key.test.sh
+tests/fm-wake-drain-open-decisions-cursor.test.sh
+tests/fm-procevent-when.test.sh
+tests/fm-task-delivery.test.sh
+tests/fm-guard-stale-banner.test.sh
+tests/fm-bootstrap-network-parallel.test.sh
+tests/fm-backend-zellij.test.sh
+tests/fm-watch-checkpoint.test.sh
+tests/fm-shared-captain-inheritance.test.sh
+tests/fm-busy-state.test.sh
+tests/fm-procevent-quota.test.sh
+tests/fm-subagent-pretool-check.test.sh
+tests/fm-project-origin.test.sh
+tests/fm-check-unregister.test.sh
+tests/fm-ask-user-authority.test.sh
+tests/fm-remote-entrypoint.test.sh
+tests/fm-omp-primary-live-e2e.test.sh
+tests/fm-send-inbox-doorbell-live-e2e.test.sh
+tests/fm-herdr-submit-confirm-live-e2e.test.sh
+tests/fm-harness-adapter-instructions-live-e2e.test.sh
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --list --lane portable-serial-5of5
+tests/fm-pr-check-security.test.sh
+tests/fm-session-start.test.sh
+tests/fm-teardown.test.sh
+tests/fm-bootstrap.test.sh
+tests/fm-classify-corr-token.test.sh
+tests/fm-remote-secondmate-trace-context.test.sh
+tests/fm-backlog-handoff.test.sh
+tests/fm-calm-pi-extension.test.sh
+tests/fm-wake-drain-outcome-backstop.test.sh
+tests/fm-home-summary-refresh.test.sh
+tests/fm-afk-inject-e2e.test.sh
+tests/fm-task-inbox.test.sh
+tests/fm-backend.test.sh
+tests/fm-backend-orca.test.sh
+tests/fm-remote-doctor.test.sh
+tests/fm-pi-branch-responsiveness-live-e2e.test.sh
+tests/fm-extension-binding.test.sh
+tests/fm-wake-drain-open-decisions.test.sh
+tests/fm-tangle-guard.test.sh
+tests/fm-backend-cmux.test.sh
+tests/fm-remote-herdr-guard.test.sh
+tests/fm-tmux-agent-liveness.test.sh
+tests/fm-gotmp.test.sh
+tests/fm-peek-remote.test.sh
+tests/fm-supervision-events.test.sh
+tests/fm-trace-context-lib.test.sh
+tests/fm-codex-continuity-live-e2e.test.sh
+tests/fm-harness-adapter-references.test.sh
+tests/fm-cmux-claude-composer-live-e2e.test.sh
+tests/fm-rovo-signals-live-e2e.test.sh
+tests/fm-grok-stop-live-e2e.test.sh
+tests/fm-grok-continuity-live-e2e.test.sh
+tests/fm-backend-zellij-smoke.test.sh
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --lane portable-serial-5of5 --exclude-family pure-contract-unit --exclude-family watcher-wake-lock --exclude-family real-herdr-gated --exclude-family secondmate --exclude-family session-bootstrap --exclude-family live-harness-optin --exclude-family backend-dispatch --exclude-family pr-forge --exclude-family afk --exclude-family snapshot-bearings --exclude-family cmux --exclude-family zellij --exclude-family standalone --exclude-family unclassified --json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/fresh-serial-timing.json
+FM_TEST_BEGIN 2026-09-10T09:18:31Z tests/fm-backend-orca.test.sh family=orca expected_gate_skip=optional-binary
+ok - fm_backend_orca_capture: parses result.terminal.tail and calls terminal read
+ok - fm_backend_orca_capture: falls back to result text fields
+ok - fm_backend_orca_capture: fails closed on Orca read error JSON
+ok - fm_backend_orca_runtime_check: accepts reachable ready runtime
+ok - fm_backend_orca_runtime_check: fails closed when runtime is not ready
+ok - fm_backend_orca_send_text_submit: verifies empty composer after Enter with one bounded read
+ok - fm_backend_orca_send_text_submit: a borderless claude composer confirms delivery (the missing #2029 shape)
+ok - fm_backend_orca_composer_state: a stale startup banner cannot outrank the live composer row
+ok - fm_backend_orca_send_text_submit: retries Enter while composer remains pending
+ok - fm_backend_orca_composer_state: a slash-command popup's argument-hint placeholder still reads pending
+ok - fm_backend_orca_composer_state: a bare dead-shell prompt reads unknown (unsafe-for-injection), never empty
+ok - fm_backend_orca_send_text_submit: a slash-command popup's placeholder fill on Enter #1 does not short-circuit as submitted; Enter #2 is retried and lands it
+ok - fm_backend_orca_send_literal: sends text without submitting
+ok - fm_backend_orca_send_text_submit: reports send-failed when Orca send fails
+ok - Orca send helpers: fail closed on ok:false JSON
+ok - fm_backend_orca_send_key: Enter maps to empty enter, C-c maps to interrupt
+ok - fm_backend_orca_send_key: refuses unsupported keys loudly
+ok - fm_backend_orca_send_key: refuses Escape instead of mapping it to interrupt
+ok - fm_backend_orca_kill: calls terminal close and stays best-effort
+ok - fm_backend_orca_remove_worktree: refuses empty worktree ids
+ok - fm_backend_orca_remove_worktree: fails closed on ok:false JSON
+ok - fm_backend_orca_worktree_path: resolves an Orca worktree id to its path
+ok - fm-backend dispatcher: accepts orca and routes capture through bin/backends/orca.sh
+ok - fm_backend_orca_json_get: ignores undocumented terminal id shapes
+ok - Orca lifecycle helpers: register repo, create worktree, create terminal, parse stable ids
+ok - fm_backend_orca_worktree_create: removes created worktree when path is missing
+ok - fm-spawn.sh --backend orca: preserves metadata when pathless cleanup fails
+ok - fm-spawn.sh --backend orca: reuses implicit terminal, records metadata, launches harness
+ok - fm-spawn.sh --backend orca --secondmate: refuses before secondmate-home mutation
+ok - fm-spawn.sh --backend orca: refuses before mutation when Orca runtime is not ready
+ok - fm-spawn.sh --backend orca: refuses non-isolated worktrees and closes implicit terminals
+ok - fm-spawn.sh --backend orca: removes worktree when terminal creation fails
+ok - fm-spawn.sh --backend orca: preserves metadata when abort cleanup fails
+ok - fm-spawn.sh --backend orca: releases terminal and worktree on later aborts
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WARNING: watcher still down (same stale episode; last beat: 2s ago, grace 300s) - full banner already printed this episode.
+ok - fm-peek/fm-send/fm-crew-state route through backend=orca metadata and its durable inbox
+ok - fm-peek/fm-crew-state: Orca read error JSON fails closed
+ok - fm_backend_target_exists: Orca ok:false read JSON is not live
+ok - fm-teardown.sh backend=orca: scout report gate then helper-backed worktree removal
+ok - fm-teardown.sh backend=orca: scout teardown refuses id/path mismatches
+ok - fm-teardown.sh backend=orca: releases terminal/worktree when path is absent
+ok - fm-teardown.sh backend=orca: preserves metadata on remove ok:false JSON
+ok - fm-teardown.sh backend=orca: scout report gate precedes pathless helper cleanup
+ok - fm-teardown.sh backend=orca: ship teardown fails closed when worktree path is missing
+ok - fm-teardown.sh backend=orca: ship teardown requires a matching Orca id path
+ok - fm-teardown.sh backend=orca: ship teardown fails closed when id resolution fails
+ok - fm-teardown.sh backend=orca: ship teardown refuses id/path mismatches
+ok - fm-teardown.sh backend=orca: refuses missing worktree ids before cleanup
+ok - fm-teardown.sh backend=orca: refuses incomplete worktree-only endpoint metadata before runtime dispatch
+ok - fm-teardown.sh --force: removes Orca secondmate children through Orca
+ok - fm-teardown.sh --force: refuses Orca child id/path mismatches
+ok - fm-teardown.sh --force: refuses partial Orca secondmate children before runtime dispatch
+FM_TEST_END 2026-09-10T09:19:41Z tests/fm-backend-orca.test.sh exit=0 duration_ms=70585 gate_skip=false
+FM_TEST_SUMMARY total=1 failed=0 skipped_gate=0 duration_ms=72606
+FM_TEST_SUMMARY_FAMILY family=orca count=1 duration_ms=70585 failed=0
+FM_TEST_SLOWEST rank=1 script=tests/fm-backend-orca.test.sh duration_ms=70585
+fm-test-run: wrote timing artifact: /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/fresh-serial-timing.json
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --check-shard-balance /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/fresh-serial-timing.json
+FM_TEST_SHARD_BALANCE partial 1 of 5 portable serial shards reported a timing artifact; a cancelled shard uploads none, so the rest are unchecked
+FM_TEST_SHARD_BALANCE ok shards=1 worst_share=portable-serial-5of5@4.0% bound=30min
+EXIT_STATUS=0
+$ bin/fm-test-run.sh --aggregate-json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/fresh-aggregate.json /Users/mremond/.no-mistakes/evidence/01M2592ZG5R62BQT2TH3KR71BF/fresh-serial-timing.json
+FM_TEST_AGGREGATE lanes=1 total=1 failed=0 skipped_gate=0 critical_path_duration_ms=72606
+EXIT_STATUS=0
