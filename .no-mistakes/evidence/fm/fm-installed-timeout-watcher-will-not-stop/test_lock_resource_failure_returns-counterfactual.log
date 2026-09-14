@@ -1,0 +1,2 @@
+not ok - lock acquisition did not return on owner-directory creation failure
+expected_red_exit=1

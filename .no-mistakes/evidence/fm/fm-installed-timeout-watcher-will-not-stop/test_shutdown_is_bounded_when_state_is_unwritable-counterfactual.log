@@ -1,0 +1,2 @@
+not ok - signaled watcher did not stop after owner-directory creation failed
+expected_red_exit=1

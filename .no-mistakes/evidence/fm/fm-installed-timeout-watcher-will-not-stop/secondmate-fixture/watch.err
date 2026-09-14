@@ -1,0 +1,848 @@
++ set -u
++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh
+++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++ pwd
++ SCRIPT_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++ FM_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q
++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home
++ STATE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
++ CONFIG=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/config
++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-push-transition-lib.sh
+++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-push-transition-lib.sh
++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ pwd
+++ FM_PUSH_TRANSITION_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-wake-lib.sh
++++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-wake-lib.sh
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ pwd
++++ FM_WAKE_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/..
+++++ pwd
++++ FM_WAKE_DEFAULT_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q
++++ FM_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q
++++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home
++++ STATE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
++++ FM_WAKE_QUEUE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.wake-queue
++++ FM_WAKE_QUEUE_LOCK=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.wake-queue.lock
++++ FM_LOCK_STALE_AFTER=2
+++++ uname
++++ _FM_UNAME=Darwin
++++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
++++ FM_WATCHER_MATCHED_IDENTITY=
++++ FM_WATCHER_HEALTHY_PID=
++++ FM_WATCHER_HEALTHY_IDENTITY=
++++ FM_WATCHER_VERDICT_OK=false
++++ FM_WATCHER_VERDICT_REASON=stale-beacon
++++ FM_RECOVERY_MARKER_TOKEN=
++++ FM_RECOVERY_MARKER_ACTION=none
++++ FM_RECOVERY_MARKER_LOCK_TIMEOUT=
++++ FM_WAKE_STATUS_KEY=
++++ FM_WAKE_STATUS_HISTORICAL=false
++++ FM_WAKE_EVENT_LINE=
++++ FM_WAKE_UNREAD_LINES=
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-classify-lib.sh
++++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-classify-lib.sh
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ pwd
++++ _FM_CLASSIFY_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ FM_CREW_STATE_BIN=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-crew-state.sh
++++ case $- in
++++ _fm_classify_nounset=on
++++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-timeout-lib.sh
+++++ set -u
++++ '[' on = on ']'
++++ unset _fm_classify_nounset
++++ FM_CLASSIFY_CAPTAIN_RE_DEFAULT='done:|needs-decision:|blocked:|failed:|PR ready|checks green|ready in branch|merged'
++++ FM_CLASSIFY_PAUSED_VERB_DEFAULT=paused
++++ FM_PAUSE_RESURFACE_SECS_DEFAULT=14400
++++ FM_CLASSIFY_RESOLVE_VERB_DEFAULT=resolved
++++ FM_CLASSIFY_CAPTAIN_HELD_VERB_DEFAULT=captain-held
++++ FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT=pending-reply-
++++ FM_OPEN_DECISIONS_FOLD_VERSION=5
++++ FM_STATUS_SNAPSHOT_EVENT_LINE=
++++ FM_STATUS_SNAPSHOT_EVENT_MTIME=
++++ FM_STATUS_SNAPSHOT_EVENT_ENDPOINT=
++++ STATUS_PRESENTATION_REPORTED=
++++ STATUS_PRESENTATION_CLASSIFIED=
++++ FM_WORKTREE_WRITE_PRUNE='.git node_modules .venv venv __pycache__ .mypy_cache .pytest_cache .ruff_cache .tox target dist build .next .cache vendor'
++++ FM_WORKTREE_WRITE_MAXDEPTH=6
++++ FM_WORKTREE_WRITE_TIMEOUT=10
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-backend.sh
++++ FM_BACKEND_SCRIPT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-backend.sh
++++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-backend.sh
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ pwd
++++ FM_BACKEND_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ unset FM_BACKEND_SCRIPT
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/..
+++++ pwd
++++ FM_BACKEND_DEFAULT_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q
++++ FM_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q
++++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home
++++ FM_BACKEND_CONFIG_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/config
++++ FM_BACKEND_KNOWN='tmux herdr zellij orca cmux'
++++ FM_BACKEND_SPAWN='tmux herdr zellij orca cmux'
++++ FM_BACKEND_CMUX_BUNDLE_ID=com.cmuxterm.app
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-transition-lib.sh
++++ FM_TRANSITION_FIELD_SEP='	'
+++ TRIAGE_LOG=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch-triage.log
+++ TRIAGE_LOG_MAX_BYTES=262144
+++ FM_WAKE_POST_OUTPUT_ACTION=
+++ FM_WATCH_DELIVERED_REASON=
+++ FM_WATCH_DELIVERY_PID=
+++ FM_WATCH_DELIVERY_IDENTITY=
+++ WATCH_DELIVERY_LOG=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch-deliveries.log
+++ WATCH_DELIVERY_LOCK=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch-deliveries.lock
+++ WATCH_DELIVERY_MAX_BYTES=65536
+++ WATCH_DELIVERY_KEEP_LINES=64
+++ case "$WATCH_DELIVERY_MAX_BYTES" in
+++ case "$WATCH_DELIVERY_KEEP_LINES" in
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-pr-lib.sh
+++ FM_PR_PROVIDER=
+++ FM_PR_URL=
+++ FM_PR_HOST=
+++ FM_PR_PATH=
+++ FM_PR_OWNER=
+++ FM_PR_REPO=
+++ FM_PR_NUMBER=
+++ FM_PR_DATA_PROVIDER=
+++ FM_PR_DATA_URL=
+++ FM_PR_DATA_HOST=
+++ FM_PR_DATA_PATH=
+++ FM_PR_DATA_NUMBER=
+++ FM_PR_META_PROVIDER=
+++ FM_PR_META_URL=
+++ FM_PR_META_HOST=
+++ FM_PR_META_PATH=
+++ FM_PR_META_NUMBER=
+++ FM_PR_REG_ID=
+++ FM_PR_REG_PROVIDER=
+++ FM_PR_REG_URL=
+++ FM_PR_REG_HOST=
+++ FM_PR_REG_PATH=
+++ FM_PR_REG_NUMBER=
+++ FM_PR_REG_DATA_HASH=
+++ FM_PR_REG_TEMPLATE_HASH=
+++ FM_PR_REG_DATA_IDENTITY=
+++ FM_PR_REG_CHECK_IDENTITY=
+++ FM_PR_POLL_DATA_TMP=
+++ FM_PR_POLL_CHECK_TMP=
+++ FM_PR_POLL_REG_TMP=
+++ FM_PR_POLL_DATA_DEST=
+++ FM_PR_POLL_CHECK_DEST=
+++ FM_PR_POLL_REG_DEST=
+++ FM_PR_POLL_EXPECT_ID=
+++ FM_PR_POLL_EXPECT_PROVIDER=
+++ FM_PR_POLL_EXPECT_URL=
+++ FM_PR_POLL_EXPECT_HOST=
+++ FM_PR_POLL_EXPECT_PATH=
+++ FM_PR_POLL_EXPECT_NUMBER=
+++ FM_PR_POLL_EXPECT_DATA_HASH=
+++ FM_PR_POLL_EXPECT_TEMPLATE_HASH=
+++ FM_PR_POLL_EXPECT_DATA_IDENTITY=
+++ FM_PR_POLL_EXPECT_CHECK_IDENTITY=
+++ FM_PR_POLL_TEMPLATE=
+++ FM_PR_POLL_STATE_DEVICE=
+++ FM_PR_POLL_SNAPSHOT_ID=
+++ FM_PR_POLL_SNAPSHOT_PROVIDER=
+++ FM_PR_POLL_SNAPSHOT_URL=
+++ FM_PR_POLL_SNAPSHOT_HOST=
+++ FM_PR_POLL_SNAPSHOT_PATH=
+++ FM_PR_POLL_SNAPSHOT_NUMBER=
+++ FM_PR_POLL_SNAPSHOT_DATA_HASH=
+++ FM_PR_POLL_SNAPSHOT_TEMPLATE_HASH=
+++ FM_PR_POLL_SNAPSHOT_DATA_IDENTITY=
+++ FM_PR_POLL_SNAPSHOT_CHECK_IDENTITY=
+++ FM_PR_POLL_SNAPSHOT_REG_HASH=
+++ FM_PR_POLL_SNAPSHOT_REG_IDENTITY=
+++ FM_PR_RETIRE_ID=
+++ FM_PR_RETIRE_PROVIDER=
+++ FM_PR_RETIRE_URL=
+++ FM_PR_RETIRE_HOST=
+++ FM_PR_RETIRE_PATH=
+++ FM_PR_RETIRE_NUMBER=
+++ FM_PR_RETIRE_DATA_HASH=
+++ FM_PR_RETIRE_TEMPLATE_HASH=
+++ FM_PR_RETIRE_DATA_IDENTITY=
+++ FM_PR_RETIRE_CHECK_IDENTITY=
+++ FM_PR_RETIRE_REG_HASH=
+++ FM_PR_RETIRE_REG_IDENTITY=
+++ FM_PR_RETIRE_RECEIPT_HASH=
+++ FM_PR_RETIRE_RECEIPT_IDENTITY=
+++ FM_PR_POLL_RETIREMENT_REJECTED=
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-procevent-lib.sh
+++ FM_PROCEVENT_OWNER_LEASE_DEFAULT_SECONDS=600
+++ FM_PROCEVENT_OWNER_LEASE_MIN_SECONDS=1
+++ FM_PROCEVENT_OWNER_LEASE_MAX_SECONDS=86400
+++ FM_PROCEVENT_OWNER_CHECK_DEFAULT_SECONDS=15
+++ FM_PROCEVENT_OWNER_CHECK_MIN_SECONDS=1
+++ FM_PROCEVENT_OWNER_CHECK_MAX_SECONDS=3600
+++ FM_PROCEVENT_LAUNCH_FLOOR_DEFAULT_SECONDS=1
+++ FM_PROCEVENT_LAUNCH_FLOOR_MIN_SECONDS=1
+++ FM_PROCEVENT_LAUNCH_FLOOR_MAX_SECONDS=3600
+++ FM_PROCEVENT_LAUNCH_CONFIRM_DEFAULT_SECONDS=3
+++ FM_PROCEVENT_LAUNCH_CONFIRM_MIN_SECONDS=1
+++ FM_PROCEVENT_LAUNCH_CONFIRM_MAX_SECONDS=600
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-merge-outcome-lib.sh
+++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-merge-outcome-lib.sh
++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ pwd
+++ _FM_MERGE_OUTCOME_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-pr-lib.sh
++++ FM_PR_PROVIDER=
++++ FM_PR_URL=
++++ FM_PR_HOST=
++++ FM_PR_PATH=
++++ FM_PR_OWNER=
++++ FM_PR_REPO=
++++ FM_PR_NUMBER=
++++ FM_PR_DATA_PROVIDER=
++++ FM_PR_DATA_URL=
++++ FM_PR_DATA_HOST=
++++ FM_PR_DATA_PATH=
++++ FM_PR_DATA_NUMBER=
++++ FM_PR_META_PROVIDER=
++++ FM_PR_META_URL=
++++ FM_PR_META_HOST=
++++ FM_PR_META_PATH=
++++ FM_PR_META_NUMBER=
++++ FM_PR_REG_ID=
++++ FM_PR_REG_PROVIDER=
++++ FM_PR_REG_URL=
++++ FM_PR_REG_HOST=
++++ FM_PR_REG_PATH=
++++ FM_PR_REG_NUMBER=
++++ FM_PR_REG_DATA_HASH=
++++ FM_PR_REG_TEMPLATE_HASH=
++++ FM_PR_REG_DATA_IDENTITY=
++++ FM_PR_REG_CHECK_IDENTITY=
++++ FM_PR_POLL_DATA_TMP=
++++ FM_PR_POLL_CHECK_TMP=
++++ FM_PR_POLL_REG_TMP=
++++ FM_PR_POLL_DATA_DEST=
++++ FM_PR_POLL_CHECK_DEST=
++++ FM_PR_POLL_REG_DEST=
++++ FM_PR_POLL_EXPECT_ID=
++++ FM_PR_POLL_EXPECT_PROVIDER=
++++ FM_PR_POLL_EXPECT_URL=
++++ FM_PR_POLL_EXPECT_HOST=
++++ FM_PR_POLL_EXPECT_PATH=
++++ FM_PR_POLL_EXPECT_NUMBER=
++++ FM_PR_POLL_EXPECT_DATA_HASH=
++++ FM_PR_POLL_EXPECT_TEMPLATE_HASH=
++++ FM_PR_POLL_EXPECT_DATA_IDENTITY=
++++ FM_PR_POLL_EXPECT_CHECK_IDENTITY=
++++ FM_PR_POLL_TEMPLATE=
++++ FM_PR_POLL_STATE_DEVICE=
++++ FM_PR_POLL_SNAPSHOT_ID=
++++ FM_PR_POLL_SNAPSHOT_PROVIDER=
++++ FM_PR_POLL_SNAPSHOT_URL=
++++ FM_PR_POLL_SNAPSHOT_HOST=
++++ FM_PR_POLL_SNAPSHOT_PATH=
++++ FM_PR_POLL_SNAPSHOT_NUMBER=
++++ FM_PR_POLL_SNAPSHOT_DATA_HASH=
++++ FM_PR_POLL_SNAPSHOT_TEMPLATE_HASH=
++++ FM_PR_POLL_SNAPSHOT_DATA_IDENTITY=
++++ FM_PR_POLL_SNAPSHOT_CHECK_IDENTITY=
++++ FM_PR_POLL_SNAPSHOT_REG_HASH=
++++ FM_PR_POLL_SNAPSHOT_REG_IDENTITY=
++++ FM_PR_RETIRE_ID=
++++ FM_PR_RETIRE_PROVIDER=
++++ FM_PR_RETIRE_URL=
++++ FM_PR_RETIRE_HOST=
++++ FM_PR_RETIRE_PATH=
++++ FM_PR_RETIRE_NUMBER=
++++ FM_PR_RETIRE_DATA_HASH=
++++ FM_PR_RETIRE_TEMPLATE_HASH=
++++ FM_PR_RETIRE_DATA_IDENTITY=
++++ FM_PR_RETIRE_CHECK_IDENTITY=
++++ FM_PR_RETIRE_REG_HASH=
++++ FM_PR_RETIRE_REG_IDENTITY=
++++ FM_PR_RETIRE_RECEIPT_HASH=
++++ FM_PR_RETIRE_RECEIPT_IDENTITY=
++++ FM_PR_POLL_RETIREMENT_REJECTED=
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-parent-channel-lib.sh
++++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-parent-channel-lib.sh
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ pwd
++++ _FM_PARENT_CHANNEL_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-secondmate-parent-lib.sh
++++ FM_PARENT_CHANNEL_ID=
++++ FM_PARENT_CHANNEL_ROUTE=
+++ FM_MERGE_OUTCOME_ALREADY_RECORDED=false
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-merge-authority-lib.sh
+++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-merge-authority-lib.sh
++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ pwd
+++ _FM_MERGE_AUTHORITY_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-pr-lib.sh
++++ FM_PR_PROVIDER=
++++ FM_PR_URL=
++++ FM_PR_HOST=
++++ FM_PR_PATH=
++++ FM_PR_OWNER=
++++ FM_PR_REPO=
++++ FM_PR_NUMBER=
++++ FM_PR_DATA_PROVIDER=
++++ FM_PR_DATA_URL=
++++ FM_PR_DATA_HOST=
++++ FM_PR_DATA_PATH=
++++ FM_PR_DATA_NUMBER=
++++ FM_PR_META_PROVIDER=
++++ FM_PR_META_URL=
++++ FM_PR_META_HOST=
++++ FM_PR_META_PATH=
++++ FM_PR_META_NUMBER=
++++ FM_PR_REG_ID=
++++ FM_PR_REG_PROVIDER=
++++ FM_PR_REG_URL=
++++ FM_PR_REG_HOST=
++++ FM_PR_REG_PATH=
++++ FM_PR_REG_NUMBER=
++++ FM_PR_REG_DATA_HASH=
++++ FM_PR_REG_TEMPLATE_HASH=
++++ FM_PR_REG_DATA_IDENTITY=
++++ FM_PR_REG_CHECK_IDENTITY=
++++ FM_PR_POLL_DATA_TMP=
++++ FM_PR_POLL_CHECK_TMP=
++++ FM_PR_POLL_REG_TMP=
++++ FM_PR_POLL_DATA_DEST=
++++ FM_PR_POLL_CHECK_DEST=
++++ FM_PR_POLL_REG_DEST=
++++ FM_PR_POLL_EXPECT_ID=
++++ FM_PR_POLL_EXPECT_PROVIDER=
++++ FM_PR_POLL_EXPECT_URL=
++++ FM_PR_POLL_EXPECT_HOST=
++++ FM_PR_POLL_EXPECT_PATH=
++++ FM_PR_POLL_EXPECT_NUMBER=
++++ FM_PR_POLL_EXPECT_DATA_HASH=
++++ FM_PR_POLL_EXPECT_TEMPLATE_HASH=
++++ FM_PR_POLL_EXPECT_DATA_IDENTITY=
++++ FM_PR_POLL_EXPECT_CHECK_IDENTITY=
++++ FM_PR_POLL_TEMPLATE=
++++ FM_PR_POLL_STATE_DEVICE=
++++ FM_PR_POLL_SNAPSHOT_ID=
++++ FM_PR_POLL_SNAPSHOT_PROVIDER=
++++ FM_PR_POLL_SNAPSHOT_URL=
++++ FM_PR_POLL_SNAPSHOT_HOST=
++++ FM_PR_POLL_SNAPSHOT_PATH=
++++ FM_PR_POLL_SNAPSHOT_NUMBER=
++++ FM_PR_POLL_SNAPSHOT_DATA_HASH=
++++ FM_PR_POLL_SNAPSHOT_TEMPLATE_HASH=
++++ FM_PR_POLL_SNAPSHOT_DATA_IDENTITY=
++++ FM_PR_POLL_SNAPSHOT_CHECK_IDENTITY=
++++ FM_PR_POLL_SNAPSHOT_REG_HASH=
++++ FM_PR_POLL_SNAPSHOT_REG_IDENTITY=
++++ FM_PR_RETIRE_ID=
++++ FM_PR_RETIRE_PROVIDER=
++++ FM_PR_RETIRE_URL=
++++ FM_PR_RETIRE_HOST=
++++ FM_PR_RETIRE_PATH=
++++ FM_PR_RETIRE_NUMBER=
++++ FM_PR_RETIRE_DATA_HASH=
++++ FM_PR_RETIRE_TEMPLATE_HASH=
++++ FM_PR_RETIRE_DATA_IDENTITY=
++++ FM_PR_RETIRE_CHECK_IDENTITY=
++++ FM_PR_RETIRE_REG_HASH=
++++ FM_PR_RETIRE_REG_IDENTITY=
++++ FM_PR_RETIRE_RECEIPT_HASH=
++++ FM_PR_RETIRE_RECEIPT_IDENTITY=
++++ FM_PR_POLL_RETIREMENT_REJECTED=
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-afk-contract.sh
++++ set -u
++++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-afk-contract.sh
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ pwd
++++ FM_AFK_CONTRACT_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ FM_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q
++++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home
++++ FM_AFK_CONTRACT_STATE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
++++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-classify-lib.sh
+++++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-classify-lib.sh
++++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++++ pwd
+++++ _FM_CLASSIFY_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ FM_CREW_STATE_BIN=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-crew-state.sh
+++++ case $- in
+++++ _fm_classify_nounset=on
+++++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-timeout-lib.sh
++++++ set -u
+++++ '[' on = on ']'
+++++ unset _fm_classify_nounset
+++++ FM_CLASSIFY_CAPTAIN_RE_DEFAULT='done:|needs-decision:|blocked:|failed:|PR ready|checks green|ready in branch|merged'
+++++ FM_CLASSIFY_PAUSED_VERB_DEFAULT=paused
+++++ FM_PAUSE_RESURFACE_SECS_DEFAULT=14400
+++++ FM_CLASSIFY_RESOLVE_VERB_DEFAULT=resolved
+++++ FM_CLASSIFY_CAPTAIN_HELD_VERB_DEFAULT=captain-held
+++++ FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT=pending-reply-
+++++ FM_OPEN_DECISIONS_FOLD_VERSION=5
+++++ FM_STATUS_SNAPSHOT_EVENT_LINE=
+++++ FM_STATUS_SNAPSHOT_EVENT_MTIME=
+++++ FM_STATUS_SNAPSHOT_EVENT_ENDPOINT=
+++++ STATUS_PRESENTATION_REPORTED=
+++++ STATUS_PRESENTATION_CLASSIFIED=
+++++ FM_WORKTREE_WRITE_PRUNE='.git node_modules .venv venv __pycache__ .mypy_cache .pytest_cache .ruff_cache .tox target dist build .next .cache vendor'
+++++ FM_WORKTREE_WRITE_MAXDEPTH=6
+++++ FM_WORKTREE_WRITE_TIMEOUT=10
++++ FM_AFK_CONTRACT_VERSION=1
++++ FM_AFK_CONTRACT_VERBS='merge land prerelease install rerun dispatch abort-run answer discard wake-me'
++++ FM_AFK_CONTRACT_REACH_ANNOUNCED='No phone channel is configured; anything that needs you waits for your return.'
++++ FM_AFK_CONTRACT_SPEND_DEFAULT=4
++++ _FM_AFK_CONTRACT_LOCK_TIMEOUT=120
++++ FM_AFK_CONTRACT_LOCK_HELD=
++++ '[' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-afk-contract.sh = /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh ']'
+++ FM_MERGE_AUTHORITY=
+++ FM_MERGE_AUTHORITY_REASON=
+++ FM_MERGE_AUTHORITY_RECORD_IDENTITY=
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-x-lib.sh
+++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-x-lib.sh
++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ pwd
+++ _FM_X_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++ command -v fm_backlog_atomic_transition
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-tasks-axi-lib.sh
++++ FM_TASKS_AXI_MIN=0.2.4
++++ FM_TASKS_AXI_COMPATIBLE_MEMO=
++++ unset FM_TASKS_AXI_COMPATIBLE
++++ case "$FM_TASKS_AXI_COMPATIBLE_MEMO" in
++++ FM_TASKS_AXI_COMPATIBLE_MEMO=
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-backlog-transition-lib.sh
++++ FM_BACKLOG_TRANSITION_SKIP=
++++ FM_BACKLOG_TRANSITION_ERROR=
++++ FM_BACKLOG_ROW_RESULT=
++++ FM_BACKLOG_ROW_STATE=
++++ FM_BACKLOG_ROW_ERROR=
++++ FM_BACKLOG_ROW_HOLD_KIND=
++++ FM_BACKLOG_CLOSE_REPLAY_RESULT=
++++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-backlog-transition-lib.sh
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ pwd
++++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-timeout-lib.sh
+++++ set -u
++++ FM_BACKLOG_ROW_SHOW_WEDGED=0
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-check-lib.sh
+++ FM_CUSTOM_CHECK_HASH=
+++ FM_CUSTOM_CHECK_SNAPSHOT=
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-pending-reply-lib.sh
+++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-pending-reply-lib.sh
++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ pwd
+++ _FM_PENDING_REPLY_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-marker-lib.sh
++++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-marker-lib.sh
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ pwd
++++ _FM_MARKER_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-operational-input.sh
+++++ FM_OPERATIONAL_MARK=$'�\201�'
+++++ FM_OPERATIONAL_PREFIX='⁣FIRSTMATE_OP: '
+++++ FM_OPERATIONAL_VERSION=v1
+++++ FM_OPERATIONAL_HEADER_PREFIX='⁣FIRSTMATE_OP: v1 '
+++++ FM_OPERATIONAL_KINDS='session-start watcher turn-end-guard away-supervisor launch-brief branch-outcome'
+++++ FM_INJECT_MARK=$'�\201�'
+++++ FM_FROMFIRST_LABEL='[fm-from-firstmate]'
+++++ FM_FROMFIRST_SEPARATOR=$'�\201�'
+++++ FM_FROMFIRST_MARK='[fm-from-firstmate]⁣'
+++++ FM_LEGACY_SESSIONSTART='Run `bin/fm-session-start.sh` now, exactly once, before executing any other instructions.'
+++++ FM_LEGACY_WATCHER_PREFIX='FIRSTMATE WATCHER WAKE: '
+++++ FM_LEGACY_WATCHER_SUFFIX='
+
+Run bin/fm-wake-drain.sh first and handle the queued wake. Watcher continuity is extension-owned.'
+++++ FM_LEGACY_TURNEND_PREFIX='TURN WOULD END BLIND - supervision is off. The watcher cycle is missing, failed, or unhealthy. Follow the harness recovery instruction below before ending the turn.
+
+'
+++++ FM_LEGACY_AWAY_PREFIX='⁣Supervisor escalate ('
+++++ '[' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-operational-input.sh = /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh ']'
++++ unset _FM_MARKER_LIB_DIR
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-backend.sh
++++ FM_BACKEND_SCRIPT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-backend.sh
++++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-backend.sh
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ pwd
++++ FM_BACKEND_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ unset FM_BACKEND_SCRIPT
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/..
+++++ pwd
++++ FM_BACKEND_DEFAULT_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q
++++ FM_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q
++++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home
++++ FM_BACKEND_CONFIG_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/config
++++ FM_BACKEND_KNOWN='tmux herdr zellij orca cmux'
++++ FM_BACKEND_SPAWN='tmux herdr zellij orca cmux'
++++ FM_BACKEND_CMUX_BUNDLE_ID=com.cmuxterm.app
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-tmux-lib.sh
+++++ dirname -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-tmux-lib.sh
++++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-composer-lib.sh
+++++ FM_COMPOSER_UNICODE_SPACES=()
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0302\0205'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0302\0240'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0341\0232\0200'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0200'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0201'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0202'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0203'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0204'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0205'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0206'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0207'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0210'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0211'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0212'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0250'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0251'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0200\0257'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0342\0201\0237'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ for _fm_composer_space_octal in ''\''\0302\0205'\''' ''\''\0302\0240'\''' ''\''\0341\0232\0200'\''' ''\''\0342\0200\0200'\''' ''\''\0342\0200\0201'\''' ''\''\0342\0200\0202'\''' ''\''\0342\0200\0203'\''' ''\''\0342\0200\0204'\''' ''\''\0342\0200\0205'\''' ''\''\0342\0200\0206'\''' ''\''\0342\0200\0207'\''' ''\''\0342\0200\0210'\''' ''\''\0342\0200\0211'\''' ''\''\0342\0200\0212'\''' ''\''\0342\0200\0250'\''' ''\''\0342\0200\0251'\''' ''\''\0342\0200\0257'\''' ''\''\0342\0201\0237'\''' ''\''\0343\0200\0200'\'''
+++++ printf -v _fm_composer_space_utf8 %b '\0343\0200\0200'
+++++ FM_COMPOSER_UNICODE_SPACES+=("$_fm_composer_space_utf8")
+++++ unset -v _fm_composer_space_octal _fm_composer_space_utf8
+++++ FM_DELIVERY_BUSY_REGEX_DEFAULT='esc (to )?interrupt|Working(\.\.\.|…)|Ctrl\+c:cancel|ctrl\+c to stop|esc[[:space:]]+to[[:space:]]+cancel'
+++++ FM_DELIVERY_CLAUDE_BUSY_REGEX_DEFAULT='esc to interrupt|…[[:space:]]+\([0-9]+[smh]'
+++++ FM_DELIVERY_CODEX_BUSY_REGEX_DEFAULT='esc to interrupt'
+++++ FM_DELIVERY_OPENCODE_BUSY_REGEX_DEFAULT='esc interrupt'
+++++ FM_DELIVERY_PI_BUSY_REGEX_DEFAULT='Working\.\.\.'
+++++ FM_OMP_SPINNER_FRAMES_RE='(⠋|⠙|⠹|⠸|⠼|⠴|⠦|⠧|⠇|⠏|⣾|⣽|⣻|⢿|⡿|⣟|⣯|⣷)'
+++++ FM_DELIVERY_OMP_BUSY_REGEX_DEFAULT='Working…|^[[:space:]]*(⠋|⠙|⠹|⠸|⠼|⠴|⠦|⠧|⠇|⠏|⣾|⣽|⣻|⢿|⡿|⣟|⣯|⣷)[[:space:]]+[0-9]+[smh]'
+++++ FM_DELIVERY_GROK_BUSY_REGEX_DEFAULT='Ctrl\+c:cancel'
+++++ FM_DELIVERY_CURSOR_BUSY_REGEX_DEFAULT='ctrl\+c to stop'
+++++ FM_DELIVERY_AGY_BUSY_REGEX_DEFAULT='esc[[:space:]]+to[[:space:]]+cancel'
+++++ FM_DELIVERY_KIMI_BUSY_REGEX_DEFAULT='^[[:space:]]*(🌑|🌒|🌓|🌔|🌕|🌖|🌗|🌘)[[:space:]]+·[[:space:]]+'
++++++ printf '%s\n' $'�\235�' $'�\200�' $'�\237�' $'�\206\222'
+++++ FM_COMPOSER_AGENT_PROMPT_GLYPHS='❯
+›
+⟩
+→'
++++++ printf '%s\n' '>' '$' % '#'
+++++ FM_COMPOSER_SHELL_PROMPT_GLYPHS='>
+$
+%
+#'
+++++ FM_COMPOSER_IDLE_RE_DEFAULT='^Type a message\.\.\.$|^Ask anything\.\.\.|^Plan, search, build anything$|^Add a follow-up$'
+++++ FM_COMPOSER_LEFTBAR_FOOTER_RE_DEFAULT='^(Build|Plan)[[:space:]]+·[[:space:]]+'
+++++ FM_COMPOSER_OMP_STATUS_RE_DEFAULT='^[[:space:]]*(π|󰵗)[[:space:]]+·[[:space:]]|^[[:space:]]*(⠋|⠙|⠹|⠸|⠼|⠴|⠦|⠧|⠇|⠏|⣾|⣽|⣻|⢿|⡿|⣟|⣯|⣷)[[:space:]]+[0-9]+[smh]([[:space:]]|$)|[[:space:]]·[[:space:]].*[0-9]+(\.[0-9]+)?%/[0-9]+K'
+++++ FM_COMPOSER_CAPTURE_LINES=20
+++++ FM_COMPOSER_PI_MAX_LINES=8
+++++ dirname -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-tmux-lib.sh
++++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-cursor-lib.sh
+++++ FM_CURSOR_PROBE_TIMEOUT=10
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-classify-lib.sh
++++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-classify-lib.sh
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ pwd
++++ _FM_CLASSIFY_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ FM_CREW_STATE_BIN=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-crew-state.sh
++++ case $- in
++++ _fm_classify_nounset=on
++++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-timeout-lib.sh
+++++ set -u
++++ '[' on = on ']'
++++ unset _fm_classify_nounset
++++ FM_CLASSIFY_CAPTAIN_RE_DEFAULT='done:|needs-decision:|blocked:|failed:|PR ready|checks green|ready in branch|merged'
++++ FM_CLASSIFY_PAUSED_VERB_DEFAULT=paused
++++ FM_PAUSE_RESURFACE_SECS_DEFAULT=14400
++++ FM_CLASSIFY_RESOLVE_VERB_DEFAULT=resolved
++++ FM_CLASSIFY_CAPTAIN_HELD_VERB_DEFAULT=captain-held
++++ FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT=pending-reply-
++++ FM_OPEN_DECISIONS_FOLD_VERSION=5
++++ FM_STATUS_SNAPSHOT_EVENT_LINE=
++++ FM_STATUS_SNAPSHOT_EVENT_MTIME=
++++ FM_STATUS_SNAPSHOT_EVENT_ENDPOINT=
++++ STATUS_PRESENTATION_REPORTED=
++++ STATUS_PRESENTATION_CLASSIFIED=
++++ FM_WORKTREE_WRITE_PRUNE='.git node_modules .venv venv __pycache__ .mypy_cache .pytest_cache .ruff_cache .tox target dist build .next .cache vendor'
++++ FM_WORKTREE_WRITE_MAXDEPTH=6
++++ FM_WORKTREE_WRITE_TIMEOUT=10
+++ FM_PENDING_REPLY_SCHEMA=fm-pending-reply.v1
+++ FM_PENDING_REPLY_CORR_RE='corr=[A-Fa-f0-9]{16}'
+++ FM_PENDING_REPLY_GRACE_DEFAULT=120
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-busy-lib.sh
+++ FM_BUSY_LIB_VERSION=v1
+++ FM_BUSY_KIMI_VERIFIED_VERSIONS=
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-task-inbox-lib.sh
+++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-task-inbox-lib.sh
++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ pwd
+++ _FM_TASK_INBOX_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-wake-lib.sh
++++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-wake-lib.sh
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ pwd
++++ FM_WAKE_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/..
+++++ pwd
++++ FM_WAKE_DEFAULT_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q
++++ FM_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q
++++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home
++++ STATE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
++++ FM_WAKE_QUEUE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.wake-queue
++++ FM_WAKE_QUEUE_LOCK=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.wake-queue.lock
++++ FM_LOCK_STALE_AFTER=2
+++++ uname
++++ _FM_UNAME=Darwin
++++ mkdir -p /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
++++ FM_WATCHER_MATCHED_IDENTITY=
++++ FM_WATCHER_HEALTHY_PID=
++++ FM_WATCHER_HEALTHY_IDENTITY=
++++ FM_WATCHER_VERDICT_OK=false
++++ FM_WATCHER_VERDICT_REASON=stale-beacon
++++ FM_RECOVERY_MARKER_TOKEN=
++++ FM_RECOVERY_MARKER_ACTION=none
++++ FM_RECOVERY_MARKER_LOCK_TIMEOUT=
++++ FM_WAKE_STATUS_KEY=
++++ FM_WAKE_STATUS_HISTORICAL=false
++++ FM_WAKE_EVENT_LINE=
++++ FM_WAKE_UNREAD_LINES=
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-backend.sh
++++ FM_BACKEND_SCRIPT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-backend.sh
++++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-backend.sh
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ pwd
++++ FM_BACKEND_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ unset FM_BACKEND_SCRIPT
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/..
+++++ pwd
++++ FM_BACKEND_DEFAULT_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q
++++ FM_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q
++++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home
++++ FM_BACKEND_CONFIG_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/config
++++ FM_BACKEND_KNOWN='tmux herdr zellij orca cmux'
++++ FM_BACKEND_SPAWN='tmux herdr zellij orca cmux'
++++ FM_BACKEND_CMUX_BUNDLE_ID=com.cmuxterm.app
+++ FM_TASK_INBOX_SCHEMA=fm-task-inbox.v1
+++ FM_TASK_INBOX_GRACE_DEFAULT=90
+++ FM_TASK_INBOX_RING_MAX_DEFAULT=3
+++ FM_TASK_INBOX_LOCK_WAIT_DEFAULT=5
++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-afk-contract.sh
+++ set -u
+++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-afk-contract.sh
++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ pwd
+++ FM_AFK_CONTRACT_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++ FM_ROOT=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q
+++ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home
+++ FM_AFK_CONTRACT_STATE=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
+++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-classify-lib.sh
++++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-classify-lib.sh
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
+++++ pwd
++++ _FM_CLASSIFY_LIB_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin
++++ FM_CREW_STATE_BIN=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-crew-state.sh
++++ case $- in
++++ _fm_classify_nounset=on
++++ . /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-timeout-lib.sh
+++++ set -u
++++ '[' on = on ']'
++++ unset _fm_classify_nounset
++++ FM_CLASSIFY_CAPTAIN_RE_DEFAULT='done:|needs-decision:|blocked:|failed:|PR ready|checks green|ready in branch|merged'
++++ FM_CLASSIFY_PAUSED_VERB_DEFAULT=paused
++++ FM_PAUSE_RESURFACE_SECS_DEFAULT=14400
++++ FM_CLASSIFY_RESOLVE_VERB_DEFAULT=resolved
++++ FM_CLASSIFY_CAPTAIN_HELD_VERB_DEFAULT=captain-held
++++ FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT=pending-reply-
++++ FM_OPEN_DECISIONS_FOLD_VERSION=5
++++ FM_STATUS_SNAPSHOT_EVENT_LINE=
++++ FM_STATUS_SNAPSHOT_EVENT_MTIME=
++++ FM_STATUS_SNAPSHOT_EVENT_ENDPOINT=
++++ STATUS_PRESENTATION_REPORTED=
++++ STATUS_PRESENTATION_CLASSIFIED=
++++ FM_WORKTREE_WRITE_PRUNE='.git node_modules .venv venv __pycache__ .mypy_cache .pytest_cache .ruff_cache .tox target dist build .next .cache vendor'
++++ FM_WORKTREE_WRITE_MAXDEPTH=6
++++ FM_WORKTREE_WRITE_TIMEOUT=10
+++ FM_AFK_CONTRACT_VERSION=1
+++ FM_AFK_CONTRACT_VERBS='merge land prerelease install rerun dispatch abort-run answer discard wake-me'
+++ FM_AFK_CONTRACT_REACH_ANNOUNCED='No phone channel is configured; anything that needs you waits for your return.'
+++ FM_AFK_CONTRACT_SPEND_DEFAULT=4
+++ _FM_AFK_CONTRACT_LOCK_TIMEOUT=120
+++ FM_AFK_CONTRACT_LOCK_HELD=
+++ '[' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-afk-contract.sh = /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh ']'
++ WATCH_LOCK=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock
++ WATCH_PATH=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh
++ WATCHER_DOWNTIME_MARKER=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down
+++ uname
++ '[' Darwin = Darwin ']'
++ POLL=0.02
+++ fm_poll_derived_grace 0.02
+++ local poll=0.02 margin=60 derived
+++ case "$poll" in
+++ poll=15
+++ derived=75
+++ '[' 75 -ge 300 ']'
+++ derived=300
+++ printf '%s\n' 300
++ WATCHER_STALE_GRACE=300
++ HEARTBEAT=999999
++ HEARTBEAT_MAX=7200
++ CHECK_INTERVAL=0
++ CHECK_TIMEOUT=1
++ HOME_SUMMARY_INTERVAL=300
++ case "$HOME_SUMMARY_INTERVAL" in
++ SIGNAL_GRACE=0
++ WATCHER_SHUTDOWN_LOCK_SECS=5
++ TURNEND_CHURN_ABSORB_SECS=900
++ STALE_ESCALATE_SECS=240
++ BUSY_TURN_MAX_SECS=3600
++ SECONDMATE_WAKE_STALL_SECS=
++ case "$SECONDMATE_WAKE_STALL_SECS" in
++ SECONDMATE_WAKE_STALL_SECS=180
++ PAUSE_RESURFACE_SECS=14400
++ EVENT_CAP_FAIL_MAX=3
++ _event_cap_key=
++ _event_cap_ok=0
++ _event_cap_fails=0
++ FM_WEDGE_DEMAND_INSPECT_COUNT=3
++ STALE_WAIT_DECLARATION=
++ CAPTAIN_CALL_IDENTITY=
++ FM_ACTIVE_CHECK_PID=
++ FM_ACTIVE_CHECK_PGID=
++ FM_CHECK_OUTPUT=
++ FM_CHECK_RESULT=
++ FM_CHECK_SIGNAL_PENDING=
++ '[' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh '!=' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh ']'
++ fm_procevent_launch_confirm_seconds
++ local value=
++ '[' -z '' ']'
++ printf '%s\n' 3
++ return 0
++ fm_lock_try_acquire /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock
++ local lockdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock pid steal cur rc steal_owner primary_owner current
++ FM_LOCK_HELD_PID=
++ FM_LOCK_OWNER_DIR=
++ FM_LOCK_RECOVERED_PID=
++ fm_lock_try_create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock
++ local lockdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock allowed_steal_owner= ownerdir
++ FM_LOCK_OWNER_DIR=
+++ fm_lock_owner_dir /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock
+++ local lockdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock lock_abs
++++ fm_lock_abs_path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock
++++ local path=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock dir base
+++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock
++++ dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
+++++ basename /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock
++++ base=.watch.lock
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
+++++ pwd -P
++++ dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
++++ printf '%s/%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state .watch.lock
+++ lock_abs=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock
+++ mktemp -d /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.XXXXXX
++ ownerdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP
++ '[' -e /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock ']'
++ '[' -L /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock ']'
++ fm_lock_prepare_owner /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP
++ local ownerdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=82933
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 82933
++ printf '%s\n' 82933
+++ cat /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP/pid
++ back=82933
++ '[' 82933 = 82933 ']'
++ ln -s /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock
++ fm_lock_points_to_owner /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP
++ local lockdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock ownerdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP actual
+++ readlink /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock
++ actual=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP
++ '[' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP = /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP ']'
++ fm_lock_claim /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP ''
++ local lockdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock ownerdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP allowed_steal_owner= mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=82933
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 82933
+++ cat /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP/pid
++ back=82933
++ '[' 82933 '!=' 82933 ']'
++ fm_lock_points_to_owner /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP
++ local lockdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock ownerdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP actual
+++ readlink /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock
++ actual=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP
++ '[' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP = /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP ']'
++ fm_lock_claim_blocked_by_steal /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock ''
++ local lockdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock allowed_steal_owner= steal
++ steal=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.steal
++ '[' -e /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.steal ']'
++ '[' -L /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.steal ']'
++ return 1
++ return 0
++ FM_LOCK_OWNER_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watch.lock.owner.t0MCrP
++ return 0
++ return 0
++ WATCHER_RECOVERY_PENDING=0
++ '[' -n '' ']'
++ '[' 0 '!=' 1 ']'
++ fm_recovery_marker_reopen_announced /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down
++ fm_recovery_transition /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down reopen-announced
++ local marker=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down action=reopen-announced target= value=
++ case "$action" in
++ _fm_recovery_marker_reopen_announced /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down
++ local marker=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down lock
++ lock=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock
++ fm_lock_acquire_wait /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock
++ local lockdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock
++ fm_lock_try_acquire /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock
++ local lockdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock pid steal cur rc steal_owner primary_owner current
++ FM_LOCK_HELD_PID=
++ FM_LOCK_OWNER_DIR=
++ FM_LOCK_RECOVERED_PID=
++ fm_lock_try_create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock
++ local lockdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock allowed_steal_owner= ownerdir
++ FM_LOCK_OWNER_DIR=
+++ fm_lock_owner_dir /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock
+++ local lockdir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock lock_abs
++++ fm_lock_abs_path /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock
++++ local path=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock dir base
+++++ dirname /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock
++++ dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
+++++ basename /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock
++++ base=.watcher-down.lock
+++++ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
+++++ pwd -P
++++ dir=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state
++++ printf '%s/%s\n' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state .watcher-down.lock
+++ lock_abs=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock
+++ mktemp -d /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/home/state/.watcher-down.lock.owner.XXXXXX

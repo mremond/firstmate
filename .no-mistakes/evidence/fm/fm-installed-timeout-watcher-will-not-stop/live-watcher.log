@@ -1,0 +1,36 @@
+
+SCENARIO TERM stops the watcher, publishes downtime, and releases the singleton
+normal-stop: running watcher 88659 88648 88648 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh
+normal-stop: TERM -> exit=1, elapsed=0.099s; (pid absent)
+Persisted recovery marker:
+pending:downtime:88880.1789376282.C1TnlN
+FAIL AssertionError()
+
+SCENARIO Held marker lock cannot prevent stop; holder is preserved and the next watcher recovers
+held-marker: running watcher 88914 88648 88648 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh
+Live marker holder 89218 88648 88648 S    sleep 60
+held-marker: TERM -> exit=1, elapsed=5.210s; (pid absent)
+watcher: recovery state could not be persisted within 5s (marker lock held by pid 89218); stopping and retaining stale lock evidence
+Preserved singleton owner=88914; marker holder=89218 still running; ambient 999s values ignored.
+Next watcher exit=0, stdout:
+check: rearm-resurface
+
+SCENARIO Unwritable state makes acquisition return and watcher shutdown reach its deadline
+resource-stop: running watcher 90545 88648 88648 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh
+$ bash -c . "$1"; if fm_lock_owner_dir "$2"; then exit 10; fi; printf "owner-directory failure established uid=%s\n" "$(id -u)"; if fm_lock_try_acquire "$2"; then rc=0; else rc=$?; fi; printf "acquire returned=%s\n" "$rc"; exit "$rc"
+owner-directory failure established uid=501
+acquire returned=1
+exit=1
+resource-stop: TERM -> exit=1, elapsed=4.723s; (pid absent)
+watcher: recovery state could not be persisted within 5s (marker lock held by pid unknown); stopping and retaining stale lock evidence
+State mode=0555; owner creation really failed; acquisition returned; singleton PID evidence retained.
+
+SCENARIO A stealer killed after removal is reclaimed and watcher startup still works
+FAIL AssertionError('readiness condition timed out')
+
+SCENARIO Returned authenticated check descendant is drained by the real fallback timeout path
+registered: state/custom.check.sh
+Direct check returned, recorded descendant: (pid absent)
+returned-descendant: TERM -> exit=1, elapsed=0.277s; (pid absent)
+Descendant after watcher stop: (pid absent)
+Sentinel absent after its scheduled write time; private custom snapshots absent.

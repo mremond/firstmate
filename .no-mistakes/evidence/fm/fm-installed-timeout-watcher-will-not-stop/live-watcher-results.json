@@ -1,0 +1,24 @@
+[
+  {
+    "name": "TERM stops the watcher, publishes downtime, and releases the singleton",
+    "result": "fail",
+    "error": "AssertionError()"
+  },
+  {
+    "name": "Held marker lock cannot prevent stop; holder is preserved and the next watcher recovers",
+    "result": "pass"
+  },
+  {
+    "name": "Unwritable state makes acquisition return and watcher shutdown reach its deadline",
+    "result": "pass"
+  },
+  {
+    "name": "A stealer killed after removal is reclaimed and watcher startup still works",
+    "result": "fail",
+    "error": "AssertionError('readiness condition timed out')"
+  },
+  {
+    "name": "Returned authenticated check descendant is drained by the real fallback timeout path",
+    "result": "pass"
+  }
+]

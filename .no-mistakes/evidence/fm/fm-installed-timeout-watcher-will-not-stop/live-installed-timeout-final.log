@@ -1,0 +1,14 @@
+Target: 1129818ef720b6827ae75eb690957c2c7393d82b
+timeout (GNU coreutils) 9.5
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Padraig Brady.
+registered: state/custom.check.sh
+40424 40285 40424 Ss   bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh
+returned-check-gnu-timeout: direct check returned; recorded descendant pid=41019
+pid=41019: absent from ps
+SIGTERM -> exit=1, elapsed=0.425s, polls=4/150; child state=gone
+descendant gone; no sentinel; private check snapshots/output and singleton lock removed

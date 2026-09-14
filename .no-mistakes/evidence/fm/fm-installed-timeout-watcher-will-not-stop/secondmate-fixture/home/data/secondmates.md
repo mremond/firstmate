@@ -1,0 +1,1 @@
+- domain | scope: test | home: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/tmp/fm-pr-check-security.4xMajC/merged-retirement-secondmate/secondmate-home

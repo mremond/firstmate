@@ -1,0 +1,17 @@
+
+SCENARIO A delivered recovery wake also closes within the deadline while preserving its generation
+$ bash -c . "$1"; fm_recovery_marker_publish "$2" downtime
+exit=0
+Recovery delivery paused on full stdout pipe; live marker holder=98535; marker=announced:downtime:98259.1789376822.slEzwv
+Delivered stdout: check: rearm-resurface
+exit=0; cleanup elapsed=4.688s
+watcher: recovery state could not be persisted within 5s (marker lock held by pid 98535); stopping and retaining stale lock evidence
+Existing announced recovery generation and stale singleton preserved; holder remains live.
+
+SCENARIO Ordinary publication remains blocking and interrupted same-process ownership can be reclaimed
+Ordinary marker publisher still waiting after 6.2s, despite ambient timeout=1.
+published after holder released
+pending:downtime:231.1789376834.Pb97Gw
+$ bash -c . "$1"; fm_lock_try_acquire "$2"; first=$FM_LOCK_OWNER_DIR; fm_lock_try_acquire "$2"; printf "self-held reclaim first=%s next=%s pid=%s\n" "$first" "$FM_LOCK_OWNER_DIR" "$(cat "$2/pid")"; fm_lock_release "$2"
+self-held reclaim first=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.test-phase/live-existing/ordinary-marker/state/.self.lock.owner.7rMpqj next=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.test-phase/live-existing/ordinary-marker/state/.self.lock.owner.gOxWxI pid=349
+exit=0

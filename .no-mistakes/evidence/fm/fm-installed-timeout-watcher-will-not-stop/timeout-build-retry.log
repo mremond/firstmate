@@ -1,0 +1,919 @@
+  GEN      lib/alloca.h
+  GEN      lib/arpa/inet.h
+  GEN      lib/assert.h
+  GEN      lib/byteswap.h
+  GEN      lib/configmake.h
+  GEN      lib/ctype.h
+  GEN      lib/dirent.h
+  GEN      lib/error.h
+  GEN      lib/fcntl.h
+  GEN      lib/fnmatch.h
+  GEN      lib/getopt.h
+  GEN      lib/getopt-cdefs.h
+  GEN      lib/malloc/dynarray.gl.h
+  GEN      lib/malloc/dynarray-skeleton.gl.h
+  GEN      lib/malloc/scratch_buffer.gl.h
+  GEN      lib/iconv.h
+  GEN      lib/inttypes.h
+  GEN      lib/langinfo.h
+mkdir -p 'lib'
+echo '#include "mini-gmp.h"' > lib/gmp.h-t
+mv lib/gmp.h-t lib/gmp.h
+  GEN      lib/limits.h
+  GEN      lib/locale.h
+  GEN      lib/math.h
+  GEN      lib/netdb.h
+  GEN      lib/obstack.h
+  GEN      lib/pthread.h
+  GEN      lib/sched.h
+  GEN      lib/selinux/selinux.h
+  GEN      lib/selinux/context.h
+  GEN      lib/selinux/label.h
+  GEN      lib/signal.h
+  GEN      lib/stddef.h
+  GEN      lib/stdint.h
+  GEN      lib/stdio.h
+  GEN      lib/stdlib.h
+  GEN      lib/string.h
+  GEN      lib/sys/ioctl.h
+  GEN      lib/sys/random.h
+  GEN      lib/sys/resource.h
+  GEN      lib/sys/select.h
+  GEN      lib/sys/socket.h
+  GEN      lib/sys/stat.h
+  GEN      lib/sys/time.h
+  GEN      lib/sys/types.h
+  GEN      lib/sys/uio.h
+  GEN      lib/sys/utsname.h
+  GEN      lib/sys/wait.h
+  GEN      lib/termios.h
+  GEN      lib/time.h
+  GEN      lib/uchar.h
+  GEN      lib/unicase.h
+  GEN      lib/unictype.h
+  GEN      lib/uninorm.h
+  GEN      lib/unistd.h
+  GEN      lib/unistr.h
+  GEN      lib/unitypes.h
+  GEN      lib/uniwidth.h
+  GEN      lib/utime.h
+  GEN      lib/wchar.h
+  GEN      lib/wctype.h
+  GEN      src/coreutils.h
+  GEN      src/version.h
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
+Making all in po
+make[2]: Nothing to be done for `all'.
+Making all in .
+  CC       src/chroot.o
+  CC       src/version.o
+  CC       lib/libcoreutils_a-copy-acl.o
+  CC       lib/libcoreutils_a-set-acl.o
+  CC       lib/libcoreutils_a-acl-errno-valid.o
+  CC       lib/libcoreutils_a-acl-internal.o
+  CC       lib/libcoreutils_a-get-permissions.o
+  CC       lib/libcoreutils_a-set-permissions.o
+  CC       lib/libcoreutils_a-alignalloc.o
+  CC       lib/libcoreutils_a-allocator.o
+  CC       lib/libcoreutils_a-areadlink.o
+  CC       lib/libcoreutils_a-areadlink-with-size.o
+  CC       lib/libcoreutils_a-areadlinkat.o
+  CC       lib/libcoreutils_a-areadlinkat-with-size.o
+  CC       lib/libcoreutils_a-argmatch.o
+  CC       lib/libcoreutils_a-argv-iter.o
+  CC       lib/libcoreutils_a-openat-proc.o
+  CC       lib/libcoreutils_a-backupfile.o
+  CC       lib/libcoreutils_a-backup-rename.o
+  CC       lib/libcoreutils_a-backup-find.o
+  CC       lib/libcoreutils_a-base32.o
+  CC       lib/libcoreutils_a-base64.o
+  CC       lib/libcoreutils_a-basename-lgpl.o
+  CC       lib/libcoreutils_a-binary-io.o
+  CC       lib/libcoreutils_a-bitrotate.o
+  CC       lib/libcoreutils_a-btoc32.o
+  CC       lib/libcoreutils_a-buffer-lcm.o
+  CC       lib/libcoreutils_a-c-ctype.o
+  CC       lib/libcoreutils_a-c-file-type.o
+  CC       lib/libcoreutils_a-c-strcasecmp.o
+  CC       lib/libcoreutils_a-c-strncasecmp.o
+  CC       lib/libcoreutils_a-c-strtod.o
+  CC       lib/libcoreutils_a-c-strtold.o
+  CC       lib/libcoreutils_a-c32_apply_type_test.o
+  CC       lib/libcoreutils_a-c32_get_type_test.o
+  CC       lib/libcoreutils_a-c32isalnum.o
+  CC       lib/libcoreutils_a-c32isalpha.o
+  CC       lib/libcoreutils_a-c32isblank.o
+  CC       lib/libcoreutils_a-c32iscntrl.o
+  CC       lib/libcoreutils_a-c32isdigit.o
+  CC       lib/libcoreutils_a-c32isgraph.o
+  CC       lib/libcoreutils_a-c32islower.o
+  CC       lib/libcoreutils_a-c32isprint.o
+  CC       lib/libcoreutils_a-c32ispunct.o
+  CC       lib/libcoreutils_a-c32isspace.o
+  CC       lib/libcoreutils_a-c32isupper.o
+  CC       lib/libcoreutils_a-c32isxdigit.o
+  CC       lib/libcoreutils_a-c32tolower.o
+  CC       lib/libcoreutils_a-c32width.o
+  CC       lib/libcoreutils_a-canon-host.o
+  CC       lib/libcoreutils_a-canonicalize.o
+  CC       lib/libcoreutils_a-careadlinkat.o
+  CC       lib/libcoreutils_a-chdir-long.o
+  CC       lib/libcoreutils_a-chmodat.o
+  CC       lib/libcoreutils_a-chownat.o
+  CC       lib/libcoreutils_a-cl-strtod.o
+  CC       lib/libcoreutils_a-cl-strtold.o
+  CC       lib/libcoreutils_a-cloexec.o
+  CC       lib/libcoreutils_a-close-stream.o
+  CC       lib/libcoreutils_a-closein.o
+  CC       lib/libcoreutils_a-closeout.o
+  CC       lib/libcoreutils_a-copy-file-range.o
+  CC       lib/libcoreutils_a-count-leading-zeros.o
+  CC       lib/libcoreutils_a-af_alg.o
+  CC       lib/libcoreutils_a-md5-stream.o
+  CC       lib/libcoreutils_a-md5.o
+  CC       lib/libcoreutils_a-sha1-stream.o
+  CC       lib/libcoreutils_a-sha1.o
+  CC       lib/libcoreutils_a-sha256-stream.o
+  CC       lib/libcoreutils_a-sha256.o
+  CC       lib/libcoreutils_a-sha512-stream.o
+  CC       lib/libcoreutils_a-sha512.o
+  CC       lib/libcoreutils_a-sm3-stream.o
+  CC       lib/libcoreutils_a-sm3.o
+  CC       lib/libcoreutils_a-cycle-check.o
+  CC       lib/libcoreutils_a-di-set.o
+  CC       lib/libcoreutils_a-opendir-safer.o
+  CC       lib/libcoreutils_a-dirname.o
+  CC       lib/libcoreutils_a-basename.o
+  CC       lib/libcoreutils_a-dirname-lgpl.o
+  CC       lib/libcoreutils_a-stripslash.o
+  CC       lib/libcoreutils_a-dtoastr.o
+  CC       lib/libcoreutils_a-dtotimespec.o
+  CC       lib/libcoreutils_a-euidaccess.o
+  CC       lib/libcoreutils_a-error.o
+  CC       lib/libcoreutils_a-exclude.o
+  CC       lib/libcoreutils_a-exitfail.o
+  CC       lib/libcoreutils_a-explicit_bzero.o
+  CC       lib/libcoreutils_a-fadvise.o
+  CC       lib/libcoreutils_a-fclose.o
+  CC       lib/libcoreutils_a-creat-safer.o
+  CC       lib/libcoreutils_a-open-safer.o
+  CC       lib/libcoreutils_a-fd-hook.o
+  CC       lib/libcoreutils_a-fd-reopen.o
+  CC       lib/libcoreutils_a-fd-safer-flag.o
+  CC       lib/libcoreutils_a-dup-safer-flag.o
+  CC       lib/libcoreutils_a-fdutimensat.o
+  CC       lib/libcoreutils_a-fflush.o
+  CC       lib/libcoreutils_a-file-has-acl.o
+  CC       lib/libcoreutils_a-file-set.o
+  CC       lib/libcoreutils_a-file-type.o
+  CC       lib/libcoreutils_a-filemode.o
+  CC       lib/libcoreutils_a-filenamecat.o
+  CC       lib/libcoreutils_a-filenamecat-lgpl.o
+  CC       lib/libcoreutils_a-filevercmp.o
+  CC       lib/libcoreutils_a-fopen-safer.o
+  CC       lib/libcoreutils_a-fpending.o
+  CC       lib/libcoreutils_a-fprintftime.o
+  CC       lib/libcoreutils_a-fpurge.o
+  CC       lib/libcoreutils_a-freadahead.o
+  CC       lib/libcoreutils_a-freading.o
+  CC       lib/libcoreutils_a-freadptr.o
+  CC       lib/libcoreutils_a-freadseek.o
+  CC       lib/libcoreutils_a-free.o
+  CC       lib/libcoreutils_a-freopen-safer.o
+  CC       lib/libcoreutils_a-fseek.o
+  CC       lib/libcoreutils_a-fseeko.o
+  CC       lib/libcoreutils_a-fseterr.o
+  CC       lib/libcoreutils_a-fstat.o
+  CC       lib/libcoreutils_a-fstatat.o
+  CC       lib/libcoreutils_a-fsusage.o
+  CC       lib/libcoreutils_a-ftoastr.o
+  CC       lib/libcoreutils_a-fts.o
+  CC       lib/libcoreutils_a-full-read.o
+  CC       lib/libcoreutils_a-full-write.o
+  CC       lib/libcoreutils_a-futimens.o
+  CC       lib/libcoreutils_a-getdelim.o
+  CC       lib/libcoreutils_a-getgroups.o
+  CC       lib/libcoreutils_a-gethrxtime.o
+  CC       lib/libcoreutils_a-xtime.o
+  CC       lib/libcoreutils_a-getndelim2.o
+  CC       lib/libcoreutils_a-getopt.o
+  CC       lib/libcoreutils_a-getopt1.o
+  CC       lib/libcoreutils_a-getrandom.o
+  CC       lib/libcoreutils_a-gettime.o
+  CC       lib/libcoreutils_a-gettime-res.o
+  CC       lib/libcoreutils_a-getugroups.o
+  CC       lib/malloc/libcoreutils_a-dynarray_at_failure.o
+  CC       lib/malloc/libcoreutils_a-dynarray_emplace_enlarge.o
+  CC       lib/malloc/libcoreutils_a-dynarray_finalize.o
+  CC       lib/malloc/libcoreutils_a-dynarray_resize.o
+  CC       lib/malloc/libcoreutils_a-dynarray_resize_clear.o
+  CC       lib/malloc/libcoreutils_a-scratch_buffer_grow.o
+  CC       lib/malloc/libcoreutils_a-scratch_buffer_grow_preserve.o
+  CC       lib/malloc/libcoreutils_a-scratch_buffer_set_array_size.o
+  CC       lib/libcoreutils_a-hard-locale.o
+  CC       lib/libcoreutils_a-hash.o
+  CC       lib/libcoreutils_a-hash-pjw.o
+  CC       lib/libcoreutils_a-hash-triple.o
+  CC       lib/libcoreutils_a-hash-triple-simple.o
+  CC       lib/libcoreutils_a-heap.o
+  CC       lib/libcoreutils_a-human.o
+  CC       lib/libcoreutils_a-i-ring.o
+  CC       lib/libcoreutils_a-ialloc.o
+  CC       lib/libcoreutils_a-idcache.o
+  CC       lib/libcoreutils_a-ino-map.o
+  CC       lib/libcoreutils_a-imaxtostr.o
+  CC       lib/libcoreutils_a-inttostr.o
+  CC       lib/libcoreutils_a-offtostr.o
+  CC       lib/libcoreutils_a-uinttostr.o
+  CC       lib/libcoreutils_a-umaxtostr.o
+  CC       lib/libcoreutils_a-isapipe.o
+  CC       lib/libcoreutils_a-ldtoastr.o
+  CC       lib/libcoreutils_a-mini-gmp-gnulib.o
+  CC       lib/libcoreutils_a-linebuffer.o
+  CC       lib/libcoreutils_a-localcharset.o
+  CC       lib/libcoreutils_a-long-options.o
+  CC       lib/libcoreutils_a-lstat.o
+  CC       lib/libcoreutils_a-malloca.o
+  CC       lib/libcoreutils_a-math.o
+  CC       lib/libcoreutils_a-mbrtoc32.o
+  CC       lib/libcoreutils_a-mbscasecmp.o
+  CC       lib/libcoreutils_a-mbschr.o
+  CC       lib/libcoreutils_a-mbslen.o
+  CC       lib/libcoreutils_a-mbsrtoc32s.o
+  CC       lib/libcoreutils_a-mbswidth.o
+  CC       lib/libcoreutils_a-mbszero.o
+  CC       lib/libcoreutils_a-mcel.o
+  CC       lib/libcoreutils_a-memcasecmp.o
+  CC       lib/libcoreutils_a-memchr2.o
+  CC       lib/libcoreutils_a-memcmp2.o
+  CC       lib/libcoreutils_a-memcoll.o
+  CC       lib/libcoreutils_a-mempcpy.o
+  CC       lib/libcoreutils_a-memrchr.o
+  CC       lib/libcoreutils_a-memset_explicit.o
+  CC       lib/libcoreutils_a-mgetgroups.o
+  CC       lib/libcoreutils_a-mkancesdirs.o
+  CC       lib/libcoreutils_a-dirchownmod.o
+  CC       lib/libcoreutils_a-mkdir-p.o
+  CC       lib/libcoreutils_a-modechange.o
+  CC       lib/libcoreutils_a-mountlist.o
+  CC       lib/libcoreutils_a-mpsort.o
+  CC       lib/libcoreutils_a-nanosleep.o
+  CC       lib/libcoreutils_a-nl_langinfo.o
+  CC       lib/libcoreutils_a-nproc.o
+  CC       lib/libcoreutils_a-nstrftime.o
+  CC       lib/libcoreutils_a-obstack.o
+  CC       lib/libcoreutils_a-openat-die.o
+  CC       lib/libcoreutils_a-openat-safer.o
+  CC       lib/libcoreutils_a-opendirat.o
+  CC       lib/libcoreutils_a-parse-datetime.o
+  CC       lib/libcoreutils_a-physmem.o
+  CC       lib/libcoreutils_a-pipe2.o
+  CC       lib/libcoreutils_a-posixtm.o
+  CC       lib/libcoreutils_a-posixver.o
+  CC       lib/libcoreutils_a-printf-frexp.o
+  CC       lib/libcoreutils_a-printf-frexpl.o
+  CC       lib/libcoreutils_a-priv-set.o
+  CC       lib/libcoreutils_a-progname.o
+  CC       lib/libcoreutils_a-propername-lite.o
+  CC       lib/libcoreutils_a-pthread-mutex.o
+  CC       lib/libcoreutils_a-pthread_mutex_timedlock.o
+  CC       lib/libcoreutils_a-putenv.o
+  CC       lib/libcoreutils_a-qcopy-acl.o
+  CC       lib/libcoreutils_a-qset-acl.o
+  CC       lib/libcoreutils_a-qsort_r.o
+  CC       lib/libcoreutils_a-quotearg.o
+  CC       lib/libcoreutils_a-randint.o
+  CC       lib/libcoreutils_a-randperm.o
+  CC       lib/libcoreutils_a-randread.o
+  CC       lib/libcoreutils_a-rand-isaac.o
+  CC       lib/libcoreutils_a-rawmemchr.o
+  CC       lib/libcoreutils_a-read-file.o
+  CC       lib/libcoreutils_a-readtokens.o
+  CC       lib/libcoreutils_a-readtokens0.o
+  CC       lib/libcoreutils_a-readutmp.o
+  CC       lib/libcoreutils_a-reallocarray.o
+  CC       lib/libcoreutils_a-regex.o
+  CC       lib/libcoreutils_a-renameatu.o
+  CC       lib/libcoreutils_a-root-dev-ino.o
+  CC       lib/libcoreutils_a-safe-read.o
+  CC       lib/libcoreutils_a-safe-write.o
+  CC       lib/libcoreutils_a-same.o
+  CC       lib/libcoreutils_a-same-inode.o
+  CC       lib/libcoreutils_a-save-cwd.o
+  CC       lib/libcoreutils_a-savedir.o
+  CC       lib/libcoreutils_a-savewd.o
+  CC       lib/libcoreutils_a-secure_getenv.o
+  CC       lib/libcoreutils_a-selinux-at.o
+  CC       lib/libcoreutils_a-se-context.o
+  CC       lib/libcoreutils_a-se-label.o
+  CC       lib/libcoreutils_a-se-selinux.o
+  CC       lib/libcoreutils_a-setlocale_null.o
+  CC       lib/libcoreutils_a-setlocale-lock.o
+  CC       lib/libcoreutils_a-setlocale_null-unlocked.o
+  CC       lib/libcoreutils_a-settime.o
+  CC       lib/libcoreutils_a-sig2str.o
+  CC       lib/libcoreutils_a-sig-handler.o
+  CC       lib/libcoreutils_a-skipchars.o
+  CC       lib/libcoreutils_a-sockets.o
+  CC       lib/libcoreutils_a-stat-time.o
+  CC       lib/libcoreutils_a-mkstemp-safer.o
+  CC       lib/libcoreutils_a-strerror.o
+  CC       lib/libcoreutils_a-strerror-override.o
+  CC       lib/libcoreutils_a-strnlen1.o
+  CC       lib/libcoreutils_a-strintcmp.o
+  CC       lib/libcoreutils_a-strnumcmp.o
+  CC       lib/libcoreutils_a-strtoll.o
+  CC       lib/libcoreutils_a-strtoull.o
+  CC       lib/libcoreutils_a-sys_socket.o
+  CC       lib/libcoreutils_a-targetdir.o
+  CC       lib/libcoreutils_a-tempname.o
+  CC       lib/glthread/libcoreutils_a-threadlib.o
+  CC       lib/libcoreutils_a-time_rz.o
+  CC       lib/libcoreutils_a-timegm.o
+  CC       lib/libcoreutils_a-timespec.o
+  CC       lib/glthread/libcoreutils_a-tls.o
+  CC       lib/libcoreutils_a-tmpdir.o
+  CC       lib/libcoreutils_a-u64.o
+  CC       lib/libcoreutils_a-unicodeio.o
+  CC       lib/libcoreutils_a-unistd.o
+  CC       lib/libcoreutils_a-dup-safer.o
+  CC       lib/libcoreutils_a-fd-safer.o
+  CC       lib/libcoreutils_a-pipe-safer.o
+  CC       lib/libcoreutils_a-unlinkdir.o
+  CC       lib/libcoreutils_a-userspec.o
+  CC       lib/libcoreutils_a-utimecmp.o
+  CC       lib/libcoreutils_a-utimens.o
+  CC       lib/libcoreutils_a-utimensat.o
+  CC       lib/libcoreutils_a-verror.o
+  CC       lib/libcoreutils_a-version-etc.o
+  CC       lib/libcoreutils_a-version-etc-fsf.o
+  CC       lib/libcoreutils_a-wctype-h.o
+  CC       lib/libcoreutils_a-wmempcpy.o
+  CC       lib/libcoreutils_a-write-any-file.o
+  CC       lib/libcoreutils_a-xalignalloc.o
+  CC       lib/libcoreutils_a-xmalloc.o
+  CC       lib/libcoreutils_a-xalloc-die.o
+  CC       lib/libcoreutils_a-xbinary-io.o
+  CC       lib/libcoreutils_a-xdectoimax.o
+  CC       lib/libcoreutils_a-xdectoumax.o
+  CC       lib/libcoreutils_a-xfts.o
+  CC       lib/libcoreutils_a-xgetgroups.o
+  CC       lib/libcoreutils_a-xgetcwd.o
+  CC       lib/libcoreutils_a-xgethostname.o
+  CC       lib/libcoreutils_a-xmemcoll.o
+  CC       lib/libcoreutils_a-xnanosleep.o
+  CC       lib/libcoreutils_a-xprintf.o
+  CC       lib/libcoreutils_a-xreadlink.o
+  CC       lib/libcoreutils_a-xsize.o
+  CC       lib/libcoreutils_a-xstrtod.o
+  CC       lib/libcoreutils_a-xstrtoimax.o
+  CC       lib/libcoreutils_a-xstrtol.o
+  CC       lib/libcoreutils_a-xstrtoul.o
+  CC       lib/libcoreutils_a-xstrtol-error.o
+  CC       lib/libcoreutils_a-xstrtold.o
+  CC       lib/libcoreutils_a-xstrtoumax.o
+  CC       lib/libcoreutils_a-xvasprintf.o
+  CC       lib/libcoreutils_a-xasprintf.o
+  CC       lib/libcoreutils_a-yesno.o
+  CC       lib/acl_entries.o
+  CC       lib/asnprintf.o
+  CC       lib/asprintf.o
+  CC       lib/fnmatch.o
+  CC       lib/fopen.o
+  CC       lib/mbsrtoc32s-state.o
+  CC       lib/mktime.o
+  CC       lib/printf-args.o
+  CC       lib/printf-parse.o
+  CC       lib/vasnprintf.o
+  CC       lib/vasprintf.o
+  CC       lib/vfprintf.o
+  CC       lib/vprintf.o
+  CC       src/hostid.o
+  CC       src/timeout.o
+  CC       src/operand2sig.o
+  CC       src/nice.o
+  CC       src/who.o
+  CC       src/users.o
+  CC       src/pinky.o
+  CC       src/stty.o
+  CC       src/df.o
+  CC       src/find-mount-point.o
+  CC       src/stdbuf.o
+  CC       src/lbracket.o
+  CC       src/b2sum-digest.o
+  CC       src/base64-basenc.o
+  CC       src/base32-basenc.o
+  CC       src/basenc-basenc.o
+  CC       src/basename.o
+  CC       src/cat.o
+  CC       src/chcon.o
+  CC       src/chown.o
+  CC       src/chown-core.o
+  CC       src/chown-chgrp.o
+  CC       src/chmod.o
+  CC       src/chown-chown.o
+  CC       src/cksum-digest.o
+  CC       src/blake2/cksum-blake2b-ref.o
+  CC       src/blake2/cksum-b2sum.o
+  CC       src/cksum-sum.o
+  CC       src/cksum-cksum.o
+  CC       src/cksum-crctab.o
+  CC       src/comm.o
+  CC       src/cp.o
+  CC       src/copy.o
+  CC       src/cp-hash.o
+  CC       src/force-link.o
+  CC       src/selinux.o
+  CC       src/csplit.o
+  CC       src/cut.o
+  CC       src/set-fields.o
+  CC       src/date.o
+  CC       src/dd.o
+  CC       src/ls.o
+  CC       src/ls-dir.o
+  CC       src/dircolors.o
+  CC       src/dirname.o
+  CC       src/du.o
+  CC       src/echo.o
+  CC       src/env.o
+  CC       src/expand.o
+  CC       src/expand-common.o
+  CC       src/expr.o
+  CC       src/factor.o
+  CC       src/false.o
+  CC       src/fmt.o
+  CC       src/fold.o
+  CC       src/install.o
+  CC       src/prog-fprintf.o
+  CC       src/groups.o
+  CC       src/group-list.o
+  CC       src/head.o
+  CC       src/id.o
+  CC       src/join.o
+  CC       src/kill.o
+  CC       src/link.o
+  CC       src/ln.o
+  CC       src/relpath.o
+  CC       src/logname.o
+  CC       src/ls-ls.o
+  CC       src/md5sum-digest.o
+  CC       src/mkdir.o
+  CC       src/mkfifo.o
+  CC       src/mknod.o
+  CC       src/mktemp.o
+  CC       src/mv.o
+  CC       src/remove.o
+  CC       src/nl.o
+  CC       src/nproc.o
+  CC       src/nohup.o
+  CC       src/numfmt.o
+  CC       src/od.o
+  CC       src/paste.o
+  CC       src/pathchk.o
+  CC       src/pr.o
+  CC       src/printenv.o
+  CC       src/printf.o
+  CC       src/ptx.o
+  CC       src/pwd.o
+  CC       src/readlink.o
+  CC       src/realpath.o
+  CC       src/rm.o
+  CC       src/rmdir.o
+  CC       src/runcon.o
+  CC       src/seq.o
+  CC       src/sha1sum-digest.o
+  CC       src/sha224sum-digest.o
+  CC       src/sha256sum-digest.o
+  CC       src/sha384sum-digest.o
+  CC       src/sha512sum-digest.o
+  CC       src/shred.o
+  CC       src/shuf.o
+  CC       src/sleep.o
+  CC       src/sort.o
+  CC       src/split.o
+  CC       src/temp-stream.o
+  CC       src/stat.o
+  CC       src/sum-sum.o
+  CC       src/sum-digest.o
+  CC       src/sync.o
+  CC       src/tac.o
+  CC       src/tail.o
+  CC       src/iopoll.o
+  CC       src/tee.o
+  CC       src/test.o
+  CC       src/touch.o
+  CC       src/tr.o
+  CC       src/true.o
+  CC       src/truncate.o
+  CC       src/tsort.o
+  CC       src/tty.o
+  CC       src/uname.o
+  CC       src/uname-uname.o
+  CC       src/unexpand.o
+  CC       src/uniq.o
+  CC       src/unlink.o
+  CC       src/uptime.o
+  CC       src/ls-vdir.o
+  CC       src/wc.o
+  CC       src/whoami.o
+  CC       src/yes.o
+  CC       src/getlimits.o
+  CC       src/make-prime-list.o
+  CC       src/libstdbuf_so-libstdbuf.o
+  AR       src/libver.a
+  CC       lib/glthread/libcoreutils_a-lock.o
+  CC       lib/unicase/libcoreutils_a-tolower.o
+  CC       lib/unictype/libcoreutils_a-ctype_alnum.o
+  CC       lib/unictype/libcoreutils_a-ctype_alpha.o
+  CC       lib/unictype/libcoreutils_a-ctype_blank.o
+  CC       lib/unictype/libcoreutils_a-ctype_cntrl.o
+  CC       lib/unictype/libcoreutils_a-ctype_digit.o
+  CC       lib/unictype/libcoreutils_a-ctype_graph.o
+  CC       lib/unictype/libcoreutils_a-ctype_lower.o
+  CC       lib/unictype/libcoreutils_a-ctype_print.o
+  CC       lib/unictype/libcoreutils_a-ctype_punct.o
+  CC       lib/unictype/libcoreutils_a-ctype_space.o
+  CC       lib/unictype/libcoreutils_a-ctype_upper.o
+  CC       lib/unictype/libcoreutils_a-ctype_xdigit.o
+  CC       lib/unistr/libcoreutils_a-u32-chr.o
+  CC       lib/unistr/libcoreutils_a-u32-cpy.o
+  CC       lib/unistr/libcoreutils_a-u32-pcpy.o
+  CC       lib/unistr/libcoreutils_a-u32-strcat.o
+  CC       lib/unistr/libcoreutils_a-u32-strlen.o
+  CC       lib/unistr/libcoreutils_a-u8-mbtoucr.o
+  CC       lib/unistr/libcoreutils_a-u8-uctomb.o
+  CC       lib/unistr/libcoreutils_a-u8-uctomb-aux.o
+  CC       lib/uniwidth/libcoreutils_a-width.o
+  CC       src/blake2/b2sum-blake2b-ref.o
+  CC       src/blake2/b2sum-b2sum.o
+  CCLD     src/make-prime-list
+  CCLD     src/libstdbuf.so
+  AR       lib/libcoreutils.a
+  CCLD     src/chroot
+  CCLD     src/hostid
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/timeout
+  CCLD     src/nice
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/who
+  CCLD     src/users
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/pinky
+  CCLD     src/stty
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/df
+  CCLD     src/stdbuf
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/b2sum
+  CCLD     src/[
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/base64
+  CCLD     src/base32
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/basenc
+  CCLD     src/basename
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/chcon
+  CCLD     src/cat
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/chgrp
+  CCLD     src/chmod
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/chown
+  CCLD     src/cksum
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/cp
+  CCLD     src/comm
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/csplit
+  CCLD     src/cut
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/dd
+  CCLD     src/date
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/dircolors
+  CCLD     src/dir
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/du
+  CCLD     src/dirname
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/echo
+  CCLD     src/env
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/expand
+  CCLD     src/expr
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/factor
+  CCLD     src/false
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/fmt
+  CCLD     src/fold
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/ginstall
+  CCLD     src/groups
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/id
+  CCLD     src/head
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/join
+  CCLD     src/kill
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/link
+  CCLD     src/ln
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/logname
+  CCLD     src/ls
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/md5sum
+  CCLD     src/mkdir
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/mknod
+  CCLD     src/mkfifo
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/mktemp
+  CCLD     src/mv
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/nl
+  CCLD     src/nproc
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/nohup
+  CCLD     src/numfmt
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/od
+  CCLD     src/paste
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/pr
+  CCLD     src/pathchk
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/printenv
+  CCLD     src/printf
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/ptx
+  CCLD     src/pwd
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/readlink
+  CCLD     src/realpath
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/rm
+  CCLD     src/rmdir
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/runcon
+  CCLD     src/seq
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/sha1sum
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/sha224sum
+  CCLD     src/sha256sum
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/sha384sum
+  CCLD     src/sha512sum
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/shred
+  CCLD     src/shuf
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/sleep
+  CCLD     src/sort
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/split
+  CCLD     src/stat
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/sum
+  CCLD     src/sync
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/tail
+  CCLD     src/tac
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/tee
+  CCLD     src/test
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/touch
+  CCLD     src/tr
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/true
+  CCLD     src/truncate
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/tty
+  CCLD     src/tsort
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/uname
+  CCLD     src/unexpand
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/unlink
+  CCLD     src/uniq
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/uptime
+  CCLD     src/vdir
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/wc
+  CCLD     src/whoami
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  CCLD     src/yes
+  CCLD     src/getlimits
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+ld: warning: ignoring duplicate libraries: 'lib/libcoreutils.a'
+  GEN      man/chroot.1
+  GEN      man/hostid.1
+  GEN      man/timeout.1
+  GEN      man/nice.1
+  GEN      man/who.1
+  GEN      man/users.1
+  GEN      man/pinky.1
+  GEN      man/stty.1
+  GEN      man/df.1
+  GEN      man/stdbuf.1
+  GEN      man/b2sum.1
+  GEN      man/base64.1
+  GEN      man/base32.1
+  GEN      man/basenc.1
+  GEN      man/basename.1
+  GEN      man/cat.1
+  GEN      man/chcon.1
+  GEN      man/chgrp.1
+  GEN      man/chmod.1
+  GEN      man/chown.1
+  GEN      man/cksum.1
+  GEN      man/comm.1
+  GEN      man/cp.1
+  GEN      man/csplit.1
+  GEN      man/cut.1
+  GEN      man/date.1
+  GEN      man/dd.1
+  GEN      man/dir.1
+  GEN      man/dircolors.1
+  GEN      man/dirname.1
+  GEN      man/du.1
+  GEN      man/echo.1
+  GEN      man/env.1
+  GEN      man/expand.1
+  GEN      man/expr.1
+  GEN      man/factor.1
+  GEN      man/false.1
+  GEN      man/fmt.1
+  GEN      man/fold.1
+  GEN      man/install.1
+  GEN      man/groups.1
+  GEN      man/head.1
+  GEN      man/id.1
+  GEN      man/join.1
+  GEN      man/kill.1
+  GEN      man/link.1
+  GEN      man/ln.1
+  GEN      man/logname.1
+  GEN      man/ls.1
+  GEN      man/md5sum.1
+  GEN      man/mkdir.1
+  GEN      man/mkfifo.1
+  GEN      man/mknod.1
+  GEN      man/mktemp.1
+  GEN      man/mv.1
+  GEN      man/nl.1
+  GEN      man/nproc.1
+  GEN      man/nohup.1
+  GEN      man/numfmt.1
+  GEN      man/od.1
+  GEN      man/paste.1
+  GEN      man/pathchk.1
+  GEN      man/pr.1
+  GEN      man/printenv.1
+  GEN      man/printf.1
+  GEN      man/ptx.1
+  GEN      man/pwd.1
+  GEN      man/readlink.1
+  GEN      man/realpath.1
+  GEN      man/rm.1
+  GEN      man/rmdir.1
+  GEN      man/runcon.1
+  GEN      man/seq.1
+  GEN      man/sha1sum.1
+  GEN      man/sha224sum.1
+  GEN      man/sha256sum.1
+  GEN      man/sha384sum.1
+  GEN      man/sha512sum.1
+  GEN      man/shred.1
+  GEN      man/shuf.1
+  GEN      man/sleep.1
+  GEN      man/sort.1
+  GEN      man/split.1
+  GEN      man/stat.1
+  GEN      man/sum.1
+  GEN      man/sync.1
+  GEN      man/tac.1
+  GEN      man/tail.1
+  GEN      man/tee.1
+  GEN      man/test.1
+  GEN      man/touch.1
+  GEN      man/tr.1
+  GEN      man/true.1
+  GEN      man/truncate.1
+  GEN      man/tsort.1
+  GEN      man/tty.1
+  GEN      man/uname.1
+  GEN      man/unexpand.1
+  GEN      man/uniq.1
+  GEN      man/unlink.1
+  GEN      man/uptime.1
+  GEN      man/vdir.1
+  GEN      man/wc.1
+  GEN      man/whoami.1
+  GEN      man/yes.1
+Making all in gnulib-tests
+## ---------------------------------------------------- ##
+## ------------------- Gnulib tests ------------------- ##
+## You can ignore compiler warnings in this directory.  ##
+## ---------------------------------------------------- ##
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
+Making all in .
+  CC       bench_md5-bench-md5.o
+  CC       c-strcasestr.o
+  CC       c32rtomb.o
+  CC       c32tob.o
+  CC       localename.o
+  CC       ioctl.o
+  CC       localename-unsafe.o
+  CC       localename-table.o
+  CC       perror.o
+  CC       random.o
+  CC       random_r.o
+  CC       setlocale.o
+  CC       timespec-add.o
+  CC       timespec-sub.o
+  CC       strerror_r.o
+  CC       vma-iter.o
+  CC       bench_sha1-bench-sha1.o
+  CC       bench_sha224-bench-sha224.o
+  CC       bench_sha256-bench-sha256.o
+  CC       bench_sha384-bench-sha384.o
+  CC       bench_sha512-bench-sha512.o
+  CC       locale.o
+  CC       test-localcharset.o
+  CC       glthread/thread.o
+  CC       unistr/u32-set.o
+  AR       libtests.a
+  CCLD     bench-sha1
+  CCLD     bench-md5
+ld: warning: ignoring duplicate libraries: '../lib/libcoreutils.a', 'libtests.a'
+ld: warning: ignoring duplicate libraries: '../lib/libcoreutils.a', 'libtests.a'
+  CCLD     bench-sha224
+  CCLD     bench-sha256
+ld: warning: ignoring duplicate libraries: '../lib/libcoreutils.a', 'libtests.a'
+ld: warning: ignoring duplicate libraries: '../lib/libcoreutils.a', 'libtests.a'
+  CCLD     bench-sha384
+  CCLD     bench-sha512
+ld: warning: ignoring duplicate libraries: '../lib/libcoreutils.a', 'libtests.a'
+ld: warning: ignoring duplicate libraries: '../lib/libcoreutils.a', 'libtests.a'
+  CCLD     current-locale
+  CCLD     test-localcharset
+ld: warning: ignoring duplicate libraries: '../lib/libcoreutils.a', 'libtests.a'
+ld: warning: ignoring duplicate libraries: '../lib/libcoreutils.a', 'libtests.a'

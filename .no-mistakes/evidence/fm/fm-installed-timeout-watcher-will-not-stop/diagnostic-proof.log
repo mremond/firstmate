@@ -1,0 +1,12 @@
+# installed-timeout watcher still live 15s after TERM (150 polls); state below
+# descendant tree (watcher pid 3511; recorded child pid 5572): pid ppid pgid stat wchan args
+ 3511  3218  3218 S    -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.phase-test/diagnostic-mutant/bin/fm-watch.sh
+  16628  3511  3218 S    -      (bash)
+    16630 16628  3218 R    -      (bash)
+      16699 16630  3218 ?    -      (bash)
+ 5572     1  5545 S    -      perl -e $SIG{TERM}="IGNORE"; open my $ready, ">", $ENV{FM_TEST_DESCENDANT_READY} or die $!; print {$ready} "ready\n"; close $ready; my $g=fork; die unless defined $g; if (!$g) { sleep 60; exit 0; } open my $gf, ">", "$ENV{FM_TEST_DESCENDANT_PID}.grandchild" or die $!; print {$gf} "$g\n"; close $gf; select undef, undef, undef, 60; open my $sentinel, ">", $ENV{FM_TEST_DESCENDANT_SENTINEL} or die $!; print {$sentinel} "late\n"; close $sentinel; select undef, undef, undef, 1
+   5578  5572  5545 S    -      perl -e $SIG{TERM}="IGNORE"; open my $ready, ">", $ENV{FM_TEST_DESCENDANT_READY} or die $!; print {$ready} "ready\n"; close $ready; my $g=fork; die unless defined $g; if (!$g) { sleep 60; exit 0; } open my $gf, ">", "$ENV{FM_TEST_DESCENDANT_PID}.grandchild" or die $!; print {$gf} "$g\n"; close $gf; select undef, undef, undef, 60; open my $sentinel, ">", $ENV{FM_TEST_DESCENDANT_SENTINEL} or die $!; print {$sentinel} "late\n"; close $sentinel; select undef, undef, undef, 1
+# installed-timeout watcher stderr tail:
+not ok - installed-timeout watcher did not stop after the direct check returned
+
+Expected mutation RED: exit=1. Diagnostic observed watcher=3511, reparented child=5572 (ppid=1), grandchild=5578 (ppid=5572).

@@ -1,0 +1,20 @@
+Target: 1129818ef720b6827ae75eb690957c2c7393d82b
+timeout (GNU coreutils) 9.5
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Padraig Brady.
+registered: state/custom.check.sh
+79985 77138 79985 Ss   bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M2FG7SEEP1VBZ3B5SX35BJ6Q/live-watcher.py", line 228, in <module>
+    returned_check(fallback=False)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M2FG7SEEP1VBZ3B5SX35BJ6Q/live-watcher.py", line 197, in returned_check
+    ready(lambda: (home / 'direct.done').exists() and (home / 'state/.last-check').exists(), p)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M2FG7SEEP1VBZ3B5SX35BJ6Q/live-watcher.py", line 55, in ready
+    raise AssertionError('readiness deadline expired')
+AssertionError: readiness deadline expired

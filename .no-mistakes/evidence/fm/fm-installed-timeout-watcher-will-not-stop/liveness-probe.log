@@ -1,0 +1,8 @@
+real running pid=72569 observed_state=0 (0=live)
+# is_live_non_zombie: ps reported no state for present pid 72569; UNKNOWN, not live
+present pid=72569, ps unavailable: observed_state=2 (2=unknown)
+# is_live_non_zombie: ps reported no state for present pid 72569; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 72569; UNKNOWN, not live
+# is_live_non_zombie: ps reported no state for present pid 72569; UNKNOWN, not live
+wait_for_exit with ps unavailable: exit=124 elapsed=0s (124=bounded refusal)
+reaped pid=72569, ps unavailable: observed_state=1 (1=gone)

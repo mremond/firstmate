@@ -1,0 +1,48 @@
+Base: b182d0f908b78d08c7ccb8dce3775bdca8c5d657
+Target: 1129818ef720b6827ae75eb690957c2c7393d82b
+Tree: e06d529bbedf433e729aeb03d4442f26e5f2394b
+
+Target: 1129818ef720b6827ae75eb690957c2c7393d82b
+51576 51420 51576 Ss   bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh
+held-marker-publish: real marker lock holder pid=52411; ambient timeout attempts=300s
+SIGTERM pid=51576 -> exit=1, elapsed=4.515s
+watcher: recovery state could not be persisted within 5s (marker lock held by pid 52411); stopping and retaining stale lock evidence
+retained singleton owner=51576; stopped watcher=51576
+58945 51420 58945 Ss   bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh
+held-marker-existing: real marker lock holder pid=59707; ambient timeout attempts=300s
+SIGTERM pid=58945 -> exit=1, elapsed=5.010s
+watcher: recovery state could not be persisted within 5s (marker lock held by pid 59707); stopping and retaining stale lock evidence
+retained singleton owner=58945; stopped watcher=58945
+62084 51420 62084 Ss   bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh
+owner directory creation: genuinely denied
+real acquisition returned rc=1
+primitive returned after 0.041s; state mode=0500; uid=501
+SIGTERM pid=62084 -> exit=1, elapsed=4.585s
+watcher: recovery state could not be persisted within 5s (marker lock held by pid unknown); stopping and retaining stale lock evidence
+retained singleton owner=62084; stopped watcher=62084
+crash: primary absent, steal owner=65461
+pid=65461: absent from ps
+next watcher pid=65678, exit=0; published beacon=True
+check: rearm-resurface
+registered: state/custom.check.sh
+66967 51420 66967 Ss   bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh
+returned-check-fallback: direct check returned; recorded descendant pid=67921
+pid=67921: absent from ps
+SIGTERM -> exit=1, elapsed=0.303s, polls=4/150; child state=gone
+descendant gone; no sentinel; private check snapshots/output and singleton lock removed
+
+Real GNU timeout, final isolated executable PATH:
+Target: 1129818ef720b6827ae75eb690957c2c7393d82b
+timeout (GNU coreutils) 9.5
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Padraig Brady.
+registered: state/custom.check.sh
+40424 40285 40424 Ss   bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh
+returned-check-gnu-timeout: direct check returned; recorded descendant pid=41019
+pid=41019: absent from ps
+SIGTERM -> exit=1, elapsed=0.425s, polls=4/150; child state=gone
+descendant gone; no sentinel; private check snapshots/output and singleton lock removed

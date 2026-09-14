@@ -1,0 +1,9 @@
+# fallback-timeout watcher still live 15s after TERM (150 polls); state below
+# descendant tree (watcher pid 57967; recorded child pid 61832): pid ppid pgid stat wchan args
+57967 57337 57126 S    -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.test-phase/diagnostic-mutant/bin/fm-watch.sh
+  86296 57967 57126 S    -      (sleep)
+61832     1 61815 S    -      perl -e $SIG{TERM}="IGNORE"; if (!fork()) { select undef, undef, undef, 60; exit 0; } open my $ready, ">", $ENV{FM_TEST_DESCENDANT_READY} or die $!; print {$ready} "ready\n"; close $ready; select undef, undef, undef, 60; open my $sentinel, ">", $ENV{FM_TEST_DESCENDANT_SENTINEL} or die $!; print {$sentinel} "late\n"; close $sentinel; select undef, undef, undef, 1
+  61841 61832 61815 S    -      perl -e $SIG{TERM}="IGNORE"; if (!fork()) { select undef, undef, undef, 60; exit 0; } open my $ready, ">", $ENV{FM_TEST_DESCENDANT_READY} or die $!; print {$ready} "ready\n"; close $ready; select undef, undef, undef, 60; open my $sentinel, ">", $ENV{FM_TEST_DESCENDANT_SENTINEL} or die $!; print {$sentinel} "late\n"; close $sentinel; select undef, undef, undef, 1
+# fallback-timeout watcher stderr tail:
+not ok - fallback-timeout watcher did not stop after the direct check returned
+expected_red_exit=1

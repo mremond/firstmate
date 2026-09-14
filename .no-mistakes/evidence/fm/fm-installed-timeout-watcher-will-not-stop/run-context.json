@@ -1,0 +1,53 @@
+{
+  "target": "1129818ef720b6827ae75eb690957c2c7393d82b",
+  "tree": "e06d529bbedf433e729aeb03d4442f26e5f2394b",
+  "live_scenarios": [
+    {
+      "name": "TERM stops the watcher, publishes downtime, and releases the singleton",
+      "result": "pass"
+    },
+    {
+      "name": "Held marker lock cannot prevent stop; holder is preserved and the next watcher recovers",
+      "result": "pass"
+    },
+    {
+      "name": "Unwritable state makes acquisition return and watcher shutdown reach its deadline",
+      "result": "pass"
+    },
+    {
+      "name": "A stealer killed after removal is reclaimed and watcher startup still works",
+      "result": "pass"
+    },
+    {
+      "name": "Returned authenticated check descendant is drained by the real fallback timeout path",
+      "result": "pass"
+    },
+    {
+      "name": "Returned authenticated check descendant is drained by the real GNU timeout command path",
+      "result": "pass"
+    },
+    {
+      "name": "A delivered recovery wake also closes within the deadline while preserving its generation",
+      "result": "pass"
+    },
+    {
+      "name": "Ordinary publication remains blocking and interrupted same-process ownership can be reclaimed",
+      "result": "pass"
+    }
+  ],
+  "setup_corrections": [
+    "Removed outer FM_HOME/FM_STATE_OVERRIDE that displaced suite-owned fixture paths.",
+    "Fixed the manual driver recovery-marker format assertion and DEBUG-trap quoting.",
+    "Built complete GNU coreutils generated prerequisites after the direct src/timeout target failed.",
+    "Allowed the liveness probe to observe wait_for_exit had already killed its timed-out process."
+  ],
+  "supplemental_not_live": [
+    "Fixture suite tests real zombie readiness and empty ps output.",
+    "Missing-ps probe separates live/gone/UNKNOWN and bounds wait_for_exit.",
+    "Temporary watcher mutation generates full descendant diagnostic, including a reparented child and its child.",
+    "Resource-code mutation makes both bounded resource-fault regressions fail as expected."
+  ],
+  "source_changes": false,
+  "ui": "CLI-only change; no rendered UI to capture.",
+  "final_status": ""
+}

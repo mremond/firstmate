@@ -1,0 +1,13 @@
+Target 1129818ef720b6827ae75eb690957c2c7393d82b
+Base b182d0f908b78d08c7ccb8dce3775bdca8c5d657
+Case: test_persistent_secondmate_retirement_is_poll_only
+Target suite: fails with empty watcher stderr.
+Target isolated: exit 124 from the unchanged 10-second watchdog.
+Target trace: watchdog fired during initial recovery-marker setup, before the first beacon/check.
+Base comparison: identical case against the base versions of both changed runtime files, all other bin files identical between refs; same exit 124.
+Observed host load averages rose from 4.95/5.60/6.67 to 31.82/20.05/12.90 while unrelated builds and browser tests ran. This supports resource contention but does not establish the sole cause.
+No timeout/budget in tracked code was changed.
+Final isolated target retry after the disposable build ended: PASS; persistent secondmate lifecycle artifacts preserved. See security-isolated-final.log.
+The complete security-suite rerun passed that first assertion but later failed at test_static_poll_contract: watcher did not surface merged poll (tests/fm-pr-check-security.test.sh:747).
+Both target and base then passed test_static_poll_contract in isolation. See static-poll-target.log and static-poll-base.log.
+Both changed security selectors (custom snapshot cleanup and returned descendants on installed/fallback paths) passed together in isolation. No complete security-suite run finished green during this phase.

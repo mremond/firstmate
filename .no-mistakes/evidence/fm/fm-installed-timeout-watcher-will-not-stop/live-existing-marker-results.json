@@ -1,0 +1,10 @@
+[
+  {
+    "name": "A delivered recovery wake also closes within the deadline while preserving its generation",
+    "result": "pass"
+  },
+  {
+    "name": "Ordinary publication remains blocking and interrupted same-process ownership can be reclaimed",
+    "result": "pass"
+  }
+]

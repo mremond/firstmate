@@ -1,0 +1,13 @@
+
+SCENARIO Returned authenticated check descendant is drained by the real GNU timeout command path
+registered: state/custom.check.sh
+Live process tree before allowing direct check to return:
+7488 7353 7320 S bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/bin/fm-watch.sh
+7968 7488 7968 S timeout 10 bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.test-phase/live-installed/returned-descendant/state/.fm-custom-check.Qp2W7p
+7972 7968 7968 S bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FG7SEEP1VBZ3B5SX35BJ6Q/.test-phase/live-installed/returned-descendant/state/.fm-custom-check.Qp2W7p
+7973 7972 7968 S perl -e $SIG{TERM}="IGNORE"; open my $ready, ">", $ENV{FM_TEST_DESCENDANT_READY} or die $!; print {$ready} "ready\n"; close $ready; select undef, undef, undef, 4; open my $sentinel, ">", $ENV{FM_TEST_DESCENDANT_SENTINEL} or die $!; print {$sentinel} "late\n"; close $sentinel; select undef, undef, undef, 1
+7975 7972 7968 S sleep 0.01
+Direct check returned, recorded descendant: (pid absent)
+returned-descendant: TERM -> exit=1, elapsed=0.285s; (pid absent)
+Descendant after watcher stop: (pid absent)
+Sentinel absent after its scheduled write time; private custom snapshots absent.
