@@ -1,0 +1,86 @@
+All listed origins are conspicuously fake. All repositories below were created solely for this run.
+$ git init -q -b main '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-mismatch-both/parent home/projects/alpha'
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-mismatch-both/parent home/projects/alpha' add README.md
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-mismatch-both/parent home/projects/alpha' commit -q -m Fixture
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-mismatch-both/parent home/projects/alpha' remote add origin https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid/fm-fake-source-path.git
+[exit 0]
+$ git clone --quiet '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-mismatch-both/parent home/projects/alpha' '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-mismatch-both/seeded home/projects/alpha'
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-mismatch-both/seeded home/projects/alpha' remote set-url origin https://fm-fake-dest-user:fm-fake-dest-secret@fm-fake-dest-host.invalid/fm-fake-dest-path.git
+[exit 0]
+$ git init -q -b main '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-mismatch-both/parent home/projects/alpha'
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-mismatch-both/parent home/projects/alpha' add README.md
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-mismatch-both/parent home/projects/alpha' commit -q -m Fixture
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-mismatch-both/parent home/projects/alpha' remote add origin https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid/fm-fake-source-path.git
+[exit 0]
+$ git clone --quiet '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-mismatch-both/parent home/projects/alpha' '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-mismatch-both/seeded home/projects/alpha'
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-mismatch-both/seeded home/projects/alpha' remote set-url origin https://fm-fake-dest-user:fm-fake-dest-secret@fm-fake-dest-host.invalid/fm-fake-dest-path.git
+[exit 0]
+$ git init -q -b main '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-missing-origin/parent home/projects/alpha'
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-missing-origin/parent home/projects/alpha' add README.md
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-missing-origin/parent home/projects/alpha' commit -q -m Fixture
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-missing-origin/parent home/projects/alpha' remote add origin https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid/fm-fake-source-path.git
+[exit 0]
+$ git clone --quiet '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-missing-origin/parent home/projects/alpha' '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-missing-origin/seeded home/projects/alpha'
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-missing-origin/seeded home/projects/alpha' remote remove origin
+[exit 0]
+$ git init -q -b main '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-missing-origin/parent home/projects/alpha'
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-missing-origin/parent home/projects/alpha' add README.md
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-missing-origin/parent home/projects/alpha' commit -q -m Fixture
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-missing-origin/parent home/projects/alpha' remote add origin https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid/fm-fake-source-path.git
+[exit 0]
+$ git clone --quiet '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-missing-origin/parent home/projects/alpha' '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-missing-origin/seeded home/projects/alpha'
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-missing-origin/seeded home/projects/alpha' remote remove origin
+[exit 0]
+$ git init -q -b main '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-rejected-clone/parent home/projects/alpha'
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-rejected-clone/parent home/projects/alpha' add README.md
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-rejected-clone/parent home/projects/alpha' commit -q -m Fixture
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-rejected-clone/parent home/projects/alpha' remote add origin https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid:notaport/fm-fake-source-path.git
+[exit 0]
+$ git init -q -b main '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-rejected-clone/parent home/projects/alpha'
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-rejected-clone/parent home/projects/alpha' add README.md
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-rejected-clone/parent home/projects/alpha' commit -q -m Fixture
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-rejected-clone/parent home/projects/alpha' remote add origin https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid:notaport/fm-fake-source-path.git
+[exit 0]
+$ git init -q -b main '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-remote-clone-control/parent home/projects/alpha'
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-remote-clone-control/parent home/projects/alpha' add README.md
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-remote-clone-control/parent home/projects/alpha' commit -q -m Fixture
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-remote-clone-control/parent home/projects/alpha' remote add origin 'https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid/fm-fake-source-path.git
+fm-fake-source-secret'
+[exit 0]
+$ git init -q -b main '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/parent home/projects/alpha'
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/parent home/projects/alpha' add README.md
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/parent home/projects/alpha' commit -q -m Fixture
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/parent home/projects/alpha' remote add origin https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid/fm-fake-source-path.git
+[exit 0]
+$ git clone --quiet '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/parent home/projects/alpha' '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/seeded home/projects/alpha'
+[exit 0]
+$ git -C '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/seeded home/projects/alpha' remote set-url origin https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid/fm-fake-source-path.git
+[exit 0]

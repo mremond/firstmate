@@ -1,0 +1,206 @@
+Real Firstmate CLI and real Git, isolated local homes. Only conspicuously fake credentials were used.
+No real credential-bearing origin was searched for or observed.
+Revision: 4e5713f50d5f6216da75e16c9bdc23878e6f0b8e
+
+=== Mismatched credential-bearing source and seeded origins refuse with both clone paths and no URL [mismatch-both] ===
+$ FM_HOME='/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-mismatch-both/parent home' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/runtime-target/bin/fm-home-seed.sh design '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-mismatch-both/seeded home' alpha
+stdout:
+<empty>
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-mismatch-both/seeded home/projects/alpha has a different origin than the source clone at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-mismatch-both/parent home/projects/alpha; read each clone's "git remote get-url origin" to compare them
+exit: 1
+Route registry: absent
+Observed checks:
+{
+  "phase": "target",
+  "scenario": "Mismatched credential-bearing source and seeded origins refuse with both clone paths and no URL",
+  "case": "mismatch-both",
+  "exit": 1,
+  "checks": {
+    "expected_exit": true,
+    "origins_unchanged": true,
+    "origin_components_absent": true,
+    "useful_diagnostic": true,
+    "no_route_published": true,
+    "no_child_marker_published": true,
+    "existing_clone_preserved": true
+  },
+  "leaked_synthetic_components": [],
+  "pass": true
+}
+
+=== A seeded clone without an origin refuses without printing its credential-bearing source origin [missing-origin] ===
+$ FM_HOME='/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-missing-origin/parent home' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/runtime-target/bin/fm-home-seed.sh design '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-missing-origin/seeded home' alpha
+stdout:
+<empty>
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-missing-origin/seeded home/projects/alpha has no origin remote; it must match the origin of the source clone at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-missing-origin/parent home/projects/alpha
+exit: 1
+Route registry: absent
+Observed checks:
+{
+  "phase": "target",
+  "scenario": "A seeded clone without an origin refuses without printing its credential-bearing source origin",
+  "case": "missing-origin",
+  "exit": 1,
+  "checks": {
+    "expected_exit": true,
+    "origins_unchanged": true,
+    "origin_components_absent": true,
+    "useful_diagnostic": true,
+    "no_route_published": true,
+    "no_child_marker_published": true,
+    "existing_clone_preserved": true
+  },
+  "leaked_synthetic_components": [],
+  "pass": true
+}
+
+=== A rejected explicit remote origin identifies the argument without echoing its credentials [rejected-argument] ===
+$ FM_HOME='/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-rejected-argument/parent home' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/runtime-target/bin/fm-remote-home-seed.sh design remote-validation.invalid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/remote-root /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/remote-home alpha=https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid:notaport/fm-fake-source-path.git
+stdout:
+<empty>
+stderr:
+error: project alpha origin is not an accepted clone URL; check the origin you passed as alpha=<origin-url>
+exit: 1
+Route registry: absent
+Observed checks:
+{
+  "phase": "target",
+  "scenario": "A rejected explicit remote origin identifies the argument without echoing its credentials",
+  "case": "rejected-argument",
+  "exit": 1,
+  "checks": {
+    "expected_exit": true,
+    "origins_unchanged": true,
+    "origin_components_absent": true,
+    "useful_diagnostic": true,
+    "no_route_published": true
+  },
+  "leaked_synthetic_components": [],
+  "pass": true
+}
+
+=== A rejected origin read from a local clone identifies that clone without echoing its credentials [rejected-clone] ===
+$ FM_HOME='/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-rejected-clone/parent home' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/runtime-target/bin/fm-remote-home-seed.sh design remote-validation.invalid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/remote-root /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/remote-home alpha
+stdout:
+<empty>
+stderr:
+error: project alpha origin is not an accepted clone URL; inspect the origin of the clone at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-rejected-clone/parent home/projects/alpha, or pass an accepted one as alpha=<origin-url>
+exit: 1
+Route registry: absent
+Observed checks:
+{
+  "phase": "target",
+  "scenario": "A rejected origin read from a local clone identifies that clone without echoing its credentials",
+  "case": "rejected-clone",
+  "exit": 1,
+  "checks": {
+    "expected_exit": true,
+    "origins_unchanged": true,
+    "origin_components_absent": true,
+    "useful_diagnostic": true,
+    "no_route_published": true
+  },
+  "leaked_synthetic_components": [],
+  "pass": true
+}
+
+=== Rejected origins containing a newline cannot inject origin data into diagnostic output [remote-supplied-control] ===
+$ FM_HOME='/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-remote-supplied-control/parent home' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/runtime-target/bin/fm-remote-home-seed.sh design remote-validation.invalid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/remote-root /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/remote-home 'alpha=https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid/fm-fake-source-path.git
+fm-fake-source-secret'
+stdout:
+<empty>
+stderr:
+error: project alpha origin is not an accepted clone URL; check the origin you passed as alpha=<origin-url>
+exit: 1
+Route registry: absent
+Observed checks:
+{
+  "phase": "target",
+  "scenario": "Rejected origins containing a newline cannot inject origin data into diagnostic output",
+  "case": "remote-supplied-control",
+  "exit": 1,
+  "checks": {
+    "expected_exit": true,
+    "origins_unchanged": true,
+    "origin_components_absent": true,
+    "useful_diagnostic": true,
+    "no_route_published": true
+  },
+  "leaked_synthetic_components": [],
+  "pass": true
+}
+
+=== Rejected origins containing a newline cannot inject origin data into diagnostic output [remote-clone-control] ===
+$ FM_HOME='/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-remote-clone-control/parent home' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/runtime-target/bin/fm-remote-home-seed.sh design remote-validation.invalid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/remote-root /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/remote-home alpha
+stdout:
+<empty>
+stderr:
+error: project alpha origin is not an accepted clone URL; inspect the origin of the clone at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-remote-clone-control/parent home/projects/alpha, or pass an accepted one as alpha=<origin-url>
+exit: 1
+Route registry: absent
+Observed checks:
+{
+  "phase": "target",
+  "scenario": "Rejected origins containing a newline cannot inject origin data into diagnostic output",
+  "case": "remote-clone-control",
+  "exit": 1,
+  "checks": {
+    "expected_exit": true,
+    "origins_unchanged": true,
+    "origin_components_absent": true,
+    "useful_diagnostic": true,
+    "no_route_published": true
+  },
+  "leaked_synthetic_components": [],
+  "pass": true
+}
+
+=== Matching credential-bearing origins seed successfully, preserve origins, and allow reseeding [matched-origins] ===
+$ FM_HOME='/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/parent home' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/runtime-target/bin/fm-home-seed.sh design '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/seeded home' alpha
+stdout:
+home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/seeded home
+stderr:
+<empty>
+exit: 0
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/parent home/data/secondmates.md:
+- design - Origin diagnostics validation (home: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/seeded home; scope: Isolated local test; projects: alpha; added 2026-09-14)
+
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/seeded home/.fm-secondmate-home:
+design
+
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/seeded home/.fm-secondmate-parent:
+schema=fm-secondmate-parent.v1
+route=local
+parent_home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/parent home
+
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/seeded home/data/projects.md:
+- alpha [direct-PR] - isolated validation project (added 2026-09-14)
+
+Idempotent reseed stdout:
+home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/target-matched-origins/seeded home
+Idempotent reseed stderr:
+exit: 0
+
+fm-home-seed.sh validate: exit 0
+Observed checks:
+{
+  "phase": "target",
+  "scenario": "Matching credential-bearing origins seed successfully, preserve origins, and allow reseeding",
+  "case": "matched-origins",
+  "exit": 0,
+  "checks": {
+    "expected_exit": true,
+    "origins_unchanged": true,
+    "origin_components_absent": true,
+    "useful_diagnostic": true,
+    "route_persisted": true,
+    "marker_persisted": true,
+    "project_registered": true,
+    "reseed_succeeds_without_leak": true,
+    "registry_validates": true
+  },
+  "leaked_synthetic_components": [],
+  "pass": true
+}

@@ -1,0 +1,131 @@
+Real Firstmate CLI and real Git, isolated local homes. Only conspicuously fake credentials were used.
+No real credential-bearing origin was searched for or observed.
+Revision: 80556bca2d728071cc14476b9bee60a8edf4159e
+
+=== Mismatched credential-bearing source and seeded origins refuse with both clone paths and no URL [mismatch-both] ===
+$ FM_HOME='/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-mismatch-both/parent home' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/runtime-baseline/bin/fm-home-seed.sh design '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-mismatch-both/seeded home' alpha
+stdout:
+<empty>
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-mismatch-both/seeded home/projects/alpha has origin https://fm-fake-dest-user:fm-fake-dest-secret@fm-fake-dest-host.invalid/fm-fake-dest-path.git; expected https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid/fm-fake-source-path.git
+exit: 1
+Route registry: absent
+Observed checks:
+{
+  "phase": "baseline",
+  "scenario": "Mismatched credential-bearing source and seeded origins refuse with both clone paths and no URL",
+  "case": "mismatch-both",
+  "exit": 1,
+  "checks": {
+    "expected_exit": true,
+    "origins_unchanged": true,
+    "origin_components_absent": false,
+    "useful_diagnostic": false,
+    "no_route_published": true,
+    "no_child_marker_published": true,
+    "existing_clone_preserved": true
+  },
+  "leaked_synthetic_components": [
+    "fm-fake-source-user",
+    "fm-fake-source-secret",
+    "fm-fake-source-host",
+    "fm-fake-source-path",
+    "fm-fake-dest-user",
+    "fm-fake-dest-secret",
+    "fm-fake-dest-host",
+    "fm-fake-dest-path"
+  ],
+  "expected_baseline_reproduction": true
+}
+
+=== A seeded clone without an origin refuses without printing its credential-bearing source origin [missing-origin] ===
+$ FM_HOME='/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-missing-origin/parent home' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/runtime-baseline/bin/fm-home-seed.sh design '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-missing-origin/seeded home' alpha
+stdout:
+<empty>
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-missing-origin/seeded home/projects/alpha has no origin remote; expected https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid/fm-fake-source-path.git
+exit: 1
+Route registry: absent
+Observed checks:
+{
+  "phase": "baseline",
+  "scenario": "A seeded clone without an origin refuses without printing its credential-bearing source origin",
+  "case": "missing-origin",
+  "exit": 1,
+  "checks": {
+    "expected_exit": true,
+    "origins_unchanged": true,
+    "origin_components_absent": false,
+    "useful_diagnostic": false,
+    "no_route_published": true,
+    "no_child_marker_published": true,
+    "existing_clone_preserved": true
+  },
+  "leaked_synthetic_components": [
+    "fm-fake-source-user",
+    "fm-fake-source-secret",
+    "fm-fake-source-host",
+    "fm-fake-source-path"
+  ],
+  "expected_baseline_reproduction": true
+}
+
+=== A rejected explicit remote origin identifies the argument without echoing its credentials [rejected-argument] ===
+$ FM_HOME='/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-rejected-argument/parent home' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/runtime-baseline/bin/fm-remote-home-seed.sh design remote-validation.invalid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/remote-root /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/remote-home alpha=https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid:notaport/fm-fake-source-path.git
+stdout:
+<empty>
+stderr:
+error: project alpha origin is not an accepted clone URL: https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid:notaport/fm-fake-source-path.git
+exit: 1
+Route registry: absent
+Observed checks:
+{
+  "phase": "baseline",
+  "scenario": "A rejected explicit remote origin identifies the argument without echoing its credentials",
+  "case": "rejected-argument",
+  "exit": 1,
+  "checks": {
+    "expected_exit": true,
+    "origins_unchanged": true,
+    "origin_components_absent": false,
+    "useful_diagnostic": false,
+    "no_route_published": true
+  },
+  "leaked_synthetic_components": [
+    "fm-fake-source-user",
+    "fm-fake-source-secret",
+    "fm-fake-source-host",
+    "fm-fake-source-path"
+  ],
+  "expected_baseline_reproduction": true
+}
+
+=== A rejected origin read from a local clone identifies that clone without echoing its credentials [rejected-clone] ===
+$ FM_HOME='/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/baseline-rejected-clone/parent home' /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/runtime-baseline/bin/fm-remote-home-seed.sh design remote-validation.invalid /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/remote-root /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GQTYBGKJGSFTQPP3F8NX0G/.origin-live-check-d8ddk4de/remote-home alpha
+stdout:
+<empty>
+stderr:
+error: project alpha origin is not an accepted clone URL: https://fm-fake-source-user:fm-fake-source-secret@fm-fake-source-host.invalid:notaport/fm-fake-source-path.git
+exit: 1
+Route registry: absent
+Observed checks:
+{
+  "phase": "baseline",
+  "scenario": "A rejected origin read from a local clone identifies that clone without echoing its credentials",
+  "case": "rejected-clone",
+  "exit": 1,
+  "checks": {
+    "expected_exit": true,
+    "origins_unchanged": true,
+    "origin_components_absent": false,
+    "useful_diagnostic": false,
+    "no_route_published": true
+  },
+  "leaked_synthetic_components": [
+    "fm-fake-source-user",
+    "fm-fake-source-secret",
+    "fm-fake-source-host",
+    "fm-fake-source-path"
+  ],
+  "expected_baseline_reproduction": true
+}
