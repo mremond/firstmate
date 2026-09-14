@@ -1,0 +1,60 @@
+{
+  "registrations_replaced": 12,
+  "snapshots": [
+    {
+      "generated": "2026-09-14T17:28:14Z",
+      "pr": {
+        "url": "https://github.com/kunchenguid/firstmate/pull/4444",
+        "source": "meta",
+        "merge_poll": {
+          "armed": false,
+          "armed_epoch": null
+        }
+      }
+    },
+    {
+      "generated": "2026-09-14T17:28:15Z",
+      "pr": {
+        "url": "https://github.com/kunchenguid/firstmate/pull/4444",
+        "source": "meta",
+        "merge_poll": {
+          "armed": false,
+          "armed_epoch": null
+        }
+      }
+    },
+    {
+      "generated": "2026-09-14T17:28:16Z",
+      "pr": {
+        "url": "https://github.com/kunchenguid/firstmate/pull/4444",
+        "source": "meta",
+        "merge_poll": {
+          "armed": true,
+          "armed_epoch": 1789406776
+        }
+      }
+    },
+    {
+      "generated": "2026-09-14T17:28:16Z",
+      "pr": {
+        "url": "https://github.com/kunchenguid/firstmate/pull/4444",
+        "source": "meta",
+        "merge_poll": {
+          "armed": true,
+          "armed_epoch": 1789406776
+        }
+      }
+    },
+    {
+      "generated": "2026-09-14T17:28:16Z",
+      "pr": {
+        "url": "https://github.com/kunchenguid/firstmate/pull/4444",
+        "source": "meta",
+        "merge_poll": {
+          "armed": false,
+          "armed_epoch": null
+        }
+      }
+    }
+  ]
+}

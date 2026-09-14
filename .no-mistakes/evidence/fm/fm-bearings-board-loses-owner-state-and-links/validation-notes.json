@@ -1,0 +1,23 @@
+{
+  "target": "961871fb28e34ccd226260291cb40fb3ddeff958",
+  "target_tree": "561674c15da31ff2a738d2b14f06a0a0a2f02e58",
+  "runtime": "Real Firstmate CLI, isolated FM_HOME instances, real Lavish 4399 listener, Brave Chromium via CDP. Manual test data in documented home files; ages seeded by setting only isolated registration mtimes. No service stubs in these manual flows. Automated suites use their own mocks and are supporting evidence only.",
+  "ui": "Shipped Bearings template and styles; 1440px browser with 360px Lavish sidebar. For the all-escalated screenshot, directly loaded the generated HTML after Lavish rejected a transient artifact token. Used Show anyway when Lavish layout gate was still waiting.",
+  "setup_recovery": "Initial whole snapshot suite stopped at repository cap because Git discovered the enclosing worktree remote. GIT_CEILING_DIRECTORIES confined subsequent runs; the exact failing selector and all delivery selectors passed. Chrome wrapper lacked required pageId support; switched to a fresh direct CDP connection.",
+  "nudge_postcondition": {
+    "open_approvals_before": 2,
+    "open_approvals_after": 2,
+    "delivery_ages_and_nudges_unchanged": true,
+    "task_answer_bytes": 0,
+    "reconcile_answer_bytes": 0
+  },
+  "tests": {
+    "initial_snapshot_suite": "stopped at test_pr_repository_cap_and_expansion; setup repaired",
+    "focused_snapshot_selectors": "24 passed, including exact initial failing selector",
+    "fm-fleet-snapshot-view.test.sh": "passed; 19 ok lines match 19 CI invocations",
+    "fm-bearings-board.test.sh": "passed",
+    "fm-bearings-board-render.test.sh": "passed, including actual browser layout check",
+    "fm-pr-check-security.test.sh": "passed"
+  },
+  "cleanup": "Dedicated Lavish session ended, source retired, home swept, isolated server stopped; named Chrome bridge stopped. No source changes."
+}

@@ -1,0 +1,292 @@
+{
+  "schema": "fm-bearings.v1",
+  "home": ".test-lab/main",
+  "generated": "2026-09-14T17:17:27Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [
+    {
+      "id": "main-work",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "In-flight delivery review",
+      "doing": "backend target gone: bearings-validation:main-work"
+    },
+    {
+      "id": "mate/mate-work",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "In-flight delivery review",
+      "doing": "backend target gone: bearings-validation:mate-work"
+    }
+  ],
+  "awaiting_nudge_days": null,
+  "awaiting": [
+    {
+      "id": "main-old",
+      "what": "Delivery awaiting outside maintainer",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 21,
+      "nudge": false
+    },
+    {
+      "id": "mate/mate-old",
+      "what": "Delivery awaiting outside maintainer",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 21,
+      "nudge": false
+    },
+    {
+      "id": "main-young",
+      "what": "Recently delivered request",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 2,
+      "nudge": false
+    },
+    {
+      "id": "mate/mate-young",
+      "what": "Recently delivered request",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 2,
+      "nudge": false
+    }
+  ],
+  "secondmates": [
+    {
+      "id": "mate",
+      "state": "unknown",
+      "doing": "structured home state invalid: child current state unavailable: mate-approval, mate-held, mate-old, mate-unrecorded, mat…",
+      "provenance": "structured-home",
+      "freshness": "fresh",
+      "age_seconds": 2,
+      "contradiction": false,
+      "reason": "structured home state invalid: child current state unavailable: mate-approval, mate-held, mate-old, mate-unrecorded, mate-work, mate-young"
+    }
+  ],
+  "secondmate_reconcile": [
+    {
+      "id": "mate",
+      "spawn_gen": null,
+      "host": null,
+      "kind": "child_current_unavailable",
+      "ids": [
+        "mate-approval",
+        "mate-held",
+        "mate-old",
+        "mate-unrecorded",
+        "mate-work",
+        "mate-young"
+      ]
+    }
+  ],
+  "decisions_open": [
+    {
+      "id": "main-approval",
+      "key": "main-approval",
+      "verb": "captain-hold",
+      "summary": "Approval remains unanswered: approval required",
+      "owner": "(main)"
+    },
+    {
+      "id": "mate/mate-approval",
+      "key": "mate-approval",
+      "verb": "captain-hold",
+      "summary": "Approval remains unanswered: approval required",
+      "owner": "mate"
+    }
+  ],
+  "landed": [],
+  "gates": [
+    {
+      "id": "main-held",
+      "title": "Waiting for a dependency",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "(main)",
+      "pr_url": "https://github.com/acme/repo/pull/2",
+      "filed": "2026-09-14"
+    },
+    {
+      "id": "main-unrecorded",
+      "title": "No recorded request link",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "(main)",
+      "pr_url": null,
+      "filed": "2026-09-14"
+    },
+    {
+      "id": "mate-held",
+      "title": "Waiting for a dependency",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "mate",
+      "pr_url": "https://github.com/acme/repo/pull/2",
+      "filed": "2026-09-14"
+    },
+    {
+      "id": "mate-unrecorded",
+      "title": "No recorded request link",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "mate",
+      "pr_url": null,
+      "filed": "2026-09-14"
+    }
+  ],
+  "reports": [],
+  "recorded_prs": [
+    {
+      "id": "main-approval",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
+    },
+    {
+      "id": "main-held",
+      "url": "https://github.com/acme/repo/pull/2"
+    },
+    {
+      "id": "main-old",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
+    },
+    {
+      "id": "main-work",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
+    },
+    {
+      "id": "main-young",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
+    }
+  ],
+  "unhealthy_endpoints": [
+    {
+      "id": "main-approval",
+      "backend": "tmux",
+      "target": "bearings-validation:main-approval",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "main-held",
+      "backend": "tmux",
+      "target": "bearings-validation:main-held",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "main-old",
+      "backend": "tmux",
+      "target": "bearings-validation:main-old",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "main-unrecorded",
+      "backend": "tmux",
+      "target": "bearings-validation:main-unrecorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "main-work",
+      "backend": "tmux",
+      "target": "bearings-validation:main-work",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "main-young",
+      "backend": "tmux",
+      "target": "bearings-validation:main-young",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate",
+      "backend": "tmux",
+      "target": "bearings-validation:mate",
+      "exists": false,
+      "agent": "dead"
+    },
+    {
+      "id": "mate/mate-approval",
+      "backend": "secondmate-home",
+      "target": "bearings-validation:mate-approval",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/mate-held",
+      "backend": "secondmate-home",
+      "target": "bearings-validation:mate-held",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/mate-old",
+      "backend": "secondmate-home",
+      "target": "bearings-validation:mate-old",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/mate-unrecorded",
+      "backend": "secondmate-home",
+      "target": "bearings-validation:mate-unrecorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/mate-work",
+      "backend": "secondmate-home",
+      "target": "bearings-validation:mate-work",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/mate-young",
+      "backend": "secondmate-home",
+      "target": "bearings-validation:mate-young",
+      "exists": false,
+      "agent": "not_checked"
+    }
+  ],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}

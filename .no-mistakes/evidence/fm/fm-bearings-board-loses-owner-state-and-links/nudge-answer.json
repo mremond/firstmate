@@ -1,0 +1,122 @@
+{
+  "stats": [
+    "3\nNEED YOU",
+    "2\nUNDERWAY\n1 (main) · 1 mate",
+    "2\nDELIVERED\n1 (main) · 1 mate",
+    "0\nLANDED RECENTLY",
+    "4\nCHARTED NEXT\n2 (main) · 2 mate"
+  ],
+  "regime": "NUDGE-WORTHY AFTER 7 DAYS",
+  "delivered": [
+    "DELIVERED\nRecently delivered request\nfirstmate · (main) · waiting on a merge we do not control\n2d\n#4019",
+    "DELIVERED\nRecently delivered request\nfirstmate · mate · waiting on a merge we do not control\n2d\n#4019"
+  ],
+  "underway": [
+    "UNKNOWN\nIn-flight delivery review\nbackend target gone: bearings-validation:main-work · ship · firstmate · (main)\n#4019",
+    "UNKNOWN\nIn-flight delivery review\nbackend target gone: bearings-validation:mate-work · ship · firstmate · mate\n#4019"
+  ],
+  "charted": [
+    {
+      "text": "Waiting for a dependency\nfirstmate · (main)\ndependency https://github.com/acme/repo/…\n#2\nWAITING",
+      "links": [
+        "https://github.com/acme/repo/pull/2"
+      ]
+    },
+    {
+      "text": "No recorded request link\nfirstmate · (main)\ndependency https://github.com/acme/repo/…\nWAITING",
+      "links": []
+    },
+    {
+      "text": "Waiting for a dependency\nfirstmate · mate\ndependency https://github.com/acme/repo/…\n#2\nWAITING",
+      "links": [
+        "https://github.com/acme/repo/pull/2"
+      ]
+    },
+    {
+      "text": "No recorded request link\nfirstmate · mate\ndependency https://github.com/acme/repo/…\nWAITING",
+      "links": []
+    }
+  ],
+  "links": [
+    {
+      "text": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "href": "https://github.com/kunchenguid/firstmate/pull/4019"
+    },
+    {
+      "text": "#2",
+      "href": "https://github.com/acme/repo/pull/2"
+    },
+    {
+      "text": "#2",
+      "href": "https://github.com/acme/repo/pull/2"
+    },
+    {
+      "text": "#4019",
+      "href": "https://github.com/kunchenguid/firstmate/pull/4019"
+    },
+    {
+      "text": "#4019",
+      "href": "https://github.com/kunchenguid/firstmate/pull/4019"
+    },
+    {
+      "text": "#4019",
+      "href": "https://github.com/kunchenguid/firstmate/pull/4019"
+    },
+    {
+      "text": "#4019",
+      "href": "https://github.com/kunchenguid/firstmate/pull/4019"
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Queue answer",
+      "title": "",
+      "disabled": false
+    },
+    {
+      "text": "Queue answer",
+      "title": "",
+      "disabled": false
+    },
+    {
+      "text": "Queue answer",
+      "title": "",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "title": "",
+      "disabled": true
+    },
+    {
+      "text": "",
+      "title": "",
+      "disabled": false
+    },
+    {
+      "text": "Queue dispatch order",
+      "title": "",
+      "disabled": false
+    }
+  ],
+  "forms": [
+    {
+      "text": "Keep waiting\nReconcile\nRe-check the latest state, then close this with evidence or keep it open with a note\nQueue answer",
+      "html": "<form data-lavish-question=\"main-approval\"><div class=\"bb-opts\"><label class=\"bb-opt\"><input type=\"radio\" name=\"answer\" value=\"wait\"><span class=\"bb-opt__body\"><span class=\"bb-opt__label\">Keep waiting</span></span></label><label class=\"bb-opt\"><input type=\"radio\" name=\"answer\" value=\"reconcile\"><span class=\"bb-opt__body\"><span class=\"bb-opt__label\">Reconcile</span><span class=\"bb-opt__hint\">Re-check the latest state, then close this with evidence or keep it open with a note</span></span></label></div><div class=\"bb-decision__foot\"><button class=\"fm-btn fm-btn--sm fm-btn--primary\" type=\"submit\">Queue answer</button><span class=\"bb-queued\"><svg class=\"fm-ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"></path></svg> queued</span><span class=\"bb-limit\" role=\"alert\"></span></div></form>"
+    },
+    {
+      "text": "Keep waitingReconcileRe-check the latest state, then close this with evidence or keep it open with a noteQueue answer queued",
+      "html": "<form data-lavish-question=\"mate-approval\"><div class=\"bb-opts\"><label class=\"bb-opt\"><input type=\"radio\" name=\"answer\" value=\"wait\"><span class=\"bb-opt__body\"><span class=\"bb-opt__label\">Keep waiting</span></span></label><label class=\"bb-opt\"><input type=\"radio\" name=\"answer\" value=\"reconcile\"><span class=\"bb-opt__body\"><span class=\"bb-opt__label\">Reconcile</span><span class=\"bb-opt__hint\">Re-check the latest state, then close this with evidence or keep it open with a note</span></span></label></div><div class=\"bb-decision__foot\"><button class=\"fm-btn fm-btn--sm fm-btn--primary\" type=\"submit\">Queue answer</button><span class=\"bb-queued\"><svg class=\"fm-ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"></path></svg> queued</span><span class=\"bb-limit\" role=\"alert\"></span></div></form>"
+    },
+    {
+      "text": "Leave it waitingNudge the maintainerQueue answer queued",
+      "html": "<form data-lavish-question=\"https://github.com/kunchenguid/firstmate/pull/4019\"><div class=\"bb-opts\"><label class=\"bb-opt\"><input type=\"radio\" name=\"answer\" value=\"wait\"><span class=\"bb-opt__body\"><span class=\"bb-opt__label\">Leave it waiting</span></span></label><label class=\"bb-opt\"><input type=\"radio\" name=\"answer\" value=\"nudge\"><span class=\"bb-opt__body\"><span class=\"bb-opt__label\">Nudge the maintainer</span></span></label></div><div class=\"bb-decision__foot\"><button class=\"fm-btn fm-btn--sm fm-btn--primary\" type=\"submit\">Queue answer</button><span class=\"bb-queued\"><svg class=\"fm-ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"></path></svg> queued</span><span class=\"bb-limit\" role=\"alert\"></span></div></form>"
+    }
+  ],
+  "afterQueue": {
+    "body": "bearings\n3\nNEED YOU\n2\nUNDERWAY\n1 (main) · 1 mate\n2\nDELIVERED\n1 (main) · 1 mate\n0\nLANDED RECENTLY\n4\nCHARTED NEXT\n2 (main) · 2 mate\nCAPTAIN'S CALL\n3 ITEMS WAIT ON YOU, CAPTAIN\nWAITING 21D\nfirstmate\nNudge the outside maintainer\n\nmate · delivered 21 days ago\n\nhttps://github.com/kunchenguid/firstmate/pull/4019\nLeave it waiting\nNudge the maintainer\nQueue answer\nQUEUED\ncard 3 of 3\nCHARTED NEXT\nWaiting for a dependency\nfirstmate · (main)\ndependency https://github.com/acme/repo/…\n#2\nWAITING\nNo recorded request link\nfirstmate · (main)\ndependency https://github.com/acme/repo/…\nWAITING\nWaiting for a dependency\nfirstmate · mate\ndependency https://github.com/acme/repo/…\n#2\nWAITING\nNo recorded request link\nfirstmate · mate\ndependency https://github.com/acme/repo/…\nWAITING\nNOTHING PICKED\nQueue dispatch order\nUNDERWAY\nUNKNOWN\nIn-flight delivery review\nbackend target gone: bearings-validation:main-work · ship · firstmate · (main)\n#4019\nUNKNOWN\nIn-flight delivery review\nbackend target gone: bearings-validation:mate-work · ship · firstmate · mate\n#4019\nRECENTLY LANDED\nNo recent completions are in the current baseline.\nDELIVERED\nNUDGE-WORTHY AFTER 7 DAYS\nDELIVERED\nRecently delivered request\nfirstmate · (main) · waiting on a merge we do not control\n2d\n#4019\nDELIVERED\nRecently delivered request\nfirstmate · mate · waiting on a merge we do not control\n2d\n#4019\nfm-bearings-board.v1 · 2026-09-14T17:23:23Z",
+    "board": "bearings\n3\nNEED YOU\n2\nUNDERWAY\n1 (main) · 1 mate\n2\nDELIVERED\n1 (main) · 1 mate\n0\nLANDED RECENTLY\n4\nCHARTED NEXT\n2 (main) · 2 mate\nCAPTAIN'S CALL\n3 ITEMS WAIT ON YOU, CAPTAIN\nWAITING 21D\nfirstmate\nNudge the outside maintainer\n\nmate · delivered 21 days ago\n\nhttps://github.com/kunchenguid/firstmate/pull/4019\nLeave it waiting\nNudge the maintainer\nQueue answer\nQUEUED\ncard 3 of 3\nCHARTED NEXT\nWaiting for a dependency\nfirstmate · (main)\ndependency https://github.com/acme/repo/…\n#2\nWAITING\nNo recorded request link\nfirstmate · (main)\ndependency https://github.com/acme/repo/…\nWAITING\nWaiting for a dependency\nfirstmate · mate\ndependency https://github.com/acme/repo/…\n#2\nWAITING\nNo recorded request link\nfirstmate · mate\ndependency https://github.com/acme/repo/…\nWAITING\nNOTHING PICKED\nQueue dispatch order\nUNDERWAY\nUNKNOWN\nIn-flight delivery review\nbackend target gone: bearings-validation:main-work · ship · firstmate · (main)\n#4019\nUNKNOWN\nIn-flight delivery review\nbackend target gone: bearings-validation:mate-work · ship · firstmate · mate\n#4019\nRECENTLY LANDED\nNo recent completions are in the current baseline.\nDELIVERED\nNUDGE-WORTHY AFTER 7 DAYS\nDELIVERED\nRecently delivered request\nfirstmate · (main) · waiting on a merge we do not control\n2d\n#4019\nDELIVERED\nRecently delivered request\nfirstmate · mate · waiting on a merge we do not control\n2d\n#4019\nfm-bearings-board.v1 · 2026-09-14T17:23:23Z"
+  },
+  "beforeSend": "Lavish\nEDITOR\nAnnotate\nConversation\nCaptain's Call answer - Nudge the outside maintainer: wait Context data: { \"schema\": \"fm-bearings-nudge.v1\", \"selection\": \"wait\", \"note\": \"\", \"pr_url\": \"https://github.com/kunchenguid/firstmate/pull/4019\" }\nAttach images\nSend & End\nSend to Agent",
+  "send": "Lavish\nEDITOR\nAnnotate\nConversation\nCaptain's Call answer - Nudge the outside maintainer: wait Context data: { \"schema\": \"fm-bearings-nudge.v1\", \"selection\": \"wait\", \"note\": \"\", \"pr_url\": \"https://github.com/kunchenguid/firstmate/pull/4019\" }\nAttach images\nSend & End\nSend to Agent"
+}

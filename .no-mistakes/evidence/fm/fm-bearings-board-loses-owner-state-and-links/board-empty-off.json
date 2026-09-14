@@ -1,0 +1,32 @@
+{
+  "stats": [
+    "0\nNEED YOU",
+    "0\nUNDERWAY",
+    "0\nDELIVERED",
+    "0\nLANDED RECENTLY",
+    "0\nCHARTED NEXT"
+  ],
+  "regime": "NO NUDGE THRESHOLD SET - THESE ROWS WILL NOT ESCALATE",
+  "delivered": [],
+  "underway": [],
+  "charted": [],
+  "links": [],
+  "buttons": [
+    {
+      "text": "",
+      "title": "",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "title": "",
+      "disabled": false
+    },
+    {
+      "text": "Queue dispatch order",
+      "title": "",
+      "disabled": false
+    }
+  ],
+  "forms": []
+}

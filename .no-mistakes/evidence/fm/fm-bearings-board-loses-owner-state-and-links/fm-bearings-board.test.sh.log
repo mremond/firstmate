@@ -1,0 +1,26 @@
+ok - path prints the stable home-scoped board location
+ok - build refuses malformed payloads before touching the board
+ok - charted kind is optional and accepts queued and warning
+ok - build injects the payload, binds any-origin, then arms the source
+not-autohandled: lavish-4373dc140de5a312 (left for the handler; still unacknowledged)
+ok - registration can consume answers only after any-origin binding exists
+ok - build establishes the Lavish session before binding and arming
+ok - rebuild refreshes the board in place without double-arming
+ok - build refuses a template without exactly one data slot
+ok - a board build reopens a session the captain ended instead of arming a dead one
+ok - build reopens a session that ends between establish and listing
+ok - build refuses to arm a poll on a session that stays ended
+ok - a rebuild starts a listener when an already-armed board has none
+ok - build drops decision cards whose subject already landed and keeps open ones
+ok - build keeps remote decisions absent from the main backlog
+ok - build fails when reconcile cannot prove a live listener
+ok - every decision card carries exactly one reconcile choice
+ok - build refuses a payload that occupies the reserved reconcile value
+ok - build reserves reconcile across non-decision cards
+ok - build refuses an underway or charted row that does not say whose it is
+ok - build refuses a delivered row that cannot be looked at or aged
+ok - build refuses to leave an aged delivery sitting in the delivered box
+ok - with no threshold set a delivered row is accepted at any age, and 0 is still refused
+ok - build accepts a delivered row under the threshold and a nudge card above it
+ok - build refuses a nudge card that cannot say how long or point where
+ok - request identities pass validation and reach nudge cards intact

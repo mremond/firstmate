@@ -1,0 +1,20 @@
+[
+  {
+    "input": "overdue",
+    "exit_code": 1,
+    "error": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GAWMSDQK4B5EA9GZW35RXE/.test-lab/rejected.json",
+    "existing_board_preserved": true
+  },
+  {
+    "input": "missing-pr",
+    "exit_code": 1,
+    "error": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GAWMSDQK4B5EA9GZW35RXE/.test-lab/rejected.json",
+    "existing_board_preserved": true
+  },
+  {
+    "input": "null-age",
+    "exit_code": 1,
+    "error": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GAWMSDQK4B5EA9GZW35RXE/.test-lab/rejected.json",
+    "existing_board_preserved": true
+  }
+]

@@ -1,15 +1,24 @@
 [
   {
-    "timezone": "Europe/Paris",
-    "before": 1761438600,
-    "after": 1761438600
+    "action": "Re-record same PR during repeated daylight-saving hour",
+    "local_time": "2025-10-26T02:30:00+02:00",
+    "before_epoch": 1761438600,
+    "after_epoch": 1761438600,
+    "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+    "output": "armed: state/clock.check.sh"
   },
   {
-    "timezone": "Europe/Paris",
-    "before": 1761442200,
-    "after": 1761442200
+    "action": "Re-record same PR during repeated daylight-saving hour",
+    "local_time": "2025-10-26T02:30:00+01:00",
+    "before_epoch": 1761442200,
+    "after_epoch": 1761442200,
+    "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+    "output": "armed: state/clock.check.sh"
   },
   {
-    "different_pr_new_epoch": 1789380580
+    "action": "Record a different PR and start a new delivery clock",
+    "pr_url": "https://github.com/kunchenguid/firstmate/pull/4444",
+    "after_epoch": 1789406776,
+    "output": "armed: state/clock.check.sh"
   }
 ]
