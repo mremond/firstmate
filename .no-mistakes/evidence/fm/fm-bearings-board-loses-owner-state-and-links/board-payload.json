@@ -1,0 +1,145 @@
+{
+  "schema": "fm-bearings-board.v1",
+  "home": "Isolated validation fleet",
+  "generated": "2026-09-14T10:09:45Z",
+  "prs_live": false,
+  "captains_call": [
+    {
+      "key": "approval",
+      "type": "decision",
+      "repo": "firstmate",
+      "title": "Approval still required: Approve publication",
+      "about": "(main)",
+      "options": [
+        {
+          "value": "wait",
+          "label": "Keep waiting"
+        }
+      ]
+    },
+    {
+      "key": "mate-call",
+      "type": "decision",
+      "repo": "firstmate",
+      "title": "Second mate decision: Choose whether to proceed",
+      "about": "mate",
+      "options": [
+        {
+          "value": "wait",
+          "label": "Keep waiting"
+        }
+      ]
+    },
+    {
+      "key": "https://github.com/kunchenguid/firstmate/pull/4427",
+      "type": "nudge",
+      "repo": "firstmate",
+      "title": "Delivery awaiting response",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
+      "age_days": 8,
+      "detail": "mate \u00b7 outside maintainer",
+      "options": [
+        {
+          "value": "wait",
+          "label": "Keep waiting"
+        },
+        {
+          "value": "nudge",
+          "label": "Nudge maintainer"
+        }
+      ]
+    }
+  ],
+  "underway": [
+    {
+      "id": "in-flight",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Review pending delivery",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-in-flight"
+    },
+    {
+      "id": "mate/in-flight",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Review pending delivery",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-in-flight"
+    },
+    {
+      "id": "mate/approval",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Approval still required",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-approval"
+    }
+  ],
+  "awaiting": [
+    {
+      "id": "mate/young",
+      "what": "Delivered change",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 3
+    },
+    {
+      "id": "young",
+      "what": "Delivered change",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 3
+    }
+  ],
+  "landed": [],
+  "charted": [
+    {
+      "id": "main-recorded",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "title": "Held delivery",
+      "reason": "dependency https://github.com/acme/repo/\u2026",
+      "dispatchable": false,
+      "filed": "2026-09-12",
+      "pr_url": "https://github.com/acme/repo/pull/2"
+    },
+    {
+      "id": "main-unrecorded",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "title": "Held delivery without request",
+      "reason": "dependency https://github.com/acme/repo/\u2026",
+      "dispatchable": false,
+      "filed": "2026-09-12"
+    },
+    {
+      "id": "mate-recorded",
+      "repo": "firstmate",
+      "owner": "mate",
+      "title": "Held delivery",
+      "reason": "dependency https://github.com/acme/repo/\u2026",
+      "dispatchable": false,
+      "filed": "2026-09-12",
+      "pr_url": "https://github.com/acme/repo/pull/2"
+    },
+    {
+      "id": "mate-unrecorded",
+      "repo": "firstmate",
+      "owner": "mate",
+      "title": "Held delivery without request",
+      "reason": "dependency https://github.com/acme/repo/\u2026",
+      "dispatchable": false,
+      "filed": "2026-09-12"
+    }
+  ],
+  "awaiting_nudge_days": 7
+}

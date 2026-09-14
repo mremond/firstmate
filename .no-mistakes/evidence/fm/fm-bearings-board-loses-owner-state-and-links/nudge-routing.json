@@ -1,0 +1,17 @@
+{
+  "read": "SESSION-ENDING MESSAGE: (none)\n\ndeclared_items: 1\npresented_items: 1\nmalformed_items: 0\ncomplete: yes\nlifecycle: feedback\nsession_ended: (unset)\nannotation_count: 1\nsession_ending_message_count: 0\n\nANNOTATIONS\nANNOTATION 1 of 1\nelement_uid: 1\nelement_selector: div#bb-call > div:nth-of-type(3) > div > form\ntag: nudge\ntext:\n| Delivery awaiting response -> wait\nprompt:\n| Captain's Call answer - Delivery awaiting response: wait\n| \n| Context data:\n| {\n|   \"schema\": \"fm-bearings-nudge.v1\",\n|   \"selection\": \"wait\",\n|   \"note\": \"\",\n|   \"pr_url\": \"https://github.com/kunchenguid/firstmate/pull/4427\"\n| }\nEND ANNOTATIONS\nEND LAVISH RESULT (1 of 1)\n",
+  "nudges": "{\"pr_url\":\"https://github.com/kunchenguid/firstmate/pull/4427\",\"selection\":\"wait\",\"note\":\"\",\"label\":\"Delivery awaiting response -> wait\"}\n",
+  "answers": "",
+  "reconciles": "",
+  "backlogs_unchanged": true,
+  "main_decision": "",
+  "mate_decision": "",
+  "before_hashes": {
+    "main": "34ebec8060031c7483d3f490d0f6e1f0205ae78464cbd1e92fb4b3c0cb8d0aec",
+    "mate": "9e48996a7b476a8821a56342c940ff1f5054c36da17253234c639031cc5cd0ad"
+  },
+  "after_hashes": {
+    "main": "34ebec8060031c7483d3f490d0f6e1f0205ae78464cbd1e92fb4b3c0cb8d0aec",
+    "mate": "9e48996a7b476a8821a56342c940ff1f5054c36da17253234c639031cc5cd0ad"
+  }
+}

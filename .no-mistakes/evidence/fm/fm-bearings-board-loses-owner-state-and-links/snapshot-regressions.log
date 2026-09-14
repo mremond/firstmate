@@ -1,0 +1,21 @@
+ok - a delivered task leaves underway and the gates for one delivered row
+ok - an armed merge watch does not retire a worker that is still working
+ok - an underway row names its home and carries the request already recorded for it
+ok - the delivered exit rule fires at its named threshold and is one-way
+ok - the exit rule reads one named threshold, and the output states which
+ok - an underway row from a second mate is distinguishable from main work in the same repo
+ok - an upcoming row from a second mate carries its recorded request link to the parent
+ok - a request the captain owes an answer on is never re-labelled into the waiting state
+ok - a delivery that resumed and failed keeps its own state instead of reading as delivered
+ok - an overdue delivery outranks recent ones so the bound never drops it
+ok - a second mate's delivery reaches the parent as a delivered row with its owner and link
+ok - the configured external-wait verb preserves live and exited deliveries and their nudges in both homes
+ok - both homes require a declared wait, retain exited deliveries, and preserve superseding states and diagnostics
+ok - both delivery projections retain approvals after green CI until resolution and reject invalid poll artifacts
+ok - full GitLab request URLs survive awaiting, active, and queued child projections
+ok - lookup failures preserve keyed decisions and parent evidence until verified work resumes
+ok - the ledger retains every delivery and the consuming bound discloses only younger omissions
+ok - status URLs neither select nonworking children nor become working-child request links
+ok - backlog reason URLs never replace recorded request links or supply missing links in either home
+ok - cached young deliveries retain every identity and link when age promotes them beyond the bound
+ok - a parked delivery stays visible without activating its home until work resumes

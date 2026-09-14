@@ -1,7 +1,7 @@
 {
   "schema": "fm-bearings.v1",
   "home": "live/main",
-  "generated": "2026-09-14T10:09:36Z",
+  "generated": "2026-09-19T10:09:37Z",
   "prs": "not_requested (run: /bearings include PRs)",
   "in_flight": [
     {
@@ -53,7 +53,7 @@
       "repo": "firstmate",
       "owner": "mate",
       "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
-      "age_days": 8,
+      "age_days": 13,
       "nudge": true
     },
     {
@@ -62,7 +62,7 @@
       "repo": "firstmate",
       "owner": "(main)",
       "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
-      "age_days": 8,
+      "age_days": 13,
       "nudge": true
     },
     {
@@ -71,8 +71,8 @@
       "repo": "firstmate",
       "owner": "mate",
       "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
-      "age_days": 3,
-      "nudge": false
+      "age_days": 8,
+      "nudge": true
     },
     {
       "id": "young",
@@ -80,8 +80,8 @@
       "repo": "firstmate",
       "owner": "(main)",
       "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
-      "age_days": 3,
-      "nudge": false
+      "age_days": 8,
+      "nudge": true
     }
   ],
   "secondmates": [
@@ -91,7 +91,7 @@
       "doing": "structured home state invalid: child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, youn…",
       "provenance": "structured-home",
       "freshness": "fresh",
-      "age_seconds": 1,
+      "age_seconds": 432002,
       "contradiction": false,
       "reason": "structured home state invalid: child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, young"
     }

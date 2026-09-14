@@ -1,19 +1,9 @@
 {
   "schema": "fm-bearings.v1",
   "home": "live/main",
-  "generated": "2026-09-14T10:09:36Z",
+  "generated": "2026-09-14T10:15:29Z",
   "prs": "not_requested (run: /bearings include PRs)",
   "in_flight": [
-    {
-      "id": "approval",
-      "kind": "ship",
-      "state": "unknown",
-      "repo": "firstmate",
-      "owner": "(main)",
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
-      "name": "Approval still required",
-      "doing": "backend target gone: nm-bearings-isolated-missing:fm-approval"
-    },
     {
       "id": "in-flight",
       "kind": "ship",
@@ -23,6 +13,16 @@
       "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
       "name": "Review pending delivery",
       "doing": "backend target gone: nm-bearings-isolated-missing:fm-in-flight"
+    },
+    {
+      "id": "young",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Delivered change",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-young"
     },
     {
       "id": "mate/in-flight",
@@ -73,15 +73,6 @@
       "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
       "age_days": 3,
       "nudge": false
-    },
-    {
-      "id": "young",
-      "what": "Delivered change",
-      "repo": "firstmate",
-      "owner": "(main)",
-      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
-      "age_days": 3,
-      "nudge": false
     }
   ],
   "secondmates": [
@@ -91,7 +82,7 @@
       "doing": "structured home state invalid: child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, youn…",
       "provenance": "structured-home",
       "freshness": "fresh",
-      "age_seconds": 1,
+      "age_seconds": 345,
       "contradiction": false,
       "reason": "structured home state invalid: child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, young"
     }
@@ -112,7 +103,22 @@
       ]
     }
   ],
-  "decisions_open": [],
+  "decisions_open": [
+    {
+      "id": "approval",
+      "key": "approval",
+      "verb": "captain-hold",
+      "summary": "Approval still required: Approve publication",
+      "owner": "(main)"
+    },
+    {
+      "id": "mate/mate-call",
+      "key": "mate-call",
+      "verb": "captain-hold",
+      "summary": "Second mate decision: Choose whether to proceed",
+      "owner": "mate"
+    }
+  ],
   "landed": [],
   "gates": [
     {

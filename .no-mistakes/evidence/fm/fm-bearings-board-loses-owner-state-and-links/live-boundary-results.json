@@ -1,0 +1,67 @@
+[
+  {
+    "case": "6 days",
+    "row": {
+      "id": "young",
+      "what": "Delivered change",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 6,
+      "nudge": false
+    }
+  },
+  {
+    "case": "7 days",
+    "row": {
+      "id": "young",
+      "what": "Delivered change",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 7,
+      "nudge": true
+    }
+  },
+  {
+    "case": "8 days",
+    "row": {
+      "id": "young",
+      "what": "Delivered change",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 8,
+      "nudge": true
+    }
+  },
+  {
+    "case": "paused superseded by done",
+    "awaiting": false,
+    "underway": true
+  },
+  {
+    "case": "paused superseded by working",
+    "awaiting": false,
+    "underway": true
+  },
+  {
+    "case": "paused superseded by failed",
+    "awaiting": false,
+    "underway": true
+  },
+  {
+    "case": "poll identity differs from recorded PR",
+    "awaiting": false,
+    "underway": {
+      "id": "young",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
+      "name": "Delivered change",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-young"
+    }
+  }
+]

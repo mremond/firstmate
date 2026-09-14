@@ -1,50 +1,68 @@
-$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWNDZ2WVGJ/.test-phase/main-home bin/fm-pr-check.sh young https://github.com/acme/repo/pull/3
+Real product CLI, isolated newly created fleet records; no fake executables.
+
+$ FM_HOME=<isolated main> fm-pr-check.sh young https://github.com/kunchenguid/firstmate/pull/4019
+exit=0
 armed: state/young.check.sh
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ●  WATCHER DOWN - SUPERVISION IS OFF
-●  3 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
-●  This read-only session should report the lapse, not repair it.
+●  2 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
 ●  This is a supervision warning only; the guarded operation WILL still run.
-●  Watcher repair belongs to the session holding the fleet lock; do not drain, arm, or repair from this read-only session.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-exit: 0
-$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWNDZ2WVGJ/.test-phase/main-home bin/fm-pr-check.sh overdue https://github.com/acme/repo/pull/4
+
+$ FM_HOME=<isolated main> fm-pr-check.sh overdue https://github.com/kunchenguid/firstmate/pull/4427
+exit=0
 armed: state/overdue.check.sh
-●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-●  WATCHER DOWN - SUPERVISION IS OFF
-●  4 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
-●  This read-only session should report the lapse, not repair it.
-●  This is a supervision warning only; the guarded operation WILL still run.
-●  Watcher repair belongs to the session holding the fleet lock; do not drain, arm, or repair from this read-only session.
-●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-exit: 0
-$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWNDZ2WVGJ/.test-phase/main-home bin/fm-pr-check.sh approval https://github.com/acme/repo/pull/6
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+$ FM_HOME=<isolated main> fm-pr-check.sh approval https://github.com/kunchenguid/firstmate/pull/4019
+exit=0
 armed: state/approval.check.sh
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+$ FM_HOME=<isolated mate> fm-pr-check.sh young https://github.com/kunchenguid/firstmate/pull/4019
+exit=0
+armed: state/young.check.sh
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ●  WATCHER DOWN - SUPERVISION IS OFF
-●  5 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
-●  This read-only session should report the lapse, not repair it.
+●  2 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
 ●  This is a supervision warning only; the guarded operation WILL still run.
-●  Watcher repair belongs to the session holding the fleet lock; do not drain, arm, or repair from this read-only session.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-exit: 0
-$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWNDZ2WVGJ/.test-phase/main-home bin/fm-fleet-snapshot.sh --secondmate-home-summary
+actionable: PR https://github.com/kunchenguid/firstmate/pull/4019 is registered but its ready line did not reach the parent channel (rc=3)
+
+$ FM_HOME=<isolated mate> fm-pr-check.sh overdue https://github.com/kunchenguid/firstmate/pull/4427
+exit=0
+armed: state/overdue.check.sh
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+actionable: PR https://github.com/kunchenguid/firstmate/pull/4427 is registered but its ready line did not reach the parent channel (rc=3)
+
+$ FM_HOME=<isolated mate> fm-pr-check.sh approval https://github.com/kunchenguid/firstmate/pull/4019
+exit=0
+armed: state/approval.check.sh
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+actionable: PR https://github.com/kunchenguid/firstmate/pull/4019 is registered but its ready line did not reach the parent channel (rc=3)
+
+$ FM_HOME=<isolated main> fm-fleet-snapshot.sh --secondmate-home-summary
+exit=0
 {
   "schema": "fm-secondmate-home-summary.v1",
   "hold_classifier_schema": "fm-captain-hold-buckets.v1",
-  "generated": "2026-09-08T20:46:52Z",
-  "generated_epoch": 1788900412,
-  "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWNDZ2WVGJ/.test-phase/main-home",
+  "generated": "2026-09-14T10:07:36Z",
+  "generated_epoch": 1789380456,
+  "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/main",
   "valid": false,
-  "reason": "child current state unavailable: approval, in-flight, overdue, recorded, review-mate, unrecorded, young",
+  "reason": "child current state unavailable: approval, in-flight, mate, overdue, recorded, unrecorded, young",
   "invalidity": {
     "kind": "child_current_unavailable",
     "ids": [
       "approval",
       "in-flight",
+      "mate",
       "overdue",
       "recorded",
-      "review-mate",
       "unrecorded",
       "young"
     ]
@@ -56,9 +74,20 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "kind": "ship",
       "state": "unknown",
       "repo": "firstmate",
+      "name": "Review pending delivery",
       "source": "endpoint-gone",
-      "pr_url": "https://github.com/acme/repo/pull/1",
-      "doing": "backend target gone: nm-test-no-session:in-flight"
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-in-flight"
+    },
+    {
+      "id": "approval",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "name": "Approval still required",
+      "source": "endpoint-gone",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-approval"
     }
   ],
   "awaiting_merge": [
@@ -67,51 +96,31 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "kind": "ship",
       "state": "unknown",
       "repo": "firstmate",
-      "title": "Long outside maintainer wait",
-      "pr_url": "https://github.com/acme/repo/pull/4",
-      "delivered_epoch": 1788209211
+      "title": "Delivery awaiting response",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
+      "delivered_epoch": 1788689251
     },
     {
       "id": "young",
       "kind": "ship",
       "state": "unknown",
       "repo": "firstmate",
-      "title": "Delivered to outside maintainer",
-      "pr_url": "https://github.com/acme/repo/pull/3",
-      "delivered_epoch": 1788641210
+      "title": "Delivered change",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "delivered_epoch": 1789121251
     }
   ],
   "decisions_open": [
     {
       "id": "approval",
       "key": "approval",
-      "verb": "captain-hold",
-      "summary": "Approval still owed",
-      "reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
-      "hold_until": null,
-      "hold_bucket": "live",
-      "hold_age_days": 7,
-      "source": "backlog"
-    },
-    {
-      "id": "approval",
-      "key": "approval",
       "verb": "needs-decision",
-      "summary": "captain approval required",
+      "summary": "approve publication",
       "reason": null,
       "source": "status"
     }
   ],
   "holds": [
-    {
-      "id": "approval",
-      "title": "Approval still owed",
-      "blocked_by": null,
-      "blocked_by_ids": [],
-      "unresolved_blocker_ids": [],
-      "reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
-      "source": "backlog"
-    },
     {
       "id": "recorded",
       "title": "Held delivery",
@@ -123,7 +132,7 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
     },
     {
       "id": "unrecorded",
-      "title": "Held without own request",
+      "title": "Held delivery without request",
       "blocked_by": null,
       "blocked_by_ids": [],
       "unresolved_blocker_ids": [],
@@ -133,23 +142,6 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
   ],
   "queued": [
     {
-      "id": "approval",
-      "title": "Approval still owed",
-      "blocked_by": null,
-      "blocked_by_ids": [],
-      "unresolved_blocker_ids": [],
-      "blocked_reason": null,
-      "hold_reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
-      "hold_kind": "captain",
-      "hold_until": null,
-      "hold_bucket": "live",
-      "hold_age_days": 7,
-      "captain_actionable": true,
-      "repo": "firstmate",
-      "pr_url": "https://github.com/acme/repo/pull/6",
-      "kind": "ship"
-    },
-    {
       "id": "recorded",
       "title": "Held delivery",
       "blocked_by": null,
@@ -160,15 +152,16 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "hold_kind": "external",
       "hold_until": null,
       "hold_bucket": null,
-      "hold_age_days": 7,
+      "hold_age_days": 2,
       "captain_actionable": false,
       "repo": "firstmate",
       "pr_url": "https://github.com/acme/repo/pull/2",
-      "kind": "ship"
+      "kind": "ship",
+      "since": "2026-09-12"
     },
     {
       "id": "unrecorded",
-      "title": "Held without own request",
+      "title": "Held delivery without request",
       "blocked_by": null,
       "blocked_by_ids": [],
       "unresolved_blocker_ids": [],
@@ -177,11 +170,12 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "hold_kind": "external",
       "hold_until": null,
       "hold_bucket": null,
-      "hold_age_days": 7,
+      "hold_age_days": 2,
       "captain_actionable": false,
       "repo": "firstmate",
       "pr_url": null,
-      "kind": "ship"
+      "kind": "ship",
+      "since": "2026-09-12"
     }
   ],
   "landed": [],
@@ -191,11 +185,11 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "state": "unknown",
       "source": "endpoint-gone",
       "endpoint": {
-        "target": "nm-test-no-session:approval",
+        "target": "nm-bearings-isolated-missing:fm-approval",
         "exists": false,
         "agent_alive": "not_checked",
         "status": "absent",
-        "observed_at": "2026-09-08T20:46:52Z",
+        "observed_at": "2026-09-14T10:07:36Z",
         "freshness": "fresh"
       }
     },
@@ -204,11 +198,24 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "state": "unknown",
       "source": "endpoint-gone",
       "endpoint": {
-        "target": "nm-test-no-session:in-flight",
+        "target": "nm-bearings-isolated-missing:fm-in-flight",
         "exists": false,
         "agent_alive": "not_checked",
         "status": "absent",
-        "observed_at": "2026-09-08T20:46:52Z",
+        "observed_at": "2026-09-14T10:07:36Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "mate",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-bearings-isolated-missing:fm-mate",
+        "exists": false,
+        "agent_alive": "dead",
+        "status": "absent",
+        "observed_at": "2026-09-14T10:07:36Z",
         "freshness": "fresh"
       }
     },
@@ -217,11 +224,11 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "state": "unknown",
       "source": "endpoint-gone",
       "endpoint": {
-        "target": "nm-test-no-session:overdue",
+        "target": "nm-bearings-isolated-missing:fm-overdue",
         "exists": false,
         "agent_alive": "not_checked",
         "status": "absent",
-        "observed_at": "2026-09-08T20:46:52Z",
+        "observed_at": "2026-09-14T10:07:36Z",
         "freshness": "fresh"
       }
     },
@@ -230,24 +237,11 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "state": "unknown",
       "source": "endpoint-gone",
       "endpoint": {
-        "target": "nm-test-no-session:recorded",
+        "target": "nm-bearings-isolated-missing:fm-recorded",
         "exists": false,
         "agent_alive": "not_checked",
         "status": "absent",
-        "observed_at": "2026-09-08T20:46:52Z",
-        "freshness": "fresh"
-      }
-    },
-    {
-      "id": "review-mate",
-      "state": "unknown",
-      "source": "endpoint-gone",
-      "endpoint": {
-        "target": "nm-test-no-session:mate",
-        "exists": false,
-        "agent_alive": "dead",
-        "status": "absent",
-        "observed_at": "2026-09-08T20:46:52Z",
+        "observed_at": "2026-09-14T10:07:36Z",
         "freshness": "fresh"
       }
     },
@@ -256,11 +250,11 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "state": "unknown",
       "source": "endpoint-gone",
       "endpoint": {
-        "target": "nm-test-no-session:unrecorded",
+        "target": "nm-bearings-isolated-missing:fm-unrecorded",
         "exists": false,
         "agent_alive": "not_checked",
         "status": "absent",
-        "observed_at": "2026-09-08T20:46:52Z",
+        "observed_at": "2026-09-14T10:07:36Z",
         "freshness": "fresh"
       }
     },
@@ -269,67 +263,35 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "state": "unknown",
       "source": "endpoint-gone",
       "endpoint": {
-        "target": "nm-test-no-session:young",
+        "target": "nm-bearings-isolated-missing:fm-young",
         "exists": false,
         "agent_alive": "not_checked",
         "status": "absent",
-        "observed_at": "2026-09-08T20:46:52Z",
+        "observed_at": "2026-09-14T10:07:36Z",
         "freshness": "fresh"
       }
     }
   ],
   "counts": {
-    "active_children": 1,
+    "active_children": 2,
     "awaiting_merge": 2,
-    "decisions_open": 2,
-    "holds": 3,
-    "queued": 3,
+    "decisions_open": 1,
+    "holds": 2,
+    "queued": 2,
     "landed": 0,
     "endpoints": 7
   },
   "omitted": []
 }
-exit: 0
-$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWNDZ2WVGJ/.test-phase/mate-home bin/fm-pr-check.sh young https://github.com/acme/repo/pull/3
-armed: state/young.check.sh
-●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-●  WATCHER DOWN - SUPERVISION IS OFF
-●  2 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
-●  This read-only session should report the lapse, not repair it.
-●  This is a supervision warning only; the guarded operation WILL still run.
-●  Watcher repair belongs to the session holding the fleet lock; do not drain, arm, or repair from this read-only session.
-●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-actionable: PR https://github.com/acme/repo/pull/3 is registered but its ready line did not reach the parent channel (rc=3)
-exit: 0
-$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWNDZ2WVGJ/.test-phase/mate-home bin/fm-pr-check.sh overdue https://github.com/acme/repo/pull/5
-armed: state/overdue.check.sh
-●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-●  WATCHER DOWN - SUPERVISION IS OFF
-●  3 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
-●  This read-only session should report the lapse, not repair it.
-●  This is a supervision warning only; the guarded operation WILL still run.
-●  Watcher repair belongs to the session holding the fleet lock; do not drain, arm, or repair from this read-only session.
-●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-actionable: PR https://github.com/acme/repo/pull/5 is registered but its ready line did not reach the parent channel (rc=3)
-exit: 0
-$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWNDZ2WVGJ/.test-phase/mate-home bin/fm-pr-check.sh approval https://github.com/acme/repo/pull/6
-armed: state/approval.check.sh
-●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-●  WATCHER DOWN - SUPERVISION IS OFF
-●  4 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
-●  This read-only session should report the lapse, not repair it.
-●  This is a supervision warning only; the guarded operation WILL still run.
-●  Watcher repair belongs to the session holding the fleet lock; do not drain, arm, or repair from this read-only session.
-●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-actionable: PR https://github.com/acme/repo/pull/6 is registered but its ready line did not reach the parent channel (rc=3)
-exit: 0
-$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWNDZ2WVGJ/.test-phase/mate-home bin/fm-fleet-snapshot.sh --secondmate-home-summary
+
+$ FM_HOME=<isolated mate> fm-fleet-snapshot.sh --secondmate-home-summary
+exit=0
 {
   "schema": "fm-secondmate-home-summary.v1",
   "hold_classifier_schema": "fm-captain-hold-buckets.v1",
-  "generated": "2026-09-08T20:46:57Z",
-  "generated_epoch": 1788900417,
-  "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWNDZ2WVGJ/.test-phase/mate-home",
+  "generated": "2026-09-14T10:07:38Z",
+  "generated_epoch": 1789380458,
+  "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/mate",
   "valid": false,
   "reason": "child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, young",
   "invalidity": {
@@ -350,9 +312,20 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "kind": "ship",
       "state": "unknown",
       "repo": "firstmate",
+      "name": "Review pending delivery",
       "source": "endpoint-gone",
-      "pr_url": "https://github.com/acme/repo/pull/1",
-      "doing": "backend target gone: nm-test-no-session:in-flight"
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-in-flight"
+    },
+    {
+      "id": "approval",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "name": "Approval still required",
+      "source": "endpoint-gone",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-approval"
     }
   ],
   "awaiting_merge": [
@@ -361,51 +334,31 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "kind": "ship",
       "state": "unknown",
       "repo": "firstmate",
-      "title": "Long outside maintainer wait",
-      "pr_url": "https://github.com/acme/repo/pull/5",
-      "delivered_epoch": 1788209216
+      "title": "Delivery awaiting response",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
+      "delivered_epoch": 1788689251
     },
     {
       "id": "young",
       "kind": "ship",
       "state": "unknown",
       "repo": "firstmate",
-      "title": "Delivered to outside maintainer",
-      "pr_url": "https://github.com/acme/repo/pull/3",
-      "delivered_epoch": 1788641215
+      "title": "Delivered change",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "delivered_epoch": 1789121251
     }
   ],
   "decisions_open": [
     {
       "id": "approval",
       "key": "approval",
-      "verb": "captain-hold",
-      "summary": "Approval still owed",
-      "reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
-      "hold_until": null,
-      "hold_bucket": "live",
-      "hold_age_days": 7,
-      "source": "backlog"
-    },
-    {
-      "id": "approval",
-      "key": "approval",
       "verb": "needs-decision",
-      "summary": "captain approval required",
+      "summary": "approve publication",
       "reason": null,
       "source": "status"
     }
   ],
   "holds": [
-    {
-      "id": "approval",
-      "title": "Approval still owed",
-      "blocked_by": null,
-      "blocked_by_ids": [],
-      "unresolved_blocker_ids": [],
-      "reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
-      "source": "backlog"
-    },
     {
       "id": "recorded",
       "title": "Held delivery",
@@ -417,7 +370,7 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
     },
     {
       "id": "unrecorded",
-      "title": "Held without own request",
+      "title": "Held delivery without request",
       "blocked_by": null,
       "blocked_by_ids": [],
       "unresolved_blocker_ids": [],
@@ -427,23 +380,6 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
   ],
   "queued": [
     {
-      "id": "approval",
-      "title": "Approval still owed",
-      "blocked_by": null,
-      "blocked_by_ids": [],
-      "unresolved_blocker_ids": [],
-      "blocked_reason": null,
-      "hold_reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
-      "hold_kind": "captain",
-      "hold_until": null,
-      "hold_bucket": "live",
-      "hold_age_days": 7,
-      "captain_actionable": true,
-      "repo": "firstmate",
-      "pr_url": "https://github.com/acme/repo/pull/6",
-      "kind": "ship"
-    },
-    {
       "id": "recorded",
       "title": "Held delivery",
       "blocked_by": null,
@@ -454,15 +390,16 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "hold_kind": "external",
       "hold_until": null,
       "hold_bucket": null,
-      "hold_age_days": 7,
+      "hold_age_days": 2,
       "captain_actionable": false,
       "repo": "firstmate",
       "pr_url": "https://github.com/acme/repo/pull/2",
-      "kind": "ship"
+      "kind": "ship",
+      "since": "2026-09-12"
     },
     {
       "id": "unrecorded",
-      "title": "Held without own request",
+      "title": "Held delivery without request",
       "blocked_by": null,
       "blocked_by_ids": [],
       "unresolved_blocker_ids": [],
@@ -471,11 +408,12 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "hold_kind": "external",
       "hold_until": null,
       "hold_bucket": null,
-      "hold_age_days": 7,
+      "hold_age_days": 2,
       "captain_actionable": false,
       "repo": "firstmate",
       "pr_url": null,
-      "kind": "ship"
+      "kind": "ship",
+      "since": "2026-09-12"
     }
   ],
   "landed": [],
@@ -485,11 +423,11 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "state": "unknown",
       "source": "endpoint-gone",
       "endpoint": {
-        "target": "nm-test-no-session:approval",
+        "target": "nm-bearings-isolated-missing:fm-approval",
         "exists": false,
         "agent_alive": "not_checked",
         "status": "absent",
-        "observed_at": "2026-09-08T20:46:57Z",
+        "observed_at": "2026-09-14T10:07:38Z",
         "freshness": "fresh"
       }
     },
@@ -498,11 +436,11 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "state": "unknown",
       "source": "endpoint-gone",
       "endpoint": {
-        "target": "nm-test-no-session:in-flight",
+        "target": "nm-bearings-isolated-missing:fm-in-flight",
         "exists": false,
         "agent_alive": "not_checked",
         "status": "absent",
-        "observed_at": "2026-09-08T20:46:57Z",
+        "observed_at": "2026-09-14T10:07:38Z",
         "freshness": "fresh"
       }
     },
@@ -511,11 +449,11 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "state": "unknown",
       "source": "endpoint-gone",
       "endpoint": {
-        "target": "nm-test-no-session:overdue",
+        "target": "nm-bearings-isolated-missing:fm-overdue",
         "exists": false,
         "agent_alive": "not_checked",
         "status": "absent",
-        "observed_at": "2026-09-08T20:46:57Z",
+        "observed_at": "2026-09-14T10:07:38Z",
         "freshness": "fresh"
       }
     },
@@ -524,11 +462,11 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "state": "unknown",
       "source": "endpoint-gone",
       "endpoint": {
-        "target": "nm-test-no-session:recorded",
+        "target": "nm-bearings-isolated-missing:fm-recorded",
         "exists": false,
         "agent_alive": "not_checked",
         "status": "absent",
-        "observed_at": "2026-09-08T20:46:57Z",
+        "observed_at": "2026-09-14T10:07:38Z",
         "freshness": "fresh"
       }
     },
@@ -537,11 +475,11 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "state": "unknown",
       "source": "endpoint-gone",
       "endpoint": {
-        "target": "nm-test-no-session:unrecorded",
+        "target": "nm-bearings-isolated-missing:fm-unrecorded",
         "exists": false,
         "agent_alive": "not_checked",
         "status": "absent",
-        "observed_at": "2026-09-08T20:46:57Z",
+        "observed_at": "2026-09-14T10:07:38Z",
         "freshness": "fresh"
       }
     },
@@ -550,107 +488,324 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "state": "unknown",
       "source": "endpoint-gone",
       "endpoint": {
-        "target": "nm-test-no-session:young",
+        "target": "nm-bearings-isolated-missing:fm-young",
         "exists": false,
         "agent_alive": "not_checked",
         "status": "absent",
-        "observed_at": "2026-09-08T20:46:57Z",
+        "observed_at": "2026-09-14T10:07:38Z",
         "freshness": "fresh"
       }
     }
   ],
   "counts": {
-    "active_children": 1,
+    "active_children": 2,
     "awaiting_merge": 2,
-    "decisions_open": 2,
-    "holds": 3,
-    "queued": 3,
+    "decisions_open": 1,
+    "holds": 2,
+    "queued": 2,
     "landed": 0,
     "endpoints": 6
   },
   "omitted": []
 }
-exit: 0
-$ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWNDZ2WVGJ/.test-phase/main-home bin/fm-bearings-snapshot.sh --json
+
+$ FM_HOME=<isolated main> fm-bearings-snapshot.sh --json
+exit=0
 {
   "schema": "fm-bearings.v1",
-  "home": ".test-phase/main-home",
-  "generated": "2026-09-08T20:46:59Z",
+  "home": "live/main",
+  "generated": "2026-09-14T10:07:39Z",
   "prs": "not_requested (run: /bearings include PRs)",
   "in_flight": [
+    {
+      "id": "approval",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Approval still required",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-approval"
+    },
     {
       "id": "in-flight",
       "kind": "ship",
       "state": "unknown",
       "repo": "firstmate",
       "owner": "(main)",
-      "pr_url": "https://github.com/acme/repo/pull/1",
-      "doing": "backend target gone: nm-test-no-session:in-flight"
-    },
-    {
-      "id": "review-mate/in-flight",
-      "kind": "ship",
-      "state": "unknown",
-      "repo": "firstmate",
-      "owner": "review-mate",
-      "pr_url": "https://github.com/acme/repo/pull/1",
-      "doing": "backend target gone: nm-test-no-session:in-flight"
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Review pending delivery",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-in-flight"
     }
   ],
   "awaiting_nudge_days": 7,
   "awaiting": [
     {
       "id": "overdue",
-      "what": "Long outside maintainer wait",
+      "what": "Delivery awaiting response",
       "repo": "firstmate",
       "owner": "(main)",
-      "pr_url": "https://github.com/acme/repo/pull/4",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
       "age_days": 8,
       "nudge": true
-    },
-    {
-      "id": "review-mate/overdue",
-      "what": "Long outside maintainer wait",
-      "repo": "firstmate",
-      "owner": "review-mate",
-      "pr_url": "https://github.com/acme/repo/pull/5",
-      "age_days": 8,
-      "nudge": true
-    },
-    {
-      "id": "review-mate/young",
-      "what": "Delivered to outside maintainer",
-      "repo": "firstmate",
-      "owner": "review-mate",
-      "pr_url": "https://github.com/acme/repo/pull/3",
-      "age_days": 3,
-      "nudge": false
     },
     {
       "id": "young",
-      "what": "Delivered to outside maintainer",
+      "what": "Delivered change",
       "repo": "firstmate",
       "owner": "(main)",
-      "pr_url": "https://github.com/acme/repo/pull/3",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
       "age_days": 3,
       "nudge": false
     }
   ],
   "secondmates": [
     {
-      "id": "review-mate",
+      "id": "mate",
+      "state": "unknown",
+      "doing": "structured home ledger is missing, unreadable, or invalid",
+      "provenance": "unknown",
+      "freshness": "unknown",
+      "age_seconds": null,
+      "contradiction": false,
+      "reason": "structured home ledger is missing, unreadable, or invalid"
+    }
+  ],
+  "secondmate_reconcile": [],
+  "decisions_open": [],
+  "landed": [],
+  "gates": [
+    {
+      "id": "recorded",
+      "title": "Held delivery",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "(main)",
+      "pr_url": "https://github.com/acme/repo/pull/2",
+      "filed": "2026-09-12"
+    },
+    {
+      "id": "unrecorded",
+      "title": "Held delivery without request",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "(main)",
+      "pr_url": null,
+      "filed": "2026-09-12"
+    }
+  ],
+  "reports": [],
+  "recorded_prs": [
+    {
+      "id": "approval",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
+    },
+    {
+      "id": "in-flight",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
+    },
+    {
+      "id": "overdue",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4427"
+    },
+    {
+      "id": "recorded",
+      "url": "https://github.com/acme/repo/pull/2"
+    },
+    {
+      "id": "young",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
+    }
+  ],
+  "unhealthy_endpoints": [
+    {
+      "id": "approval",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-approval",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "in-flight",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-in-flight",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-mate",
+      "exists": false,
+      "agent": "dead"
+    },
+    {
+      "id": "overdue",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-overdue",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "recorded",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-recorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "unrecorded",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-unrecorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "young",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-young",
+      "exists": false,
+      "agent": "not_checked"
+    }
+  ],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "secondmate home(s) with unreadable structured state: 1",
+      "reveal": "inspect the listed secondmate home ledgers"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}
+
+$ FM_HOME=<isolated mate> fm-home-summary-refresh.sh
+exit=0
+
+$ FM_HOME=<isolated main> fm-bearings-snapshot.sh --json
+exit=0
+{
+  "schema": "fm-bearings.v1",
+  "home": "live/main",
+  "generated": "2026-09-14T10:09:36Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [
+    {
+      "id": "approval",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Approval still required",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-approval"
+    },
+    {
+      "id": "in-flight",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Review pending delivery",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-in-flight"
+    },
+    {
+      "id": "mate/in-flight",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Review pending delivery",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-in-flight"
+    },
+    {
+      "id": "mate/approval",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Approval still required",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-approval"
+    }
+  ],
+  "awaiting_nudge_days": 7,
+  "awaiting": [
+    {
+      "id": "mate/overdue",
+      "what": "Delivery awaiting response",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
+      "age_days": 8,
+      "nudge": true
+    },
+    {
+      "id": "overdue",
+      "what": "Delivery awaiting response",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
+      "age_days": 8,
+      "nudge": true
+    },
+    {
+      "id": "mate/young",
+      "what": "Delivered change",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 3,
+      "nudge": false
+    },
+    {
+      "id": "young",
+      "what": "Delivered change",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 3,
+      "nudge": false
+    }
+  ],
+  "secondmates": [
+    {
+      "id": "mate",
       "state": "unknown",
       "doing": "structured home state invalid: child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, youn…",
       "provenance": "structured-home",
       "freshness": "fresh",
-      "age_seconds": 2,
+      "age_seconds": 1,
       "contradiction": false,
       "reason": "structured home state invalid: child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, young"
     }
   ],
   "secondmate_reconcile": [
     {
-      "id": "review-mate",
+      "id": "mate",
       "spawn_gen": null,
       "host": null,
       "kind": "child_current_unavailable",
@@ -664,22 +819,7 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       ]
     }
   ],
-  "decisions_open": [
-    {
-      "id": "approval",
-      "key": "approval",
-      "verb": "captain-hold",
-      "summary": "Approval still owed: dependency https://github.com/acme/repo/pull/99 is still under review",
-      "owner": "(main)"
-    },
-    {
-      "id": "review-mate/approval",
-      "key": "approval",
-      "verb": "captain-hold",
-      "summary": "Approval still owed: dependency https://github.com/acme/repo/pull/99 is still under review",
-      "owner": "review-mate"
-    }
-  ],
+  "decisions_open": [],
   "landed": [],
   "gates": [
     {
@@ -688,46 +828,50 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
       "blocked_by": "-",
       "reason": "dependency https://github.com/acme/repo/…",
       "owner": "(main)",
-      "pr_url": "https://github.com/acme/repo/pull/2"
+      "pr_url": "https://github.com/acme/repo/pull/2",
+      "filed": "2026-09-12"
     },
     {
       "id": "unrecorded",
-      "title": "Held without own request",
+      "title": "Held delivery without request",
       "blocked_by": "-",
       "reason": "dependency https://github.com/acme/repo/…",
       "owner": "(main)",
-      "pr_url": null
+      "pr_url": null,
+      "filed": "2026-09-12"
     },
     {
       "id": "recorded",
       "title": "Held delivery",
       "blocked_by": "-",
       "reason": "dependency https://github.com/acme/repo/…",
-      "owner": "review-mate",
-      "pr_url": "https://github.com/acme/repo/pull/2"
+      "owner": "mate",
+      "pr_url": "https://github.com/acme/repo/pull/2",
+      "filed": "2026-09-12"
     },
     {
       "id": "unrecorded",
-      "title": "Held without own request",
+      "title": "Held delivery without request",
       "blocked_by": "-",
       "reason": "dependency https://github.com/acme/repo/…",
-      "owner": "review-mate",
-      "pr_url": null
+      "owner": "mate",
+      "pr_url": null,
+      "filed": "2026-09-12"
     }
   ],
   "reports": [],
   "recorded_prs": [
     {
       "id": "approval",
-      "url": "https://github.com/acme/repo/pull/6"
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
     },
     {
       "id": "in-flight",
-      "url": "https://github.com/acme/repo/pull/1"
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
     },
     {
       "id": "overdue",
-      "url": "https://github.com/acme/repo/pull/4"
+      "url": "https://github.com/kunchenguid/firstmate/pull/4427"
     },
     {
       "id": "recorded",
@@ -735,98 +879,98 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
     },
     {
       "id": "young",
-      "url": "https://github.com/acme/repo/pull/3"
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
     }
   ],
   "unhealthy_endpoints": [
     {
       "id": "approval",
       "backend": "tmux",
-      "target": "nm-test-no-session:approval",
+      "target": "nm-bearings-isolated-missing:fm-approval",
       "exists": false,
       "agent": "not_checked"
     },
     {
       "id": "in-flight",
       "backend": "tmux",
-      "target": "nm-test-no-session:in-flight",
+      "target": "nm-bearings-isolated-missing:fm-in-flight",
       "exists": false,
       "agent": "not_checked"
     },
     {
+      "id": "mate",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-mate",
+      "exists": false,
+      "agent": "dead"
+    },
+    {
       "id": "overdue",
       "backend": "tmux",
-      "target": "nm-test-no-session:overdue",
+      "target": "nm-bearings-isolated-missing:fm-overdue",
       "exists": false,
       "agent": "not_checked"
     },
     {
       "id": "recorded",
       "backend": "tmux",
-      "target": "nm-test-no-session:recorded",
+      "target": "nm-bearings-isolated-missing:fm-recorded",
       "exists": false,
       "agent": "not_checked"
     },
     {
-      "id": "review-mate",
-      "backend": "tmux",
-      "target": "nm-test-no-session:mate",
-      "exists": false,
-      "agent": "dead"
-    },
-    {
       "id": "unrecorded",
       "backend": "tmux",
-      "target": "nm-test-no-session:unrecorded",
+      "target": "nm-bearings-isolated-missing:fm-unrecorded",
       "exists": false,
       "agent": "not_checked"
     },
     {
       "id": "young",
       "backend": "tmux",
-      "target": "nm-test-no-session:young",
+      "target": "nm-bearings-isolated-missing:fm-young",
       "exists": false,
       "agent": "not_checked"
     },
     {
-      "id": "review-mate/approval",
+      "id": "mate/approval",
       "backend": "secondmate-home",
-      "target": "nm-test-no-session:approval",
+      "target": "nm-bearings-isolated-missing:fm-approval",
       "exists": false,
       "agent": "not_checked"
     },
     {
-      "id": "review-mate/in-flight",
+      "id": "mate/in-flight",
       "backend": "secondmate-home",
-      "target": "nm-test-no-session:in-flight",
+      "target": "nm-bearings-isolated-missing:fm-in-flight",
       "exists": false,
       "agent": "not_checked"
     },
     {
-      "id": "review-mate/overdue",
+      "id": "mate/overdue",
       "backend": "secondmate-home",
-      "target": "nm-test-no-session:overdue",
+      "target": "nm-bearings-isolated-missing:fm-overdue",
       "exists": false,
       "agent": "not_checked"
     },
     {
-      "id": "review-mate/recorded",
+      "id": "mate/recorded",
       "backend": "secondmate-home",
-      "target": "nm-test-no-session:recorded",
+      "target": "nm-bearings-isolated-missing:fm-recorded",
       "exists": false,
       "agent": "not_checked"
     },
     {
-      "id": "review-mate/unrecorded",
+      "id": "mate/unrecorded",
       "backend": "secondmate-home",
-      "target": "nm-test-no-session:unrecorded",
+      "target": "nm-bearings-isolated-missing:fm-unrecorded",
       "exists": false,
       "agent": "not_checked"
     },
     {
-      "id": "review-mate/young",
+      "id": "mate/young",
       "backend": "secondmate-home",
-      "target": "nm-test-no-session:young",
+      "target": "nm-bearings-isolated-missing:fm-young",
       "exists": false,
       "agent": "not_checked"
     }
@@ -858,4 +1002,670 @@ $ FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M21B2PY8J90QVVWWN
     }
   ]
 }
-exit: 0
+
+$ FM_HOME=<isolated main> fm-bearings-snapshot.sh --json
+exit=0
+{
+  "schema": "fm-bearings.v1",
+  "home": "live/main",
+  "generated": "2026-09-19T10:09:37Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [
+    {
+      "id": "approval",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Approval still required",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-approval"
+    },
+    {
+      "id": "in-flight",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Review pending delivery",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-in-flight"
+    },
+    {
+      "id": "mate/in-flight",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Review pending delivery",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-in-flight"
+    },
+    {
+      "id": "mate/approval",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Approval still required",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-approval"
+    }
+  ],
+  "awaiting_nudge_days": 7,
+  "awaiting": [
+    {
+      "id": "mate/overdue",
+      "what": "Delivery awaiting response",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
+      "age_days": 13,
+      "nudge": true
+    },
+    {
+      "id": "overdue",
+      "what": "Delivery awaiting response",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
+      "age_days": 13,
+      "nudge": true
+    },
+    {
+      "id": "mate/young",
+      "what": "Delivered change",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 8,
+      "nudge": true
+    },
+    {
+      "id": "young",
+      "what": "Delivered change",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 8,
+      "nudge": true
+    }
+  ],
+  "secondmates": [
+    {
+      "id": "mate",
+      "state": "unknown",
+      "doing": "structured home state invalid: child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, youn…",
+      "provenance": "structured-home",
+      "freshness": "fresh",
+      "age_seconds": 432002,
+      "contradiction": false,
+      "reason": "structured home state invalid: child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, young"
+    }
+  ],
+  "secondmate_reconcile": [
+    {
+      "id": "mate",
+      "spawn_gen": null,
+      "host": null,
+      "kind": "child_current_unavailable",
+      "ids": [
+        "approval",
+        "in-flight",
+        "overdue",
+        "recorded",
+        "unrecorded",
+        "young"
+      ]
+    }
+  ],
+  "decisions_open": [],
+  "landed": [],
+  "gates": [
+    {
+      "id": "recorded",
+      "title": "Held delivery",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "(main)",
+      "pr_url": "https://github.com/acme/repo/pull/2",
+      "filed": "2026-09-12"
+    },
+    {
+      "id": "unrecorded",
+      "title": "Held delivery without request",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "(main)",
+      "pr_url": null,
+      "filed": "2026-09-12"
+    },
+    {
+      "id": "recorded",
+      "title": "Held delivery",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "mate",
+      "pr_url": "https://github.com/acme/repo/pull/2",
+      "filed": "2026-09-12"
+    },
+    {
+      "id": "unrecorded",
+      "title": "Held delivery without request",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "mate",
+      "pr_url": null,
+      "filed": "2026-09-12"
+    }
+  ],
+  "reports": [],
+  "recorded_prs": [
+    {
+      "id": "approval",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
+    },
+    {
+      "id": "in-flight",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
+    },
+    {
+      "id": "overdue",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4427"
+    },
+    {
+      "id": "recorded",
+      "url": "https://github.com/acme/repo/pull/2"
+    },
+    {
+      "id": "young",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
+    }
+  ],
+  "unhealthy_endpoints": [
+    {
+      "id": "approval",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-approval",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "in-flight",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-in-flight",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-mate",
+      "exists": false,
+      "agent": "dead"
+    },
+    {
+      "id": "overdue",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-overdue",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "recorded",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-recorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "unrecorded",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-unrecorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "young",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-young",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/approval",
+      "backend": "secondmate-home",
+      "target": "nm-bearings-isolated-missing:fm-approval",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/in-flight",
+      "backend": "secondmate-home",
+      "target": "nm-bearings-isolated-missing:fm-in-flight",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/overdue",
+      "backend": "secondmate-home",
+      "target": "nm-bearings-isolated-missing:fm-overdue",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/recorded",
+      "backend": "secondmate-home",
+      "target": "nm-bearings-isolated-missing:fm-recorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/unrecorded",
+      "backend": "secondmate-home",
+      "target": "nm-bearings-isolated-missing:fm-unrecorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/young",
+      "backend": "secondmate-home",
+      "target": "nm-bearings-isolated-missing:fm-young",
+      "exists": false,
+      "agent": "not_checked"
+    }
+  ],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}
+
+$ FM_HOME=<isolated main> fm-pr-check.sh young https://github.com/kunchenguid/firstmate/pull/4019
+exit=0
+armed: state/young.check.sh
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+$ FM_HOME=<isolated main> fm-pr-check.sh young https://github.com/kunchenguid/firstmate/pull/4019
+exit=0
+armed: state/young.check.sh
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+$ FM_HOME=<isolated main> fm-pr-check.sh young https://github.com/kunchenguid/firstmate/pull/4427
+exit=0
+armed: state/young.check.sh
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+$ FM_HOME=<isolated main> fm-pr-check.sh young https://github.com/kunchenguid/firstmate/pull/4019
+exit=0
+armed: state/young.check.sh
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+$ FM_HOME=<isolated main> fm-captain-hold.sh hold approval --reason Approve publication
+exit=0
+approval
+
+$ FM_HOME=<isolated mate> fm-captain-hold.sh hold mate-call --reason Choose whether to proceed --title Second mate decision --repo firstmate
+exit=0
+mate-call
+actionable: task mate-call is held for the captain in this home but that did not reach the parent channel (rc=3)
+
+$ FM_HOME=<isolated mate> fm-home-summary-refresh.sh
+exit=0
+
+$ FM_HOME=<isolated main> fm-bearings-snapshot.sh --json
+exit=0
+{
+  "schema": "fm-bearings.v1",
+  "home": "live/main",
+  "generated": "2026-09-14T10:09:45Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "in_flight": [
+    {
+      "id": "in-flight",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Review pending delivery",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-in-flight"
+    },
+    {
+      "id": "mate/in-flight",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Review pending delivery",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-in-flight"
+    },
+    {
+      "id": "mate/approval",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "name": "Approval still required",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-approval"
+    }
+  ],
+  "awaiting_nudge_days": 7,
+  "awaiting": [
+    {
+      "id": "mate/overdue",
+      "what": "Delivery awaiting response",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
+      "age_days": 8,
+      "nudge": true
+    },
+    {
+      "id": "overdue",
+      "what": "Delivery awaiting response",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
+      "age_days": 8,
+      "nudge": true
+    },
+    {
+      "id": "mate/young",
+      "what": "Delivered change",
+      "repo": "firstmate",
+      "owner": "mate",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 3,
+      "nudge": false
+    },
+    {
+      "id": "young",
+      "what": "Delivered change",
+      "repo": "firstmate",
+      "owner": "(main)",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "age_days": 3,
+      "nudge": false
+    }
+  ],
+  "secondmates": [
+    {
+      "id": "mate",
+      "state": "unknown",
+      "doing": "structured home state invalid: child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, youn…",
+      "provenance": "structured-home",
+      "freshness": "fresh",
+      "age_seconds": 1,
+      "contradiction": false,
+      "reason": "structured home state invalid: child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, young"
+    }
+  ],
+  "secondmate_reconcile": [
+    {
+      "id": "mate",
+      "spawn_gen": null,
+      "host": null,
+      "kind": "child_current_unavailable",
+      "ids": [
+        "approval",
+        "in-flight",
+        "overdue",
+        "recorded",
+        "unrecorded",
+        "young"
+      ]
+    }
+  ],
+  "decisions_open": [
+    {
+      "id": "approval",
+      "key": "approval",
+      "verb": "captain-hold",
+      "summary": "Approval still required: Approve publication",
+      "owner": "(main)"
+    },
+    {
+      "id": "mate/mate-call",
+      "key": "mate-call",
+      "verb": "captain-hold",
+      "summary": "Second mate decision: Choose whether to proceed",
+      "owner": "mate"
+    }
+  ],
+  "landed": [],
+  "gates": [
+    {
+      "id": "recorded",
+      "title": "Held delivery",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "(main)",
+      "pr_url": "https://github.com/acme/repo/pull/2",
+      "filed": "2026-09-12"
+    },
+    {
+      "id": "unrecorded",
+      "title": "Held delivery without request",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "(main)",
+      "pr_url": null,
+      "filed": "2026-09-12"
+    },
+    {
+      "id": "recorded",
+      "title": "Held delivery",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "mate",
+      "pr_url": "https://github.com/acme/repo/pull/2",
+      "filed": "2026-09-12"
+    },
+    {
+      "id": "unrecorded",
+      "title": "Held delivery without request",
+      "blocked_by": "-",
+      "reason": "dependency https://github.com/acme/repo/…",
+      "owner": "mate",
+      "pr_url": null,
+      "filed": "2026-09-12"
+    }
+  ],
+  "reports": [],
+  "recorded_prs": [
+    {
+      "id": "approval",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
+    },
+    {
+      "id": "in-flight",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
+    },
+    {
+      "id": "overdue",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4427"
+    },
+    {
+      "id": "recorded",
+      "url": "https://github.com/acme/repo/pull/2"
+    },
+    {
+      "id": "young",
+      "url": "https://github.com/kunchenguid/firstmate/pull/4019"
+    }
+  ],
+  "unhealthy_endpoints": [
+    {
+      "id": "approval",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-approval",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "in-flight",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-in-flight",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-mate",
+      "exists": false,
+      "agent": "dead"
+    },
+    {
+      "id": "overdue",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-overdue",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "recorded",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-recorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "unrecorded",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-unrecorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "young",
+      "backend": "tmux",
+      "target": "nm-bearings-isolated-missing:fm-young",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/approval",
+      "backend": "secondmate-home",
+      "target": "nm-bearings-isolated-missing:fm-approval",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/in-flight",
+      "backend": "secondmate-home",
+      "target": "nm-bearings-isolated-missing:fm-in-flight",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/overdue",
+      "backend": "secondmate-home",
+      "target": "nm-bearings-isolated-missing:fm-overdue",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/recorded",
+      "backend": "secondmate-home",
+      "target": "nm-bearings-isolated-missing:fm-recorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/unrecorded",
+      "backend": "secondmate-home",
+      "target": "nm-bearings-isolated-missing:fm-unrecorded",
+      "exists": false,
+      "agent": "not_checked"
+    },
+    {
+      "id": "mate/young",
+      "backend": "secondmate-home",
+      "target": "nm-bearings-isolated-missing:fm-young",
+      "exists": false,
+      "agent": "not_checked"
+    }
+  ],
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}
+
+$ FM_HOME=<isolated main> fm-bearings-board.sh build /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/payload.json
+exit=0
+board: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/main/.lavish/bearings-board.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/main/.lavish/bearings-board.html
+  url: "http://mac-mini.tail37af6.ts.net:4491/session/63dd6133384cb72d"
+  status: opened
+next_step: "Do not respond to the user just yet. Now you must run `lavish-axi poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/main/.lavish/bearings-board.html`. This command long-polls until the user sends feedback or ends the session, and it stays silent the whole time - that is normal, never kill it. Layout issues the browser detects do not return this poll; they wait in the user's Layout issues inbox until the user queues them, then arrive as an ordinary tag \"layout-warnings\" prompt. Do not pass --timeout-ms during normal agent use. Keep the poll in the foreground by default and let it return the feedback directly to the agent. A background poll is allowed only through a harness-native tracked background-job facility whose completion result is guaranteed to resume or notify the same agent. Never use `nohup`, shell `&`, `disown`, redirected fire-and-forget processes, or a detached terminal without an explicit verified callback merely to keep polling alive. If the harness has no completion-aware background facility, use the foreground poll or first wire a verified wake callback into the surrounding supervisor. Do not tell the user the artifact is being monitored until that wake path is live. If the poll gets killed or times out before feedback arrives, re-run it - feedback remains queued until delivery. Poll delivery consumes the response, so read it completely. Codex detected: completed background tasks may not resume Codex automatically, so keep the poll attached to the active turn. After applying feedback, run `lavish-axi poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/main/.lavish/bearings-board.html --agent-reply \"<message for the user>\"` without --timeout-ms to show your response in Lavish Editor and wait for more feedback. If the user ends the session, stop polling and do not reopen it by re-running `lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/main/.lavish/bearings-board.html` unless the user asks for further review or something genuinely important needs their visual attention - deliver routine updates directly in this conversation instead. When reopening is warranted, run `lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/main/.lavish/bearings-board.html --reopen`."
+session: live
+served: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/main/.lavish/bearings-board.html
+bound: lavish-63dd6133384cb72d
+armed: lavish-63dd6133384cb72d
+listening: live
+
+$ FM_HOME=<isolated main> fm-bearings-board.sh build /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/overdue-in-delivered.json
+exit=1
+fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/overdue-in-delivered.json
+
+$ FM_HOME=<isolated main> fm-bearings-board.sh build /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/delivered-without-link.json
+exit=1
+fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/delivered-without-link.json
+
+$ FM_HOME=<isolated main> fm-bearings-board.sh build /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/underway-without-owner.json
+exit=1
+fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/underway-without-owner.json
+
+$ FM_HOME=<isolated main> fm-bearings-board.sh build /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/charted-without-owner.json
+exit=1
+fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/charted-without-owner.json

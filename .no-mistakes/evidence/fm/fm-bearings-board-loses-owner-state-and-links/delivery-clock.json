@@ -1,0 +1,15 @@
+[
+  {
+    "timezone": "Europe/Paris",
+    "before": 1761438600,
+    "after": 1761438600
+  },
+  {
+    "timezone": "Europe/Paris",
+    "before": 1761442200,
+    "after": 1761442200
+  },
+  {
+    "different_pr_new_epoch": 1789380580
+  }
+]

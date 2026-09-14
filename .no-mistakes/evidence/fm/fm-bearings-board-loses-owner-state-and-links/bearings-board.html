@@ -249,6 +249,7 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .bb-row__sub { font-size: var(--fs-xs); color: var(--text-muted); line-height: 1.3; margin-top: 1px;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bb-row__identity { overflow: visible; white-space: normal; overflow-wrap: anywhere; }
 .bb-row__id { font-family: var(--font-mono); font-size: var(--fs-2xs); color: var(--text-faint); white-space: nowrap; }
 .bb-row__pr { font-family: var(--font-mono); font-size: var(--fs-xs); font-weight: 600; color: var(--ocean-600); white-space: nowrap; }
 .bb-row__pr:hover { text-decoration: underline; }
@@ -394,7 +395,7 @@ a { color: inherit; text-decoration: none; }
      fm-bearings-board.v1 payload in place of the placeholder below; everything
      above and below is the shipped template and is never regenerated per run. -->
 <script id="bearings-data" type="application/json">
-{"schema":"fm-bearings-board.v1","home":"Isolated Bearings validation","generated":"2026-09-08T20:46:59Z","prs_live":false,"captains_call":[{"key":"https://github.com/acme/repo/pull/4","type":"nudge","repo":"firstmate","title":"Nudge the outside maintainer","age_days":8,"pr_url":"https://github.com/acme/repo/pull/4","detail":"(main) · Long outside maintainer wait","options":[{"value":"leave","label":"Leave it","hint":"Keep the original waiting clock"},{"value":"nudge","label":"Nudge maintainer"}]},{"key":"https://github.com/acme/repo/pull/5","type":"nudge","repo":"firstmate","title":"Nudge the outside maintainer","age_days":8,"pr_url":"https://github.com/acme/repo/pull/5","detail":"review-mate · Long outside maintainer wait","options":[{"value":"leave","label":"Leave it","hint":"Keep the original waiting clock"},{"value":"nudge","label":"Nudge maintainer"}]},{"key":"approval","type":"credential","repo":"firstmate","title":"Approval still owed","detail":"(main) · Approval still owed: dependency https://github.com/acme/repo/pull/99 is still under review","options":[{"value":"review","label":"Review request"}]},{"key":"review-mate.approval","type":"credential","repo":"firstmate","title":"Approval still owed","detail":"review-mate · Approval still owed: dependency https://github.com/acme/repo/pull/99 is still under review","options":[{"value":"review","label":"Review request"}]}],"underway":[{"id":"in-flight","kind":"ship","state":"unknown","repo":"firstmate","owner":"(main)","pr_url":"https://github.com/acme/repo/pull/1","doing":"backend target gone: nm-test-no-session:in-flight"},{"id":"review-mate/in-flight","kind":"ship","state":"unknown","repo":"firstmate","owner":"review-mate","pr_url":"https://github.com/acme/repo/pull/1","doing":"backend target gone: nm-test-no-session:in-flight"}],"awaiting":[{"id":"review-mate/young","what":"Delivered to outside maintainer","repo":"firstmate","owner":"review-mate","pr_url":"https://github.com/acme/repo/pull/3","age_days":3,"nudge":false},{"id":"young","what":"Delivered to outside maintainer","repo":"firstmate","owner":"(main)","pr_url":"https://github.com/acme/repo/pull/3","age_days":3,"nudge":false}],"landed":[],"charted":[{"id":"main.recorded","repo":"firstmate","owner":"(main)","title":"Held delivery","reason":"dependency https://github.com/acme/repo/…","pr_url":"https://github.com/acme/repo/pull/2","dispatchable":false},{"id":"main.unrecorded","repo":"firstmate","owner":"(main)","title":"Held without own request","reason":"dependency https://github.com/acme/repo/…","dispatchable":false},{"id":"review-mate.recorded","repo":"firstmate","owner":"review-mate","title":"Held delivery","reason":"dependency https://github.com/acme/repo/…","pr_url":"https://github.com/acme/repo/pull/2","dispatchable":false},{"id":"review-mate.unrecorded","repo":"firstmate","owner":"review-mate","title":"Held without own request","reason":"dependency https://github.com/acme/repo/…","dispatchable":false}],"awaiting_nudge_days":7}
+{"schema":"fm-bearings-board.v1","home":"Isolated validation fleet","generated":"2026-09-14T10:09:45Z","prs_live":false,"captains_call":[{"key":"approval","type":"decision","repo":"firstmate","title":"Approval still required: Approve publication","about":"(main)","options":[{"value":"wait","label":"Keep waiting"},{"value":"reconcile","label":"Reconcile","hint":"Re-check the latest state, then close this with evidence or keep it open with a note"}]},{"key":"mate-call","type":"decision","repo":"firstmate","title":"Second mate decision: Choose whether to proceed","about":"mate","options":[{"value":"wait","label":"Keep waiting"},{"value":"reconcile","label":"Reconcile","hint":"Re-check the latest state, then close this with evidence or keep it open with a note"}]},{"key":"https://github.com/kunchenguid/firstmate/pull/4427","type":"nudge","repo":"firstmate","title":"Delivery awaiting response","pr_url":"https://github.com/kunchenguid/firstmate/pull/4427","age_days":8,"detail":"mate · outside maintainer","options":[{"value":"wait","label":"Keep waiting"},{"value":"nudge","label":"Nudge maintainer"}]}],"underway":[{"id":"in-flight","kind":"ship","state":"unknown","repo":"firstmate","owner":"(main)","pr_url":"https://github.com/kunchenguid/firstmate/pull/4019","name":"Review pending delivery","doing":"backend target gone: nm-bearings-isolated-missing:fm-in-flight"},{"id":"mate/in-flight","kind":"ship","state":"unknown","repo":"firstmate","owner":"mate","pr_url":"https://github.com/kunchenguid/firstmate/pull/4019","name":"Review pending delivery","doing":"backend target gone: nm-bearings-isolated-missing:fm-in-flight"},{"id":"mate/approval","kind":"ship","state":"unknown","repo":"firstmate","owner":"mate","pr_url":"https://github.com/kunchenguid/firstmate/pull/4019","name":"Approval still required","doing":"backend target gone: nm-bearings-isolated-missing:fm-approval"}],"awaiting":[{"id":"mate/young","what":"Delivered change","repo":"firstmate","owner":"mate","pr_url":"https://github.com/kunchenguid/firstmate/pull/4019","age_days":3},{"id":"young","what":"Delivered change","repo":"firstmate","owner":"(main)","pr_url":"https://github.com/kunchenguid/firstmate/pull/4019","age_days":3}],"landed":[],"charted":[{"id":"main-recorded","repo":"firstmate","owner":"(main)","title":"Held delivery","reason":"dependency https://github.com/acme/repo/…","dispatchable":false,"filed":"2026-09-12","pr_url":"https://github.com/acme/repo/pull/2"},{"id":"main-unrecorded","repo":"firstmate","owner":"(main)","title":"Held delivery without request","reason":"dependency https://github.com/acme/repo/…","dispatchable":false,"filed":"2026-09-12"},{"id":"mate-recorded","repo":"firstmate","owner":"mate","title":"Held delivery","reason":"dependency https://github.com/acme/repo/…","dispatchable":false,"filed":"2026-09-12","pr_url":"https://github.com/acme/repo/pull/2"},{"id":"mate-unrecorded","repo":"firstmate","owner":"mate","title":"Held delivery without request","reason":"dependency https://github.com/acme/repo/…","dispatchable":false,"filed":"2026-09-12"}],"awaiting_nudge_days":7}
 </script>
 
 <script>
@@ -458,6 +459,17 @@ a { color: inherit; text-decoration: none; }
      so every count of queued work excludes them. */
   function isWarning(t) { return t && t.kind === "warning"; }
   function chartedQueued(rows) { return (rows || []).filter(function (t) { return !isWarning(t); }); }
+  /* Charted Next reads newest filed first, so the most recently filed upcoming
+     work is at the top. ISO filed dates compare as text; a row with no
+     comparable date keeps its payload order after every dated row. */
+  function chartedOrder(rows) {
+    var dated = [], undated = [];
+    (rows || []).forEach(function (t) {
+      if (t && typeof t.filed === "string" && t.filed) dated.push(t); else undated.push(t);
+    });
+    dated.sort(function (a, b) { return a.filed < b.filed ? 1 : (a.filed > b.filed ? -1 : 0); });
+    return dated.concat(undated);
+  }
   var chartedMoreQueued = data.charted_more || 0;
   var chartedMoreWarnings = data.charted_warning_more || 0;
   function utf8ByteLength(text) { return new TextEncoder().encode(text).length; }
@@ -676,12 +688,14 @@ a { color: inherit; text-decoration: none; }
     var row = el("div", "bb-row");
     row.appendChild(badge(t.state === "working" ? "online" : "info", t.state));
     var main = el("div", "bb-row__main");
-    main.appendChild(el("div", "bb-row__title", t.doing));
+    /* the snapshot's durable name-or-id label leads the row so a scan says
+       WHICH task this is; the run status keeps its place on the second line */
+    main.appendChild(el("div", "bb-row__title", t.name));
     /* captain-facing rows name the repo; the internal task id shows only when
        no repo is known. The owner comes last because it is what tells two rows
        with the same repo apart. */
     main.appendChild(el("div", "bb-row__sub",
-      t.kind + " · " + (t.repo || t.id) + " · " + t.owner));
+      t.doing + " · " + t.kind + " · " + (t.repo || t.id) + " · " + t.owner));
     row.appendChild(main);
     if (t.pr_url) row.appendChild(prLink(t.pr_url));
     uw.appendChild(row);
@@ -746,7 +760,7 @@ a { color: inherit; text-decoration: none; }
   if (!chartedQueued(data.charted).length && !chartedMoreQueued) {
     ch.appendChild(el("div", "bb-empty", "Nothing is queued."));
   }
-  data.charted.forEach(function (t) {
+  chartedOrder(data.charted).forEach(function (t) {
     var row = el("div", "bb-row");
     if (t.dispatchable && !isWarning(t)) {
       anyPickable = true;
@@ -767,9 +781,10 @@ a { color: inherit; text-decoration: none; }
     }
     var main = el("div", "bb-row__main");
     main.appendChild(el("div", "bb-row__title", t.title));
-    /* second line keeps the title uncrowded in the half-width column */
+    /* Ownership must remain visible when the reason fills the half-width column. */
     var chSub = (t.repo || t.id) + " · " + t.owner;
-    main.appendChild(el("div", "bb-row__sub", t.reason ? t.reason + " · " + chSub : chSub));
+    main.appendChild(el("div", "bb-row__sub bb-row__identity", chSub));
+    if (t.reason) main.appendChild(el("div", "bb-row__sub", t.reason));
     row.appendChild(main);
     if (t.pr_url) row.appendChild(prLink(t.pr_url));
     if (isWarning(t)) row.appendChild(badge("danger", "needs repair"));

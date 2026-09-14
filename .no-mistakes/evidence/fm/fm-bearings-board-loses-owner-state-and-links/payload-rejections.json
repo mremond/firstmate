@@ -1,0 +1,26 @@
+[
+  {
+    "case": "overdue-in-delivered",
+    "exit": 1,
+    "board_unchanged": true,
+    "message": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/overdue-in-delivered.json"
+  },
+  {
+    "case": "delivered-without-link",
+    "exit": 1,
+    "board_unchanged": true,
+    "message": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/delivered-without-link.json"
+  },
+  {
+    "case": "underway-without-owner",
+    "exit": 1,
+    "board_unchanged": true,
+    "message": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/underway-without-owner.json"
+  },
+  {
+    "case": "charted-without-owner",
+    "exit": 1,
+    "board_unchanged": true,
+    "message": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/charted-without-owner.json"
+  }
+]

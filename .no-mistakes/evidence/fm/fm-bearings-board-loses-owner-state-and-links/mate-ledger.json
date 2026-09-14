@@ -1,0 +1,222 @@
+{
+  "schema": "fm-secondmate-home-summary.v1",
+  "hold_classifier_schema": "fm-captain-hold-buckets.v1",
+  "generated": "2026-09-14T10:07:38Z",
+  "generated_epoch": 1789380458,
+  "home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FNFPK984YP0EHFTD1XEF8P/.test-phase/live/mate",
+  "valid": false,
+  "reason": "child current state unavailable: approval, in-flight, overdue, recorded, unrecorded, young",
+  "invalidity": {
+    "kind": "child_current_unavailable",
+    "ids": [
+      "approval",
+      "in-flight",
+      "overdue",
+      "recorded",
+      "unrecorded",
+      "young"
+    ]
+  },
+  "state": "unknown",
+  "active_children": [
+    {
+      "id": "in-flight",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "name": "Review pending delivery",
+      "source": "endpoint-gone",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-in-flight"
+    },
+    {
+      "id": "approval",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "name": "Approval still required",
+      "source": "endpoint-gone",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "doing": "backend target gone: nm-bearings-isolated-missing:fm-approval"
+    }
+  ],
+  "awaiting_merge": [
+    {
+      "id": "overdue",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "title": "Delivery awaiting response",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4427",
+      "delivered_epoch": 1788689251
+    },
+    {
+      "id": "young",
+      "kind": "ship",
+      "state": "unknown",
+      "repo": "firstmate",
+      "title": "Delivered change",
+      "pr_url": "https://github.com/kunchenguid/firstmate/pull/4019",
+      "delivered_epoch": 1789121251
+    }
+  ],
+  "decisions_open": [
+    {
+      "id": "approval",
+      "key": "approval",
+      "verb": "needs-decision",
+      "summary": "approve publication",
+      "reason": null,
+      "source": "status"
+    }
+  ],
+  "holds": [
+    {
+      "id": "recorded",
+      "title": "Held delivery",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "source": "backlog"
+    },
+    {
+      "id": "unrecorded",
+      "title": "Held delivery without request",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "source": "backlog"
+    }
+  ],
+  "queued": [
+    {
+      "id": "recorded",
+      "title": "Held delivery",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "blocked_reason": null,
+      "hold_reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "hold_kind": "external",
+      "hold_until": null,
+      "hold_bucket": null,
+      "hold_age_days": 2,
+      "captain_actionable": false,
+      "repo": "firstmate",
+      "pr_url": "https://github.com/acme/repo/pull/2",
+      "kind": "ship",
+      "since": "2026-09-12"
+    },
+    {
+      "id": "unrecorded",
+      "title": "Held delivery without request",
+      "blocked_by": null,
+      "blocked_by_ids": [],
+      "unresolved_blocker_ids": [],
+      "blocked_reason": null,
+      "hold_reason": "dependency https://github.com/acme/repo/pull/99 is still under review",
+      "hold_kind": "external",
+      "hold_until": null,
+      "hold_bucket": null,
+      "hold_age_days": 2,
+      "captain_actionable": false,
+      "repo": "firstmate",
+      "pr_url": null,
+      "kind": "ship",
+      "since": "2026-09-12"
+    }
+  ],
+  "landed": [],
+  "endpoints": [
+    {
+      "id": "approval",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-bearings-isolated-missing:fm-approval",
+        "exists": false,
+        "agent_alive": "not_checked",
+        "status": "absent",
+        "observed_at": "2026-09-14T10:07:38Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "in-flight",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-bearings-isolated-missing:fm-in-flight",
+        "exists": false,
+        "agent_alive": "not_checked",
+        "status": "absent",
+        "observed_at": "2026-09-14T10:07:38Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "overdue",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-bearings-isolated-missing:fm-overdue",
+        "exists": false,
+        "agent_alive": "not_checked",
+        "status": "absent",
+        "observed_at": "2026-09-14T10:07:38Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "recorded",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-bearings-isolated-missing:fm-recorded",
+        "exists": false,
+        "agent_alive": "not_checked",
+        "status": "absent",
+        "observed_at": "2026-09-14T10:07:38Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "unrecorded",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-bearings-isolated-missing:fm-unrecorded",
+        "exists": false,
+        "agent_alive": "not_checked",
+        "status": "absent",
+        "observed_at": "2026-09-14T10:07:38Z",
+        "freshness": "fresh"
+      }
+    },
+    {
+      "id": "young",
+      "state": "unknown",
+      "source": "endpoint-gone",
+      "endpoint": {
+        "target": "nm-bearings-isolated-missing:fm-young",
+        "exists": false,
+        "agent_alive": "not_checked",
+        "status": "absent",
+        "observed_at": "2026-09-14T10:07:38Z",
+        "freshness": "fresh"
+      }
+    }
+  ],
+  "counts": {
+    "active_children": 2,
+    "awaiting_merge": 2,
+    "decisions_open": 1,
+    "holds": 2,
+    "queued": 2,
+    "landed": 0,
+    "endpoints": 6
+  },
+  "omitted": []
+}
