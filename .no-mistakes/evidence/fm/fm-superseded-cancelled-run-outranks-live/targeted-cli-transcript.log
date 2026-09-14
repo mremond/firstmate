@@ -1,0 +1,121 @@
+NON-LIVE: real fm-crew-state executable; existing fixture no-mistakes and tmux; unchanged assertions.
+
+test_superseded_cancelled_run_preserves_replacement_gate
+$ bin/fm-crew-state.sh competing
+state: parked · source: run-step · parked at review: 2 finding(s) (ask-user: authority decision) · run: 01NEW
+ok - superseded cancelled run preserves the replacement review gate
+
+exit: 0
+
+test_competing_live_runs_report_unknown_with_both_ids
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · competing live runs; run ids: 01NEW, 01OLD; last reported run id: 01OLD
+ok - competing live runs report unknown with both run ids
+
+exit: 0
+
+test_capped_competing_live_runs_report_both_ids
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · competing live runs; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+ok - capped overview retains both competing same-branch run ids
+
+exit: 0
+
+test_capped_overview_without_branch_rows_reports_both_ids
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · competing live runs; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+ok - same-branch identity survives both runs falling outside the overview
+
+exit: 0
+
+test_capped_replacement_keeps_gate_and_inventory_unchanged
+$ bin/fm-crew-state.sh competing
+state: parked · source: run-step · parked at review: 2 finding(s) (ask-user: authority decision) · run: 01NEW
+$ bin/fm-crew-state.sh competing
+state: parked · source: run-step · parked at review: 2 finding(s) (ask-user: authority decision) · run: 01NEW
+ok - complete inventory preserves the replacement gate without writes
+
+exit: 0
+
+test_newer_failed_run_is_not_hidden_by_older_live_run
+$ bin/fm-crew-state.sh competing
+state: failed · source: run-step · run failed · run: 01NEW
+ok - newer failed run remains failed beside an older live run
+
+exit: 0
+
+test_unverifiable_run_selection_reports_unknown
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · selected run unavailable or mismatched; run ids: 01NEW, 01OLD
+ok - missing run selection reports unknown with candidate ids
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · selected run unavailable or mismatched; run ids: 01NEW, 01OLD
+ok - wrong-id run selection reports unknown with candidate ids
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · selected run unavailable or mismatched; run ids: 01NEW, 01OLD
+ok - wrong-branch run selection reports unknown with candidate ids
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · selected run code identity unverified; run ids: 01NEW, 01OLD
+ok - wrong-head run selection reports unknown with candidate ids
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · selected run status unverified; run ids: 01NEW, 01OLD
+ok - missing-status run selection reports unknown with candidate ids
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW, 01OLD; last reported run id: 01OLD
+ok - malformed-table run selection reports unknown with candidate ids
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · run inventory unreadable; run ids: 01OLD, 01NEW, 01OLD
+ok - inventory-error run selection reports unknown with candidate ids
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · selected run unreadable; run ids: 01NEW, 01OLD
+ok - selected-error run selection reports unknown with candidate ids
+
+exit: 0
+
+test_capped_inventory_failures_report_unknown
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · complete same-branch run inventory unreadable; run ids: 01NEW; last reported run id: 01NEW
+ok - missing complete-inventory failure reports unknown
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · complete same-branch run inventory unreadable; run ids: 01NEW; last reported run id: 01NEW
+ok - corrupt complete-inventory failure reports unknown
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · complete same-branch run inventory unreadable; run ids: 01NEW; last reported run id: 01NEW
+ok - schema complete-inventory failure reports unknown
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · complete same-branch run inventory unreadable; run ids: 01NEW; last reported run id: 01NEW
+ok - repo complete-inventory failure reports unknown
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW; last reported run id: 01NEW
+ok - count complete-inventory failure reports unknown
+
+exit: 0
+
+test_capped_without_python_preserves_available_ids
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · complete same-branch run inventory reader unavailable; run ids: 01NEW; last reported run id: 01NEW
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · complete same-branch run inventory reader unavailable; run ids: ; last reported run id: 01NEW
+ok - R5 capped lookup without Python preserves available ids
+
+exit: 0
+
+test_capped_without_sqlite_preserves_available_ids
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · complete same-branch run inventory reader unavailable; run ids: 01NEW; last reported run id: 01NEW
+ok - R5 capped lookup without SQLite support preserves available ids
+
+exit: 0
+
+test_inventory_structure_and_requested_semantics_remain_checked
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+ok - R6 structural completeness and requested-run validation remain enforced
+
+exit: 0

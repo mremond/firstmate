@@ -1,0 +1,26 @@
+bin: ~/.no-mistakes/bin/no-mistakes
+description: "Validate your code changes through the no-mistakes pipeline - automated code review, tests, lint, docs, push, PR, and CI - before they reach the configured push target. Use when the user asks to run no-mistakes, gate or ship or validate their changes, push safely, asks you to do a task and then validate it, or invokes /no-mistakes."
+repo: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0N1CJ7TGNYN3P76KK9TS
+current_branch: unknown
+daemon: stopped
+other_branch_active_run:
+  id: "01M2GV0N1CJ7TGNYN3P76KK9TS"
+  branch: fm/fm-superseded-cancelled-run-outranks-live
+  status: running
+  head: 7feb0272
+  head_sha: 7feb0272630aa95ee92a4dcc9edec618d5d1682d
+  findings: none
+  steps[0]:
+count: 10 of 78 total
+runs[10]{id,branch,status,head,pr}:
+  "01M2GV0N1CJ7TGNYN3P76KK9TS",fm/fm-superseded-cancelled-run-outranks-live,running,7feb0272,""
+  "01M2GV0HN9PMBPA7YNVGGC9FSS",fm/fm-spawn-tests-borrow-the-checkout,running,a0eb3010,"https://github.com/kunchenguid/firstmate/pull/4056"
+  "01M2GQTYBGKJGSFTQPP3F8NX0G",fm/fm-origin-credentials-printed-in-errors,running,4e5713f5,"https://github.com/kunchenguid/firstmate/pull/4138"
+  "01M2GB01EQ2MPCJ200TG71Y9SV",fm/fm-ci-refresh-portable-serial-hints,running,e6be9247,"https://github.com/kunchenguid/firstmate/pull/4144"
+  "01M2GAWMSDQK4B5EA9GZW35RXE",fm/fm-bearings-board-loses-owner-state-and-links,running,146a90ee,"https://github.com/kunchenguid/firstmate/pull/4019"
+  "01M2FR2HYYDP8NP8HDDX4D1MXS",fm/fm-absorb-fresh-replacement-wait,running,"71042535","https://github.com/kunchenguid/firstmate/pull/3605"
+  "01M2FNFPK984YP0EHFTD1XEF8P",fm/fm-bearings-board-loses-owner-state-and-links,cancelled,735a1fc5,"https://github.com/kunchenguid/firstmate/pull/4019"
+  "01M2FG7SEEP1VBZ3B5SX35BJ6Q",fm/fm-installed-timeout-watcher-will-not-stop,completed,1129818e,"https://github.com/kunchenguid/firstmate/pull/4073"
+  "01M289YXN7V0513AKCF53MJ1BC",fm/fm-bearings-board-loses-owner-state-and-links,failed,9b76c588,""
+  "01M289X89E6CCFQ696MFF8G0MR",fm/fm-bearings-board-loses-owner-state-and-links,cancelled,d5825696,""
+help[5]: "Run `no-mistakes axi run --intent \"<what the user set out to accomplish>\"` to validate your changes",Another active run is on fm/fm-superseded-cancelled-run-outranks-live; leave it alone unless you are working on that branch,"Commit post-pipeline follow-up work on top of the existing branch so every pipeline fix commit remains present. Never abort-and-restart, reset, or replace the branch in a way that drops prior gate-fix commits.",The calling agent drives AXI gates but does not replace the configured pipeline agent; run `no-mistakes doctor` if no native agent or ACP runner is available,"How to drive the pipeline: `no-mistakes axi run --help`, or the `/no-mistakes` skill (loaded when you invoke `/no-mistakes`)"

@@ -1,0 +1,215 @@
+NON-LIVE REGRESSION EVIDENCE: unchanged assertions, real fm-crew-state executable, fixture no-mistakes/tmux inputs.
+
+RED test_live_to_terminal_inventory_disagreement_is_unknown against 5588b3ea1f86e662ef505aaf30d5ec03da9c4c31
+$ bin/fm-crew-state.sh competing
+state: failed · source: run-step · run cancelled · run: 01NEW
+not ok - R1 live selection becoming terminal cannot publish a stale failure (missing: 'state: unknown')
+--- output ---
+state: failed · source: run-step · run cancelled · run: 01NEW
+exit: 1
+
+GREEN test_live_to_terminal_inventory_disagreement_is_unknown against 7feb0272
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · selected run status disagrees with inventory; run ids: 01NEW, 01OLD
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · selected run status disagrees with inventory; run ids: 01NEW, 01OLD
+ok - R1 both directions of inventory liveness disagreement read unknown
+exit: 0
+
+RED test_uninitialized_busy_worker_uses_pane against 5588b3ea1f86e662ef505aaf30d5ec03da9c4c31
+$ bin/fm-crew-state.sh worker
+state: unknown · source: run-step · run inventory unreadable; run ids: , unavailable
+not ok - R2 an uninitialized gate must preserve a busy worker (missing: 'state: working')
+--- output ---
+state: unknown · source: run-step · run inventory unreadable; run ids: , unavailable
+exit: 1
+
+GREEN test_uninitialized_busy_worker_uses_pane against 7feb0272
+$ bin/fm-crew-state.sh worker
+state: working · source: pane · harness busy (claude-hook)
+$ bin/fm-crew-state.sh worker
+state: unknown · source: run-step · run inventory unreadable; run ids: , unavailable
+ok - R2 uninitialized busy workers retain pane reporting
+exit: 0
+
+RED test_uninitialized_idle_worker_uses_status against 5588b3ea1f86e662ef505aaf30d5ec03da9c4c31
+$ bin/fm-crew-state.sh worker
+state: unknown · source: run-step · run inventory unreadable; run ids: , unavailable
+not ok - R2 an uninitialized gate must preserve current worker status (missing: 'state: working')
+--- output ---
+state: unknown · source: run-step · run inventory unreadable; run ids: , unavailable
+exit: 1
+
+GREEN test_uninitialized_idle_worker_uses_status against 7feb0272
+$ bin/fm-crew-state.sh worker
+state: working · source: status-log · implementation continues
+ok - R2 uninitialized idle workers retain status reporting
+exit: 0
+
+RED test_historical_inventory_uses_current_pane against 5588b3ea1f86e662ef505aaf30d5ec03da9c4c31
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · selected run code identity unverified; run ids: 01NEW, 01OLD
+not ok - R3 a proven historical run must preserve a busy worker (missing: 'state: working')
+--- output ---
+state: unknown · source: run-step · selected run code identity unverified; run ids: 01NEW, 01OLD
+exit: 1
+
+GREEN test_historical_inventory_uses_current_pane against 7feb0272
+$ bin/fm-crew-state.sh competing
+state: working · source: pane · harness busy (claude-hook)
+ok - R3 historical inventory yields to the current busy pane
+exit: 0
+
+RED test_historical_inventory_uses_current_status against 5588b3ea1f86e662ef505aaf30d5ec03da9c4c31
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · selected run code identity unverified; run ids: 01NEW, 01OLD
+not ok - R3 a proven historical run must preserve current worker status (missing: 'state: working')
+--- output ---
+state: unknown · source: run-step · selected run code identity unverified; run ids: 01NEW, 01OLD
+exit: 1
+
+GREEN test_historical_inventory_uses_current_status against 7feb0272
+$ bin/fm-crew-state.sh competing
+state: working · source: status-log · implementation after validation
+ok - R3 historical inventory yields to current worker status
+exit: 0
+
+RED test_complete_inventory_without_python_keeps_gate against 5588b3ea1f86e662ef505aaf30d5ec03da9c4c31
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0N1CJ7TGNYN3P76KK9TS/.test-3215/historical-5588b3ea/bin/fm-nm-run-lib.sh: line 129: python3: command not found
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · run inventory reader unavailable
+not ok - R5 complete inventory keeps its gate without Python (missing: 'state: parked')
+--- output ---
+state: unknown · source: run-step · run inventory reader unavailable
+exit: 1
+
+GREEN test_complete_inventory_without_python_keeps_gate against 7feb0272
+$ bin/fm-crew-state.sh competing
+state: parked · source: run-step · parked at review: 2 finding(s) (ask-user: authority decision) · run: 01NEW
+ok - R5 complete inventory without Python keeps the replacement gate
+exit: 0
+
+RED test_complete_ambiguity_without_python_names_both_ids against 5588b3ea1f86e662ef505aaf30d5ec03da9c4c31
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0N1CJ7TGNYN3P76KK9TS/.test-3215/historical-5588b3ea/bin/fm-nm-run-lib.sh: line 129: python3: command not found
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · run inventory reader unavailable
+not ok - R5 complete ambiguity retains the newer id without Python (missing: '01NEW')
+--- output ---
+state: unknown · source: run-step · run inventory reader unavailable
+exit: 1
+
+GREEN test_complete_ambiguity_without_python_names_both_ids against 7feb0272
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · competing live runs; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+ok - R5 complete ambiguity without Python names both ids
+exit: 0
+
+RED test_complete_inventory_ignores_unrelated_semantics against 97042be0
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+not ok - R6 unrelated branch syntax must not suppress the requested gate (missing: 'state: parked')
+--- output ---
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+exit: 1
+
+GREEN test_complete_inventory_ignores_unrelated_semantics against 7feb0272
+$ bin/fm-crew-state.sh competing
+state: parked · source: run-step · parked at review: 2 finding(s) (ask-user: authority decision) · run: 01NEW
+$ bin/fm-crew-state.sh competing
+state: parked · source: run-step · parked at review: 2 finding(s) (ask-user: authority decision) · run: 01NEW
+$ bin/fm-crew-state.sh competing
+state: parked · source: run-step · parked at review: 2 finding(s) (ask-user: authority decision) · run: 01NEW
+$ bin/fm-crew-state.sh competing
+state: parked · source: run-step · parked at review: 2 finding(s) (ask-user: authority decision) · run: 01NEW
+$ bin/fm-crew-state.sh competing
+state: parked · source: run-step · parked at review: 2 finding(s) (ask-user: authority decision) · run: 01NEW
+$ bin/fm-crew-state.sh competing
+state: parked · source: run-step · parked at review: 2 finding(s) (ask-user: authority decision) · run: 01NEW
+ok - R6 complete selection ignores unrelated branch semantics
+exit: 0
+
+RED test_requested_branch_has_no_character_whitelist against 97042be0
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+not ok - R6 requested branch identity must not depend on a character whitelist (missing: 'state: parked')
+--- output ---
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+exit: 1
+
+GREEN test_requested_branch_has_no_character_whitelist against 7feb0272
+$ bin/fm-crew-state.sh competing
+state: parked · source: run-step · parked at review: 2 finding(s) (ask-user: authority decision) · run: 01NEW
+$ bin/fm-crew-state.sh competing
+state: parked · source: run-step · parked at review: 2 finding(s) (ask-user: authority decision) · run: 01NEW
+ok - R6 requested branches use exact identity without a whitelist
+exit: 0
+
+RED test_capped_inventory_ignores_unrelated_semantics against 97042be0
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW; last reported run id: 01NEW
+not ok - R6 unrelated semantics cannot hide an id beyond the history window (missing: '01OLD')
+--- output ---
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW; last reported run id: 01NEW
+exit: 1
+
+GREEN test_capped_inventory_ignores_unrelated_semantics against 7feb0272
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · competing live runs; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+ok - R6 capped inventory ignores unrelated semantics and names both ids
+exit: 0
+
+RED test_capped_requested_semantics_do_not_hide_ids against 97042be0
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW; last reported run id: 01NEW
+not ok - R6 partial requested-row semantics cannot preempt complete identity lookup (missing: '01OLD')
+--- output ---
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW; last reported run id: 01NEW
+exit: 1
+
+GREEN test_capped_requested_semantics_do_not_hide_ids against 7feb0272
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · competing live runs; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+ok - R6 complete identity lookup precedes partial-row semantic rejection
+exit: 0
+
+RED test_capped_requested_branch_with_comma_names_both_ids against 97042be0
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · unreadable runs table; run ids: ; last reported run id: 01NEW
+not ok - R6 complete inventory preserves quoted branch identity and both ids (missing: '01OLD')
+--- output ---
+state: unknown · source: run-step · unreadable runs table; run ids: ; last reported run id: 01NEW
+exit: 1
+
+GREEN test_capped_requested_branch_with_comma_names_both_ids against 7feb0272
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · competing live runs; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+ok - R6 capped inventory preserves quoted requested-branch identity
+exit: 0
+
+RED test_superseded_cancelled_run_preserves_replacement_gate against 80556bca2d728071cc14476b9bee60a8edf4159e
+$ bin/fm-crew-state.sh competing
+state: working · source: run-step · validating (background run)
+not ok - superseded cancelled run must expose the live review gate (missing: 'state: parked')
+--- output ---
+state: working · source: run-step · validating (background run)
+exit: 1
+
+GREEN test_superseded_cancelled_run_preserves_replacement_gate against 7feb0272
+$ bin/fm-crew-state.sh competing
+state: parked · source: run-step · parked at review: 2 finding(s) (ask-user: authority decision) · run: 01NEW
+ok - superseded cancelled run preserves the replacement review gate
+exit: 0
+
+RED test_competing_live_runs_report_unknown_with_both_ids against 80556bca2d728071cc14476b9bee60a8edf4159e
+$ bin/fm-crew-state.sh competing
+state: working · source: run-step · validating (running)
+not ok - two live runs cannot establish exclusive authority (missing: 'state: unknown')
+--- output ---
+state: working · source: run-step · validating (running)
+exit: 1
+
+GREEN test_competing_live_runs_report_unknown_with_both_ids against 7feb0272
+$ bin/fm-crew-state.sh competing
+state: unknown · source: run-step · competing live runs; run ids: 01NEW, 01OLD; last reported run id: 01OLD
+ok - competing live runs report unknown with both run ids
+exit: 0

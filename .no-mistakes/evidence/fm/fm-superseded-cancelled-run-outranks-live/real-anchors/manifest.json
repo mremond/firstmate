@@ -1,0 +1,76 @@
+{
+  "captured_at": "2026-09-14T22:06:24.111362+00:00",
+  "version": "no-mistakes version v1.70.1 (9c380d4) 2026-09-07T20:47:58Z",
+  "captures": {
+    "replacement": {
+      "command": [
+        "no-mistakes",
+        "axi",
+        "status",
+        "--run",
+        "01M2GAWMSDQK4B5EA9GZW35RXE"
+      ],
+      "run_id": "01M2GAWMSDQK4B5EA9GZW35RXE",
+      "sha256": "6b7a9ee77570d6ec06fb7fb3ec8d000aefa14a47fc2d9a1761ab5fd224ad287d"
+    },
+    "superseded": {
+      "command": [
+        "no-mistakes",
+        "axi",
+        "status",
+        "--run",
+        "01M2FNFPK984YP0EHFTD1XEF8P"
+      ],
+      "run_id": "01M2FNFPK984YP0EHFTD1XEF8P",
+      "sha256": "d6f0ea10f75a39a09b32c247c9b291039bd8f7ef284d5611fb2743187c9f7f67"
+    },
+    "parked": {
+      "command": [
+        "no-mistakes",
+        "axi",
+        "status",
+        "--run",
+        "01M20NDQH0G96AQYH1EHWGKT5F"
+      ],
+      "run_id": "01M20NDQH0G96AQYH1EHWGKT5F",
+      "sha256": "0ab46492af6a7229007645c0300560c33fa0239902a703650a954f3feef6d461"
+    },
+    "failed": {
+      "command": [
+        "no-mistakes",
+        "axi",
+        "status",
+        "--run",
+        "01M289YXN7V0513AKCF53MJ1BC"
+      ],
+      "run_id": "01M289YXN7V0513AKCF53MJ1BC",
+      "sha256": "35729da553bfd304451ad945ce8ab28244fcab36c4d7fdd0bd415ece30ccee12"
+    },
+    "completed": {
+      "command": [
+        "no-mistakes",
+        "axi",
+        "status",
+        "--run",
+        "01M2FG7SEEP1VBZ3B5SX35BJ6Q"
+      ],
+      "run_id": "01M2FG7SEEP1VBZ3B5SX35BJ6Q",
+      "sha256": "daa05f5a8b67b9776378f5302022e58f4988297ac7143dadbb6f8820aaa3bc7c"
+    },
+    "uninitialized": {
+      "command": [
+        "no-mistakes",
+        "axi",
+        "status"
+      ],
+      "exit": 1,
+      "sha256": "d4c8f87399836fd2fe98c25ad1df3cb954e25fb37c0abe95bbafbd487ae3bd0a"
+    }
+  },
+  "inventory": {
+    "source": "read-only state.sqlite SELECT projection",
+    "repo_id": "acf4a767348a",
+    "rows": 78,
+    "competing_live_branches": []
+  }
+}

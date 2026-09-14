@@ -1,0 +1,63 @@
+NON-LIVE REPLAY: genuine captured inputs with documented fixture compositions.
+
+RED test_captured_axi_status_shapes at 80556bca2d728071cc14476b9bee60a8edf4159e
+not ok - captured replacement preserves the selected identity (missing: '01NEW')
+--- output ---
+state: working · source: run-step · validating (background run)
+exit: 1
+
+GREEN test_captured_axi_status_shapes at 7feb0272 plus captured-input tests
+ok - captured AXI replacement status replays through crew-state
+ok - captured AXI parked status replays through crew-state
+ok - captured AXI failed status replays through crew-state
+exit: 0
+
+RED test_captured_inventory_replay at 80556bca2d728071cc14476b9bee60a8edf4159e
+not ok - the recorded live successor outranks its superseded cancellation (missing: 'state: working')
+--- output ---
+state: failed · source: run-step · run cancelled
+exit: 1
+
+GREEN test_captured_inventory_replay at 7feb0272 plus captured-input tests
+ok - captured capped inventory replays selection, ambiguity, and unavailable lookup
+exit: 0
+
+RED test_captured_authority_transition at 5588b3ea1f86e662ef505aaf30d5ec03da9c4c31
+not ok - captured terminal output cannot validate a live selection (missing: 'state: unknown')
+--- output ---
+state: failed · source: run-step · run cancelled · run: 01NEW
+exit: 1
+
+GREEN test_captured_authority_transition at 7feb0272 plus captured-input tests
+ok - captured status formats reject a synthetic authority transition
+exit: 0
+
+RED test_captured_completed_history at 5588b3ea1f86e662ef505aaf30d5ec03da9c4c31
+not ok - captured completion does not hide subsequent development (missing: 'state: working')
+--- output ---
+state: unknown · source: run-step · selected run code identity unverified; run ids: 01NEW, 01OLD
+exit: 1
+
+GREEN test_captured_completed_history at 7feb0272 plus captured-input tests
+ok - captured completed status yields to synthetic subsequent development
+exit: 0
+
+RED test_uninitialized_busy_worker_uses_pane at 5588b3ea1f86e662ef505aaf30d5ec03da9c4c31
+not ok - R2 an uninitialized gate must preserve a busy worker (missing: 'state: working')
+--- output ---
+state: unknown · source: run-step · run inventory unreadable; run ids: , unavailable
+exit: 1
+
+GREEN test_uninitialized_busy_worker_uses_pane at 7feb0272 plus captured-input tests
+ok - R2 uninitialized busy workers retain pane reporting
+exit: 0
+
+RED test_uninitialized_idle_worker_uses_status at 5588b3ea1f86e662ef505aaf30d5ec03da9c4c31
+not ok - R2 an uninitialized gate must preserve current worker status (missing: 'state: working')
+--- output ---
+state: unknown · source: run-step · run inventory unreadable; run ids: , unavailable
+exit: 1
+
+GREEN test_uninitialized_idle_worker_uses_status at 7feb0272 plus captured-input tests
+ok - R2 uninitialized idle workers retain status reporting
+exit: 0

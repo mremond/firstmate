@@ -1,0 +1,82 @@
+{
+  "captured_at": "2026-09-14T22:16:11.571151+00:00",
+  "target": "622eb46201cb243e72bd2437c9fa76c90b38160b",
+  "captures": {
+    "replacement": {
+      "command": [
+        "no-mistakes",
+        "axi",
+        "status",
+        "--run",
+        "01M2GAWMSDQK4B5EA9GZW35RXE"
+      ],
+      "exit": 0,
+      "sha256": "e11250b648b0d7b2734dff6bd116e881e1bc0447f0637aa805532542f377fde1",
+      "historical_capture_matches_manifest": true,
+      "unchanged_since_capture": false
+    },
+    "superseded": {
+      "command": [
+        "no-mistakes",
+        "axi",
+        "status",
+        "--run",
+        "01M2FNFPK984YP0EHFTD1XEF8P"
+      ],
+      "exit": 0,
+      "sha256": "d6f0ea10f75a39a09b32c247c9b291039bd8f7ef284d5611fb2743187c9f7f67",
+      "historical_capture_matches_manifest": true,
+      "unchanged_since_capture": true
+    },
+    "parked": {
+      "command": [
+        "no-mistakes",
+        "axi",
+        "status",
+        "--run",
+        "01M20NDQH0G96AQYH1EHWGKT5F"
+      ],
+      "exit": 0,
+      "sha256": "073a7192a0eeee9e8dba5d6c19725703a0bd9f4aa6ad496978dd1ea63a7fdfb9",
+      "historical_capture_matches_manifest": true,
+      "unchanged_since_capture": false
+    },
+    "failed": {
+      "command": [
+        "no-mistakes",
+        "axi",
+        "status",
+        "--run",
+        "01M289YXN7V0513AKCF53MJ1BC"
+      ],
+      "exit": 0,
+      "sha256": "35729da553bfd304451ad945ce8ab28244fcab36c4d7fdd0bd415ece30ccee12",
+      "historical_capture_matches_manifest": true,
+      "unchanged_since_capture": true
+    },
+    "completed": {
+      "command": [
+        "no-mistakes",
+        "axi",
+        "status",
+        "--run",
+        "01M2FG7SEEP1VBZ3B5SX35BJ6Q"
+      ],
+      "exit": 0,
+      "sha256": "daa05f5a8b67b9776378f5302022e58f4988297ac7143dadbb6f8820aaa3bc7c",
+      "historical_capture_matches_manifest": true,
+      "unchanged_since_capture": true
+    },
+    "uninitialized": {
+      "command": [
+        "no-mistakes",
+        "axi",
+        "status"
+      ],
+      "exit": 1,
+      "sha256": "d4c8f87399836fd2fe98c25ad1df3cb954e25fb37c0abe95bbafbd487ae3bd0a",
+      "historical_capture_matches_manifest": true,
+      "unchanged_since_capture": true
+    }
+  }
+}

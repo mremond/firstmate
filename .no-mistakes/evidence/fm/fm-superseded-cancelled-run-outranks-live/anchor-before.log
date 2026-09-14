@@ -1,0 +1,20 @@
+ok - superseded cancelled run preserves the replacement review gate
+ok - capped overview retains both competing same-branch run ids
+ok - R6 capped inventory ignores unrelated semantics and names both ids
+ok - complete inventory preserves the replacement gate without writes
+ok - newer failed run remains failed beside an older live run
+ok - R1 both directions of inventory liveness disagreement read unknown
+ok - missing run selection reports unknown with candidate ids
+ok - wrong-id run selection reports unknown with candidate ids
+ok - wrong-branch run selection reports unknown with candidate ids
+ok - wrong-head run selection reports unknown with candidate ids
+ok - missing-status run selection reports unknown with candidate ids
+ok - malformed-table run selection reports unknown with candidate ids
+ok - inventory-error run selection reports unknown with candidate ids
+ok - selected-error run selection reports unknown with candidate ids
+ok - R3 historical inventory yields to the current busy pane
+ok - R3 historical inventory yields to current worker status
+ok - R5 complete inventory without Python keeps the replacement gate
+ok - R5 complete ambiguity without Python names both ids
+ok - R5 capped lookup without Python preserves available ids
+ok - R5 capped lookup without SQLite support preserves available ids
