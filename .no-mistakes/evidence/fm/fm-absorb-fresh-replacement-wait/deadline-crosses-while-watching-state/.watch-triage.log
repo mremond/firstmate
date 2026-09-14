@@ -1,0 +1,12 @@
+[2026-09-14T12:58:46+0200] absorbed stale (paused until 17s from now, declared time not reached): phase:wait
+[2026-09-14T12:58:49+0200] absorbed stale (paused until 14s from now, declared time not reached): phase:wait
+[2026-09-14T12:58:51+0200] absorbed stale (paused until 12s from now, declared time not reached): phase:wait
+[2026-09-14T12:58:52+0200] absorbed stale (paused until 11s from now, declared time not reached): phase:wait
+[2026-09-14T12:58:54+0200] absorbed stale (paused until 9s from now, declared time not reached): phase:wait
+[2026-09-14T12:58:56+0200] absorbed stale (paused until 7s from now, declared time not reached): phase:wait
+[2026-09-14T12:58:57+0200] absorbed stale (paused until 6s from now, declared time not reached): phase:wait
+[2026-09-14T12:58:58+0200] absorbed stale (paused until 5s from now, declared time not reached): phase:wait
+[2026-09-14T12:59:00+0200] absorbed stale (paused until 3s from now, declared time not reached): phase:wait
+[2026-09-14T12:59:01+0200] absorbed stale (paused until 2s from now, declared time not reached): phase:wait
+[2026-09-14T12:59:05+0200] absorbed stale (paused, declared time reached, age 22s): phase:wait
+[2026-09-14T12:59:06+0200] absorbed stale (paused, declared time reached, age 23s): phase:wait

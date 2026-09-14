@@ -1,0 +1,66 @@
+Production watcher behavior at 67dab27bdd07cfd3d7b077bb043936872bd1111c
+
+live-watch.log
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/external-replacement-verified/state/wait.status
+TEST DATA: persisted status mtime aged 500s; production clock unchanged
+WATCH OUTPUT stale: phase:wait (paused 501s, awaiting external - declared pause, rechecked on a long cadence not a wedge; confirm the wait still holds)
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/external-replacement-verified/state/wait.status
+[2026-09-14T12:56:55+0200] absorbed stale (paused, awaiting external, age 4s): phase:wait
+[2026-09-14T12:56:58+0200] absorbed stale (paused, awaiting external, age 7s): phase:wait
+TEST DATA: persisted status mtime aged 500s; production clock unchanged
+WATCH OUTPUT stale: phase:wait (paused 501s, awaiting external - declared pause, rechecked on a long cadence not a wedge; confirm the wait still holds)
+[2026-09-14T12:56:55+0200] absorbed stale (paused, awaiting external, age 4s): phase:wait
+[2026-09-14T12:56:58+0200] absorbed stale (paused, awaiting external, age 7s): phase:wait
+[2026-09-14T12:57:02+0200] absorbed stale (paused, awaiting external, age 503s): phase:wait
+[2026-09-14T12:57:03+0200] absorbed stale (paused, awaiting external, age 504s): phase:wait
+SCENARIO PASS external-replacement
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-replacement-verified/state/wait.status
+TEST DATA: persisted status mtime aged 500s; production clock unchanged
+WATCH OUTPUT stale: phase:wait (captain-held 501s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold)
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-replacement-verified/state/wait.status
+[2026-09-14T12:57:12+0200] absorbed stale (captain-held, awaiting the captain, age 4s): phase:wait
+[2026-09-14T12:57:14+0200] absorbed stale (captain-held, awaiting the captain, age 6s): phase:wait
+TEST DATA: persisted status mtime aged 500s; production clock unchanged
+WATCH OUTPUT stale: phase:wait (captain-held 501s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold)
+[2026-09-14T12:57:12+0200] absorbed stale (captain-held, awaiting the captain, age 4s): phase:wait
+[2026-09-14T12:57:14+0200] absorbed stale (captain-held, awaiting the captain, age 6s): phase:wait
+[2026-09-14T12:57:17+0200] absorbed stale (captain-held, awaiting the captain, age 503s): phase:wait
+[2026-09-14T12:57:19+0200] absorbed stale (captain-held, awaiting the captain, age 505s): phase:wait
+SCENARIO PASS captain-held-replacement
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/expired-deadline-replacement-verified/state/wait.status
+WATCH OUTPUT stale: phase:wait (paused 4s, awaiting external - the declared clearing time has passed, rechecked on a long cadence not a wedge; confirm the wait cleared)
+[2026-09-14T12:57:28+0200] absorbed stale (paused, declared time reached, age 7s): phase:wait
+[2026-09-14T12:57:30+0200] absorbed stale (paused, declared time reached, age 9s): phase:wait
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/expired-deadline-replacement-verified/state/wait.status
+WATCH OUTPUT stale: phase:wait (paused 3s, awaiting external - the declared clearing time has passed, rechecked on a long cadence not a wedge; confirm the wait cleared)
+[2026-09-14T12:57:28+0200] absorbed stale (paused, declared time reached, age 7s): phase:wait
+[2026-09-14T12:57:30+0200] absorbed stale (paused, declared time reached, age 9s): phase:wait
+[2026-09-14T12:57:38+0200] absorbed stale (paused, declared time reached, age 7s): phase:wait
+[2026-09-14T12:57:39+0200] absorbed stale (paused, declared time reached, age 8s): phase:wait
+SCENARIO PASS expired-deadline-replacement
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/future-deadline-cadence-cap-verified/state/wait.status
+[2026-09-14T12:57:45+0200] absorbed stale (paused until 31535996s from now, declared time not reached): phase:wait
+[2026-09-14T12:57:48+0200] absorbed stale (paused until 31535993s from now, declared time not reached): phase:wait
+TEST DATA: persisted status mtime aged 500s; production clock unchanged
+WATCH OUTPUT stale: phase:wait (paused 501s, awaiting external - the declared time is beyond the recheck cadence; confirm the wait still holds)
+SCENARIO PASS future-deadline-cadence-cap
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-away-boundary-verified/state/wait.status
+TEST DATA: persisted status mtime aged 500s; production clock unchanged
+[2026-09-14T12:57:55+0200] absorbed stale (captain-held, never rechecked while the away-posture record exists): phase:wait
+[2026-09-14T12:57:58+0200] absorbed stale (captain-held, never rechecked while the away-posture record exists): phase:wait
+WATCH OUTPUT stale: phase:wait (captain-held 506s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold)
+SCENARIO PASS captain-held-away-boundary
+
+live-deadline-transition.log
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/deadline-crosses-while-watching-verified/state/wait.status
+[2026-09-14T12:58:46+0200] absorbed stale (paused until 17s from now, declared time not reached): phase:wait
+[2026-09-14T12:58:49+0200] absorbed stale (paused until 14s from now, declared time not reached): phase:wait
+DEADLINE TRANSITION: real wall clock crosses 2026-09-14T10:59:03Z with the same watcher running
+WATCH OUTPUT stale: phase:wait (paused 20s, awaiting external - the declared clearing time has passed, rechecked on a long cadence not a wedge; confirm the wait cleared)
+[2026-09-14T12:58:57+0200] absorbed stale (paused until 6s from now, declared time not reached): phase:wait
+[2026-09-14T12:58:58+0200] absorbed stale (paused until 5s from now, declared time not reached): phase:wait
+[2026-09-14T12:59:00+0200] absorbed stale (paused until 3s from now, declared time not reached): phase:wait
+[2026-09-14T12:59:01+0200] absorbed stale (paused until 2s from now, declared time not reached): phase:wait
+[2026-09-14T12:59:05+0200] absorbed stale (paused, declared time reached, age 22s): phase:wait
+[2026-09-14T12:59:06+0200] absorbed stale (paused, declared time reached, age 23s): phase:wait
+SCENARIO PASS deadline-crosses-while-watching

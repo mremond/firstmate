@@ -1,0 +1,89 @@
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-crew-state.sh wait
+state: unknown · source: none · no current-state source available
+
+$ tmux send-keys -t phase:wait -l printf "%s\n" 'paused: waiting for reset, until 2026-09-14T10:59:03Z' >> /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/deadline-crosses-while-watching-verified/state/wait.status
+
+$ tmux send-keys -t phase:wait Enter
+
+STATUS paused: waiting for reset, until 2026-09-14T10:59:03Z
+START production bin/fm-watch.sh deadline-crosses-while-watching round=1
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/deadline-crosses-while-watching-verified/state/wait.status
+PERSISTED WAKE QUEUE
+1789383524	1	signal	wait.status	signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/deadline-crosses-while-watching-verified/state/wait.status
+1789383524	2	signal	wait.status	signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/deadline-crosses-while-watching-verified/state/wait.status
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh
+1789383524	2	signal	wait.status	signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/deadline-crosses-while-watching-verified/state/wait.status
+wake annotation: latest wake-EVENT observed at drain, not current state: wait.status: paused: waiting for reset, until 2026-09-14T10:59:03Z
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 82102.1789383524.qaU9zZ
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  After draining queued wakes, repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 82102.1789383524.qaU9zZ
+
+START production bin/fm-watch.sh deadline-crosses-while-watching round=2
+PRODUCTION TRIAGE (two completed matching observations)
+[2026-09-14T12:58:46+0200] absorbed stale (paused until 17s from now, declared time not reached): phase:wait
+[2026-09-14T12:58:49+0200] absorbed stale (paused until 14s from now, declared time not reached): phase:wait
+THROTTLE 
+DEADLINE TRANSITION: real wall clock crosses 2026-09-14T10:59:03Z with the same watcher running
+WATCH OUTPUT stale: phase:wait (paused 20s, awaiting external - the declared clearing time has passed, rechecked on a long cadence not a wedge; confirm the wait cleared)
+PERSISTED WAKE QUEUE
+1789383543	3	stale	phase:wait	stale: phase:wait (paused 20s, awaiting external - the declared clearing time has passed, rechecked on a long cadence not a wedge; confirm the wait cleared)
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh
+1789383543	3	stale	phase:wait	stale: phase:wait (paused 20s, awaiting external - the declared clearing time has passed, rechecked on a long cadence not a wedge; confirm the wait cleared)
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 3 --recovery-generation 4487.1789383543.dLQLHY
+WARNING: watcher still down (same stale episode; last beat: 1s ago, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh --ack-through 3 --recovery-generation 4487.1789383543.dLQLHY
+
+START production bin/fm-watch.sh deadline-crosses-while-watching round=3
+PRODUCTION TRIAGE (two completed matching observations)
+[2026-09-14T12:58:57+0200] absorbed stale (paused until 6s from now, declared time not reached): phase:wait
+[2026-09-14T12:58:58+0200] absorbed stale (paused until 5s from now, declared time not reached): phase:wait
+[2026-09-14T12:59:00+0200] absorbed stale (paused until 3s from now, declared time not reached): phase:wait
+[2026-09-14T12:59:01+0200] absorbed stale (paused until 2s from now, declared time not reached): phase:wait
+[2026-09-14T12:59:05+0200] absorbed stale (paused, declared time reached, age 22s): phase:wait
+[2026-09-14T12:59:06+0200] absorbed stale (paused, declared time reached, age 23s): phase:wait
+THROTTLE declared:r1:3534007374726f6e673a31363737373233343a36353130303838353a313738393338333532332e30303332313334313500526567756c61722046696c653a313030363434002d007265616461626c65007265616461626c65:due
+SCENARIO PASS deadline-crosses-while-watching
+[
+  {
+    "name": "external-replacement",
+    "result": "pass",
+    "live": true
+  },
+  {
+    "name": "captain-held-replacement",
+    "result": "pass",
+    "live": true
+  },
+  {
+    "name": "expired-deadline-replacement",
+    "result": "pass",
+    "live": true
+  },
+  {
+    "name": "future-deadline-cadence-cap",
+    "result": "pass",
+    "live": true
+  },
+  {
+    "name": "captain-held-away-boundary",
+    "result": "pass",
+    "live": true
+  },
+  {
+    "name": "deadline-crosses-while-watching",
+    "result": "pass",
+    "live": true
+  }
+]

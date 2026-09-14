@@ -1,0 +1,228 @@
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-crew-state.sh wait
+state: unknown · source: none · worktree gone (torn down?)
+
+$ tmux send-keys -t phase:wait -l printf "%s\n" 'paused: waiting for validation one' >> /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/external-replacement/state/wait.status
+
+$ tmux send-keys -t phase:wait Enter
+
+STATUS paused: waiting for validation one
+START production bin/fm-watch.sh external-replacement round=1
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/external-replacement/state/wait.status
+PERSISTED WAKE QUEUE
+1789383331	1	signal	wait.status	signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/external-replacement/state/wait.status
+1789383331	2	signal	wait.status	signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/external-replacement/state/wait.status
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh
+1789383331	2	signal	wait.status	signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/external-replacement/state/wait.status
+wake annotation: latest wake-EVENT observed at drain, not current state: wait.status: paused: waiting for validation one
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 97716.1789383331.arvJTN
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 3s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  After draining queued wakes, repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 97716.1789383331.arvJTN
+
+TEST DATA: persisted status mtime aged 500s; production clock unchanged
+START production bin/fm-watch.sh external-replacement round=2
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/external-replacement/state/wait.status
+SCENARIO FAIL external-replacement: signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/external-replacement/state/wait.status
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-crew-state.sh wait
+state: unknown · source: none · worktree gone (torn down?)
+
+$ tmux send-keys -t phase:wait -l printf "%s\n" 'captain-held [key=route]: awaiting routing call' >> /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-replacement/state/wait.status
+
+$ tmux send-keys -t phase:wait Enter
+
+STATUS captain-held [key=route]: awaiting routing call
+START production bin/fm-watch.sh captain-held-replacement round=1
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-replacement/state/wait.status
+PERSISTED WAKE QUEUE
+1789383337	1	signal	wait.status	needs-decision: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-replacement/state/wait.status
+1789383337	2	signal	wait.status	needs-decision: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-replacement/state/wait.status
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh
+1789383337	2	signal	wait.status	needs-decision: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-replacement/state/wait.status
+wake annotation: latest wake-EVENT observed at drain, not current state: wait.status: captain-held [key=route]: awaiting routing call
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 9034.1789383337.lDtD0Z
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 3s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  After draining queued wakes, repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 9034.1789383337.lDtD0Z
+
+TEST DATA: persisted status mtime aged 500s; production clock unchanged
+START production bin/fm-watch.sh captain-held-replacement round=2
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-replacement/state/wait.status
+SCENARIO FAIL captain-held-replacement: signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-replacement/state/wait.status
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-crew-state.sh wait
+state: unknown · source: none · worktree gone (torn down?)
+
+$ tmux send-keys -t phase:wait -l printf "%s\n" 'paused: wait A, until 2026-09-14T10:55:10Z' >> /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/expired-deadline-replacement/state/wait.status
+
+$ tmux send-keys -t phase:wait Enter
+
+STATUS paused: wait A, until 2026-09-14T10:55:10Z
+START production bin/fm-watch.sh expired-deadline-replacement round=1
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/expired-deadline-replacement/state/wait.status
+PERSISTED WAKE QUEUE
+1789383342	1	signal	wait.status	signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/expired-deadline-replacement/state/wait.status
+1789383342	2	signal	wait.status	signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/expired-deadline-replacement/state/wait.status
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh
+1789383342	2	signal	wait.status	signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/expired-deadline-replacement/state/wait.status
+wake annotation: latest wake-EVENT observed at drain, not current state: wait.status: paused: wait A, until 2026-09-14T10:55:10Z
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 17995.1789383342.3yhUW2
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  After draining queued wakes, repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 17995.1789383342.3yhUW2
+
+START production bin/fm-watch.sh expired-deadline-replacement round=2
+WATCH OUTPUT stale: phase:wait (paused 4s, awaiting external - the declared clearing time has passed, rechecked on a long cadence not a wedge; confirm the wait cleared)
+PERSISTED WAKE QUEUE
+1789383344	3	stale	phase:wait	stale: phase:wait (paused 4s, awaiting external - the declared clearing time has passed, rechecked on a long cadence not a wedge; confirm the wait cleared)
+
+SCENARIO FAIL expired-deadline-replacement: 1789383344	3	stale	phase:wait	stale: phase:wait (paused 4s, awaiting external - the declared clearing time has passed, rechecked on a long cadence not a wedge; confirm the wait cleared)
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-crew-state.sh wait
+state: unknown · source: none · worktree gone (torn down?)
+
+$ tmux send-keys -t phase:wait -l printf "%s\n" 'paused: waiting for reset, until 2027-09-14T10:55:44Z' >> /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/future-deadline-cadence-cap/state/wait.status
+
+$ tmux send-keys -t phase:wait Enter
+
+STATUS paused: waiting for reset, until 2027-09-14T10:55:44Z
+START production bin/fm-watch.sh future-deadline-cadence-cap round=1
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/future-deadline-cadence-cap/state/wait.status
+PERSISTED WAKE QUEUE
+1789383346	1	signal	wait.status	signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/future-deadline-cadence-cap/state/wait.status
+1789383346	2	signal	wait.status	signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/future-deadline-cadence-cap/state/wait.status
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh
+1789383346	2	signal	wait.status	signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/future-deadline-cadence-cap/state/wait.status
+wake annotation: latest wake-EVENT observed at drain, not current state: wait.status: paused: waiting for reset, until 2027-09-14T10:55:44Z
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 24016.1789383346.aBNtL4
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  After draining queued wakes, repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 24016.1789383346.aBNtL4
+
+START production bin/fm-watch.sh future-deadline-cadence-cap round=2
+PRODUCTION TRIAGE (two completed matching observations)
+[2026-09-14T12:55:48+0200] absorbed stale (paused until 31535996s from now, declared time not reached): phase:wait
+[2026-09-14T12:55:51+0200] absorbed stale (paused until 31535993s from now, declared time not reached): phase:wait
+THROTTLE 
+TEST DATA: persisted status mtime aged 500s; production clock unchanged
+START production bin/fm-watch.sh future-deadline-cadence-cap round=3
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/future-deadline-cadence-cap/state/wait.status
+SCENARIO FAIL future-deadline-cadence-cap: signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/future-deadline-cadence-cap/state/wait.status
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-crew-state.sh wait
+state: unknown · source: none · worktree gone (torn down?)
+
+$ tmux send-keys -t phase:wait -l printf "%s\n" 'captain-held [key=hold]: awaiting user choice' >> /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-away-boundary/state/wait.status
+
+$ tmux send-keys -t phase:wait Enter
+
+STATUS captain-held [key=hold]: awaiting user choice
+START production bin/fm-watch.sh captain-held-away-boundary round=1
+WATCH OUTPUT signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-away-boundary/state/wait.status
+PERSISTED WAKE QUEUE
+1789383357	1	signal	wait.status	needs-decision: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-away-boundary/state/wait.status
+1789383357	2	signal	wait.status	needs-decision: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-away-boundary/state/wait.status
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh
+1789383357	2	signal	wait.status	needs-decision: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-away-boundary/state/wait.status
+wake annotation: latest wake-EVENT observed at drain, not current state: wait.status: captain-held [key=hold]: awaiting user choice
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 39666.1789383357.g77Udf
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 3s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  After draining queued wakes, repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 39666.1789383357.g77Udf
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-afk-contract.sh propose
+Away posture read-back (proposed, not yet confirmed):
+  entered: 2026-09-14T10:55:58Z
+  expected return: not given
+  spend cap: 4 concurrent workers
+  merge when green (task ids): (none)
+  reach: hold-for-return only. No phone channel is configured; anything that needs you waits for your return.
+  your words: (none)
+  accepted clauses:
+    (none)
+  refused clauses:
+    (none)
+  everything else waits for your return: no red merge without its named check, no discard without a named object and condition, never credentials, legal, financial, or attended prompts, nothing by analogy, and every clause expires at return.
+  hard rule: forbidden, destructive, irreversible, and security-sensitive actions are never pre-authorizable regardless of clause text; no recorded clause is authority by itself.
+  recorded clauses are held for the return brief and are not executed by this release.
+Say go to confirm; restate any refused clause first if you want it recorded.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/bin/fm-afk-contract.sh confirm
+Away posture confirmed at 2026-09-14T10:55:58Z: hold-for-return only. No phone channel is configured; anything that needs you waits for your return. No mandate clauses recorded. Forbidden, destructive, irreversible, and security-sensitive actions are never pre-authorizable regardless of clause text, and no recorded clause is authority by itself. Expected return: not given. Spend cap: 4 concurrent workers.
+
+TEST DATA: persisted status mtime aged 500s; production clock unchanged
+START production bin/fm-watch.sh captain-held-away-boundary round=2
+SCENARIO FAIL captain-held-away-boundary: signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-away-boundary/state/wait.status
+
+[
+  {
+    "name": "external-replacement",
+    "result": "fail",
+    "live": true,
+    "error": "signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/external-replacement/state/wait.status\n"
+  },
+  {
+    "name": "captain-held-replacement",
+    "result": "fail",
+    "live": true,
+    "error": "signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-replacement/state/wait.status\n"
+  },
+  {
+    "name": "expired-deadline-replacement",
+    "result": "fail",
+    "live": true,
+    "error": "1789383344\t3\tstale\tphase:wait\tstale: phase:wait (paused 4s, awaiting external - the declared clearing time has passed, rechecked on a long cadence not a wedge; confirm the wait cleared)\n"
+  },
+  {
+    "name": "future-deadline-cadence-cap",
+    "result": "fail",
+    "live": true,
+    "error": "signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/future-deadline-cadence-cap/state/wait.status\n"
+  },
+  {
+    "name": "captain-held-away-boundary",
+    "result": "fail",
+    "live": true,
+    "error": "signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-away-boundary/state/wait.status\n"
+  }
+]

@@ -1,0 +1,29 @@
+bash-3.2$ printf "%s\n" 'paused: waiting for validation one' >> /Users/mremond/.
+no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/extern
+al-replacement-verified/state/wait.status
+bash-3.2$ printf "%s\n" 'paused: waiting for validation two' >> /Users/mremond/.
+no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/extern
+al-replacement-verified/state/wait.status
+bash-3.2$ printf "%s\n" 'captain-held [key=route]: awaiting routing call' >> /Us
+ers/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phas
+e-test/captain-held-replacement-verified/state/wait.status
+bash-3.2$ printf "%s\n" 'captain-held [key=release]: awaiting release call' >> /
+Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.ph
+ase-test/captain-held-replacement-verified/state/wait.status
+bash-3.2$ printf "%s\n" 'paused: wait A, until 2026-09-14T10:56:51Z' >> /Users/m
+remond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-tes
+t/expired-deadline-replacement-verified/state/wait.status
+bash-3.2$ printf "%s\n" 'paused: replacement B, until 2026-09-14T10:57:21Z' >> /
+Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.ph
+ase-test/expired-deadline-replacement-verified/state/wait.status
+bash-3.2$ printf "%s\n" 'paused: waiting for reset, until 2027-09-14T10:57:41Z'
+>> /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS
+/.phase-test/future-deadline-cadence-cap-verified/state/wait.status
+bash-3.2$ printf "%s\n" 'captain-held [key=hold]: awaiting user choice' >> /User
+s/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-
+test/captain-held-away-boundary-verified/state/wait.status
+bash-3.2$ printf "%s\n" 'paused: waiting for reset, until 2026-09-14T10:59:03Z'
+>> /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS
+/.phase-test/deadline-crosses-while-watching-verified/state/wait.status
+bash-3.2$ unset HISTFILE
+bash-3.2$

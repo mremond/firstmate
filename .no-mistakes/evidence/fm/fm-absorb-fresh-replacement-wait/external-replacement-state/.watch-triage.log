@@ -1,0 +1,4 @@
+[2026-09-14T12:56:55+0200] absorbed stale (paused, awaiting external, age 4s): phase:wait
+[2026-09-14T12:56:58+0200] absorbed stale (paused, awaiting external, age 7s): phase:wait
+[2026-09-14T12:57:02+0200] absorbed stale (paused, awaiting external, age 503s): phase:wait
+[2026-09-14T12:57:03+0200] absorbed stale (paused, awaiting external, age 504s): phase:wait

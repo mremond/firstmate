@@ -1,0 +1,32 @@
+[
+  {
+    "name": "external-replacement",
+    "result": "pass",
+    "live": true
+  },
+  {
+    "name": "captain-held-replacement",
+    "result": "pass",
+    "live": true
+  },
+  {
+    "name": "expired-deadline-replacement",
+    "result": "pass",
+    "live": true
+  },
+  {
+    "name": "future-deadline-cadence-cap",
+    "result": "pass",
+    "live": true
+  },
+  {
+    "name": "captain-held-away-boundary",
+    "result": "pass",
+    "live": true
+  },
+  {
+    "name": "deadline-crosses-while-watching",
+    "result": "pass",
+    "live": true
+  }
+]

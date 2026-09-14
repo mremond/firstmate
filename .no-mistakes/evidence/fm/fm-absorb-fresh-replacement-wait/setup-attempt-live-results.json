@@ -1,0 +1,32 @@
+[
+  {
+    "name": "external-replacement",
+    "result": "fail",
+    "live": true,
+    "error": "signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/external-replacement/state/wait.status\n"
+  },
+  {
+    "name": "captain-held-replacement",
+    "result": "fail",
+    "live": true,
+    "error": "signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-replacement/state/wait.status\n"
+  },
+  {
+    "name": "expired-deadline-replacement",
+    "result": "fail",
+    "live": true,
+    "error": "1789383344\t3\tstale\tphase:wait\tstale: phase:wait (paused 4s, awaiting external - the declared clearing time has passed, rechecked on a long cadence not a wedge; confirm the wait cleared)\n"
+  },
+  {
+    "name": "future-deadline-cadence-cap",
+    "result": "fail",
+    "live": true,
+    "error": "signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/future-deadline-cadence-cap/state/wait.status\n"
+  },
+  {
+    "name": "captain-held-away-boundary",
+    "result": "fail",
+    "live": true,
+    "error": "signal: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2FR2HYYDP8NP8HDDX4D1MXS/.phase-test/captain-held-away-boundary/state/wait.status\n"
+  }
+]

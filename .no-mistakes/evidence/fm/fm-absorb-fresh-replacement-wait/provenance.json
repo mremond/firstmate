@@ -1,0 +1,54 @@
+{
+  "base": "b182d0f908b78d08c7ccb8dce3775bdca8c5d657",
+  "target": "67dab27bdd07cfd3d7b077bb043936872bd1111c",
+  "tree": "5a645bac36cc291afc278f1d5cf64553b6e2ec24",
+  "parents": [
+    "b8e02ef9e6faa2c6f0e337197efa58987f5d04c6",
+    "b182d0f908b78d08c7ccb8dce3775bdca8c5d657"
+  ],
+  "runtime": "Unmodified bin/fm-watch.sh and bin/fm-wake-drain.sh; real tmux server, shell, terminal capture, queue, and clock. No fake tmux, crew-state, or grep in live scenarios.",
+  "setup": "Only isolated .phase-test homes. Aged-status cases set persisted mtime and mark that setup change already observed through the production signature owner. Deadline crossing uses natural elapsed wall-clock time.",
+  "initial_driver_errors": "Initial setup timestamp edits surfaced status signals, and a queue assertion misclassified deadline output. Corrected only the evidence driver and reran all five affected scenarios successfully.",
+  "scope": "Source and repository test files unchanged. Test phase only; no pipeline control or delivery commands.",
+  "live_results": [
+    {
+      "name": "external-replacement",
+      "result": "pass",
+      "live": true
+    },
+    {
+      "name": "captain-held-replacement",
+      "result": "pass",
+      "live": true
+    },
+    {
+      "name": "expired-deadline-replacement",
+      "result": "pass",
+      "live": true
+    },
+    {
+      "name": "future-deadline-cadence-cap",
+      "result": "pass",
+      "live": true
+    },
+    {
+      "name": "captain-held-away-boundary",
+      "result": "pass",
+      "live": true
+    },
+    {
+      "name": "deadline-crosses-while-watching",
+      "result": "pass",
+      "live": true
+    }
+  ],
+  "captured_at": "2026-09-14T11:00:14.025207+00:00",
+  "targeted_regression": {
+    "command": "TMPDIR=\"$PWD/.phase-test/tmp\" FM_HOME=\"$PWD/.phase-test/home\" bin/fm-test-run.sh tests/fm-watch-triage.test.sh",
+    "exit_code": 0,
+    "log": "triage-regression.log",
+    "duration_ms": 759182
+  },
+  "cleanup": "Isolated tmux server stopped; .phase-test removed; no source or repository test edits.",
+  "final_git_status": ""
+}
