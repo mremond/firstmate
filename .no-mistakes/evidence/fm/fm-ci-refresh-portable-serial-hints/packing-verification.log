@@ -1,0 +1,89 @@
+/bin/bash bin/fm-test-run.sh --check-coverage -> exit 0
+/bin/bash bin/fm-test-run.sh --list-lanes -> exit 0
+/bin/bash bin/fm-test-run.sh --list --lane portable-serial -> exit 0
+/bin/bash bin/fm-test-run.sh --list-scheduled --lane portable-serial-1of5 -> exit 0
+/bin/bash bin/fm-test-run.sh --list-scheduled --lane portable-serial-2of5 -> exit 0
+/bin/bash bin/fm-test-run.sh --list-scheduled --lane portable-serial-3of5 -> exit 0
+/bin/bash bin/fm-test-run.sh --list-scheduled --lane portable-serial-4of5 -> exit 0
+/bin/bash bin/fm-test-run.sh --list-scheduled --lane portable-serial-5of5 -> exit 0
+/bin/bash bin/fm-test-run.sh --list-scheduled --lane portable-serial-1of5 -> exit 0
+/bin/bash bin/fm-test-run.sh --list --lane portable-serial-1of4 -> exit 2
+/bin/bash bin/fm-test-run.sh --list --lane portable-serial-0of5 -> exit 2
+/bin/bash bin/fm-test-run.sh --list --lane portable-serial-6of5 -> exit 2
+/bin/bash bin/fm-test-run.sh --list --lane portable-serial-1 -> exit 2
+/bin/bash bin/fm-test-run.sh --jobs 2 --lane portable-serial -> exit 2
+/bin/bash bin/fm-test-run.sh --jobs 2 --lane portable-serial-1of5 -> exit 2
+/bin/bash bin/fm-test-run.sh --jobs 2 --lane portable-serial-2of5 -> exit 2
+/bin/bash bin/fm-test-run.sh --jobs 2 --lane portable-serial-3of5 -> exit 2
+/bin/bash bin/fm-test-run.sh --jobs 2 --lane portable-serial-4of5 -> exit 2
+/bin/bash bin/fm-test-run.sh --jobs 2 --lane portable-serial-5of5 -> exit 2
+/bin/bash bin/.test-phase-baseline-run.sh --list-scheduled --lane portable-serial-1of5 -> exit 0
+/bin/bash bin/.test-phase-baseline-run.sh --list-scheduled --lane portable-serial-2of5 -> exit 0
+/bin/bash bin/.test-phase-baseline-run.sh --list-scheduled --lane portable-serial-3of5 -> exit 0
+/bin/bash bin/.test-phase-baseline-run.sh --list-scheduled --lane portable-serial-4of5 -> exit 0
+/bin/bash bin/.test-phase-baseline-run.sh --list-scheduled --lane portable-serial-5of5 -> exit 0
+{
+  "target": "53751a41d28be5e963528e90ec12d1e907b8f81f",
+  "coverage": "FM_TEST_COVERAGE ok total=205 parallel=24 parallel_max_ms=417163 parallel_imbalance_ms=2894 parallel_unhinted=0 serial=165 serial_shards=5 serial_unhinted=6 herdr=16",
+  "retained_hint_inputs": {
+    "tests/fm-agy-harness.test.sh": 11000,
+    "tests/fm-agy-signals-live-e2e.test.sh": 23
+  },
+  "unhinted": [
+    "tests/fm-backlog-read-bound.test.sh",
+    "tests/fm-ci-workflow.test.sh",
+    "tests/fm-harness-precedence.test.sh",
+    "tests/fm-herdr-pi-stale-registration-live-e2e.test.sh",
+    "tests/fm-send-agy-confirm.test.sh",
+    "tests/fm-tasks-axi.test.sh"
+  ],
+  "shard_counts": [
+    31,
+    33,
+    34,
+    33,
+    34
+  ],
+  "hint_loads_ms": [
+    1182869,
+    1182846,
+    1182867,
+    1182849,
+    1182874
+  ],
+  "exact_assignment_matches_independent_ci_maxima": true,
+  "deterministic": true,
+  "partition_complete_and_disjoint": true,
+  "invalid_lane_and_concurrency_requests_refused_before_execution": true,
+  "historical_replay_not_live_ci": {
+    "run": "34447627189",
+    "base": "036fec054283882c1cfaa3e66e6f8d16ff4f4b5f",
+    "baseline_assignment_rejected_by_refreshed_oracle": true,
+    "before_ms": [
+      1320621,
+      922826,
+      774657,
+      773014,
+      909360
+    ],
+    "after_ms": [
+      1030666,
+      1010853,
+      815490,
+      932148,
+      911321
+    ],
+    "measured_scripts": 157,
+    "missing_from_held_out": [
+      "tests/fm-agy-harness.test.sh",
+      "tests/fm-agy-signals-live-e2e.test.sh",
+      "tests/fm-backlog-read-bound.test.sh",
+      "tests/fm-ci-workflow.test.sh",
+      "tests/fm-harness-precedence.test.sh",
+      "tests/fm-herdr-pi-stale-registration-live-e2e.test.sh",
+      "tests/fm-send-agy-confirm.test.sh",
+      "tests/fm-tasks-axi.test.sh"
+    ],
+    "note": "Partial historical script-time sums, not current job wall time; missing scripts excluded equally."
+  }
+}

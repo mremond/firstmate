@@ -1,0 +1,695 @@
+{
+  "target": "53751a41d28be5e963528e90ec12d1e907b8f81f",
+  "coverage": "FM_TEST_COVERAGE ok total=205 parallel=24 parallel_max_ms=417163 parallel_imbalance_ms=2894 parallel_unhinted=0 serial=165 serial_shards=5 serial_unhinted=6 herdr=16",
+  "provenance": {
+    "tests/fm-watch-triage.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 592748
+    },
+    "tests/fm-remote-secondmate-lifecycle-e2e.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 232102
+    },
+    "tests/fm-procevent.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 195367
+    },
+    "tests/fm-backlog-atomicity.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 185722
+    },
+    "tests/fm-session-start.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 174424
+    },
+    "tests/fm-secondmate-safety.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 154775
+    },
+    "tests/fm-bearings-snapshot.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 153883
+    },
+    "tests/fm-teardown.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 146451
+    },
+    "tests/fm-public-followup.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 146123
+    },
+    "tests/fm-control-relaunch.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 138946
+    },
+    "tests/fm-secondmate-harness.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 159443
+    },
+    "tests/fm-spawn-dispatch-profile.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 120646
+    },
+    "tests/fm-bootstrap.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 116931
+    },
+    "tests/fm-watcher-lock.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 114238
+    },
+    "tests/fm-pr-check-security.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 166991
+    },
+    "tests/fm-secondmate-reconcile.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 97549
+    },
+    "tests/fm-watch-arm.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 78999
+    },
+    "tests/fm-wake-queue.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 77768
+    },
+    "tests/fm-secondmate-sync.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 69957
+    },
+    "tests/fm-classify-corr-token.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 66300
+    },
+    "tests/fm-remote-transport-lanes.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 63125
+    },
+    "tests/fm-startup-network.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 62437
+    },
+    "tests/fm-pi-branch-extension.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 61893
+    },
+    "tests/fm-claude-stop-autoarm.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 60894
+    },
+    "tests/fm-remote-secondmate-trace-context.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 60191
+    },
+    "tests/fm-watch-recovery-loop.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 59085
+    },
+    "tests/fm-remote-job.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 59144
+    },
+    "tests/fm-sessionstart-nudge.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 66427
+    },
+    "tests/fm-bearings-board.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 56304
+    },
+    "tests/fm-spawn-pool-base-freshen.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 92699
+    },
+    "tests/fm-cursor-primary.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 88771
+    },
+    "tests/fm-pi-watch-extension.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 51913
+    },
+    "tests/fm-remote-reply.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 53503
+    },
+    "tests/fm-inactive-reconcile.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 49968
+    },
+    "tests/fm-omp-harness.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 47665
+    },
+    "tests/fm-trace-context-spawn.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 48663
+    },
+    "tests/fm-vendor-auth-probe.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 46112
+    },
+    "tests/fm-remote-backlog-handoff.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 72243
+    },
+    "tests/fm-secondmate-restart.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 109333
+    },
+    "tests/fm-calm-pi-extension.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 54310
+    },
+    "tests/fm-wake-drain-outcome-backstop.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 45556
+    },
+    "tests/fm-backlog-handoff.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 54958
+    },
+    "tests/fm-control.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 38887
+    },
+    "tests/fm-send-inbox.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 39207
+    },
+    "tests/fm-home-summary-refresh.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 36927
+    },
+    "tests/fm-fleet-sync.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 39276
+    },
+    "tests/fm-muse-harness.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 73479
+    },
+    "tests/fm-afk-inject-e2e.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 35095
+    },
+    "tests/fm-voice-relay.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 33858
+    },
+    "tests/fm-teardown-endpoint-safety.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 31935
+    },
+    "tests/fm-cursor-harness.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 30330
+    },
+    "tests/fm-remote-secondmate-parent-binding.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 31280
+    },
+    "tests/fm-task-inbox.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 29794
+    },
+    "tests/fm-busy-adapter-wiring.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 27562
+    },
+    "tests/fm-send-resolve-key.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 71799
+    },
+    "tests/fm-rovo-harness.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 25429
+    },
+    "tests/fm-pending-reply.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 79992
+    },
+    "tests/fm-daemon.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 28341
+    },
+    "tests/fm-backend.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 21823
+    },
+    "tests/fm-backend-orca.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 21674
+    },
+    "tests/fm-send-remote-delivery.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 30085
+    },
+    "tests/fm-procevent-when.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 20187
+    },
+    "tests/fm-turnend-guard.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 24483
+    },
+    "tests/fm-kimi-harness.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 19522
+    },
+    "tests/fm-afk-return.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 18730
+    },
+    "tests/fm-wake-drain-open-decisions-cursor.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 23661
+    },
+    "tests/fm-bearings-board-render.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 16447
+    },
+    "tests/fm-task-delivery.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 15443
+    },
+    "tests/fm-remote-doctor.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 14799
+    },
+    "tests/fm-secondmate-liveness.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 18495
+    },
+    "tests/fm-tool-update-check.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 14082
+    },
+    "tests/fm-pi-branch-responsiveness-live-e2e.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 13207
+    },
+    "tests/fm-wake-drain-unread-status.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 18063
+    },
+    "tests/fm-guard-stale-banner.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 13948
+    },
+    "tests/fm-mail-check.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 11230
+    },
+    "tests/fm-afk-contract.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 10942
+    },
+    "tests/fm-mail.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 10283
+    },
+    "tests/fm-bootstrap-network-parallel.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 9697
+    },
+    "tests/fm-extension-binding.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 9516
+    },
+    "tests/fm-branch-supervision.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 9733
+    },
+    "tests/fm-backend-zellij.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 9325
+    },
+    "tests/fm-secondmate-lifecycle-e2e.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 8444
+    },
+    "tests/fm-fleet-snapshot-view.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 8745
+    },
+    "tests/fm-on.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 12116
+    },
+    "tests/fm-spawn-worktree-settle.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 8391
+    },
+    "tests/fm-wake-drain-open-decisions.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 7779
+    },
+    "tests/fm-wake-daemon-lifecycle-e2e.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 7831
+    },
+    "tests/fm-tangle-guard.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 7607
+    },
+    "tests/fm-herdr-session-cleanup.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 6638
+    },
+    "tests/fm-watch-checkpoint.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 6162
+    },
+    "tests/fm-claude-trust.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 6083
+    },
+    "tests/fm-update.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 10002
+    },
+    "tests/fm-startup-memory-budget.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 7321
+    },
+    "tests/fm-send-secondmate-marker.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 5373
+    },
+    "tests/fm-shared-captain-inheritance.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 5554
+    },
+    "tests/fm-gate-refuse.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 5429
+    },
+    "tests/fm-backend-cmux.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 3623
+    },
+    "tests/fm-remote-herdr-guard.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 3162
+    },
+    "tests/fm-stow-cascade.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 3066
+    },
+    "tests/fm-busy-state.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 3100
+    },
+    "tests/fm-test-isolation-proof.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 2845
+    },
+    "tests/fm-remote-job-orphan-reap.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 2996
+    },
+    "tests/fm-procevent-quota.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 2056
+    },
+    "tests/fm-tmux-agent-liveness.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 2953
+    },
+    "tests/fm-session-lock-ancestry.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 1716
+    },
+    "tests/fm-quota-choose.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 1554
+    },
+    "tests/fm-gotmp.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 1418
+    },
+    "tests/fm-test-fixture-cleanup.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 1237
+    },
+    "tests/fm-subagent-pretool-check.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 1051
+    },
+    "tests/fm-live-gate.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 1613
+    },
+    "tests/fm-peek-remote.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 958
+    },
+    "tests/fm-project-origin.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 857
+    },
+    "tests/fm-classify-decision-key.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 1232
+    },
+    "tests/fm-harness-liveness-drift-live-e2e.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 1150
+    },
+    "tests/fm-documentation-audiences.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 816
+    },
+    "tests/fm-nm-test-contract.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 904
+    },
+    "tests/fm-supervision-events.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 655
+    },
+    "tests/fm-gemini-harness.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 576
+    },
+    "tests/fm-lint-workflows.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 883
+    },
+    "tests/fm-check-unregister.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 450
+    },
+    "tests/fm-backend-tmux-smoke.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 494
+    },
+    "tests/fm-operational-input.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 239
+    },
+    "tests/fm-no-mistakes-required.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 230
+    },
+    "tests/fm-trace-context-lib.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 245
+    },
+    "tests/fm-ask-user-authority.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 190
+    },
+    "tests/fm-sessionstart-hook-live-e2e.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 154
+    },
+    "tests/fm-send-secondmate-marker-herdr-e2e.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 135
+    },
+    "tests/fm-codex-continuity-live-e2e.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 127
+    },
+    "tests/fm-herdr-version-floor-live-e2e.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 127
+    },
+    "tests/fm-test-fixtures.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 185
+    },
+    "tests/fm-remote-entrypoint.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 112
+    },
+    "tests/fm-pi-windows-shell-invocation.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 81
+    },
+    "tests/fm-gitignore-config.test.sh": {
+      "run": "34413670094",
+      "duration_ms": 61
+    },
+    "tests/fm-harness-adapter-references.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 104
+    },
+    "tests/fm-stat-shadowing.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 70
+    },
+    "tests/fm-cmux-claude-composer-live-e2e.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 94
+    },
+    "tests/fm-send-inbox-doorbell-live-e2e.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 49
+    },
+    "tests/fm-bearings-board-lavish-live-e2e.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 49
+    },
+    "tests/fm-composer-matrix-live-e2e.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 48
+    },
+    "tests/fm-grok-stop-live-e2e.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 92
+    },
+    "tests/fm-grok-continuity-live-e2e.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 93
+    },
+    "tests/fm-harness-adapter-instructions-live-e2e.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 46
+    },
+    "tests/fm-sessionstart-instruction-refresh-live-e2e.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 46
+    },
+    "tests/fm-herdr-submit-confirm-live-e2e.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 48
+    },
+    "tests/fm-rovo-signals-live-e2e.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 94
+    },
+    "tests/fm-afk-pi-herdr-return-e2e.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 47
+    },
+    "tests/fm-claude-stop-autoarm-live-e2e.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 67
+    },
+    "tests/fm-opencode-primary-live-e2e.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 49
+    },
+    "tests/fm-pi-codex-native.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 47
+    },
+    "tests/fm-pi-primary-live-e2e.test.sh": {
+      "run": "34413651260",
+      "duration_ms": 48
+    },
+    "tests/fm-backend-cmux-smoke.test.sh": {
+      "run": "34413640474",
+      "duration_ms": 33
+    },
+    "tests/fm-muse-signals-live-e2e.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 52
+    },
+    "tests/fm-cursor-primary-live-e2e.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 67
+    },
+    "tests/fm-pi-branch-live-e2e.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 49
+    },
+    "tests/fm-quota-array-dispatch-live-e2e.test.sh": {
+      "run": "34466966385",
+      "duration_ms": 68
+    },
+    "tests/fm-omp-primary-live-e2e.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 49
+    },
+    "tests/fm-backend-zellij-smoke.test.sh": {
+      "run": "34439204619",
+      "duration_ms": 24
+    }
+  },
+  "retained_hint_inputs": {
+    "tests/fm-agy-harness.test.sh": 11000,
+    "tests/fm-agy-signals-live-e2e.test.sh": 23
+  },
+  "unhinted": [
+    "tests/fm-backlog-read-bound.test.sh",
+    "tests/fm-ci-workflow.test.sh",
+    "tests/fm-harness-precedence.test.sh",
+    "tests/fm-herdr-pi-stale-registration-live-e2e.test.sh",
+    "tests/fm-send-agy-confirm.test.sh",
+    "tests/fm-tasks-axi.test.sh"
+  ],
+  "shard_counts": [
+    31,
+    33,
+    34,
+    33,
+    34
+  ],
+  "hint_loads_ms": [
+    1182869,
+    1182846,
+    1182867,
+    1182849,
+    1182874
+  ],
+  "exact_assignment_matches_independent_ci_maxima": true,
+  "deterministic": true,
+  "partition_complete_and_disjoint": true,
+  "invalid_lane_and_concurrency_requests_refused_before_execution": true,
+  "historical_replay_not_live_ci": {
+    "run": "34447627189",
+    "base": "036fec054283882c1cfaa3e66e6f8d16ff4f4b5f",
+    "baseline_assignment_rejected_by_refreshed_oracle": true,
+    "before_ms": [
+      1320621,
+      922826,
+      774657,
+      773014,
+      909360
+    ],
+    "after_ms": [
+      1030666,
+      1010853,
+      815490,
+      932148,
+      911321
+    ],
+    "measured_scripts": 157,
+    "missing_from_held_out": [
+      "tests/fm-agy-harness.test.sh",
+      "tests/fm-agy-signals-live-e2e.test.sh",
+      "tests/fm-backlog-read-bound.test.sh",
+      "tests/fm-ci-workflow.test.sh",
+      "tests/fm-harness-precedence.test.sh",
+      "tests/fm-herdr-pi-stale-registration-live-e2e.test.sh",
+      "tests/fm-send-agy-confirm.test.sh",
+      "tests/fm-tasks-axi.test.sh"
+    ],
+    "note": "Partial historical script-time sums, not current job wall time; missing scripts excluded equally."
+  }
+}
