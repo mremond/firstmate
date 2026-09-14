@@ -1,0 +1,16 @@
+Base: 80556bca2d728071cc14476b9bee60a8edf4159e
+Target: a0eb3010963b43e9253d4d6b12fa902c800230a7
+Command: ['bash', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-base-fm-backend-focused.sh', 'run_spawn_symlink_case', 'physical', 'physical']
+FM_HOME: unset at process entry
+Checkout state before: False
+Backend environment: existing fake tmux/Treehouse fixtures, not live
+
+
+CLI observation (expected exit 0, actual exit 1):
+fm-spawn.sh should succeed for a project reached through a symlinked prefix when the backend reports physical cwd
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.1fJDt1/symlink-link-physical/proj
+not ok - fm-spawn.sh should succeed for a project reached through a symlinked prefix when the backend reports physical cwd
+error: could not resolve the shared Treehouse project lock for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.1fJDt1/symlink-link-physical/proj: expected exit 0, got 1
+
+Exit: 1
+Checkout state after: False

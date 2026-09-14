@@ -1,0 +1,31 @@
+Base: 80556bca2d728071cc14476b9bee60a8edf4159e
+Target: a0eb3010963b43e9253d4d6b12fa902c800230a7
+Command: ['bash', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-target-fm-backend-focused.sh', 'test_spawn_explicit_backend_flag_beats_autodetect_herdr_env']
+FM_HOME: unset at process entry
+Checkout state before: False
+Backend environment: existing fake tmux/Treehouse fixtures, not live
+
+
+CLI observation (expected exit 0, actual exit 0):
+explicit --backend tmux should spawn successfully even with HERDR_ENV=1 set
+warning: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.oy3IDi/explicit-backend-data/explicitbackendz4/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned explicitbackendz4 harness=claude kind=ship mode=no-mistakes yolo=off window=firstmate:fm-explicitbackendz4 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.oy3IDi/explicit-backend-wt
+ok - fm-spawn.sh: explicit --backend tmux wins over an ambient HERDR_ENV=1 auto-detect marker
+
+Persisted task metadata: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.oy3IDi/explicit-backend-state/explicitbackendz4.meta
+window=firstmate:fm-explicitbackendz4
+endpoint_task_id=explicitbackendz4
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.oy3IDi/explicit-backend-wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.oy3IDi/explicit-backend-project
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-explicitbackendz4
+model=default
+effort=default
+busy_gen=g1789419429.46277.21331
+spawn_gen=s1789419429.45799.12200
+
+Exit: 0
+Checkout state after: False

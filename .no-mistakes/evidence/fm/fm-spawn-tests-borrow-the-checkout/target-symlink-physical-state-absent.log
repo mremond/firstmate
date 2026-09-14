@@ -1,0 +1,30 @@
+Base: 80556bca2d728071cc14476b9bee60a8edf4159e
+Target: a0eb3010963b43e9253d4d6b12fa902c800230a7
+Command: ['bash', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-target-fm-backend-focused.sh', 'run_spawn_symlink_case', 'physical', 'physical']
+FM_HOME: unset at process entry
+Checkout state before: False
+Backend environment: existing fake tmux/Treehouse fixtures, not live
+
+
+CLI observation (expected exit 0, actual exit 0):
+fm-spawn.sh should succeed for a project reached through a symlinked prefix when the backend reports physical cwd
+warning: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.ZoDXvR/symlink-data-physical/spawnsymlinkphysical/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned spawnsymlinkphysical harness=claude kind=ship mode=no-mistakes yolo=off window=firstmate:fm-spawnsymlinkphysical worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.ZoDXvR/symlink-wt-physical
+
+Persisted task metadata: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.ZoDXvR/symlink-state-physical/spawnsymlinkphysical.meta
+window=firstmate:fm-spawnsymlinkphysical
+endpoint_task_id=spawnsymlinkphysical
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.ZoDXvR/symlink-wt-physical
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.ZoDXvR/symlink-link-physical/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-spawnsymlinkphysical
+model=default
+effort=default
+busy_gen=g1789419417.41855.23249
+spawn_gen=s1789419417.39829.12935
+
+Exit: 0
+Checkout state after: False

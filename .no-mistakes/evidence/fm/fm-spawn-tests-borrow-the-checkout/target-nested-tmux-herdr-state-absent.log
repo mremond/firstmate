@@ -1,0 +1,31 @@
+Base: 80556bca2d728071cc14476b9bee60a8edf4159e
+Target: a0eb3010963b43e9253d4d6b12fa902c800230a7
+Command: ['bash', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-target-fm-backend-focused.sh', 'test_spawn_autodetect_nesting_resolves_tmux_silently']
+FM_HOME: unset at process entry
+Checkout state before: False
+Backend environment: existing fake tmux/Treehouse fixtures, not live
+
+
+CLI observation (expected exit 0, actual exit 0):
+fm-spawn.sh should auto-detect tmux and spawn successfully for nested tmux-in-herdr
+warning: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.LH3vWn/nest-data/nestbackendz5/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned nestbackendz5 harness=claude kind=ship mode=no-mistakes yolo=off window=firstmate:fm-nestbackendz5 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.LH3vWn/nest-wt
+ok - fm-spawn.sh: auto-detect resolves nested tmux-in-herdr to tmux and stays silent end to end
+
+Persisted task metadata: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.LH3vWn/nest-state/nestbackendz5.meta
+window=firstmate:fm-nestbackendz5
+endpoint_task_id=nestbackendz5
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.LH3vWn/nest-wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.LH3vWn/nest-project
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-nestbackendz5
+model=default
+effort=default
+busy_gen=g1789419433.47390.14526
+spawn_gen=s1789419433.46933.10191
+
+Exit: 0
+Checkout state after: False

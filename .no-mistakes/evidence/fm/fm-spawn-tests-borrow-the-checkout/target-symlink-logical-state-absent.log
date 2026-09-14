@@ -1,0 +1,30 @@
+Base: 80556bca2d728071cc14476b9bee60a8edf4159e
+Target: a0eb3010963b43e9253d4d6b12fa902c800230a7
+Command: ['bash', '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-target-fm-backend-focused.sh', 'run_spawn_symlink_case', 'logical', 'logical']
+FM_HOME: unset at process entry
+Checkout state before: False
+Backend environment: existing fake tmux/Treehouse fixtures, not live
+
+
+CLI observation (expected exit 0, actual exit 0):
+fm-spawn.sh should succeed for a project reached through a symlinked prefix when the backend reports logical cwd
+warning: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.4UKIZ9/symlink-data-logical/spawnsymlinklogical/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned spawnsymlinklogical harness=claude kind=ship mode=no-mistakes yolo=off window=firstmate:fm-spawnsymlinklogical worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.4UKIZ9/symlink-wt-logical
+
+Persisted task metadata: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.4UKIZ9/symlink-state-logical/spawnsymlinklogical.meta
+window=firstmate:fm-spawnsymlinklogical
+endpoint_task_id=spawnsymlinklogical
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.4UKIZ9/symlink-wt-logical
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/.nm-fixture-validation/tmp/fm-backend-tests.4UKIZ9/symlink-link-logical/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-spawnsymlinklogical
+model=default
+effort=default
+busy_gen=g1789419422.44261.12006
+spawn_gen=s1789419422.43260.23431
+
+Exit: 0
+Checkout state after: False

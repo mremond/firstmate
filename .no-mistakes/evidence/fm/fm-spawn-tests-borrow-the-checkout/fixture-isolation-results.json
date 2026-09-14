@@ -1,0 +1,192 @@
+[
+  {
+    "label": "base-backend-script-state-absent",
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-base-fm-backend.test.sh"
+    ],
+    "exit_code": 1,
+    "checkout_state_before": false,
+    "checkout_state_after": false,
+    "duration_seconds": 9.66,
+    "live": false,
+    "log": "/Users/mremond/.no-mistakes/evidence/01M2GV0HN9PMBPA7YNVGGC9FSS/base-backend-script-state-absent.log"
+  },
+  {
+    "label": "base-symlink-physical-state-absent",
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-base-fm-backend-focused.sh",
+      "run_spawn_symlink_case",
+      "physical",
+      "physical"
+    ],
+    "exit_code": 1,
+    "checkout_state_before": false,
+    "checkout_state_after": false,
+    "duration_seconds": 0.41,
+    "live": false,
+    "log": "/Users/mremond/.no-mistakes/evidence/01M2GV0HN9PMBPA7YNVGGC9FSS/base-symlink-physical-state-absent.log"
+  },
+  {
+    "label": "base-symlink-logical-state-absent",
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-base-fm-backend-focused.sh",
+      "run_spawn_symlink_case",
+      "logical",
+      "logical"
+    ],
+    "exit_code": 1,
+    "checkout_state_before": false,
+    "checkout_state_after": false,
+    "duration_seconds": 0.41,
+    "live": false,
+    "log": "/Users/mremond/.no-mistakes/evidence/01M2GV0HN9PMBPA7YNVGGC9FSS/base-symlink-logical-state-absent.log"
+  },
+  {
+    "label": "base-default-tmux-state-absent",
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-base-fm-backend-focused.sh",
+      "test_spawn_default_backend_writes_no_meta_field"
+    ],
+    "exit_code": 1,
+    "checkout_state_before": false,
+    "checkout_state_after": false,
+    "duration_seconds": 0.39,
+    "live": false,
+    "log": "/Users/mremond/.no-mistakes/evidence/01M2GV0HN9PMBPA7YNVGGC9FSS/base-default-tmux-state-absent.log"
+  },
+  {
+    "label": "base-explicit-tmux-herdr-env-state-absent",
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-base-fm-backend-focused.sh",
+      "test_spawn_explicit_backend_flag_beats_autodetect_herdr_env"
+    ],
+    "exit_code": 1,
+    "checkout_state_before": false,
+    "checkout_state_after": false,
+    "duration_seconds": 0.39,
+    "live": false,
+    "log": "/Users/mremond/.no-mistakes/evidence/01M2GV0HN9PMBPA7YNVGGC9FSS/base-explicit-tmux-herdr-env-state-absent.log"
+  },
+  {
+    "label": "base-nested-tmux-herdr-state-absent",
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-base-fm-backend-focused.sh",
+      "test_spawn_autodetect_nesting_resolves_tmux_silently"
+    ],
+    "exit_code": 1,
+    "checkout_state_before": false,
+    "checkout_state_after": false,
+    "duration_seconds": 0.45,
+    "live": false,
+    "log": "/Users/mremond/.no-mistakes/evidence/01M2GV0HN9PMBPA7YNVGGC9FSS/base-nested-tmux-herdr-state-absent.log"
+  },
+  {
+    "label": "base-symlink-physical-state-present",
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-base-fm-backend-focused.sh",
+      "run_spawn_symlink_case",
+      "physical",
+      "physical"
+    ],
+    "exit_code": 0,
+    "checkout_state_before": true,
+    "checkout_state_after": true,
+    "duration_seconds": 6.27,
+    "live": false,
+    "log": "/Users/mremond/.no-mistakes/evidence/01M2GV0HN9PMBPA7YNVGGC9FSS/base-symlink-physical-state-present.log"
+  },
+  {
+    "label": "target-symlink-physical-state-absent",
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-target-fm-backend-focused.sh",
+      "run_spawn_symlink_case",
+      "physical",
+      "physical"
+    ],
+    "exit_code": 0,
+    "checkout_state_before": false,
+    "checkout_state_after": false,
+    "duration_seconds": 4.95,
+    "live": false,
+    "log": "/Users/mremond/.no-mistakes/evidence/01M2GV0HN9PMBPA7YNVGGC9FSS/target-symlink-physical-state-absent.log"
+  },
+  {
+    "label": "target-symlink-logical-state-absent",
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-target-fm-backend-focused.sh",
+      "run_spawn_symlink_case",
+      "logical",
+      "logical"
+    ],
+    "exit_code": 0,
+    "checkout_state_before": false,
+    "checkout_state_after": false,
+    "duration_seconds": 4.71,
+    "live": false,
+    "log": "/Users/mremond/.no-mistakes/evidence/01M2GV0HN9PMBPA7YNVGGC9FSS/target-symlink-logical-state-absent.log"
+  },
+  {
+    "label": "target-default-tmux-state-absent",
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-target-fm-backend-focused.sh",
+      "test_spawn_default_backend_writes_no_meta_field"
+    ],
+    "exit_code": 0,
+    "checkout_state_before": false,
+    "checkout_state_after": false,
+    "duration_seconds": 3.46,
+    "live": false,
+    "log": "/Users/mremond/.no-mistakes/evidence/01M2GV0HN9PMBPA7YNVGGC9FSS/target-default-tmux-state-absent.log"
+  },
+  {
+    "label": "target-explicit-tmux-herdr-env-state-absent",
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-target-fm-backend-focused.sh",
+      "test_spawn_explicit_backend_flag_beats_autodetect_herdr_env"
+    ],
+    "exit_code": 0,
+    "checkout_state_before": false,
+    "checkout_state_after": false,
+    "duration_seconds": 3.68,
+    "live": false,
+    "log": "/Users/mremond/.no-mistakes/evidence/01M2GV0HN9PMBPA7YNVGGC9FSS/target-explicit-tmux-herdr-env-state-absent.log"
+  },
+  {
+    "label": "target-nested-tmux-herdr-state-absent",
+    "command": [
+      "bash",
+      "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2GV0HN9PMBPA7YNVGGC9FSS/tests/.nm-target-fm-backend-focused.sh",
+      "test_spawn_autodetect_nesting_resolves_tmux_silently"
+    ],
+    "exit_code": 0,
+    "checkout_state_before": false,
+    "checkout_state_after": false,
+    "duration_seconds": 3.47,
+    "live": false,
+    "log": "/Users/mremond/.no-mistakes/evidence/01M2GV0HN9PMBPA7YNVGGC9FSS/target-nested-tmux-herdr-state-absent.log"
+  },
+  {
+    "label": "target-backend-script-state-absent",
+    "command": [
+      "bin/fm-test-run.sh",
+      "tests/fm-backend.test.sh"
+    ],
+    "exit_code": 0,
+    "checkout_state_before": false,
+    "checkout_state_after": true,
+    "duration_seconds": 34.47,
+    "live": false,
+    "log": "/Users/mremond/.no-mistakes/evidence/01M2GV0HN9PMBPA7YNVGGC9FSS/target-backend-script-state-absent.log"
+  }
+]

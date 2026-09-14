@@ -1,0 +1,4 @@
+Checkout state/ was initially absent. Each focused target case left it absent.
+The complete target script created state/, consistent with the deliberately unchanged refusal cases.
+Contents after full target script: []
+The empty directory was removed with rmdir after observation.
