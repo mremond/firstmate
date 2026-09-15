@@ -1,0 +1,12 @@
+$ git rev-parse HEAD origin/main
+34a95724ec9e9375fd90ccd35b017d5b59c39465
+aa921774fb1361fe4d61027a3acf6aa68ec17e14
+[exit 0]
+
+$ git rev-list --count HEAD --not origin/main
+23
+[exit 0]
+
+$ bin/fm-prepush-voice-guard.sh
+[exit 0]
+

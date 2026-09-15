@@ -1,0 +1,247 @@
+{
+  "result": "pass",
+  "live_cases": [
+    {
+      "name": "Clean technical commits pass and published default-branch leaks stay excluded",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "A clean tip cannot hide forbidden text in earlier commit subjects and bodies",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Merging a newer default branch preserves refusal of the feature history",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "An ahead local main cannot hide an unpublished ancestor when origin/main resolves",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "An environment base equal to HEAD cannot silence the default scan",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "A feature branch already stored remotely is still scanned until main contains it",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Missing origin/main refuses an unestablished range despite contaminated local main",
+      "result": "pass",
+      "live": true,
+      "exit": 3
+    },
+    {
+      "name": "An explicitly authorized publication commit recovers the offline scan",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "An explicitly selected clean tip passes while an older selected commit refuses",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "Selecting the older leaking commit names that commit and refuses",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Explicit local main bound scans only its clean descendant",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "Local main is still not implicitly authoritative after a clean descendant",
+      "result": "pass",
+      "live": true,
+      "exit": 3
+    },
+    {
+      "name": "Text refusal 1: docs: retire `/Users/alice/firstmate/data/task/report.md` now",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Text refusal 2: docs: retire `~/firstmate/data/alpha/report.md` now",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Text refusal 3: docs: retire /Users/A Person/firstmate/data/alpha/report.md",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Text refusal 4: docs: retire ../data/alpha/report.md",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Text refusal 5: docs: retire data/alpha/report.md after completion",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Text refusal 6: fix(ci): Captain\u2014bound the scan",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Text refusal 7: fix(ci): Captain \u2013 bound the scan",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Text refusal 8: The operation completed, captain",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Text refusal 9: Hello captain, the change is ready",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Text refusal 10: feat: retain the result",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Text refusal 11: feat: retain the result",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Text refusal 12: docs: refresh .lavish/board/summary.html",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "Text acceptance 1: docs: see `https://example.com/data/api/schema.json` in the guide",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "Text acceptance 2: docs: describe /data/api/schema.json",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "Text acceptance 3: docs: point at https://example.com/data/api/schema.json for the schema",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "Text acceptance 4: docs: see https://gitlab.com/org/repo/-/blob/main/data/alpha/report.md",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "Text acceptance 5: docs: see https://github.com/kunchenguid/firstmate/pull/3837",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "Text acceptance 6: docs: touch tests/data/fixtures/x.txt",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "Text acceptance 7: docs: update data/backlog.md",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "Text acceptance 8: docs: captain.md now records the fleet owner",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "Text acceptance 9: fix: the pane still reaches the captain - once per window",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "Text acceptance 10: Thread-Safety-Docs: https://example.com/session/architecture.html",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "A saved clean PR description is read as data without shell execution",
+      "result": "pass",
+      "live": true,
+      "exit": 0
+    },
+    {
+      "name": "A saved PR description refuses a body-only address",
+      "result": "pass",
+      "live": true,
+      "exit": 1
+    },
+    {
+      "name": "An unavailable temporary-storage directory reports an incomplete scan",
+      "result": "pass",
+      "live": true,
+      "exit": 3
+    },
+    {
+      "name": "An unknown option is an explicit usage error",
+      "result": "pass",
+      "live": true,
+      "exit": 2
+    },
+    {
+      "name": "A missing text file is an explicit usage error",
+      "result": "pass",
+      "live": true,
+      "exit": 2
+    }
+  ],
+  "counterfactual": {
+    "live": false,
+    "backticked_cases_without_delimiter": [
+      0,
+      0
+    ],
+    "bare_relative_control": 1
+  }
+}

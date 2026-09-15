@@ -1,0 +1,876 @@
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false init -b main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/publication
+cwd: .voice-guard-live-check/manual
+Initialized empty Git repository in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/publication/.git/
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false commit --allow-empty -F -
+cwd: .voice-guard-live-check/manual/publication
+stdin:
+fix: Captain, historical default-branch message
+[main (root-commit) fbc2905] fix: Captain, historical default-branch message
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false rev-parse HEAD
+cwd: .voice-guard-live-check/manual/publication
+fbc290590d2793a5c1aba63fbc70155abaf918fa
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false commit --allow-empty -F -
+cwd: .voice-guard-live-check/manual/publication
+stdin:
+docs: describe the supported configuration
+[main 49bbaf7] docs: describe the supported configuration
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false rev-parse HEAD
+cwd: .voice-guard-live-check/manual/publication
+49bbaf705056ff4d42f622805e168219a425c442
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false clone --no-local /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/publication /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/branch
+cwd: .voice-guard-live-check/manual
+Cloning into '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/branch'...
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false checkout -b feature
+cwd: .voice-guard-live-check/manual/branch
+Switched to a new branch 'feature'
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false commit --allow-empty -F -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+fix(holds): keep captain-held tasks pending
+
+A session-scoped negative cache keeps the conclusion.
+Describe captain intent, the /ahoy skill, and shipshape acknowledgements.
+docs: touch tests/data/fixtures/x.txt
+docs: update data/backlog.md
+docs: see `https://example.com/data/api/schema.json` in the guide
+[feature 2fa6a74] fix(holds): keep captain-held tasks pending
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false rev-parse HEAD
+cwd: .voice-guard-live-check/manual/branch
+2fa6a74b14e477dbd8bbf3ecea5b6a6421b1a9a6
+[exit 0; expected 0]
+
+## Clean technical commits pass and published default-branch leaks stay excluded
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh
+cwd: .voice-guard-live-check/manual/branch
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false commit --allow-empty -F -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+fix(ci): Captain, bound the scan
+
+Changes remain uncommitted for the outer executor
+[feature 0db104b] fix(ci): Captain, bound the scan
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false rev-parse HEAD
+cwd: .voice-guard-live-check/manual/branch
+0db104b91b3e1c0d465e05a949dd6c7d82194f32
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false commit --allow-empty -F -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+fix: retain the result
+
+Claude-Session: https://claude.ai/code/session_0123456789abcdef
+[feature 023b55e] fix: retain the result
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false rev-parse HEAD
+cwd: .voice-guard-live-check/manual/branch
+023b55ebb503292af0f8c8aa3f988a2594ca5f9e
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false commit --allow-empty -F -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: retire `/Users/alice/firstmate/data/task/report.md` now
+
+Review .lavish/board/summary.html
+[feature ee25cf1] docs: retire `/Users/alice/firstmate/data/task/report.md` now
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false rev-parse HEAD
+cwd: .voice-guard-live-check/manual/branch
+ee25cf1364c2dd6130a3f75a17b605823dfc0767
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false commit --allow-empty -F -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+fix: keep the feature tip clean
+[feature 5f88e7f] fix: keep the feature tip clean
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false rev-parse HEAD
+cwd: .voice-guard-live-check/manual/branch
+5f88e7fb0965b4dc566e57301feab87d1b96b574
+[exit 0; expected 0]
+
+## A clean tip cannot hide forbidden text in earlier commit subjects and bodies
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh
+cwd: .voice-guard-live-check/manual/branch
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the commits not yet on the default branch.
+This text would become permanent public history under the repository owner's name.
+
+  commit ee25cf1364c2 - docs: retire `/Users/alice/firstmate/data/task/report.md` now
+    line 1 matched private-task-work-document
+      in:      docs: retire `/Users/alice/firstmate/data/task/report.md` now
+      matched: `/Users/alice/firstmate/data/task/report.md
+      fix:     Published history must not reference a private per-task work document. Remove the data/<id>/<file> path and describe the durable outcome.
+    line 3 matched private-review-artifact
+      in:      Review .lavish/board/summary.html
+      matched:  .lavish/board/summary.html
+      fix:     Published history must not reference a local review artifact. Remove the .lavish/<file> path and describe the durable outcome.
+
+  commit 023b55ebb503 - fix: retain the result
+    line 3 matched internal-session-pointer
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: Claude-Session: https://
+      fix:     Published history must not link the working session that produced the change. Delete the trailer.
+    line 3 matched internal-session-link
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: https://claude.ai/code/session_0123456789abcdef
+      fix:     Published history must not link the working session that produced the change. Remove the link.
+
+  commit 0db104b91b3e - fix(ci): Captain, bound the scan
+    line 1 matched captain-address-opening
+      in:      fix(ci): Captain, bound the scan
+      matched: : Captain,
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+    line 3 matched delivery-machinery-handoff
+      in:      Changes remain uncommitted for the outer executor
+      matched:  outer executor
+      fix:     Published history must not narrate how the change was validated or which agent finishes it. State what the change does.
+
+  How to clear this refusal:
+    Reword the message so it states what the change does, then re-run this check:
+      git commit --amend        for the tip commit
+      git rebase -i <base>      then mark the named commits "reword"
+    Inside a no-mistakes run, respond to the gate and let the pipeline reword; do not push around this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false commit --allow-empty -F -
+cwd: .voice-guard-live-check/manual/publication
+stdin:
+fix: Captain, newly published history remains outside the scan
+[main 904fa1d] fix: Captain, newly published history remains outside the scan
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false rev-parse HEAD
+cwd: .voice-guard-live-check/manual/publication
+904fa1ddcef97a1b6f53bd26ced02249a7836a55
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false fetch origin main
+cwd: .voice-guard-live-check/manual/branch
+From /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/publication
+ * branch            main       -> FETCH_HEAD
+   49bbaf7..904fa1d  main       -> origin/main
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false merge --no-ff origin/main -m 'Merge main into feature'
+cwd: .voice-guard-live-check/manual/branch
+Merge made by the 'ort' strategy.
+[exit 0; expected 0]
+
+## Merging a newer default branch preserves refusal of the feature history
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh
+cwd: .voice-guard-live-check/manual/branch
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the commits not yet on the default branch.
+This text would become permanent public history under the repository owner's name.
+
+  commit ee25cf1364c2 - docs: retire `/Users/alice/firstmate/data/task/report.md` now
+    line 1 matched private-task-work-document
+      in:      docs: retire `/Users/alice/firstmate/data/task/report.md` now
+      matched: `/Users/alice/firstmate/data/task/report.md
+      fix:     Published history must not reference a private per-task work document. Remove the data/<id>/<file> path and describe the durable outcome.
+    line 3 matched private-review-artifact
+      in:      Review .lavish/board/summary.html
+      matched:  .lavish/board/summary.html
+      fix:     Published history must not reference a local review artifact. Remove the .lavish/<file> path and describe the durable outcome.
+
+  commit 023b55ebb503 - fix: retain the result
+    line 3 matched internal-session-pointer
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: Claude-Session: https://
+      fix:     Published history must not link the working session that produced the change. Delete the trailer.
+    line 3 matched internal-session-link
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: https://claude.ai/code/session_0123456789abcdef
+      fix:     Published history must not link the working session that produced the change. Remove the link.
+
+  commit 0db104b91b3e - fix(ci): Captain, bound the scan
+    line 1 matched captain-address-opening
+      in:      fix(ci): Captain, bound the scan
+      matched: : Captain,
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+    line 3 matched delivery-machinery-handoff
+      in:      Changes remain uncommitted for the outer executor
+      matched:  outer executor
+      fix:     Published history must not narrate how the change was validated or which agent finishes it. State what the change does.
+
+  How to clear this refusal:
+    Reword the message so it states what the change does, then re-run this check:
+      git commit --amend        for the tip commit
+      git rebase -i <base>      then mark the named commits "reword"
+    Inside a no-mistakes run, respond to the gate and let the pipeline reword; do not push around this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false branch -f main 0db104b91b3e1c0d465e05a949dd6c7d82194f32
+cwd: .voice-guard-live-check/manual/branch
+[exit 0; expected 0]
+
+## An ahead local main cannot hide an unpublished ancestor when origin/main resolves
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh
+cwd: .voice-guard-live-check/manual/branch
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the commits not yet on the default branch.
+This text would become permanent public history under the repository owner's name.
+
+  commit ee25cf1364c2 - docs: retire `/Users/alice/firstmate/data/task/report.md` now
+    line 1 matched private-task-work-document
+      in:      docs: retire `/Users/alice/firstmate/data/task/report.md` now
+      matched: `/Users/alice/firstmate/data/task/report.md
+      fix:     Published history must not reference a private per-task work document. Remove the data/<id>/<file> path and describe the durable outcome.
+    line 3 matched private-review-artifact
+      in:      Review .lavish/board/summary.html
+      matched:  .lavish/board/summary.html
+      fix:     Published history must not reference a local review artifact. Remove the .lavish/<file> path and describe the durable outcome.
+
+  commit 023b55ebb503 - fix: retain the result
+    line 3 matched internal-session-pointer
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: Claude-Session: https://
+      fix:     Published history must not link the working session that produced the change. Delete the trailer.
+    line 3 matched internal-session-link
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: https://claude.ai/code/session_0123456789abcdef
+      fix:     Published history must not link the working session that produced the change. Remove the link.
+
+  commit 0db104b91b3e - fix(ci): Captain, bound the scan
+    line 1 matched captain-address-opening
+      in:      fix(ci): Captain, bound the scan
+      matched: : Captain,
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+    line 3 matched delivery-machinery-handoff
+      in:      Changes remain uncommitted for the outer executor
+      matched:  outer executor
+      fix:     Published history must not narrate how the change was validated or which agent finishes it. State what the change does.
+
+  How to clear this refusal:
+    Reword the message so it states what the change does, then re-run this check:
+      git commit --amend        for the tip commit
+      git rebase -i <base>      then mark the named commits "reword"
+    Inside a no-mistakes run, respond to the gate and let the pipeline reword; do not push around this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## An environment base equal to HEAD cannot silence the default scan
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh
+cwd: .voice-guard-live-check/manual/branch
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the commits not yet on the default branch.
+This text would become permanent public history under the repository owner's name.
+
+  commit ee25cf1364c2 - docs: retire `/Users/alice/firstmate/data/task/report.md` now
+    line 1 matched private-task-work-document
+      in:      docs: retire `/Users/alice/firstmate/data/task/report.md` now
+      matched: `/Users/alice/firstmate/data/task/report.md
+      fix:     Published history must not reference a private per-task work document. Remove the data/<id>/<file> path and describe the durable outcome.
+    line 3 matched private-review-artifact
+      in:      Review .lavish/board/summary.html
+      matched:  .lavish/board/summary.html
+      fix:     Published history must not reference a local review artifact. Remove the .lavish/<file> path and describe the durable outcome.
+
+  commit 023b55ebb503 - fix: retain the result
+    line 3 matched internal-session-pointer
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: Claude-Session: https://
+      fix:     Published history must not link the working session that produced the change. Delete the trailer.
+    line 3 matched internal-session-link
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: https://claude.ai/code/session_0123456789abcdef
+      fix:     Published history must not link the working session that produced the change. Remove the link.
+
+  commit 0db104b91b3e - fix(ci): Captain, bound the scan
+    line 1 matched captain-address-opening
+      in:      fix(ci): Captain, bound the scan
+      matched: : Captain,
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+    line 3 matched delivery-machinery-handoff
+      in:      Changes remain uncommitted for the outer executor
+      matched:  outer executor
+      fix:     Published history must not narrate how the change was validated or which agent finishes it. State what the change does.
+
+  How to clear this refusal:
+    Reword the message so it states what the change does, then re-run this check:
+      git commit --amend        for the tip commit
+      git rebase -i <base>      then mark the named commits "reword"
+    Inside a no-mistakes run, respond to the gate and let the pipeline reword; do not push around this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false fetch /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/branch feature:refs/heads/feature
+cwd: .voice-guard-live-check/manual/publication
+From /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/branch
+ * [new branch]      feature    -> feature
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false fetch origin
+cwd: .voice-guard-live-check/manual/branch
+From /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/publication
+ * [new branch]      feature    -> origin/feature
+[exit 0; expected 0]
+
+## A feature branch already stored remotely is still scanned until main contains it
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh
+cwd: .voice-guard-live-check/manual/branch
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the commits not yet on the default branch.
+This text would become permanent public history under the repository owner's name.
+
+  commit ee25cf1364c2 - docs: retire `/Users/alice/firstmate/data/task/report.md` now
+    line 1 matched private-task-work-document
+      in:      docs: retire `/Users/alice/firstmate/data/task/report.md` now
+      matched: `/Users/alice/firstmate/data/task/report.md
+      fix:     Published history must not reference a private per-task work document. Remove the data/<id>/<file> path and describe the durable outcome.
+    line 3 matched private-review-artifact
+      in:      Review .lavish/board/summary.html
+      matched:  .lavish/board/summary.html
+      fix:     Published history must not reference a local review artifact. Remove the .lavish/<file> path and describe the durable outcome.
+
+  commit 023b55ebb503 - fix: retain the result
+    line 3 matched internal-session-pointer
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: Claude-Session: https://
+      fix:     Published history must not link the working session that produced the change. Delete the trailer.
+    line 3 matched internal-session-link
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: https://claude.ai/code/session_0123456789abcdef
+      fix:     Published history must not link the working session that produced the change. Remove the link.
+
+  commit 0db104b91b3e - fix(ci): Captain, bound the scan
+    line 1 matched captain-address-opening
+      in:      fix(ci): Captain, bound the scan
+      matched: : Captain,
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+    line 3 matched delivery-machinery-handoff
+      in:      Changes remain uncommitted for the outer executor
+      matched:  outer executor
+      fix:     Published history must not narrate how the change was validated or which agent finishes it. State what the change does.
+
+  How to clear this refusal:
+    Reword the message so it states what the change does, then re-run this check:
+      git commit --amend        for the tip commit
+      git rebase -i <base>      then mark the named commits "reword"
+    Inside a no-mistakes run, respond to the gate and let the pipeline reword; do not push around this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false update-ref -d refs/remotes/origin/main
+cwd: .voice-guard-live-check/manual/branch
+[exit 0; expected 0]
+
+## Missing origin/main refuses an unestablished range despite contaminated local main
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh
+cwd: .voice-guard-live-check/manual/branch
+fm-prepush-voice-guard.sh: cannot establish the default range: no authoritative publication ref resolved because origin/main is missing.
+fm-prepush-voice-guard.sh: fetch it (git fetch origin main), or explicitly designate an authorized publication ref with --range <publication-ref>..HEAD, then re-run. An unknown range is not a clean range.
+[exit 3; expected 3]
+
+## An explicitly authorized publication commit recovers the offline scan
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --range 49bbaf705056ff4d42f622805e168219a425c442..HEAD
+cwd: .voice-guard-live-check/manual/branch
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the commits in that range.
+This text would become permanent public history under the repository owner's name.
+
+  commit 904fa1ddcef9 - fix: Captain, newly published history remains outside the scan
+    line 1 matched captain-address-opening
+      in:      fix: Captain, newly published history remains outside the scan
+      matched: : Captain,
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+
+  commit ee25cf1364c2 - docs: retire `/Users/alice/firstmate/data/task/report.md` now
+    line 1 matched private-task-work-document
+      in:      docs: retire `/Users/alice/firstmate/data/task/report.md` now
+      matched: `/Users/alice/firstmate/data/task/report.md
+      fix:     Published history must not reference a private per-task work document. Remove the data/<id>/<file> path and describe the durable outcome.
+    line 3 matched private-review-artifact
+      in:      Review .lavish/board/summary.html
+      matched:  .lavish/board/summary.html
+      fix:     Published history must not reference a local review artifact. Remove the .lavish/<file> path and describe the durable outcome.
+
+  commit 023b55ebb503 - fix: retain the result
+    line 3 matched internal-session-pointer
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: Claude-Session: https://
+      fix:     Published history must not link the working session that produced the change. Delete the trailer.
+    line 3 matched internal-session-link
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: https://claude.ai/code/session_0123456789abcdef
+      fix:     Published history must not link the working session that produced the change. Remove the link.
+
+  commit 0db104b91b3e - fix(ci): Captain, bound the scan
+    line 1 matched captain-address-opening
+      in:      fix(ci): Captain, bound the scan
+      matched: : Captain,
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+    line 3 matched delivery-machinery-handoff
+      in:      Changes remain uncommitted for the outer executor
+      matched:  outer executor
+      fix:     Published history must not narrate how the change was validated or which agent finishes it. State what the change does.
+
+  How to clear this refusal:
+    Reword the message so it states what the change does, then re-run this check:
+      git commit --amend        for the tip commit
+      git rebase -i <base>      then mark the named commits "reword"
+    Inside a no-mistakes run, respond to the gate and let the pipeline reword; do not push around this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## An explicitly selected clean tip passes while an older selected commit refuses
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --commit HEAD
+cwd: .voice-guard-live-check/manual/branch
+[exit 0; expected 0]
+
+## Selecting the older leaking commit names that commit and refuses
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --commit 0db104b91b3e1c0d465e05a949dd6c7d82194f32
+cwd: .voice-guard-live-check/manual/branch
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in that commit.
+This text would become permanent public history under the repository owner's name.
+
+  commit 0db104b91b3e - fix(ci): Captain, bound the scan
+    line 1 matched captain-address-opening
+      in:      fix(ci): Captain, bound the scan
+      matched: : Captain,
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+    line 3 matched delivery-machinery-handoff
+      in:      Changes remain uncommitted for the outer executor
+      matched:  outer executor
+      fix:     Published history must not narrate how the change was validated or which agent finishes it. State what the change does.
+
+  How to clear this refusal:
+    Reword the message so it states what the change does, then re-run this check:
+      git commit --amend        for the tip commit
+      git rebase -i <base>      then mark the named commits "reword"
+    Inside a no-mistakes run, respond to the gate and let the pipeline reword; do not push around this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false branch -f main HEAD
+cwd: .voice-guard-live-check/manual/branch
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false commit --allow-empty -F -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: explain configuration defaults
+[feature 15dd1c0] docs: explain configuration defaults
+[exit 0; expected 0]
+
+$ git -c core.hooksPath=/dev/null -c commit.gpgsign=false rev-parse HEAD
+cwd: .voice-guard-live-check/manual/branch
+15dd1c09ebe53efd6b26e604b836fa84fcd416fe
+[exit 0; expected 0]
+
+## Explicit local main bound scans only its clean descendant
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --range main..HEAD
+cwd: .voice-guard-live-check/manual/branch
+[exit 0; expected 0]
+
+## Local main is still not implicitly authoritative after a clean descendant
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh
+cwd: .voice-guard-live-check/manual/branch
+fm-prepush-voice-guard.sh: cannot establish the default range: no authoritative publication ref resolved because origin/main is missing.
+fm-prepush-voice-guard.sh: fetch it (git fetch origin main), or explicitly designate an authorized publication ref with --range <publication-ref>..HEAD, then re-run. An unknown range is not a clean range.
+[exit 3; expected 3]
+
+## Text refusal 1: docs: retire `/Users/alice/firstmate/data/task/report.md` now
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: retire `/Users/alice/firstmate/data/task/report.md` now
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched private-task-work-document
+      in:      docs: retire `/Users/alice/firstmate/data/task/report.md` now
+      matched: `/Users/alice/firstmate/data/task/report.md
+      fix:     Published history must not reference a private per-task work document. Remove the data/<id>/<file> path and describe the durable outcome.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## Text refusal 2: docs: retire `~/firstmate/data/alpha/report.md` now
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: retire `~/firstmate/data/alpha/report.md` now
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched private-task-work-document
+      in:      docs: retire `~/firstmate/data/alpha/report.md` now
+      matched: `~/firstmate/data/alpha/report.md
+      fix:     Published history must not reference a private per-task work document. Remove the data/<id>/<file> path and describe the durable outcome.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## Text refusal 3: docs: retire /Users/A Person/firstmate/data/alpha/report.md
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: retire /Users/A Person/firstmate/data/alpha/report.md
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched private-task-work-document
+      in:      docs: retire /Users/A Person/firstmate/data/alpha/report.md
+      matched:  /Users/A Person/firstmate/data/alpha/report.md
+      fix:     Published history must not reference a private per-task work document. Remove the data/<id>/<file> path and describe the durable outcome.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## Text refusal 4: docs: retire ../data/alpha/report.md
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: retire ../data/alpha/report.md
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched private-task-work-document
+      in:      docs: retire ../data/alpha/report.md
+      matched:  ../data/alpha/report.md
+      fix:     Published history must not reference a private per-task work document. Remove the data/<id>/<file> path and describe the durable outcome.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## Text refusal 5: docs: retire data/alpha/report.md after completion
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: retire data/alpha/report.md after completion
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched private-task-work-document
+      in:      docs: retire data/alpha/report.md after completion
+      matched:  data/alpha/report.md
+      fix:     Published history must not reference a private per-task work document. Remove the data/<id>/<file> path and describe the durable outcome.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## Text refusal 6: fix(ci): Captain—bound the scan
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+fix(ci): Captain—bound the scan
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched captain-address-opening
+      in:      fix(ci): Captain—bound the scan
+      matched: : Captain—
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## Text refusal 7: fix(ci): Captain – bound the scan
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+fix(ci): Captain – bound the scan
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched captain-address-opening
+      in:      fix(ci): Captain – bound the scan
+      matched: : Captain –
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## Text refusal 8: The operation completed, captain
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+The operation completed, captain
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched captain-address-trailing
+      in:      The operation completed, captain
+      matched: , captain
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the trailing address.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## Text refusal 9: Hello captain, the change is ready
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+Hello captain, the change is ready
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched captain-address-greeting
+      in:      Hello captain, the change is ready
+      matched: Hello captain,
+      fix:     Greetings belong in a reply, not in published history. Drop the greeting and state the change.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## Text refusal 10: feat: retain the result
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+feat: retain the result
+
+Claude-Session: https://claude.ai/code/session_0123456789abcdef
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 3 matched internal-session-pointer
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: Claude-Session: https://
+      fix:     Published history must not link the working session that produced the change. Delete the trailer.
+    line 3 matched internal-session-link
+      in:      Claude-Session: https://claude.ai/code/session_0123456789abcdef
+      matched: https://claude.ai/code/session_0123456789abcdef
+      fix:     Published history must not link the working session that produced the change. Remove the link.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## Text refusal 11: feat: retain the result
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+feat: retain the result
+
+See https://claude.ai/code/session_0123456789abcdef for details.
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 3 matched internal-session-link
+      in:      See https://claude.ai/code/session_0123456789abcdef for details.
+      matched: https://claude.ai/code/session_0123456789abcdef
+      fix:     Published history must not link the working session that produced the change. Remove the link.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## Text refusal 12: docs: refresh .lavish/board/summary.html
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: refresh .lavish/board/summary.html
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched private-review-artifact
+      in:      docs: refresh .lavish/board/summary.html
+      matched:  .lavish/board/summary.html
+      fix:     Published history must not reference a local review artifact. Remove the .lavish/<file> path and describe the durable outcome.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## Text acceptance 1: docs: see `https://example.com/data/api/schema.json` in the guide
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: see `https://example.com/data/api/schema.json` in the guide
+[exit 0; expected 0]
+
+## Text acceptance 2: docs: describe /data/api/schema.json
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: describe /data/api/schema.json
+[exit 0; expected 0]
+
+## Text acceptance 3: docs: point at https://example.com/data/api/schema.json for the schema
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: point at https://example.com/data/api/schema.json for the schema
+[exit 0; expected 0]
+
+## Text acceptance 4: docs: see https://gitlab.com/org/repo/-/blob/main/data/alpha/report.md
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: see https://gitlab.com/org/repo/-/blob/main/data/alpha/report.md
+[exit 0; expected 0]
+
+## Text acceptance 5: docs: see https://github.com/kunchenguid/firstmate/pull/3837
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: see https://github.com/kunchenguid/firstmate/pull/3837
+[exit 0; expected 0]
+
+## Text acceptance 6: docs: touch tests/data/fixtures/x.txt
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: touch tests/data/fixtures/x.txt
+[exit 0; expected 0]
+
+## Text acceptance 7: docs: update data/backlog.md
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: update data/backlog.md
+[exit 0; expected 0]
+
+## Text acceptance 8: docs: captain.md now records the fleet owner
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: captain.md now records the fleet owner
+[exit 0; expected 0]
+
+## Text acceptance 9: fix: the pane still reaches the captain - once per window
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+fix: the pane still reaches the captain - once per window
+[exit 0; expected 0]
+
+## Text acceptance 10: Thread-Safety-Docs: https://example.com/session/architecture.html
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+Thread-Safety-Docs: https://example.com/session/architecture.html
+[exit 0; expected 0]
+
+## A saved clean PR description is read as data without shell execution
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/description.md
+cwd: .voice-guard-live-check/manual/branch
+[exit 0; expected 0]
+
+## A saved PR description refuses a body-only address
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/description.md
+cwd: .voice-guard-live-check/manual/branch
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 3 matched captain-address-line
+      in:      Captain, this PR rewrites the throttle.
+      matched: Captain,
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## An unavailable temporary-storage directory reports an incomplete scan
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+fix: clean text
+mktemp: mkdtemp failed on /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/missing-temp-dir/fm-prepush-voice-guard.Yat1Mw: No such file or directory
+fm-prepush-voice-guard.sh: cannot create temporary scan storage. The scan did not complete.
+[exit 3; expected 3]
+
+## An unknown option is an explicit usage error
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --nope
+cwd: .voice-guard-live-check/manual/branch
+fm-prepush-voice-guard.sh: unknown argument: --nope
+[exit 2; expected 2]
+
+## A missing text file is an explicit usage error
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/bin/fm-prepush-voice-guard.sh --text /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/missing-description.md
+cwd: .voice-guard-live-check/manual/branch
+fm-prepush-voice-guard.sh: no such text file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/missing-description.md
+[exit 2; expected 2]
+
+$ bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/without-backtick/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: retire `/Users/alice/firstmate/data/task/report.md` now
+[exit 0; expected 0]
+COUNTERFACTUAL: removing the backtick delimiter makes the required refusal assertion fail (exit 0 instead of 1).
+
+$ bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/without-backtick/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: retire `~/firstmate/data/alpha/report.md` now
+[exit 0; expected 0]
+COUNTERFACTUAL: removing the backtick delimiter makes the required refusal assertion fail (exit 0 instead of 1).
+
+$ bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/manual/without-backtick/fm-prepush-voice-guard.sh --text -
+cwd: .voice-guard-live-check/manual/branch
+stdin:
+docs: retire data/alpha/report.md after completion
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched private-task-work-document
+      in:      docs: retire data/alpha/report.md after completion
+      matched:  data/alpha/report.md
+      fix:     Published history must not reference a private per-task work document. Remove the data/<id>/<file> path and describe the durable outcome.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+COUNTERFACTUAL CONTROL: the same mutant still refuses the bare relative path.

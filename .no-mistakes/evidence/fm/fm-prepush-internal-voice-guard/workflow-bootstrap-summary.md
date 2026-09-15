@@ -1,0 +1,1 @@
+Voice guard: **NOT APPLIED**. bin/fm-prepush-voice-guard.sh is not on the base branch, so this pull request's title and description were NOT scanned. This check becomes effective once the scanner is on the base branch.

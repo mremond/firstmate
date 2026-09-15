@@ -1,0 +1,33 @@
+FM_TEST_BEGIN 2026-09-15T06:19:58Z tests/.voice-guard-scanner-only.test.sh family=unclassified expected_gate_skip=none
+ok - refuses the real leaked commit message
+ok - passes the real legitimate message
+ok - passes captain-held, hold-kind, crewmate, and worktree vocabulary
+ok - passes legitimate captain and house vocabulary
+ok - refuses each address and narration shape
+ok - refuses a pointer to the working session
+ok - passes ordinary technical uses of the word session
+ok - refuses a private per-task work-document path at any depth
+ok - refuses a local review-artifact path at any depth
+ok - refuses an em-dash or en-dash address
+ok - refuses a root-qualified private work-document path
+ok - passes flat data files, uncovered roots, the bare word Lavish, and bare report
+ok - refusal names the rule, the matched text, and the fix
+ok - scans only the commits the default branch does not carry
+ok - still refuses a leak that already reached a feature remote
+ok - prefers origin/main when local main is ahead
+ok - fails closed when local main is not authoritative
+ok - fails closed when the default-branch range cannot be determined
+ok - fails closed when the commit list cannot be enumerated
+ok - fails closed when the scanner errors
+ok - fails closed when a commit message cannot be read
+ok - an explicit --range scans only what it names
+ok - the default range cannot be narrowed from the environment
+ok - explicit --commit and --range selectors scan what they name
+ok - text mode reads a pull request description from stdin and from a file
+ok - rejects unknown arguments as a usage error
+ok - prints its rule table for inspection
+not run - lint integration is reserved for the outer lint phase
+FM_TEST_END 2026-09-15T06:20:05Z tests/.voice-guard-scanner-only.test.sh exit=0 duration_ms=6444 gate_skip=false
+FM_TEST_SUMMARY total=1 failed=0 skipped_gate=0 duration_ms=6501
+FM_TEST_SUMMARY_FAMILY family=unclassified count=1 duration_ms=6444 failed=0
+FM_TEST_SLOWEST rank=1 script=tests/.voice-guard-scanner-only.test.sh duration_ms=6444

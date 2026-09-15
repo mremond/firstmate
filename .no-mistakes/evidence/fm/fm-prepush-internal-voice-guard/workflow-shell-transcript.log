@@ -1,0 +1,51 @@
+Local supplemental execution of the workflow run step. GitHub event routing and actions/checkout were NOT executed.
+Normalized semantic checks: PR events, target branch, read-only permission, trusted base checkout, environment inputs, and canonical lint pin agree with the contract.
+
+## clean
+PR_TITLE: fix: bound the scan
+PR_BODY: Describe captain intent and session-scoped caching.
+[exit 0; expected 0]
+
+## title-leak
+PR_TITLE: Captain, this is ready
+PR_BODY: Describe the result.
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 1 matched captain-address-line
+      in:      Captain, this is ready
+      matched: Captain,
+      fix:     A commit message describes a change to the repository; it never addresses a person. Drop the address and state the change.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## body-leak
+PR_TITLE: fix: bound the scan
+PR_BODY: See https://claude.ai/code/session_0123456789abcdef
+fm-prepush-voice-guard.sh: REFUSING - firstmate internal voice found in the supplied text.
+This text would become permanent public history under the repository owner's name.
+
+  text
+    line 2 matched internal-session-link
+      in:      See https://claude.ai/code/session_0123456789abcdef
+      matched: https://claude.ai/code/session_0123456789abcdef
+      fix:     Published history must not link the working session that produced the change. Remove the link.
+
+  How to clear this refusal:
+    Reword the text above, then re-run this check.
+    Inspect the full rule table with: bin/fm-prepush-voice-guard.sh --list-patterns
+[exit 1; expected 1]
+
+## literal-input
+PR_TITLE: fix: document shell syntax
+PR_BODY: Literal $(touch /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/workflow/injection-marker) and `touch /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2HV450TTYZ7HY9HBZA00GYK/.voice-guard-live-check/workflow/injection-marker`
+[exit 0; expected 0]
+
+## trusted scanner absent
+::warning title=Voice guard did not scan this pull request::bin/fm-prepush-voice-guard.sh is not on the base branch, so this pull request's title and description were NOT scanned. This check becomes effective once the scanner is on the base branch.
+Voice guard: NOT APPLIED. bin/fm-prepush-voice-guard.sh is not on the base branch, so this pull request's title and description were NOT scanned. This check becomes effective once the scanner is on the base branch.
+[exit 0; expected 0 with explicit NOT APPLIED notice]
