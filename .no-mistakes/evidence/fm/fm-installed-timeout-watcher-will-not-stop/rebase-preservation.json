@@ -1,0 +1,25 @@
+{
+  "target": "31e4d35bec947717151b92359a2f04a542c05dd2",
+  "tree": "e650622bcce874254363c851c5e363be8ef96dd4",
+  "base": "8b10b61e3feace8f275c6d0b3e490cdf7ab1f67d",
+  "pre_rebase_head": "1129818ef720b6827ae75eb690957c2c7393d82b",
+  "pre_rebase_base": "b182d0f908b78d08c7ccb8dce3775bdca8c5d657",
+  "pre_rebase_patch_id": "4ad648a5cd1512046b5476ee9b69be0372f498fb",
+  "post_rebase_patch_id": "3722f4b8850cf541d07c71c465e436bbbaa204bf",
+  "changed_files_byte_identical": {
+    "bin/fm-wake-lib.sh": true,
+    "bin/fm-watch.sh": true,
+    "docs/watcher-continuity.md": false,
+    "tests/fm-daemon.test.sh": true,
+    "tests/fm-pr-check-security.test.sh": true,
+    "tests/fm-test-fixtures.test.sh": true,
+    "tests/fm-watch-arm.test.sh": true,
+    "tests/fm-watcher-lock.test.sh": true,
+    "tests/lib.sh": true,
+    "tests/wake-helpers.sh": true
+  },
+  "docs_configuration_matches_base": true,
+  "pre_rebase_zero_context_patch_id": "1a6939634fb095c5fa6fbfeddce5da5aefffb1f9",
+  "post_rebase_zero_context_patch_id": "1a6939634fb095c5fa6fbfeddce5da5aefffb1f9",
+  "context_difference": "docs/watcher-continuity.md retains upstream host-timeout HUP/TERM/INT documentation; zero-context patch IDs compare branch additions/removals without that changed surrounding line."
+}

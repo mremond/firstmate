@@ -1,0 +1,30 @@
+[
+  {
+    "mode": "mutant",
+    "case": "test_lock_resource_failure_returns",
+    "exit": 1,
+    "seconds": 7.75,
+    "output": "not ok - lock acquisition did not return on owner-directory creation failure"
+  },
+  {
+    "mode": "mutant",
+    "case": "test_shutdown_is_bounded_when_state_is_unwritable",
+    "exit": 1,
+    "seconds": 35.272,
+    "output": "not ok - signaled watcher did not stop after owner-directory creation failed"
+  },
+  {
+    "mode": "restored",
+    "case": "test_lock_resource_failure_returns",
+    "exit": 0,
+    "seconds": 0.257,
+    "output": "ok - lock acquisition returns nonzero when owner-directory creation fails"
+  },
+  {
+    "mode": "restored",
+    "case": "test_shutdown_is_bounded_when_state_is_unwritable",
+    "exit": 0,
+    "seconds": 16.381,
+    "output": "ok - signaled watcher reaches its deadline on owner-directory creation failure (16s)"
+  }
+]

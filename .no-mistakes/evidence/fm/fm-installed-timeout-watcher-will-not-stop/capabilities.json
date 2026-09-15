@@ -1,0 +1,9 @@
+{
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "uid": 501,
+  "timeout": null,
+  "gtimeout": null,
+  "perl": "/usr/bin/perl",
+  "bash": "/opt/homebrew/bin/bash",
+  "installed_timeout_limitation": "No real timeout/gtimeout is available. The existing installed-timeout regression uses its checked-in stand-in; live manual checks use the real Perl fallback. No packages installed."
+}

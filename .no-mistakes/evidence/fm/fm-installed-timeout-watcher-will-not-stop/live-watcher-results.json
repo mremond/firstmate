@@ -1,24 +1,100 @@
 [
   {
-    "name": "TERM stops the watcher, publishes downtime, and releases the singleton",
-    "result": "fail",
-    "error": "AssertionError()"
+    "scenario": "Fallback timeout: TERM after direct check returns",
+    "result": "pass",
+    "registration": "registered: state/custom.check.sh",
+    "watcher_before": "65306 65247 65247 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2JEJPE43XFXJCGYM3KFAX75/bin/fm-watch.sh",
+    "watcher_exit": 1,
+    "term_to_exit_seconds": 0.088,
+    "recorded_descendant_pid": 65960,
+    "descendant_after": "absent",
+    "sentinel_exists": false,
+    "private_files_left": [],
+    "singleton_lock_exists": false
   },
   {
-    "name": "Held marker lock cannot prevent stop; holder is preserved and the next watcher recovers",
-    "result": "pass"
+    "scenario": "held-marker-new",
+    "result": "pass",
+    "watcher_pid": 67012,
+    "watcher_exit": 1,
+    "term_to_exit_seconds": 5.06,
+    "diagnostic": "watcher: recovery state could not be persisted within 5s (marker lock held by pid 67569); stopping and retaining stale lock evidence",
+    "holder_process": "67569 65247 65247 S    bash -c . \"$1\"; fm_lock_try_acquire \"$2\" || exit 11; trap 'fm_lock_release \"$2\"; exit' TERM; echo ready > \"$3\"; while :; do sleep .1; done _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2JEJPE43XFXJCGYM3KFAX75/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2JEJPE43XFXJCGYM3KFAX75/.nm-test-phase/live/held-marker-new/state/.watcher-down.lock /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2JEJPE43XFXJCGYM3KFAX75/.nm-test-phase/live/held-marker-new/held-marker-new-holder.ready",
+    "retained_watcher_lock_pid": "67012",
+    "marker_before": "",
+    "marker_after": ""
   },
   {
-    "name": "Unwritable state makes acquisition return and watcher shutdown reach its deadline",
-    "result": "pass"
+    "scenario": "held-marker-existing",
+    "result": "pass",
+    "watcher_pid": 70740,
+    "watcher_exit": 1,
+    "term_to_exit_seconds": 4.45,
+    "diagnostic": "watcher: recovery state could not be persisted within 5s (marker lock held by pid 71323); stopping and retaining stale lock evidence",
+    "holder_process": "71323 65247 65247 S    bash -c . \"$1\"; fm_lock_try_acquire \"$2\" || exit 11; trap 'fm_lock_release \"$2\"; exit' TERM; echo ready > \"$3\"; while :; do sleep .1; done _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2JEJPE43XFXJCGYM3KFAX75/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2JEJPE43XFXJCGYM3KFAX75/.nm-test-phase/live/held-marker-existing/state/.watcher-down.lock /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2JEJPE43XFXJCGYM3KFAX75/.nm-test-phase/live/held-marker-existing/held-marker-existing-holder.ready",
+    "retained_watcher_lock_pid": "70740",
+    "marker_before": "pending:downtime:71276.1789474056.g9lNGq",
+    "marker_after": "pending:downtime:71276.1789474056.g9lNGq"
   },
   {
-    "name": "A stealer killed after removal is reclaimed and watcher startup still works",
-    "result": "fail",
-    "error": "AssertionError('readiness condition timed out')"
+    "scenario": "Resource fault: genuine unwritable state",
+    "result": "pass",
+    "uid": 501,
+    "state_mode": "0555",
+    "primitive_output": "acquisition_rc=1",
+    "primitive_elapsed_seconds": 0.046,
+    "watcher_exit": 1,
+    "term_to_exit_seconds": 4.402,
+    "diagnostic": "watcher: recovery state could not be persisted within 5s (marker lock held by pid unknown); stopping and retaining stale lock evidence",
+    "retained_watcher_lock_pid": "74210"
   },
   {
-    "name": "Returned authenticated check descendant is drained by the real fallback timeout path",
-    "result": "pass"
+    "scenario": "Ordinary publication ignores ambient timeout overrides",
+    "result": "pass",
+    "ambient_values": {
+      "FM_RECOVERY_MARKER_LOCK_TIMEOUT": "1",
+      "FM_WATCHER_SHUTDOWN_LOCK_SECS": "1"
+    },
+    "blocked_after_seconds": 6,
+    "publication_exit": 0,
+    "marker": "pending:downtime:83505.1789474072.IbEHBa",
+    "elapsed_seconds": 6.456
+  },
+  {
+    "scenario": "Stealer dies after removing primary lock; next acquirer and watcher start",
+    "result": "pass",
+    "stopped_stealer": "83708 65247 65247 T    bash -c . \"$1\"\\012set -T\\012trap 'if [ \"$BASH_COMMAND\" = \"rc=1\" ] && [ \"${lockdir:-}\" = \"$STATE/.watch.lock\" ] && [ ! -e \"$STATE/.watch.lock\" ] && [ -e \"$STATE/.watch.lock.steal\" ]; then printf \"%s\\n\" \"${BASHPID:-$$}\" > \"$STATE/steal-gap\"; kill -STOP \"${BASHPID:-$$}\"; fi' DEBUG\\012fm_lock_try_acquire \"$STATE/.watch.lock\"\\012 _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2JEJPE43XFXJCGYM3KFAX75/bin/fm-wake-lib.sh",
+    "primary_absent_at_crash": true,
+    "abandoned_steal_pid": "83708",
+    "next_acquirer_output": "acquired_pid=83989\nrecovered_pid=",
+    "next_acquirer_exit": 0,
+    "steal_lock_reclaimed": true,
+    "successor_watcher_pid": 84411,
+    "successor_exit_after_term": 0,
+    "successor_term_to_exit_seconds": 0.114
+  },
+  {
+    "scenario": "Same process reclaims interrupted marker lock",
+    "result": "pass",
+    "exit": 0,
+    "output": "marker=pending:downtime:85253.1789474074.f5o8ns\nreacquired_and_released"
+  },
+  {
+    "scenario": "Recovery wake cleanup also times out and preserves the announced episode",
+    "result": "pass",
+    "wake_output": "check: rearm-resurface",
+    "transition": "release-lock-existing",
+    "resume_to_exit_seconds": 4.786,
+    "watcher_exit": 0,
+    "diagnostic": "watcher: recovery state could not be persisted within 5s (marker lock held by pid 2838); stopping and retaining stale lock evidence",
+    "ambient_values": {
+      "FM_WATCHER_SHUTDOWN_LOCK_SECS": "300",
+      "FM_RECOVERY_MARKER_LOCK_TIMEOUT": "300"
+    },
+    "marker_before": "announced:downtime:1636.1789474451.qAMl6i",
+    "marker_after": "announced:downtime:1636.1789474451.qAMl6i",
+    "holder_pid": 2838,
+    "holder_survived": true,
+    "stale_singleton_pid": "1665"
   }
 ]

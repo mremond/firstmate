@@ -1,0 +1,3 @@
+test_shutdown_is_bounded_when_marker_lock_is_held
+test_lock_resource_failure_returns
+test_shutdown_is_bounded_when_state_is_unwritable

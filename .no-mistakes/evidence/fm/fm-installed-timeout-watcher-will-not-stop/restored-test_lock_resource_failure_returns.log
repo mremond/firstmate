@@ -1,0 +1,1 @@
+ok - lock acquisition returns nonzero when owner-directory creation fails

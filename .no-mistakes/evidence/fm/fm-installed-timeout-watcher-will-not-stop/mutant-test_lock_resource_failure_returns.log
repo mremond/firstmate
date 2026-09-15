@@ -1,0 +1,1 @@
+not ok - lock acquisition did not return on owner-directory creation failure

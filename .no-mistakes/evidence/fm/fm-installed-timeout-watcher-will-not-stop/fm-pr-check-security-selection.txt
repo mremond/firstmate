@@ -1,0 +1,2 @@
+test_custom_snapshot_cleanup_on_signal
+test_returned_custom_check_descendants_are_drained

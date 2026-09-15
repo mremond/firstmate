@@ -1,0 +1,10 @@
+{
+  "result": "pass",
+  "injection": "SIGSTOP to real watcher from direct custom check; no production files modified",
+  "ps_availability": "host ps",
+  "assertion_exit": 1,
+  "grandchild_pid": "75420",
+  "recorded_reparented_child_pid": "75418",
+  "reparented_child_ppid": "1",
+  "diagnostic": "# fallback-timeout watcher still live 14s after TERM (150 polls); state below\n# descendant tree (watcher pid 74563; recorded child pid 75418): pid ppid pgid stat wchan args\n74563 74292 74288 T    -      bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2JEJPE43XFXJCGYM3KFAX75/bin/fm-watch.sh\n75418     1 75413 S    -      perl -e $SIG{TERM}=\"IGNORE\"; my $g=fork; die $! unless defined $g; if (!$g) {sleep 60; exit} open my $gf, \">\", $ENV{NM_GRANDCHILD} or die $!; print {$gf} \"$g\\n\"; close $gf; open my $ready, \">\", $ENV{FM_TEST_DESCENDANT_READY} or die $!; print {$ready} \"ready\\n\"; close $ready; sleep 60\n  75420 75418 75413 S    -      perl -e $SIG{TERM}=\"IGNORE\"; my $g=fork; die $! unless defined $g; if (!$g) {sleep 60; exit} open my $gf, \">\", $ENV{NM_GRANDCHILD} or die $!; print {$gf} \"$g\\n\"; close $gf; open my $ready, \">\", $ENV{FM_TEST_DESCENDANT_READY} or die $!; print {$ready} \"ready\\n\"; close $ready; sleep 60\n# fallback-timeout watcher stderr tail:\nnot ok - fallback-timeout watcher did not stop after the direct check returned\n"
+}
