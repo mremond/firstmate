@@ -1,0 +1,15 @@
+ok - an underway row leads with the task name and still reports its run status
+ok - an underway identifier label is not replaced by run status
+ok - charted next renders the most recently filed work first
+ok - charted rows with no filed date follow the dated rows in payload order
+ok - a warning row badges needs repair while queued work keeps waiting
+ok - the charted next count counts queued work only, and still renders warnings
+ok - a warning-only board reports nothing queued and still shows the warning
+ok - omitted warnings remain separate from omitted queued work
+ok - an omitted kind renders exactly as queued work always did
+ok - a composed risk keeps the level on the pin and reads its justification in the card
+ok - a bare risk level renders as the pin alone, with no context row
+ok - a low level reads as low in either language, whatever its casing or spacing
+ok - an unrecognised level keeps the alert tone rather than erring toward calm
+ok - a blank risk wears no pin and leaves no orphan row
+ok - a merge call with no risk value is refused at build rather than rendered

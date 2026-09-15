@@ -1,0 +1,9 @@
+bin/fm-bearings-board.sh build <isolated-home>/payload.json
+board: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2J0R8DH0RSQP7P5KYP5P1D5/.test-phase/live-home/.lavish/bearings-board.html
+  url: "http://127.0.0.1:14387/session/30710a6c6e5f7553"
+  status: opened
+session: live
+served: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2J0R8DH0RSQP7P5KYP5P1D5/.test-phase/live-home/.lavish/bearings-board.html
+bound: lavish-30710a6c6e5f7553
+armed: lavish-30710a6c6e5f7553
+listening: live

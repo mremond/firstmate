@@ -1,0 +1,8 @@
+{
+  "base": "b85e28b5f8aad91a553e33d461da9f238bbdac38",
+  "command": "bin/fm-test-run.sh --list --changed --base HEAD",
+  "exit": 2,
+  "stdout": "",
+  "stderr": "fm-test-run: no changed-test mapping for source path: tests/assets/board-render-harness.mjs\n",
+  "targetResult": "target selects snapshot-bearings consumer family; see selector-live-transcript.json"
+}

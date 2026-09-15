@@ -1,0 +1,59 @@
+{
+  "base": "b85e28b5f8aad91a553e33d461da9f238bbdac38",
+  "results": [
+    {
+      "width": 1440,
+      "titleLines": 1,
+      "subtitleLines": 0.9994452662721894,
+      "riskBadgeText": "risk faible. La vue reste dérivée. Aucun état de travail ne change.",
+      "riskBadgeClass": "fm-badge fm-badge--warn",
+      "riskBadgeInsideCard": false,
+      "riskContextRows": 0,
+      "documentWidth": 1440,
+      "viewport": 1440,
+      "overflowing": []
+    },
+    {
+      "width": 620,
+      "titleLines": 1,
+      "subtitleLines": 0.9994452662721894,
+      "riskBadgeText": "risk faible. La vue reste dérivée. Aucun état de travail ne change.",
+      "riskBadgeClass": "fm-badge fm-badge--warn",
+      "riskBadgeInsideCard": false,
+      "riskContextRows": 0,
+      "documentWidth": 605,
+      "viewport": 605,
+      "overflowing": [
+        {
+          "class": "fm-badge fm-badge--warn",
+          "text": "risk faible. La vue reste dérivée. Aucun état de travail ne change.",
+          "right": 675.53125
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "titleLines": 1,
+      "subtitleLines": 0.9994452662721894,
+      "riskBadgeText": "risk faible. La vue reste dérivée. Aucun état de travail ne change.",
+      "riskBadgeClass": "fm-badge fm-badge--warn",
+      "riskBadgeInsideCard": false,
+      "riskContextRows": 0,
+      "documentWidth": 481,
+      "viewport": 375,
+      "overflowing": [
+        {
+          "class": "fm-sign fm-sign--muted",
+          "text": "10 items wait on you, captain",
+          "right": 481.109375
+        },
+        {
+          "class": "fm-badge fm-badge--warn",
+          "text": "risk faible. La vue reste dérivée. Aucun état de travail ne change.",
+          "right": 675.53125
+        }
+      ]
+    }
+  ],
+  "note": "Base reproduces one-line rows and whole, alert-colored French risk badge. The section heading also exceeds 390px on base; that unchanged heading is outside this rework."
+}

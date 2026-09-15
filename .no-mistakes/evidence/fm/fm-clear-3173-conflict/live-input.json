@@ -1,0 +1,174 @@
+{
+  "schema": "fm-bearings-board.v1",
+  "home": "Isolated board validation",
+  "generated": "2026-09-15T08:00Z",
+  "prs_live": false,
+  "captains_call": [
+    {
+      "key": "fr-composed",
+      "type": "merge",
+      "repo": "sample",
+      "title": "fr-composed: inspect the risk level and its justification",
+      "risk": "faible. La vue reste dérivée. Aucun état de travail ne change.",
+      "options": [
+        {
+          "value": "merge",
+          "label": "Merge"
+        }
+      ]
+    },
+    {
+      "key": "en-low",
+      "type": "merge",
+      "repo": "sample",
+      "title": "en-low: inspect the risk level and its justification",
+      "risk": "  LOW  ",
+      "options": [
+        {
+          "value": "merge",
+          "label": "Merge"
+        }
+      ]
+    },
+    {
+      "key": "fr-bare",
+      "type": "merge",
+      "repo": "sample",
+      "title": "fr-bare: inspect the risk level and its justification",
+      "risk": "  Faible  ",
+      "options": [
+        {
+          "value": "merge",
+          "label": "Merge"
+        }
+      ]
+    },
+    {
+      "key": "unknown",
+      "type": "merge",
+      "repo": "sample",
+      "title": "unknown: inspect the risk level and its justification",
+      "risk": "élevé. Une migration de données exige une vérification.",
+      "options": [
+        {
+          "value": "merge",
+          "label": "Merge"
+        }
+      ]
+    },
+    {
+      "key": "substring",
+      "type": "merge",
+      "repo": "sample",
+      "title": "substring: inspect the risk level and its justification",
+      "risk": "low-ish. Ce niveau ne doit pas perdre son alerte.",
+      "options": [
+        {
+          "value": "merge",
+          "label": "Merge"
+        }
+      ]
+    },
+    {
+      "key": "blank",
+      "type": "merge",
+      "repo": "sample",
+      "title": "blank: inspect the risk level and its justification",
+      "risk": "   ",
+      "options": [
+        {
+          "value": "merge",
+          "label": "Merge"
+        }
+      ]
+    },
+    {
+      "key": "long-level",
+      "type": "merge",
+      "repo": "sample",
+      "title": "long-level: inspect the risk level and its justification",
+      "risk": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "options": [
+        {
+          "value": "merge",
+          "label": "Merge"
+        }
+      ]
+    },
+    {
+      "key": "long-detail",
+      "type": "merge",
+      "repo": "sample",
+      "title": "long-detail: inspect the risk level and its justification",
+      "risk": "faible. yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+      "options": [
+        {
+          "value": "merge",
+          "label": "Merge"
+        }
+      ]
+    },
+    {
+      "key": "empty-level",
+      "type": "merge",
+      "repo": "sample",
+      "title": "empty-level: inspect the risk level and its justification",
+      "risk": ". Justification sans niveau.",
+      "options": [
+        {
+          "value": "merge",
+          "label": "Merge"
+        }
+      ]
+    },
+    {
+      "key": "multi-period",
+      "type": "merge",
+      "repo": "sample",
+      "title": "multi-period: inspect the risk level and its justification",
+      "risk": "low. First sentence. Second sentence.",
+      "options": [
+        {
+          "value": "merge",
+          "label": "Merge"
+        }
+      ]
+    }
+  ],
+  "underway": [
+    {
+      "id": "underway-validation",
+      "repo": "sample",
+      "name": "Keep the task title readable while the implementation is running: readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment ",
+      "state": "working",
+      "doing": "Preserve the live run status and useful context: secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context ",
+      "kind": "ship"
+    }
+  ],
+  "landed": [
+    {
+      "id": "landed-validation",
+      "repo": "sample",
+      "what": "A completed task with enough context to explain the delivered work: readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment ",
+      "owner": "validation"
+    }
+  ],
+  "charted": [
+    {
+      "id": "charted-long",
+      "repo": "sample",
+      "title": "Understand the queued work before deciding to dispatch it: readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment readable title segment ",
+      "reason": "Read the reason without opening another screen: secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context secondary context ",
+      "dispatchable": true
+    },
+    {
+      "id": "charted-token",
+      "repo": "sample",
+      "title": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "reason": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+      "dispatchable": true
+    }
+  ],
+  "charted_more": 0,
+  "charted_warning_more": 0
+}

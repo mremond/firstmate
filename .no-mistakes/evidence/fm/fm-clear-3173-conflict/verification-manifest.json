@@ -1,0 +1,15 @@
+{
+  "base": "b85e28b5f8aad91a553e33d461da9f238bbdac38",
+  "target": "c896d6e919017eb1466e8da03ffe89a888c3e30f",
+  "targetTree": "50c340c487e07f0253b7f4e4196bcbbc3e78c2cd",
+  "scope": "Assigned test phase only. No tracked source or test changes. No PR or pipeline mutation.",
+  "focusedChecks": {
+    "tests/fm-test-run.test.sh": "passed",
+    "tests/fm-bearings-board-render.test.sh": "passed",
+    "tests/fm-bearings-board-layout.test.sh": "capability-skipped: Chrome absent; Brave dump mode unusable; direct Brave CDP live verification passed"
+  },
+  "liveSurface": "Actual fm-bearings-board.sh build, isolated real Lavish server, real Brave Chromium rendering and deck controls; actual fm-test-run.sh over copied target test corpus",
+  "baseline": "Original row clipping, risk overflow/tone, and asset mapping refusal reproduced against base.",
+  "scopeLimitation": "390px full-page overflow is the unchanged Captain’s Call heading on both base and target. Changed row text and risk contents stay within their own cards.",
+  "deliveryDeferred": "Outer PR phase must state this supersedes PR 3173 and was rebuilt on trunk convention; PR 3173 must remain untouched."
+}

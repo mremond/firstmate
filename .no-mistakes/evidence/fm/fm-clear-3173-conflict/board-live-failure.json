@@ -1,0 +1,601 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "rows": [
+        {
+          "section": "bb-charted",
+          "titleLines": 3,
+          "subtitleLines": 1.9988905325443789,
+          "titleScrollWidth": 397,
+          "titleClientWidth": 397,
+          "subScrollWidth": 397,
+          "subClientWidth": 397
+        },
+        {
+          "section": "bb-charted",
+          "titleLines": 3,
+          "subtitleLines": 1.9988905325443789,
+          "titleScrollWidth": 397,
+          "titleClientWidth": 397,
+          "subScrollWidth": 397,
+          "subClientWidth": 397
+        },
+        {
+          "section": "bb-underway",
+          "titleLines": 3,
+          "subtitleLines": 1.9988905325443789,
+          "titleScrollWidth": 418,
+          "titleClientWidth": 418,
+          "subScrollWidth": 418,
+          "subClientWidth": 418
+        },
+        {
+          "section": "bb-landed",
+          "titleLines": 3,
+          "subtitleLines": 0.9994452662721894,
+          "titleScrollWidth": 475,
+          "titleClientWidth": 475,
+          "subScrollWidth": 475,
+          "subClientWidth": 475
+        }
+      ],
+      "cards": [
+        {
+          "key": "fr-composed",
+          "title": "fr-composed: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk faible",
+              "tone": "fm-badge--neutral",
+              "inside": true
+            }
+          ],
+          "ctx": [
+            {
+              "key": "risk",
+              "value": "La vue reste dérivée. Aucun état de travail ne change.",
+              "inside": true,
+              "lines": 1,
+              "scrollWidth": 421,
+              "clientWidth": 421
+            }
+          ],
+          "viewport": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "key": "en-low",
+          "title": "en-low: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk LOW",
+              "tone": "fm-badge--neutral",
+              "inside": true
+            }
+          ],
+          "ctx": [],
+          "viewport": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "key": "fr-bare",
+          "title": "fr-bare: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk Faible",
+              "tone": "fm-badge--neutral",
+              "inside": true
+            }
+          ],
+          "ctx": [],
+          "viewport": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "key": "unknown",
+          "title": "unknown: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk élevé",
+              "tone": "fm-badge--warn",
+              "inside": true
+            }
+          ],
+          "ctx": [
+            {
+              "key": "risk",
+              "value": "Une migration de données exige une vérification.",
+              "inside": true,
+              "lines": 1,
+              "scrollWidth": 421,
+              "clientWidth": 421
+            }
+          ],
+          "viewport": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "key": "substring",
+          "title": "substring: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk low-ish",
+              "tone": "fm-badge--warn",
+              "inside": true
+            }
+          ],
+          "ctx": [
+            {
+              "key": "risk",
+              "value": "Ce niveau ne doit pas perdre son alerte.",
+              "inside": true,
+              "lines": 1,
+              "scrollWidth": 421,
+              "clientWidth": 421
+            }
+          ],
+          "viewport": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "key": "blank",
+          "title": "blank: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            }
+          ],
+          "ctx": [],
+          "viewport": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "key": "long-level",
+          "title": "long-level: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+              "tone": "fm-badge--warn",
+              "inside": true
+            }
+          ],
+          "ctx": [],
+          "viewport": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "key": "long-detail",
+          "title": "long-detail: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk faible",
+              "tone": "fm-badge--neutral",
+              "inside": true
+            }
+          ],
+          "ctx": [
+            {
+              "key": "risk",
+              "value": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+              "inside": true,
+              "lines": 4,
+              "scrollWidth": 421,
+              "clientWidth": 421
+            }
+          ],
+          "viewport": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "key": "empty-level",
+          "title": "empty-level: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            }
+          ],
+          "ctx": [
+            {
+              "key": "risk",
+              "value": "Justification sans niveau.",
+              "inside": true,
+              "lines": 1,
+              "scrollWidth": 421,
+              "clientWidth": 421
+            }
+          ],
+          "viewport": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "key": "multi-period",
+          "title": "multi-period: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk low",
+              "tone": "fm-badge--neutral",
+              "inside": true
+            }
+          ],
+          "ctx": [
+            {
+              "key": "risk",
+              "value": "First sentence. Second sentence.",
+              "inside": true,
+              "lines": 1,
+              "scrollWidth": 421,
+              "clientWidth": 421
+            }
+          ],
+          "viewport": 1440,
+          "scrollWidth": 1440
+        }
+      ]
+    },
+    {
+      "width": 620,
+      "rows": [
+        {
+          "section": "bb-charted",
+          "titleLines": 3,
+          "subtitleLines": 1.9988905325443789,
+          "titleScrollWidth": 395,
+          "titleClientWidth": 395,
+          "subScrollWidth": 395,
+          "subClientWidth": 395
+        },
+        {
+          "section": "bb-charted",
+          "titleLines": 3,
+          "subtitleLines": 1.9988905325443789,
+          "titleScrollWidth": 395,
+          "titleClientWidth": 395,
+          "subScrollWidth": 395,
+          "subClientWidth": 395
+        },
+        {
+          "section": "bb-underway",
+          "titleLines": 3,
+          "subtitleLines": 1.9988905325443789,
+          "titleScrollWidth": 416,
+          "titleClientWidth": 416,
+          "subScrollWidth": 416,
+          "subClientWidth": 416
+        },
+        {
+          "section": "bb-landed",
+          "titleLines": 3,
+          "subtitleLines": 0.9994452662721894,
+          "titleScrollWidth": 473,
+          "titleClientWidth": 473,
+          "subScrollWidth": 473,
+          "subClientWidth": 473
+        }
+      ],
+      "cards": [
+        {
+          "key": "fr-composed",
+          "title": "fr-composed: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk faible",
+              "tone": "fm-badge--neutral",
+              "inside": true
+            }
+          ],
+          "ctx": [
+            {
+              "key": "risk",
+              "value": "La vue reste dérivée. Aucun état de travail ne change.",
+              "inside": true,
+              "lines": 1,
+              "scrollWidth": 434,
+              "clientWidth": 434
+            }
+          ],
+          "viewport": 620,
+          "scrollWidth": 620
+        },
+        {
+          "key": "en-low",
+          "title": "en-low: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk LOW",
+              "tone": "fm-badge--neutral",
+              "inside": true
+            }
+          ],
+          "ctx": [],
+          "viewport": 605,
+          "scrollWidth": 605
+        },
+        {
+          "key": "fr-bare",
+          "title": "fr-bare: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk Faible",
+              "tone": "fm-badge--neutral",
+              "inside": true
+            }
+          ],
+          "ctx": [],
+          "viewport": 605,
+          "scrollWidth": 605
+        },
+        {
+          "key": "unknown",
+          "title": "unknown: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk élevé",
+              "tone": "fm-badge--warn",
+              "inside": true
+            }
+          ],
+          "ctx": [
+            {
+              "key": "risk",
+              "value": "Une migration de données exige une vérification.",
+              "inside": true,
+              "lines": 1,
+              "scrollWidth": 419,
+              "clientWidth": 419
+            }
+          ],
+          "viewport": 605,
+          "scrollWidth": 605
+        },
+        {
+          "key": "substring",
+          "title": "substring: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk low-ish",
+              "tone": "fm-badge--warn",
+              "inside": true
+            }
+          ],
+          "ctx": [
+            {
+              "key": "risk",
+              "value": "Ce niveau ne doit pas perdre son alerte.",
+              "inside": true,
+              "lines": 1,
+              "scrollWidth": 419,
+              "clientWidth": 419
+            }
+          ],
+          "viewport": 605,
+          "scrollWidth": 605
+        },
+        {
+          "key": "blank",
+          "title": "blank: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            }
+          ],
+          "ctx": [],
+          "viewport": 605,
+          "scrollWidth": 605
+        },
+        {
+          "key": "long-level",
+          "title": "long-level: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+              "tone": "fm-badge--warn",
+              "inside": true
+            }
+          ],
+          "ctx": [],
+          "viewport": 605,
+          "scrollWidth": 605
+        },
+        {
+          "key": "long-detail",
+          "title": "long-detail: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk faible",
+              "tone": "fm-badge--neutral",
+              "inside": true
+            }
+          ],
+          "ctx": [
+            {
+              "key": "risk",
+              "value": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+              "inside": true,
+              "lines": 4,
+              "scrollWidth": 419,
+              "clientWidth": 419
+            }
+          ],
+          "viewport": 605,
+          "scrollWidth": 605
+        },
+        {
+          "key": "empty-level",
+          "title": "empty-level: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            }
+          ],
+          "ctx": [
+            {
+              "key": "risk",
+              "value": "Justification sans niveau.",
+              "inside": true,
+              "lines": 1,
+              "scrollWidth": 419,
+              "clientWidth": 419
+            }
+          ],
+          "viewport": 605,
+          "scrollWidth": 605
+        },
+        {
+          "key": "multi-period",
+          "title": "multi-period: inspect the risk level and its justification",
+          "badges": [
+            {
+              "text": "checks green",
+              "tone": "fm-badge--online",
+              "inside": true
+            },
+            {
+              "text": "risk low",
+              "tone": "fm-badge--neutral",
+              "inside": true
+            }
+          ],
+          "ctx": [
+            {
+              "key": "risk",
+              "value": "First sentence. Second sentence.",
+              "inside": true,
+              "lines": 1,
+              "scrollWidth": 419,
+              "clientWidth": 419
+            }
+          ],
+          "viewport": 605,
+          "scrollWidth": 605
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "rows": [
+        {
+          "section": "bb-charted",
+          "titleLines": 3,
+          "subtitleLines": 1.9988905325443789,
+          "titleScrollWidth": 165,
+          "titleClientWidth": 165,
+          "subScrollWidth": 165,
+          "subClientWidth": 165
+        },
+        {
+          "section": "bb-charted",
+          "titleLines": 3,
+          "subtitleLines": 1.9988905325443789,
+          "titleScrollWidth": 165,
+          "titleClientWidth": 165,
+          "subScrollWidth": 165,
+          "subClientWidth": 165
+        },
+        {
+          "section": "bb-underway",
+          "titleLines": 3,
+          "subtitleLines": 1.9988905325443789,
+          "titleScrollWidth": 186,
+          "titleClientWidth": 186,
+          "subScrollWidth": 186,
+          "subClientWidth": 186
+        },
+        {
+          "section": "bb-landed",
+          "titleLines": 3,
+          "subtitleLines": 0.9994452662721894,
+          "titleScrollWidth": 243,
+          "titleClientWidth": 243,
+          "subScrollWidth": 243,
+          "subClientWidth": 243
+        }
+      ],
+      "cards": []
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: document overflow fr-composed\n\n390 !== 481\n"
+}

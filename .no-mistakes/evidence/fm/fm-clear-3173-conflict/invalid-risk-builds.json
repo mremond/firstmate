@@ -1,0 +1,23 @@
+[
+  {
+    "case": "missing",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2J0R8DH0RSQP7P5KYP5P1D5/.test-phase/live-home/invalid.json\n",
+    "existingBoardPreserved": true
+  },
+  {
+    "case": "empty",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2J0R8DH0RSQP7P5KYP5P1D5/.test-phase/live-home/invalid.json\n",
+    "existingBoardPreserved": true
+  },
+  {
+    "case": "null",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "fm-bearings-board: board data does not satisfy fm-bearings-board.v1: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M2J0R8DH0RSQP7P5KYP5P1D5/.test-phase/live-home/invalid.json\n",
+    "existingBoardPreserved": true
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "families": [
+    {
+      "count": 1,
+      "duration_ms": 222,
+      "failed": 0,
+      "name": "snapshot-bearings"
+    }
+  ],
+  "finished_at": "2026-09-15T08:02:10Z",
+  "run_id": "fm-test-run-1789459330579-38267",
+  "scripts": [
+    {
+      "duration_ms": 222,
+      "exit": 0,
+      "expected_gate_skip": "optional-binary",
+      "family": "snapshot-bearings",
+      "gate_skip": true,
+      "gate_skip_reason": "Chrome or Chromium not found",
+      "path": "tests/fm-bearings-board-layout.test.sh"
+    }
+  ],
+  "selection": "scripts;jobs=1",
+  "started_at": "2026-09-15T08:02:10Z",
+  "summary": {
+    "duration_ms": 345,
+    "failed": 0,
+    "skipped_gate": 1,
+    "total": 1
+  }
+}
