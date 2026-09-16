@@ -1,0 +1,33 @@
+{
+  "maintainer_comment": {
+    "pending": [
+      {
+        "token": "comment:12:2026-09-16T08:01:00Z:",
+        "type": "comment",
+        "source": "https://github.com/o/r/pull/8#issuecomment-12",
+        "head": null,
+        "author": "maintainer",
+        "body": "Please clarify the contract",
+        "task": "delivery",
+        "url": "https://github.com/o/r/pull/8"
+      }
+    ],
+    "durable_wake_rows_after_new_signal": 1,
+    "durable_wake_rows_after_repeat": 1
+  },
+  "ready_for_pr_label": {
+    "pending": [
+      {
+        "token": "ready-for-pr:2026-09-16T08:00:00Z",
+        "type": "ready-for-pr",
+        "source": "https://github.com/o/r/issues/9",
+        "head": null,
+        "body": "filed issue reached ready-for-pr",
+        "task": "filed",
+        "url": "https://github.com/o/r/issues/9"
+      }
+    ],
+    "durable_wake_rows_after_new_signal": 1,
+    "durable_wake_rows_after_repeat": 1
+  }
+}
