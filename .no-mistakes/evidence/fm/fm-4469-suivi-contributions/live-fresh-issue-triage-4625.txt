@@ -1,0 +1,14 @@
+Live product fresh issue triage: issue #4625
+{
+  "known": 1,
+  "checked": 1,
+  "counts": {
+    "captain": 0,
+    "fleet": 0,
+    "maintainer": 1,
+    "nobody": 0
+  },
+  "complete": true,
+  "proven_clear": true,
+  "captain": []
+}

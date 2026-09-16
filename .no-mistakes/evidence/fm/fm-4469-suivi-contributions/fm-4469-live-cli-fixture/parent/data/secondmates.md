@@ -1,0 +1,1 @@
+- child - fixture (home: /Users/mremond/.no-mistakes/evidence/01M2MQV3WTF29F0N48VYN5V4N5/fm-4469-live-cli-fixture/child; scope: fixture; projects: sample; added 2026-09-16)

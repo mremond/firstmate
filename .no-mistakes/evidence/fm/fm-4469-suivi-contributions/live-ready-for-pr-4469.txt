@@ -1,0 +1,17 @@
+Live product ready-for-pr wake and exact acknowledgement: issue #4469
+contributions: 2 pending signal(s); read fm-contributions.sh pending
+captured_token_type=ready-for-pr
+durable_wake_lines=       2
+pending_after_exact_ack=1
+{
+  "known": 1,
+  "checked": 1,
+  "counts": {
+    "captain": 0,
+    "fleet": 1,
+    "maintainer": 0,
+    "nobody": 0
+  },
+  "complete": true,
+  "proven_clear": true
+}

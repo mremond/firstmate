@@ -1,0 +1,13 @@
+{
+  "checked": 0,
+  "stale_verdicts": 0,
+  "rows": [
+    {
+      "url": "https://github.com/kunchenguid/firstmate/pull/4623",
+      "checked": false,
+      "actor": "fleet",
+      "reason": "forge observation unavailable or changed during read",
+      "verdict_freshness": "unverified"
+    }
+  ]
+}

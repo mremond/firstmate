@@ -1,0 +1,16 @@
+Live product ready-for-pr wake and exact acknowledgement: issue #4469
+pending_types_before_ack=["comment","ready-for-pr"]
+pending_types_after_ack=["comment"]
+wake_lines_before_after_repoll=       2        2
+{
+  "known": 1,
+  "checked": 1,
+  "counts": {
+    "captain": 0,
+    "fleet": 1,
+    "maintainer": 0,
+    "nobody": 0
+  },
+  "complete": true,
+  "proven_clear": true
+}

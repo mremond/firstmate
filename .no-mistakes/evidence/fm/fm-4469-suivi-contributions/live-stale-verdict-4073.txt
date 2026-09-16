@@ -1,0 +1,27 @@
+Live product stale-verdict scenario: PR #4073
+{
+  "known": 1,
+  "checked": 1,
+  "counts": {
+    "captain": 0,
+    "fleet": 1,
+    "maintainer": 0,
+    "nobody": 0
+  },
+  "stale_verdicts": 1,
+  "rows": [
+    {
+      "url": "https://github.com/kunchenguid/firstmate/pull/4073",
+      "head": "31e4d35bec947717151b92359a2f04a542c05dd2",
+      "checked": true,
+      "actor": "fleet",
+      "reason": "STALE maintainer verdict; reassess the current head",
+      "verdict": {
+        "head": "1129818ef720b6827ae75eb690957c2c7393d82b",
+        "freshness": "STALE",
+        "actor": "maintainer",
+        "source": "https://github.com/kunchenguid/firstmate/pull/4073#issuecomment-5662668969"
+      }
+    }
+  ]
+}

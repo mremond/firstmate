@@ -1,0 +1,7 @@
+{
+  "pending_signals": 2,
+  "event_types": [
+    "comment",
+    "ready-for-pr"
+  ]
+}

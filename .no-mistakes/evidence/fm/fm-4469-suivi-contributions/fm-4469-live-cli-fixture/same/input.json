@@ -1,0 +1,60 @@
+{
+  "backlog": {
+    "path": "/Users/mremond/.no-mistakes/evidence/01M2MQV3WTF29F0N48VYN5V4N5/fm-4469-live-cli-fixture/same/data/backlog.md",
+    "present": true,
+    "records": [
+      {
+        "order": 1,
+        "state": "queued",
+        "structured": true,
+        "id": "delivery",
+        "checked": false,
+        "title": "Published contribution",
+        "repo": "sample",
+        "kind": "ship",
+        "priority": null,
+        "hold_reason": null,
+        "hold_kind": null,
+        "hold_until": null,
+        "hold_set": null,
+        "blocked_by": null,
+        "blocked_by_ids": [],
+        "blocked_reason": null,
+        "since": null,
+        "merged": null,
+        "reported": null,
+        "done": null,
+        "completion": {
+          "verb": null,
+          "date": null
+        },
+        "links": [
+          "https://github.com/o/r/pull/8"
+        ],
+        "pr_url": "https://github.com/o/r/pull/8",
+        "report_path": null,
+        "local_note": null,
+        "raw": "- [ ] delivery - Published contribution https://github.com/o/r/pull/8 (repo: sample) (kind: ship)",
+        "body_lines": [],
+        "body_excerpt": null,
+        "unresolved_blocker_ids": [],
+        "current_role": "queued",
+        "requires_child_metadata": false,
+        "hold_age_days": null,
+        "hold_bucket": null,
+        "captain_actionable": false
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "delivery",
+      "kind": "ship",
+      "pr": {
+        "url": "https://github.com/o/r/pull/8",
+        "head": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "merge_authority": "yolo"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "known": 2,
+  "checked": 2,
+  "complete": true,
+  "proven_clear": true,
+  "stale_verdicts": 0,
+  "rows": [
+    {
+      "url": "https://github.com/kunchenguid/firstmate/issues/4469",
+      "kind": "issue",
+      "checked": true,
+      "actor": "fleet",
+      "reason": "incoming maintainer signal needs triage",
+      "head": null,
+      "signals": [
+        "comment",
+        "ready-for-pr"
+      ]
+    },
+    {
+      "url": "https://github.com/kunchenguid/firstmate/pull/4623",
+      "kind": "pr",
+      "checked": true,
+      "actor": "fleet",
+      "reason": "no reported checks; readiness unconfirmed",
+      "head": "ff91c5f3bbd3300c4a935a0ff5090f5aa08ee7de",
+      "signals": []
+    }
+  ]
+}

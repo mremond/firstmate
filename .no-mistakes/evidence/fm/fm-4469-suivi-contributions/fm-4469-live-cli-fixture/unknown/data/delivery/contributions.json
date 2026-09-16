@@ -1,0 +1,39 @@
+{
+  "schema": "fm-contributions.v1",
+  "task": "delivery",
+  "records": [
+    {
+      "url": "https://github.com/o/r/pull/17",
+      "kind": "pr",
+      "checked_at": "2026-09-16T08:00:00Z",
+      "error": "forge unavailable",
+      "pending": [],
+      "seen": [],
+      "verdict": {
+        "head": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "actor": "maintainer",
+        "source": "https://github.com/o/r/pull/17#issuecomment-101",
+        "summary": "awaiting maintainer"
+      },
+      "observation": {
+        "head": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "state": "open",
+        "draft": false,
+        "mergeable": "mergeable",
+        "can_merge": true,
+        "review_decision": "APPROVED",
+        "checks": [
+          {
+            "name": "behavior",
+            "id": 1,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T08:00:00Z"
+          }
+        ],
+        "reviews": [],
+        "events": []
+      }
+    }
+  ]
+}
