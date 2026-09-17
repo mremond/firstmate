@@ -1,0 +1,45 @@
+# BASE 3eb5b633 (bin/ from base, test helpers from HEAD)
+=== [paused] step 1: wait declared 500s ago -> first stale inspection (expect 1 wake)
+    watcher exited (surfaced)
+    WAKE: stale: test:fm-held (paused 500s, awaiting external - declared pause, rechecked on a long cadence not a wedge; confirm the wait still holds)
+    stale wakes queued (unacked): 1
+    (acked)
+=== [paused] step 2: status write that keeps the wait: 'paused: waiting on validation run one' (expect 0 wakes before cadence)
+    watcher EXITED/surfaced
+    WAKE: stale: test:fm-held (paused 1s, awaiting external - declared pause, rechecked on a long cadence not a wedge; confirm the wait still holds)
+    stale wakes queued (unacked): 1
+    (acked a wake)
+=== [paused] step 2: status write that keeps the wait: 'continuation of the same wait, nothing changed' (expect 0 wakes before cadence)
+    watcher EXITED/surfaced
+    WAKE: stale: test:fm-held (paused 1s, awaiting external - declared pause, rechecked on a long cadence not a wedge; confirm the wait still holds)
+    stale wakes queued (unacked): 1
+    (acked a wake)
+=== [paused] step 3: cadence elapsed (expect 1 recheck, age >= 500s, anchored on declaration)
+    watcher did NOT surface
+    stale wakes queued (unacked): 0
+=== [paused] step 4: changed declaration 'paused: waiting on validation run two' (expect immediate wake)
+    watcher exited (surfaced)
+    WAKE: stale: test:fm-held (paused 0s, awaiting external - declared pause, rechecked on a long cadence not a wedge; confirm the wait still holds)
+    stale wakes queued (unacked): 1
+=== [captain-held] step 1: wait declared 500s ago -> first stale inspection (expect 1 wake)
+    watcher exited (surfaced)
+    WAKE: stale: test:fm-held (captain-held 501s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold)
+    stale wakes queued (unacked): 1
+    (acked)
+=== [captain-held] step 2: status write that keeps the wait: 'captain-held [key=route]: awaiting the routing call' (expect 0 wakes before cadence)
+    watcher EXITED/surfaced
+    WAKE: stale: test:fm-held (captain-held 0s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold)
+    stale wakes queued (unacked): 1
+    (acked a wake)
+=== [captain-held] step 2: status write that keeps the wait: 'continuation of the same wait, nothing changed' (expect 0 wakes before cadence)
+    watcher EXITED/surfaced
+    WAKE: stale: test:fm-held (captain-held 1s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold)
+    stale wakes queued (unacked): 1
+    (acked a wake)
+=== [captain-held] step 3: cadence elapsed (expect 1 recheck, age >= 500s, anchored on declaration)
+    watcher did NOT surface
+    stale wakes queued (unacked): 0
+=== [captain-held] step 4: changed declaration 'captain-held [key=route]: awaiting the release call' (expect immediate wake)
+    watcher exited (surfaced)
+    WAKE: stale: test:fm-held (captain-held 0s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold)
+    stale wakes queued (unacked): 1
