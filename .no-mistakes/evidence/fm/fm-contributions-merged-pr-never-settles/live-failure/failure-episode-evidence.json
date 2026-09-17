@@ -1,0 +1,10 @@
+{
+  "first_failure_wake": "contributions: observation unavailable for https://github.com/kunchenguid/firstmate/pull/4703\n",
+  "late_owner_same_failure_output": "",
+  "recovery_output": "",
+  "post_recovery_failure_wake": "contributions: observation unavailable for https://github.com/kunchenguid/firstmate/pull/4703\n",
+  "final_owner_errors": [
+    "forge observation unavailable or changed during read",
+    "forge observation unavailable or changed during read"
+  ]
+}

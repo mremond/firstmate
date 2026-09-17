@@ -1,0 +1,4 @@
+#!/bin/sh
+printf 'UNEXPECTED_GH_CALL %s\n' "$*" >> "$FM_TEST_GH_CALL_LOG"
+printf 'simulated forge outage: gh should not have been invoked for a settled terminal URL\n' >&2
+exit 1

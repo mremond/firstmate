@@ -1,0 +1,134 @@
+{
+  "schema": "fm-contributions.v1",
+  "task": "terminal-live",
+  "records": [
+    {
+      "url": "https://github.com/kunchenguid/firstmate/pull/4692",
+      "kind": "pr",
+      "checked_at": "2026-09-17T09:15:22Z",
+      "observation": {
+        "head": "f3857997601e2aa31ea125afac86eb626ae02d52",
+        "state": "merged",
+        "draft": false,
+        "mergeable": "unknown",
+        "can_merge": false,
+        "review_decision": "",
+        "reviews": [],
+        "checks": [
+          {
+            "name": "PR must be raised via no-mistakes",
+            "id": 105088322718,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:31:36Z"
+          },
+          {
+            "name": "Behavior timing aggregate",
+            "id": 105088128456,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:30:39Z"
+          },
+          {
+            "name": "Behavior portable serial 3",
+            "id": 105082732872,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:03:20Z"
+          },
+          {
+            "name": "Behavior portable serial 1",
+            "id": 105082732870,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:03:20Z"
+          },
+          {
+            "name": "Behavior portable serial 2",
+            "id": 105082732869,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:03:20Z"
+          },
+          {
+            "name": "Behavior portable serial 5",
+            "id": 105082732858,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:03:20Z"
+          },
+          {
+            "name": "Lint",
+            "id": 105082732794,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:03:20Z"
+          },
+          {
+            "name": "Behavior tests (Herdr)",
+            "id": 105082732786,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:03:20Z"
+          },
+          {
+            "name": "Behavior portable serial 4",
+            "id": 105082732775,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:03:20Z"
+          },
+          {
+            "name": "Repo invariants",
+            "id": 105082732765,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:03:21Z"
+          },
+          {
+            "name": "Behavior portable parallel 1",
+            "id": 105082732764,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:03:20Z"
+          },
+          {
+            "name": "Test coverage guard",
+            "id": 105082732740,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:03:20Z"
+          },
+          {
+            "name": "Stock macOS Bash snapshot compatibility",
+            "id": 105082732716,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:03:24Z"
+          },
+          {
+            "name": "Behavior portable parallel 2",
+            "id": 105082732635,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:03:20Z"
+          },
+          {
+            "name": "PR must be raised via no-mistakes",
+            "id": 105082732214,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-17T05:03:20Z"
+          }
+        ],
+        "events": [],
+        "absent_checks": []
+      },
+      "verdict": null,
+      "seen": [],
+      "pending": [],
+      "notified": [],
+      "error": null
+    }
+  ]
+}

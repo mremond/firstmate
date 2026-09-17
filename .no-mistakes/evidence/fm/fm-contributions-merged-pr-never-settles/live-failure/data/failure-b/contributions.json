@@ -1,0 +1,28 @@
+{
+  "schema": "fm-contributions.v1",
+  "task": "failure-b",
+  "records": [
+    {
+      "url": "https://github.com/kunchenguid/firstmate/pull/4703",
+      "kind": "pr",
+      "checked_at": "2026-09-17T09:23:00Z",
+      "observation": {
+        "head": "ee8f8392e26e5fabfa95a988d558ac131c6d46de",
+        "state": "open",
+        "draft": false,
+        "mergeable": "mergeable",
+        "can_merge": false,
+        "review_decision": "",
+        "reviews": [],
+        "checks": [],
+        "events": [],
+        "absent_checks": []
+      },
+      "verdict": null,
+      "seen": [],
+      "pending": [],
+      "notified": [],
+      "error": "forge observation unavailable or changed during read"
+    }
+  ]
+}

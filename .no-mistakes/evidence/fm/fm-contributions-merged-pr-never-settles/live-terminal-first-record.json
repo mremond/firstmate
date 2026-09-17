@@ -1,0 +1,156 @@
+{
+  "schema": "fm-contributions.v1",
+  "task": "live-terminal",
+  "records": [
+    {
+      "url": "https://github.com/kunchenguid/firstmate/pull/4661",
+      "kind": "pr",
+      "checked_at": "2026-09-17T12:00:00Z",
+      "observation": {
+        "head": "055ea956e5c0420f43dccb1cfcdb1d2efc98cecb",
+        "state": "merged",
+        "draft": false,
+        "mergeable": "unknown",
+        "can_merge": false,
+        "review_decision": "",
+        "reviews": [],
+        "checks": [
+          {
+            "name": "PR must be raised via no-mistakes",
+            "id": 104923907156,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:28:56Z"
+          },
+          {
+            "name": "Behavior timing aggregate",
+            "id": 104923652742,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:28:12Z"
+          },
+          {
+            "name": "PR must be raised via no-mistakes",
+            "id": 104914741503,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:02:44Z"
+          },
+          {
+            "name": "Behavior portable serial 4",
+            "id": 104914740974,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:02:44Z"
+          },
+          {
+            "name": "Behavior portable serial 5",
+            "id": 104914740916,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:02:44Z"
+          },
+          {
+            "name": "Lint",
+            "id": 104914740911,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:02:44Z"
+          },
+          {
+            "name": "Behavior portable serial 2",
+            "id": 104914740897,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:02:44Z"
+          },
+          {
+            "name": "Stock macOS Bash snapshot compatibility",
+            "id": 104914740858,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:02:56Z"
+          },
+          {
+            "name": "Behavior portable serial 3",
+            "id": 104914740844,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:02:44Z"
+          },
+          {
+            "name": "Behavior portable parallel 1",
+            "id": 104914740827,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:02:44Z"
+          },
+          {
+            "name": "Behavior tests (Herdr)",
+            "id": 104914740804,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:02:44Z"
+          },
+          {
+            "name": "Repo invariants",
+            "id": 104914740790,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:02:44Z"
+          },
+          {
+            "name": "Test coverage guard",
+            "id": 104914740775,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:02:44Z"
+          },
+          {
+            "name": "Behavior portable serial 1",
+            "id": 104914740724,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:02:44Z"
+          },
+          {
+            "name": "Behavior portable parallel 2",
+            "id": 104914740522,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-09-16T18:02:44Z"
+          }
+        ],
+        "events": [
+          {
+            "token": "comment:5703198278:2026-09-16T19:19:26Z:",
+            "type": "comment",
+            "source": "https://github.com/kunchenguid/firstmate/pull/4661#issuecomment-5703198278",
+            "head": null,
+            "author": "kunchenguid",
+            "body": "<!-- triage: 2026-09-16T19:19:24Z outcome=MERGED class=restore attestation=MATCH head=055ea956e5c0420f43dccb1cfcdb1d2efc98cecb workflow-approved=n/a(already-running) ci=35131920502 nm=35134660409 merge=9f8ad95adca24ed33134d3459cbb0acbbbb7a8d6 -->\nSpeaking as Kun's firstmate: this is merged. Thank you @mremond — really appreciate you taking the time on this.\n\n**Contract-class:** restore — budget exhaustion mid-observation no longer records a false `observation unavailable` error/wake; prior recor"
+          }
+        ],
+        "absent_checks": []
+      },
+      "verdict": null,
+      "seen": [
+        "comment:5703198278:2026-09-16T19:19:26Z:"
+      ],
+      "pending": [
+        {
+          "token": "comment:5703198278:2026-09-16T19:19:26Z:",
+          "type": "comment",
+          "source": "https://github.com/kunchenguid/firstmate/pull/4661#issuecomment-5703198278",
+          "head": null,
+          "author": "kunchenguid",
+          "body": "<!-- triage: 2026-09-16T19:19:24Z outcome=MERGED class=restore attestation=MATCH head=055ea956e5c0420f43dccb1cfcdb1d2efc98cecb workflow-approved=n/a(already-running) ci=35131920502 nm=35134660409 merge=9f8ad95adca24ed33134d3459cbb0acbbbb7a8d6 -->\nSpeaking as Kun's firstmate: this is merged. Thank you @mremond — really appreciate you taking the time on this.\n\n**Contract-class:** restore — budget exhaustion mid-observation no longer records a false `observation unavailable` error/wake; prior recor"
+        }
+      ],
+      "notified": [
+        "comment:5703198278:2026-09-16T19:19:26Z:"
+      ],
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "poll_output": "",
+  "forge_calls": 0,
+  "terminal": {
+    "checked_at": "2026-09-17T09:15:22Z",
+    "error": null,
+    "observation": {
+      "state": "merged",
+      "head": "f3857997601e2aa31ea125afac86eb626ae02d52"
+    }
+  },
+  "late_owner": {
+    "checked_at": "2026-09-17T09:15:22Z",
+    "error": null,
+    "pending": [],
+    "notified": [],
+    "observation": {
+      "state": "merged",
+      "head": "f3857997601e2aa31ea125afac86eb626ae02d52"
+    }
+  }
+}
