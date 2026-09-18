@@ -1,0 +1,33 @@
+no-mistakes: no-mistakes version v1.75.2 (4debd42) 2026-09-14T06:41:58Z
+Real daemon, real registered repo ~/AIProjects/firstmate; base=9bc051ff patched=b4a729e8
+
+## Case 1: task on 'main' (runs_on_current_branch: 0) under live capped overview
+current_branch: main
+runs_on_current_branch: 0
+count: 10 of 95 total
+runs[10]{id,branch,status,head,pr}:
+base: state: unknown · source: run-step · unreadable runs table; run ids: 
+patched: state: working · source: status-log · implementing
+adversarial (inventory unreadable, NM_HOME empty for reader only):
+base: state: unknown · source: run-step · complete same-branch run inventory unreadable; run ids: 
+patched: state: unknown · source: run-step · complete same-branch run inventory unreadable; run ids: 
+
+## Case 2: PR 4818 stacked branch, scratch worktree at submitted_head 298a9bb2 (run head 2d375896 absent); no-mistakes calls run from the task's real worktree
+  id: "01M2SS4ZQEBBP3ZAV5WBZ5X4Z5"
+  status: running
+  head_sha: 2d3758963491d42624118e670ea1bd956dea2bb2
+    ci,running,0,0
+    ci,running,49m21s,49m21s,"quiet 29m53s ago: log: all CI checks passed - still monitoring until merged or closed","",starting
+    submitted_head: 298a9bb206a5ff3f22ac70cbcdd8fbc13d2a8ba2
+merge-base 298a9bb2 ancestor of 2d375896? no
+base: state: unknown · source: run-step · selected run code identity unverified; run ids: 01M2SS4ZQEBBP3ZAV5WBZ5X4Z5
+patched: state: done · source: run-step · checks green: PR ready for review (still monitoring for merge/close) · run: 01M2SS4ZQEBBP3ZAV5WBZ5X4Z5
+adversarial local commit after submission, patched: state: unknown · source: run-step · selected run code identity unverified; run ids: 01M2SS4ZQEBBP3ZAV5WBZ5X4Z5
+adversarial worktree at 9feea610, patched: state: unknown · source: run-step · selected run code identity unverified; run ids: 01M2SS4ZQEBBP3ZAV5WBZ5X4Z5
+
+## Case 2b: voice-classifier live task (worktree HEAD == submitted_head 3b1aed52, run head 2e5fbc48 not fetched)
+base: state: unknown · source: run-step · selected run code identity unverified; run ids: 01M2SW7BD28NSBM714QSVSNMBP
+patched: state: working · source: run-step · validating (running) · run: 01M2SW7BD28NSBM714QSVSNMBP
+## Healthy stacked task in its real worktree (head equality), no regression
+base: state: done · source: run-step · checks green: PR ready for review (still monitoring for merge/close) · run: 01M2SS4ZQEBBP3ZAV5WBZ5X4Z5
+patched: state: done · source: run-step · checks green: PR ready for review (still monitoring for merge/close) · run: 01M2SS4ZQEBBP3ZAV5WBZ5X4Z5

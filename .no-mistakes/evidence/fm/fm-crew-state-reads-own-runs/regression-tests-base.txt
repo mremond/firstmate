@@ -1,0 +1,6 @@
+not ok - a complete inventory with no branch run is absence, not an unreadable table (unexpected: 'state: unknown')
+--- output ---
+state: unknown · source: run-step · unreadable runs table; run ids: 
+not ok - the run submitted from this exact commit keeps its live ci step (missing: 'state: working · source: run-step')
+--- output ---
+state: unknown · source: run-step · selected run code identity unverified; run ids: 01M2SS4ZQEBBP3ZAV5WBZ5X4Z5
