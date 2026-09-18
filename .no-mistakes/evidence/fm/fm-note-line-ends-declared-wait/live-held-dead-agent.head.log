@@ -1,0 +1,25 @@
+tmux pane_current_command: zsh
+=== MODE=held pane=zsh  declaration: captain-held [key=route]: awaiting the routing call
+[1 first sight of declared wait] watcher WOKE after ~2s: stale: live:fm-noted (captain-held 501s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold) 
+  queue: stale	live:fm-noted	stale: live:fm-noted (captain-held 501s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold)|
+  drained: 1789724712	1	stale	live:fm-noted	stale: live:fm-noted (captain-held 501s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold) 
+--- appending: note: upstream PR merged and its checks green, waiting for the tag
+[2a note: status write (first-class event)] watcher WOKE after ~3s: signal: <state>/noted.status 
+  queue: signal	noted.status	signal: <state>/noted.status|signal	noted.status	signal: <state>/noted.status|
+  drained: 1789724716	3	signal	noted.status	signal: <state>/noted.status wake annotation: unread wake-EVENT since last drain, not current state: noted.status: captain-held [key=route]: awaiting the routing call wake annotation: latest wake-EVENT observed at drain, not current state: noted.status: note: upstream PR merged and its checks green, waiting for the tag UNREAD STATUS (new since last drain, not re-printed after this presentation): noted note: upstream PR merged and its checks green, waiting for the tag STATUS OUTCOME BACKSTOP (newest captain-facing task event has no covering branch outcome): noted note: upstream PR merged and its checks green, waiting for the tag 
+[2b note under live wait, before cadence] watcher stayed quiet for 15s (no wake)
+  queue: 
+  latest event (last_status_line): note: upstream PR merged and its checks green, waiting for the tag
+  wait in force (status_wait_line): captain-held [key=route]: awaiting the routing call
+[3 cadence elapses (resurface secs 45)] watcher WOKE after ~22s: stale: live:fm-noted (captain-held 547s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold) 
+  queue: stale	live:fm-noted	stale: live:fm-noted (captain-held 547s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold)|
+  drained: 1789724757	4	stale	live:fm-noted	stale: live:fm-noted (captain-held 547s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold) 
+--- appending changed declaration + note: captain-held [key=route]: awaiting the release call
+[4 changed declaration] watcher WOKE after ~2s: stale: live:fm-noted (captain-held 2s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold) 
+  queue: stale	live:fm-noted	stale: live:fm-noted (captain-held 2s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold)|
+  drained: 1789724761	5	stale	live:fm-noted	stale: live:fm-noted (captain-held 2s, awaiting the captain - verified hold transfer, rechecked on a long cadence not a wedge; answer the held decision or release the hold) UNREAD STATUS (new since last drain, not re-printed after this presentation): noted note: the release call replaced the routing call 
+--- appending: working: validation finished, back on the task / note: picking the next step
+[5 note after genuinely leaving the wait] watcher WOKE after ~6s: stale: live:fm-noted 
+  queue: stale	live:fm-noted	stale: live:fm-noted|
+  drained: 1789724770	6	stale	live:fm-noted	stale: live:fm-noted UNREAD STATUS (new since last drain, not re-printed after this presentation): noted note: picking the next step 
+  .paused-live_fm-noted present after leaving: no

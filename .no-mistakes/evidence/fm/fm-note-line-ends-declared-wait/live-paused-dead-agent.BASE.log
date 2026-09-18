@@ -1,0 +1,26 @@
+tmux pane_current_command: zsh
+=== MODE=paused pane=zsh  declaration: paused: waiting on validation run one
+[1 first sight of declared wait] watcher WOKE after ~3s: stale: live:fm-noted (paused 502s, awaiting external - declared pause, rechecked on a long cadence not a wedge; confirm the wait still holds) 
+  queue: stale	live:fm-noted	stale: live:fm-noted (paused 502s, awaiting external - declared pause, rechecked on a long cadence not a wedge; confirm the wait still holds)|
+  drained: 1789724712	1	stale	live:fm-noted	stale: live:fm-noted (paused 502s, awaiting external - declared pause, rechecked on a long cadence not a wedge; confirm the wait still holds) 
+--- appending: note: upstream PR merged and its checks green, waiting for the tag
+[2a note: status write (first-class event)] watcher WOKE after ~3s: signal: <state>/noted.status 
+  queue: signal	noted.status	signal: <state>/noted.status|signal	noted.status	signal: <state>/noted.status|
+  drained: 1789724717	3	signal	noted.status	signal: <state>/noted.status wake annotation: unread wake-EVENT since last drain, not current state: noted.status: paused: waiting on validation run one wake annotation: latest wake-EVENT observed at drain, not current state: noted.status: note: upstream PR merged and its checks green, waiting for the tag UNREAD STATUS (new since last drain, not re-printed after this presentation): noted note: upstream PR merged and its checks green, waiting for the tag STATUS OUTCOME BACKSTOP (newest captain-facing task event has no covering branch outcome): noted note: upstream PR merged and its checks green, waiting for the tag 
+[2b note under live wait, before cadence] watcher WOKE after ~4s: stale: live:fm-noted 
+  queue: stale	live:fm-noted	stale: live:fm-noted|
+  latest event (last_status_line): note: upstream PR merged and its checks green, waiting for the tag
+/Users/mremond/.no-mistakes/evidence/01M2SXM5NDEWK2KY5TG8DDYJMV/live-note-under-wait.sh: line 63: status_wait_line: command not found
+  wait in force (status_wait_line): 
+[3 cadence elapses (resurface secs 45)] watcher stayed quiet for 62s (no wake)
+  queue: stale	live:fm-noted	stale: live:fm-noted|
+  drained: 1789724723	4	stale	live:fm-noted	stale: live:fm-noted 
+--- appending changed declaration + note: paused: waiting on validation run two
+[4 changed declaration] watcher WOKE after ~5s: stale: live:fm-noted 
+  queue: stale	live:fm-noted	stale: live:fm-noted|
+  drained: 1789724796	5	stale	live:fm-noted	stale: live:fm-noted UNREAD STATUS (new since last drain, not re-printed after this presentation): noted note: the release call replaced the routing call 
+--- appending: working: validation finished, back on the task / note: picking the next step
+[5 note after genuinely leaving the wait] watcher WOKE after ~6s: stale: live:fm-noted 
+  queue: stale	live:fm-noted	stale: live:fm-noted|
+  drained: 1789724803	6	stale	live:fm-noted	stale: live:fm-noted UNREAD STATUS (new since last drain, not re-printed after this presentation): noted note: picking the next step 
+  .paused-live_fm-noted present after leaving: no
