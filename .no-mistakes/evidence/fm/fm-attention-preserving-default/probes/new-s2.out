@@ -1,0 +1,9 @@
+CAPTAIN MESSAGE:
+Captain, I'd suggest tackling the settings page crash when the timezone field is empty next — it's a small fix, and users are already hitting it. Want me to send that out now?
+
+ACTIONS:
+1. Review the current backlog to see what's open and what each item's shape is (bug fix, in-progress objective, exploratory idea).
+2. Rule out the observability family, the CI-time objective, and the onboarding redesign as "next task" candidates — none of them are a single concrete, yes/no-sized unit of work; they're open-ended objectives or ideas that would need scoping (and possibly a scout) before anything ships.
+3. Select the timezone-field crash fix as the one concrete candidate: it's small, has a clear user-facing symptom, and needs no further scoping.
+4. Send the captain exactly one proposed next task, described by the outcome they'd see, framed as a yes/no ask — not a ranked list of the four backlog items.
+5. Take no dispatch action (no project resolution, delivery-mode/yolo posture, brief, or backlog transition) until the captain answers yes; the proposal itself is the full action this turn.

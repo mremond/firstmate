@@ -1,0 +1,10 @@
+CAPTAIN MESSAGE:
+Captain, the api-rename work is ready — the PR is up with all checks green: https://github.com/example/app/pull/42. Want me to merge it?
+
+ACTIONS:
+1. Reconcile current state for task `api-rename` (e.g. via `bin/fm-crew-state.sh api-rename`) to confirm the PR and CI status before reporting anything to the captain.
+2. Update the backlog item's note to record the PR URL and that checks are green, awaiting the captain's merge call.
+3. Hold the task for a captain decision via `bin/fm-captain-hold.sh hold api-rename --reason "PR ready, checks green, awaiting captain's merge decision"` so the ask is durably tracked rather than only living in chat.
+4. Send the captain-facing message above as this turn's final response, with the PR's full URL copied verbatim from the task's ready status/`pr=` metadata.
+5. Do not merge — no standing `yolo` authority and no AFK contract are recorded, so hard rule 2 requires the captain's explicit word before running `bin/fm-pr-merge.sh`.
+6. Resume normal supervision of the rest of the fleet while this decision is pending; do not re-escalate again until either the captain answers or a new actionable wake arrives.

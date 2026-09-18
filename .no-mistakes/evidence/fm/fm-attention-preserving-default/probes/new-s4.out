@@ -1,0 +1,9 @@
+CAPTAIN MESSAGE:
+(none)
+
+ACTIONS:
+1. Load `ask-user-authority` and evaluate F1: missing nil check in the filter function the task itself added, fix is a two-line guard, stays inside the accepted intent, changes no contract — decide it myself rather than escalate.
+2. Send the worker the exact decision through `fm-send` with `--resolve-key`, naming the decision key, the paused step, the required action (add the nil-check guard), the finding ID F1, and the exact response command to resume validation.
+3. Record the decision durably: the resolving steer's resolved key closes the open decision record; add a one-line note on the backlog item capturing the decision and reason ("F1: added nil guard, in-scope, no contract change — approved without captain").
+4. Require the matching `resolved` event from the worker before treating this as handled; do not send `--yes` or skip confirmation.
+5. Resume normal fleet supervision immediately; hold the outcome for the next natural captain-facing report (e.g., when the task reaches PR-ready or done) rather than interrupting now.

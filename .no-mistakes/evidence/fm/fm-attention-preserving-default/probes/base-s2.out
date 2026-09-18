@@ -1,0 +1,12 @@
+CAPTAIN MESSAGE:
+"Captain, my recommendation: start with the settings page crash - it's small, already confirmed by users, and ready to fix now, so I'm getting a worker on it. The observability work and the CI time goal are both broad initiatives without a concrete scope yet - before committing real effort to either, I'd like to do a short investigation to figure out what's actually worth building. Do you have a preference for which of those two goes first? The onboarding redesign is still just an idea, so I'd treat that the same way - happy to start scoping it out if you want, but I wouldn't build anything until we know what 'redesign' means concretely. Let me know how you'd like to sequence the other three."
+
+ACTIONS:
+1. Resolve the project that owns the settings page crash by matching it against the project registry and current work under way; confirm its standing delivery posture (mode and merge authority) from that registry entry.
+2. Check the durable backlog for an existing record of the crash bug; if none exists, create one.
+3. Write task-specific instructions for the crash fix: captain's intent = fix the crash when the timezone field is empty; build scope = handle the empty-timezone case and add a regression test covering it; explicitly out of scope = any broader settings-page validation work not tied to this report.
+4. Confirm the dispatch profile (runtime/model/effort) for this task before starting the worker.
+5. Start an isolated worker on the crash fix following the project's selected delivery path and its standing merge posture; confirm the worker is actively working before moving on.
+6. For the observability initiative, the CI-time goal, and the onboarding redesign: leave each as a durable backlog record, add a note that each needs scoping/sequencing before any build work starts, and do not start investigation work on any of them without a captain steer, since each is broad enough that the direction materially depends on the captain's answer.
+7. Send the captain message above.
+8. Resume normal supervision of the fleet, watching for the crash-fix worker's progress and for the captain's answer on sequencing the other three.

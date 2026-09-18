@@ -1,0 +1,11 @@
+CAPTAIN MESSAGE:
+(none)
+
+ACTIONS:
+1. Treat this as a `heartbeat:` wake per section 8 — review the whole fleet from the structured fleet-state view (`bin/fm-crew-state.sh` per task) rather than trusting the heartbeat line alone.
+2. Reconcile "login-fix": confirm its current-state read still shows CI running with no failed checks; no action needed since nothing is actionable yet (worker continues waiting on remote checks).
+3. Reconcile "docs-sweep": confirm its current-state read shows the no-mistakes pipeline actively advancing review → test; no action needed since this is normal forward progress, not a gate, ask-user finding, or failure.
+4. Check for any queued wake-queue records, OPEN DECISIONS, or UNREAD STATUS sections that might have arrived alongside this heartbeat — none reported, so nothing to reconcile.
+5. Do not update the backlog notes for either task since no state transition, blocker, or deviation occurred.
+6. Do not send a captain-facing message — an unchanged, healthy fleet with both tasks progressing normally is a no-op per section 9 ("empty heartbeat... validation step advancing... produces no captain-facing message at all").
+7. Resume the single live supervision cycle for this primary harness and wait for the next actionable wake.

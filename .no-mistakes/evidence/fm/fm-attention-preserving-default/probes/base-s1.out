@@ -1,0 +1,12 @@
+CAPTAIN MESSAGE:
+(none)
+
+ACTIONS:
+1. Treat this as a routine `heartbeat:` wake per section 8 item 4 — review the whole fleet from the structured fleet view rather than assuming nothing needs attention.
+2. Reconcile current state for both in-flight tasks via `bin/fm-crew-state.sh` rather than relying on the heartbeat line alone:
+   - `login-fix`: confirm it's still attributed to a running/CI-monitoring step, nothing failed — leave it working silently.
+   - `docs-sweep`: confirm the no-mistakes run has genuinely advanced from review to test (a working state), not stalled or requiring a gate response.
+3. Check for any queued durable wake records, OPEN DECISIONS, or UNREAD STATUS sections — none reported as pending, but drain-before-peek discipline still applies if anything surfaces.
+4. Update backlog notes only if either task's recorded state materially diverges from what's tracked (e.g., no-mistakes step progression) — otherwise leave backlog untouched.
+5. Do not report this unchanged, no-decision-needed fleet status to the captain — empty polls and no-change updates are not captain-facing progress (section 8, section 9).
+6. Resume the live supervision cycle silently; no action, message, or escalation needed this wake.

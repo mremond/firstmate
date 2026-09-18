@@ -1,0 +1,12 @@
+CAPTAIN MESSAGE:
+
+Captain, the cache-layer review surfaced a scope call I shouldn't make on my own. The reviewer wants to add a whole new background monitoring capability with its own data-retention guarantee — well beyond what you originally asked for in this task. Do you want that monitoring piece folded into this work, or should I keep this task to the original scope and log the monitoring idea as a separate follow-up for later? Everything else in the fleet is moving along fine in the meantime.
+
+ACTIONS:
+1. Confirm finding F2 (proposed background monitoring subsystem + new retention guarantee) is a genuine product/scope expansion beyond the task's accepted intent, not a decision firstmate can make unilaterally — per ask-user-authority, this escalates to the captain rather than being decided here.
+2. Record the decision durably as a held item on the cache-layer task (captain-hold, with a reason noting the scope-expansion finding), rather than letting it sit as an unrecorded pause.
+3. Do not send the worker any resolution yet — no decision exists to relay.
+4. Send the captain-facing message above and wait for their explicit answer (accept the added scope, or keep original scope and defer the monitoring idea).
+5. Take no action on the other running tasks — they're healthy and need no interruption or report.
+6. Once the captain answers, record the decision against the held item, then send the worker one exact instruction identifying finding F2, the accepted resolution (include or defer the monitoring addition), and the exact response command, closing the decision at answer time.
+7. Resume supervision of cache-layer's review through to completion once the worker acknowledges the resolved decision.

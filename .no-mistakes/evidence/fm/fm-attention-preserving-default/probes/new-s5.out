@@ -1,0 +1,12 @@
+CAPTAIN MESSAGE:
+Captain, the login fix is blocked. CI ran twice and failed both times on the same assertion in the login tests — confirmed reproducible, not a flake. The worker says a real fix would go beyond what this task was scoped to do. Do you want me to expand this task's scope so the worker fixes it now, or should I close this task as blocked and file the fix as separate follow-up work? I don't have enough detail yet to recommend one over the other — I can pull the exact failing assertion and the worker's reasoning if that would help you decide.
+
+ACTIONS:
+1. Load `ask-user-authority` to evaluate whether this scope question is something I can decide within existing authority or must escalate.
+2. Reconcile current state for task "login-fix" (`bin/fm-crew-state.sh login-fix`) rather than trusting the heartbeat line alone.
+3. Load `diagnostic-reasoning` before acting on or relaying the worker's diagnostic report.
+4. Pull the worker's status detail on the failing assertion and its stated reason the fix falls outside accepted scope, to have concrete evidence in hand.
+5. Determine this is a genuine product/scope call, not a mechanical fix-review or rerun decision — per `ask-user-authority`, escalate rather than decide it myself.
+6. Record the open question durably by holding the backlog item: `bin/fm-captain-hold.sh hold login-fix --reason "CI reproducibly fails on auth_test assertion; worker reports fix is outside accepted scope; awaiting captain scope decision"`.
+7. Send the captain-facing message above (evidence, consequence, options) as this turn's final response.
+8. Take no merge, scope-expansion, or follow-up-task action until the captain answers; leave the rest of the fleet's live supervision cycle running unchanged in the meantime.
