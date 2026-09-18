@@ -1,0 +1,18 @@
+### live fm-spawn (no-mistakes ship, sandbox home, fake tmux backend) with real typesafe.ai: leaking intent
+error: <sandbox>/home/data/leak/brief.md ## Captain's intent did not pass the pre-publication voice check; the pipeline publishes it verbatim as the PR intent, so keep only publishable words there (move relayed orders and context to ## Firstmate spec, and ask for the captain's words in the artifact's language) before spawn
+voice-check:
+  status: flagged
+  kind: intent
+  finding: operator_address yes=0.5 confidence=0.0
+  finding: relayed_orders yes=1.0 confidence=0.99
+  finding: quoted_answer yes=1.0 confidence=1.0
+  finding: other_language yes=0.96 confidence=0.91
+  reason: internal voice found; do not publish this text, rewrite it for its public reader
+voice-check: flagged; do not publish this text
+exit=
+launch-brief.md published: no; task meta recorded: no
+
+### live fm-spawn with real typesafe.ai: clean intent
+voice-check lines in spawn output above (none expected); launch-brief.md published: yes
+
+--- voice-check step rendered into the clean task launch brief (worker instructions):

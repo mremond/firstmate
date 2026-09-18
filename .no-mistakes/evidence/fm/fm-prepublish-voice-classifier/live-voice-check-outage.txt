@@ -1,0 +1,27 @@
+### service unreachable (HTTPS proxy that drops every connection; counts connection attempts)
+$ HTTPS_PROXY=http://127.0.0.1:<port> FM_HOME=<home with key> bin/fm-voice-check.sh --kind intent clean.md
+voice-check:
+  status: unverified
+  kind: intent
+  reason: service unavailable: http 000 after 343 ms
+voice-check: unverified (service unavailable: http 000 after 343 ms); do not publish this text without an explicit instruction
+exit=3
+service connection attempts: 2
+
+### same outage, explicit per-publication override with reason
+$ ... bin/fm-voice-check.sh --kind intent --accept-unverified 'service outage; firstmate instructed publication' clean.md
+voice-check:
+  status: unverified
+  kind: intent
+  reason: service unavailable: http 000 after 51 ms
+  accepted-unverified: service outage; firstmate instructed publication
+exit=0
+service connection attempts: 2
+
+### usage guard: empty text
+error: text is empty
+exit=2
+
+### usage guard: override without a reason
+error: --accept-unverified needs a reason
+exit=2

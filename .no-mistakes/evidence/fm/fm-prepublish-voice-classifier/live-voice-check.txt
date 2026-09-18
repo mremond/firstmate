@@ -1,0 +1,52 @@
+### S1 key absent: check is off, exit 0, no output on stdout
+$ env -u TYPESAFE_API_KEY FM_HOME=<empty-home> bin/fm-voice-check.sh --kind pr leak-address-orders.md
+voice-check: off (TYPESAFE_API_KEY absent from the environment and /var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/tmp.iLPvSOst9R/.env)
+exit=0
+
+### live typesafe.ai: clean.md (--kind intent)
+$ FM_HOME=<operator home with key in .env> bin/fm-voice-check.sh --kind intent clean.md
+voice-check:
+  status: clear
+  kind: intent
+exit=0
+
+### live typesafe.ai: leak-address-orders.md (--kind intent)
+$ FM_HOME=<operator home with key in .env> bin/fm-voice-check.sh --kind intent leak-address-orders.md
+voice-check:
+  status: flagged
+  kind: intent
+  finding: operator_address yes=0.99 confidence=0.98
+  finding: relayed_orders yes=1.0 confidence=1.0
+  finding: quoted_answer yes=1.0 confidence=1.0
+  finding: other_language yes=0.98 confidence=0.96
+  reason: internal voice found; do not publish this text, rewrite it for its public reader
+voice-check: flagged; do not publish this text
+exit=1
+
+### live typesafe.ai: leak-french.md (--kind intent)
+$ FM_HOME=<operator home with key in .env> bin/fm-voice-check.sh --kind intent leak-french.md
+voice-check:
+  status: flagged
+  kind: intent
+  finding: other_language yes=0.99 confidence=0.97
+  reason: internal voice found; do not publish this text, rewrite it for its public reader
+voice-check: flagged; do not publish this text
+exit=1
+
+### live: flagged text with --accept-unverified still refused
+voice-check:
+  status: flagged
+  kind: pr
+  finding: operator_address yes=0.99 confidence=0.98
+  finding: relayed_orders yes=1.0 confidence=1.0
+  finding: quoted_answer yes=1.0 confidence=1.0
+  finding: other_language yes=0.98 confidence=0.97
+  reason: internal voice found; do not publish this text, rewrite it for its public reader
+voice-check: flagged; do not publish this text
+exit=1
+
+### live: clean PR description via stdin, --kind pr
+voice-check:
+  status: clear
+  kind: pr
+exit=0

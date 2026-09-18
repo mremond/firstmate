@@ -1,0 +1,12 @@
+### fm-brief.sh nm1 (no-mistakes): voice-check step in the generated worker brief
+94-Before every `no-mistakes axi run` that starts a run, the pipeline will publish the `--intent` string in the PR, so check it first:
+95:Write that exact string to a file, run `FM_HOME=<sandbox>/home <repo>/bin/fm-voice-check.sh --kind intent <file>`, and start the run with exactly that string only on exit 0.
+96-On exit 1, correct only the flagged passages, guided by the categories it printed, and check again; after at most two corrections that are still flagged, or on exit 3 (unverified), do not publish: append `needs-decision [key=voice-check]: intent voice check <status>: <printed categories>` and stop.
+97-Pass `--accept-unverified <reason>` only when firstmate explicitly instructs it for this one publication; nothing publishes a flagged text.
+
+### fm-brief.sh dp1 (direct-PR): voice-check step in the generated worker brief
+80-Before opening the PR, check its text:
+81:Write the PR title and description to a file, run `FM_HOME=<sandbox>/home <repo>/bin/fm-voice-check.sh --kind pr <file>`, and open the PR with exactly that title and description only on exit 0.
+82-On exit 1, correct only the flagged passages, guided by the categories it printed, and check again; after at most two corrections that are still flagged, or on exit 3 (unverified), do not publish: append `needs-decision [key=voice-check]: pr voice check <status>: <printed categories>` and stop.
+83-Pass `--accept-unverified <reason>` only when firstmate explicitly instructs it for this one publication; nothing publishes a flagged text.
+
