@@ -1,0 +1,25 @@
+pane_current_command: grok
+== 0. declare the wait: captain-held [key=route]: awaiting the routing call
+  -> SURFACED (watcher exited): stale: live:fm-noted
+     stale wakes queued=1
+== 1. note: under the live wait (expect ABSORBED, 0 new stale wakes)
+  status += note: CI queue is long today, nothing to do yet
+  -> ABSORBED (watcher still running after 12s); stale wakes queued=0
+   last_status_line=[note: CI queue is long today, nothing to do yet] status_wait_line=[captain-held [key=route]: awaiting the routing call]
+== 2. cadence elapses (backdate .paused-resurfaced) -> expect one recheck, age >= 500s
+  -> SURFACED (watcher exited): stale: live:fm-noted
+     stale wakes queued=1
+stale: live:fm-noted
+== 3. changed declaration followed by a note: -> expect SURFACED at once
+  status += captain-held [key=route]: awaiting the release call
+  status += note: the release call replaced the routing call
+  -> SURFACED (watcher exited): stale: live:fm-noted
+     stale wakes queued=1
+== 4. worker leaves the wait (working:), then a note: -> expect SURFACED as before
+  status += working: validation finished, back on the task
+  status += note: picking the next step
+  -> SURFACED (watcher exited): stale: live:fm-noted
+     stale wakes queued=1
+   pause tracking marker present? no
+== wake queue
+1789720251	4	stale	live:fm-noted	stale: live:fm-noted

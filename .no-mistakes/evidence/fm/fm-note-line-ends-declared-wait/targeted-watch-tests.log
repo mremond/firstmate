@@ -1,0 +1,5 @@
+ok - status_wait_line keeps a declared wait under note: events only, and leaves last_status_line unchanged
+ok - a note: under a paused or captain-held wait keeps the wait, a changed declaration wakes at once, and a note: after leaving the wait wakes as before
+ok - a paused or captain-held wait declared again after a poll observed the worker leave it surfaces on first inspection
+ok - a status write that keeps a paused or captain-held wait keeps its cadence and age, while a changed declaration surfaces at once
+bash tests/.tmp-targeted-triage.test.sh  41.44s user 74.87s system 49% cpu 3:53.68 total
