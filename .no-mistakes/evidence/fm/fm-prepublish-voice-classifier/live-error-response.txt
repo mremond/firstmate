@@ -1,0 +1,8 @@
+$ TYPESAFE_API_KEY=invalid-key bin/fm-voice-check.sh --kind pr texts/clean-pr.md   (live error response)
+voice-check:
+  status: unverified
+  kind: pr
+  reason: service unavailable: http 401 after 541 ms
+voice-check: unverified (service unavailable: http 401 after 541 ms); do not publish this text without an explicit instruction
+exit=3
+service calls: 2

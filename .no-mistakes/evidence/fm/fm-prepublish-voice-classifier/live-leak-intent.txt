@@ -1,0 +1,16 @@
+$ TYPESAFE_API_KEY=<set> bin/fm-voice-check.sh --kind intent texts/leak-intent.md   (live api.typesafe.ai)
+--- text ---
+Captain, here is what you asked for. His words: "oui". Do not merge this PR; in the new PR description, explain why the pager changed.
+Refresh the pager so each call returns exactly one page.
+--- result ---
+voice-check:
+  status: flagged
+  kind: intent
+  finding: operator_address yes=1.0 confidence=0.99
+  finding: relayed_orders yes=1.0 confidence=1.0
+  finding: quoted_answer yes=1.0 confidence=0.99
+  finding: other_language yes=0.99 confidence=0.98
+  reason: internal voice found; do not publish this text, rewrite it for its public reader
+voice-check: flagged; do not publish this text
+exit=1
+service calls: 1

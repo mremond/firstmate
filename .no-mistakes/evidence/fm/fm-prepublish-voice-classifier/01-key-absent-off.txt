@@ -1,0 +1,4 @@
+$ env -u TYPESAFE_API_KEY FM_HOME=<empty home> bin/fm-voice-check.sh --kind intent leak-intent.md
+voice-check: off (TYPESAFE_API_KEY absent from the environment and /var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/tmp.04P8NU2bRL/emptyhome/.env)
+exit=0
+curl calls: 0

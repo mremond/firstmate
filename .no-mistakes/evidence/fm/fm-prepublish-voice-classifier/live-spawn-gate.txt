@@ -1,0 +1,25 @@
+(isolated fixture home; tmux stubbed to fail after the brief renders, as in tests/fm-task-delivery.test.sh; FM_GATE_REFUSE_BYPASS=1 as tests/lib.sh sets)
+
+$ TYPESAFE_API_KEY=<set> bin/fm-spawn.sh leak <proj> claude --mode no-mistakes --yolo off   (live api.typesafe.ai)
+intent: Refresh the pager so each call returns exactly one page. The captain answered "oui". Do not merge; in the new PR description, explain the cursor reset.
+error: /var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/tmp.qHxE8tOpXH/home/data/leak/brief.md ## Captain's intent did not pass the pre-publication voice check; the pipeline publishes it verbatim as the PR intent, so keep only publishable words there (move relayed orders and context to ## Firstmate spec, and ask for the captain's words in the artifact's language) before spawn
+voice-check:
+  status: flagged
+  kind: intent
+  finding: operator_address yes=0.61 confidence=0.22
+  finding: relayed_orders yes=1.0 confidence=1.0
+  finding: quoted_answer yes=1.0 confidence=0.99
+  finding: other_language yes=0.92 confidence=0.85
+  reason: internal voice found; do not publish this text, rewrite it for its public reader
+voice-check: flagged; do not publish this text
+exit=1
+launch-brief.md rendered: no; task meta recorded: no
+
+$ TYPESAFE_API_KEY=<set> bin/fm-spawn.sh clean <proj> claude --mode no-mistakes --yolo off   (live api.typesafe.ai)
+intent: Refresh the pager so each call returns exactly one page, and reset the cursor when a timed-out call is retried.
+exit=1
+launch-brief.md rendered: yes; task meta recorded: no
+
+$ (TYPESAFE_API_KEY absent) bin/fm-spawn.sh leak <proj> claude --mode no-mistakes --yolo off
+(no voice-check output)
+launch-brief.md rendered: yes

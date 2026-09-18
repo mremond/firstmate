@@ -1,0 +1,32 @@
+$ HTTPS_PROXY=http://127.0.0.1:9 TYPESAFE_API_KEY=<set> bin/fm-voice-check.sh --kind pr texts/clean-pr.md   (service unreachable)
+voice-check:
+  status: unverified
+  kind: pr
+  reason: service unavailable: http 000 after 52 ms
+voice-check: unverified (service unavailable: http 000 after 52 ms); do not publish this text without an explicit instruction
+exit=3
+service calls: 2
+curl-call 11:12:30
+curl-call 11:12:30
+
+$ ... same, with --accept-unverified "firstmate instructed: typesafe outage"
+voice-check:
+  status: unverified
+  kind: pr
+  reason: service unavailable: http 000 after 66 ms
+  accepted-unverified: firstmate instructed: typesafe outage
+exit=0
+service calls: 2
+
+$ TYPESAFE_API_KEY=<set> bin/fm-voice-check.sh --kind intent --accept-unverified "try to force it" texts/leak-intent.md   (live, override on flagged)
+voice-check:
+  status: flagged
+  kind: intent
+  finding: operator_address yes=1.0 confidence=0.99
+  finding: relayed_orders yes=1.0 confidence=1.0
+  finding: quoted_answer yes=1.0 confidence=1.0
+  finding: other_language yes=0.98 confidence=0.97
+  reason: internal voice found; do not publish this text, rewrite it for its public reader
+voice-check: flagged; do not publish this text
+exit=1
+service calls: 1

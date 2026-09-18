@@ -1,0 +1,16 @@
+$ TYPESAFE_API_KEY=<set> bin/fm-voice-check.sh --kind pr texts/french-pr.md   (live api.typesafe.ai)
+--- text ---
+This change refreshes the pager so each call returns exactly one page.
+Capitaine, j'ai corrigé le bug de pagination comme vous l'avez demandé ; il faut encore vérifier les tests.
+--- result ---
+voice-check:
+  status: flagged
+  kind: pr
+  finding: operator_address yes=0.99 confidence=0.97
+  finding: other_language yes=0.99 confidence=0.99
+  uncertain: relayed_orders yes=0.29 confidence=0.41
+  uncertain: quoted_answer yes=0.24 confidence=0.53
+  reason: internal voice found; do not publish this text, rewrite it for its public reader
+voice-check: flagged; do not publish this text
+exit=1
+service calls: 1
