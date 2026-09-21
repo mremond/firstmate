@@ -1,0 +1,21 @@
+[33mA new version of no-mistakes is available: v1.75.2 -> v1.79.0
+Run "no-mistakes update" to update[0m
+run:
+  id: "01M32BXAXR8VDP0RKGK8ST3RW6"
+  branch: fm/fm-done-awaiting-maintainer-reads-as-stale
+  status: running
+  head: 13c77397
+  head_sha: 13c7739750c74d559ae4019f438854ae72aeb0b2
+  findings: none
+  steps[9]{step,status,findings,duration_ms}:
+    intent,completed,0,27
+    rebase,completed,0,1111
+    review,completed,0,4514787
+    test,running,0,0
+    document,pending,0,0
+    lint,pending,0,0
+    push,pending,0,0
+    pr,pending,0,0
+    ci,pending,0,0
+  active_steps[1]{step,status,active_for,round_active_for,last_activity,agent_pid,round}:
+    test,running,1m40s,1m40s,"2s ago: codex producing output","97188",starting

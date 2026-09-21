@@ -1,0 +1,4 @@
+ok - a live turn opened after a long idle stretch is aged from its own busy event, while a hung turn and an indeterminate idle pane still alarm
+ok - each threshold re-reads live run-step evidence, and idle, finished, unreadable or unknown evidence restores escalation
+ok - a non-terminal stale is absorbed while its run reads live and escalates once that proof is unavailable
+ok - a not-provably-working non-terminal stale is surfaced immediately (never left to wait out the timer)

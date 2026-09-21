@@ -1,0 +1,56 @@
+19:43:30 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh provision fm-lab-busy-health-89360-3170
+
+[exit 0]
+19:43:31 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh viewer start fm-lab-busy-health-89360-3170
+viewer attached to fm-lab-busy-health-89360-3170 (pid 16654)
+[exit 0]
+19:43:31 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh run fm-lab-busy-health-89360-3170 workspace create --cwd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live --label busy-health-test
+{"id":"cli:workspace:create","result":{"root_pane":{"agent_status":"unknown","cwd":"/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live","focused":false,"foreground_cwd":"/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live","pane_id":"w2:p1","revision":0,"scroll":{"max_offset_from_bottom":0,"offset_from_bottom":0,"viewport_rows":39},"tab_id":"w2:t1","terminal_id":"term_65c01c9d377082","workspace_id":"w2"},"tab":{"agent_status":"unknown","focused":false,"label":"1","number":1,"pane_count":1,"tab_id":"w2:t1","workspace_id":"w2"},"type":"workspace_created","workspace":{"active_tab_id":"w2:t1","agent_status":"unknown","focused":false,"label":"busy-health-test","number":2,"pane_count":1,"tab_count":1,"workspace_id":"w2"}}}
+[exit 0]
+19:43:31 Workspace result {"id": "cli:workspace:create", "result": {"root_pane": {"agent_status": "unknown", "cwd": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live", "focused": false, "foreground_cwd": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live", "pane_id": "w2:p1", "revision": 0, "scroll": {"max_offset_from_bottom": 0, "offset_from_bottom": 0, "viewport_rows": 39}, "tab_id": "w2:t1", "terminal_id": "term_65c01c9d377082", "workspace_id": "w2"}, "tab": {"agent_status": "unknown", "focused": false, "label": "1", "number": 1, "pane_count": 1, "tab_id": "w2:t1", "workspace_id": "w2"}, "type": "workspace_created", "workspace": {"active_tab_id": "w2:t1", "agent_status": "unknown", "focused": false, "label": "busy-health-test", "number": 2, "pane_count": 1, "tab_count": 1, "workspace_id": "w2"}}}
+19:43:31 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh run fm-lab-busy-health-89360-3170 pane list
+{"id":"cli:pane:list","result":{"panes":[{"agent_status":"unknown","cwd":"/Users/mremond","focused":true,"foreground_cwd":"/Users/mremond","pane_id":"w1:p1","revision":0,"scroll":{"max_offset_from_bottom":0,"offset_from_bottom":0,"viewport_rows":39},"tab_id":"w1:t1","terminal_id":"term_65c01c9cf61da1","workspace_id":"w1"},{"agent_status":"unknown","cwd":"/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live","focused":false,"foreground_cwd":"/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live","pane_id":"w2:p1","revision":0,"scroll":{"max_offset_from_bottom":0,"offset_from_bottom":0,"viewport_rows":39},"tab_id":"w2:t1","terminal_id":"term_65c01c9d377082","workspace_id":"w2"}],"type":"pane_list"}}
+[exit 0]
+19:43:31 Pane inventory {"id": "cli:pane:list", "result": {"panes": [{"agent_status": "unknown", "cwd": "/Users/mremond", "focused": true, "foreground_cwd": "/Users/mremond", "pane_id": "w1:p1", "revision": 0, "scroll": {"max_offset_from_bottom": 0, "offset_from_bottom": 0, "viewport_rows": 39}, "tab_id": "w1:t1", "terminal_id": "term_65c01c9cf61da1", "workspace_id": "w1"}, {"agent_status": "unknown", "cwd": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live", "focused": false, "foreground_cwd": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live", "pane_id": "w2:p1", "revision": 0, "scroll": {"max_offset_from_bottom": 0, "offset_from_bottom": 0, "viewport_rows": 39}, "tab_id": "w2:t1", "terminal_id": "term_65c01c9d377082", "workspace_id": "w2"}], "type": "pane_list"}}
+19:43:31 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh run fm-lab-busy-health-89360-3170 pane list --workspace w2
+{"id":"cli:pane:list","result":{"panes":[{"agent_status":"unknown","cwd":"/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live","focused":false,"foreground_cwd":"/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live","pane_id":"w2:p1","revision":0,"scroll":{"max_offset_from_bottom":0,"offset_from_bottom":0,"viewport_rows":39},"tab_id":"w2:t1","terminal_id":"term_65c01c9d377082","workspace_id":"w2"}],"type":"pane_list"}}
+[exit 0]
+19:43:31 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-busy-event.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live/home/state busy --state idle --source claude-hook --event Stop
+g1790012611.17069.19586
+[exit 0]
+19:43:31 $ bash -c '. "$1"; fm_wake_signal_sig "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live/home/state/busy.status
+r1:3534007374726f6e673a31363737373233313a38343439313434303a313739303031323538342e36303138333733353900526567756c61722046696c653a313030363434002d007265616461626c65007265616461626c65
+[exit 0]
+19:43:31 $ bash -c '. "$1"; fm_wake_signal_sig "$2"' _ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-wake-lib.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live/home/state/busy.turn-ended
+0:1790006906.093954086
+[exit 0]
+19:43:31 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh run fm-lab-busy-health-89360-3170 pane run w2:p1 /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live/launch-claude.sh
+
+[exit 0]
+19:43:31 CLAUDE_BUSY v1 gen=g1790012611.17069.19586 seq=2 state=busy source=claude-hook event=UserPromptSubmit ts=1790012611
+19:43:31 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh run fm-lab-busy-health-89360-3170 pane process-info --pane w2:p1
+{"id":"cli:pane:process_info","result":{"process_info":{"foreground_process_group_id":17237,"foreground_processes":[{"argv0":"claude","cwd":"/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live/job","name":"2.1.278","pid":17237}],"pane_id":"w2:p1","shell_pid":17032},"type":"pane_process_info"}}
+[exit 0]
+19:43:32 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-crew-state.sh busy
+state: working · source: pane · harness busy (claude-hook)
+[exit 0]
+19:43:44 FRESH_TURN watcher_alive=True wake_queue=<absent>
+19:43:44 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh run fm-lab-busy-health-89360-3170 pane read w2:p1 --format text
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+mac-mini:.test-live mremond$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VD
+P0RKGK8ST3RW6/.test-live/launch-claude.sh
+[exit 0]
+19:44:04 AGED_TURN stale: fm-lab-busy-health-89360-3170:w2:p1 (idle 6s, possible wedge, escalation 1)
+
+19:44:04 WAKE_QUEUE 1790012644	1	stale	fm-lab-busy-health-89360-3170:w2:p1	stale: fm-lab-busy-health-89360-3170:w2:p1 (idle 6s, possible wedge, escalation 1)
+
+19:44:04 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh run fm-lab-busy-health-89360-3170 pane process-info --pane w2:p1
+{"id":"cli:pane:process_info","result":{"process_info":{"foreground_process_group_id":17237,"foreground_processes":[{"argv0":"claude","cwd":"/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live/job","name":"2.1.278","pid":17237}],"pane_id":"w2:p1","shell_pid":17032},"type":"pane_process_info"}}
+[exit 0]
+19:44:04 PASS: a fresh actual Claude UserPromptSubmit turn stays quiet, then its own age bound permits a wedge alarm.
+19:44:06 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh teardown fm-lab-busy-health-89360-3170
+
+[exit 0]

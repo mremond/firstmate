@@ -1,0 +1,3 @@
+[2026-09-21T19:46:01+0200] daemon starting (pid 36480); target=fm-lab-unproven-89360:w1:p1; target_source=FM_SUPERVISOR_TARGET; backend=herdr; backend_source=FM_SUPERVISOR_BACKEND; afk=on; inject_skip='heartbeat'; stale_escalate=5s; batch=999999s
+[2026-09-21T19:46:06+0200] wake: stale: fm-lab-unproven-89360:w2:p1
+[2026-09-21T19:46:07+0200] self-handle: stale: fm-lab-unproven-89360:w2:p1 -> transient stale (fm-lab-unproven-89360:w2:p1): no status

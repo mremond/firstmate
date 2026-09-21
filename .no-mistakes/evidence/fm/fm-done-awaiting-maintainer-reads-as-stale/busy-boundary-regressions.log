@@ -1,0 +1,4 @@
+ok - native progress resets busy age without a completed turn or notification
+ok - touching a busy worker's completed-turn marker resets the age and prevents an old-age escalation
+ok - the production default busy-turn-age bound is 3600s (5min under does not wedge, 66min over does)
+ok - consecutive wedge escalations on the same pane accumulate and demand deep inspection at the threshold

@@ -1,0 +1,56 @@
+19:45:55 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh provision fm-lab-unproven-89360
+
+[exit 0]
+19:45:56 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh viewer start fm-lab-unproven-89360
+viewer attached to fm-lab-unproven-89360 (pid 29796)
+[exit 0]
+19:45:56 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh run fm-lab-unproven-89360 workspace create --cwd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live/idle --label unproven-worker
+{"id":"cli:workspace:create","result":{"root_pane":{"agent_status":"unknown","cwd":"/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live/idle","focused":false,"foreground_cwd":"/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/.test-live/idle","pane_id":"w2:p1","revision":0,"scroll":{"max_offset_from_bottom":0,"offset_from_bottom":0,"viewport_rows":39},"tab_id":"w2:t1","terminal_id":"term_65c01d2782df72","workspace_id":"w2"},"tab":{"agent_status":"unknown","focused":false,"label":"1","number":1,"pane_count":1,"tab_id":"w2:t1","workspace_id":"w2"},"type":"workspace_created","workspace":{"active_tab_id":"w2:t1","agent_status":"unknown","focused":false,"label":"unproven-worker","number":2,"pane_count":1,"tab_count":1,"workspace_id":"w2"}}}
+[exit 0]
+19:45:56 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-crew-state.sh unproven
+state: unknown · source: pane · harness state unavailable (unknown codex-unverified)
+[exit 0]
+19:45:56 $ no-mistakes axi status
+[33mA new version of no-mistakes is available: v1.75.2 -> v1.79.0
+Run "no-mistakes update" to update[0m
+error: repo not initialized (run 'no-mistakes init' first)
+help[1]: Run `no-mistakes init` to set up the gate in this repository
+[exit 1]
+19:45:56 $ no-mistakes axi status --run 01M32BXAXR8VDP0RKGK8ST3RW6
+[33mA new version of no-mistakes is available: v1.75.2 -> v1.79.0
+Run "no-mistakes update" to update[0m
+run:
+  id: "01M32BXAXR8VDP0RKGK8ST3RW6"
+  branch: fm/fm-done-awaiting-maintainer-reads-as-stale
+  status: running
+  head: 13c77397
+  head_sha: 13c7739750c74d559ae4019f438854ae72aeb0b2
+  findings: none
+  steps[9]{step,status,findings,duration_ms}:
+    intent,completed,0,27
+    rebase,completed,0,1111
+    review,completed,0,4514787
+    test,running,0,0
+    document,pending,0,0
+    lint,pending,0,0
+    push,pending,0,0
+    pr,pending,0,0
+    ci,pending,0,0
+  active_steps[1]{step,status,active_for,round_active_for,last_activity,agent_pid,round}:
+    test,running,9m25s,9m25s,"1s ago: codex producing output","97188",starting
+[exit 0]
+19:46:01 WATCHER_STDOUT stale: fm-lab-unproven-89360:w2:p1
+
+19:46:01 WATCHER_QUEUE 1790012761	1	stale	fm-lab-unproven-89360:w2:p1	stale: fm-lab-unproven-89360:w2:p1
+
+19:46:01 PASS: an unproven idle pane immediately produces a plain stale notification.
+19:46:12 DAEMON_ESCALATION stale persisted 5s (possible wedge): fm-lab-unproven-89360:w2:p1
+
+19:46:12 DAEMON_LOG [2026-09-21T19:46:01+0200] daemon starting (pid 36480); target=fm-lab-unproven-89360:w1:p1; target_source=FM_SUPERVISOR_TARGET; backend=herdr; backend_source=FM_SUPERVISOR_BACKEND; afk=on; inject_skip='heartbeat'; stale_escalate=5s; batch=999999s
+[2026-09-21T19:46:06+0200] wake: stale: fm-lab-unproven-89360:w2:p1
+[2026-09-21T19:46:07+0200] self-handle: stale: fm-lab-unproven-89360:w2:p1 -> transient stale (fm-lab-unproven-89360:w2:p1): no status
+
+19:46:12 PASS: the real away-mode daemon escalates a persistently unproven pane at its age threshold.
+19:46:15 $ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M32BXAXR8VDP0RKGK8ST3RW6/bin/fm-herdr-lab.sh teardown fm-lab-unproven-89360
+
+[exit 0]

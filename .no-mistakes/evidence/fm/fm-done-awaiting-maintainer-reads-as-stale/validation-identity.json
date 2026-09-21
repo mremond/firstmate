@@ -1,0 +1,25 @@
+{
+  "base": "259a669fead5782d8dff45dd55197ac3f2b729a9",
+  "target": "13c7739750c74d559ae4019f438854ae72aeb0b2",
+  "target_tree": "435b2d921d4b8479cf078c02b5f7713d3e124589",
+  "live_busy_timing": {
+    "previous_turn_age_seconds": 5705,
+    "busy_turn_max_seconds": 25,
+    "wedge_threshold_seconds": 5,
+    "fresh_turn_observed_seconds": 12,
+    "implementation_default_seconds": 3600,
+    "default_verified_by": "test_busy_pane_default_turn_age_bound_is_3600s"
+  },
+  "lab_sessions": [
+    "fm-lab-busy-health-89360-3170",
+    "fm-lab-unproven-89360"
+  ],
+  "lab_viewer_grid": {
+    "rows": 40,
+    "columns": 120
+  },
+  "both_lab_teardowns_succeeded": true,
+  "lab_sessions_remaining": [],
+  "source_changes": false,
+  "limitation": "Run-by-ID read works, but normal repo discovery returns repo not initialized. The unmodified crew reader falls back to pane evidence. No pipeline was initialized or controlled."
+}
