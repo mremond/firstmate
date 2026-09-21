@@ -1,0 +1,40 @@
+$ gh pr view https://github.com/cli/cli/pull/14355 --json isDraft
+{"isDraft":true}
+$ FM_HOME=<isolated> bin/fm-pr-check.sh task-draft https://github.com/cli/cli/pull/14355
+error: https://github.com/cli/cli/pull/14355 is a draft pull request; a draft cannot be merged, so merge monitoring would wait for an event that cannot occur - mark it ready for review and arm again, or declare a wait instead of done if the draft is deliberate
+exit=1
+--- metadata unchanged? yes
+--- state files:
+task-draft.meta
+task-ready.meta
+
+$ gh pr view https://github.com/cli/cli/pull/14484 --json isDraft
+{"isDraft":false}
+$ FM_HOME=<isolated> bin/fm-pr-check.sh task-ready https://github.com/cli/cli/pull/14484
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  2 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  watcher supervision needs Stop-owned automatic recovery; inspect the hook registration and startup status before ending the turn.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+fm-contributions: data directory unavailable
+contributions: observation not armed; coverage is unconfirmed
+armed: state/task-ready.check.sh
+exit=0
+--- task-ready.meta:
+window=firstmate:fm-task-ready
+endpoint_task_id=task-ready
+worktree=<FM_HOME>/wt
+project=<FM_HOME>/proj
+kind=ship
+mode=no-mistakes
+pr=https://github.com/cli/cli/pull/14484
+pr_head=bcb1c2a5918cf94332dc52e2b7e6e9821b9a7598
+--- state files:
+.guard-watcher-stale-banner
+task-draft.meta
+task-ready.check.sh
+task-ready.meta
+task-ready.pr-poll
+task-ready.pr-poll-registration

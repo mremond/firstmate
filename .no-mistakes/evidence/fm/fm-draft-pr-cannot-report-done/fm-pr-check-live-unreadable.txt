@@ -1,0 +1,10 @@
+$ gh pr view https://github.com/cli/cli/pull/99999999 --json isDraft   # draft state unreadable
+GraphQL: Could not resolve to a PullRequest with the number of 99999999. (repository.pullRequest)
+$ FM_HOME=<isolated> bin/fm-pr-check.sh task-gone https://github.com/cli/cli/pull/99999999
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+fm-contributions: data directory unavailable
+contributions: observation not armed; coverage is unconfirmed
+armed: state/task-gone.check.sh
+exit=
+project=<FM_HOME>/proj
+pr=https://github.com/cli/cli/pull/99999999

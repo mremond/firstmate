@@ -1,0 +1,12 @@
+$ FM_HOME=<isolated> bin/fm-pr-merge.sh task-merge https://github.com/cli/cli/pull/14355   # real draft PR
+armed: state/task-merge.check.sh
+error: refusing to merge https://github.com/cli/cli/pull/14355
+  - the pull request is a draft
+exit=1
+--- task-merge.meta after:
+project=<FM_HOME>/proj
+pr=https://github.com/cli/cli/pull/14355
+pr_head=7adb2541716f52964d46143be7877d69c6d9f457
+--- gh calls made:
+gh pr view https://github.com/cli/cli/pull/14355 --json headRefOid -q .headRefOid
+gh pr view https://github.com/cli/cli/pull/14355 --json state,isDraft,mergeable,mergeStateStatus,headRefOid,baseRefName,statusCheckRollup
