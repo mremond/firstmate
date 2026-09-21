@@ -1,0 +1,37 @@
+### Live: fm-spawn no-mistakes ship with a leaking Captain's intent (real typesafe.ai; sandbox home, fake tmux)
+## Captain's intent
+Make the pager return exactly one page per call.
+His answer: "oui". Do not merge; in the new PR description, explain why the cache was dropped.
+
+## Firstmate spec
+$ fm-spawn.sh leak1 <proj> claude --mode no-mistakes --yolo off
+error: <tmp>/home/data/leak1/brief.md ## Captain's intent did not pass the pre-publication voice check; the pipeline publishes it verbatim as the PR intent, so keep only publishable words there (move relayed orders and context to ## Firstmate spec, and ask for the captain's words in the artifact's language) before spawn
+voice-check:
+  status: flagged
+  kind: intent
+  finding: relayed_orders yes=1.0 confidence=1.0
+  finding: quoted_answer yes=1.0 confidence=1.0
+  finding: other_language yes=0.99 confidence=0.98
+  reason: internal voice found; do not publish this text, rewrite it for its public reader
+voice-check: flagged; do not publish this text
+exit=1
+launch-brief.md published? no
+task meta recorded? no
+
+$ same spawn with --voice-accept-unverified "firstmate instructed" (must still refuse a flagged intent)
+error: <tmp>/home/data/leak1/brief.md ## Captain's intent did not pass the pre-publication voice check; the pipeline publishes it verbatim as the PR intent, so keep only publishable words there (move relayed orders and context to ## Firstmate spec, and ask for the captain's words in the artifact's language) before spawn
+voice-check:
+  status: flagged
+  kind: intent
+  finding: relayed_orders yes=1.0 confidence=1.0
+  finding: quoted_answer yes=1.0 confidence=1.0
+  finding: other_language yes=0.99 confidence=0.98
+  reason: internal voice found; do not publish this text, rewrite it for its public reader
+voice-check: flagged; do not publish this text
+exit=1
+launch-brief.md published? no
+
+### Live: fm-spawn with a clean intent (fake tmux refuses the launch afterward)
+launch-brief.md published? YES
+
+--- worker voice-check step rendered into clean1/launch-brief.md ---

@@ -1,0 +1,10 @@
+### Correction loop: author rewrites the flagged leak-fr.md for its public reader, then checks again (live)
+The pager now returns exactly one page per call. The page cache was removed because it returned stale pages after a cursor reset.
+voice-check:
+  status: clear
+  kind: pr
+exit=0
+
+### Usage error: unreadable file -> exit 2 (no publish)
+error: text file not readable: /var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/tmp.rIpOXYflMb/missing.md
+exit=2

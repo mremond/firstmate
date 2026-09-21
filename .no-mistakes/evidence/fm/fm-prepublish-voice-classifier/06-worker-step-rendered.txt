@@ -1,0 +1,11 @@
+### Worker-side bounded correction loop as rendered by fm-brief.sh (generated brief = worker's instructions)
+--- no-mistakes brief ---
+95:Before every `no-mistakes axi run` that starts a run, the pipeline will publish the `--intent` string in the PR, so check it first:
+96-Write that exact string to a file, run `FM_HOME=<tmp>/home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M31H7QSE2KX1BH0KGAK53FDC/bin/fm-voice-check.sh --kind intent <file>`, and start the run with exactly that string only on exit 0.
+97-On exit 1, correct only the flagged passages, guided by the categories it printed, and check again; after at most two corrections that are still flagged, or on any other non-zero exit (3 unverified, 2 usage error), do not publish: append `needs-decision [at=<epoch>] [key=voice-check]: intent voice check <status>: <printed categories>` and stop.
+98-Pass `--accept-unverified <reason>` only when firstmate explicitly instructs it for this one publication; nothing publishes a flagged text.
+--- direct-PR brief ---
+81:Before opening the PR, check its text:
+82-Write the PR title and description to a file, run `FM_HOME=<tmp>/home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M31H7QSE2KX1BH0KGAK53FDC/bin/fm-voice-check.sh --kind pr <file>`, and open the PR with exactly that title and description only on exit 0.
+83-On exit 1, correct only the flagged passages, guided by the categories it printed, and check again; after at most two corrections that are still flagged, or on any other non-zero exit (3 unverified, 2 usage error), do not publish: append `needs-decision [at=<epoch>] [key=voice-check]: pr voice check <status>: <printed categories>` and stop.
+84-Pass `--accept-unverified <reason>` only when firstmate explicitly instructs it for this one publication; nothing publishes a flagged text.

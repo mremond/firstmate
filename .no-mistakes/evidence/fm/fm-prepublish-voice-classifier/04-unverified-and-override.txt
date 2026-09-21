@@ -1,0 +1,33 @@
+### Scenario: service rejects the request (invalid key -> HTTP error) -> one retry, then unverified, exit 3
+(curl is a logging pass-through to the real /usr/bin/curl hitting https://api.typesafe.ai)
+voice-check:
+  status: unverified
+  kind: pr
+  reason: service unavailable: http 401 after 548 ms
+voice-check: unverified (service unavailable: http 401 after 548 ms); do not publish this text without an explicit instruction
+exit=3
+service calls made:
+real curl call 10:30:17
+real curl call 10:30:18
+
+### Same text with the explicit per-publication override
+voice-check:
+  status: unverified
+  kind: pr
+  reason: service unavailable: http 401 after 519 ms
+  accepted-unverified: typesafe outage; firstmate instructed publish for PR 42
+exit=0
+service calls made:
+real curl call 10:30:19
+real curl call 10:30:19
+
+### Transport failure (no route: curl to unreachable network via bogus proxy) -> unverified
+voice-check:
+  status: unverified
+  kind: intent
+  reason: service unavailable: http 000 after 15 ms
+voice-check: unverified (service unavailable: http 000 after 15 ms); do not publish this text without an explicit instruction
+exit=3
+service calls made:
+real curl call 10:30:20
+real curl call 10:30:20

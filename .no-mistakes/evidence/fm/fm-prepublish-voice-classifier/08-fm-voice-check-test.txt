@@ -1,0 +1,8 @@
+ok - fm-voice-check: key absent means off, exit 0, no network call
+ok - fm-voice-check: a clean text is clear, exit 0, and the key stays off argv and child env
+ok - fm-voice-check: a flagged text stops with exit 1 and no override clears it
+ok - fm-voice-check: unreachable, error, and malformed answers are unverified after one retry
+ok - fm-voice-check: an uncertain answer leaning clean is retried once, then unverified, exit 3
+ok - fm-voice-check: an explicit override publishes an unverified text and prints its reason
+ok - fm-voice-check: usage errors exit 2
+# all fm-voice-check tests passed

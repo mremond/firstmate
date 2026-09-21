@@ -1,0 +1,14 @@
+### Scenario: live typesafe.ai check of leak-orders.md (--kind pr)
+--- text ---
+## Intent
+Fix the pager so each call returns exactly one page.
+In the new PR description, explain the cache removal. Do not merge; wait for the captain to rule.
+--- output ---
+voice-check:
+  status: flagged
+  kind: pr
+  finding: relayed_orders yes=1.0 confidence=1.0
+  uncertain: operator_address yes=0.48 confidence=0.04
+  reason: internal voice found; do not publish this text, rewrite it for its public reader
+voice-check: flagged; do not publish this text
+exit=1 elapsed=1s

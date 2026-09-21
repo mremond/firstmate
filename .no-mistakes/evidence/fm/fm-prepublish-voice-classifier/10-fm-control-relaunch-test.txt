@@ -1,0 +1,8 @@
+ok - fm-control relaunch: an unreadable composer fails safe before the exit command is typed
+ok - fm-control relaunch: a no-mistakes ship relaunch skips the intent voice check
+ok - fm-control relaunch: wiring cleanup failure refuses replacement arming
+ok - fm-control relaunch: checkpoint inspection failures refuse before stopping
+ok - fm-control relaunch: a launch failure after the stop keeps the prior record and reports the real state
+ok - fm-control relaunch: post-publication failure keeps the new durable record
+ok - fm-control relaunch: failed journal replacement preserves durable phase
+ok - fm-control relaunch: unreadable and untraversable child state fails checkpoint

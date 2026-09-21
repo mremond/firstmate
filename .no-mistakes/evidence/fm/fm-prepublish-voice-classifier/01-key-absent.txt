@@ -1,0 +1,4 @@
+### Scenario: key absent -> check is off, no network call
+$ env -u TYPESAFE_API_KEY FM_HOME=<empty-home> bin/fm-voice-check.sh --kind pr leak-fr.md
+voice-check: off (TYPESAFE_API_KEY absent from the environment and /var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/tmp.rIpOXYflMb/home/.env)
+exit=0

@@ -1,0 +1,12 @@
+### Scenario: live typesafe.ai check of clean.md (--kind pr)
+--- text ---
+## Summary
+The pager now returns exactly one page per call. Previously a call could return the next page too when the cursor landed on a page boundary.
+
+## Testing
+Added a regression test that pages through 250 records in pages of 100 and checks each page's size.
+--- output ---
+voice-check:
+  status: clear
+  kind: pr
+exit=0 elapsed=1s
