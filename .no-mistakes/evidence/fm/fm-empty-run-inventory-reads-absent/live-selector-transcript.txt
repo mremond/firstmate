@@ -1,0 +1,14 @@
+## no-mistakes v1.75.2 live overview header (primary checkout, read-only)
+repo: /Users/mremond/AIProjects/firstmate
+current_branch: main
+count: 10 of 100 total
+## complete inventory row counts for branches (real ~/.no-mistakes/state.sqlite, read-only)
+main 0
+fm/no-such-branch-for-test 0
+fm/fm-empty-run-inventory-reads-absent 1
+## branch=main
+BASE  (631bc26d): unknown|unreadable runs table; run ids: 
+FIXED (0b966000): absent
+## branch=fm/no-such-branch-for-test
+BASE  (631bc26d): unknown|unreadable runs table; run ids: 
+FIXED (0b966000): absent

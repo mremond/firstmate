@@ -1,0 +1,36 @@
+bin: ~/.no-mistakes/bin/no-mistakes
+description: "Validate your code changes through the no-mistakes pipeline - automated code review, tests, lint, docs, push, PR, and CI - before they reach the configured push target. Use when the user asks to run no-mistakes, gate or ship or validate their changes, push safely, asks you to do a task and then validate it, or invokes /no-mistakes."
+repo: /Users/mremond/AIProjects/firstmate
+current_branch: main
+daemon: running
+other_branch_active_run:
+  id: "01M31RD72P0TTA1WXD24QMSKHW"
+  branch: fm/fm-empty-run-inventory-reads-absent
+  status: running
+  head: 0b966000
+  head_sha: 0b96600025bda98eab90624d68190c22a8d84cba
+  findings: none
+  steps[9]{step,status,findings,duration_ms}:
+    intent,completed,0,33
+    rebase,completed,0,1205
+    review,completed,0,37715
+    test,running,0,0
+    document,pending,0,0
+    lint,pending,0,0
+    push,pending,0,0
+    pr,pending,0,0
+    ci,pending,0,0
+  active_steps[1]{step,status,active_for,round_active_for,last_activity,agent_pid,round}:
+    test,running,39s,39s,"0s ago: claude producing output","85099",starting
+count: 10 of 100 total
+runs[10]{id,branch,status,head,pr}:
+  "01M31H7QSE2KX1BH0KGAK53FDC",fm/fm-prepublish-voice-classifier,running,2b4134ca,"https://github.com/kunchenguid/firstmate/pull/4822"
+  "01M2T2GTYM0R7W6XVBRFVZ3CSE",fm/fm-attention-preserving-default,running,77923fde,"https://github.com/kunchenguid/firstmate/pull/4832"
+  "01M2SZ0YJQ2RZ6F3DH0ZQDNERQ",fm/fm-prepublish-voice-classifier,failed,9058d149,"https://github.com/kunchenguid/firstmate/pull/4822"
+  "01M2SXM5NDEWK2KY5TG8DDYJMV",fm/fm-note-line-ends-declared-wait,running,0ec82e86,"https://github.com/kunchenguid/firstmate/pull/4818"
+  "01M2SWVZY02285NW93T64NWNRQ",fm/fm-crew-state-reads-own-runs,failed,498b4772,"https://github.com/kunchenguid/firstmate/pull/4825"
+  "01M2SW7BD28NSBM714QSVSNMBP",fm/fm-prepublish-voice-classifier,cancelled,bbf346d7,"https://github.com/kunchenguid/firstmate/pull/4822"
+  "01M2SS4ZQEBBP3ZAV5WBZ5X4Z5",fm/fm-note-line-ends-declared-wait,cancelled,2d375896,"https://github.com/kunchenguid/firstmate/pull/4818"
+  "01M2R420V63BKXCNFG1SYG3WWZ",fm/fm-status-write-resets-pause-cadence,running,9feea610,"https://github.com/kunchenguid/firstmate/pull/4742"
+  "01M2R2FM5365HQ6G21RMYWDZJY",fm/fm-status-write-resets-pause-cadence,failed,f4cd8c45,""
+help[5]: "Run `no-mistakes axi run --intent \"<what the user set out to accomplish>\"` to validate your changes",Another active run is on fm/fm-empty-run-inventory-reads-absent; leave it alone unless you are working on that branch,"Commit post-pipeline follow-up work on top of the existing branch so every pipeline fix commit remains present. Never abort-and-restart, reset, or replace the branch in a way that drops prior gate-fix commits.",The calling agent drives AXI gates but does not replace the configured pipeline agent; run `no-mistakes doctor` if no native agent or ACP runner is available,"How to drive the pipeline: `no-mistakes axi run --help`, or the `/no-mistakes` skill (loaded when you invoke `/no-mistakes`)"

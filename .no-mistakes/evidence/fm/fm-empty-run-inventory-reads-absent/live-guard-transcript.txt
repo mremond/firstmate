@@ -1,0 +1,23 @@
+## guard: branch with a run OUTSIDE the capped window (fm/fm-empty-run-inventory-reads-absent, 1 inventory row)
+3
+FIXED: selected|01M31RD72P0TTA1WXD24QMSKHW|running|01M31RD72P0TTA1WXD24QMSKHW
+## guard: branch visible in the capped window (fm/fm-empty-run-inventory-reads-absent)
+FIXED: selected|01M31RD72P0TTA1WXD24QMSKHW|running|01M31RD72P0TTA1WXD24QMSKHW
+## adversarial: complete inventory unreadable (NM_HOME points at an empty dir), branch=main
+FIXED: unknown|complete same-branch run inventory unreadable; run ids: 
+## adversarial: inventory has no repos row for this repo path (empty schema db), branch=main
+FIXED: unknown|complete same-branch run inventory unreadable; run ids: 
+## adversarial: truncated overview (runs[10] header but 9 rows) still unreadable
+sed: 1: "0,/^  "/{/^  "/d}
+": extra characters at the end of d command
+FIXED: unavailable
+## adversarial: literal empty table claiming runs[1] with zero rows
+FIXED: unknown|unreadable runs table; run ids: 
+## empty complete table runs[0]
+BASE : unknown|unreadable runs table; run ids: 
+FIXED: absent
+## guard: branch with runs only OUTSIDE the capped window (fm/fm-contributions-merged-pr-never-settles; rows in window: 0)
+BASE : selected|01M2Q89G2YC92K8EGDV2ZN4M4A|completed|01M2Q89G2YC92K8EGDV2ZN4M4A
+FIXED: selected|01M2Q89G2YC92K8EGDV2ZN4M4A|completed|01M2Q89G2YC92K8EGDV2ZN4M4A
+## adversarial: truncated overview (runs[10] header, 9 rows)
+FIXED: unknown|unreadable runs table; run ids: 
