@@ -1,0 +1,20 @@
+# evidence begin: control relaunch 1 with tracing off vs armed PR poll
+post-relaunch key order:
+window=fmses:fm-baserl77
+endpoint_task_id=baserl77
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.vTbOMX/pr-poll-relaunch-control-off-30635/wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.vTbOMX/pr-poll-relaunch-control-off-30635/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-baserl77
+model=default
+effort=default
+busy_gen=g1790110768.95941.26770
+spawn_gen=s1790110769.89675.23628
+pr=https://github.com/example/repo/pull/77
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+control_relaunch_tx=83729.20260922T205916Z.8784
+# evidence end
+not ok - control relaunch 1 with tracing off silently broke the armed PR poll's authentication; the watcher would reject this task's own untampered poll as check: rejected unauthenticated state checks

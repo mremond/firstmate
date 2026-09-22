@@ -1,0 +1,36 @@
+{
+  "base": "ada21f5b813f8a19e00f44c50555104cb481d3ac",
+  "target": "fd6e1daf0a117a53ad77c06d1c43c250bc7bea21",
+  "target_tree": "03a2e320c612392409053d2e6c6df0bf355d75ee",
+  "same_defect": [
+    "https://github.com/kunchenguid/firstmate/issues/5291",
+    "https://github.com/kunchenguid/firstmate/issues/5135"
+  ],
+  "base_regression": "Expected failure: control_relaunch_tx follows pr/pr_head and the armed poll fails authentication.",
+  "target_regression": "All tests in fm-control-relaunch.test.sh passed across the initial prefix and corrected-layout continuation. The initial run stopped at a secondmate fixture rejected because TMPDIR was inside the repository; the same test and all remaining tests passed with TMPDIR=/tmp.",
+  "live_product": "Herdr 0.9.1 protocol 22; codex-cli 0.154.0; viewer attached using the lab helper with a 40x120 PTY.",
+  "live_relaunches": [
+    "control-off",
+    "control-on",
+    "control-on-repeat",
+    "spawn-on",
+    "spawn-off"
+  ],
+  "live_assertions": [
+    "Same real task, pane and worktree after each relaunch",
+    "Original check, poll sidecar and registration remained byte-identical without rearming",
+    "Poll authentication valid after every relaunch",
+    "Trace carrier valid and reused while tracing on; absent when tracing off",
+    "Watcher rejected an unexpected trailing metadata key",
+    "After restoration and normal wake acknowledgement, watcher observed already-merged upstream PR 5317, announced merged, and retired the poll"
+  ],
+  "publication": "No upstream PR was created or merged during validation. Existing PR 5317 was read only.",
+  "isolation": "Guarded lab teardown succeeded; lab absent and default-session tripwire unchanged.",
+  "setup_corrections": [
+    "Kept lab helper process alive for the full experiment",
+    "Claude external-import consent dialog left unchanged; real Codex used instead",
+    "Acknowledged the adversarial watcher wake before running the merge check",
+    "Secondmate fixtures rerun with their supported temporary-directory layout"
+  ],
+  "visual_evidence": "CLI lifecycle and metadata change; terminal transcripts and persisted-state artifacts show the behavior."
+}

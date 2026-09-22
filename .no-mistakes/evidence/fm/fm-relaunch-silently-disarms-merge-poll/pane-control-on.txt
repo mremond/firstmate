@@ -1,0 +1,75 @@
+  checkpoint when you are unsure - list '/Users/mremond/.no-mistakes/worktrees/
+  acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/home/state/
+  nmpoll5580.inbox'/*.msg, read and act on each message in numeric order, then acknowledge
+  each handled message by moving it: `mv '/Users/mremond/.no-mistakes/worktrees/
+  acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/home/state/
+  nmpoll5580.inbox'/NNN.msg '/Users/mremond/.no-mistakes/worktrees/
+  acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/home/state/
+  nmpoll5580.inbox'/handled/`.
+  The move IS the acknowledgement: without it firstmate rings again and eventually treats
+  you as stuck. An empty or absent inbox needs no action.
+
+  # Project memory
+  If `AGENTS.md` or `CLAUDE.md` already exists, or if this task produced durable project-
+  intrinsic knowledge, run `/Users/mremond/.no-mistakes/worktrees/
+  acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/bin/fm-ensure-agents-md.sh .` in the worktree.
+  Record only project knowledge useful to almost every future session.
+  For anything the codebase already shows, prefer a pointer to the authoritative file,
+  command, or doc over copying the detail.
+  If you touch a project `AGENTS.md`, follow `/Users/mremond/.no-mistakes/worktrees/
+  acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/bin/fm-ensure-agents-md.sh`'s self-governance
+  contract in the same pass.
+  Keep it proportionate: skip `AGENTS.md` edits for trivial tasks that produced no durable
+  project knowledge.
+
+  # Definition of done
+  Delivery contract: mode=local-only
+  This task ships **local-only**: no remote, no PR, no pipeline.
+  The task is complete only when committed on your branch `fm/nmpoll5580`. Do NOT push, do
+  NOT open a PR, do NOT merge.
+  Keep your branch a clean fast-forward onto the current default branch - if `main` has
+  advanced, rebase onto it so the eventual merge stays a fast-forward.
+  When it is implemented and committed, append `done [at=<epoch>]: ready in branch fm/
+  nmpoll5580` to the status file and stop.
+  The configured merge authority approves the ready branch, then firstmate merges it into
+  local `main` through the guarded fast-forward path.
+
+  ## Progress note (2026-09-22T21:02:47Z)
+
+  This task was relaunched. Continue from here; the local copy and every
+  uncommitted change are exactly as the previous worker left them.
+
+  First, check your instruction inbox: list /Users/mremond/.no-mistakes/worktrees/
+  acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/home/state/
+  nmpoll5580.inbox/*.msg, act on
+  each message in numeric order, then mv each handled file into
+  /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-
+  relaunch-validation/home/state/nmpoll5580.inbox/handled/. A steer sent before the relaunch
+  survives there.
+
+  Lifecycle validation only. Reply exactly LAB_READY, use no tools, and wait.
+
+  ## Progress note (2026-09-22T21:03:15Z)
+
+  This task was relaunched. Continue from here; the local copy and every
+  uncommitted change are exactly as the previous worker left them.
+
+  First, check your instruction inbox: list /Users/mremond/.no-mistakes/worktrees/
+  acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/home/state/
+  nmpoll5580.inbox/*.msg, act on
+  each message in numeric order, then mv each handled file into
+  /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-
+  relaunch-validation/home/state/nmpoll5580.inbox/handled/. A steer sent before the relaunch
+  survives there.
+
+  Lifecycle validation only. Reply exactly LAB_READY, use no tools, and wait.
+
+
+• You have 1 usage limit reset available. Run /usage to use one.
+
+• LAB_READY
+
+
+› Ask Codex to do anything
+
+  gpt-6-astra default · ~/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.te…

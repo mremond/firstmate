@@ -1,0 +1,208 @@
+ok - fm-control relaunch: a same-harness relaunch replaces the agent in the same endpoint and worktree
+ok - fm-control relaunch: pending composer text refuses before the exit command is typed
+ok - fm-control relaunch: an unreadable composer fails safe before the exit command is typed
+# evidence begin: linked-home relaunch
+$ bin/fm-control.sh rl42 relaunch --note "continue from linked home"
+warning: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/linked-home-12192/home/data/rl42/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+relaunched rl42 harness=claude from=claude model=default effort=default backend=tmux endpoint=fmses:fm-rl42 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/linked-home-12192/wt
+exit=0
+worker HEAD before=3083f19b5b0b38123fce7be344253ffea7c9cdf3 after=3083f19b5b0b38123fce7be344253ffea7c9cdf3
+saved task metadata:
+window=fmses:fm-rl42
+endpoint_task_id=rl42
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/linked-home-12192/wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/linked-home-12192/secondmate
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-rl42
+model=default
+effort=default
+busy_gen=g1790110434.65292.27027
+spawn_gen=s1790110435.60318.29758
+control_relaunch_tx=59363.20260922T205344Z.2325
+worker status:
+ M task.txt
+preserved task.txt:
+committed task work
+unfinished task work
+worker FETCH_HEAD absent
+# evidence end
+ok - fm-control relaunch: a linked spawning home preserves committed and unfinished work in the recorded copy
+ok - fm-control relaunch: durable task metadata survives replacement launch publication
+# evidence begin: control relaunch 1 with tracing off vs armed PR poll
+post-relaunch key order:
+window=fmses:fm-rl77
+endpoint_task_id=rl77
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-control-off-15847/wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-control-off-15847/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-rl77
+model=default
+effort=default
+busy_gen=g1790110556.9641.3627
+spawn_gen=s1790110557.5825.3837
+control_relaunch_tx=1354.20260922T205542Z.27769
+pr=https://github.com/example/repo/pull/77
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+# evidence end
+# evidence begin: control relaunch 2 with tracing off vs armed PR poll
+post-relaunch key order:
+window=fmses:fm-rl77
+endpoint_task_id=rl77
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-control-off-15847/wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-control-off-15847/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-rl77
+model=default
+effort=default
+busy_gen=g1790110604.27646.2934
+spawn_gen=s1790110606.23043.8093
+control_relaunch_tx=17996.20260922T205631Z.10185
+pr=https://github.com/example/repo/pull/77
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+# evidence end
+ok - control relaunch with tracing off: repeated relaunch keeps an armed PR merge poll authenticated
+# evidence begin: control relaunch 1 with tracing on vs armed PR poll
+post-relaunch key order:
+traceparent=00-b5adb03b304ee742624666c74e3834fb-3870aa3d89b8519f-01
+window=fmses:fm-rl77
+endpoint_task_id=rl77
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-control-on-30102/wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-control-on-30102/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-rl77
+model=default
+effort=default
+busy_gen=g1790110699.62670.7914
+spawn_gen=s1790110705.51296.19196
+control_relaunch_tx=40981.20260922T205749Z.2463
+pr=https://github.com/example/repo/pull/77
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+# evidence end
+# evidence begin: control relaunch 2 with tracing on vs armed PR poll
+post-relaunch key order:
+traceparent=00-b5adb03b304ee742624666c74e3834fb-3870aa3d89b8519f-01
+window=fmses:fm-rl77
+endpoint_task_id=rl77
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-control-on-30102/wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-control-on-30102/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-rl77
+model=default
+effort=default
+busy_gen=g1790110767.95907.3190
+spawn_gen=s1790110768.90951.26824
+control_relaunch_tx=83082.20260922T205919Z.22946
+pr=https://github.com/example/repo/pull/77
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+# evidence end
+ok - control relaunch with tracing on: repeated relaunch keeps an armed PR merge poll authenticated
+# evidence begin: spawn relaunch 1 with tracing off vs armed PR poll
+post-relaunch key order:
+window=fmses:fm-rl77
+endpoint_task_id=rl77
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-spawn-off-29662/wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-spawn-off-29662/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-rl77
+model=default
+effort=default
+busy_gen=g1790110802.11416.29231
+spawn_gen=s1790110803.4936.21454
+pr=https://github.com/example/repo/pull/77
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+# evidence end
+# evidence begin: spawn relaunch 2 with tracing off vs armed PR poll
+post-relaunch key order:
+window=fmses:fm-rl77
+endpoint_task_id=rl77
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-spawn-off-29662/wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-spawn-off-29662/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-rl77
+model=default
+effort=default
+busy_gen=g1790110817.17536.17565
+spawn_gen=s1790110819.15226.7370
+pr=https://github.com/example/repo/pull/77
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+# evidence end
+ok - spawn relaunch with tracing off: repeated relaunch keeps an armed PR merge poll authenticated
+# evidence begin: spawn relaunch 1 with tracing on vs armed PR poll
+post-relaunch key order:
+traceparent=00-7ae34d66c3304720aed4f7169b774d9d-efcb7b4b3f69622b-01
+window=fmses:fm-rl77
+endpoint_task_id=rl77
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-spawn-on-5946/wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-spawn-on-5946/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-rl77
+model=default
+effort=default
+busy_gen=g1790110870.40475.21118
+spawn_gen=s1790110871.34030.19423
+pr=https://github.com/example/repo/pull/77
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+# evidence end
+# evidence begin: spawn relaunch 2 with tracing on vs armed PR poll
+post-relaunch key order:
+traceparent=00-7ae34d66c3304720aed4f7169b774d9d-efcb7b4b3f69622b-01
+window=fmses:fm-rl77
+endpoint_task_id=rl77
+worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-spawn-on-5946/wt
+project=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/pr-poll-relaunch-spawn-on-5946/proj
+harness=claude
+kind=ship
+mode=no-mistakes
+yolo=off
+tasktmp=/tmp/fm-rl77
+model=default
+effort=default
+busy_gen=g1790110902.51026.9243
+spawn_gen=s1790110902.49021.17311
+pr=https://github.com/example/repo/pull/77
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+# evidence end
+ok - spawn relaunch with tracing on: repeated relaunch keeps an armed PR merge poll authenticated
+ok - fm-control relaunch: delivery and concurrent task metadata publication serialize
+ok - fm-control relaunch: disabling tracing clears metadata and pane context
+ok - fm-control relaunch: progress and the Firstmate-worktree worker identity reach the replacement
+ok - fm-control relaunch: a ship task refuses without the progress note its replacement needs
+ok - fm-control relaunch: switching harness is one ordinary relaunch, and the old wiring goes with the old agent
+ok - fm-control relaunch: a harness switch resets model and effort unless they are named too
+ok - fm-control relaunch: a prefixed recorded harness can switch adapters transactionally
+ok - fm-control relaunch: a prefixed command requires an explicit replacement harness
+ok - fm-control relaunch: a same-harness relaunch keeps the profile axes it was running with
+ok - native Ultra relaunch preserves its profile and rejects an unsupported model before stopping
+ok - fm-control relaunch: explicit model and effort win over the recorded ones
+ok - fm-control relaunch: refuses to relaunch onto an adapter with no verified mechanics
+ok - fm-control relaunch: the retired incarnation's global turn-end token is revoked
+ok - fm-control relaunch: wiring cleanup failure refuses replacement arming
+ok - fm-control-lib: one owner resolves each harness's turn-end registry entry, and refuses a malformed token
+not ok - a configured secondmate harness should relaunch
+error: secondmate home cannot be inside the firstmate repo: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/smpin-28259/smhome
+error: the replacement agent for sm3 could not be launched on codex
+error: sm3's agent was stopped but the replacement did not launch; no agent is running, and its work plus the recorded progress note are preserved at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/tmp/fm-control-relaunch.jKJnDQ/smpin-28259/smhome: expected exit 0, got 1

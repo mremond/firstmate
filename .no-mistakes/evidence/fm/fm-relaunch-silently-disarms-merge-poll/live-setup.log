@@ -1,0 +1,12 @@
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/home/data/nmpoll11531/brief.md (ship, mode=local-only; replace {TASK} and {FIRSTMATE_SPEC})
+{"id":"cli:workspace:create","error":{"code":"server_not_running","message":"no herdr server is running at /Users/mremond/.config/herdr/sessions/fm-lab-pr-poll-relaunch-20327-32362/herdr.sock; run `herdr session attach fm-lab-pr-poll-relaunch-20327-32362` to start or attach it"}}
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/home/data/nmpoll11872/brief.md (ship, mode=local-only; replace {TASK} and {FIRSTMATE_SPEC})
+viewer attached to fm-lab-pr-poll-relaunch-20327-32362 (pid 45181)
+notice: nmpoll11872 ships mode=local-only while the standing posture for project is no-mistakes - less rigor than the captain's standing posture; proceed only on a current explicit captain instruction or an intake judgment you can state
+spawned nmpoll11872 harness=claude kind=ship mode=local-only yolo=off window=fm-lab-pr-poll-relaunch-20327-32362:w1:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/task
+INITIAL_LAUNCH task=nmpoll11872 session=fm-lab-pr-poll-relaunch-20327-32362 pane=w1:p1
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/home/data/nmpoll5580/brief.md (ship, mode=local-only; replace {TASK} and {FIRSTMATE_SPEC})
+viewer attached to fm-lab-pr-poll-relaunch-20327-32362 (pid 36311)
+notice: nmpoll5580 ships mode=local-only while the standing posture for project is no-mistakes - less rigor than the captain's standing posture; proceed only on a current explicit captain instruction or an intake judgment you can state
+spawned nmpoll5580 harness=codex kind=ship mode=local-only yolo=off window=fm-lab-pr-poll-relaunch-20327-32362:w1:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/task
+INITIAL_LAUNCH task=nmpoll5580 session=fm-lab-pr-poll-relaunch-20327-32362 pane=w1:p1

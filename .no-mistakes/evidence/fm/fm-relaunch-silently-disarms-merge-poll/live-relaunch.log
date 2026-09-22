@@ -1,0 +1,42 @@
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+armed: state/nmpoll5580.check.sh
+ARMED_AUTHENTICATED task=nmpoll5580 url=https://github.com/kunchenguid/firstmate/pull/5317
+
+SCENARIO control-off
+notice: nmpoll5580 ships mode=local-only while the standing posture for project is no-mistakes - less rigor than the captain's standing posture; proceed only on a current explicit captain instruction or an intake judgment you can state
+relaunched nmpoll5580 harness=codex from=codex model=default effort=default backend=herdr endpoint=fm-lab-pr-poll-relaunch-20327-32362:w1:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/task
+RELAUNCH_AUTHENTICATED control-off traceparent=disabled
+
+SCENARIO control-on
+notice: nmpoll5580 ships mode=local-only while the standing posture for project is no-mistakes - less rigor than the captain's standing posture; proceed only on a current explicit captain instruction or an intake judgment you can state
+relaunched nmpoll5580 harness=codex from=codex model=default effort=default backend=herdr endpoint=fm-lab-pr-poll-relaunch-20327-32362:w1:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/task
+RELAUNCH_AUTHENTICATED control-on traceparent=00-546c362711dc2ec6b649655963597f2f-c94e1e7cfcfa8d5a-01
+
+SCENARIO control-on-repeat
+notice: nmpoll5580 ships mode=local-only while the standing posture for project is no-mistakes - less rigor than the captain's standing posture; proceed only on a current explicit captain instruction or an intake judgment you can state
+relaunched nmpoll5580 harness=codex from=codex model=default effort=default backend=herdr endpoint=fm-lab-pr-poll-relaunch-20327-32362:w1:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/task
+RELAUNCH_AUTHENTICATED control-on-repeat traceparent=00-546c362711dc2ec6b649655963597f2f-c94e1e7cfcfa8d5a-01
+
+SCENARIO spawn-on
+stopped nmpoll5580 harness=codex backend=herdr endpoint=fm-lab-pr-poll-relaunch-20327-32362:w1:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/task
+notice: nmpoll5580 ships mode=local-only while the standing posture for project is no-mistakes - less rigor than the captain's standing posture; proceed only on a current explicit captain instruction or an intake judgment you can state
+spawned nmpoll5580 harness=codex kind=ship mode=local-only yolo=off window=fm-lab-pr-poll-relaunch-20327-32362:w1:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/task
+RELAUNCH_AUTHENTICATED spawn-on traceparent=00-546c362711dc2ec6b649655963597f2f-c94e1e7cfcfa8d5a-01
+
+SCENARIO spawn-off
+stopped nmpoll5580 harness=codex backend=herdr endpoint=fm-lab-pr-poll-relaunch-20327-32362:w1:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/task
+notice: nmpoll5580 ships mode=local-only while the standing posture for project is no-mistakes - less rigor than the captain's standing posture; proceed only on a current explicit captain instruction or an intake judgment you can state
+spawned nmpoll5580 harness=codex kind=ship mode=local-only yolo=off window=fm-lab-pr-poll-relaunch-20327-32362:w1:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/task
+RELAUNCH_AUTHENTICATED spawn-off traceparent=disabled
+TAMPER_REJECTED unexpected trailing metadata key
+check: rejected unauthenticated state checks: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/home/state/nmpoll5580.check.sh
+check: rearm-resurface
+check: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/home/state/nmpoll5580.check.sh: merged
+check: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M35D1FABR2MDF1PE89WW96B2/.test-relaunch-validation/home/state/nmpoll5580.check.sh: merged
+MERGE_ANNOUNCED after real relaunch; authenticated poll retired
