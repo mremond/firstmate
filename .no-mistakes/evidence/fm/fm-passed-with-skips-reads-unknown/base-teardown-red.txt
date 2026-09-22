@@ -1,0 +1,6 @@
+
+TEST test_parked_own_run_concludes_on_passed_with_override_after_abort (base=1)
+not ok - parked-run-abort-passed-with-override: teardown should still succeed: expected exit 0, got 1
+
+TEST test_parked_own_run_concludes_on_passed_with_skips_after_abort (base=1)
+not ok - parked-run-abort-passed-with-skips: teardown should still succeed: expected exit 0, got 1

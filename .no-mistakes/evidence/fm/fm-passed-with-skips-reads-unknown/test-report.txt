@@ -1,0 +1,24 @@
+Target: e5d0b0dee4a80e3ebcd714838c1ad64ed84a13fc
+Base: f5735dc28a83186ef95715c8683333245762a8c6
+
+All executed behavioral checks passed on target. Both newly recognized outcomes failed as expected in each reader on base. These are NON-LIVE executable-interface regressions using the repository's existing fake no-mistakes/forge/backend tools and real isolated Git repositories. The CLI matrices include actual product stdout, refusal messages and metadata/release effects.
+
+Existing selected tests:
+- tests/fm-crew-state.test.sh: test_terminal_passed, test_terminal_passed_with_override, test_terminal_passed_with_skips, test_terminal_passed_with_open_pr_does_not_claim_merged, test_terminal_passed_without_readable_pr_identity_reports_unknown, test_terminal_rebased_run_is_not_attributed, test_terminal_failed, test_no_run_idle_pane_paused.
+- tests/fm-teardown.test.sh: test_parked_own_run_is_aborted_before_teardown, test_parked_own_run_concludes_on_passed_with_override_after_abort, test_parked_own_run_concludes_on_passed_with_skips_after_abort, test_parked_own_run_refuses_when_abort_is_unconfirmed, test_mismatched_run_after_abort_refuses_unconfirmed, test_another_branchs_parked_run_is_never_touched, test_own_autonomous_run_is_left_alone, test_dirty_worktree_refuses, test_no_mistakes_truly_unpushed_refuses.
+- tests/fm-contributions.test.sh: test_reservation_defers_later_url_when_fifteen_seconds_do_not_remain (inherited mock-clock change).
+- Base: the two new outcome tests in each reader, four expected failures.
+
+Additional executable CLI matrices:
+- crew: skipped outcome with open, merged, absent and unreadable PR; typo outcome remains unknown; cancelled and failed still fail; ordinary pass and prior override still finish. The open-PR skipped case also reproduces unknown on base.
+- teardown: skipped outcome on base refuses; target accepts same run; wrong run and typo outcome refuse, keep metadata and do not release the worktree; prior override remains accepted.
+
+Execution used temporary copies of test function definitions with the suite-wide invocation lists omitted, then called the listed functions directly. Base scripts came from git show into an isolated directory with the unchanged helper libraries linked from this worktree. No implementation-source matching was used as behavioral evidence.
+
+Harness corrections: the first selected-test attempt named two nonexistent selectors. The valid missing-PR test was then run, cancelled behavior was driven in the CLI matrix, and the complete corrected selection passed. An initial supplementary assertion expected the phrase 'PR awaiting merge'; the actual supported output is 'PR open', so that assertion was corrected and re-driven. Neither was a product failure.
+
+Installed producer: no-mistakes v1.79.0 (fc540ac); exact passed-with-skips token observed three times in the installed executable. This establishes binary vocabulary only. The real read-only axi status --run query sees the current run as running at this target; ordinary axi/runs queries reject this gate worktree as not initialized. A read-only SQLite query scoped to this run's repository and branch found no terminal run on this branch. No real passed-with-skips run was proven.
+
+Live blockers: this phase forbids no-mistakes init/run/respond/abort and any other pipeline control, so neither a new automatic-skip run nor the teardown completion race can be driven here. Supply an already initialized isolated test repository and completed matching run for read-only classification proof, or have the authorized outer executor perform the lifecycle race in a disposable environment. Do not use production fleet state.
+
+No UI changed; CLI transcripts are the appropriate visible evidence. No screenshot was needed. No linter, formatter, static analyzer, broad test suite, real pipeline mutation, Herdr/default fleet access, source edit, push or publication was performed.

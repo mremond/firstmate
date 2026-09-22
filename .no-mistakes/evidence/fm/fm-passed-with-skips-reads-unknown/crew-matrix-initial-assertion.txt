@@ -1,0 +1,8 @@
+Behavioral simulation: real fm-crew-state CLI, isolated git repos and state, fake no-mistakes/forge/backend responses. NOT LIVE.
+
+SCENARIO skips-open
+Input outcome: passed-with-skips; PR: open
+TARGET: state: done · source: run-step · run passed: PR open (publication/CI verification skipped)
+not ok - skips-open awaiting merge (missing: 'PR awaiting merge')
+--- output ---
+state: done · source: run-step · run passed: PR open (publication/CI verification skipped)

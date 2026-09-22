@@ -1,0 +1,24 @@
+
+TEST test_terminal_passed (base=0)
+ok - terminal passed run is authoritative
+
+TEST test_terminal_passed_with_override (base=0)
+ok - terminal passed-with-override run reads done like a clean pass
+
+TEST test_terminal_passed_with_skips (base=0)
+ok - terminal passed-with-skips run reads done with the skip kept visible
+
+TEST test_terminal_passed_with_open_pr_does_not_claim_merged (base=0)
+ok - terminal passed run with open PR does not claim merged
+
+TEST test_terminal_passed_without_readable_pr_identity_reports_unknown (base=0)
+ok - terminal passed run without readable PR identity reports unknown
+
+TEST test_terminal_rebased_run_is_not_attributed (base=0)
+ok - a terminal run at a diverged head keeps the strict head rule
+
+TEST test_terminal_failed (base=0)
+ok - terminal failed run is authoritative
+
+TEST test_no_run_idle_pane_paused (base=0)
+ok - no run + idle pane on a paused: status reports state: paused with its reason

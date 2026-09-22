@@ -1,0 +1,3 @@
+
+TEST test_terminal_passed_without_readable_pr_identity_reports_unknown (base=0)
+ok - terminal passed run without readable PR identity reports unknown

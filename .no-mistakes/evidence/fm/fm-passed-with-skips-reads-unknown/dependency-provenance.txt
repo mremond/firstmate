@@ -1,0 +1,28 @@
+Dependency provenance: PR #5294 is open. Its original SHA is not an ancestor after the gate rebase; range-diff proves all three dependency commits were replayed without patch changes before this fix. No rebase performed by this Test phase.
+
+$ gh-axi pr view 5294 --repo kunchenguid/firstmate
+exit: 0
+pull_request:
+  number: 5294
+  title: "fix(bin): recognize passed-with-override as a passing outcome"
+  state: open
+  author: mremond
+  draft: no
+  merged: no
+  checks: "20 passed, 0 failed, 20 total"
+  body: "## Intent\r\n\r\nFixes Issue#4522\r\n\r\nfm-crew-state classifies the no-mistakes outcome 'passed-with-override' as unknown, so a finished worker awaiting merge is re-alerted as stale.\r\n\r\nScope is exactly the issue: map passed-with-override as a passing outcome in the resolver, with a behavioral regression test that fails on the current base.\r\n\r\nKeep out of scope: the cancelled->failed rounding, the wider precedence rule between run verdicts and declared pauses, and anything already covered by open PR P\n... (truncated, 19557 chars total - use --full to see complete body)"
+  comment_count: 1 — use --comments to see full comments
+  review_count: 0 — use --reviews to see full reviews
+
+
+$ git merge-base --is-ancestor 184969d3ce41f9889be6cba658a88b42c5784994 HEAD
+exit: 1
+
+
+
+$ git range-diff 6f0f1399..184969d3ce41f9889be6cba658a88b42c5784994 f5735dc28a83186ef95715c8683333245762a8c6..63d019e9
+exit: 0
+1:  2af0dd93 = 1:  a5d97fea fix(bin): map passed-with-override to done instead of unknown
+2:  3919e17a = 2:  8c394b46 fix(document): Replace stale outcome mapping with authoritative pointer
+3:  184969d3 = 3:  63d019e9 fix(ci): Fixed a pre-existing mock-clock race in tests/fm-contributions.test.sh by advancing time only during the serial issue read. Reproduced the exact CI failure before fixing it. Forced-race replay, all 38 contribution scenarios, scoped ShellCheck, Bash syntax, and diff checks pass. Only the test fixture changed; CI rerun remains with the outer executor
+

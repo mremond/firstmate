@@ -1,0 +1,27 @@
+
+TEST test_parked_own_run_is_aborted_before_teardown (base=0)
+ok - a task's own parked no-mistakes run is aborted, not orphaned, before the worker is removed
+
+TEST test_parked_own_run_concludes_on_passed_with_override_after_abort (base=0)
+ok - a run that lands on passed-with-override after abort is still recognized as terminal
+
+TEST test_parked_own_run_concludes_on_passed_with_skips_after_abort (base=0)
+ok - a run that lands on passed-with-skips after abort is still recognized as terminal
+
+TEST test_parked_own_run_refuses_when_abort_is_unconfirmed (base=0)
+ok - teardown refuses before reap or removal when a task-owned run remains parked
+
+TEST test_mismatched_run_after_abort_refuses_unconfirmed (base=0)
+ok - a different run cannot confirm the targeted abort
+
+TEST test_another_branchs_parked_run_is_never_touched (base=0)
+ok - a parked run on another branch is never aborted by this task's teardown (ownership is precise)
+
+TEST test_own_autonomous_run_is_left_alone (base=0)
+ok - a task-owned autonomous running step is left alone rather than aborted
+
+TEST test_dirty_worktree_refuses (base=0)
+ok - dirty worktree is refused even when its committed work has landed (dirty always wins)
+
+TEST test_no_mistakes_truly_unpushed_refuses (base=0)
+ok - no-mistakes worktree with genuinely unlanded work is refused (safety preserved)

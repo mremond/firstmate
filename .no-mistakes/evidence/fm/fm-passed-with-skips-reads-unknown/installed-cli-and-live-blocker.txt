@@ -1,0 +1,41 @@
+command: no-mistakes --version
+no-mistakes version v1.79.0 (fc540ac) 2026-09-19T09:34:44Z
+binary on PATH: /Users/mremond/.local/bin/no-mistakes
+sha256: 54609be7e384025b5282bbf4c966aa3a324e3e8242344eedc77a819e8bda3123
+exact token: passed-with-skips
+token occurrences in binary: 3
+Binary vocabulary evidence only; not proof of a completed real run.
+
+$ no-mistakes axi
+exit: 1
+error: repo not initialized (run 'no-mistakes init' first)
+help[1]: Run `no-mistakes init` to set up the gate in this repository
+
+
+$ no-mistakes runs --limit 20
+exit: 1
+
+repo not initialized (run 'no-mistakes init' first)
+
+$ no-mistakes axi status --run 01M3564K65P1Y5HE9P6HW1E6NF
+exit: 0
+run:
+  id: "01M3564K65P1Y5HE9P6HW1E6NF"
+  branch: fm/fm-passed-with-skips-reads-unknown
+  status: running
+  head: e5d0b0de
+  head_sha: e5d0b0dee4a80e3ebcd714838c1ad64ed84a13fc
+  findings: none
+  steps[9]{step,status,findings,duration_ms}:
+    intent,completed,0,22
+    rebase,completed,0,1202
+    review,completed,0,221679
+    test,running,0,0
+    document,pending,0,0
+    lint,pending,0,0
+    push,pending,0,0
+    pr,pending,0,0
+    ci,pending,0,0
+  active_steps[1]{step,status,active_for,round_active_for,last_activity,agent_pid,round}:
+    test,running,2m3s,2m3s,"0s ago: codex producing output","65542",starting
+

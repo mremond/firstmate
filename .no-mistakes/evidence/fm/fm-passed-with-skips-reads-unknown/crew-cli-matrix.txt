@@ -1,0 +1,38 @@
+Behavioral simulation: real fm-crew-state CLI, isolated git repos and state, fake no-mistakes/forge/backend responses. NOT LIVE.
+
+SCENARIO skips-open
+Input outcome: passed-with-skips; PR: open
+TARGET: state: done · source: run-step · run passed: PR open (publication/CI verification skipped)
+BASE: state: unknown · source: run-step · outcome: passed-with-skips
+
+SCENARIO skips-merged
+Input outcome: passed-with-skips; PR: merged
+TARGET: state: done · source: run-step · run passed: PR merged (publication/CI verification skipped)
+
+SCENARIO skips-no-pr
+Input outcome: passed-with-skips; PR: missing
+TARGET: state: done · source: run-step · run passed: PR state unknown (no PR identity) (publication/CI verification skipped)
+
+SCENARIO skips-unreadable-pr
+Input outcome: passed-with-skips; PR: unavailable
+TARGET: state: done · source: run-step · run passed: PR state unknown (unreadable) (publication/CI verification skipped)
+
+SCENARIO unknown-token
+Input outcome: passed-with-skip; PR: merged
+TARGET: state: unknown · source: run-step · outcome: passed-with-skip
+
+SCENARIO cancelled-unchanged
+Input outcome: cancelled; PR: merged
+TARGET: state: failed · source: run-step · run cancelled
+
+SCENARIO failed-unchanged
+Input outcome: failed; PR: merged
+TARGET: state: failed · source: run-step · run failed
+
+SCENARIO passed-unchanged
+Input outcome: passed; PR: merged
+TARGET: state: done · source: run-step · run passed: PR merged
+
+SCENARIO override-preserved
+Input outcome: passed-with-override; PR: open
+TARGET: state: done · source: run-step · run passed: PR open
