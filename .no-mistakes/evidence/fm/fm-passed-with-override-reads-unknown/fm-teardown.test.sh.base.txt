@@ -1,0 +1,35 @@
+FIXTURE-BASED BEHAVIORAL VALIDATION; NOT LIVE.
+base fm-teardown.test.sh
+
+TEST: test_parked_own_run_concludes_on_passed_with_override_after_abort
+
+FIXTURE AXI INPUT:
+run:
+  id: "01RUN"
+  branch: fm/task-x1
+  status: awaiting_approval
+  awaiting_agent: parked 2m10s
+  head: "f21ea3c11139ffab0acd1ec228f4c0db1a2bdd03"
+  pr: ""
+  findings: none
+gate: review
+FIXTURE STATUS AFTER ABORT:
+run:
+  id: "01RUN"
+  outcome: passed-with-override
+ci_override_reason: "live checks not all passed: Lint (fail)"
+PRODUCT EXIT: 1
+PRODUCT STDOUT:
+PRODUCT STDERR:
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 20s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+REFUSED: no-mistakes run for task-x1 is still parked after axi abort; confirm it stopped (no-mistakes axi status) or abort it manually (no-mistakes axi abort --run <id>) before retrying teardown.
+FAKE NO-MISTAKES CALL LOG:
+abort --run 01RUN
+not ok - parked-run-abort-passed-with-override: teardown should still succeed: expected exit 0, got 1

@@ -1,0 +1,45 @@
+Behavioral CLI regression tests with fake no-mistakes/forge/backend dependencies; NOT live integration.
+Base: 6f0f139962eadaea29487cafead418a0eb2ec6e4
+Target: 2af0dd9343c27dc5a1c3e5f1c7589f898ff24c7b
+
+base: bash tests/.nm4522-crew-state-focus.sh test_terminal_passed_with_override
+CLI fm-crew-state.sh feat-override => state: unknown · source: run-step · outcome: passed-with-override (exit 0)
+not ok - passed-with-override run -> done, not unknown (missing: 'state: done')
+--- output ---
+state: unknown · source: run-step · outcome: passed-with-override
+exit=1; expected=1
+
+base: bash tests/.nm4522-teardown-focus.sh test_parked_own_run_concludes_on_passed_with_override_after_abort
+CLI fm-teardown.sh task-x1 => exit 1
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+REFUSED: no-mistakes run for task-x1 is still parked after axi abort; confirm it stopped (no-mistakes axi status) or abort it manually (no-mistakes axi abort --run <id>) before retrying teardown.
+not ok - parked-run-abort-passed-with-override: teardown should still succeed: expected exit 0, got 1
+exit=1; expected=1
+
+target: bash tests/.nm4522-crew-state-focus.sh test_terminal_passed_with_override
+CLI fm-crew-state.sh feat-override => state: done · source: run-step · run passed: PR merged (exit 0)
+ok - terminal passed-with-override run reads done like a clean pass
+exit=0; expected=0
+
+target: bash tests/.nm4522-teardown-focus.sh test_parked_own_run_concludes_on_passed_with_override_after_abort
+CLI fm-teardown.sh task-x1 => exit 0
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-validation/tmp/fm-teardown-tests.7VfcKV/parked-run-abort-passed-with-override/project: already current
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-validation/tmp/fm-teardown-tests.7VfcKV/parked-run-abort-passed-with-override/wt)
+Backlog: task-x1 just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-validation/tmp/fm-teardown-tests.7VfcKV/parked-run-abort-passed-with-override/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-validation/tmp/fm-teardown-tests.7VfcKV/parked-run-abort-passed-with-override/data/backlog.md - move task-x1 to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+ok - a run that lands on passed-with-override after abort is still recognized as terminal
+exit=0; expected=0

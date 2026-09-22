@@ -1,0 +1,5 @@
+$ no-mistakes axi status
+error: repo not initialized (run 'no-mistakes init' first)
+exit: 1
+
+Live validation requires an initialized disposable task and real passed-with-override run. This Test phase explicitly forbids init, run, respond, and abort. No pipeline lifecycle action was attempted.

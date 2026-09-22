@@ -1,0 +1,57 @@
+{
+  "target": "2af0dd9343c27dc5a1c3e5f1c7589f898ff24c7b",
+  "tree": "a1a58a61f7f66152b749cbadfcb1d5fe12ed321c",
+  "base": "6f0f139962eadaea29487cafead418a0eb2ec6e4",
+  "worktree_clean": true,
+  "temporary_scaffolding_removed": true,
+  "target_results": [
+    {
+      "mode": "target",
+      "suite": "fm-crew-state.test.sh",
+      "tests": [
+        "test_terminal_passed",
+        "test_terminal_passed_with_override",
+        "test_terminal_passed_uses_matching_retirement_receipt_without_forge"
+      ],
+      "exit_code": 0,
+      "seconds": 62.83,
+      "log": "/Users/mremond/.no-mistakes/evidence/01M34NDX8QZN4VKXAMPETHR74Q/fm-crew-state.test.sh.target.txt"
+    },
+    {
+      "mode": "target",
+      "suite": "fm-teardown.test.sh",
+      "tests": [
+        "test_parked_own_run_is_aborted_before_teardown",
+        "test_parked_own_run_concludes_on_passed_with_override_after_abort",
+        "test_parked_run_advanced_past_unfetched_head_is_still_aborted"
+      ],
+      "exit_code": 0,
+      "seconds": 246.43,
+      "log": "/Users/mremond/.no-mistakes/evidence/01M34NDX8QZN4VKXAMPETHR74Q/fm-teardown.test.sh.target.txt"
+    }
+  ],
+  "baseline_results": [
+    {
+      "mode": "base",
+      "suite": "fm-crew-state.test.sh",
+      "tests": [
+        "test_terminal_passed_with_override"
+      ],
+      "exit_code": 1,
+      "seconds": 11.04,
+      "log": "/Users/mremond/.no-mistakes/evidence/01M34NDX8QZN4VKXAMPETHR74Q/fm-crew-state.test.sh.base.txt"
+    },
+    {
+      "mode": "base",
+      "suite": "fm-teardown.test.sh",
+      "tests": [
+        "test_parked_own_run_concludes_on_passed_with_override_after_abort"
+      ],
+      "exit_code": 1,
+      "seconds": 51.37,
+      "log": "/Users/mremond/.no-mistakes/evidence/01M34NDX8QZN4VKXAMPETHR74Q/fm-teardown.test.sh.base.txt"
+    }
+  ],
+  "live": false,
+  "limitation": "Existing tests execute real Firstmate scripts with fake no-mistakes, forge and terminal backends. No live pipeline was created, approved or aborted. This active Test phase forbids controlling a pipeline; operator retry scope permits only the selected regressions and immediate neighbours."
+}

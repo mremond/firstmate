@@ -1,0 +1,124 @@
+Actual Firstmate CLI invocations with stubbed no-mistakes, forge, and endpoint commands. Behavioral integration evidence; NOT live product proof.
+
+target: bash tests/.nm4522-crew-state-focus.sh scenario_override_pr_matrix
+
+CASE PR=OPEN status-log=clean
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR open · run: 01RUN (exit 0)
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR open · run: 01RUN (exit 0)
+
+CASE PR=OPEN status-log=stale-decision
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR open · status-log superseded (run done) · run: 01RUN (exit 0)
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR open · status-log superseded (run done) · run: 01RUN (exit 0)
+
+CASE PR=OPEN status-log=paused
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR open · run: 01RUN (exit 0)
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR open · run: 01RUN (exit 0)
+
+CASE PR=MERGED status-log=clean
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR merged · run: 01RUN (exit 0)
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR merged · run: 01RUN (exit 0)
+
+CASE PR=MERGED status-log=stale-decision
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR merged · status-log superseded (run done) · run: 01RUN (exit 0)
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR merged · status-log superseded (run done) · run: 01RUN (exit 0)
+
+CASE PR=MERGED status-log=paused
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR merged · run: 01RUN (exit 0)
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR merged · run: 01RUN (exit 0)
+
+CASE PR=UNREADABLE status-log=clean
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR state unknown (unreadable) · run: 01RUN (exit 0)
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR state unknown (unreadable) · run: 01RUN (exit 0)
+
+CASE PR=UNREADABLE status-log=stale-decision
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR state unknown (unreadable) · status-log superseded (run done) · run: 01RUN (exit 0)
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR state unknown (unreadable) · status-log superseded (run done) · run: 01RUN (exit 0)
+
+CASE PR=UNREADABLE status-log=paused
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR state unknown (unreadable) · run: 01RUN (exit 0)
+CLI fm-crew-state.sh override => state: done · source: run-step · run passed: PR state unknown (unreadable) · run: 01RUN (exit 0)
+ok - open, merged, and unreadable PRs retain clean-pass behavior across stale decisions and declared pauses
+exit=0
+
+base: bash tests/.nm4522-crew-state-focus.sh scenario_unchanged_outcomes
+
+CASE outcome=passed with declared pause
+CLI fm-crew-state.sh unchanged => state: done · source: run-step · run passed: PR merged (exit 0)
+
+CASE outcome=checks-passed with declared pause
+CLI fm-crew-state.sh unchanged => state: done · source: run-step · checks green: PR ready for review (exit 0)
+
+CASE outcome=cancelled with declared pause
+CLI fm-crew-state.sh unchanged => state: failed · source: run-step · run cancelled (exit 0)
+
+CASE outcome=failed with declared pause
+CLI fm-crew-state.sh unchanged => state: failed · source: run-step · run failed (exit 0)
+
+CASE outcome=unknown-override-outcome with declared pause
+CLI fm-crew-state.sh unchanged => state: unknown · source: run-step · outcome: unknown-override-outcome (exit 0)
+ok - clean passes, failures, cancelled-to-failed, and unknown tokens preserve their existing mappings
+exit=0
+
+target: bash tests/.nm4522-crew-state-focus.sh scenario_unchanged_outcomes
+
+CASE outcome=passed with declared pause
+CLI fm-crew-state.sh unchanged => state: done · source: run-step · run passed: PR merged (exit 0)
+
+CASE outcome=checks-passed with declared pause
+CLI fm-crew-state.sh unchanged => state: done · source: run-step · checks green: PR ready for review (exit 0)
+
+CASE outcome=cancelled with declared pause
+CLI fm-crew-state.sh unchanged => state: failed · source: run-step · run cancelled (exit 0)
+
+CASE outcome=failed with declared pause
+CLI fm-crew-state.sh unchanged => state: failed · source: run-step · run failed (exit 0)
+
+CASE outcome=unknown-override-outcome with declared pause
+CLI fm-crew-state.sh unchanged => state: unknown · source: run-step · outcome: unknown-override-outcome (exit 0)
+ok - clean passes, failures, cancelled-to-failed, and unknown tokens preserve their existing mappings
+exit=0
+
+target: bash tests/.nm4522-teardown-focus.sh scenario_override_teardown_guards
+
+CASE post-abort id=01RUN outcome=passed-with-override
+CLI fm-teardown.sh task-x1 => exit 0
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 11s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-validation/tmp/fm-teardown-tests.0JpH6q/override-guard-matching/project: already current
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-validation/tmp/fm-teardown-tests.0JpH6q/override-guard-matching/wt)
+Backlog: task-x1 just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-validation/tmp/fm-teardown-tests.0JpH6q/override-guard-matching/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-validation/tmp/fm-teardown-tests.0JpH6q/override-guard-matching/data/backlog.md - move task-x1 to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+Observable side effects: worktree return called; task metadata retired.
+
+CASE post-abort id=02OTHER outcome=passed-with-override
+CLI fm-teardown.sh task-x1 => exit 1
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 5s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+REFUSED: no-mistakes run for task-x1 is still parked after axi abort; confirm it stopped (no-mistakes axi status) or abort it manually (no-mistakes axi abort --run <id>) before retrying teardown.
+Observable side effects: no worktree return; task metadata and worktree retained.
+
+CASE post-abort id=01RUN outcome=unknown-override-outcome
+CLI fm-teardown.sh task-x1 => exit 1
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+REFUSED: no-mistakes run for task-x1 is still parked after axi abort; confirm it stopped (no-mistakes axi status) or abort it manually (no-mistakes axi abort --run <id>) before retrying teardown.
+Observable side effects: no worktree return; task metadata and worktree retained.
+ok - matching override terminal permits cleanup; wrong run identity and unknown outcome refuse before cleanup
+exit=0

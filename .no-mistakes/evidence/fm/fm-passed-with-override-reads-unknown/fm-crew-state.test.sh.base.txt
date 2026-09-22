@@ -1,0 +1,20 @@
+FIXTURE-BASED BEHAVIORAL VALIDATION; NOT LIVE.
+base fm-crew-state.test.sh
+
+TEST: test_terminal_passed_with_override
+
+FIXTURE AXI INPUT:
+run:
+  id: "01RUN"
+  branch: fm/feat-override
+  status: completed
+  head: "0936943eb8eb4c7c4f5bd5229932dacb3193bcf0"
+  pr: "https://github.com/o/r/pull/1"
+  findings: none
+outcome: passed-with-override
+ci_override_reason: "live checks not all passed: Lint (fail)"
+PRODUCT OUTPUT (exit 0):
+state: unknown · source: run-step · outcome: passed-with-override
+not ok - passed-with-override run -> done, not unknown (missing: 'state: done')
+--- output ---
+state: unknown · source: run-step · outcome: passed-with-override

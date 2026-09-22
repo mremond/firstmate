@@ -1,0 +1,48 @@
+FIXTURE-BASED BEHAVIORAL VALIDATION; NOT LIVE.
+target fm-crew-state.test.sh
+
+TEST: test_terminal_passed
+
+FIXTURE AXI INPUT:
+run:
+  id: "01RUN"
+  branch: fm/feat-d
+  status: completed
+  head: "34bcbe7ad52b31b3192809b060b07779f8149147"
+  pr: "https://github.com/o/r/pull/1"
+  findings: none
+outcome: passed
+PRODUCT OUTPUT (exit 0):
+state: done · source: run-step · run passed: PR merged
+ok - terminal passed run is authoritative
+
+TEST: test_terminal_passed_with_override
+
+FIXTURE AXI INPUT:
+run:
+  id: "01RUN"
+  branch: fm/feat-override
+  status: completed
+  head: "344ed3d7ff39cc68a26d2454b0917a825bb81091"
+  pr: "https://github.com/o/r/pull/1"
+  findings: none
+outcome: passed-with-override
+ci_override_reason: "live checks not all passed: Lint (fail)"
+PRODUCT OUTPUT (exit 0):
+state: done · source: run-step · run passed: PR merged
+ok - terminal passed-with-override run reads done like a clean pass
+
+TEST: test_terminal_passed_uses_matching_retirement_receipt_without_forge
+
+FIXTURE AXI INPUT:
+run:
+  id: "01RUN"
+  branch: fm/feat-dreceipt
+  status: completed
+  head: "6883077ce70abe31ade55e67906ecca1b646f327"
+  pr: ""
+  findings: none
+outcome: passed
+PRODUCT OUTPUT (exit 0):
+state: done · source: run-step · run passed: PR merged
+ok - terminal passed run uses matching retirement receipt without forge

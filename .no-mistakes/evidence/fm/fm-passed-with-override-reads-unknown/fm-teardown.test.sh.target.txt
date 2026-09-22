@@ -1,0 +1,101 @@
+FIXTURE-BASED BEHAVIORAL VALIDATION; NOT LIVE.
+target fm-teardown.test.sh
+
+TEST: test_parked_own_run_is_aborted_before_teardown
+
+FIXTURE AXI INPUT:
+run:
+  id: "01RUN"
+  branch: fm/task-x1
+  status: awaiting_approval
+  awaiting_agent: parked 2m10s
+  head: "11cd9009a8266e3adf33e5d9d36d91c49f4d2865"
+  pr: ""
+  findings: none
+gate: review
+FIXTURE STATUS AFTER ABORT:
+outcome: cancelled
+PRODUCT EXIT: 0
+PRODUCT STDOUT:
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-targeted-mrxvemmx/fm-teardown-tests.G3kDhd/parked-run-abort/project: already current
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-targeted-mrxvemmx/fm-teardown-tests.G3kDhd/parked-run-abort/wt)
+Backlog: task-x1 just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-targeted-mrxvemmx/fm-teardown-tests.G3kDhd/parked-run-abort/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-targeted-mrxvemmx/fm-teardown-tests.G3kDhd/parked-run-abort/data/backlog.md - move task-x1 to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+PRODUCT STDERR:
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 14s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+FAKE NO-MISTAKES CALL LOG:
+abort --run 01RUN
+ok - a task's own parked no-mistakes run is aborted, not orphaned, before the worker is removed
+
+TEST: test_parked_own_run_concludes_on_passed_with_override_after_abort
+
+FIXTURE AXI INPUT:
+run:
+  id: "01RUN"
+  branch: fm/task-x1
+  status: awaiting_approval
+  awaiting_agent: parked 2m10s
+  head: "52fb806a2fceade40e1c3d6a1d0dfeb0ceeead18"
+  pr: ""
+  findings: none
+gate: review
+FIXTURE STATUS AFTER ABORT:
+run:
+  id: "01RUN"
+  outcome: passed-with-override
+ci_override_reason: "live checks not all passed: Lint (fail)"
+PRODUCT EXIT: 0
+PRODUCT STDOUT:
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-targeted-mrxvemmx/fm-teardown-tests.G3kDhd/parked-run-abort-passed-with-override/project: already current
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-targeted-mrxvemmx/fm-teardown-tests.G3kDhd/parked-run-abort-passed-with-override/wt)
+Backlog: task-x1 just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-targeted-mrxvemmx/fm-teardown-tests.G3kDhd/parked-run-abort-passed-with-override/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-targeted-mrxvemmx/fm-teardown-tests.G3kDhd/parked-run-abort-passed-with-override/data/backlog.md - move task-x1 to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+PRODUCT STDERR:
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 12s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+FAKE NO-MISTAKES CALL LOG:
+abort --run 01RUN
+ok - a run that lands on passed-with-override after abort is still recognized as terminal
+
+TEST: test_parked_run_advanced_past_unfetched_head_is_still_aborted
+
+FIXTURE AXI INPUT:
+run:
+  id: "01RUN"
+  branch: fm/task-x1
+  status: awaiting_approval
+  awaiting_agent: parked 2m10s
+  head: "e474330"
+  pr: ""
+  findings: none
+gate: review
+FIXTURE STATUS AFTER ABORT:
+outcome: cancelled
+PRODUCT EXIT: 0
+PRODUCT STDOUT:
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-targeted-mrxvemmx/fm-teardown-tests.G3kDhd/parked-run-pipeline-advanced-unfetched/project: already current
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-targeted-mrxvemmx/fm-teardown-tests.G3kDhd/parked-run-pipeline-advanced-unfetched/wt)
+Backlog: task-x1 just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-targeted-mrxvemmx/fm-teardown-tests.G3kDhd/parked-run-pipeline-advanced-unfetched/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-targeted-mrxvemmx/fm-teardown-tests.G3kDhd/parked-run-pipeline-advanced-unfetched/data/backlog.md - move task-x1 to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+PRODUCT STDERR:
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 13s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+FAKE NO-MISTAKES CALL LOG:
+abort --run 01RUN
+ok - a parked run the pipeline advanced past the task copy is still concluded from the runs ledger, not orphaned

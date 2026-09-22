@@ -1,0 +1,39 @@
+
+initial-extra-FM_HOME: test_forced_secondmate_herdr_child_preflight_refuses_before_changes
+CLI fm-teardown.sh task-x1 => exit 1
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: unsafe secondmate home removal target /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-validation/tmp/fm-teardown-tests.oYZdIp/herdr-child-preflight/secondmate-home is inside the firstmate repo
+not ok - herdr-child-preflight: refusal did not explain its non-mutating boundary
+exit=1
+
+fixture-owned-FM_HOME: test_forced_secondmate_herdr_child_preflight_refuses_before_changes
+CLI fm-teardown.sh task-x1 => exit 1
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: unsafe secondmate home removal target /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M34NDX8QZN4VKXAMPETHR74Q/.nm4522-validation/tmp/fm-teardown-tests.2NiZYl/herdr-child-preflight/secondmate-home is inside the active firstmate home
+not ok - herdr-child-preflight: refusal did not explain its non-mutating boundary
+exit=1
+
+Normal automatic test temp location (permitted ephemeral toolchain writes): test_forced_secondmate_herdr_child_preflight_refuses_before_changes
+CLI fm-teardown.sh task-x1 => exit 1
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 5s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+error: herdr session presentation lock could not be resolved for child-herdr; nothing was changed - rerun teardown once the session is reachable and unambiguous
+ok - forced secondmate teardown preflights every Herdr child before cleanup mutation
+exit=0
