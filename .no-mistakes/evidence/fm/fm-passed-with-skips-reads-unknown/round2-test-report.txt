@@ -1,0 +1,15 @@
+Target: c2b7897ff5d6db6ae0b9b87309a6dc4da077e782
+Base: c5131a33a1e35a42e34733a5334fcc4e0225a656
+
+Round 2 refreshed evidence for the supplied commits. Earlier evidence refers to superseded commits and is preserved separately.
+
+Both added behavioral regressions fail on the supplied base and pass on target. The focused existing-test selection passed, as did both executable CLI matrices. These invoke the real Firstmate scripts with fake no-mistakes/forge/backend responses and isolated real Git repositories: they are NON-LIVE simulations, not proof of a real completed pipeline.
+
+Crew matrix: open, merged, absent and unreadable PR state; skip warning retained; unknown token rejected; passed, passed-with-override, failed and cancelled unchanged. The existing paused-worker test also passed.
+Teardown matrix: same-run passed-with-skips completes cleanup; wrong run ID and unknown outcome refuse while retaining metadata and withholding worktree release; prior override remains accepted. Focused tests also preserve dirty/unlanded work, reject unconfirmed completion, and leave another branch or autonomous run alone.
+
+The installed no-mistakes v1.79.0 executable contains the exact token passed-with-skips (binary SHA256 recorded in round2-producer-and-provenance.txt). The only actual run inspected here is still running; it does not prove a real passed-with-skips outcome. No isolated completed run was provided, and this phase forbids pipeline lifecycle control. This is the unchanged, previously acknowledged live-evidence limitation, not a new finding.
+
+PR #5294 is now merged, and its merge commit is the supplied base and direct parent of target. No rebase was needed or performed by this test phase.
+
+No UI changed; CLI transcripts show the applicable surface, so screenshots were unnecessary. No linter, formatter, static analysis, full suite, live Herdr/fleet operation, real pipeline control, source change, push or publication was performed. Transient test copies and data under .test-phase were removed after validation.

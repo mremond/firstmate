@@ -1,0 +1,54 @@
+$ no-mistakes --version
+exit: 0
+no-mistakes version v1.79.0 (fc540ac) 2026-09-19T09:34:44Z
+
+Binary on PATH: /Users/mremond/.local/bin/no-mistakes
+SHA256: 54609be7e384025b5282bbf4c966aa3a324e3e8242344eedc77a819e8bda3123
+Exact token: passed-with-skips
+Token occurrences: 3
+Binary vocabulary evidence only; not a real completed run.
+
+$ no-mistakes axi status --run 01M3564K65P1Y5HE9P6HW1E6NF
+exit: 0
+run:
+  id: "01M3564K65P1Y5HE9P6HW1E6NF"
+  branch: fm/fm-passed-with-skips-reads-unknown
+  status: running
+  head: c2b7897f
+  head_sha: c2b7897ff5d6db6ae0b9b87309a6dc4da077e782
+  pr: "https://github.com/kunchenguid/firstmate/pull/5322"
+  findings: none
+  steps[9]{step,status,findings,duration_ms}:
+    intent,completed,0,22
+    rebase,completed,0,1202
+    review,completed,0,220990
+    test,running,0,0
+    document,pending,0,0
+    lint,pending,0,0
+    push,pending,0,0
+    pr,pending,0,0
+    ci,pending,0,0
+  active_steps[1]{step,status,active_for,round_active_for,last_activity,agent_pid,round}:
+    test,running,2m11s,2m11s,"4s ago: codex producing output","9686",round 1
+
+$ gh-axi pr view 5294 --repo kunchenguid/firstmate
+exit: 0
+pull_request:
+  number: 5294
+  title: "fix(bin): recognize passed-with-override as a passing outcome"
+  state: merged
+  author: mremond
+  draft: no
+  merged: "2026-09-22T18:41:27Z"
+  checks: "20 passed, 0 failed, 20 total"
+  body: "## Intent\r\n\r\nFixes Issue#4522\r\n\r\nfm-crew-state classifies the no-mistakes outcome 'passed-with-override' as unknown, so a finished worker awaiting merge is re-alerted as stale.\r\n\r\nScope is exactly the issue: map passed-with-override as a passing outcome in the resolver, with a behavioral regression test that fails on the current base.\r\n\r\nKeep out of scope: the cancelled->failed rounding, the wider precedence rule between run verdicts and declared pauses, and anything already covered by open PR P\n... (truncated, 19557 chars total - use --full to see complete body)"
+  comment_count: 2 — use --comments to see full comments
+  review_count: 0 — use --reviews to see full reviews
+
+$ git log -2 --format=%H %s
+exit: 0
+c2b7897ff5d6db6ae0b9b87309a6dc4da077e782 fix(bin): recognize passed-with-skips as a passing outcome
+c5131a33a1e35a42e34733a5334fcc4e0225a656 fix(bin): recognize passed-with-override as a passing outcome (#5294)
+
+PR #5294 is now merged and its merge commit c5131a33 is the supplied base and the direct parent of target c2b7897f. No rebase was performed in this test phase.
+The assigned phase cannot initialize, start, respond to, or abort a real no-mistakes pipeline. No isolated completed passed-with-skips run was provided. The live-proof gap acknowledged in round 1 remains unchanged.

@@ -1,0 +1,80 @@
+Behavioral simulation: real fm-teardown CLI and isolated git repos; fake no-mistakes, treehouse, tmux and forge. NOT LIVE. No real pipeline is aborted.
+
+SCENARIO skips-base (base)
+Post-abort input outcome: passed-with-skips; run id: 01RUN
+Exit: 1
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+REFUSED: no-mistakes run for task-x1 is still parked after axi abort; confirm it stopped (no-mistakes axi status) or abort it manually (no-mistakes axi abort --run <id>) before retrying teardown.
+task metadata: retained
+worktree release: not called
+
+SCENARIO skips-terminal (target)
+Post-abort input outcome: passed-with-skips; run id: 01RUN
+Exit: 0
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3564K65P1Y5HE9P6HW1E6NF/.test-phase/tmp/fm-teardown-tests.CJCoHI/skips-terminal/project: already current
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3564K65P1Y5HE9P6HW1E6NF/.test-phase/tmp/fm-teardown-tests.CJCoHI/skips-terminal/wt)
+Backlog: task-x1 just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3564K65P1Y5HE9P6HW1E6NF/.test-phase/tmp/fm-teardown-tests.CJCoHI/skips-terminal/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3564K65P1Y5HE9P6HW1E6NF/.test-phase/tmp/fm-teardown-tests.CJCoHI/skips-terminal/data/backlog.md - move task-x1 to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 0s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+task metadata: removed
+worktree release: called
+
+SCENARIO skips-wrong-run (target)
+Post-abort input outcome: passed-with-skips; run id: 01OTHER
+Exit: 1
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 0s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+REFUSED: no-mistakes run for task-x1 is still parked after axi abort; confirm it stopped (no-mistakes axi status) or abort it manually (no-mistakes axi abort --run <id>) before retrying teardown.
+task metadata: retained
+worktree release: not called
+
+SCENARIO unknown-outcome (target)
+Post-abort input outcome: passed-with-skip; run id: 01RUN
+Exit: 1
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 0s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+REFUSED: no-mistakes run for task-x1 is still parked after axi abort; confirm it stopped (no-mistakes axi status) or abort it manually (no-mistakes axi abort --run <id>) before retrying teardown.
+task metadata: retained
+worktree release: not called
+
+SCENARIO override-terminal (target)
+Post-abort input outcome: passed-with-override; run id: 01RUN
+Exit: 0
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3564K65P1Y5HE9P6HW1E6NF/.test-phase/tmp/fm-teardown-tests.CJCoHI/override-terminal/project: already current
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3564K65P1Y5HE9P6HW1E6NF/.test-phase/tmp/fm-teardown-tests.CJCoHI/override-terminal/wt)
+Backlog: task-x1 just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3564K65P1Y5HE9P6HW1E6NF/.test-phase/tmp/fm-teardown-tests.CJCoHI/override-terminal/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3564K65P1Y5HE9P6HW1E6NF/.test-phase/tmp/fm-teardown-tests.CJCoHI/override-terminal/data/backlog.md - move task-x1 to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 0s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: no-mistakes run for task-x1 is parked at a gate; aborting before the worker is removed
+task metadata: removed
+worktree release: called

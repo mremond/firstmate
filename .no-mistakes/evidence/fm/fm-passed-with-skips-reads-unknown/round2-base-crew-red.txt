@@ -1,0 +1,5 @@
+
+TEST test_terminal_passed_with_skips (base=1)
+not ok - passed-with-skips run -> done, not unknown (missing: 'state: done')
+--- output ---
+state: unknown · source: run-step · outcome: passed-with-skips
