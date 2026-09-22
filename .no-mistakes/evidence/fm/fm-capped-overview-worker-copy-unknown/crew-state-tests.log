@@ -1,0 +1,36 @@
+FM_TEST_BEGIN 2026-09-22T08:49:46Z tests/fm-crew-state.test.sh family=pure-contract-unit expected_gate_skip=none
+ok - captured AXI replacement status replays through crew-state
+ok - captured AXI parked status replays through crew-state
+ok - captured AXI failed status replays through crew-state
+ok - captured capped inventory replays selection, ambiguity, and unavailable lookup
+ok - captured status formats reject a synthetic authority transition
+ok - captured completed status yields to synthetic subsequent development
+ok - active run-step is authoritative
+ok - stale needs-decision over active run is superseded
+ok - stale blocked over active run is superseded
+ok - daemon/timeout blocked claim over a live fixing run reads as run alive
+ok - socket refusal or missing socket over a stale fixing run reports blocked
+ok - socket refusal over a terminal attributed run reports blocked
+ok - socket-down evidence outranks a live run only while it is the log's latest event
+ok - broken-pipe blocker over a live run keeps the plain superseded reading
+ok - genuine daemon-down blocked line still reports blocked
+ok - a busy secondmate keeps its open blocker until that exact key closes
+ok - the most recently opened decision supplies the reported state and detail
+ok - ship and scout terminal declarations supersede stale decisions
+ok - latest status retains legacy completion events and shared captain matching
+ok - latest status subprocess work stays bounded and still reads past a long prose tail
+ok - genuine parked run is not flagged superseded
+ok - the parked human-decision component is derived from the findings table's action column
+ok - scalar gate parked run is not flagged superseded
+ok - gate block parked run is not flagged superseded
+ok - ci-ready status log beats monitoring run
+ok - ci-monitoring run with checks already green surfaces done
+ok - top-level ci status uses ci log green marker
+ok - terminal no-checks ci-monitor marker surfaces done
+ok - base-advance rearm after green stays working
+ok - pending no-checks ci-monitor marker stays working
+ok - ci-monitoring run with checks not yet green stays working
+FM_TEST_END 2026-09-22T08:52:17Z tests/fm-crew-state.test.sh exit=143 duration_ms=150538 gate_skip=false
+FM_TEST_SUMMARY total=1 failed=1 skipped_gate=0 duration_ms=151115
+FM_TEST_SUMMARY_FAMILY family=pure-contract-unit count=1 duration_ms=150538 failed=1
+FM_TEST_SLOWEST rank=1 script=tests/fm-crew-state.test.sh duration_ms=150538

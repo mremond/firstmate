@@ -1,0 +1,20 @@
+
+CASE phase_primary_worker_parity (baseline=0)
+state: working · source: pane · harness busy (claude-hook)
+ok - a worker copy with no recorded run of its own reads absent via the overview repo: line
+state: working · source: pane · harness busy (claude-hook)
+state: working · source: pane · harness busy (claude-hook)
+
+PARITY absent
+worker: state: working · source: pane · harness busy (claude-hook)
+primary: state: working · source: pane · harness busy (claude-hook)
+ok - absent primary and worker copies report the same current state
+state: done · source: run-step · run passed: PR state unknown (no PR identity) · run: 01COMPLETED
+ok - a worker copy reads a completed run outside the shown rows via the overview repo: line
+state: done · source: run-step · run passed: PR state unknown (no PR identity) · run: 01COMPLETED
+state: done · source: run-step · run passed: PR state unknown (no PR identity) · run: 01COMPLETED
+
+PARITY completed
+worker: state: done · source: run-step · run passed: PR state unknown (no PR identity) · run: 01COMPLETED
+primary: state: done · source: run-step · run passed: PR state unknown (no PR identity) · run: 01COMPLETED
+ok - completed primary and worker copies report the same current state

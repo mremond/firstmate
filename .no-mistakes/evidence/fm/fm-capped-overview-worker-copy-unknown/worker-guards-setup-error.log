@@ -1,0 +1,9 @@
+
+CASE phase_worker_inventory_guards (baseline=0)
+sed: 1: "1crepo: /Users/mremond/ ...": command c expects \ followed by text
+
+WORKER INVENTORY GUARD missing
+state: working · source: run-step · validating (running)
+not ok - missing must not yield a confident state (missing: 'state: unknown')
+--- output ---
+state: working · source: run-step · validating (running)

@@ -1,0 +1,22 @@
+
+CASE phase_worker_inventory_guards (baseline=0)
+
+WORKER INVENTORY GUARD missing
+state: unknown · source: run-step · complete same-branch run inventory unreadable; run ids: 01NEW; last reported run id: 01NEW
+ok - worker-copy missing inventory remains unknown without modifying the database
+
+WORKER INVENTORY GUARD mismatched
+state: unknown · source: run-step · complete same-branch run inventory unreadable; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+ok - worker-copy mismatched inventory remains unknown without modifying the database
+
+WORKER INVENTORY GUARD truncated
+state: unknown · source: run-step · unreadable runs table; run ids: 01NEW; last reported run id: 01NEW
+ok - worker-copy truncated inventory remains unknown without modifying the database
+
+WORKER INVENTORY GUARD ambiguous
+state: unknown · source: run-step · complete same-branch run inventory unreadable; run ids: 01NEW; last reported run id: 01NEW
+ok - worker-copy ambiguous inventory remains unknown without modifying the database
+
+WORKER INVENTORY GUARD competing
+state: unknown · source: run-step · competing live runs; run ids: 01NEW, 01OLD; last reported run id: 01NEW
+ok - worker-copy competing inventory remains unknown without modifying the database

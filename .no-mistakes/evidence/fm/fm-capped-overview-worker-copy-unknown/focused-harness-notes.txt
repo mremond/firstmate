@@ -1,0 +1,15 @@
+Target: e47d387ee4b1ede354c67078a135788cac8bac47
+Tree: cc80422c695839b6a89a8f0bee9474a41411af4d
+Base: f9f74a1d91cc7e105ec3df2249eda4e07f9ba540
+
+All successful acceptance checks here use fake no-mistakes and pane dependencies and temporary SQLite databases. They are automated behavioral evidence, not live validation.
+
+The focused harness executes definitions from tests/fm-crew-state.test.sh before its main invocation list (before the standalone test_captured_axi_status_shapes call), then appends focused-harness-fragment.sh. It is temporarily written beside the original test so the existing test helpers retain their normal root resolution. It wraps run_crew_state to retain the actual CLI verdict. Selected functions are passed as positional arguments and are listed in the CASE lines of the logs.
+
+For RED, PHASE_BASE=1 substitutes only bin/fm-nm-run-lib.sh from the base commit using .test-phase-tmp/base-bin: all other bin entries link to target files. Both new worker-copy cases exited 1 with the expected unknown/unreadable verdict. For GREEN, the unmodified target library was used; all selected cases exited 0. Additional worker-copy inventory guards and primary/worker parity checks also exited 0.
+
+The initial full tests/fm-crew-state.test.sh file run through bin/fm-test-run.sh was intentionally terminated with SIGTERM after 150 seconds to narrow scope; exit 143 is not an observed product failure and the full file is not claimed to pass. The focused run replaced it. An initial supplemental harness attempt had a macOS sed quoting error, retained in worker-guards-setup-error.log; the harness was fixed and rerun successfully.
+
+The installed CLI v1.75.2 was probed with no-mistakes axi from this exact worktree and returned exit 1: repo not initialized. No init, pipeline lifecycle, Herdr lifecycle, primary-checkout access, linter, formatter, or static analyzer was performed. The assigned phase cannot provision the genuine validation histories needed for live coverage. Evidence is CLI-only because the changed surface is a deterministic CLI reader, with no rendered UI change.
+
+All transient test helpers, linked baseline files, and generated test data were removed from the worktree; tracked source files remain unchanged.
