@@ -1,0 +1,3 @@
+wait_for_exit: owned pid 71626 exceeded 100 polls; sending TERM
+71626 71207 S    bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M36T2FRQ7YRZEDNQHMKG6PT7/bin/.nm-prechange-watch.sh
+not ok - the structural parked-gate proxy never woke the supervisor

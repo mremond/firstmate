@@ -1,0 +1,15 @@
+
+TEST: test_looping_wake_survives_busy_housekeeping
+ok - looping wakes survive routine, terminal, and paused daemon absorption without worker interruption
+
+TEST: test_enriched_stale_preserves_unread_status
+ok - looping and wedge escalations preserve unread questions before acknowledging them
+
+TEST: test_enriched_stale_preserves_unreadable_diagnostic
+ok - looping and wedge escalations preserve unreadable diagnostics and readable recovery
+
+TEST: test_stale_diagnostic_wedge_survives_busy_housekeeping
+ok - enriched stale wedges bypass status absorption except under a declared wait, without disturbing busy workers
+
+TEST: test_enriched_wedge_under_declared_wait_uses_pause_cadence
+ok - an enriched wedge under a declared wait uses the pause cadence and restores wedge detection on resume

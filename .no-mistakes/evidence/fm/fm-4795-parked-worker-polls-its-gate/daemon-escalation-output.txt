@@ -1,0 +1,31 @@
+Generated daemon escalation buffers from targeted fixture-based behavioral tests. No live harness or gate was used.
+
+CASE enriched-unread-looping
+sess:fm-unread-looping (looping 900s, escalation 1: structural proxy - inspect the pane); stale + actionable status: failed: gate validation failed ; needs-decision: approve the fix-review findings?
+
+CASE enriched-unread-wedge
+sess:fm-unread-wedge (idle 500s, possible wedge, escalation 3, demand-deep-inspection: inspect the pane); stale + actionable status: failed: gate validation failed ; needs-decision: approve the fix-review findings?
+
+CASE enriched-unreadable-looping
+unreadable-looping.status: needs-decision: approve the recovered findings?
+
+CASE enriched-unreadable-wedge
+unreadable-wedge.status: needs-decision: approve the recovered findings?
+
+CASE enriched-wedge-declared-wait
+sess:fm-paused-wedge-w1 (idle 250s, possible wedge, escalation 6)
+
+CASE looping-paused
+sess:fm-loop-paused (looping 900s, escalation 1: structural proxy - inspect the pane)
+
+CASE looping-prior-terminal
+sess:fm-loop-prior-terminal (looping 900s, escalation 1: structural proxy - inspect the pane)
+
+CASE looping-working
+sess:fm-loop-working (looping 900s, escalation 1: structural proxy - inspect the pane)
+
+CASE stale-diagnostic-prior-terminal
+sess:fm-suffix-prior-terminal (idle 500s, possible wedge, escalation 3, demand-deep-inspection: same pane has wedge-escalated 3 times in a row - do not re-absorb on the run-step/pane state alone)
+
+CASE stale-diagnostic-working
+sess:fm-suffix-working (idle 500s, possible wedge, escalation 3, demand-deep-inspection: same pane has wedge-escalated 3 times in a row - do not re-absorb on the run-step/pane state alone)

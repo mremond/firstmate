@@ -1,0 +1,29 @@
+{
+  "target": "70582ef2505a0be000dd57820e88fdc2041bb242",
+  "base": "1e0e77345cf49991401d562d2cfbd1ad35629764",
+  "live": false,
+  "watcher_log": "targeted-watch.log",
+  "watcher_cases_passed": 11,
+  "daemon_log": "targeted-daemon.log",
+  "daemon_cases_passed": 5,
+  "additional_probe": "Acknowledge the first looping wake, re-arm the production watcher, and verify the next durable wake reports escalation 2 (watcher-loop-output.txt).",
+  "counterfactuals": [
+    {
+      "ref": "1e0e77345cf49991401d562d2cfbd1ad35629764",
+      "test": "test_busy_turn_at_unchanged_parked_gate_wakes_as_looping",
+      "expected_exit": 1,
+      "observed_exit": 1,
+      "log": "red-original-loop.log"
+    },
+    {
+      "ref": "8611ab35",
+      "test": "test_enriched_stale_preserves_unread_status",
+      "expected_exit": 1,
+      "observed_exit": 1,
+      "log": "red-unread-status.log"
+    }
+  ],
+  "scope": "Watcher subprocesses and daemon handlers used fixture terminal/gate inputs. These are behavioral regression checks, not live end-to-end validation.",
+  "live_blocker": "no-mistakes axi status: repo not initialized. Test phase cannot init, start, or control a gate; it also cannot inspect another checkout or the bare gate repository.",
+  "remedy": "Arrange a pre-provisioned, authorized disposable parked gate and harness/supervisor lab inside the permitted boundary, then re-run live validation. Herdr lifecycle must use bin/fm-herdr-lab.sh with a named fm-lab-* session."
+}

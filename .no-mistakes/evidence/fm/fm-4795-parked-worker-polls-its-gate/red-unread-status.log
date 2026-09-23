@@ -1,0 +1,3 @@
+not ok - looping escalation discarded the unread question (missing: 'needs-decision: approve the fix-review findings?')
+--- output ---
+sess:fm-unread-looping (looping 900s, escalation 1: structural proxy - inspect the pane)

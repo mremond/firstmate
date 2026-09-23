@@ -1,0 +1,13 @@
+Fixture-based execution of the production watcher; gate and terminal inputs are stubs. Threshold: 1 second.
+
+First wake:
+stale: test:fm-parked-loop (looping 2s, escalation 1: structural proxy - continuously observed busy at the same parked gate - parked at fix_review: 2 finding(s) · ask-user: authority decision · run: 01RUNLOOP - with no run-step change or task worktree write; distinct read-only work can also match, so inspect the pane before steering the worker)
+
+Durable queue:
+1790160940	1	stale	test:fm-parked-loop	stale: test:fm-parked-loop (looping 2s, escalation 1: structural proxy - continuously observed busy at the same parked gate - parked at fix_review: 2 finding(s) · ask-user: authority decision · run: 01RUNLOOP - with no run-step change or task worktree write; distinct read-only work can also match, so inspect the pane before steering the worker)
+
+Second wake after ordinary acknowledgement and re-arm:
+stale: test:fm-parked-loop (looping 1s, escalation 2: structural proxy - continuously observed busy at the same parked gate - parked at fix_review: 2 finding(s) · ask-user: authority decision · run: 01RUNLOOP - with no run-step change or task worktree write; distinct read-only work can also match, so inspect the pane before steering the worker)
+
+Durable queue:
+1790160941	2	stale	test:fm-parked-loop	stale: test:fm-parked-loop (looping 1s, escalation 2: structural proxy - continuously observed busy at the same parked gate - parked at fix_review: 2 finding(s) · ask-user: authority decision · run: 01RUNLOOP - with no run-step change or task worktree write; distinct read-only work can also match, so inspect the pane before steering the worker)
