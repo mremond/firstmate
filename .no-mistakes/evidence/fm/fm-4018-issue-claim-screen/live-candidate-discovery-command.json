@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/opt/homebrew/bin/gh",
+    "api",
+    "graphql",
+    "-f",
+    "owner=kunchenguid",
+    "-f",
+    "name=firstmate",
+    "-f",
+    "query=query($owner:String!, $name:String!) {\n repository(owner:$owner,name:$name) {\n  issues(first:60,states:OPEN,orderBy:{field:UPDATED_AT,direction:DESC}) {\n   nodes { number title labels(first:12) { nodes { name } }\n    timelineItems(last:30,itemTypes:[CONNECTED_EVENT,DISCONNECTED_EVENT]) { nodes {\n      __typename\n      ... on ConnectedEvent { id createdAt source { ...peer } subject { ...peer } }\n      ... on DisconnectedEvent { id createdAt source { ...peer } subject { ...peer } }\n    } }\n   }\n  }\n }\n}\nfragment peer on ReferencedSubject {\n __typename\n ... on Issue { number repository { nameWithOwner } }\n ... on PullRequest { number state title body headRefName baseRefName repository { nameWithOwner } }\n}"
+  ],
+  "exit": 0,
+  "stderr": ""
+}

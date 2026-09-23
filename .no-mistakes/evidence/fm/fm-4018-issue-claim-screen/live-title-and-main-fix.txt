@@ -1,0 +1,7 @@
+$ bin/fm-issue-claim.sh --repo kunchenguid/firstmate --git-dir . --ref 9296f9b9d2566797b9a9aecaa5956bb8e471d2cd --sweep 4559 4260
+sweep: #4559 leave-open state=open verdict=claimed coverage=complete link=- evidence=claim: PR #4421 open [timeline]; claim: PR #5376 open [corpus:title]; hint: commit a452a79e 2026-09-19 fix(bin): prevent long worker launch command truncation (#4994) [history:cites]; claim: maintainer stamp outcome=existing-pr names no PR (https://github.com/kunchenguid/firstmate/issues/4559#issuecomment-5707472627) [stamp]; hint: maintainer stamp outcome=ready-for-pr (OWNER) 2026-09-15T22:27:39Z
+sweep: #4260 no-action state=closed verdict=fixed-on-main coverage=complete link=baede47d evidence=merged: PR #4656 merged base=main [timeline,fixes]; merged: commit baede47d 2026-09-16 fix(bin): preserve PR merge polls across volume remounts (#4656) [history:cites,history:fixes,fixes]; hint: PR lmuehleisen/firstmate#13 (closed) in another repository cross-references this issue; hint: maintainer stamp outcome=ready-for-pr (OWNER) 2026-09-12T06:16:49Z
+sweep: 2 issue(s) screened; nothing was written to the forge - no issue closed, labelled, or commented on
+
+Exit: 0
+Elapsed: 35.68s

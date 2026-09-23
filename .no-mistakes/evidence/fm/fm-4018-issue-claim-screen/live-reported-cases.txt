@@ -1,0 +1,95 @@
+$ bin/fm-issue-claim.sh --repo kunchenguid/firstmate --git-dir . --ref 9296f9b9d2566797b9a9aecaa5956bb8e471d2cd 3928 3926 3966 3942 3370 4412 4482 4316
+=== #3928 state=closed author=NewAiCoder-bot labels=ready-for-pr :: fix(guard): away-mode false watcher alarms - derive the beacon grace from the poll cadence instead o
+verdict: open
+checks: issue=ok timeline=ok stamps=ok corpus=ok(1270/1270) fork=none history=ok(9296f9b9d2566797b9a9aecaa5956bb8e471d2cd@9296f9b9 2026-09-23) prs=ok
+coverage: complete
+hint: PR #3946 merged base=main by NewAiCoder-bot :: fix(bin): derive watcher beacon staleness grace from poll cadence [timeline]
+hint: issue kunchenguid/firstmate#4018 (open) cross-references this issue
+hint: maintainer stamp outcome=ready-for-pr by kunchenguid (OWNER) 2026-09-07T14:57:23Z
+hint: maintainer stamp outcome=closed-fixed by kunchenguid (OWNER) 2026-09-11T02:22:13Z
+disclose: issue is closed, not open
+disclose: no repository NewAiCoder-bot/firstmate; a fork under another name is not searched
+
+=== #3926 state=closed author=NewAiCoder-bot labels=ready-for-pr :: fix(claude): pre-approve the external CLAUDE.md imports dialog for spawned workers (trust registrati
+verdict: fixed-on-main
+checks: issue=ok timeline=ok stamps=ok corpus=ok(1270/1270) fork=none history=ok(9296f9b9d2566797b9a9aecaa5956bb8e471d2cd@9296f9b9 2026-09-23) prs=ok
+coverage: complete
+merged: PR #3944 merged base=main by NewAiCoder-bot :: fix(bin): pre-approve external CLAUDE.md import dialog for spawned workers [timeline,fixes]
+hint: issue kunchenguid/firstmate#4018 (open) cross-references this issue
+hint: issue kunchenguid/firstmate#4520 (open) cross-references this issue
+hint: maintainer stamp outcome=ready-for-pr by kunchenguid (OWNER) 2026-09-07T14:57:26Z
+disclose: issue is closed, not open
+disclose: no repository NewAiCoder-bot/firstmate; a fork under another name is not searched
+
+=== #3966 state=open author=princegkwk labels=ready-for-pr :: status-presentation lock: a dead owner is not reclaimed, so every wake drain blocks until its timeou
+verdict: claimed
+checks: issue=ok timeline=ok stamps=ok corpus=ok(1270/1270) fork=none history=ok(9296f9b9d2566797b9a9aecaa5956bb8e471d2cd@9296f9b9 2026-09-23) prs=ok
+coverage: complete
+claim: PR #3977 open by eduardstan :: fix(bin): reclaim a status-presentation lock whose owner pid is dead or recycled [timeline,corpus:body+branch]
+hint: issue kunchenguid/firstmate#4018 (open) cross-references this issue
+hint: maintainer stamp outcome=ready-for-pr by kunchenguid (OWNER) 2026-09-08T06:19:58Z
+disclose: no repository princegkwk/firstmate; a fork under another name is not searched
+
+=== #3942 state=open author=sunildeesu labels=- :: Declared `paused:` external wait does not suppress the watcher's pane-based stale alarm 
+verdict: claimed
+checks: issue=ok timeline=ok stamps=ok corpus=ok(1270/1270) fork=none history=ok(9296f9b9d2566797b9a9aecaa5956bb8e471d2cd@9296f9b9 2026-09-23) prs=ok
+coverage: complete
+claim: PR #3978 open by scfconnect :: fix(bin): keep a declared external wait from re-arming the stale alarm (#3942) [timeline,corpus:body+title,stamp,fixes]
+hint: issue kunchenguid/firstmate#3941 (open) cross-references this issue
+hint: issue kunchenguid/firstmate#3984 (open) cross-references this issue
+hint: issue kunchenguid/firstmate#4018 (open) cross-references this issue
+hint: issue kunchenguid/firstmate#4154 (open) cross-references this issue
+hint: maintainer stamp outcome=ready-for-pr by kunchenguid (OWNER) 2026-09-07T19:04:08Z
+disclose: no repository sunildeesu/firstmate; a fork under another name is not searched
+
+=== #3370 state=open author=luigia labels=ready-for-pr :: PR merge poll registrations break after a macOS reboot: file identity binds st_dev, which APFS reass
+verdict: open
+checks: issue=ok timeline=ok stamps=ok corpus=ok(1270/1270) fork=none history=ok(9296f9b9d2566797b9a9aecaa5956bb8e471d2cd@9296f9b9 2026-09-23) prs=ok
+coverage: complete
+hint: issue EvanAgee/firstmate#81 (closed) cross-references this issue
+hint: issue kunchenguid/firstmate#3856 (closed) cross-references this issue
+hint: maintainer stamp outcome=ready-for-pr by kunchenguid (OWNER) 2026-08-31T06:24:27Z
+hint: maintainer stamp outcome=ready-for-pr by kunchenguid (OWNER) 2026-09-13T02:27:37Z
+disclose: no repository luigia/firstmate; a fork under another name is not searched
+
+=== #4412 state=open author=sthi-1005 labels=ready-for-pr :: Bug: stale task records and repetitive supervision notices obscure approvals and distort Bearings 
+verdict: claimed
+checks: issue=ok timeline=ok stamps=ok corpus=ok(1270/1270) fork=none history=ok(9296f9b9d2566797b9a9aecaa5956bb8e471d2cd@9296f9b9 2026-09-23) prs=ok
+coverage: complete
+claim: PR #4832 open by mremond :: feat(agents): make attention-preserving supervision the default posture [timeline,corpus:body]
+hint: PR #4775 merged base=main by umeranjum17 :: fix(bin): report a dead-agent record once instead of escalating forever [timeline]
+hint: commit 9bc051ff 2026-09-17 fix(bin): report a dead-agent record once instead of escalating forever (#4775) [history:cites]
+hint: issue kunchenguid/firstmate#4414 (open) cross-references this issue
+hint: issue kunchenguid/firstmate#4540 (closed) cross-references this issue
+hint: issue kunchenguid/firstmate#4722 (closed) cross-references this issue
+hint: issue kunchenguid/firstmate#4824 (open) cross-references this issue
+hint: maintainer stamp outcome=ready-for-pr by kunchenguid (OWNER) 2026-09-14T06:27:52Z
+disclose: no repository sthi-1005/firstmate; a fork under another name is not searched
+
+=== #4482 state=open author=aminry labels=- :: Watcher wedge-escalates a lane whose validation step is actively producing output 
+verdict: claimed
+checks: issue=ok timeline=ok stamps=ok corpus=ok(1270/1270) fork=ok history=ok(9296f9b9d2566797b9a9aecaa5956bb8e471d2cd@9296f9b9 2026-09-23) prs=ok
+coverage: complete
+claim: PR #4380 open by aminry :: feat(bin): defer wedge escalation on pipeline activity behind an opt-in flag [timeline,corpus:body,fixes]
+claim: maintainer stamp outcome=existing-pr names no PR (https://github.com/kunchenguid/firstmate/issues/4482#issuecomment-5673804758) [stamp]
+hint: PR #4775 merged base=main by umeranjum17 :: fix(bin): report a dead-agent record once instead of escalating forever [timeline]
+hint: commit 9bc051ff 2026-09-17 fix(bin): report a dead-agent record once instead of escalating forever (#4775) [history:cites]
+hint: issue kunchenguid/firstmate#4722 (closed) cross-references this issue
+hint: issue kunchenguid/firstmate#5229 (open) cross-references this issue
+hint: issue kunchenguid/firstmate#5230 (open) cross-references this issue
+
+=== #4316 state=open author=morecoffeyplease labels=- :: watcher guard: a slow poll cycle under load is reported as a failed/wedged watcher 
+verdict: claimed
+checks: issue=ok timeline=ok stamps=ok corpus=ok(1270/1270) fork=ok history=ok(9296f9b9d2566797b9a9aecaa5956bb8e471d2cd@9296f9b9 2026-09-23) prs=ok
+coverage: complete
+claim: PR #4051 open by mejerome :: fix(bin): make settled pending-reply tick pass subprocess- and lock-free [timeline]
+claim: PR #3854 open by kunchenguid :: fix: harden watcher liveness and stale-holder recovery [stamp]
+hint: PR #4775 merged base=main by umeranjum17 :: fix(bin): report a dead-agent record once instead of escalating forever [timeline]
+hint: commit 9bc051ff 2026-09-17 fix(bin): report a dead-agent record once instead of escalating forever (#4775) [history:cites]
+hint: issue kunchenguid/firstmate#4236 (open) cross-references this issue
+hint: issue kunchenguid/firstmate#4508 (open) cross-references this issue
+hint: issue kunchenguid/firstmate#4722 (closed) cross-references this issue
+
+
+Exit: 0
+Elapsed: 80.59s

@@ -1,0 +1,10 @@
+{"time": 1790174836.3548522, "argv": ["api", "search/issues?q=repo:kunchenguid/firstmate+is:pr+is:open&per_page=1"], "read_allowed": true}
+{"time": 1790174836.9075992, "argv": ["api", "repos/kunchenguid/firstmate/pulls?state=open&per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174857.25757, "argv": ["api", "search/issues?q=repo:kunchenguid/firstmate+is:pr+is:open&per_page=1"], "read_allowed": true}
+{"time": 1790174861.155082, "argv": ["api", "repos/kunchenguid/firstmate"], "read_allowed": true}
+{"time": 1790174861.676744, "argv": ["api", "repos/kunchenguid/firstmate/issues/5415"], "read_allowed": true}
+{"time": 1790174862.115048, "argv": ["api", "repos/kunchenguid/firstmate/issues/5415/timeline?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174862.541739, "argv": ["api", "repos/kunchenguid/firstmate/issues/5415/comments?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174864.091169, "argv": ["api", "repos/gilrallo/firstmate"], "read_allowed": true}
+{"time": 1790174864.5022972, "argv": ["api", "repos/kunchenguid/firstmate/issues/999999999"], "read_allowed": true}
+{"time": 1790174864.857873, "argv": ["api", "repos/kunchenguid/firstmate/issues/3944"], "read_allowed": true}

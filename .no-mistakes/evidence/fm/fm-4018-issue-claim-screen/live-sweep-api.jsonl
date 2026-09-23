@@ -1,0 +1,51 @@
+{"time": 1790174808.218787, "argv": ["api", "search/issues?q=repo:kunchenguid/firstmate+is:pr+is:open&per_page=1"], "read_allowed": true}
+{"time": 1790174809.729758, "argv": ["api", "repos/kunchenguid/firstmate/pulls?state=open&per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174828.062336, "argv": ["api", "search/issues?q=repo:kunchenguid/firstmate+is:pr+is:open&per_page=1"], "read_allowed": true}
+{"time": 1790174831.9315672, "argv": ["api", "repos/kunchenguid/firstmate"], "read_allowed": true}
+{"time": 1790174832.4232728, "argv": ["api", "repos/kunchenguid/firstmate/issues/3370"], "read_allowed": true}
+{"time": 1790174832.888312, "argv": ["api", "repos/kunchenguid/firstmate/issues/3370/timeline?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174833.467262, "argv": ["api", "repos/kunchenguid/firstmate/issues/3370/comments?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174834.920716, "argv": ["api", "repos/luigia/firstmate"], "read_allowed": true}
+{"time": 1790174836.009872, "argv": ["api", "repos/kunchenguid/firstmate/issues/4412"], "read_allowed": true}
+{"time": 1790174836.500013, "argv": ["api", "repos/kunchenguid/firstmate/issues/4412/timeline?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174837.20641, "argv": ["api", "repos/kunchenguid/firstmate/issues/4412/comments?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174838.5638962, "argv": ["api", "repos/sthi-1005/firstmate"], "read_allowed": true}
+{"time": 1790174839.0809212, "argv": ["api", "repos/kunchenguid/firstmate/pulls/4775"], "read_allowed": true}
+{"time": 1790174839.943269, "argv": ["api", "graphql", "--paginate", "-f", "owner=kunchenguid", "-f", "name=firstmate", "-F", "number=4775", "-f", "query=query($owner: String!, $name: String!, $number: Int!, $endCursor: String) { repository(owner: $owner, name: $name) { pullRequest(number: $number) { closingIssuesReferences(first: 100, after: $endCursor) { nodes { number repository { nameWithOwner } } pageInfo { hasNextPage endCursor } } } } }"], "read_allowed": true}
+{"time": 1790174840.564289, "argv": ["api", "repos/kunchenguid/firstmate/issues/3928"], "read_allowed": true}
+{"time": 1790174841.035777, "argv": ["api", "repos/kunchenguid/firstmate/issues/3928/timeline?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174841.6569128, "argv": ["api", "repos/kunchenguid/firstmate/issues/3928/comments?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174843.0401468, "argv": ["api", "repos/NewAiCoder-bot/firstmate"], "read_allowed": true}
+{"time": 1790174843.515188, "argv": ["api", "repos/kunchenguid/firstmate/pulls/3946"], "read_allowed": true}
+{"time": 1790174844.300752, "argv": ["api", "graphql", "--paginate", "-f", "owner=kunchenguid", "-f", "name=firstmate", "-F", "number=3946", "-f", "query=query($owner: String!, $name: String!, $number: Int!, $endCursor: String) { repository(owner: $owner, name: $name) { pullRequest(number: $number) { closingIssuesReferences(first: 100, after: $endCursor) { nodes { number repository { nameWithOwner } } pageInfo { hasNextPage endCursor } } } } }"], "read_allowed": true}
+{"time": 1790174845.009421, "argv": ["api", "repos/kunchenguid/firstmate/issues/3926"], "read_allowed": true}
+{"time": 1790174845.9495502, "argv": ["api", "repos/kunchenguid/firstmate/issues/3926/timeline?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174846.5688, "argv": ["api", "repos/kunchenguid/firstmate/issues/3926/comments?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174847.945292, "argv": ["api", "repos/NewAiCoder-bot/firstmate"], "read_allowed": true}
+{"time": 1790174848.4143791, "argv": ["api", "repos/kunchenguid/firstmate/pulls/3944"], "read_allowed": true}
+{"time": 1790174849.280128, "argv": ["api", "repos/kunchenguid/firstmate/issues/3966"], "read_allowed": true}
+{"time": 1790174849.728367, "argv": ["api", "repos/kunchenguid/firstmate/issues/3966/timeline?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174850.299435, "argv": ["api", "repos/kunchenguid/firstmate/issues/3966/comments?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174851.680035, "argv": ["api", "repos/princegkwk/firstmate"], "read_allowed": true}
+{"time": 1790174852.347967, "argv": ["api", "repos/kunchenguid/firstmate/issues/3942"], "read_allowed": true}
+{"time": 1790174852.881629, "argv": ["api", "repos/kunchenguid/firstmate/issues/3942/timeline?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174853.5404742, "argv": ["api", "repos/kunchenguid/firstmate/issues/3942/comments?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174855.079693, "argv": ["api", "repos/sunildeesu/firstmate"], "read_allowed": true}
+{"time": 1790174855.517767, "argv": ["api", "repos/kunchenguid/firstmate/pulls/3978"], "read_allowed": true}
+{"time": 1790174856.282631, "argv": ["api", "repos/kunchenguid/firstmate/issues/4316"], "read_allowed": true}
+{"time": 1790174856.783565, "argv": ["api", "repos/kunchenguid/firstmate/issues/4316/timeline?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174857.43384, "argv": ["api", "repos/kunchenguid/firstmate/issues/4316/comments?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174858.852533, "argv": ["api", "repos/morecoffeyplease/firstmate"], "read_allowed": true}
+{"time": 1790174859.3326452, "argv": ["api", "repos/morecoffeyplease/firstmate/branches?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174859.832022, "argv": ["api", "repos/kunchenguid/firstmate/pulls/3854"], "read_allowed": true}
+{"time": 1790174860.627959, "argv": ["api", "repos/kunchenguid/firstmate/pulls/4775"], "read_allowed": true}
+{"time": 1790174861.355242, "argv": ["api", "graphql", "--paginate", "-f", "owner=kunchenguid", "-f", "name=firstmate", "-F", "number=4775", "-f", "query=query($owner: String!, $name: String!, $number: Int!, $endCursor: String) { repository(owner: $owner, name: $name) { pullRequest(number: $number) { closingIssuesReferences(first: 100, after: $endCursor) { nodes { number repository { nameWithOwner } } pageInfo { hasNextPage endCursor } } } } }"], "read_allowed": true}
+{"time": 1790174861.903649, "argv": ["api", "repos/kunchenguid/firstmate/issues/5349"], "read_allowed": true}
+{"time": 1790174862.3959098, "argv": ["api", "repos/kunchenguid/firstmate/issues/5349/timeline?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174863.0297441, "argv": ["api", "repos/kunchenguid/firstmate/issues/5349/comments?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174864.478536, "argv": ["api", "repos/osantis/firstmate"], "read_allowed": true}
+{"time": 1790174865.1393769, "argv": ["api", "repos/osantis/firstmate/branches?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174865.655048, "argv": ["api", "repos/kunchenguid/firstmate/issues/5415"], "read_allowed": true}
+{"time": 1790174866.176262, "argv": ["api", "repos/kunchenguid/firstmate/issues/5415/timeline?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174866.625986, "argv": ["api", "repos/kunchenguid/firstmate/issues/5415/comments?per_page=100", "--paginate"], "read_allowed": true}
+{"time": 1790174867.9786298, "argv": ["api", "repos/gilrallo/firstmate"], "read_allowed": true}

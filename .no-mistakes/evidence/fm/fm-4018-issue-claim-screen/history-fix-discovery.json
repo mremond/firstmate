@@ -1,0 +1,120 @@
+{
+  "history_matches": {
+    "3419": "7e0e60a2\tfix(bin): prune a torn-down task's wake rows at teardown (#5390)",
+    "4765": "dd9f2b4e\tfix(bin): stop secondmate relaunch failing when watcher scratch files vanish (#4900)",
+    "4757": "dbc0bc4b\tfix(bin): require a non-draft pull request before a PR-based done report (#5141)",
+    "5012": "804394e8\tfix(bin): render the remote charter's steering-inbox path host-local (#5049)",
+    "3055": "9aabe3b4\tfeat(bin): defer the wedge escalation for a lane parked at a supervisor-owed gate (#4974)",
+    "4669": "3eb5b633\tfix(bin): settle terminal contribution observations (Fixes #4669, Fixes #4670) (#4710)",
+    "4670": "3eb5b633\tfix(bin): settle terminal contribution observations (Fixes #4669, Fixes #4670) (#4710)",
+    "4260": "baede47d\tfix(bin): preserve PR merge polls across volume remounts (#4656)",
+    "4469": "af1f2ea3\tfix: restore published contribution follow-up (Fixes #4469) (#4627)",
+    "4607": "7111081c\tfix(bin): report verified PR state for passed runs (#4624)",
+    "3731": "8b944a1b\tfeat(bin): add read-only PR blocker and reviewer discovery commands (#4278)",
+    "2356": "b518a256\tfeat(afk): add quiet supervision mode for a present captain (#4337)",
+    "3770": "eb0ea3ab\ttest: isolate fixture Git config from host global and system settings (#3825)",
+    "4115": "e0d269e0\tfix(herdr): verify agent liveness at process level before trusting registration (#4191)",
+    "4096": "5300a4f5\tfix(bin): escalate decision-owned wakes once as the decision (#4169)",
+    "4091": "3e817d3f\tfix(herdr): recover gone and drifted worker endpoints (#4120)",
+    "3856": "29015a26\tfix(bin): keep supervision armed for registered custom checks (#3860)",
+    "3741": "64304b6b\tfix: protect primary checkout when spawning from linked homes (#3783)"
+  },
+  "graphql": {
+    "data": {
+      "repository": {
+        "i3419": {
+          "number": 3419,
+          "state": "CLOSED",
+          "title": "Torn-down task's turn-ended marker keeps returning in signal wakes; teardown never removes its .seen-* bookkeeping"
+        },
+        "i4765": {
+          "number": 4765,
+          "state": "CLOSED",
+          "title": "Second-mate restart refuses on a transient find failure while scanning a busy state directory"
+        },
+        "i4757": {
+          "number": 4757,
+          "state": "CLOSED",
+          "title": "A PR-based ship task can report done while the pull request is still a draft"
+        },
+        "i5012": {
+          "number": 5012,
+          "state": "CLOSED",
+          "title": "Remote secondmate charter briefs render parent-home paths for surfaces that are host-local on a remote route"
+        },
+        "i3055": {
+          "number": 3055,
+          "state": "CLOSED",
+          "title": "Watcher wedge-escalates a lane that is correctly parked at a validation gate, indefinitely"
+        },
+        "i4669": {
+          "number": 4669,
+          "state": "CLOSED",
+          "title": "contributions: merged PR never reaches a terminal observation state, so 'observation unavailable' wakes recur forever"
+        },
+        "i4670": {
+          "number": 4670,
+          "state": "CLOSED",
+          "title": "Contribution observer polls done-task PRs and loops on forge-read failures"
+        },
+        "i4260": {
+          "number": 4260,
+          "state": "CLOSED",
+          "title": "PR-merge-poll trust check breaks on macOS device-ID renumbering after reboot"
+        },
+        "i4469": {
+          "number": 4469,
+          "state": "CLOSED",
+          "title": "Bug: nothing tells the captain whether a published contribution still needs them, so the outward surface is tracked by hand"
+        },
+        "i4607": {
+          "number": 4607,
+          "state": "CLOSED",
+          "title": "fm-crew-state reports 'run passed: PR merged/closed' without reading the PR, so an open PR can be reported as merged"
+        },
+        "i3731": {
+          "number": 3731,
+          "state": "CLOSED",
+          "title": "Add read-only PR blocker and reviewer-discovery commands"
+        },
+        "i2356": {
+          "number": 2356,
+          "state": "CLOSED",
+          "title": "Quiet supervision mode while the captain is present (Claude Code primary)"
+        },
+        "i3770": {
+          "number": 3770,
+          "state": "CLOSED",
+          "title": "Behavior-test fixture commits inherit global Git signing and fail before assertions"
+        },
+        "i4115": {
+          "number": 4115,
+          "state": "CLOSED",
+          "title": "Recovery classifier trusts a stale herdr agent registration as 'live', blocking relaunch/spawn after a Pi crew exits to a shell"
+        },
+        "i4096": {
+          "number": 4096,
+          "state": "CLOSED",
+          "title": "Decision-owned wakes never reach escalation suppression, so an open decision re-escalates on every poll"
+        },
+        "i4091": {
+          "number": 4091,
+          "state": "CLOSED",
+          "title": "fm-spawn --reuse-worktree refuses recovery as 'unreadable' when the herdr pane/workspace is confirmed completely gone (should be 'missing')"
+        },
+        "i3856": {
+          "number": 3856,
+          "state": "CLOSED",
+          "title": "Registered custom checks stop polling when the home has no in-flight task"
+        },
+        "i3741": {
+          "number": 3741,
+          "state": "CLOSED",
+          "title": "A linked spawning home can accept and reset its repository's primary directory as a worker copy"
+        }
+      }
+    }
+  },
+  "exit": 0,
+  "stderr": ""
+}

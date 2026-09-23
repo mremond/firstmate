@@ -1,0 +1,30 @@
+{
+  "target": "07a5ada4516cdd957763b17345f9f5c2ad23dbfa",
+  "checks": "Observed CLI transcript assertions passed",
+  "api_audit": [
+    {
+      "run": "live-incomplete-reads-api",
+      "forge_reads": 10,
+      "corpus_fetch_invocations": 1,
+      "mutating_calls": 0
+    },
+    {
+      "run": "live-reported-cases-api",
+      "forge_reads": 49,
+      "corpus_fetch_invocations": 1,
+      "mutating_calls": 0
+    },
+    {
+      "run": "live-sweep-api",
+      "forge_reads": 51,
+      "corpus_fetch_invocations": 1,
+      "mutating_calls": 0
+    },
+    {
+      "run": "live-title-and-main-fix-api",
+      "forge_reads": 15,
+      "corpus_fetch_invocations": 1,
+      "mutating_calls": 0
+    }
+  ]
+}
