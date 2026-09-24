@@ -1,0 +1,15 @@
+$ bash bin/fm-pr-merge.sh validation-only https://github.com/kunchenguid/firstmate/pull/5353 --allow-missing
+
+error: --allow-missing requires a check name
+
+exit=2
+$ bash bin/fm-pr-merge.sh validation-only https://github.com/kunchenguid/firstmate/pull/5353 --allow-missing=validate
+
+error: --allow-missing requires a separate check name argument
+
+exit=2
+$ bash bin/fm-pr-merge.sh validation-only https://github.com/kunchenguid/firstmate/pull/5353 --allow-missing validate --allow-missing other
+
+error: --allow-missing may be specified only once
+
+exit=2
