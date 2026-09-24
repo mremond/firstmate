@@ -1,0 +1,23 @@
+missing-value
+$ bash bin/fm-pr-merge.sh test-live https://github.com/example/repo/pull/1 --allow-missing
+error: --allow-missing requires a check name
+
+exit=2
+
+equals-form
+$ bash bin/fm-pr-merge.sh test-live https://github.com/example/repo/pull/1 --allow-missing=validate
+error: --allow-missing requires a separate check name argument
+
+exit=2
+
+duplicate-waiver
+$ bash bin/fm-pr-merge.sh test-live https://github.com/example/repo/pull/1 --allow-missing validate --allow-missing lint
+error: --allow-missing may be specified only once
+
+exit=2
+
+gitlab-waiver
+$ bash bin/fm-pr-merge.sh test-live https://gitlab.example/group/repo/-/merge_requests/1 --allow-missing validate
+error: --allow-missing does not apply to GitLab, where a merge already requires the head pipeline to have succeeded
+
+exit=2
