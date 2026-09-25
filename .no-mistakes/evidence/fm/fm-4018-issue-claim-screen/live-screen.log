@@ -1,0 +1,50 @@
+=== #3928 state=closed author=NewAiCoder-bot labels=ready-for-pr :: fix(guard): away-mode false watcher alarms - derive the beacon grace from the poll cadence instead o
+verdict: claimed
+checks: issue=ok timeline=ok stamps=ok corpus=ok(1356/1356) fork=none history=ok(HEAD@0e90c7ff 2026-09-25) prs=ok
+coverage: complete
+claim: PR #5434 open by mremond :: feat(bin): add read-only GitHub issue claim screening [timeline,corpus:body]
+hint: PR #3946 merged base=main by NewAiCoder-bot :: fix(bin): derive watcher beacon staleness grace from poll cadence [timeline]
+hint: commit 8f777aa9 2026-09-25 feat(bin): screen upstream issues for an existing claim or fix before work is s [history:cites]
+hint: issue kunchenguid/firstmate#4018 (open) cross-references this issue
+hint: maintainer stamp outcome=ready-for-pr by kunchenguid (OWNER) 2026-09-07T14:57:23Z
+hint: maintainer stamp outcome=closed-fixed by kunchenguid (OWNER) 2026-09-11T02:22:13Z
+disclose: issue is closed, not open
+disclose: no repository NewAiCoder-bot/firstmate; a fork under another name is not searched
+
+=== #3926 state=closed author=NewAiCoder-bot labels=ready-for-pr :: fix(claude): pre-approve the external CLAUDE.md imports dialog for spawned workers (trust registrati
+verdict: partially-covered
+checks: issue=ok timeline=ok stamps=ok corpus=ok(1356/1356) fork=none history=ok(HEAD@0e90c7ff 2026-09-25) prs=ok
+coverage: complete
+merged: PR #3944 merged base=main by NewAiCoder-bot :: fix(bin): pre-approve external CLAUDE.md import dialog for spawned workers [timeline,fixes]
+claim: PR #5434 open by mremond :: feat(bin): add read-only GitHub issue claim screening [timeline,corpus:body]
+hint: commit 8f777aa9 2026-09-25 feat(bin): screen upstream issues for an existing claim or fix before work is s [history:cites]
+hint: issue kunchenguid/firstmate#4018 (open) cross-references this issue
+hint: issue kunchenguid/firstmate#4520 (open) cross-references this issue
+hint: maintainer stamp outcome=ready-for-pr by kunchenguid (OWNER) 2026-09-07T14:57:26Z
+disclose: issue is closed, not open
+disclose: no repository NewAiCoder-bot/firstmate; a fork under another name is not searched
+
+=== #3370 state=closed author=luigia labels=ready-for-pr :: PR merge poll registrations break after a macOS reboot: file identity binds st_dev, which APFS reass
+verdict: claimed
+checks: issue=ok timeline=ok stamps=ok corpus=ok(1356/1356) fork=none history=ok(HEAD@0e90c7ff 2026-09-25) prs=ok
+coverage: complete
+claim: PR #5434 open by mremond :: feat(bin): add read-only GitHub issue claim screening [timeline,corpus:body]
+hint: commit 8f777aa9 2026-09-25 feat(bin): screen upstream issues for an existing claim or fix before work is s [history:cites]
+hint: issue EvanAgee/firstmate#81 (closed) cross-references this issue
+hint: issue kunchenguid/firstmate#3856 (closed) cross-references this issue
+hint: maintainer stamp outcome=ready-for-pr by kunchenguid (OWNER) 2026-08-31T06:24:27Z
+hint: maintainer stamp outcome=ready-for-pr by kunchenguid (OWNER) 2026-09-13T02:27:37Z
+hint: triage-style stamp outcome=close-fixed by devin-ai-integration[bot] (NONE) is not a maintainer stamp
+disclose: issue is closed, not open
+disclose: no repository luigia/firstmate; a fork under another name is not searched
+
+=== #4018 state=open author=dbeihl-utilicast labels=enhancement,ready-for-pr :: Backlog hygiene: open issues stay open past the merge/PR that resolves them, get handed out as uncla
+verdict: claimed
+checks: issue=ok timeline=ok stamps=ok corpus=ok(1356/1356) fork=ok history=ok(HEAD@0e90c7ff 2026-09-25) prs=ok
+coverage: complete
+claim: PR #5434 open by mremond :: feat(bin): add read-only GitHub issue claim screening [timeline,corpus:body+branch]
+hint: commit 0e90c7ff 2026-09-25 feat(bin): gate the Bearings issue-claim screen behind an explicit opt-in [history:cites]
+hint: commit 8f777aa9 2026-09-25 feat(bin): screen upstream issues for an existing claim or fix before work is s [history:cites]
+hint: maintainer stamp outcome=ready-for-pr by kunchenguid (OWNER) 2026-09-08T18:54:20Z
+hint: triage-style stamp outcome=ready-for-pr by devin-ai-integration[bot] (NONE) is not a maintainer stamp
+

@@ -1,0 +1,25 @@
+ok - whole-number and same-repository boundaries hold; a body citation is a claim
+ok - title and branch corpus matches are reported with their source
+ok - an issue with nothing found and full coverage is open
+ok - history distinguishes fixing references from symbol hints
+ok - maintainer stamps and timeline PRs decide; other stamps, prose, and foreign PRs are hints
+ok - Development links respect direction, pagination, disconnects, reconnects, and PR state
+ok - failed, incomplete, and unresolved Development links never produce open
+ok - numeric, boolean, and null-looking owner and repository names remain GraphQL strings
+ok - fork PRs need a fixing reference before close or link recommendations
+ok - related commits and timeline references remain hints after helper withdrawal
+ok - fixing references respect repository and number boundaries and preserve commit identity
+ok - stamps preserve claims but require fixing references for merged verdicts
+ok - closing references are paginated, repository-bound fixing evidence and failures remain incomplete
+ok - timeline, fork, stamp, and closing-reference fixes share the default-base requirement
+ok - both paginated lists deduplicate identities and reject inconsistent or unreadable totals
+ok - failed, rate-limited, and misdirected reads produce unknown, never open
+ok - a short, unverified, or failed corpus is disclosed and never trusted for open
+ok - a history check that cannot look yields unknown
+ok - each run fetches one fresh corpus and refuses persistence options
+ok - only same-repository fixing references yield corpus link recommendations
+ok - every forge call is a read
+ok - sweep dispositions come only from durable evidence and full coverage
+ok - a sweep with no issue numbers screens every listed open issue
+ok - usage errors exit 2 and --help states the limits
+ok - the gated screen runs only in an opted-in home; explicit calls are unchanged

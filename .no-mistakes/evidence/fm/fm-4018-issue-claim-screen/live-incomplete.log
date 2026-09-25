@@ -1,0 +1,18 @@
+=== #5415 state=open author=gilrallo labels=existing-pr :: Watcher re-surfaces a live worker's declared paused: wait as stale every few polls 
+verdict: claimed
+checks: issue=ok timeline=ok stamps=ok corpus=ok(1356/1356) fork=none history=failed prs=ok
+coverage: incomplete (history)
+claim: PR #5434 open by mremond :: feat(bin): add read-only GitHub issue claim screening [timeline,corpus:body]
+claim: maintainer stamp outcome=existing-pr names no PR (https://github.com/kunchenguid/firstmate/issues/5415#issuecomment-5797288304) [stamp]
+hint: triage-style stamp outcome=existing-pr by devin-ai-integration[bot] (NONE) is not a maintainer stamp
+disclose: no repository gilrallo/firstmate; a fork under another name is not searched
+disclose: history check could not look: ref claim-validation-missing-ref does not resolve in .
+
+=== #999999999
+verdict: unknown
+checks: issue=failed
+coverage: incomplete (issue)
+disclose: issue could not be read: gh: Not Found (HTTP 404)
+
+
+exit=1
