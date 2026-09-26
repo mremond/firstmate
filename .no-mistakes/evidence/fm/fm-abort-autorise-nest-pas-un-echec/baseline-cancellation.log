@@ -1,0 +1,3 @@
+not ok - captured cancellation has no verdict: state: failed · source: run-step · run cancelled (missing: 'state: unknown')
+--- output ---
+state: failed · source: run-step · run cancelled
