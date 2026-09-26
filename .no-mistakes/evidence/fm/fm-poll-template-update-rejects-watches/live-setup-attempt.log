@@ -1,0 +1,59 @@
+update arm good-a: ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+armed: state/good-a.check.sh
+update arm good-b: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/good-b.check.sh
+update arm tampered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/tampered.check.sh
+update arm unregistered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/unregistered.check.sh
+update arm swapped: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/swapped.check.sh
+update arm sidecar: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/sidecar.check.sh
+update arm metadata: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/metadata.check.sh
+
+update PUBLIC UPDATE:
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+pr-poll-refresh: refreshed good-a
+pr-poll-refresh: refreshed good-b
+pr-poll-refresh: rejected metadata; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected sidecar; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected swapped; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected tampered; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected unregistered; prior poll could not be authenticated or republished
+firstmate: merge watch refresh incomplete; see pr-poll-refresh diagnostics
+firstmate: updated ef8def7..4cf9574 (instructions changed: bin)
+no watches registered
+reread-firstmate: yes
+restart-secondmates: none
+nudge-secondmates: none
+
+update strict authentication good-a: True
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M3FCKWBCCB69NWKSQ060P8EE/live.py", line 53, in <module>
+    p=run([s/f'{ident}.check.sh']); assert p.stdout.strip()=='merged'; print(f'{route} real GitHub poll {ident}: {p.stdout.strip()}',flush=True)
+  File "/Users/mremond/.no-mistakes/evidence/01M3FCKWBCCB69NWKSQ060P8EE/live.py", line 9, in run
+    p=subprocess.run([str(x) for x in args],cwd=cwd,env=e or env,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 555, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1990, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3FCKWBCCB69NWKSQ060P8EE/.test-tmp/live/update/home/state/good-a.check.sh'

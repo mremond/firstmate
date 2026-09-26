@@ -1,0 +1,6 @@
+ok - update template update refreshes several registered watches and rejects tampered or unregistered checks
+ok - fleet template update refreshes several registered watches and rejects tampered or unregistered checks
+ok - secondmate template update refreshes several registered watches and rejects tampered or unregistered checks
+ok - secondmate-redundant template update refreshes several registered watches and rejects tampered or unregistered checks
+ok - fleet-recover-current template update refreshes several registered watches and rejects tampered or unregistered checks
+ok - fleet-recover-ff template update refreshes several registered watches and rejects tampered or unregistered checks

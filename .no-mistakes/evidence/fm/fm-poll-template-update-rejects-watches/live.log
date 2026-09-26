@@ -1,0 +1,282 @@
+update arm good-a: ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+armed: state/good-a.check.sh
+update arm good-b: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/good-b.check.sh
+update arm tampered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/tampered.check.sh
+update arm unregistered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/unregistered.check.sh
+update arm swapped: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/swapped.check.sh
+update arm sidecar: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/sidecar.check.sh
+update arm metadata: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/metadata.check.sh
+
+update PUBLIC UPDATE:
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+pr-poll-refresh: refreshed good-a
+pr-poll-refresh: refreshed good-b
+pr-poll-refresh: rejected metadata; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected sidecar; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected swapped; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected tampered; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected unregistered; prior poll could not be authenticated or republished
+firstmate: merge watch refresh incomplete; see pr-poll-refresh diagnostics
+firstmate: updated 628d62d..b6d8dba (instructions changed: bin)
+no watches registered
+reread-firstmate: yes
+restart-secondmates: none
+nudge-secondmates: none
+
+update strict authentication good-a: True
+update real GitHub poll good-a: merged
+update strict authentication good-b: True
+update real GitHub poll good-b: merged
+update strict authentication tampered: False
+update strict authentication unregistered: False
+update strict authentication swapped: False
+update strict authentication sidecar: False
+update strict authentication metadata: False
+update repeated refresh preserves valid file identity; invalid controls remain rejected
+update: PASS
+
+fleet arm good-a: ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+armed: state/good-a.check.sh
+fleet arm good-b: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/good-b.check.sh
+fleet arm tampered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/tampered.check.sh
+fleet arm unregistered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/unregistered.check.sh
+fleet arm swapped: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/swapped.check.sh
+fleet arm sidecar: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/sidecar.check.sh
+fleet arm metadata: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/metadata.check.sh
+
+fleet PUBLIC UPDATE:
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+pr-poll-refresh: refreshed good-a
+pr-poll-refresh: refreshed good-b
+pr-poll-refresh: rejected metadata; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected sidecar; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected swapped; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected tampered; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected unregistered; prior poll could not be authenticated or republished
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3FCKWBCCB69NWKSQ060P8EE/.test-tmp/live/fleet/root: merge watch refresh incomplete; see pr-poll-refresh diagnostics
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3FCKWBCCB69NWKSQ060P8EE/.test-tmp/live/fleet/root: synced 6966d7f..af21173
+
+fleet strict authentication good-a: True
+fleet real GitHub poll good-a: merged
+fleet strict authentication good-b: True
+fleet real GitHub poll good-b: merged
+fleet strict authentication tampered: False
+fleet strict authentication unregistered: False
+fleet strict authentication swapped: False
+fleet strict authentication sidecar: False
+fleet strict authentication metadata: False
+fleet repeated refresh preserves valid file identity; invalid controls remain rejected
+fleet: PASS
+
+secondmate arm good-a: ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+armed: state/good-a.check.sh
+secondmate arm good-b: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/good-b.check.sh
+secondmate arm tampered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/tampered.check.sh
+secondmate arm unregistered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/unregistered.check.sh
+secondmate arm swapped: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/swapped.check.sh
+secondmate arm sidecar: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/sidecar.check.sh
+secondmate arm metadata: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/metadata.check.sh
+
+secondmate PUBLIC UPDATE:
+firstmate: updated 71ff4b4..6c98908 (instructions changed: bin)
+no watches registered
+pr-poll-refresh: refreshed good-a
+pr-poll-refresh: refreshed good-b
+pr-poll-refresh: rejected metadata; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected sidecar; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected swapped; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected tampered; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected unregistered; prior poll could not be authenticated or republished
+secondmate child: merge watch refresh incomplete; see pr-poll-refresh diagnostics
+secondmate child: updated 71ff4b4..6c98908 (instructions changed: bin)
+reread-firstmate: yes
+restart-secondmates: none
+nudge-secondmates: none
+
+secondmate strict authentication good-a: True
+secondmate real GitHub poll good-a: merged
+secondmate strict authentication good-b: True
+secondmate real GitHub poll good-b: merged
+secondmate strict authentication tampered: False
+secondmate strict authentication unregistered: False
+secondmate strict authentication swapped: False
+secondmate strict authentication sidecar: False
+secondmate strict authentication metadata: False
+secondmate repeated refresh preserves valid file identity; invalid controls remain rejected
+secondmate: PASS
+
+secondmate-redundant arm good-a: ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+armed: state/good-a.check.sh
+secondmate-redundant arm good-b: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/good-b.check.sh
+secondmate-redundant arm tampered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/tampered.check.sh
+secondmate-redundant arm unregistered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/unregistered.check.sh
+secondmate-redundant arm swapped: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/swapped.check.sh
+secondmate-redundant arm sidecar: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/sidecar.check.sh
+secondmate-redundant arm metadata: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/metadata.check.sh
+
+secondmate-redundant PUBLIC UPDATE:
+firstmate: updated 40a6bcf..c7d1626 (instructions changed: bin)
+no watches registered
+pr-poll-refresh: refreshed good-a
+pr-poll-refresh: refreshed good-b
+pr-poll-refresh: rejected metadata; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected sidecar; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected swapped; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected tampered; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected unregistered; prior poll could not be authenticated or republished
+secondmate child: merge watch refresh incomplete; see pr-poll-refresh diagnostics
+secondmate child: reconciled redundant divergence f20e1ea..c7d1626 (instructions changed: bin)
+reread-firstmate: yes
+restart-secondmates: none
+nudge-secondmates: none
+
+secondmate-redundant strict authentication good-a: True
+secondmate-redundant real GitHub poll good-a: merged
+secondmate-redundant strict authentication good-b: True
+secondmate-redundant real GitHub poll good-b: merged
+secondmate-redundant strict authentication tampered: False
+secondmate-redundant strict authentication unregistered: False
+secondmate-redundant strict authentication swapped: False
+secondmate-redundant strict authentication sidecar: False
+secondmate-redundant strict authentication metadata: False
+secondmate-redundant repeated refresh preserves valid file identity; invalid controls remain rejected
+secondmate-redundant: PASS
+
+fleet-recover-current arm good-a: ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+armed: state/good-a.check.sh
+fleet-recover-current arm good-b: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/good-b.check.sh
+fleet-recover-current arm tampered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/tampered.check.sh
+fleet-recover-current arm unregistered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/unregistered.check.sh
+fleet-recover-current arm swapped: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/swapped.check.sh
+fleet-recover-current arm sidecar: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/sidecar.check.sh
+fleet-recover-current arm metadata: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/metadata.check.sh
+
+fleet-recover-current PUBLIC UPDATE:
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+pr-poll-refresh: refreshed good-a
+pr-poll-refresh: refreshed good-b
+pr-poll-refresh: rejected metadata; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected sidecar; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected swapped; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected tampered; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected unregistered; prior poll could not be authenticated or republished
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3FCKWBCCB69NWKSQ060P8EE/.test-tmp/live/fleet-recover-current/root: merge watch refresh incomplete; see pr-poll-refresh diagnostics
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3FCKWBCCB69NWKSQ060P8EE/.test-tmp/live/fleet-recover-current/root: recovered: re-attached main (already current)
+
+fleet-recover-current strict authentication good-a: True
+fleet-recover-current real GitHub poll good-a: merged
+fleet-recover-current strict authentication good-b: True
+fleet-recover-current real GitHub poll good-b: merged
+fleet-recover-current strict authentication tampered: False
+fleet-recover-current strict authentication unregistered: False
+fleet-recover-current strict authentication swapped: False
+fleet-recover-current strict authentication sidecar: False
+fleet-recover-current strict authentication metadata: False
+fleet-recover-current repeated refresh preserves valid file identity; invalid controls remain rejected
+fleet-recover-current: PASS
+
+fleet-recover-ff arm good-a: ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+armed: state/good-a.check.sh
+fleet-recover-ff arm good-b: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/good-b.check.sh
+fleet-recover-ff arm tampered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/tampered.check.sh
+fleet-recover-ff arm unregistered: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/unregistered.check.sh
+fleet-recover-ff arm swapped: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/swapped.check.sh
+fleet-recover-ff arm sidecar: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/sidecar.check.sh
+fleet-recover-ff arm metadata: WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+armed: state/metadata.check.sh
+
+fleet-recover-ff PUBLIC UPDATE:
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+pr-poll-refresh: refreshed good-a
+pr-poll-refresh: refreshed good-b
+pr-poll-refresh: rejected metadata; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected sidecar; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected swapped; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected tampered; prior poll could not be authenticated or republished
+pr-poll-refresh: rejected unregistered; prior poll could not be authenticated or republished
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3FCKWBCCB69NWKSQ060P8EE/.test-tmp/live/fleet-recover-ff/root: merge watch refresh incomplete; see pr-poll-refresh diagnostics
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3FCKWBCCB69NWKSQ060P8EE/.test-tmp/live/fleet-recover-ff/root: recovered: re-attached main, synced 23ecbd4..c3ce06b
+
+fleet-recover-ff strict authentication good-a: True
+fleet-recover-ff real GitHub poll good-a: merged
+fleet-recover-ff strict authentication good-b: True
+fleet-recover-ff real GitHub poll good-b: merged
+fleet-recover-ff strict authentication tampered: False
+fleet-recover-ff strict authentication unregistered: False
+fleet-recover-ff strict authentication swapped: False
+fleet-recover-ff strict authentication sidecar: False
+fleet-recover-ff strict authentication metadata: False
+fleet-recover-ff repeated refresh preserves valid file identity; invalid controls remain rejected
+fleet-recover-ff: PASS
+
