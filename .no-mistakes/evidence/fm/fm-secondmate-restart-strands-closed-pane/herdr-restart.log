@@ -1,0 +1,6 @@
+lab=fm-lab-fm-secondmate-re-42941-21887 run=/private/var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/fm-secondmate-restart-herdr.98fdcE initial=idle
+restarted: labmate (pi)
+summary: 1 of 1 restarted, 0 nudged, 0 unreached
+{"client":{"version":"0.9.1","channel":"stable","protocol":22,"endpoint_protocol_generation":1,"endpoint_capabilities":["surface_interest","presentation_effects_fence","health_check"],"remote_host_bridge":true,"remote_bridge_idle_timeout":true,"binary":"/Users/mremond/.local/bin/herdr","session":"fm-lab-fm-secondmate-re-42941-21887"},"server":true}
+Pi version: 0.85.1
+ok - real Pi/Herdr restart replaces a closed pane; watcher defers without consuming a recovery attempt
