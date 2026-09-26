@@ -1,0 +1,142 @@
+### Current detached home stays quiet
+$ bin/fm-wake-drain.sh
+exit=0
+
+STDERR:
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
+
+### Missing target object reports uncertainty without fetching
+$ bin/fm-wake-drain.sh
+exit=0
+SECONDMATE CHECKOUT DRIFT (local refs only; review the parent guarded sync path; no home moved):
+sm: cannot compare checkout with primary local main (92c4dc428d26bdba32d5af6e59253fdc42abf31d); commit unavailable locally
+
+STDERR:
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
+
+### Behind detached home warns on empty queue
+$ bin/fm-wake-drain.sh
+exit=0
+SECONDMATE CHECKOUT DRIFT (local refs only; review the parent guarded sync path; no home moved):
+sm: 1 behind, 0 unique relative to primary local main (92c4dc428d26bdba32d5af6e59253fdc42abf31d); home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3FC3DZXGE2K566HW6RB4MRK/.drift-live-c37rvhdn/secondmate
+
+STDERR:
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
+
+### Warning repeats while drift remains
+$ bin/fm-wake-drain.sh
+exit=0
+SECONDMATE CHECKOUT DRIFT (local refs only; review the parent guarded sync path; no home moved):
+sm: 1 behind, 0 unique relative to primary local main (92c4dc428d26bdba32d5af6e59253fdc42abf31d); home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3FC3DZXGE2K566HW6RB4MRK/.drift-live-c37rvhdn/secondmate
+
+STDERR:
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
+
+### Dirty tracked and untracked work are preserved
+$ bin/fm-wake-drain.sh
+exit=0
+SECONDMATE CHECKOUT DRIFT (local refs only; review the parent guarded sync path; no home moved):
+sm: 1 behind, 0 unique relative to primary local main (92c4dc428d26bdba32d5af6e59253fdc42abf31d); home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3FC3DZXGE2K566HW6RB4MRK/.drift-live-c37rvhdn/secondmate
+
+STDERR:
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
+
+### Diverged detached home preserves unique commit
+$ bin/fm-wake-drain.sh
+exit=0
+SECONDMATE CHECKOUT DRIFT (local refs only; review the parent guarded sync path; no home moved):
+sm: 1 behind, 1 unique relative to primary local main (92c4dc428d26bdba32d5af6e59253fdc42abf31d); home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3FC3DZXGE2K566HW6RB4MRK/.drift-live-c37rvhdn/secondmate
+
+STDERR:
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
+
+### Cached origin warns even when primary main is stale
+$ bin/fm-wake-drain.sh
+exit=0
+SECONDMATE CHECKOUT DRIFT (local refs only; review the parent guarded sync path; no home moved):
+sm: 1 behind, 1 unique relative to cached origin/main (not fetched) (92c4dc428d26bdba32d5af6e59253fdc42abf31d); home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3FC3DZXGE2K566HW6RB4MRK/.drift-live-c37rvhdn/secondmate
+
+STDERR:
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
+
+### Queued wake still presents drift
+$ bin/fm-wake-drain.sh
+exit=0
+1790443770	1	check	lab	check: lab
+SECONDMATE CHECKOUT DRIFT (local refs only; review the parent guarded sync path; no home moved):
+sm: 1 behind, 1 unique relative to cached origin/main (not fetched) (92c4dc428d26bdba32d5af6e59253fdc42abf31d); home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3FC3DZXGE2K566HW6RB4MRK/.drift-live-c37rvhdn/secondmate
+
+STDERR:
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 1 --recovery-generation 922.1790443770.KJaxQ7
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
+
+### Converged home clears warning
+$ bin/fm-wake-drain.sh
+exit=0
+1790443770	1	check	lab	check: lab
+
+STDERR:
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 1 --recovery-generation 922.1790443770.KJaxQ7
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
+
+### Exclude ship home
+$ bin/fm-wake-drain.sh
+exit=0
+1790443770	1	check	lab	check: lab
+
+STDERR:
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 1 --recovery-generation 922.1790443770.KJaxQ7
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
+
+### Exclude remote home
+$ bin/fm-wake-drain.sh
+exit=0
+1790443770	1	check	lab	check: lab
+
+STDERR:
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 1 --recovery-generation 922.1790443770.KJaxQ7
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
+
+### Exclude invalid marker home
+$ bin/fm-wake-drain.sh
+exit=0
+1790443770	1	check	lab	check: lab
+
+STDERR:
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 1 --recovery-generation 922.1790443770.KJaxQ7
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.

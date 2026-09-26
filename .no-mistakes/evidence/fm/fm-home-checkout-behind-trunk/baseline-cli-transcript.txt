@@ -1,0 +1,32 @@
+### Current detached home stays quiet
+$ bin/fm-wake-drain.sh
+exit=0
+
+STDERR:
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
+
+### Baseline missing target stays silent
+$ bin/fm-wake-drain.sh
+exit=0
+
+STDERR:
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
+
+### Baseline behind detached home stays silent
+$ bin/fm-wake-drain.sh
+exit=0
+
+STDERR:
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+
+Verified: every home file (including index, refs, objects and local work) unchanged; primary HEAD unchanged; home remains detached.
