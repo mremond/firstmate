@@ -1,0 +1,10 @@
+Executable: fm-remote-home-seed.sh
+Scenario: remote-clone
+Exit: 1
+stdout:
+
+stderr:
+error: project alpha origin is not an accepted clone URL; inspect the origin of the clone at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/remote-clone-parent/projects/alpha, or pass an accepted one as alpha=<origin-url>
+
+Credential components absent: True
+Assertions passed: True

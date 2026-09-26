@@ -1,0 +1,74 @@
+Executable: fm-home-seed.sh
+Scenario: mismatch
+Exit: 1
+stdout:
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-dizspvv1/mismatch-parent/data/design/brief.md (secondmate charter)
+
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-dizspvv1/mismatch-child/projects/alpha has origin https://other.invalid/other.git; expected https://qa-fiction-user:qa-fiction-password@example.invalid/fiction.git
+
+Credential components absent: False
+Assertions passed: False
+
+
+Executable: fm-home-seed.sh
+Scenario: missing
+Exit: 1
+stdout:
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-dizspvv1/missing-parent/data/design/brief.md (secondmate charter)
+
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-dizspvv1/missing-child/projects/alpha has no origin remote; expected https://qa-fiction-user:qa-fiction-password@example.invalid/fiction.git
+
+Credential components absent: False
+Assertions passed: False
+
+
+Executable: fm-remote-home-seed.sh
+Scenario: remote-argument
+Exit: 1
+stdout:
+
+stderr:
+error: project alpha origin is not an accepted clone URL: https://qa-fiction-user:qa-fiction-password@example.invalid:notaport/fiction.git
+
+Credential components absent: False
+Assertions passed: False
+
+
+Executable: fm-remote-home-seed.sh
+Scenario: remote-clone
+Exit: 1
+stdout:
+
+stderr:
+error: project alpha origin is not an accepted clone URL: https://qa-fiction-user:qa-fiction-password@example.invalid:notaport/fiction.git
+
+Credential components absent: False
+Assertions passed: False
+
+
+Executable: fm-home-seed.sh
+Scenario: destination-credential
+Exit: 1
+stdout:
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-dizspvv1/destination-credential-parent/data/design/brief.md (secondmate charter)
+
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-dizspvv1/destination-credential-child/projects/alpha has origin https://qa-fiction-user:qa-fiction-password@example.invalid/fiction.git; expected https://other.invalid/other.git
+
+Credential components absent: False
+Assertions passed: False
+
+
+Executable: fm-home-seed.sh
+Scenario: matching
+Exit: 0
+stdout:
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-dizspvv1/matching-parent/data/design/brief.md (secondmate charter)
+home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-dizspvv1/matching-child
+
+stderr:
+
+Credential components absent: True
+Assertions passed: True

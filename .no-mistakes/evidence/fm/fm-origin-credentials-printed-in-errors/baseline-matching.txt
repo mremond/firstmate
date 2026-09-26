@@ -1,0 +1,11 @@
+Executable: fm-home-seed.sh
+Scenario: matching
+Exit: 0
+stdout:
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-dizspvv1/matching-parent/data/design/brief.md (secondmate charter)
+home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-dizspvv1/matching-child
+
+stderr:
+
+Credential components absent: True
+Assertions passed: True

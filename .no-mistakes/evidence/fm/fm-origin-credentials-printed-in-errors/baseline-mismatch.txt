@@ -1,0 +1,11 @@
+Executable: fm-home-seed.sh
+Scenario: mismatch
+Exit: 1
+stdout:
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-dizspvv1/mismatch-parent/data/design/brief.md (secondmate charter)
+
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-dizspvv1/mismatch-child/projects/alpha has origin https://other.invalid/other.git; expected https://qa-fiction-user:qa-fiction-password@example.invalid/fiction.git
+
+Credential components absent: False
+Assertions passed: False

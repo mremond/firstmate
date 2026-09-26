@@ -1,0 +1,74 @@
+Executable: fm-home-seed.sh
+Scenario: mismatch
+Exit: 1
+stdout:
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/mismatch-parent/data/design/brief.md (secondmate charter)
+
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/mismatch-child/projects/alpha has a different origin than the source clone at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/mismatch-parent/projects/alpha; read each clone's "git remote get-url origin" to compare them
+
+Credential components absent: True
+Assertions passed: True
+
+
+Executable: fm-home-seed.sh
+Scenario: missing
+Exit: 1
+stdout:
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/missing-parent/data/design/brief.md (secondmate charter)
+
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/missing-child/projects/alpha has no origin remote; it must match the origin of the source clone at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/missing-parent/projects/alpha
+
+Credential components absent: True
+Assertions passed: True
+
+
+Executable: fm-remote-home-seed.sh
+Scenario: remote-argument
+Exit: 1
+stdout:
+
+stderr:
+error: project alpha origin is not an accepted clone URL; check the origin you passed as alpha=<origin-url>
+
+Credential components absent: True
+Assertions passed: True
+
+
+Executable: fm-remote-home-seed.sh
+Scenario: remote-clone
+Exit: 1
+stdout:
+
+stderr:
+error: project alpha origin is not an accepted clone URL; inspect the origin of the clone at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/remote-clone-parent/projects/alpha, or pass an accepted one as alpha=<origin-url>
+
+Credential components absent: True
+Assertions passed: True
+
+
+Executable: fm-home-seed.sh
+Scenario: destination-credential
+Exit: 1
+stdout:
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/destination-credential-parent/data/design/brief.md (secondmate charter)
+
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/destination-credential-child/projects/alpha has a different origin than the source clone at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/destination-credential-parent/projects/alpha; read each clone's "git remote get-url origin" to compare them
+
+Credential components absent: True
+Assertions passed: True
+
+
+Executable: fm-home-seed.sh
+Scenario: matching
+Exit: 0
+stdout:
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/matching-parent/data/design/brief.md (secondmate charter)
+home=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/matching-child
+
+stderr:
+
+Credential components absent: True
+Assertions passed: True

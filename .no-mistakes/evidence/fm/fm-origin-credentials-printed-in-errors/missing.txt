@@ -1,0 +1,11 @@
+Executable: fm-home-seed.sh
+Scenario: missing
+Exit: 1
+stdout:
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/missing-parent/data/design/brief.md (secondmate charter)
+
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/missing-child/projects/alpha has no origin remote; it must match the origin of the source clone at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/missing-parent/projects/alpha
+
+Credential components absent: True
+Assertions passed: True

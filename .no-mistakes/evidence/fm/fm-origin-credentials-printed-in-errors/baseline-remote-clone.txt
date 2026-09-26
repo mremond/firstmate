@@ -1,0 +1,10 @@
+Executable: fm-remote-home-seed.sh
+Scenario: remote-clone
+Exit: 1
+stdout:
+
+stderr:
+error: project alpha origin is not an accepted clone URL: https://qa-fiction-user:qa-fiction-password@example.invalid:notaport/fiction.git
+
+Credential components absent: False
+Assertions passed: False

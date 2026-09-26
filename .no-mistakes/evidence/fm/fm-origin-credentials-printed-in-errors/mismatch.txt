@@ -1,0 +1,11 @@
+Executable: fm-home-seed.sh
+Scenario: mismatch
+Exit: 1
+stdout:
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/mismatch-parent/data/design/brief.md (secondmate charter)
+
+stderr:
+error: seeded project alpha at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/mismatch-child/projects/alpha has a different origin than the source clone at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3EC24T63HR32WT30NNZS917/.origin-live-jpsy85fn/mismatch-parent/projects/alpha; read each clone's "git remote get-url origin" to compare them
+
+Credential components absent: True
+Assertions passed: True
