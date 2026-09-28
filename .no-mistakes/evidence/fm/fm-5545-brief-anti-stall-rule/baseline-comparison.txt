@@ -1,0 +1,2 @@
+ship: baseline generated output lacks the announced-next-step prohibition; target output has it.
+scout: baseline generated output lacks the announced-next-step prohibition; target output has it.

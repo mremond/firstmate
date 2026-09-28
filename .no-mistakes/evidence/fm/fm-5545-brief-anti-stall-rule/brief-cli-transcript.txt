@@ -1,0 +1,57 @@
+$ FM_HOME=<isolated-worktree-home> FM_CLASSIFY_PAUSED_VERB=paused bin/fm-brief.sh live-ship firstmate --mode no-mistakes
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3MDVQARA94Y1PEFP0R0HQHE/.brief-live-9vspxc9u/data/live-ship/brief.md (ship, mode=no-mistakes; replace {TASK} and {FIRSTMATE_SPEC})
+   The same holds for any next step you announce: take it in the same turn with your tools instead of ending the turn on the announcement, or report `paused:`/`blocked:` with the reason.
+   append `needs-decision [at=<epoch>]: {summary of options}` and stop. Firstmate will reply with the decision.
+   Drive your own validation and delivery path: beyond the handoff your Definition of done names, wait for no approval you did not request through `needs-decision`.
+   `needs-decision [at=<epoch>] [key=nm-<run>-<step>]: ask-user findings=<id1>,<id2>,... file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3MDVQARA94Y1PEFP0R0HQHE/.brief-live-9vspxc9u/data/live-ship/nm-<run>-findings.txt`
+When you believe it is complete, append `done [at=<epoch>]: {summary}` to the status file and stop.
+Firstmate will then instruct you to run /no-mistakes to validate and ship a PR.
+RESULT: output contract satisfied
+
+$ FM_HOME=<isolated-worktree-home> FM_CLASSIFY_PAUSED_VERB=paused bin/fm-brief.sh live-scout firstmate --scout
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3MDVQARA94Y1PEFP0R0HQHE/.brief-live-9vspxc9u/data/live-scout/brief.md (scout; replace {TASK} and {FIRSTMATE_SPEC})
+   Never end a turn on an announced next step: take it in the same turn with your tools instead of stopping on the announcement, or report `paused:`/`blocked:` with the reason.
+   append `needs-decision [at=<epoch>]: {summary of options}` and stop. Firstmate will reply with the decision.
+   Your own investigation and report-writing needs no such approval: drive it yourself, and do not wait for a firstmate go-ahead you never requested this way.
+RESULT: output contract satisfied
+
+$ FM_HOME=<isolated-worktree-home> FM_CLASSIFY_PAUSED_VERB=paused bin/fm-brief.sh live-gerrit firstmate --mode no-mistakes --forge gerrit
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3MDVQARA94Y1PEFP0R0HQHE/.brief-live-9vspxc9u/data/live-gerrit/brief.md (ship, mode=no-mistakes forge=gerrit shape=squash; replace {TASK} and {FIRSTMATE_SPEC})
+   The same holds for any next step you announce: take it in the same turn with your tools instead of ending the turn on the announcement, or report `paused:`/`blocked:` with the reason.
+   append `needs-decision [at=<epoch>]: {summary of options}` and stop. Firstmate will reply with the decision.
+   Drive your own validation and delivery path: beyond the handoff your Definition of done names, wait for no approval you did not request through `needs-decision`.
+   `needs-decision [at=<epoch>] [key=nm-<run>-<step>]: ask-user findings=<id1>,<id2>,... file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3MDVQARA94Y1PEFP0R0HQHE/.brief-live-9vspxc9u/data/live-gerrit/nm-<run>-findings.txt`
+When you believe it is complete, append `done [at=<epoch>]: {summary}` to the status file and stop.
+Firstmate will then instruct you to run /no-mistakes to validate.
+RESULT: output contract satisfied
+
+$ FM_HOME=<isolated-worktree-home> FM_CLASSIFY_PAUSED_VERB=paused bin/fm-brief.sh live-direct firstmate --mode direct-PR
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3MDVQARA94Y1PEFP0R0HQHE/.brief-live-9vspxc9u/data/live-direct/brief.md (ship, mode=direct-PR; replace {TASK} and {FIRSTMATE_SPEC})
+   The same holds for any next step you announce: take it in the same turn with your tools instead of ending the turn on the announcement, or report `paused:`/`blocked:` with the reason.
+   append `needs-decision [at=<epoch>]: {summary of options}` and stop. Firstmate will reply with the decision.
+   Drive your own validation and delivery path: beyond the handoff your Definition of done names, wait for no approval you did not request through `needs-decision`.
+RESULT: output contract satisfied
+
+$ FM_HOME=<isolated-worktree-home> FM_CLASSIFY_PAUSED_VERB=paused bin/fm-brief.sh live-local firstmate --mode local-only
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3MDVQARA94Y1PEFP0R0HQHE/.brief-live-9vspxc9u/data/live-local/brief.md (ship, mode=local-only; replace {TASK} and {FIRSTMATE_SPEC})
+   The same holds for any next step you announce: take it in the same turn with your tools instead of ending the turn on the announcement, or report `paused:`/`blocked:` with the reason.
+   append `needs-decision [at=<epoch>]: {summary of options}` and stop. Firstmate will reply with the decision.
+   Drive your own validation and delivery path: beyond the handoff your Definition of done names, wait for no approval you did not request through `needs-decision`.
+RESULT: output contract satisfied
+
+$ FM_HOME=<isolated-worktree-home> FM_CLASSIFY_PAUSED_VERB=waiting bin/fm-brief.sh live-ship-wait firstmate --mode no-mistakes
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3MDVQARA94Y1PEFP0R0HQHE/.brief-live-9vspxc9u/data/live-ship-wait/brief.md (ship, mode=no-mistakes; replace {TASK} and {FIRSTMATE_SPEC})
+   The same holds for any next step you announce: take it in the same turn with your tools instead of ending the turn on the announcement, or report `waiting:`/`blocked:` with the reason.
+   append `needs-decision [at=<epoch>]: {summary of options}` and stop. Firstmate will reply with the decision.
+   Drive your own validation and delivery path: beyond the handoff your Definition of done names, wait for no approval you did not request through `needs-decision`.
+   `needs-decision [at=<epoch>] [key=nm-<run>-<step>]: ask-user findings=<id1>,<id2>,... file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3MDVQARA94Y1PEFP0R0HQHE/.brief-live-9vspxc9u/data/live-ship-wait/nm-<run>-findings.txt`
+When you believe it is complete, append `done [at=<epoch>]: {summary}` to the status file and stop.
+Firstmate will then instruct you to run /no-mistakes to validate and ship a PR.
+RESULT: output contract satisfied
+
+$ FM_HOME=<isolated-worktree-home> FM_CLASSIFY_PAUSED_VERB=waiting bin/fm-brief.sh live-scout-wait firstmate --scout
+scaffolded: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3MDVQARA94Y1PEFP0R0HQHE/.brief-live-9vspxc9u/data/live-scout-wait/brief.md (scout; replace {TASK} and {FIRSTMATE_SPEC})
+   Never end a turn on an announced next step: take it in the same turn with your tools instead of stopping on the announcement, or report `waiting:`/`blocked:` with the reason.
+   append `needs-decision [at=<epoch>]: {summary of options}` and stop. Firstmate will reply with the decision.
+   Your own investigation and report-writing needs no such approval: drive it yourself, and do not wait for a firstmate go-ahead you never requested this way.
+RESULT: output contract satisfied
