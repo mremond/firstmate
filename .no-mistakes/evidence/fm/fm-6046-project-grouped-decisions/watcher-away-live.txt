@@ -1,0 +1,8 @@
+focus: on for alpha until 2026-09-29T08:36:21Z
+held 1 beta
+check: focus-window-ended
+FOCUS HELD (the focus window ended; tell the captain these now, together, grouped by project):
+  beta (1):
+    - [completion] beta-one: Beta away expiry
+FOCUS HELD: after telling the captain, run bin/fm-focus.sh delivered --through 1; until then every drain presents them again
+focus: delivered through 1

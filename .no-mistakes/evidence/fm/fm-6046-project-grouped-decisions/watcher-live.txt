@@ -1,0 +1,13 @@
+focus: on for alpha until 2026-09-29T08:35:42Z
+held 1 beta
+check: focus-window-ended
+FOCUS HELD (the focus window ended; tell the captain these now, together, grouped by project):
+  beta (1):
+    - [completion] beta-one: Beta attended expiry
+FOCUS HELD: after telling the captain, run bin/fm-focus.sh delivered --through 1; until then every drain presents them again
+focus: delivered through 1
+focus: on for alpha until 2026-09-29T08:35:47Z
+held 2 beta
+check: rearm-resurface
+FOCUS WINDOW: on for alpha until 2026-09-29T08:35:47Z (1 outcome(s) held); before telling the captain about any outcome, run bin/fm-focus.sh route --task <id> --class <class> --summary <text> and report it now only when it prints deliver - failures, security-sensitive items, credential needs, and anything blocking all work always come through
+focus: delivered through 2

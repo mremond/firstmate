@@ -1,0 +1,6 @@
+ok - with no focus window every outcome is delivered and nothing prints
+ok - urgent classes, unknown projects, and focused projects bypass the window
+ok - held outcomes stay listed while set, arrive grouped once cleared, and persist until acknowledged
+ok - an expired window stops holding and presents what it held
+ok - idle attended and away watchers wake at expiry and preserve delivery until acknowledgement
+ok - an unreadable focus record holds nothing and says so

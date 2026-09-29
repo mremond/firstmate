@@ -1,0 +1,7 @@
+FOCUS HELD (the focus window ended; tell the captain these now, together, grouped by project):
+  beta (2):
+    - [decision] beta-one: Beta release needs your decision
+    - [completion] beta-one: Beta audit completed
+  delta (1):
+    - [review-ready] delta-one: Delta review ready
+FOCUS HELD: after telling the captain, run bin/fm-focus.sh delivered --through 3; until then every drain presents them again

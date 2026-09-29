@@ -1,0 +1,121 @@
+{
+  "schema": "fm-bearings.v1",
+  "home": ".test-live/home",
+  "generated": "2026-09-29T08:33:52Z",
+  "prs": "not_requested (run: /bearings include PRs)",
+  "contributions": {
+    "scope": "owned contributions per home",
+    "known": 0,
+    "checked": 0,
+    "counts": {
+      "captain": 0,
+      "fleet": 0,
+      "maintainer": 0,
+      "nobody": 0
+    },
+    "complete": true,
+    "proven_clear": true,
+    "unmeasured_homes": 0,
+    "unreadable_records": 0,
+    "unmeasured": 0,
+    "stale_verdicts": 0,
+    "missing_verdicts": 0,
+    "captain_omitted": 0,
+    "captain": []
+  },
+  "in_flight": [],
+  "secondmates": [],
+  "secondmate_reconcile": [],
+  "decisions_open": [
+    {
+      "id": "alpha-one",
+      "key": "alpha-one",
+      "verb": "captain-hold",
+      "summary": "Alpha route: choose",
+      "owner": "(main)",
+      "repo": "alpha"
+    },
+    {
+      "id": "alpha-two",
+      "key": "alpha-two",
+      "verb": "captain-hold",
+      "summary": "Alpha backup: choose",
+      "owner": "(main)",
+      "repo": "alpha"
+    },
+    {
+      "id": "beta-one",
+      "key": "beta-one",
+      "verb": "captain-hold",
+      "summary": "Beta release: choose",
+      "owner": "(main)",
+      "repo": "beta"
+    },
+    {
+      "id": "unknown",
+      "key": "unknown",
+      "verb": "captain-hold",
+      "summary": "Unassigned decision: choose",
+      "owner": "(main)",
+      "repo": null
+    }
+  ],
+  "landed": [],
+  "gates": [],
+  "reports": [],
+  "recorded_prs": [],
+  "focus": {
+    "state": "active",
+    "projects": "alpha, gamma",
+    "until": null,
+    "held": [
+      {
+        "seq": 1,
+        "task": "beta-one",
+        "project": "beta",
+        "class": "decision",
+        "summary": "Beta release needs your decision"
+      },
+      {
+        "seq": 3,
+        "task": "beta-one",
+        "project": "beta",
+        "class": "completion",
+        "summary": "Beta audit completed"
+      },
+      {
+        "seq": 2,
+        "task": "delta-one",
+        "project": "delta",
+        "class": "review-ready",
+        "summary": "Delta review ready"
+      }
+    ]
+  },
+  "omitted": [
+    {
+      "surface": "backlog item bodies",
+      "reveal": "--fields bodies"
+    },
+    {
+      "surface": "task paths",
+      "reveal": "--fields paths"
+    },
+    {
+      "surface": "watch/steer actions",
+      "reveal": "--fields actions"
+    },
+    {
+      "surface": "healthy endpoint detail",
+      "reveal": "--fields endpoints"
+    },
+    {
+      "surface": "full scout-report inventory",
+      "reveal": "--all-reports"
+    },
+    {
+      "surface": "live PR discovery + checks",
+      "reveal": "--include-prs"
+    }
+  ]
+}
