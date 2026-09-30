@@ -1,0 +1,186 @@
+{
+  "target": "793c1ec0120e2f6034615c002fc713fb27c509a3",
+  "base": "eb77f02b16aeca9533102070de34b1f8812f4fa2",
+  "live_observations": [
+    {
+      "name": "ordinary teardown",
+      "result": "pass",
+      "ended": [
+        "data",
+        "scratch",
+        "registered external"
+      ],
+      "bystander": "open",
+      "source": "retired",
+      "new_terminal_results": 0,
+      "artifact_hashes": "unchanged"
+    },
+    {
+      "name": "plain reopen after teardown",
+      "result": "pass",
+      "file_unchanged": true
+    },
+    {
+      "name": "captain hold automatic own",
+      "result": "pass",
+      "board": "open",
+      "source": "preserved"
+    },
+    {
+      "name": "captain hold automatic inventory",
+      "result": "pass",
+      "board": "open",
+      "source": "preserved"
+    },
+    {
+      "name": "captain hold automatic legacy",
+      "result": "pass",
+      "board": "open",
+      "source": "preserved"
+    },
+    {
+      "name": "captain hold automatic unknown",
+      "result": "pass",
+      "board": "open",
+      "source": "preserved"
+    },
+    {
+      "name": "captain hold automatic answered",
+      "result": "pass",
+      "board": "ended",
+      "source": "retired"
+    },
+    {
+      "name": "captain hold manual own",
+      "result": "pass",
+      "board": "open",
+      "source": "preserved"
+    },
+    {
+      "name": "captain hold manual inventory",
+      "result": "pass",
+      "board": "open",
+      "source": "preserved"
+    },
+    {
+      "name": "captain hold manual legacy",
+      "result": "pass",
+      "board": "open",
+      "source": "preserved"
+    },
+    {
+      "name": "captain hold manual unknown",
+      "result": "pass",
+      "board": "open",
+      "source": "preserved"
+    },
+    {
+      "name": "dirty worktree refusal",
+      "result": "pass",
+      "board": "open",
+      "source": "unchanged",
+      "worktree": "unchanged"
+    },
+    {
+      "name": "captain hold manual answered",
+      "result": "pass",
+      "board": "ended",
+      "source": "retired"
+    },
+    {
+      "name": "unlanded worktree refusal",
+      "result": "pass",
+      "board": "open",
+      "source": "unchanged"
+    },
+    {
+      "name": "forced child removal",
+      "result": "pass",
+      "own_boards": "ended",
+      "child_home": "removed",
+      "child_hold": "kept open",
+      "parent_hold": "did not affect child",
+      "foreign_root_and_registered": "kept open with unchanged live claims"
+    },
+    {
+      "name": "ownership root",
+      "result": "pass",
+      "board": "open",
+      "claim": "unchanged",
+      "owner_source": "unchanged"
+    },
+    {
+      "name": "owner later ends root",
+      "result": "pass",
+      "board": "ended"
+    },
+    {
+      "name": "ownership registered",
+      "result": "pass",
+      "board": "open",
+      "claim": "unchanged",
+      "owner_source": "unchanged"
+    },
+    {
+      "name": "owner later ends registered",
+      "result": "pass",
+      "board": "ended"
+    },
+    {
+      "name": "ownership other-task",
+      "result": "pass",
+      "board": "open",
+      "claim": "unchanged",
+      "owner_source": "unchanged"
+    },
+    {
+      "name": "owner later ends other-task",
+      "result": "pass",
+      "board": "ended"
+    },
+    {
+      "name": "ordinary pooled worktree return",
+      "result": "pass",
+      "board": "ended",
+      "lease": "returned",
+      "board_exists_after_return": true
+    },
+    {
+      "name": "baseline reproduction",
+      "result": "pass",
+      "commit": "eb77f02b16aeca9533102070de34b1f8812f4fa2",
+      "task": "removed",
+      "board": "incorrectly still open",
+      "source": "incorrectly still registered"
+    },
+    {
+      "name": "forced child pooled worktree return",
+      "result": "pass",
+      "board": "ended",
+      "lease": "returned",
+      "home": "removed",
+      "board_exists_after_return": true
+    },
+    {
+      "name": "unreachable Lavish server",
+      "result": "pass",
+      "teardown": "completed",
+      "warning": "reported",
+      "board_file": "preserved"
+    },
+    {
+      "name": "lab cleanup",
+      "result": "pass",
+      "claims_remaining": 0,
+      "all_sessions": "ended",
+      "private_tmux": "stopped and removed"
+    }
+  ],
+  "live_limitation": "bd is absent from PATH; migrated Beads identity cases passed the executable regression fixtures only.",
+  "setup_retries": [
+    "Regression temporary files moved to normal test temp location to satisfy existing nested-home removal guard.",
+    "Captain-hold setup retried without replacing the existing task title.",
+    "Stopped Lavish auto-recovered; a real local port collision was then used to exercise end failure."
+  ],
+  "cleanup": "All lab sessions ended, sources retired, dedicated server ports closed, private tmux stopped and its temporary socket directory removed."
+}

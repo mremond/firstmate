@@ -1,0 +1,190 @@
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root
+
+exit=0
+
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root
+
+exit=0
+
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/9db885a94727e462"
+  status: opened
+self_paint_warning: "This artifact never paints its own page surface: no background on html/body/:root, no bg-* class or data-theme on html/body, and no stylesheet that could set one. Lavish injects no design system, so text that assumes a dark or light host surface can render invisible. Set an explicit background and readable text."
+next_step: "First fix the unpainted page surface flagged in self_paint_warning and save - Lavish live-reloads the artifact automatically, so you do not need to re-run `lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html`. Do not respond to the user just yet. Now you must run `lavish-axi poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html`. This command long-polls until the user sends feedback, ends the session, or leaves every review window disconnected past the reconnect grace period, and it stays silent the whole time - that is normal, never kill it. Layout issues the browser detects do not return this poll; they wait in the user's Layout issues inbox until the user queues them, then arrive as an ordinary tag \"layout-warnings\" prompt. Do not pass --timeout-ms during normal agent use. Keep the poll in the foreground by default and let it return the feedback directly to the agent. A background poll is allowed only through a harness-native tracked background-job facility whose completion result is guaranteed to resume or notify the same agent. Never use `nohup`, shell `&`, `disown`, redirected fire-and-forget processes, or a detached terminal without an explicit verified callback merely to keep polling alive. If the harness has no completion-aware background facility, use the foreground poll or first wire a verified wake callback into the surrounding supervisor. Do not tell the user the artifact is being monitored until that wake path is live. If the poll gets killed or times out before feedback arrives, re-run it - feedback remains queued until delivery. Poll delivery consumes the response, so read it completely. If it returns browser_disconnected, the review window stayed disconnected past its reconnect grace period but the session remains resumable; ask the user whether to reopen or end it, and do neither uninvited. Codex detected: completed background tasks may not resume Codex automatically, so keep the poll attached to the active turn. After applying feedback, run `lavish-axi poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html --agent-reply \"<message for the user>\"` without --timeout-ms to show a concise response in Lavish Editor and wait for more feedback. Keep the reply concise. Only when a longer reply is genuinely necessary, use Markdown structure - blank-line paragraphs, `- ` / `1. ` lists, `## ` headings - so it renders scannably instead of a wall of text, and pass that body with `--agent-reply-file <path>` (`-` reads stdin) so newlines survive quoting. The Conversation panel's Markdown subset is in `lavish-axi poll --help` and README. If the user ends the session, stop polling and do not reopen it by re-running `lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html` unless the user asks for further review or something genuinely important needs their visual attention - deliver routine updates directly in this conversation instead. When reopening is warranted, run `lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html --reopen`."
+
+exit=0
+
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html --for reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root]
+registered: lavish-9db885a94727e462 (lavish, task=reviewer)
+armed: lavish-9db885a94727e462
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html
+owner-task: reviewer
+
+exit=0
+
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root]
+lavish-9db885a94727e462
+
+exit=0
+
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+kept: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html (source lavish-9db885a94727e462 belongs to home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root)
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/gone-finished)
+Backlog: finished just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+
+$ bin/fm-procevent.sh list [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root]
+SOURCE                       ADAPTER      OWNER      PENDING
+lavish-9db885a94727e462      lavish       task:reviewer/listening 0
+
+exit=0
+
+$ bin/fm-procevent-lavish.sh end-task reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root]
+retired: lavish-9db885a94727e462
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html
+
+exit=0
+
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered
+
+exit=0
+
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered
+
+exit=0
+
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html
+  url: "http://127.0.0.1:57890/session/4f0ea6130d8cb530"
+  status: opened
+self_paint_warning: "This artifact never paints its own page surface: no background on html/body/:root, no bg-* class or data-theme on html/body, and no stylesheet that could set one. Lavish injects no design system, so text that assumes a dark or light host surface can render invisible. Set an explicit background and readable text."
+next_step: "First fix the unpainted page surface flagged in self_paint_warning and save - Lavish live-reloads the artifact automatically, so you do not need to re-run `lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html`. Do not respond to the user just yet. Now you must run `lavish-axi poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html`. This command long-polls until the user sends feedback, ends the session, or leaves every review window disconnected past the reconnect grace period, and it stays silent the whole time - that is normal, never kill it. Layout issues the browser detects do not return this poll; they wait in the user's Layout issues inbox until the user queues them, then arrive as an ordinary tag \"layout-warnings\" prompt. Do not pass --timeout-ms during normal agent use. Keep the poll in the foreground by default and let it return the feedback directly to the agent. A background poll is allowed only through a harness-native tracked background-job facility whose completion result is guaranteed to resume or notify the same agent. Never use `nohup`, shell `&`, `disown`, redirected fire-and-forget processes, or a detached terminal without an explicit verified callback merely to keep polling alive. If the harness has no completion-aware background facility, use the foreground poll or first wire a verified wake callback into the surrounding supervisor. Do not tell the user the artifact is being monitored until that wake path is live. If the poll gets killed or times out before feedback arrives, re-run it - feedback remains queued until delivery. Poll delivery consumes the response, so read it completely. If it returns browser_disconnected, the review window stayed disconnected past its reconnect grace period but the session remains resumable; ask the user whether to reopen or end it, and do neither uninvited. Codex detected: completed background tasks may not resume Codex automatically, so keep the poll attached to the active turn. After applying feedback, run `lavish-axi poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html --agent-reply \"<message for the user>\"` without --timeout-ms to show a concise response in Lavish Editor and wait for more feedback. Keep the reply concise. Only when a longer reply is genuinely necessary, use Markdown structure - blank-line paragraphs, `- ` / `1. ` lists, `## ` headings - so it renders scannably instead of a wall of text, and pass that body with `--agent-reply-file <path>` (`-` reads stdin) so newlines survive quoting. The Conversation panel's Markdown subset is in `lavish-axi poll --help` and README. If the user ends the session, stop polling and do not reopen it by re-running `lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html` unless the user asks for further review or something genuinely important needs their visual attention - deliver routine updates directly in this conversation instead. When reopening is warranted, run `lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html --reopen`."
+
+exit=0
+
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered]
+lavish-4f0ea6130d8cb530
+
+exit=0
+
+$ bin/fm-procevent.sh register-task lavish lavish-4f0ea6130d8cb530 finished -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/bin/fm-procevent-lavish.sh poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered]
+registered: lavish-4f0ea6130d8cb530 (lavish, task=finished)
+
+exit=0
+
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html --for reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered]
+registered: lavish-4f0ea6130d8cb530 (lavish, task=reviewer)
+armed: lavish-4f0ea6130d8cb530
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html
+owner-task: reviewer
+
+exit=0
+
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered]
+lavish-4f0ea6130d8cb530
+
+exit=0
+
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+kept: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html (source lavish-4f0ea6130d8cb530 belongs to home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered)
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/gone-finished)
+Backlog: finished just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+
+$ bin/fm-procevent.sh list [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered]
+SOURCE                       ADAPTER      OWNER      PENDING
+lavish-4f0ea6130d8cb530      lavish       task:reviewer/listening 0
+
+exit=0
+
+$ bin/fm-procevent-lavish.sh end-task reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered]
+retired: lavish-4f0ea6130d8cb530
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html
+
+exit=0
+
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task
+
+exit=0
+
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-other-task
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-other-task
+
+exit=0
+
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/7fc5a539ba30a005"
+  status: opened
+self_paint_warning: "This artifact never paints its own page surface: no background on html/body/:root, no bg-* class or data-theme on html/body, and no stylesheet that could set one. Lavish injects no design system, so text that assumes a dark or light host surface can render invisible. Set an explicit background and readable text."
+next_step: "First fix the unpainted page surface flagged in self_paint_warning and save - Lavish live-reloads the artifact automatically, so you do not need to re-run `lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html`. Do not respond to the user just yet. Now you must run `lavish-axi poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html`. This command long-polls until the user sends feedback, ends the session, or leaves every review window disconnected past the reconnect grace period, and it stays silent the whole time - that is normal, never kill it. Layout issues the browser detects do not return this poll; they wait in the user's Layout issues inbox until the user queues them, then arrive as an ordinary tag \"layout-warnings\" prompt. Do not pass --timeout-ms during normal agent use. Keep the poll in the foreground by default and let it return the feedback directly to the agent. A background poll is allowed only through a harness-native tracked background-job facility whose completion result is guaranteed to resume or notify the same agent. Never use `nohup`, shell `&`, `disown`, redirected fire-and-forget processes, or a detached terminal without an explicit verified callback merely to keep polling alive. If the harness has no completion-aware background facility, use the foreground poll or first wire a verified wake callback into the surrounding supervisor. Do not tell the user the artifact is being monitored until that wake path is live. If the poll gets killed or times out before feedback arrives, re-run it - feedback remains queued until delivery. Poll delivery consumes the response, so read it completely. If it returns browser_disconnected, the review window stayed disconnected past its reconnect grace period but the session remains resumable; ask the user whether to reopen or end it, and do neither uninvited. Codex detected: completed background tasks may not resume Codex automatically, so keep the poll attached to the active turn. After applying feedback, run `lavish-axi poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html --agent-reply \"<message for the user>\"` without --timeout-ms to show a concise response in Lavish Editor and wait for more feedback. Keep the reply concise. Only when a longer reply is genuinely necessary, use Markdown structure - blank-line paragraphs, `- ` / `1. ` lists, `## ` headings - so it renders scannably instead of a wall of text, and pass that body with `--agent-reply-file <path>` (`-` reads stdin) so newlines survive quoting. The Conversation panel's Markdown subset is in `lavish-axi poll --help` and README. If the user ends the session, stop polling and do not reopen it by re-running `lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html` unless the user asks for further review or something genuinely important needs their visual attention - deliver routine updates directly in this conversation instead. When reopening is warranted, run `lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html --reopen`."
+
+exit=0
+
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html --for reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+registered: lavish-7fc5a539ba30a005 (lavish, task=reviewer)
+armed: lavish-7fc5a539ba30a005
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html
+owner-task: reviewer
+
+exit=0
+
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+lavish-7fc5a539ba30a005
+
+exit=0
+
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  2 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+kept: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html (source lavish-7fc5a539ba30a005 belongs to task reviewer)
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/gone-finished)
+Backlog: finished just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+
+$ bin/fm-procevent.sh list [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+SOURCE                       ADAPTER      OWNER      PENDING
+lavish-7fc5a539ba30a005      lavish       task:reviewer/listening 0
+
+exit=0
+
+$ bin/fm-procevent-lavish.sh end-task reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+retired: lavish-7fc5a539ba30a005
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html
+
+exit=0
+

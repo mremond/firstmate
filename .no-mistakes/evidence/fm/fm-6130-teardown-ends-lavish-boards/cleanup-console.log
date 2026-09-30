@@ -1,0 +1,185 @@
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home]
+retired: lavish-d5550883b937f23b
+swept: attempted=1
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-foreign]
+retired: lavish-602bc8ab2fca39ad
+retired: lavish-7f980a67ef5b2769
+swept: attempted=2
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty]
+retired: lavish-4c0575402097b46b
+swept: attempted=1
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory]
+retired: lavish-e82de3f35c700416
+swept: attempted=1
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy]
+retired: lavish-08473252ab84081f
+swept: attempted=1
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+retired: lavish-17ec1aa35da96dc4
+swept: attempted=1
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown]
+retired: lavish-b0e0efe6f69e32b1
+swept: attempted=1
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory]
+retired: lavish-05d0c638272c525f
+swept: attempted=1
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy]
+retired: lavish-075551c1cf2acb05
+swept: attempted=1
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own]
+retired: lavish-d535db226514c2ab
+swept: attempted=1
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown]
+retired: lavish-92ff0e4b781f8803
+swept: attempted=1
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered]
+retired: lavish-4f0ea6130d8cb530
+swept: attempted=1
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/finished/board.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/finished/board.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/another-task/board.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/another-task/board.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/finished/review.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/finished/review.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/finished/review.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/finished/review.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/finished/review.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/finished/review.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/finished/review.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt/.lavish/review.html
+error: "ENOENT: no such file or directory, realpath '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt/.lavish/review.html'"
+code: UNKNOWN
+
+exit=1
+
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M3RP354ZWC7R9HH16YWXQDGZ/cleanup_live.py", line 14, in <module>
+    if row.get('status')!='ended':run(['lavish-axi','end',row['file']])
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M3RP354ZWC7R9HH16YWXQDGZ/live_driver.py", line 19, in run
+    if check and p.returncode: raise RuntimeError(text)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: $ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt/.lavish/review.html
+error: "ENOENT: no such file or directory, realpath '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt/.lavish/review.html'"
+code: UNKNOWN
+
+exit=1
+

@@ -1,0 +1,1787 @@
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller
+
+exit=0
+$ bin/fm-lab-home.sh tmux-dir /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller
+/tmp/fml.TT5v6D
+
+exit=0
+$ tmux -L fm-lab new-session -d -s fm-lab -x 100 -y 30 -c /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ sleep 3600
+
+exit=0
+$ tmux -L fm-lab display-message -p #{socket_path},#{pid},0
+/private/tmp/fml.TT5v6D/tmux-501/fm-lab,38938,0
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/finished/board.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/finished/board.html
+  url: "http://127.0.0.1:57890/session/90aa385145c2ba2e"
+  status: opened
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/scratch/board.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/scratch/board.html
+  url: "http://127.0.0.1:57890/session/acfdf1d59ce830e9"
+  status: opened
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/shared/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/shared/review.html
+  url: "http://127.0.0.1:57890/session/affd9075179b99a4"
+  status: opened
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/another-task/board.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/another-task/board.html
+  url: "http://127.0.0.1:57890/session/0905602c140133b1"
+  status: opened
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/finished/already-ended.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/finished/already-ended.html
+  url: "http://127.0.0.1:57890/session/cbd49d0484e28191"
+  status: opened
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/finished/already-ended.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/finished/already-ended.html
+  status: ended
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/shared/review.html --for finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller]
+registered: lavish-affd9075179b99a4 (lavish, task=finished)
+armed: lavish-affd9075179b99a4
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/shared/review.html
+owner-task: finished
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/shared/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller]
+lavish-affd9075179b99a4
+
+exit=0
+$ bin/fm-procevent.sh list [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller]
+SOURCE                       ADAPTER      OWNER      PENDING
+lavish-affd9075179b99a4      lavish       task:finished/listening 0
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 36s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/finished/board.html
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/scratch/board.html
+retired: lavish-affd9075179b99a4
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/shared/review.html
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/gone-finished)
+Backlog: finished just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/finished/board.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/finished/board.html
+  url: "http://127.0.0.1:57890/session/90aa385145c2ba2e"
+  status: opened
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own
+
+exit=0
+$ tasks-axi add finished Lifecycle lab task --kind ship --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+ok: added finished (ship) -> Queued
+task:
+  id: finished
+  title: Lifecycle lab task
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-30
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start finished --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block finished --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md` to record a dependency
+
+exit=0
+$ tasks-axi start finished --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+ok: start finished -> In flight
+help[1]:
+  - Run `tasks-axi done finished --pr <url> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md` when it ships
+
+exit=0
+$ bin/fm-captain-hold.sh hold finished --title Synthetic captain question --reason Waiting for an answer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+fm-captain-hold: existing task finished has a different title
+
+exit=1
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own
+
+exit=0
+$ tasks-axi add finished Lifecycle lab task --kind ship --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+ok: added finished (ship) -> Queued
+task:
+  id: finished
+  title: Lifecycle lab task
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-30
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start finished --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block finished --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md` to record a dependency
+
+exit=0
+$ tasks-axi start finished --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+ok: start finished -> In flight
+help[1]:
+  - Run `tasks-axi done finished --pr <url> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md` when it ships
+
+exit=0
+$ bin/fm-captain-hold.sh hold finished --reason Waiting for an answer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+finished
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/17ec1aa35da96dc4"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/finished/review.html --for finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+registered: lavish-17ec1aa35da96dc4 (lavish, task=finished)
+armed: lavish-17ec1aa35da96dc4
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/finished/review.html
+owner-task: finished
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+lavish-17ec1aa35da96dc4
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 5s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lavish boards of task finished stay open: the task still carries an open captain call.
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/gone-finished)
+Backlog: finished stays open in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md, still held for the captain with its deliverable recorded. Relay the question and close it only with bin/fm-captain-hold.sh answer.
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory
+
+exit=0
+$ tasks-axi add finished Lifecycle lab task --kind ship --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory]
+ok: added finished (ship) -> Queued
+task:
+  id: finished
+  title: Lifecycle lab task
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-30
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start finished --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block finished --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/backlog.md` to record a dependency
+
+exit=0
+$ tasks-axi start finished --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory]
+ok: start finished -> In flight
+help[1]:
+  - Run `tasks-axi done finished --pr <url> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/backlog.md` when it ships
+
+exit=0
+$ bin/fm-captain-hold.sh hold question --title Synthetic captain question --reason Waiting for an answer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory]
+question
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/e82de3f35c700416"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/finished/review.html --for finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory]
+registered: lavish-e82de3f35c700416 (lavish, task=finished)
+armed: lavish-e82de3f35c700416
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/finished/review.html
+owner-task: finished
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory]
+lavish-e82de3f35c700416
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 4s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lavish boards of task finished stay open: the task still carries an open captain call.
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/gone-finished)
+Backlog: finished is closed in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy
+
+exit=0
+$ tasks-axi add finished Lifecycle lab task --kind ship --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy]
+ok: added finished (ship) -> Queued
+task:
+  id: finished
+  title: Lifecycle lab task
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-30
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start finished --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block finished --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/backlog.md` to record a dependency
+
+exit=0
+$ tasks-axi start finished --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy]
+ok: start finished -> In flight
+help[1]:
+  - Run `tasks-axi done finished --pr <url> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/backlog.md` when it ships
+
+exit=0
+$ bin/fm-captain-hold.sh hold finished-decision-question --title Synthetic captain question --reason Waiting for an answer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy]
+finished-decision-question
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/08473252ab84081f"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/finished/review.html --for finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy]
+registered: lavish-08473252ab84081f (lavish, task=finished)
+armed: lavish-08473252ab84081f
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/finished/review.html
+owner-task: finished
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy]
+lavish-08473252ab84081f
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 5s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lavish boards of task finished stay open: the task still carries an open captain call.
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/gone-finished)
+Backlog: finished is closed in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown
+
+exit=0
+$ tasks-axi add finished Lifecycle lab task --kind ship --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown]
+ok: added finished (ship) -> Queued
+task:
+  id: finished
+  title: Lifecycle lab task
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-30
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start finished --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block finished --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/backlog.md` to record a dependency
+
+exit=0
+$ tasks-axi start finished --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown]
+ok: start finished -> In flight
+help[1]:
+  - Run `tasks-axi done finished --pr <url> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/backlog.md` when it ships
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/b0e0efe6f69e32b1"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/finished/review.html --for finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown]
+registered: lavish-b0e0efe6f69e32b1 (lavish, task=finished)
+armed: lavish-b0e0efe6f69e32b1
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/finished/review.html
+owner-task: finished
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown]
+lavish-b0e0efe6f69e32b1
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 3s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lavish boards of task finished stay open: the task still carries an open captain call.
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/gone-finished)
+Backlog: finished is closed in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered
+
+exit=0
+$ tasks-axi add finished Lifecycle lab task --kind ship --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered]
+ok: added finished (ship) -> Queued
+task:
+  id: finished
+  title: Lifecycle lab task
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-30
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start finished --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block finished --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/data/backlog.md` to record a dependency
+
+exit=0
+$ tasks-axi start finished --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered]
+ok: start finished -> In flight
+help[1]:
+  - Run `tasks-axi done finished --pr <url> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/data/backlog.md` when it ships
+
+exit=0
+$ bin/fm-captain-hold.sh hold question --title Synthetic captain question --reason Waiting for an answer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered]
+question
+
+exit=0
+$ bin/fm-captain-hold.sh answer question --decision-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/answer.txt [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered]
+answered: question
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/0a03f2cd83e3f8d6"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/data/finished/review.html --for finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered]
+registered: lavish-0a03f2cd83e3f8d6 (lavish, task=finished)
+armed: lavish-0a03f2cd83e3f8d6
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/data/finished/review.html
+owner-task: finished
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered]
+lavish-0a03f2cd83e3f8d6
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 5s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+retired: lavish-0a03f2cd83e3f8d6
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/data/finished/review.html
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/gone-finished)
+Backlog: finished is closed in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own
+
+exit=0
+$ tasks-axi add finished Lifecycle lab task --kind ship --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own]
+ok: added finished (ship) -> Queued
+task:
+  id: finished
+  title: Lifecycle lab task
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-30
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start finished --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block finished --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/backlog.md` to record a dependency
+
+exit=0
+$ tasks-axi start finished --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own]
+ok: start finished -> In flight
+help[1]:
+  - Run `tasks-axi done finished --pr <url> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/backlog.md` when it ships
+
+exit=0
+$ bin/fm-captain-hold.sh hold finished --reason Waiting for an answer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own]
+finished
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/d535db226514c2ab"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/finished/review.html --for finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own]
+registered: lavish-d535db226514c2ab (lavish, task=finished)
+armed: lavish-d535db226514c2ab
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/finished/review.html
+owner-task: finished
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own]
+lavish-d535db226514c2ab
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 3s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lavish boards of task finished stay open: the task still carries an open captain call.
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/gone-finished)
+Backlog: finished just finished (config/backlog-backend selects manual editing). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory
+
+exit=0
+$ tasks-axi add finished Lifecycle lab task --kind ship --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory]
+ok: added finished (ship) -> Queued
+task:
+  id: finished
+  title: Lifecycle lab task
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-30
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start finished --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block finished --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/backlog.md` to record a dependency
+
+exit=0
+$ tasks-axi start finished --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory]
+ok: start finished -> In flight
+help[1]:
+  - Run `tasks-axi done finished --pr <url> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/backlog.md` when it ships
+
+exit=0
+$ bin/fm-captain-hold.sh hold question --title Synthetic captain question --reason Waiting for an answer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory]
+question
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/05d0c638272c525f"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/finished/review.html --for finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory]
+registered: lavish-05d0c638272c525f (lavish, task=finished)
+armed: lavish-05d0c638272c525f
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/finished/review.html
+owner-task: finished
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory]
+lavish-05d0c638272c525f
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/parent
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/parent
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-foreign
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-foreign
+
+exit=0
+$ git init -q -b main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/children-project
+
+exit=0
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/children-project add .
+
+exit=0
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/children-project commit -qm Lab baseline
+
+exit=0
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/children-project worktree add -qb fm-worker /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-wt main
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-wt/.lavish/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-wt/.lavish/review.html
+  url: "http://127.0.0.1:57890/session/1940ab40e1551098"
+  status: opened
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home/data/worker/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home/data/worker/review.html
+  url: "http://127.0.0.1:57890/session/187c6e3624cc187f"
+  status: opened
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 3s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lavish boards of task finished stay open: the task still carries an open captain call.
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/gone-finished)
+Backlog: finished just finished (config/backlog-backend selects manual editing). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy
+
+exit=0
+$ tasks-axi add finished Lifecycle lab task --kind ship --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy]
+ok: added finished (ship) -> Queued
+task:
+  id: finished
+  title: Lifecycle lab task
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-30
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start finished --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block finished --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/backlog.md` to record a dependency
+
+exit=0
+$ tasks-axi start finished --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy]
+ok: start finished -> In flight
+help[1]:
+  - Run `tasks-axi done finished --pr <url> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/backlog.md` when it ships
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-shared.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-shared.html
+  url: "http://127.0.0.1:57890/session/60fb496a424c7e6f"
+  status: opened
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-scratch/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-scratch/review.html
+  url: "http://127.0.0.1:57890/session/fee9a766ff9dddbb"
+  status: opened
+
+exit=0
+$ bin/fm-captain-hold.sh hold finished-decision-question --title Synthetic captain question --reason Waiting for an answer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy]
+finished-decision-question
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-shared.html --for worker [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home]
+registered: lavish-60fb496a424c7e6f (lavish, task=worker)
+armed: lavish-60fb496a424c7e6f
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-shared.html
+owner-task: worker
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-shared.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home]
+lavish-60fb496a424c7e6f
+
+exit=0
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/children-project worktree add -qb fm-held-worker /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt main
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/075551c1cf2acb05"
+  status: opened
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt/.lavish/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt/.lavish/review.html
+  url: "http://127.0.0.1:57890/session/e98505e81c7fc117"
+  status: opened
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home/data/held-worker/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home/data/held-worker/review.html
+  url: "http://127.0.0.1:57890/session/6579afdf4cb8a886"
+  status: opened
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-shared.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-shared.html
+  url: "http://127.0.0.1:57890/session/a8d52371673ddb83"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/finished/review.html --for finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy]
+registered: lavish-075551c1cf2acb05 (lavish, task=finished)
+armed: lavish-075551c1cf2acb05
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/finished/review.html
+owner-task: finished
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy]
+lavish-075551c1cf2acb05
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-scratch/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-scratch/review.html
+  url: "http://127.0.0.1:57890/session/f092d501bdf5b01d"
+  status: opened
+
+exit=0
+$ bin/fm-captain-hold.sh hold held-worker --title Synthetic captain question --reason Waiting for an answer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home]
+actionable: task held-worker is held for the captain in this home but that did not reach the parent channel (rc=3)
+held-worker
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-shared.html --for held-worker [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home]
+registered: lavish-a8d52371673ddb83 (lavish, task=held-worker)
+armed: lavish-a8d52371673ddb83
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-shared.html
+owner-task: held-worker
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-shared.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home]
+lavish-a8d52371673ddb83
+
+exit=0
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/children-project worktree add -qb fm-foreign-worker /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-wt main
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-wt/.lavish/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-wt/.lavish/review.html
+  url: "http://127.0.0.1:57890/session/602bc8ab2fca39ad"
+  status: opened
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 7s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lavish boards of task finished stay open: the task still carries an open captain call.
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/gone-finished)
+Backlog: finished just finished (config/backlog-backend selects manual editing). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown
+
+exit=0
+$ tasks-axi add finished Lifecycle lab task --kind ship --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown]
+ok: added finished (ship) -> Queued
+task:
+  id: finished
+  title: Lifecycle lab task
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-30
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start finished --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block finished --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/backlog.md` to record a dependency
+
+exit=0
+$ tasks-axi start finished --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown]
+ok: start finished -> In flight
+help[1]:
+  - Run `tasks-axi done finished --pr <url> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/backlog.md` when it ships
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home/data/foreign-worker/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home/data/foreign-worker/review.html
+  url: "http://127.0.0.1:57890/session/298cd50f4285d45c"
+  status: opened
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/92ff0e4b781f8803"
+  status: opened
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-shared.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-shared.html
+  url: "http://127.0.0.1:57890/session/7f980a67ef5b2769"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/finished/review.html --for finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown]
+registered: lavish-92ff0e4b781f8803 (lavish, task=finished)
+armed: lavish-92ff0e4b781f8803
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/finished/review.html
+owner-task: finished
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown]
+lavish-92ff0e4b781f8803
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-scratch/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-scratch/review.html
+  url: "http://127.0.0.1:57890/session/60ae01b01d08fd15"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-wt/.lavish/review.html --for reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-foreign]
+registered: lavish-602bc8ab2fca39ad (lavish, task=reviewer)
+armed: lavish-602bc8ab2fca39ad
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-wt/.lavish/review.html
+owner-task: reviewer
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-wt/.lavish/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-foreign]
+lavish-602bc8ab2fca39ad
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-shared.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home]
+lavish-7f980a67ef5b2769
+
+exit=0
+$ bin/fm-procevent.sh register-task lavish lavish-7f980a67ef5b2769 foreign-worker -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/bin/fm-procevent-lavish.sh poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-shared.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home]
+registered: lavish-7f980a67ef5b2769 (lavish, task=foreign-worker)
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-shared.html --for reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-foreign]
+registered: lavish-7f980a67ef5b2769 (lavish, task=reviewer)
+armed: lavish-7f980a67ef5b2769
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-shared.html
+owner-task: reviewer
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-shared.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-foreign]
+lavish-7f980a67ef5b2769
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lavish boards of task finished stay open: the task still carries an open captain call.
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/gone-finished)
+Backlog: finished just finished (config/backlog-backend selects manual editing). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered
+
+exit=0
+$ tasks-axi add finished Lifecycle lab task --kind ship --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered]
+ok: added finished (ship) -> Queued
+task:
+  id: finished
+  title: Lifecycle lab task
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-30
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start finished --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block finished --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/data/backlog.md` to record a dependency
+
+exit=0
+$ tasks-axi start finished --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered]
+ok: start finished -> In flight
+help[1]:
+  - Run `tasks-axi done finished --pr <url> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/data/backlog.md` when it ships
+
+exit=0
+$ bin/fm-captain-hold.sh hold worker --title Synthetic captain question --reason Waiting for an answer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/parent]
+worker
+
+exit=0
+$ bin/fm-captain-hold.sh hold question --title Synthetic captain question --reason Waiting for an answer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered]
+question
+
+exit=0
+$ bin/fm-captain-hold.sh answer question --decision-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/answer.txt [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered]
+answered: question
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/b5d24af6f20699f1"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/data/finished/review.html --for finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered]
+registered: lavish-b5d24af6f20699f1 (lavish, task=finished)
+armed: lavish-b5d24af6f20699f1
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/data/finished/review.html
+owner-task: finished
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered]
+lavish-b5d24af6f20699f1
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty
+
+exit=0
+$ git init -q -b main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty-project
+
+exit=0
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty-project add .
+
+exit=0
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty-project commit -qm Lab baseline
+
+exit=0
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty-project worktree add -qb task-dirty /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty-worktree main
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/4c0575402097b46b"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty/data/finished/review.html --for finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty]
+registered: lavish-4c0575402097b46b (lavish, task=finished)
+armed: lavish-4c0575402097b46b
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty/data/finished/review.html
+owner-task: finished
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty]
+lavish-4c0575402097b46b
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: local-only worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty-worktree has work not yet merged into main and not on any remote.
+uncommitted changes present
+Merge the branch into local main first (bin/fm-merge-local.sh after the captain approves), or push to a fork/remote, or get the captain's explicit OK to discard, then --force.
+
+exit=1
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty-worktree add README.md
+
+exit=0
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty-worktree commit -qm Unlanded lab work
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 5s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+retired: lavish-b5d24af6f20699f1
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/data/finished/review.html
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/gone-finished)
+Backlog: finished just finished (config/backlog-backend selects manual editing). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty
+WARNING: watcher still down (same stale episode; last beat: 3s ago, grace 300s) - full banner already printed this episode.
+REFUSED: local-only worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty-worktree has work not yet merged into main and not on any remote.
+commits not yet on main:
+2d111c7 Unlanded lab work
+Merge the branch into local main first (bin/fm-merge-local.sh after the captain approves), or push to a fork/remote, or get the captain's explicit OK to discard, then --force.
+
+exit=1
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/code/bin/fm-teardown.sh secondmate --force [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/parent]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/parent
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 19s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home/data/foreign-worker/review.html
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-scratch/review.html
+kept: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-shared.html (source lavish-7f980a67ef5b2769 belongs to home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-foreign)
+kept: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-wt/.lavish/review.html (source lavish-602bc8ab2fca39ad belongs to home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-foreign)
+A new version of treehouse is available: v2.3.0 → v3.1.0
+Run "treehouse update" to update
+
+worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-wt is not managed by treehouse
+Lavish boards of task held-worker stay open: the task still carries an open captain call.
+A new version of treehouse is available: v2.3.0 → v3.1.0
+Run "treehouse update" to update
+
+worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt is not managed by treehouse
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home/data/worker/review.html
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-scratch/review.html
+retired: lavish-60fb496a424c7e6f
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-shared.html
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-wt/.lavish/review.html
+A new version of treehouse is available: v2.3.0 → v3.1.0
+Run "treehouse update" to update
+
+worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/worker-wt is not managed by treehouse
+retired: lavish-7f980a67ef5b2769
+retired: lavish-a8d52371673ddb83
+swept: attempted=2
+teardown secondmate complete (window fm-lab:fm-secondmate, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home)
+
+exit=0
+$ bin/fm-procevent.sh list [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-foreign]
+SOURCE                       ADAPTER      OWNER      PENDING
+lavish-602bc8ab2fca39ad      lavish       task:reviewer/listening 0
+lavish-7f980a67ef5b2769      lavish       task:reviewer/listening 0
+
+exit=0
+$ git init -q -b main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-project
+
+exit=0
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-project add .
+
+exit=0
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-project commit -qm Lab baseline
+
+exit=0
+$ treehouse get --lease --no-fetch --json
+A new version of treehouse is available: v2.3.0 → v3.1.0
+Run "treehouse update" to update
+
+🌳 Setting up worktree...
+🌳 Leased worktree at ~/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project. Run 'treehouse return ~/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project' to release it.
+{"path":"/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project","lease_id":"40b298554e0389381fb24ceab70e0300","lease_holder":"","leased_at":"2026-09-30T11:16:40.312936+02:00"}
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/9db885a94727e462"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html --for reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root]
+registered: lavish-9db885a94727e462 (lavish, task=reviewer)
+armed: lavish-9db885a94727e462
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html
+owner-task: reviewer
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root]
+lavish-9db885a94727e462
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+kept: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html (source lavish-9db885a94727e462 belongs to home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root)
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/gone-finished)
+Backlog: finished just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ bin/fm-procevent.sh list [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root]
+SOURCE                       ADAPTER      OWNER      PENDING
+lavish-9db885a94727e462      lavish       task:reviewer/listening 0
+
+exit=0
+$ bin/fm-procevent-lavish.sh end-task reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root]
+retired: lavish-9db885a94727e462
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-root/data/finished/review.html
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html
+  url: "http://127.0.0.1:57890/session/4f0ea6130d8cb530"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered]
+lavish-4f0ea6130d8cb530
+
+exit=0
+$ bin/fm-procevent.sh register-task lavish lavish-4f0ea6130d8cb530 finished -- /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/bin/fm-procevent-lavish.sh poll /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered]
+registered: lavish-4f0ea6130d8cb530 (lavish, task=finished)
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html --for reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered]
+registered: lavish-4f0ea6130d8cb530 (lavish, task=reviewer)
+armed: lavish-4f0ea6130d8cb530
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html
+owner-task: reviewer
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered]
+lavish-4f0ea6130d8cb530
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+kept: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html (source lavish-4f0ea6130d8cb530 belongs to home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered)
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/gone-finished)
+Backlog: finished just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ bin/fm-procevent.sh list [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered]
+SOURCE                       ADAPTER      OWNER      PENDING
+lavish-4f0ea6130d8cb530      lavish       task:reviewer/listening 0
+
+exit=0
+$ bin/fm-procevent-lavish.sh end-task reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered]
+retired: lavish-4f0ea6130d8cb530
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered/shared/review.html
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-other-task
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-other-task
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/7fc5a539ba30a005"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html --for reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+registered: lavish-7fc5a539ba30a005 (lavish, task=reviewer)
+armed: lavish-7fc5a539ba30a005
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html
+owner-task: reviewer
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+lavish-7fc5a539ba30a005
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  2 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+kept: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html (source lavish-7fc5a539ba30a005 belongs to task reviewer)
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/gone-finished)
+Backlog: finished just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ bin/fm-procevent.sh list [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+SOURCE                       ADAPTER      OWNER      PENDING
+lavish-7fc5a539ba30a005      lavish       task:reviewer/listening 0
+
+exit=0
+$ bin/fm-procevent-lavish.sh end-task reviewer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+retired: lavish-7fc5a539ba30a005
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task/data/finished/review.html
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-worker
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-worker
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project/.lavish/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project/.lavish/review.html
+  url: "http://127.0.0.1:57890/session/44d10a25c4ef8fa2"
+  status: opened
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home/data/finished/review.html
+  url: "http://127.0.0.1:57890/session/d5550883b937f23b"
+  status: opened
+
+exit=0
+$ bin/fm-procevent-lavish.sh arm /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home/data/finished/review.html --for finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home]
+registered: lavish-d5550883b937f23b (lavish, task=finished)
+armed: lavish-d5550883b937f23b
+artifact: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home/data/finished/review.html
+owner-task: finished
+
+exit=0
+$ bin/fm-procevent-lavish.sh source-id /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home/data/finished/review.html [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home]
+lavish-d5550883b937f23b
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-worker]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-worker
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project/.lavish/review.html
+A new version of treehouse is available: v2.3.0 → v3.1.0
+Run "treehouse update" to update
+
+🌳 Worktree returned to pool.
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project)
+Backlog: finished just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-worker/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-worker/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ treehouse status
+A new version of treehouse is available: v2.3.0 → v3.1.0
+Run "treehouse update" to update
+
+1     available    ~/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project
+
+exit=0
+$ treehouse get --lease --no-fetch --json
+A new version of treehouse is available: v2.3.0 → v3.1.0
+Run "treehouse update" to update
+
+🌳 Setting up worktree...
+🌳 Leased worktree at ~/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project. Run 'treehouse return ~/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project' to release it.
+{"path":"/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project","lease_id":"77001c1ce0287e6674b9cf3bc98ee878","lease_holder":"","leased_at":"2026-09-30T11:17:41.672959+02:00"}
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-parent
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-parent
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-child
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-child
+
+exit=0
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline/bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home/gone-finished)
+Backlog: finished just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project/.lavish/child-review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project/.lavish/child-review.html
+  url: "http://127.0.0.1:57890/session/4a2291a54be8d862"
+  status: opened
+
+exit=0
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/code/bin/fm-teardown.sh pool-secondmate --force [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-parent]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-parent
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project/.lavish/child-review.html
+A new version of treehouse is available: v2.3.0 → v3.1.0
+Run "treehouse update" to update
+
+🌳 Worktree returned to pool.
+teardown pool-secondmate complete (window fm-lab:fm-pool-secondmate, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-child)
+
+exit=0
+$ treehouse status
+A new version of treehouse is available: v2.3.0 → v3.1.0
+Run "treehouse update" to update
+
+1     available    ~/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage/data/finished/review.html
+  url: "http://127.0.0.1:60380/session/ab2ed22bdec363af"
+  status: opened
+
+exit=0
+$ lavish-axi stop
+server:
+  status: stopped
+  port: 60380
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 3s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ended: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage/data/finished/review.html
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage/gone-finished)
+Backlog: finished just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict/data/finished/review.html
+  url: "http://127.0.0.1:60763/session/bc39b3d7108416e4"
+  status: opened
+
+exit=0
+$ lavish-axi stop
+server:
+  status: stopped
+  port: 60763
+
+exit=0
+$ bin/fm-teardown.sh finished [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict]
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 3s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+warning: could not end the Lavish session for /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict/data/finished/review.html (error: Lavish Editor server did not start code: SERVER_ERROR help[1]: Run `lavish-axi server --port 60763` to inspect server startup); end it with: lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict/data/finished/review.html
+warning: some Lavish boards of task finished could not be concluded; teardown continues (see above)
+teardown finished complete (window fm-lab:fm-finished, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict/gone-finished)
+Backlog: finished just finished (this home keeps no markdown backlog at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict/data/backlog.md). Update /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict/data/backlog.md - move finished to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+exit=0
+$ lavish-axi /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict/data/finished/review.html --no-open
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict/data/finished/review.html
+  url: "http://127.0.0.1:60763/session/bc39b3d7108416e4"
+  status: opened
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/outage-port-conflict/data/finished/review.html
+  status: ended
+
+exit=0
+$ lavish-axi stop
+server:
+  status: not-running
+  port: 60763
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home]
+retired: lavish-d5550883b937f23b
+swept: attempted=1
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-foreign]
+retired: lavish-602bc8ab2fca39ad
+retired: lavish-7f980a67ef5b2769
+swept: attempted=2
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty]
+retired: lavish-4c0575402097b46b
+swept: attempted=1
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory]
+retired: lavish-e82de3f35c700416
+swept: attempted=1
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy]
+retired: lavish-08473252ab84081f
+swept: attempted=1
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+retired: lavish-17ec1aa35da96dc4
+swept: attempted=1
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown]
+retired: lavish-b0e0efe6f69e32b1
+swept: attempted=1
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory]
+retired: lavish-05d0c638272c525f
+swept: attempted=1
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy]
+retired: lavish-075551c1cf2acb05
+swept: attempted=1
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own]
+retired: lavish-d535db226514c2ab
+swept: attempted=1
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown]
+retired: lavish-92ff0e4b781f8803
+swept: attempted=1
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered]
+retired: lavish-4f0ea6130d8cb530
+swept: attempted=1
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/finished/board.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/finished/board.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/another-task/board.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller/data/another-task/board.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/finished/review.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory/data/finished/review.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy/data/finished/review.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown/data/finished/review.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own/data/finished/review.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory/data/finished/review.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy/data/finished/review.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt/.lavish/review.html
+error: "ENOENT: no such file or directory, realpath '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt/.lavish/review.html'"
+code: UNKNOWN
+
+exit=1
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-foreign]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+swept: attempted=0
+
+exit=0
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered]
+swept: attempted=0
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt/.lavish/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt/.lavish/review.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home/data/held-worker/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home/data/held-worker/review.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-shared.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-shared.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-scratch/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-scratch/review.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-wt/.lavish/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-wt/.lavish/review.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/finished/review.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-shared.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-shared.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty/data/finished/review.html
+  status: ended
+
+exit=0
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home/data/finished/review.html
+  status: ended
+
+exit=0
+$ lavish-axi stop
+server:
+  status: stopped
+  port: 57890
+
+exit=0
+$ tmux -L fm-lab kill-server
+
+exit=0
+$ bin/fm-lab-home.sh teardown /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller
+
+exit=0

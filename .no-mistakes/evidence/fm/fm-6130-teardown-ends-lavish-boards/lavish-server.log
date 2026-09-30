@@ -1,0 +1,6 @@
+2026-09-30T09:16:00.113Z (node:39225) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 ended listeners added to [EventEmitter]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2026-09-30T09:16:00.113Z (Use `node --trace-warnings ...` to show where the warning was created)
+2026-09-30T09:16:00.900Z (node:39225) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 feedback listeners added to [EventEmitter]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2026-09-30T09:16:00.900Z (node:39225) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 browser-disconnected listeners added to [EventEmitter]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2026-09-30T09:22:11.128Z [lavish] shutting down: shutdown-request (reason=stop)
+2026-09-30T09:22:11.134Z 

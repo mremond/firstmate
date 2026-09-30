@@ -1,0 +1,61 @@
+$ bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own
+
+exit=0
+
+$ tasks-axi add finished Lifecycle lab task --kind ship --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+ok: added finished (ship) -> Queued
+task:
+  id: finished
+  title: Lifecycle lab task
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: 2026-09-30
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start finished --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md` to move it to in flight
+  - Run `tasks-axi block finished --by <other> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md` to record a dependency
+
+exit=0
+
+$ tasks-axi start finished --file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+ok: start finished -> In flight
+help[1]:
+  - Run `tasks-axi done finished --pr <url> --file=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own/data/backlog.md` when it ships
+
+exit=0
+
+$ bin/fm-captain-hold.sh hold finished --title Synthetic captain question --reason Waiting for an answer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+fm-captain-hold: existing task finished has a different title
+
+exit=1
+
+Traceback (most recent call last):
+  File "/Users/mremond/.no-mistakes/evidence/01M3RP354ZWC7R9HH16YWXQDGZ/live_scenarios.py", line 77, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+                            ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/mremond/.no-mistakes/evidence/01M3RP354ZWC7R9HH16YWXQDGZ/live_scenarios.py", line 21, in holds
+    if variant!='unknown':hold(h,key)
+                          ~~~~^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M3RP354ZWC7R9HH16YWXQDGZ/live_scenarios.py", line 7, in hold
+    run(['bin/fm-captain-hold.sh','hold',key,'--title','Synthetic captain question','--reason','Waiting for an answer'],h)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mremond/.no-mistakes/evidence/01M3RP354ZWC7R9HH16YWXQDGZ/live_driver.py", line 19, in run
+    if check and p.returncode: raise RuntimeError(text)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: $ bin/fm-captain-hold.sh hold finished --title Synthetic captain question --reason Waiting for an answer [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+fm-captain-hold: existing task finished has a different title
+
+exit=1
+

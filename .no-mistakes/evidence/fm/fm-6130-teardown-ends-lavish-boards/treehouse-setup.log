@@ -1,0 +1,22 @@
+$ git init -q -b main /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-project
+
+exit=0
+
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-project add .
+
+exit=0
+
+$ git -C /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool-project commit -qm Lab baseline
+
+exit=0
+
+$ treehouse get --lease --no-fetch --json
+A new version of treehouse is available: v2.3.0 → v3.1.0
+Run "treehouse update" to update
+
+🌳 Setting up worktree...
+🌳 Leased worktree at ~/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project. Run 'treehouse return ~/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project' to release it.
+{"path":"/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/pool/.treehouse/pool-project-b7b643/1/pool-project","lease_id":"40b298554e0389381fb24ceab70e0300","lease_holder":"","leased_at":"2026-09-30T11:16:40.312936+02:00"}
+
+exit=0
+

@@ -1,0 +1,171 @@
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-foreign]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-registered]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-root]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-answered]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-inventory]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-legacy]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-own]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-automatic-unknown]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-answered]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-inventory]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-legacy]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-own]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-other-task]
+swept: attempted=0
+
+exit=0
+
+$ bin/fm-procevent.sh sweep-home [FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/owner-registered]
+swept: attempted=0
+
+exit=0
+
+Cleanup only: restored removed synthetic file for Lavish CLI end: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt/.lavish/review.html
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt/.lavish/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-wt/.lavish/review.html
+  status: ended
+
+exit=0
+
+Cleanup only: restored removed synthetic file for Lavish CLI end: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home/data/held-worker/review.html
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home/data/held-worker/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/child-home/data/held-worker/review.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-shared.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-shared.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-scratch/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/held-worker-scratch/review.html
+  status: ended
+
+exit=0
+
+Cleanup only: restored removed synthetic file for Lavish CLI end: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-wt/.lavish/review.html
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-wt/.lavish/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-wt/.lavish/review.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/hold-manual-unknown/data/finished/review.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-shared.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/foreign-worker-shared.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/dirty/data/finished/review.html
+  status: ended
+
+exit=0
+
+$ lavish-axi end /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home/data/finished/review.html
+session:
+  file: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/baseline-home/data/finished/review.html
+  status: ended
+
+exit=0
+
+$ lavish-axi stop
+server:
+  status: stopped
+  port: 57890
+
+exit=0
+
+$ tmux -L fm-lab kill-server
+
+exit=0
+
+$ bin/fm-lab-home.sh teardown /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3RP354ZWC7R9HH16YWXQDGZ/.gate-test-runtime/controller
+
+exit=0
+

@@ -1,0 +1,27 @@
+ok - teardown ends the task's Lavish boards by path, retiring their sources first and touching no other session
+ok - a refused teardown leaves every Lavish session and source untouched
+ok - a Lavish end failure is reported visibly and teardown still completes
+ok - a task still held for the captain keeps its Lavish boards and sources with automatic backlog updates
+ok - a task still held for the captain keeps its Lavish boards and sources with manual backlog updates
+ok - an open captain call in the task's inventory keeps its Lavish boards
+ok - a board whose source belongs to another task is left alone
+ok - registered external boards end while ended and unlisted sessions only retire their sources
+ok - manual backlog mode respects exact captain-call inventory
+ok - manual backlog mode respects legacy captain-call inventory
+ok - manual backlog mode respects missing captain-call inventory
+ok - manual backlog mode respects answered captain-call inventory
+ok - teardown respects notes migrated captain-call resolution
+ok - teardown respects prefix migrated captain-call resolution
+ok - teardown respects ambiguous migrated captain-call resolution
+ok - teardown respects scan-error migrated captain-call resolution
+ok - teardown respects answered migrated captain-call resolution
+actionable: task child-b is held for the captain in this home but that did not reach the parent channel (rc=3)
+ok - forced child cleanup ends boards using each owning home before worktree return
+actionable: task child-b is held for the captain in this home but that did not reach the parent channel (rc=3)
+ok - forced child cleanup ends boards using each owning home before worktree remove
+ok - ordinary teardown preserves another home's root Lavish board and source
+ok - ordinary teardown preserves another home's root-registered Lavish board and source
+ok - ordinary teardown preserves another home's registered Lavish board and source
+ok - child teardown preserves another home's root Lavish board and source
+ok - child teardown preserves another home's root-registered Lavish board and source
+ok - child teardown preserves another home's registered Lavish board and source
