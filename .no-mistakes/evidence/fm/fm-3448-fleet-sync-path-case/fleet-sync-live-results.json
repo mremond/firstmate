@@ -1,0 +1,31 @@
+{
+  "target": "f1694d030773dd3f2d41f38a8e7f5f3dc89fdb81",
+  "baseline": "589ccec821bf6310ce888e2a702e4fc9258eb1e8",
+  "scenarios": [
+    {
+      "name": "Case-mismatched home refreshes every clone; original guard reproduced first",
+      "result": "pass",
+      "live": true
+    },
+    {
+      "name": "Single-project name, projects-relative and absolute paths sync; repeated refresh is unchanged",
+      "result": "pass",
+      "live": true
+    },
+    {
+      "name": "Symlinked home and clone retain fast-forward behavior",
+      "result": "pass",
+      "live": true
+    },
+    {
+      "name": "Fleet and direct refresh reject nested directories and symlinks without touching the enclosing repository",
+      "result": "pass",
+      "live": true
+    },
+    {
+      "name": "Alternate-case access preserves dirty work, non-default branches and local-only exclusion",
+      "result": "pass",
+      "live": true
+    }
+  ]
+}

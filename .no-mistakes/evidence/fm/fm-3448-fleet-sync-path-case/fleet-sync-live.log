@@ -1,0 +1,267 @@
+Product target: f1694d030773dd3f2d41f38a8e7f5f3dc89fdb81; tree: 9f970451173bfc9cc8447d177d805480c1e90d0e
+Baseline: 589ccec821bf6310ce888e2a702e4fc9258eb1e8; OS: Darwin 27.0.0
+git version 2.54.0
+Git executable: /opt/homebrew/bin/git
+
+=== 1. Case-mismatched home, whole-fleet refresh, original then fixed ===
+{
+  "access": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/recordedhome/projects/alpha",
+  "git_toplevel": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/RecordedHome/projects/alpha",
+  "pwd_P": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/recordedhome/projects/alpha",
+  "same_spelling": false,
+  "same_filesystem_object": true
+}
+{
+  "access": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/recordedhome/projects/beta",
+  "git_toplevel": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/RecordedHome/projects/beta",
+  "pwd_P": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/recordedhome/projects/beta",
+  "same_spelling": false,
+  "same_filesystem_object": true
+}
+Before original:
+[
+  {
+    "HEAD": "94e08f98c100343f55cea41e0f2035d05a1f7d25",
+    "origin/main": "94e08f98c100343f55cea41e0f2035d05a1f7d25",
+    "branch": "main",
+    "status": "",
+    "payload": "version 0"
+  },
+  {
+    "HEAD": "bb49091526c7ab14df929e2521cbb009c64bde1e",
+    "origin/main": "bb49091526c7ab14df929e2521cbb009c64bde1e",
+    "branch": "main",
+    "status": "",
+    "payload": "version 0"
+  }
+]
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/recordedhome
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/bin/.fm-fleet-before-l6n3d6o9.sh
+stdout:
+alpha: skipped: not a clone root (git would act on /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/RecordedHome/projects/alpha)
+beta: skipped: not a clone root (git would act on /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/RecordedHome/projects/beta)
+stderr:
+
+exit=0
+Original guard reproduced: both valid clones skipped; HEAD and remote tracking refs stayed stale.
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/recordedhome
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/bin/fm-fleet-sync.sh
+stdout:
+alpha: synced 94e08f9..a2a1e6b
+beta: synced bb49091..133c9a6
+stderr:
+
+exit=0
+After fixed:
+[
+  {
+    "HEAD": "a2a1e6ba8890e546f9dd7a2d3568edc5ccf7906b",
+    "origin/main": "a2a1e6ba8890e546f9dd7a2d3568edc5ccf7906b",
+    "branch": "main",
+    "status": "",
+    "payload": "version 1"
+  },
+  {
+    "HEAD": "133c9a61e16faefa32be9db25716475f2333d15c",
+    "origin/main": "133c9a61e16faefa32be9db25716475f2333d15c",
+    "branch": "main",
+    "status": "",
+    "payload": "version 1"
+  }
+]
+SCENARIO PASS: Case-mismatched home refreshes every clone; original guard reproduced first
+
+=== 2. Single-project selection and current-clone behavior ===
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/recordedhome
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/bin/fm-fleet-sync.sh alpha
+stdout:
+alpha: synced a2a1e6b..df38bba
+stderr:
+
+exit=0
+Persisted state:
+{
+  "HEAD": "df38bbadaed6cc5784c2acd45846aad810e337e6",
+  "origin/main": "df38bbadaed6cc5784c2acd45846aad810e337e6",
+  "branch": "main",
+  "status": "",
+  "payload": "single bare project name"
+}
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/recordedhome
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/bin/fm-fleet-sync.sh projects/alpha
+stdout:
+alpha: synced df38bba..563a2ed
+stderr:
+
+exit=0
+Persisted state:
+{
+  "HEAD": "563a2ede9a0cef780e2694a985c11a9919f8a9b1",
+  "origin/main": "563a2ede9a0cef780e2694a985c11a9919f8a9b1",
+  "branch": "main",
+  "status": "",
+  "payload": "single projects-relative name"
+}
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/recordedhome
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/bin/fm-fleet-sync.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/recordedhome/projects/alpha
+stdout:
+alpha: synced 563a2ed..3aa86b0
+stderr:
+
+exit=0
+Persisted state:
+{
+  "HEAD": "3aa86b00e1e7d300ebe5406893d5b6d1f7779d95",
+  "origin/main": "3aa86b00e1e7d300ebe5406893d5b6d1f7779d95",
+  "branch": "main",
+  "status": "",
+  "payload": "single absolute alternate-case path"
+}
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/recordedhome
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/bin/fm-fleet-sync.sh alpha
+stdout:
+alpha: already current
+stderr:
+
+exit=0
+SCENARIO PASS: Single-project name, projects-relative and absolute paths sync; repeated refresh is unchanged
+
+=== 3. A symlinked clone and symlinked home still sync ===
+{
+  "access": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/HomeAlias/projects/linked",
+  "git_toplevel": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/PhysicalClone",
+  "pwd_P": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/PhysicalClone",
+  "same_spelling": true,
+  "same_filesystem_object": true
+}
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/HomeAlias
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/bin/fm-fleet-sync.sh
+stdout:
+linked: synced 3e75661..e240731
+stderr:
+
+exit=0
+Persisted state:
+{
+  "HEAD": "e24073173fee54bd63b423923f784196f784cfaa",
+  "origin/main": "e24073173fee54bd63b423923f784196f784cfaa",
+  "branch": "main",
+  "status": "",
+  "payload": "symlink update"
+}
+SCENARIO PASS: Symlinked home and clone retain fast-forward behavior
+
+=== 4. Nested directories cannot fetch, prune or update an enclosing repository ===
+Protected enclosing state:
+{
+  "HEAD": "b1ad16e797177351174c7a00732d259239691a5a",
+  "origin/main": "b1ad16e797177351174c7a00732d259239691a5a",
+  "branch": "main",
+  "status": "",
+  "payload": "version 0"
+}
+Protected refs:
+b1ad16e797177351174c7a00732d259239691a5a refs/heads/main
+b1ad16e797177351174c7a00732d259239691a5a refs/heads/merged-feature
+b1ad16e797177351174c7a00732d259239691a5a refs/remotes/origin/HEAD
+b1ad16e797177351174c7a00732d259239691a5a refs/remotes/origin/main
+b1ad16e797177351174c7a00732d259239691a5a refs/remotes/origin/merged-feature
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/enclosinghome
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/bin/fm-fleet-sync.sh
+stdout:
+linked-subdir: skipped: not a clone root (git would act on /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/EnclosingHome)
+not-a-clone: skipped: not a clone root (git would act on /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/EnclosingHome)
+stderr:
+
+exit=0
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/enclosinghome
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/bin/fm-fleet-sync.sh not-a-clone
+stdout:
+not-a-clone: skipped: not a clone root (git would act on /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/EnclosingHome)
+stderr:
+
+exit=0
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/enclosinghome
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/bin/fm-fleet-sync.sh projects/not-a-clone
+stdout:
+not-a-clone: skipped: not a clone root (git would act on /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/EnclosingHome)
+stderr:
+
+exit=0
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/enclosinghome
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/bin/fm-fleet-sync.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/enclosinghome/projects/not-a-clone
+stdout:
+not-a-clone: skipped: not a clone root (git would act on /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/EnclosingHome)
+stderr:
+
+exit=0
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/enclosinghome
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/bin/fm-fleet-sync.sh linked-subdir
+stdout:
+linked-subdir: skipped: not a clone root (git would act on /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/EnclosingHome)
+stderr:
+
+exit=0
+After every attempted refresh, HEAD, origin/main, merged-feature and origin/merged-feature were byte-for-byte unchanged.
+SCENARIO PASS: Fleet and direct refresh reject nested directories and symlinks without touching the enclosing repository
+
+=== 5. Other protections remain active through alternate-case homes ===
+Before safeguards:
+[
+  {
+    "HEAD": "c14f88129c9de6dd9ad1658090622165c7d2b7ed",
+    "origin/main": "c14f88129c9de6dd9ad1658090622165c7d2b7ed",
+    "branch": "main",
+    "status": "M payload.txt",
+    "payload": "uncommitted operator work"
+  },
+  {
+    "HEAD": "1953e7819fcddf09a4e474a0aff01d342b9b80ae",
+    "origin/main": "c14f88129c9de6dd9ad1658090622165c7d2b7ed",
+    "branch": "in-progress",
+    "status": "",
+    "payload": "unlanded work"
+  },
+  {
+    "HEAD": "69796c4f7cc8da050b4c1686633e501d4e8a1dfd",
+    "origin/main": "69796c4f7cc8da050b4c1686633e501d4e8a1dfd",
+    "branch": "main",
+    "status": "",
+    "payload": "version 0"
+  }
+]
+FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/.FleetSyncLive-szxx3psb/safetyhome
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1WNJCRPWGC9TKGH83XQZ/bin/fm-fleet-sync.sh
+stdout:
+dirty: STUCK: on branch main with uncommitted changes, 1 commits behind origin/main - needs attention
+local: skipped: local-only project
+topic: STUCK: on branch in-progress, 1 commits behind origin/main - needs attention
+stderr:
+
+exit=0
+After safeguards:
+[
+  {
+    "HEAD": "c14f88129c9de6dd9ad1658090622165c7d2b7ed",
+    "origin/main": "09521ce7c7a575fc4a5b072174e1708c8a33dc3e",
+    "branch": "main",
+    "status": "M payload.txt",
+    "payload": "uncommitted operator work"
+  },
+  {
+    "HEAD": "1953e7819fcddf09a4e474a0aff01d342b9b80ae",
+    "origin/main": "09521ce7c7a575fc4a5b072174e1708c8a33dc3e",
+    "branch": "in-progress",
+    "status": "",
+    "payload": "unlanded work"
+  },
+  {
+    "HEAD": "69796c4f7cc8da050b4c1686633e501d4e8a1dfd",
+    "origin/main": "69796c4f7cc8da050b4c1686633e501d4e8a1dfd",
+    "branch": "main",
+    "status": "",
+    "payload": "version 0"
+  }
+]
+SCENARIO PASS: Alternate-case access preserves dirty work, non-default branches and local-only exclusion
+Cleanup complete: all disposable homes, local origins, writer clones and original-script copy removed.
