@@ -1,0 +1,21 @@
+=== Return brief ===
+Supervisor health:
+  - GAP: the watcher beat was 999999s old at return (grace 300s)
+Your instructions:
+  (no away-posture record for this window; legacy away flag only)
+Waiting on you:
+  held in the backlog:
+    tasks[3]{id,state,kind,repo,title,hold_kind,hold_reason,hold_until}:
+      prose,queued,captain,firstmate,"Investigate literal %28 and fm-hold-v1:bm9ydGg=",captain,"Pick route (north); say \"yes\"\nNext line","-"
+      marker,queued,captain,firstmate,Marker-like input,captain,"fm-hold-v1:bm9ydGg=","-"
+      legacy,queued,captain,"-",Legacy title %28,captain,"Visit https://example.test/%28literal%29 and %0A","-"
+Tried and failed, or could not be fixed:
+  (nothing)
+Landed, cleanup due:
+  (nothing)
+Handled while away:
+  0 outcome(s) handled by the away session (0 routine, 0 escalated above)
+  (no routine outcomes recorded in the store for this window)
+Cost: 0 supervision outcome(s) recorded (0 routine, 0 captain); 0 task(s) live at return.
+catch-up health: GAP: the watcher beat was 999999s old at return (grace 300s)
+fm-afk-return: catch-up clear; ordinary captain work may proceed

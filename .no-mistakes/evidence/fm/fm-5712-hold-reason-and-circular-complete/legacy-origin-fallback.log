@@ -1,0 +1,122 @@
+Target: fadcf45b24e4ea3d9103e6d118431222c8e2e6bf
+Real tasks-axi 0.2.6; no fake CLI or backend.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/legacy
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/legacy
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add origin Origin --kind scout
+ok: added origin (scout) -> Queued
+task:
+  id: origin
+  title: Origin
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start origin` to move it to in flight
+  - Run `tasks-axi block origin --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add legacy 'Old call' --kind captain
+ok: added legacy (captain) -> Queued
+task:
+  id: legacy
+  title: Old call
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start legacy` to move it to in flight
+  - Run `tasks-axi block legacy --by <other>` to record a dependency
+[exit 0]
+
+$ tasks-axi hold legacy --reason 'Legacy URL https://example.test/%28literal%29' --kind captain
+ok: hold legacy -> held (captain)
+task:
+  id: legacy
+  title: Old call
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "Legacy URL https://example.test/%28literal%29"
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi unhold legacy` to resume dispatch
+  - Run `tasks-axi ready --include-held` to review paused work
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin legacy
+complete: origin captain-call inventory reviewed (legacy) [no recorded origin on: legacy; not checked against origin]
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin
+verified: origin captain-call inventory
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add unheld 'No recorded call' --kind captain
+ok: added unheld (captain) -> Queued
+task:
+  id: unheld
+  title: No recorded call
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start unheld` to move it to in flight
+  - Run `tasks-axi block unheld --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin unheld
+stderr:
+fm-captain-hold: captain-held task unheld is neither held for the captain nor closed with a recorded captain answer
+[exit 1]
+
+ASSERTION: A genuinely old held row is accepted with an explicit no-origin warning; an unheld row cannot satisfy the fallback
+

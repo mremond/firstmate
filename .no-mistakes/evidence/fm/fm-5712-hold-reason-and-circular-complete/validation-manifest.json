@@ -1,0 +1,76 @@
+{
+  "base": "8f756bbc287c5bdfacc64a7cc09e8516c64fc919",
+  "target": "fadcf45b24e4ea3d9103e6d118431222c8e2e6bf",
+  "target_tree": "ad066a12eca435b4f221d9be801d076ebdc6a34d",
+  "tasks_axi_version": "0.2.6",
+  "backend": "markdown",
+  "source_changed": false,
+  "disposable_labs_removed": true,
+  "results": [
+    {
+      "name": "circular-inventory",
+      "result": "pass",
+      "live": true,
+      "evidence": "/Users/mremond/.no-mistakes/evidence/01M3W33QQYV7FCM041WC2819ZB/circular-inventory.log",
+      "reason": ""
+    },
+    {
+      "name": "legacy-origin-fallback",
+      "result": "pass",
+      "live": true,
+      "evidence": "/Users/mremond/.no-mistakes/evidence/01M3W33QQYV7FCM041WC2819ZB/legacy-origin-fallback.log",
+      "reason": ""
+    },
+    {
+      "name": "reason-roundtrip-and-public-readers",
+      "result": "pass",
+      "live": true,
+      "evidence": "/Users/mremond/.no-mistakes/evidence/01M3W33QQYV7FCM041WC2819ZB/reason-roundtrip-and-public-readers.log",
+      "reason": ""
+    },
+    {
+      "name": "origin-write-failure",
+      "result": "pass",
+      "live": true,
+      "evidence": "/Users/mremond/.no-mistakes/evidence/01M3W33QQYV7FCM041WC2819ZB/origin-write-failure.log",
+      "reason": ""
+    },
+    {
+      "name": "origin-association-and-rehold",
+      "result": "pass",
+      "live": true,
+      "evidence": "/Users/mremond/.no-mistakes/evidence/01M3W33QQYV7FCM041WC2819ZB/origin-association-and-rehold.log",
+      "reason": ""
+    },
+    {
+      "name": "answered-inventory",
+      "result": "pass",
+      "live": true,
+      "evidence": "/Users/mremond/.no-mistakes/evidence/01M3W33QQYV7FCM041WC2819ZB/answered-inventory.log",
+      "reason": ""
+    },
+    {
+      "name": "startup-fallback-reader",
+      "result": "pass",
+      "live": true,
+      "evidence": "/Users/mremond/.no-mistakes/evidence/01M3W33QQYV7FCM041WC2819ZB/startup-fallback-reader.log",
+      "reason": ""
+    },
+    {
+      "name": "startup-and-return-readers",
+      "result": "pass",
+      "live": true,
+      "evidence": "/Users/mremond/.no-mistakes/evidence/01M3W33QQYV7FCM041WC2819ZB/startup-and-return-readers.log",
+      "reason": ""
+    },
+    {
+      "name": "baseline-reproduction",
+      "result": "pass",
+      "live": true,
+      "evidence": "/Users/mremond/.no-mistakes/evidence/01M3W33QQYV7FCM041WC2819ZB/baseline-reproduction.log",
+      "reason": ""
+    }
+  ],
+  "scope": "Live public CLI commands only; no full suite, linters, static analysis, pipeline control, publication, or CI. Startup reason rendering was driven via its real read-only digest; no harness primary was launched.",
+  "driver_setup_corrections": "Corrected answer CLI flags, a startup banner assertion, and the unavailable-adapter setup before re-driving affected cases."
+}

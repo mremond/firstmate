@@ -1,0 +1,604 @@
+Target: fadcf45b24e4ea3d9103e6d118431222c8e2e6bf
+Real tasks-axi 0.2.6; no fake CLI or backend.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add legacy 'Investigate literal %28, "fm-hold-v1:bm9ydGg="' --kind captain --body 'fm-hold-v1:bm9ydGg=
+  hold_reason: "%28"
+'
+ok: added legacy (captain) -> Queued
+task:
+  id: legacy
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\"\n"
+help[2]:
+  - Run `tasks-axi start legacy` to move it to in flight
+  - Run `tasks-axi block legacy --by <other>` to record a dependency
+[exit 0]
+
+$ tasks-axi hold legacy --reason 'Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=' --kind captain
+ok: hold legacy -> held (captain)
+task:
+  id: legacy
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg="
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+help[2]:
+  - Run `tasks-axi unhold legacy` to resume dispatch
+  - Run `tasks-axi ready --include-held` to review paused work
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold prose --title 'Investigate literal %28, "fm-hold-v1:bm9ydGg="' --reason '  Pick route (north); say "yes" or '"'"'no'"'"' - 100% sure %28x%29, café	\slash
+Second line
+
+'
+prose
+[exit 0]
+
+$ tasks-axi show prose --full
+task:
+  id: prose
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "fm-hold-v1:ICBQaWNrIHJvdXRlIChub3J0aCk7IHNheSAieWVzIiBvciAnbm8nIC0gMTAwJSBzdXJlICUyOHglMjksIGNhZsOpCVxzbGFzaA0KU2Vjb25kIGxpbmUKCg=="
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:13:33Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show prose --full
+task:
+  id: prose
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n"
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:13:33Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh view prose --full
+task:
+  id: prose
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n"
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:13:33Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh list --fields hold_reason,body
+count: 2
+tasks[2]{id,state,kind,repo,title,hold_reason,body}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n","Captain hold set: 2026-10-01T17:13:33Z"
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ tasks-axi list --fields hold_reason,body
+count: 2
+tasks[2]{id,state,kind,repo,title,hold_reason,body}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:ICBQaWNrIHJvdXRlIChub3J0aCk7IHNheSAieWVzIiBvciAnbm8nIC0gMTAwJSBzdXJlICUyOHglMjksIGNhZsOpCVxzbGFzaA0KU2Vjb25kIGxpbmUKCg==","Captain hold set: 2026-10-01T17:13:33Z"
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh list --fields body,hold_reason,hold_until
+count: 2
+tasks[2]{id,state,kind,repo,title,body,hold_reason,hold_until}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","-"
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Captain hold set: 2026-10-01T17:13:33Z","  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n","-"
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ tasks-axi list --fields body,hold_reason,hold_until
+count: 2
+tasks[2]{id,state,kind,repo,title,body,hold_reason,hold_until}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","-"
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Captain hold set: 2026-10-01T17:13:33Z","fm-hold-v1:ICBQaWNrIHJvdXRlIChub3J0aCk7IHNheSAieWVzIiBvciAnbm8nIC0gMTAwJSBzdXJlICUyOHglMjksIGNhZsOpCVxzbGFzaA0KU2Vjb25kIGxpbmUKCg==","-"
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+ASSERTION: prose: marked stored reason decodes byte-for-byte at show/view/list, including trailing newlines; titles and legacy fields unchanged
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold marker --title 'Investigate literal %28, "fm-hold-v1:bm9ydGg="' --reason fm-hold-v1:bm9ydGg= --until 2099-01-01
+marker
+[exit 0]
+
+$ tasks-axi show marker --full
+task:
+  id: marker
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "fm-hold-v1:Zm0taG9sZC12MTpibTl5ZEdnPQ=="
+  hold_kind: captain
+  hold_until: 2099-01-01
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:13:36Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show marker --full
+task:
+  id: marker
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "fm-hold-v1:bm9ydGg="
+  hold_kind: captain
+  hold_until: 2099-01-01
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:13:36Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh view marker --full
+task:
+  id: marker
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "fm-hold-v1:bm9ydGg="
+  hold_kind: captain
+  hold_until: 2099-01-01
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:13:36Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh list --fields hold_reason,body
+count: 3
+tasks[3]{id,state,kind,repo,title,hold_reason,body}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n","Captain hold set: 2026-10-01T17:13:33Z"
+  marker,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:bm9ydGg=","Captain hold set: 2026-10-01T17:13:36Z"
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ tasks-axi list --fields hold_reason,body
+count: 3
+tasks[3]{id,state,kind,repo,title,hold_reason,body}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:ICBQaWNrIHJvdXRlIChub3J0aCk7IHNheSAieWVzIiBvciAnbm8nIC0gMTAwJSBzdXJlICUyOHglMjksIGNhZsOpCVxzbGFzaA0KU2Vjb25kIGxpbmUKCg==","Captain hold set: 2026-10-01T17:13:33Z"
+  marker,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:Zm0taG9sZC12MTpibTl5ZEdnPQ==","Captain hold set: 2026-10-01T17:13:36Z"
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh list --fields body,hold_reason,hold_until
+count: 3
+tasks[3]{id,state,kind,repo,title,body,hold_reason,hold_until}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","-"
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Captain hold set: 2026-10-01T17:13:33Z","  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n","-"
+  marker,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Captain hold set: 2026-10-01T17:13:36Z","fm-hold-v1:bm9ydGg=",2099-01-01
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ tasks-axi list --fields body,hold_reason,hold_until
+count: 3
+tasks[3]{id,state,kind,repo,title,body,hold_reason,hold_until}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","-"
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Captain hold set: 2026-10-01T17:13:33Z","fm-hold-v1:ICBQaWNrIHJvdXRlIChub3J0aCk7IHNheSAieWVzIiBvciAnbm8nIC0gMTAwJSBzdXJlICUyOHglMjksIGNhZsOpCVxzbGFzaA0KU2Vjb25kIGxpbmUKCg==","-"
+  marker,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Captain hold set: 2026-10-01T17:13:36Z","fm-hold-v1:Zm0taG9sZC12MTpibTl5ZEdnPQ==",2099-01-01
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+ASSERTION: marker: marked stored reason decodes byte-for-byte at show/view/list, including trailing newlines; titles and legacy fields unchanged
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show legacy --full
+task:
+  id: legacy
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg="
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+[exit 0]
+
+$ tasks-axi show legacy --full
+task:
+  id: legacy
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg="
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh list
+count: 3
+tasks[3]{id,state,kind,repo,title}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  marker,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ tasks-axi list
+count: 3
+tasks[3]{id,state,kind,repo,title}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  marker,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show --help
+usage: tasks-axi show <id> [--full]
+aliases: view
+examples:
+  tasks-axi show homemux-h7
+  tasks-axi show homemux-h7 --full[exit 0]
+
+$ tasks-axi show --help
+usage: tasks-axi show <id> [--full]
+aliases: view
+examples:
+  tasks-axi show homemux-h7
+  tasks-axi show homemux-h7 --full[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh list --help
+usage: tasks-axi list [flags]
+flags:
+  --state <queued|in_flight|done|held>, --repo <name>, --kind <name>, --blocked
+  --limit <n>, --fields <a,b,c>  (extra: blocked, blocked_by, body, closed, created, delivery_state, deps, held, hold_kind, hold_reason, hold_until, links, priority)
+examples:
+  tasks-axi list --state queued
+  tasks-axi list --repo no-mistakes --fields blocked_by,created
+  tasks-axi list --blocked[exit 0]
+
+$ tasks-axi list --help
+usage: tasks-axi list [flags]
+flags:
+  --state <queued|in_flight|done|held>, --repo <name>, --kind <name>, --blocked
+  --limit <n>, --fields <a,b,c>  (extra: blocked, blocked_by, body, closed, created, delivery_state, deps, held, hold_kind, hold_reason, hold_until, links, priority)
+examples:
+  tasks-axi list --state queued
+  tasks-axi list --repo no-mistakes --fields blocked_by,created
+  tasks-axi list --blocked[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show absent
+error: "Task \"absent\" not found in this backlog"
+code: NOT_FOUND
+help[1]: Run `tasks-axi list` to see existing tasks
+[exit 1]
+
+$ tasks-axi show absent
+error: "Task \"absent\" not found in this backlog"
+code: NOT_FOUND
+help[1]: Run `tasks-axi list` to see existing tasks
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-fleet-snapshot.sh --json
+{
+  "schema": "fm-fleet-snapshot.v1",
+  "generated": "2026-10-01T17:13:39Z",
+  "fm_home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons",
+  "roots": {
+    "fm_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB",
+    "state": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/state",
+    "data": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/data",
+    "config": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/config",
+    "projects": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/projects"
+  },
+  "backlog": {
+    "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/data/backlog.md",
+    "records": [
+      {
+        "body_excerpt": "fm-hold-v1:bm9ydGg= hold_reason: \"%28\"",
+        "done": null,
+        "hold_bucket": "live",
+        "hold_kind": "captain",
+        "blocked_by": null,
+        "requires_child_metadata": false,
+        "current_role": "queued",
+        "hold_age_days": 0,
+        "pr_url": null,
+        "order": 1,
+        "links": [
+          "https://example.test/%28literal%29"
+        ],
+        "state": "queued",
+        "checked": false,
+        "blocked_reason": null,
+        "since": "2026-10-01",
+        "raw": "- [ ] legacy - Investigate literal %28, \"fm-hold-v1:bm9ydGg=\" (kind: captain) (since 2026-10-01) (hold: Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=) (hold-kind: captain)",
+        "hold_until": null,
+        "priority": null,
+        "hold_set": null,
+        "reported": null,
+        "body_lines": [
+          "fm-hold-v1:bm9ydGg=",
+          "hold_reason: \"%28\""
+        ],
+        "captain_actionable": true,
+        "id": "legacy",
+        "unresolved_blocker_ids": [],
+        "title": "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"",
+        "report_path": null,
+        "blocked_by_ids": [],
+        "hold_reason": "Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=",
+        "structured": true,
+        "local_note": null,
+        "kind": "captain",
+        "completion": {
+          "date": null,
+          "verb": null
+        },
+        "merged": null,
+        "repo": null
+      },
+      {
+        "since": "2026-10-01",
+        "raw": "- [ ] prose - Investigate literal %28, \"fm-hold-v1:bm9ydGg=\" (repo: firstmate) (kind: captain) (since 2026-10-01) (hold: fm-hold-v1:ICBQaWNrIHJvdXRlIChub3J0aCk7IHNheSAieWVzIiBvciAnbm8nIC0gMTAwJSBzdXJlICUyOHglMjksIGNhZsOpCVxzbGFzaA0KU2Vjb25kIGxpbmUKCg==) (hold-kind: captain)",
+        "hold_until": null,
+        "priority": null,
+        "checked": false,
+        "state": "queued",
+        "links": [],
+        "blocked_reason": null,
+        "pr_url": null,
+        "hold_age_days": 0,
+        "order": 2,
+        "hold_bucket": "live",
+        "hold_kind": "captain",
+        "done": null,
+        "body_excerpt": "Captain hold set: 2026-10-01T17:13:33Z",
+        "requires_child_metadata": false,
+        "blocked_by": null,
+        "current_role": "queued",
+        "completion": {
+          "date": null,
+          "verb": null
+        },
+        "merged": null,
+        "repo": "firstmate",
+        "local_note": null,
+        "structured": true,
+        "kind": "captain",
+        "captain_actionable": true,
+        "id": "prose",
+        "unresolved_blocker_ids": [],
+        "blocked_by_ids": [],
+        "hold_reason": "  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n",
+        "title": "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"",
+        "report_path": null,
+        "hold_set": "2026-10-01T17:13:33Z",
+        "body_lines": [
+          "Captain hold set: 2026-10-01T17:13:33Z"
+        ],
+        "reported": null
+      },
+      {
+        "kind": "captain",
+        "structured": true,
+        "local_note": null,
+        "repo": "firstmate",
+        "merged": null,
+        "completion": {
+          "verb": null,
+          "date": null
+        },
+        "reported": null,
+        "body_lines": [
+          "Captain hold set: 2026-10-01T17:13:36Z"
+        ],
+        "hold_set": "2026-10-01T17:13:36Z",
+        "title": "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"",
+        "report_path": null,
+        "blocked_by_ids": [],
+        "hold_reason": "fm-hold-v1:bm9ydGg=",
+        "unresolved_blocker_ids": [],
+        "id": "marker",
+        "captain_actionable": false,
+        "blocked_reason": null,
+        "links": [],
+        "state": "queued",
+        "checked": false,
+        "hold_until": "2099-01-01",
+        "priority": null,
+        "raw": "- [ ] marker - Investigate literal %28, \"fm-hold-v1:bm9ydGg=\" (repo: firstmate) (kind: captain) (since 2026-10-01) (hold: fm-hold-v1:Zm0taG9sZC12MTpibTl5ZEdnPQ==) (hold-kind: captain) (hold-until: 2099-01-01)",
+        "since": "2026-10-01",
+        "blocked_by": null,
+        "requires_child_metadata": false,
+        "current_role": "queued",
+        "done": null,
+        "body_excerpt": "Captain hold set: 2026-10-01T17:13:36Z",
+        "hold_kind": "captain",
+        "hold_bucket": "dated",
+        "order": 3,
+        "hold_age_days": 0,
+        "pr_url": null
+      }
+    ],
+    "present": true
+  },
+  "tasks": [],
+  "main_inventory": {
+    "valid": true,
+    "reason": null,
+    "orphan_in_flight": [],
+    "unstructured_current_count": 0
+  },
+  "contributions": {
+    "known": 0,
+    "checked": 0,
+    "counts": {
+      "captain": 0,
+      "fleet": 0,
+      "maintainer": 0,
+      "nobody": 0
+    },
+    "unmeasured": 0,
+    "complete": true,
+    "proven_clear": true,
+    "stale_verdicts": 0,
+    "missing_verdicts": 0,
+    "unreadable_records": 0,
+    "valid_until": 900,
+    "captain": [],
+    "captain_omitted": 0
+  },
+  "scout_reports": [],
+  "secondmate_current": {
+    "registry": {
+      "present": false,
+      "available": true,
+      "complete": true,
+      "reason": null,
+      "provenance": "registered-table",
+      "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/data/secondmates.md",
+      "freshness": {
+        "status": "fresh",
+        "observed_at": "2026-10-01T17:13:39Z"
+      },
+      "records": [],
+      "input_truncated": false,
+      "records_truncated": false,
+      "reasons": [],
+      "lines_in_window": 0,
+      "records_in_window": 0
+    },
+    "records": [],
+    "total_registered": 0,
+    "total": 0,
+    "shown": 0,
+    "truncated": 0
+  },
+  "secondmate_landed": {
+    "records": [],
+    "truncated": [],
+    "unreadable": [],
+    "partial": []
+  },
+  "secondmate_guidance": {
+    "note": "For kind=secondmate, bearings selects validated structured state from that registered home; parent events and bounded terminal evidence are fallback-only supplements and never current-state authority."
+  }
+}
+[exit 0]
+
+ASSERTION: Fleet JSON preserves Unicode and exact multiline reason, legacy percent text, marker-looking reason, title and unrelated body
+

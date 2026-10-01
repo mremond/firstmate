@@ -1,0 +1,205 @@
+{
+  "schema": "fm-fleet-snapshot.v1",
+  "generated": "2026-10-01T17:13:39Z",
+  "fm_home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons",
+  "roots": {
+    "fm_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB",
+    "state": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/state",
+    "data": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/data",
+    "config": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/config",
+    "projects": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/projects"
+  },
+  "backlog": {
+    "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/data/backlog.md",
+    "records": [
+      {
+        "body_excerpt": "fm-hold-v1:bm9ydGg= hold_reason: \"%28\"",
+        "done": null,
+        "hold_bucket": "live",
+        "hold_kind": "captain",
+        "blocked_by": null,
+        "requires_child_metadata": false,
+        "current_role": "queued",
+        "hold_age_days": 0,
+        "pr_url": null,
+        "order": 1,
+        "links": [
+          "https://example.test/%28literal%29"
+        ],
+        "state": "queued",
+        "checked": false,
+        "blocked_reason": null,
+        "since": "2026-10-01",
+        "raw": "- [ ] legacy - Investigate literal %28, \"fm-hold-v1:bm9ydGg=\" (kind: captain) (since 2026-10-01) (hold: Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=) (hold-kind: captain)",
+        "hold_until": null,
+        "priority": null,
+        "hold_set": null,
+        "reported": null,
+        "body_lines": [
+          "fm-hold-v1:bm9ydGg=",
+          "hold_reason: \"%28\""
+        ],
+        "captain_actionable": true,
+        "id": "legacy",
+        "unresolved_blocker_ids": [],
+        "title": "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"",
+        "report_path": null,
+        "blocked_by_ids": [],
+        "hold_reason": "Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=",
+        "structured": true,
+        "local_note": null,
+        "kind": "captain",
+        "completion": {
+          "date": null,
+          "verb": null
+        },
+        "merged": null,
+        "repo": null
+      },
+      {
+        "since": "2026-10-01",
+        "raw": "- [ ] prose - Investigate literal %28, \"fm-hold-v1:bm9ydGg=\" (repo: firstmate) (kind: captain) (since 2026-10-01) (hold: fm-hold-v1:ICBQaWNrIHJvdXRlIChub3J0aCk7IHNheSAieWVzIiBvciAnbm8nIC0gMTAwJSBzdXJlICUyOHglMjksIGNhZsOpCVxzbGFzaA0KU2Vjb25kIGxpbmUKCg==) (hold-kind: captain)",
+        "hold_until": null,
+        "priority": null,
+        "checked": false,
+        "state": "queued",
+        "links": [],
+        "blocked_reason": null,
+        "pr_url": null,
+        "hold_age_days": 0,
+        "order": 2,
+        "hold_bucket": "live",
+        "hold_kind": "captain",
+        "done": null,
+        "body_excerpt": "Captain hold set: 2026-10-01T17:13:33Z",
+        "requires_child_metadata": false,
+        "blocked_by": null,
+        "current_role": "queued",
+        "completion": {
+          "date": null,
+          "verb": null
+        },
+        "merged": null,
+        "repo": "firstmate",
+        "local_note": null,
+        "structured": true,
+        "kind": "captain",
+        "captain_actionable": true,
+        "id": "prose",
+        "unresolved_blocker_ids": [],
+        "blocked_by_ids": [],
+        "hold_reason": "  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n",
+        "title": "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"",
+        "report_path": null,
+        "hold_set": "2026-10-01T17:13:33Z",
+        "body_lines": [
+          "Captain hold set: 2026-10-01T17:13:33Z"
+        ],
+        "reported": null
+      },
+      {
+        "kind": "captain",
+        "structured": true,
+        "local_note": null,
+        "repo": "firstmate",
+        "merged": null,
+        "completion": {
+          "verb": null,
+          "date": null
+        },
+        "reported": null,
+        "body_lines": [
+          "Captain hold set: 2026-10-01T17:13:36Z"
+        ],
+        "hold_set": "2026-10-01T17:13:36Z",
+        "title": "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"",
+        "report_path": null,
+        "blocked_by_ids": [],
+        "hold_reason": "fm-hold-v1:bm9ydGg=",
+        "unresolved_blocker_ids": [],
+        "id": "marker",
+        "captain_actionable": false,
+        "blocked_reason": null,
+        "links": [],
+        "state": "queued",
+        "checked": false,
+        "hold_until": "2099-01-01",
+        "priority": null,
+        "raw": "- [ ] marker - Investigate literal %28, \"fm-hold-v1:bm9ydGg=\" (repo: firstmate) (kind: captain) (since 2026-10-01) (hold: fm-hold-v1:Zm0taG9sZC12MTpibTl5ZEdnPQ==) (hold-kind: captain) (hold-until: 2099-01-01)",
+        "since": "2026-10-01",
+        "blocked_by": null,
+        "requires_child_metadata": false,
+        "current_role": "queued",
+        "done": null,
+        "body_excerpt": "Captain hold set: 2026-10-01T17:13:36Z",
+        "hold_kind": "captain",
+        "hold_bucket": "dated",
+        "order": 3,
+        "hold_age_days": 0,
+        "pr_url": null
+      }
+    ],
+    "present": true
+  },
+  "tasks": [],
+  "main_inventory": {
+    "valid": true,
+    "reason": null,
+    "orphan_in_flight": [],
+    "unstructured_current_count": 0
+  },
+  "contributions": {
+    "known": 0,
+    "checked": 0,
+    "counts": {
+      "captain": 0,
+      "fleet": 0,
+      "maintainer": 0,
+      "nobody": 0
+    },
+    "unmeasured": 0,
+    "complete": true,
+    "proven_clear": true,
+    "stale_verdicts": 0,
+    "missing_verdicts": 0,
+    "unreadable_records": 0,
+    "valid_until": 900,
+    "captain": [],
+    "captain_omitted": 0
+  },
+  "scout_reports": [],
+  "secondmate_current": {
+    "registry": {
+      "present": false,
+      "available": true,
+      "complete": true,
+      "reason": null,
+      "provenance": "registered-table",
+      "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/data/secondmates.md",
+      "freshness": {
+        "status": "fresh",
+        "observed_at": "2026-10-01T17:13:39Z"
+      },
+      "records": [],
+      "input_truncated": false,
+      "records_truncated": false,
+      "reasons": [],
+      "lines_in_window": 0,
+      "records_in_window": 0
+    },
+    "records": [],
+    "total_registered": 0,
+    "total": 0,
+    "shown": 0,
+    "truncated": 0
+  },
+  "secondmate_landed": {
+    "records": [],
+    "truncated": [],
+    "unreadable": [],
+    "partial": []
+  },
+  "secondmate_guidance": {
+    "note": "For kind=secondmate, bearings selects validated structured state from that registered home; parent events and bounded terminal evidence are fallback-only supplements and never current-state authority."
+  }
+}

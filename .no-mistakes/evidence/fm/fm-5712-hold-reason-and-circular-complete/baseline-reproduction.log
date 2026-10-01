@@ -1,0 +1,54 @@
+Target: fadcf45b24e4ea3d9103e6d118431222c8e2e6bf
+Real tasks-axi 0.2.6; no fake CLI or backend.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pxttrvna/baseline
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pxttrvna/baseline
+[exit 0]
+
+$ git archive 8f756bbc287c5bdfacc64a7cc09e8516c64fc919 bin .tasks.toml (extracted only into disposable workspace)
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add origin Origin --kind scout
+ok: added origin (scout) -> Queued
+task:
+  id: origin
+  title: Origin
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start origin` to move it to in flight
+  - Run `tasks-axi block origin --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pxttrvna/base-code/bin/fm-captain-hold.sh hold origin --reason 'Choose a route'
+origin
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pxttrvna/base-code/bin/fm-captain-hold.sh hold origin --reason 'Choose (north); "yes"'
+stderr:
+fm-captain-hold: reason must not contain parentheses (tasks-axi hold contract)
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pxttrvna/base-code/bin/fm-captain-hold.sh hold origin --reason 'Choose (north); "yes"
+Next'
+stderr:
+fm-captain-hold: reason must be one line
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pxttrvna/base-code/bin/fm-captain-hold.sh complete origin origin
+complete: origin captain-call inventory reviewed (origin)
+[exit 0]
+
+ASSERTION: The base rejects ordinary prose then accepts circular completion on the durable origin; target scenarios reject that completion and accept the prose
+

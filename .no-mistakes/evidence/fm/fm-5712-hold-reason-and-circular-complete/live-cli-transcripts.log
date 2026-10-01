@@ -1,0 +1,1993 @@
+Target fadcf45b24e4ea3d9103e6d118431222c8e2e6bf
+Base 8f756bbc287c5bdfacc64a7cc09e8516c64fc919
+Real tasks-axi 0.2.6, Markdown backend. All lab homes were inside the test worktree and were removed. No source edits.
+
+
+===== circular-inventory =====
+Target: fadcf45b24e4ea3d9103e6d118431222c8e2e6bf
+Real tasks-axi 0.2.6; no fake CLI or backend.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/circular
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/circular
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add origin 'Origin investigation' --kind scout
+ok: added origin (scout) -> Queued
+task:
+  id: origin
+  title: Origin investigation
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start origin` to move it to in flight
+  - Run `tasks-axi block origin --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold origin --reason ''
+stderr:
+fm-captain-hold: reason must not be empty
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin origin
+stderr:
+fm-captain-hold: origin origin cannot be its own captain-call inventory entry; hold a separate captain task for the call and list that task
+[exit 1]
+
+ASSERTION: failed hold: circular completion refused without recording an attestation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold origin --reason 'Choose a route'
+origin
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin origin
+stderr:
+fm-captain-hold: origin origin cannot be its own captain-call inventory entry; hold a separate captain task for the call and list that task
+[exit 1]
+
+ASSERTION: durably held origin: circular completion refused without recording an attestation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin
+stderr:
+fm-captain-hold: origin origin cannot be its own captain-call inventory entry; historical decision_keys in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/circular/state/origin.meta still contains origin; hold a separate captain task with --origin origin, replace only origin in the final decision_keys= line with that task id while preserving all other entries, then re-run complete origin <task-id>
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold separate --title 'Separate captain call' --reason 'Choose route' --origin origin
+separate
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin separate
+stderr:
+fm-captain-hold: origin origin cannot be its own captain-call inventory entry; historical decision_keys in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/circular/state/origin.meta still contains origin; hold a separate captain task with --origin origin, replace only origin in the final decision_keys= line with that task id while preserving all other entries, then re-run complete origin <task-id>
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin separate
+complete: origin captain-call inventory reviewed (separate)
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin
+verified: origin captain-call inventory
+[exit 0]
+
+ASSERTION: Historical self-inventory stayed refused until its entry was replaced with a separate held call, then completion and verify succeeded
+
+
+===== legacy-origin-fallback =====
+Target: fadcf45b24e4ea3d9103e6d118431222c8e2e6bf
+Real tasks-axi 0.2.6; no fake CLI or backend.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/legacy
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/legacy
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add origin Origin --kind scout
+ok: added origin (scout) -> Queued
+task:
+  id: origin
+  title: Origin
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start origin` to move it to in flight
+  - Run `tasks-axi block origin --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add legacy 'Old call' --kind captain
+ok: added legacy (captain) -> Queued
+task:
+  id: legacy
+  title: Old call
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start legacy` to move it to in flight
+  - Run `tasks-axi block legacy --by <other>` to record a dependency
+[exit 0]
+
+$ tasks-axi hold legacy --reason 'Legacy URL https://example.test/%28literal%29' --kind captain
+ok: hold legacy -> held (captain)
+task:
+  id: legacy
+  title: Old call
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "Legacy URL https://example.test/%28literal%29"
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi unhold legacy` to resume dispatch
+  - Run `tasks-axi ready --include-held` to review paused work
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin legacy
+complete: origin captain-call inventory reviewed (legacy) [no recorded origin on: legacy; not checked against origin]
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin
+verified: origin captain-call inventory
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add unheld 'No recorded call' --kind captain
+ok: added unheld (captain) -> Queued
+task:
+  id: unheld
+  title: No recorded call
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start unheld` to move it to in flight
+  - Run `tasks-axi block unheld --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin unheld
+stderr:
+fm-captain-hold: captain-held task unheld is neither held for the captain nor closed with a recorded captain answer
+[exit 1]
+
+ASSERTION: A genuinely old held row is accepted with an explicit no-origin warning; an unheld row cannot satisfy the fallback
+
+
+===== reason-roundtrip-and-public-readers =====
+Target: fadcf45b24e4ea3d9103e6d118431222c8e2e6bf
+Real tasks-axi 0.2.6; no fake CLI or backend.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add legacy 'Investigate literal %28, "fm-hold-v1:bm9ydGg="' --kind captain --body 'fm-hold-v1:bm9ydGg=
+  hold_reason: "%28"
+'
+ok: added legacy (captain) -> Queued
+task:
+  id: legacy
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\"\n"
+help[2]:
+  - Run `tasks-axi start legacy` to move it to in flight
+  - Run `tasks-axi block legacy --by <other>` to record a dependency
+[exit 0]
+
+$ tasks-axi hold legacy --reason 'Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=' --kind captain
+ok: hold legacy -> held (captain)
+task:
+  id: legacy
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg="
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+help[2]:
+  - Run `tasks-axi unhold legacy` to resume dispatch
+  - Run `tasks-axi ready --include-held` to review paused work
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold prose --title 'Investigate literal %28, "fm-hold-v1:bm9ydGg="' --reason '  Pick route (north); say "yes" or '"'"'no'"'"' - 100% sure %28x%29, café	\slash
+Second line
+
+'
+prose
+[exit 0]
+
+$ tasks-axi show prose --full
+task:
+  id: prose
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "fm-hold-v1:ICBQaWNrIHJvdXRlIChub3J0aCk7IHNheSAieWVzIiBvciAnbm8nIC0gMTAwJSBzdXJlICUyOHglMjksIGNhZsOpCVxzbGFzaA0KU2Vjb25kIGxpbmUKCg=="
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:13:33Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show prose --full
+task:
+  id: prose
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n"
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:13:33Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh view prose --full
+task:
+  id: prose
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n"
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:13:33Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh list --fields hold_reason,body
+count: 2
+tasks[2]{id,state,kind,repo,title,hold_reason,body}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n","Captain hold set: 2026-10-01T17:13:33Z"
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ tasks-axi list --fields hold_reason,body
+count: 2
+tasks[2]{id,state,kind,repo,title,hold_reason,body}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:ICBQaWNrIHJvdXRlIChub3J0aCk7IHNheSAieWVzIiBvciAnbm8nIC0gMTAwJSBzdXJlICUyOHglMjksIGNhZsOpCVxzbGFzaA0KU2Vjb25kIGxpbmUKCg==","Captain hold set: 2026-10-01T17:13:33Z"
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh list --fields body,hold_reason,hold_until
+count: 2
+tasks[2]{id,state,kind,repo,title,body,hold_reason,hold_until}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","-"
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Captain hold set: 2026-10-01T17:13:33Z","  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n","-"
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ tasks-axi list --fields body,hold_reason,hold_until
+count: 2
+tasks[2]{id,state,kind,repo,title,body,hold_reason,hold_until}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","-"
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Captain hold set: 2026-10-01T17:13:33Z","fm-hold-v1:ICBQaWNrIHJvdXRlIChub3J0aCk7IHNheSAieWVzIiBvciAnbm8nIC0gMTAwJSBzdXJlICUyOHglMjksIGNhZsOpCVxzbGFzaA0KU2Vjb25kIGxpbmUKCg==","-"
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+ASSERTION: prose: marked stored reason decodes byte-for-byte at show/view/list, including trailing newlines; titles and legacy fields unchanged
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold marker --title 'Investigate literal %28, "fm-hold-v1:bm9ydGg="' --reason fm-hold-v1:bm9ydGg= --until 2099-01-01
+marker
+[exit 0]
+
+$ tasks-axi show marker --full
+task:
+  id: marker
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "fm-hold-v1:Zm0taG9sZC12MTpibTl5ZEdnPQ=="
+  hold_kind: captain
+  hold_until: 2099-01-01
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:13:36Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show marker --full
+task:
+  id: marker
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "fm-hold-v1:bm9ydGg="
+  hold_kind: captain
+  hold_until: 2099-01-01
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:13:36Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh view marker --full
+task:
+  id: marker
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "fm-hold-v1:bm9ydGg="
+  hold_kind: captain
+  hold_until: 2099-01-01
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:13:36Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh list --fields hold_reason,body
+count: 3
+tasks[3]{id,state,kind,repo,title,hold_reason,body}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n","Captain hold set: 2026-10-01T17:13:33Z"
+  marker,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:bm9ydGg=","Captain hold set: 2026-10-01T17:13:36Z"
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ tasks-axi list --fields hold_reason,body
+count: 3
+tasks[3]{id,state,kind,repo,title,hold_reason,body}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:ICBQaWNrIHJvdXRlIChub3J0aCk7IHNheSAieWVzIiBvciAnbm8nIC0gMTAwJSBzdXJlICUyOHglMjksIGNhZsOpCVxzbGFzaA0KU2Vjb25kIGxpbmUKCg==","Captain hold set: 2026-10-01T17:13:33Z"
+  marker,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:Zm0taG9sZC12MTpibTl5ZEdnPQ==","Captain hold set: 2026-10-01T17:13:36Z"
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh list --fields body,hold_reason,hold_until
+count: 3
+tasks[3]{id,state,kind,repo,title,body,hold_reason,hold_until}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","-"
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Captain hold set: 2026-10-01T17:13:33Z","  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n","-"
+  marker,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Captain hold set: 2026-10-01T17:13:36Z","fm-hold-v1:bm9ydGg=",2099-01-01
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ tasks-axi list --fields body,hold_reason,hold_until
+count: 3
+tasks[3]{id,state,kind,repo,title,body,hold_reason,hold_until}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\"","Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=","-"
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Captain hold set: 2026-10-01T17:13:33Z","fm-hold-v1:ICBQaWNrIHJvdXRlIChub3J0aCk7IHNheSAieWVzIiBvciAnbm8nIC0gMTAwJSBzdXJlICUyOHglMjksIGNhZsOpCVxzbGFzaA0KU2Vjb25kIGxpbmUKCg==","-"
+  marker,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"","Captain hold set: 2026-10-01T17:13:36Z","fm-hold-v1:Zm0taG9sZC12MTpibTl5ZEdnPQ==",2099-01-01
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+ASSERTION: marker: marked stored reason decodes byte-for-byte at show/view/list, including trailing newlines; titles and legacy fields unchanged
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show legacy --full
+task:
+  id: legacy
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg="
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+[exit 0]
+
+$ tasks-axi show legacy --full
+task:
+  id: legacy
+  title: "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg="
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "fm-hold-v1:bm9ydGg=\n  hold_reason: \"%28\""
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh list
+count: 3
+tasks[3]{id,state,kind,repo,title}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  marker,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ tasks-axi list
+count: 3
+tasks[3]{id,state,kind,repo,title}:
+  legacy,queued,captain,"-","Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  prose,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+  marker,queued,captain,firstmate,"Investigate literal %28, \"fm-hold-v1:bm9ydGg=\""
+help[2]:
+  - Run `tasks-axi show <id>` for full notes on a task
+  - Run `tasks-axi ready` to see unblocked queued work
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show --help
+usage: tasks-axi show <id> [--full]
+aliases: view
+examples:
+  tasks-axi show homemux-h7
+  tasks-axi show homemux-h7 --full[exit 0]
+
+$ tasks-axi show --help
+usage: tasks-axi show <id> [--full]
+aliases: view
+examples:
+  tasks-axi show homemux-h7
+  tasks-axi show homemux-h7 --full[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh list --help
+usage: tasks-axi list [flags]
+flags:
+  --state <queued|in_flight|done|held>, --repo <name>, --kind <name>, --blocked
+  --limit <n>, --fields <a,b,c>  (extra: blocked, blocked_by, body, closed, created, delivery_state, deps, held, hold_kind, hold_reason, hold_until, links, priority)
+examples:
+  tasks-axi list --state queued
+  tasks-axi list --repo no-mistakes --fields blocked_by,created
+  tasks-axi list --blocked[exit 0]
+
+$ tasks-axi list --help
+usage: tasks-axi list [flags]
+flags:
+  --state <queued|in_flight|done|held>, --repo <name>, --kind <name>, --blocked
+  --limit <n>, --fields <a,b,c>  (extra: blocked, blocked_by, body, closed, created, delivery_state, deps, held, hold_kind, hold_reason, hold_until, links, priority)
+examples:
+  tasks-axi list --state queued
+  tasks-axi list --repo no-mistakes --fields blocked_by,created
+  tasks-axi list --blocked[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show absent
+error: "Task \"absent\" not found in this backlog"
+code: NOT_FOUND
+help[1]: Run `tasks-axi list` to see existing tasks
+[exit 1]
+
+$ tasks-axi show absent
+error: "Task \"absent\" not found in this backlog"
+code: NOT_FOUND
+help[1]: Run `tasks-axi list` to see existing tasks
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-fleet-snapshot.sh --json
+{
+  "schema": "fm-fleet-snapshot.v1",
+  "generated": "2026-10-01T17:13:39Z",
+  "fm_home": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons",
+  "roots": {
+    "fm_root": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB",
+    "state": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/state",
+    "data": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/data",
+    "config": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/config",
+    "projects": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/projects"
+  },
+  "backlog": {
+    "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/data/backlog.md",
+    "records": [
+      {
+        "body_excerpt": "fm-hold-v1:bm9ydGg= hold_reason: \"%28\"",
+        "done": null,
+        "hold_bucket": "live",
+        "hold_kind": "captain",
+        "blocked_by": null,
+        "requires_child_metadata": false,
+        "current_role": "queued",
+        "hold_age_days": 0,
+        "pr_url": null,
+        "order": 1,
+        "links": [
+          "https://example.test/%28literal%29"
+        ],
+        "state": "queued",
+        "checked": false,
+        "blocked_reason": null,
+        "since": "2026-10-01",
+        "raw": "- [ ] legacy - Investigate literal %28, \"fm-hold-v1:bm9ydGg=\" (kind: captain) (since 2026-10-01) (hold: Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=) (hold-kind: captain)",
+        "hold_until": null,
+        "priority": null,
+        "hold_set": null,
+        "reported": null,
+        "body_lines": [
+          "fm-hold-v1:bm9ydGg=",
+          "hold_reason: \"%28\""
+        ],
+        "captain_actionable": true,
+        "id": "legacy",
+        "unresolved_blocker_ids": [],
+        "title": "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"",
+        "report_path": null,
+        "blocked_by_ids": [],
+        "hold_reason": "Visit https://example.test/%28literal%29 and %0A; fm-hold-v1:bm9ydGg=",
+        "structured": true,
+        "local_note": null,
+        "kind": "captain",
+        "completion": {
+          "date": null,
+          "verb": null
+        },
+        "merged": null,
+        "repo": null
+      },
+      {
+        "since": "2026-10-01",
+        "raw": "- [ ] prose - Investigate literal %28, \"fm-hold-v1:bm9ydGg=\" (repo: firstmate) (kind: captain) (since 2026-10-01) (hold: fm-hold-v1:ICBQaWNrIHJvdXRlIChub3J0aCk7IHNheSAieWVzIiBvciAnbm8nIC0gMTAwJSBzdXJlICUyOHglMjksIGNhZsOpCVxzbGFzaA0KU2Vjb25kIGxpbmUKCg==) (hold-kind: captain)",
+        "hold_until": null,
+        "priority": null,
+        "checked": false,
+        "state": "queued",
+        "links": [],
+        "blocked_reason": null,
+        "pr_url": null,
+        "hold_age_days": 0,
+        "order": 2,
+        "hold_bucket": "live",
+        "hold_kind": "captain",
+        "done": null,
+        "body_excerpt": "Captain hold set: 2026-10-01T17:13:33Z",
+        "requires_child_metadata": false,
+        "blocked_by": null,
+        "current_role": "queued",
+        "completion": {
+          "date": null,
+          "verb": null
+        },
+        "merged": null,
+        "repo": "firstmate",
+        "local_note": null,
+        "structured": true,
+        "kind": "captain",
+        "captain_actionable": true,
+        "id": "prose",
+        "unresolved_blocker_ids": [],
+        "blocked_by_ids": [],
+        "hold_reason": "  Pick route (north); say \"yes\" or 'no' - 100% sure %28x%29, café\t\\slash\r\nSecond line\n\n",
+        "title": "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"",
+        "report_path": null,
+        "hold_set": "2026-10-01T17:13:33Z",
+        "body_lines": [
+          "Captain hold set: 2026-10-01T17:13:33Z"
+        ],
+        "reported": null
+      },
+      {
+        "kind": "captain",
+        "structured": true,
+        "local_note": null,
+        "repo": "firstmate",
+        "merged": null,
+        "completion": {
+          "verb": null,
+          "date": null
+        },
+        "reported": null,
+        "body_lines": [
+          "Captain hold set: 2026-10-01T17:13:36Z"
+        ],
+        "hold_set": "2026-10-01T17:13:36Z",
+        "title": "Investigate literal %28, \"fm-hold-v1:bm9ydGg=\"",
+        "report_path": null,
+        "blocked_by_ids": [],
+        "hold_reason": "fm-hold-v1:bm9ydGg=",
+        "unresolved_blocker_ids": [],
+        "id": "marker",
+        "captain_actionable": false,
+        "blocked_reason": null,
+        "links": [],
+        "state": "queued",
+        "checked": false,
+        "hold_until": "2099-01-01",
+        "priority": null,
+        "raw": "- [ ] marker - Investigate literal %28, \"fm-hold-v1:bm9ydGg=\" (repo: firstmate) (kind: captain) (since 2026-10-01) (hold: fm-hold-v1:Zm0taG9sZC12MTpibTl5ZEdnPQ==) (hold-kind: captain) (hold-until: 2099-01-01)",
+        "since": "2026-10-01",
+        "blocked_by": null,
+        "requires_child_metadata": false,
+        "current_role": "queued",
+        "done": null,
+        "body_excerpt": "Captain hold set: 2026-10-01T17:13:36Z",
+        "hold_kind": "captain",
+        "hold_bucket": "dated",
+        "order": 3,
+        "hold_age_days": 0,
+        "pr_url": null
+      }
+    ],
+    "present": true
+  },
+  "tasks": [],
+  "main_inventory": {
+    "valid": true,
+    "reason": null,
+    "orphan_in_flight": [],
+    "unstructured_current_count": 0
+  },
+  "contributions": {
+    "known": 0,
+    "checked": 0,
+    "counts": {
+      "captain": 0,
+      "fleet": 0,
+      "maintainer": 0,
+      "nobody": 0
+    },
+    "unmeasured": 0,
+    "complete": true,
+    "proven_clear": true,
+    "stale_verdicts": 0,
+    "missing_verdicts": 0,
+    "unreadable_records": 0,
+    "valid_until": 900,
+    "captain": [],
+    "captain_omitted": 0
+  },
+  "scout_reports": [],
+  "secondmate_current": {
+    "registry": {
+      "present": false,
+      "available": true,
+      "complete": true,
+      "reason": null,
+      "provenance": "registered-table",
+      "path": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/reasons/data/secondmates.md",
+      "freshness": {
+        "status": "fresh",
+        "observed_at": "2026-10-01T17:13:39Z"
+      },
+      "records": [],
+      "input_truncated": false,
+      "records_truncated": false,
+      "reasons": [],
+      "lines_in_window": 0,
+      "records_in_window": 0
+    },
+    "records": [],
+    "total_registered": 0,
+    "total": 0,
+    "shown": 0,
+    "truncated": 0
+  },
+  "secondmate_landed": {
+    "records": [],
+    "truncated": [],
+    "unreadable": [],
+    "partial": []
+  },
+  "secondmate_guidance": {
+    "note": "For kind=secondmate, bearings selects validated structured state from that registered home; parent events and bounded terminal evidence are fallback-only supplements and never current-state authority."
+  }
+}
+[exit 0]
+
+ASSERTION: Fleet JSON preserves Unicode and exact multiline reason, legacy percent text, marker-looking reason, title and unrelated body
+
+
+===== origin-write-failure =====
+Target: fadcf45b24e4ea3d9103e6d118431222c8e2e6bf
+Real tasks-axi 0.2.6; no fake CLI or backend.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/failed-origin-write
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-v_y2kcd0/failed-origin-write
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add origin Origin --kind scout
+ok: added origin (scout) -> Queued
+task:
+  id: origin
+  title: Origin
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start origin` to move it to in flight
+  - Run `tasks-axi block origin --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add plain Call --kind captain --body 'Captain hold set: 2026-10-01T12:00:00Z'
+ok: added plain (captain) -> Queued
+task:
+  id: plain
+  title: Call
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T12:00:00Z"
+help[2]:
+  - Run `tasks-axi start plain` to move it to in flight
+  - Run `tasks-axi block plain --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold plain --reason Choose --origin origin
+environment additions: {'FM_CAPTAIN_HOLD_NOW': '2026-10-01T12:00:00Z'}
+process RLIMIT_FSIZE=184 bytes
+stderr:
+fm-captain-hold: could not record the hold origin on plain
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show plain --full
+task:
+  id: plain
+  title: Call
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T12:00:00Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin plain
+stderr:
+fm-captain-hold: captain-held task plain is neither held for the captain nor closed with a recorded captain answer
+[exit 1]
+
+ASSERTION: plain: genuine origin-update storage failure leaves row unheld and cannot satisfy completion
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold plain --reason Choose --origin origin
+plain
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin plain
+complete: origin captain-call inventory reviewed (plain)
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin
+verified: origin captain-call inventory
+[exit 0]
+
+ASSERTION: plain: removing the local resource restriction lets the same hold complete and verify
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add dated Call --kind captain --body 'Captain hold set: 2026-10-01T12:00:00Z'
+ok: added dated (captain) -> Queued
+task:
+  id: dated
+  title: Call
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T12:00:00Z"
+help[2]:
+  - Run `tasks-axi start dated` to move it to in flight
+  - Run `tasks-axi block dated --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold dated --reason Choose --origin origin --until 2099-01-01
+environment additions: {'FM_CAPTAIN_HOLD_NOW': '2026-10-01T12:00:00Z'}
+process RLIMIT_FSIZE=358 bytes
+stderr:
+fm-captain-hold: could not record the hold origin on dated
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show dated --full
+task:
+  id: dated
+  title: Call
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T12:00:00Z"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin dated
+stderr:
+fm-captain-hold: captain-held task dated is neither held for the captain nor closed with a recorded captain answer
+[exit 1]
+
+ASSERTION: dated: genuine origin-update storage failure leaves row unheld and cannot satisfy completion
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold dated --reason Choose --origin origin --until 2099-01-01
+dated
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin dated
+complete: origin captain-call inventory reviewed (dated,plain)
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin
+verified: origin captain-call inventory
+[exit 0]
+
+ASSERTION: dated: removing the local resource restriction lets the same hold complete and verify
+
+
+===== origin-association-and-rehold =====
+Target: fadcf45b24e4ea3d9103e6d118431222c8e2e6bf
+Real tasks-axi 0.2.6; no fake CLI or backend.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pdggm82l/origins
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pdggm82l/origins
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add origin-a origin-a --kind scout
+ok: added origin-a (scout) -> Queued
+task:
+  id: origin-a
+  title: origin-a
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start origin-a` to move it to in flight
+  - Run `tasks-axi block origin-a --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add origin-b origin-b --kind scout
+ok: added origin-b (scout) -> Queued
+task:
+  id: origin-b
+  title: origin-b
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start origin-b` to move it to in flight
+  - Run `tasks-axi block origin-b --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold call-a --title 'Call for A' --reason 'Pick A' --origin origin-a
+call-a
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show call-a --full
+task:
+  id: call-a
+  title: Call for A
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "Pick A"
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:15:33Z\nCaptain hold origin: origin-a\n\nOrigin: origin-a"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin-b call-a
+stderr:
+fm-captain-hold: captain-held task call-a was held for origin origin-a, not origin-b; hold a task for origin-b or list the right one
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin-b
+stderr:
+fm-captain-hold: captain-held task call-a was held for origin origin-a, not origin-b; hold a task for origin-b or list the right one
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin-a call-a
+complete: origin-a captain-call inventory reviewed (call-a)
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin-a
+verified: origin-a captain-call inventory
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh answer call-a --decision-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pdggm82l/origins/decision.txt --release
+released: call-a
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold call-a --reason 'Now decide for B' --origin origin-b --until 2099-01-01
+call-a
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show call-a --full
+task:
+  id: call-a
+  title: Call for A
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "Now decide for B"
+  hold_kind: captain
+  hold_until: 2099-01-01
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:15:40Z\nCaptain hold origin: origin-b\n\nResolution recorded by fm-captain-hold.\nDecision digest: d4f14d5a849ab9cb5c83abfc70a2a8aa3717ae31158bbb155c1013fafb35c3b8\nResolution mode: released\n\nCaptain decision:\nUse A. Synthetic validation answer.\n\n\nOrigin: origin-a"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin-b call-a
+complete: origin-b captain-call inventory reviewed (call-a)
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin-b
+verified: origin-b captain-call inventory
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin-a call-a
+stderr:
+fm-captain-hold: captain-held task call-a was held for origin origin-b, not origin-a; hold a task for origin-a or list the right one
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin-a
+stderr:
+fm-captain-hold: captain-held task call-a was held for origin origin-b, not origin-a; hold a task for origin-a or list the right one
+[exit 1]
+
+ASSERTION: Correct-origin completion passes; wrong-origin complete/verify refuse; a released call re-held for B replaces A and verifies only for B
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold call-a --reason 'Active hold now belongs to A' --origin origin-a
+call-a
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show call-a --full
+task:
+  id: call-a
+  title: Call for A
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "Active hold now belongs to A"
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: "Captain hold set: 2026-10-01T17:15:40Z\nCaptain hold origin: origin-a\n\nResolution recorded by fm-captain-hold.\nDecision digest: d4f14d5a849ab9cb5c83abfc70a2a8aa3717ae31158bbb155c1013fafb35c3b8\nResolution mode: released\n\nCaptain decision:\nUse A. Synthetic validation answer.\n\n\nOrigin: origin-a"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin-a call-a
+complete: origin-a captain-call inventory reviewed (call-a)
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin-a
+verified: origin-a captain-call inventory
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin-b
+stderr:
+fm-captain-hold: captain-held task call-a was held for origin origin-a, not origin-b; hold a task for origin-b or list the right one
+[exit 1]
+
+ASSERTION: An active re-hold also overwrites the old association
+
+
+===== answered-inventory =====
+Target: fadcf45b24e4ea3d9103e6d118431222c8e2e6bf
+Real tasks-axi 0.2.6; no fake CLI or backend.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-153q4712/closed-inventory
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-153q4712/closed-inventory
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add origin-a origin-a --kind scout
+ok: added origin-a (scout) -> Queued
+task:
+  id: origin-a
+  title: origin-a
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start origin-a` to move it to in flight
+  - Run `tasks-axi block origin-a --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add origin-b origin-b --kind scout
+ok: added origin-b (scout) -> Queued
+task:
+  id: origin-b
+  title: origin-b
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start origin-b` to move it to in flight
+  - Run `tasks-axi block origin-b --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold recorded --title 'Recorded call' --reason 'Choose (north)' --origin origin-a
+recorded
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh answer recorded --decision-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-153q4712/closed-inventory/answer.txt
+answered: recorded
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh show recorded --full
+task:
+  id: recorded
+  title: Recorded call
+  state: done
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "Choose (north)"
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: firstmate
+  priority: "-"
+  created: "-"
+  closed: 2026-10-01
+  deps: none
+  links: none
+  body: "Resolution recorded by fm-captain-hold.\nDecision digest: c5d7673156a4334ac0eadb0ddb39382459e89aca55c08a86539ed4bde4e30dd1\nResolution mode: answered\n\nCaptain decision:\nUse north. Synthetic validation answer.\n\nCaptain hold origin: origin-a\n\nOrigin: origin-a"
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin-a recorded
+complete: origin-a captain-call inventory reviewed (recorded)
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin-a
+verified: origin-a captain-call inventory
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin-b recorded
+stderr:
+fm-captain-hold: captain-held task recorded was held for origin origin-a, not origin-b; hold a task for origin-b or list the right one
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add legacy 'Old call' --kind captain
+ok: added legacy (captain) -> Queued
+task:
+  id: legacy
+  title: Old call
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start legacy` to move it to in flight
+  - Run `tasks-axi block legacy --by <other>` to record a dependency
+[exit 0]
+
+$ tasks-axi hold legacy --reason 'Old hold' --kind captain
+ok: hold legacy -> held (captain)
+task:
+  id: legacy
+  title: Old call
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: Old hold
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi unhold legacy` to resume dispatch
+  - Run `tasks-axi ready --include-held` to review paused work
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh answer legacy --decision-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-153q4712/closed-inventory/answer.txt
+answered: legacy
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh complete origin-b legacy
+complete: origin-b captain-call inventory reviewed (legacy) [no recorded origin on: legacy; not checked against origin-b]
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh verify origin-b
+verified: origin-b captain-call inventory
+[exit 0]
+
+ASSERTION: Answered closed calls retain origin enforcement; an answered legacy call remains accepted with explicit fallback disclosure
+
+
+===== startup-fallback-reader =====
+Target: fadcf45b24e4ea3d9103e6d118431222c8e2e6bf
+Real tasks-axi 0.2.6; no fake CLI or backend.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-03a9j_th/reader-fallback
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-03a9j_th/reader-fallback
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold call --title 'Keep %28 unchanged' --reason 'Choose (north); "yes"
+Next line'
+call
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh list
+environment additions: {'TASKS_AXI_BACKEND': 'unsupported-validation-backend'}
+error: "Unsupported backend \"unsupported-validation-backend\" — P1 ships the markdown backend only"
+code: UNSUPPORTED
+help[1]: "Set `backend = \"markdown\"` in .tasks.toml, or omit --backend"
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-session-start.sh
+environment additions: {'FM_SESSION_START_TIMEOUT': '45', 'TASKS_AXI_BACKEND': 'unsupported-validation-backend'}
+
+================================================================================
+SESSION START - /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-03a9j_th/reader-fallback
+================================================================================
+
+LOCK
+--------------------------------------------------------------------------------
+error: cannot write session lock; operate read-only until resolved
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  READ-ONLY SESSION - FLEET LOCK OWNERSHIP WAS NOT VERIFIED
+●  error: cannot write session lock; operate read-only until resolved
+●  Skipping every mutating step: stale Herdr child cleanup,
+●  secondmate convergence, secondmate liveness, pending remote handoff retry,
+●  X-mode artifacts, fleet sync, and wake-queue drain. Detect-only bootstrap
+●  diagnostics and the rest of this read-only-safe digest still ran below.
+●  Operate read-only until this resolves - do not spawn, steer, merge, or
+●  otherwise mutate fleet state from this session.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BOOTSTRAP
+--------------------------------------------------------------------------------
+BOOTSTRAP_INFO: lavish-axi >=0.1.80 enables confirmed board replies; this older compatible version retains the legacy reply path, but upgrade to prevent handing back a board before its reply is accepted
+
+WAKE QUEUE
+--------------------------------------------------------------------------------
+skipped (read-only session) - 0 record(s) remain queued because this session lacks verified fleet-lock ownership.
+================================================================================
+SUPERVISION OPERATING INSTRUCTIONS - primary harness: codex
+================================================================================
+Current state:
+- Lock: read-only; do not drain, arm, spawn, steer, merge, or repair fleet state here.
+- Away/quiet mode: inactive.
+- X mode: inactive; use the default watcher cadence.
+- Ordinary wake: take the next foreground bin/fm-watch-checkpoint.sh checkpoint as directed below.
+
+Mode: Codex foreground checkpoint.
+
+When this session owns supervision and away mode is not active:
+1. Drain first with `bin/fm-wake-drain.sh`.
+   After handling all emitted wakes and reconciling open decisions and unread status lines, run the exact `--ack-through` command printed as `WAKE_ACK_REQUIRED`; until then the work remains durable for idempotent re-handling after interruption.
+2. Source `/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-03a9j_th/reader-fallback/config/x-mode.env` first when Relay is active.
+3. First cycle: run one foreground watcher checkpoint with `bin/fm-watch-checkpoint.sh --seconds "${FM_CODEX_WATCH_CHECKPOINT:-180}"`.
+4. Ordinary wake: if the command prints `signal:`, `stale:`, `check:`, or `heartbeat`, drain queued wakes, handle that wake, then start the next checkpoint.
+5. If the command prints `checkpoint:` or exits 124 with no wake, drain queued wakes anyway, process any queued user message now visible to Codex, then start the next checkpoint.
+6. Never use shell `&` or Codex background tasks for firstmate watcher supervision.
+7. Do not run `bin/fm-watch-arm.sh` as Codex's normal supervision command.
+   If it is ever shelled anyway, a backgrounded, piped, or bundled anti-pattern is denied automatically by the PreToolUse seatbelt (`bin/fm-arm-pretool-check.sh`) registered in `.codex/hooks.json`.
+8. Failure or missing cycle only: drain queued wakes, inspect the failure, then start a fresh foreground checkpoint.
+
+Codex cannot reason while a foreground tool call is running.
+The bounded checkpoint returns control regularly so user messages and queued wakes can be handled without relying on background-task wake semantics.
+
+
+================================================================================
+READ-ONCE CONTRACT
+================================================================================
+Everything below is printed in full for this session start: every state/*.meta,
+a compact data/backlog.md listing, a bounded tail of every state/*.status,
+data/projects.md, data/secondmates.md, data/captain.md, data/captain-shared.md,
+and data/learnings.md.
+Do NOT re-read any of them after reading this digest, and do NOT bulk-read
+data/backlog.md or state/*.status: re-reading everything defeats the entire
+point of this command.
+
+Go to a source directly only when:
+  - this digest flagged it ABSENT (then rebuild or create it per AGENTS.md),
+  - its contents looked unparseable or corrupt,
+  - an individual full status log is needed for older wake-event history, or a
+    status line was capped and its tail matters (each task's full log path is
+    printed with its tail),
+  - a full task body is needed (bin/fm-tasks-axi.sh show <id> --full, or data/backlog.md),
+  - the backlog listing disclosed omitted queued items and this turn needs them,
+  - the NETWORK CHECKS section reported its checks still IN PROGRESS and this
+    turn needs their verdict (bin/fm-startup-network.sh report),
+  - or a STARTUP TRUNCATED banner named the stage that would have printed it, in
+    which case that stage's sources were never emitted and must be reconciled.
+
+================================================================================
+FLEET STATE
+================================================================================
+
+data/backlog.md
+--------------------------------------------------------------------------------
+tasks-axi compact listing failed; falling back to title-line rendering.
+error: "Unsupported backend \"unsupported-validation-backend\" — P1 ships the markdown backend only"
+code: UNSUPPORTED
+help[1]: "Set `backend = \"markdown\"` in .tasks.toml, or omit --backend"
+compact backlog listing (fallback; done rows omitted; every in-flight, held, and blocked title line kept; other queued bounded to 20; indented task bodies omitted)
+## In flight
+## Queued
+- [ ] call - Keep %28 unchanged (repo: firstmate) (kind: captain) (since 2026-10-01) (hold: "Choose (north); \"yes\"\nNext line") (hold-kind: captain)
+(shown 0 in-flight, 1 held or blocked queued, 0 of 0 other queued title line(s); 0 done row(s) omitted)
+Full task bodies remain available on demand: bin/fm-tasks-axi.sh show <id> --full when compatible tasks-axi is available, or data/backlog.md.
+
+Work under way (state/*.meta)
+--------------------------------------------------------------------------------
+(none)
+
+Orphan status logs (state/*.status without matching .meta)
+--------------------------------------------------------------------------------
+(none)
+
+AFK
+--------------------------------------------------------------------------------
+absent
+
+================================================================================
+NETWORK CHECKS
+================================================================================
+skipped (read-only session) - GitHub authentication, project clone refresh,
+secondmate liveness and convergence, and pending handoff delivery were not run.
+They need the fleet lock, and this session must not spawn, steer, or merge, so it
+has no action they would gate. The session holding the lock runs them.
+
+================================================================================
+CONTEXT
+================================================================================
+
+data/projects.md
+--------------------------------------------------------------------------------
+ABSENT
+
+data/secondmates.md
+--------------------------------------------------------------------------------
+ABSENT
+
+data/captain.md
+--------------------------------------------------------------------------------
+ABSENT
+
+data/captain-shared.md (shared, main-authoritative, read-only in secondmate homes)
+--------------------------------------------------------------------------------
+ABSENT
+
+data/learnings.md
+--------------------------------------------------------------------------------
+ABSENT
+
+================================================================================
+NEXT STEP
+================================================================================
+This session did not acquire the fleet lock. Stay read-only: do not arm,
+drain, spawn, steer, merge, or repair fleet state from here. Only a session
+with verified fleet-lock ownership may perform mutable follow-up.
+
+The digest above is complete for this session start. The READ-ONCE CONTRACT
+section near the top of it governs what may still be read from disk.
+[exit 0]
+
+ASSERTION: A genuine adapter configuration failure selects manual fallback and the held prose remains decoded correctly
+
+
+===== startup-and-return-readers =====
+Target: fadcf45b24e4ea3d9103e6d118431222c8e2e6bf
+Real tasks-axi 0.2.6; no fake CLI or backend.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-8g0nnjrv/summary-readers
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-8g0nnjrv/summary-readers
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold prose --title 'Investigate literal %28 and fm-hold-v1:bm9ydGg=' --reason 'Pick route (north); say "yes"
+Next line'
+prose
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-captain-hold.sh hold marker --title 'Marker-like input' --reason fm-hold-v1:bm9ydGg=
+marker
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add legacy 'Legacy title %28' --kind captain
+ok: added legacy (captain) -> Queued
+task:
+  id: legacy
+  title: Legacy title %28
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start legacy` to move it to in flight
+  - Run `tasks-axi block legacy --by <other>` to record a dependency
+[exit 0]
+
+$ tasks-axi hold legacy --reason 'Visit https://example.test/%28literal%29 and %0A' --kind captain
+ok: hold legacy -> held (captain)
+task:
+  id: legacy
+  title: Legacy title %28
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: "Visit https://example.test/%28literal%29 and %0A"
+  hold_kind: captain
+  hold_until: "-"
+  kind: captain
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi unhold legacy` to resume dispatch
+  - Run `tasks-axi ready --include-held` to review paused work
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-session-start.sh
+environment additions: {'FM_SESSION_START_TIMEOUT': '45'}
+
+================================================================================
+SESSION START - /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-8g0nnjrv/summary-readers
+================================================================================
+
+LOCK
+--------------------------------------------------------------------------------
+error: cannot write session lock; operate read-only until resolved
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  READ-ONLY SESSION - FLEET LOCK OWNERSHIP WAS NOT VERIFIED
+●  error: cannot write session lock; operate read-only until resolved
+●  Skipping every mutating step: stale Herdr child cleanup,
+●  secondmate convergence, secondmate liveness, pending remote handoff retry,
+●  X-mode artifacts, fleet sync, and wake-queue drain. Detect-only bootstrap
+●  diagnostics and the rest of this read-only-safe digest still ran below.
+●  Operate read-only until this resolves - do not spawn, steer, merge, or
+●  otherwise mutate fleet state from this session.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BOOTSTRAP
+--------------------------------------------------------------------------------
+BOOTSTRAP_INFO: lavish-axi >=0.1.80 enables confirmed board replies; this older compatible version retains the legacy reply path, but upgrade to prevent handing back a board before its reply is accepted
+
+WAKE QUEUE
+--------------------------------------------------------------------------------
+skipped (read-only session) - 0 record(s) remain queued because this session lacks verified fleet-lock ownership.
+================================================================================
+SUPERVISION OPERATING INSTRUCTIONS - primary harness: codex
+================================================================================
+Current state:
+- Lock: read-only; do not drain, arm, spawn, steer, merge, or repair fleet state here.
+- Away/quiet mode: inactive.
+- X mode: inactive; use the default watcher cadence.
+- Ordinary wake: take the next foreground bin/fm-watch-checkpoint.sh checkpoint as directed below.
+
+Mode: Codex foreground checkpoint.
+
+When this session owns supervision and away mode is not active:
+1. Drain first with `bin/fm-wake-drain.sh`.
+   After handling all emitted wakes and reconciling open decisions and unread status lines, run the exact `--ack-through` command printed as `WAKE_ACK_REQUIRED`; until then the work remains durable for idempotent re-handling after interruption.
+2. Source `/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-8g0nnjrv/summary-readers/config/x-mode.env` first when Relay is active.
+3. First cycle: run one foreground watcher checkpoint with `bin/fm-watch-checkpoint.sh --seconds "${FM_CODEX_WATCH_CHECKPOINT:-180}"`.
+4. Ordinary wake: if the command prints `signal:`, `stale:`, `check:`, or `heartbeat`, drain queued wakes, handle that wake, then start the next checkpoint.
+5. If the command prints `checkpoint:` or exits 124 with no wake, drain queued wakes anyway, process any queued user message now visible to Codex, then start the next checkpoint.
+6. Never use shell `&` or Codex background tasks for firstmate watcher supervision.
+7. Do not run `bin/fm-watch-arm.sh` as Codex's normal supervision command.
+   If it is ever shelled anyway, a backgrounded, piped, or bundled anti-pattern is denied automatically by the PreToolUse seatbelt (`bin/fm-arm-pretool-check.sh`) registered in `.codex/hooks.json`.
+8. Failure or missing cycle only: drain queued wakes, inspect the failure, then start a fresh foreground checkpoint.
+
+Codex cannot reason while a foreground tool call is running.
+The bounded checkpoint returns control regularly so user messages and queued wakes can be handled without relying on background-task wake semantics.
+
+
+================================================================================
+READ-ONCE CONTRACT
+================================================================================
+Everything below is printed in full for this session start: every state/*.meta,
+a compact data/backlog.md listing, a bounded tail of every state/*.status,
+data/projects.md, data/secondmates.md, data/captain.md, data/captain-shared.md,
+and data/learnings.md.
+Do NOT re-read any of them after reading this digest, and do NOT bulk-read
+data/backlog.md or state/*.status: re-reading everything defeats the entire
+point of this command.
+
+Go to a source directly only when:
+  - this digest flagged it ABSENT (then rebuild or create it per AGENTS.md),
+  - its contents looked unparseable or corrupt,
+  - an individual full status log is needed for older wake-event history, or a
+    status line was capped and its tail matters (each task's full log path is
+    printed with its tail),
+  - a full task body is needed (bin/fm-tasks-axi.sh show <id> --full, or data/backlog.md),
+  - the backlog listing disclosed omitted queued items and this turn needs them,
+  - the NETWORK CHECKS section reported its checks still IN PROGRESS and this
+    turn needs their verdict (bin/fm-startup-network.sh report),
+  - or a STARTUP TRUNCATED banner named the stage that would have printed it, in
+    which case that stage's sources were never emitted and must be reconciled.
+
+================================================================================
+FLEET STATE
+================================================================================
+
+data/backlog.md
+--------------------------------------------------------------------------------
+compact backlog listing (tasks-axi; done rows omitted; every in-flight, held, and blocked row shown in full; ready queued bounded to 20; task bodies omitted)
+
+in flight:
+count: 0
+tasks: 0 in_flight tasks in this backlog
+
+held (captain- or time-gated; an in-flight item that is also held appears in both groups):
+count: 3
+tasks[3]{id,state,kind,repo,title,blocked_by,hold_kind,hold_reason}:
+  prose,queued,captain,firstmate,"Investigate literal %28 and fm-hold-v1:bm9ydGg=",none,captain,"Pick route (north); say \"yes\"\nNext line"
+  marker,queued,captain,firstmate,Marker-like input,none,captain,"fm-hold-v1:bm9ydGg="
+  legacy,queued,captain,"-",Legacy title %28,none,captain,"Visit https://example.test/%28literal%29 and %0A"
+
+blocked queued:
+count: 0
+tasks: 0 blocked queued tasks in this backlog
+
+ready queued (dispatchable now):
+count: 0
+ready: 0 unblocked queued tasks
+ready_public_followups: 0 delivery-ready obligations
+Full task bodies remain available on demand: bin/fm-tasks-axi.sh show <id> --full when compatible tasks-axi is available, or data/backlog.md.
+
+Work under way (state/*.meta)
+--------------------------------------------------------------------------------
+(none)
+
+Orphan status logs (state/*.status without matching .meta)
+--------------------------------------------------------------------------------
+(none)
+
+AFK
+--------------------------------------------------------------------------------
+absent
+
+================================================================================
+NETWORK CHECKS
+================================================================================
+skipped (read-only session) - GitHub authentication, project clone refresh,
+secondmate liveness and convergence, and pending handoff delivery were not run.
+They need the fleet lock, and this session must not spawn, steer, or merge, so it
+has no action they would gate. The session holding the lock runs them.
+
+================================================================================
+CONTEXT
+================================================================================
+
+data/projects.md
+--------------------------------------------------------------------------------
+ABSENT
+
+data/secondmates.md
+--------------------------------------------------------------------------------
+ABSENT
+
+data/captain.md
+--------------------------------------------------------------------------------
+ABSENT
+
+data/captain-shared.md (shared, main-authoritative, read-only in secondmate homes)
+--------------------------------------------------------------------------------
+ABSENT
+
+data/learnings.md
+--------------------------------------------------------------------------------
+ABSENT
+
+================================================================================
+NEXT STEP
+================================================================================
+This session did not acquire the fleet lock. Stay read-only: do not arm,
+drain, spawn, steer, merge, or repair fleet state from here. Only a session
+with verified fleet-lock ownership may perform mutable follow-up.
+
+The digest above is complete for this session start. The READ-ONCE CONTRACT
+section near the top of it governs what may still be read from disk.
+[exit 0]
+
+ASSERTION: Startup tasks-axi digest preserves prose, literal percent text and marker-like text exactly
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-session-start.sh
+environment additions: {'FM_SESSION_START_TIMEOUT': '45'}
+
+================================================================================
+SESSION START - /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-8g0nnjrv/summary-readers
+================================================================================
+
+LOCK
+--------------------------------------------------------------------------------
+error: cannot write session lock; operate read-only until resolved
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  READ-ONLY SESSION - FLEET LOCK OWNERSHIP WAS NOT VERIFIED
+●  error: cannot write session lock; operate read-only until resolved
+●  Skipping every mutating step: stale Herdr child cleanup,
+●  secondmate convergence, secondmate liveness, pending remote handoff retry,
+●  X-mode artifacts, fleet sync, and wake-queue drain. Detect-only bootstrap
+●  diagnostics and the rest of this read-only-safe digest still ran below.
+●  Operate read-only until this resolves - do not spawn, steer, merge, or
+●  otherwise mutate fleet state from this session.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BOOTSTRAP
+--------------------------------------------------------------------------------
+BOOTSTRAP_INFO: lavish-axi >=0.1.80 enables confirmed board replies; this older compatible version retains the legacy reply path, but upgrade to prevent handing back a board before its reply is accepted
+
+WAKE QUEUE
+--------------------------------------------------------------------------------
+skipped (read-only session) - 0 record(s) remain queued because this session lacks verified fleet-lock ownership.
+================================================================================
+SUPERVISION OPERATING INSTRUCTIONS - primary harness: codex
+================================================================================
+Current state:
+- Lock: read-only; do not drain, arm, spawn, steer, merge, or repair fleet state here.
+- Away/quiet mode: inactive.
+- X mode: inactive; use the default watcher cadence.
+- Ordinary wake: take the next foreground bin/fm-watch-checkpoint.sh checkpoint as directed below.
+
+Mode: Codex foreground checkpoint.
+
+When this session owns supervision and away mode is not active:
+1. Drain first with `bin/fm-wake-drain.sh`.
+   After handling all emitted wakes and reconciling open decisions and unread status lines, run the exact `--ack-through` command printed as `WAKE_ACK_REQUIRED`; until then the work remains durable for idempotent re-handling after interruption.
+2. Source `/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-8g0nnjrv/summary-readers/config/x-mode.env` first when Relay is active.
+3. First cycle: run one foreground watcher checkpoint with `bin/fm-watch-checkpoint.sh --seconds "${FM_CODEX_WATCH_CHECKPOINT:-180}"`.
+4. Ordinary wake: if the command prints `signal:`, `stale:`, `check:`, or `heartbeat`, drain queued wakes, handle that wake, then start the next checkpoint.
+5. If the command prints `checkpoint:` or exits 124 with no wake, drain queued wakes anyway, process any queued user message now visible to Codex, then start the next checkpoint.
+6. Never use shell `&` or Codex background tasks for firstmate watcher supervision.
+7. Do not run `bin/fm-watch-arm.sh` as Codex's normal supervision command.
+   If it is ever shelled anyway, a backgrounded, piped, or bundled anti-pattern is denied automatically by the PreToolUse seatbelt (`bin/fm-arm-pretool-check.sh`) registered in `.codex/hooks.json`.
+8. Failure or missing cycle only: drain queued wakes, inspect the failure, then start a fresh foreground checkpoint.
+
+Codex cannot reason while a foreground tool call is running.
+The bounded checkpoint returns control regularly so user messages and queued wakes can be handled without relying on background-task wake semantics.
+
+
+================================================================================
+READ-ONCE CONTRACT
+================================================================================
+Everything below is printed in full for this session start: every state/*.meta,
+a compact data/backlog.md listing, a bounded tail of every state/*.status,
+data/projects.md, data/secondmates.md, data/captain.md, data/captain-shared.md,
+and data/learnings.md.
+Do NOT re-read any of them after reading this digest, and do NOT bulk-read
+data/backlog.md or state/*.status: re-reading everything defeats the entire
+point of this command.
+
+Go to a source directly only when:
+  - this digest flagged it ABSENT (then rebuild or create it per AGENTS.md),
+  - its contents looked unparseable or corrupt,
+  - an individual full status log is needed for older wake-event history, or a
+    status line was capped and its tail matters (each task's full log path is
+    printed with its tail),
+  - a full task body is needed (bin/fm-tasks-axi.sh show <id> --full, or data/backlog.md),
+  - the backlog listing disclosed omitted queued items and this turn needs them,
+  - the NETWORK CHECKS section reported its checks still IN PROGRESS and this
+    turn needs their verdict (bin/fm-startup-network.sh report),
+  - or a STARTUP TRUNCATED banner named the stage that would have printed it, in
+    which case that stage's sources were never emitted and must be reconciled.
+
+================================================================================
+FLEET STATE
+================================================================================
+
+data/backlog.md
+--------------------------------------------------------------------------------
+compact backlog listing (manual backend; done rows omitted; every in-flight, held, and blocked title line kept; other queued bounded to 20; indented task bodies omitted)
+## In flight
+## Queued
+- [ ] prose - Investigate literal %28 and fm-hold-v1:bm9ydGg= (repo: firstmate) (kind: captain) (since 2026-10-01) (hold: "Pick route (north); say \"yes\"\nNext line") (hold-kind: captain)
+- [ ] marker - Marker-like input (repo: firstmate) (kind: captain) (since 2026-10-01) (hold: "fm-hold-v1:bm9ydGg=") (hold-kind: captain)
+- [ ] legacy - Legacy title %28 (kind: captain) (since 2026-10-01) (hold: Visit https://example.test/%28literal%29 and %0A) (hold-kind: captain)
+(shown 0 in-flight, 3 held or blocked queued, 0 of 0 other queued title line(s); 0 done row(s) omitted)
+Full task bodies remain available on demand: bin/fm-tasks-axi.sh show <id> --full when compatible tasks-axi is available, or data/backlog.md.
+
+Work under way (state/*.meta)
+--------------------------------------------------------------------------------
+(none)
+
+Orphan status logs (state/*.status without matching .meta)
+--------------------------------------------------------------------------------
+(none)
+
+AFK
+--------------------------------------------------------------------------------
+absent
+
+================================================================================
+NETWORK CHECKS
+================================================================================
+skipped (read-only session) - GitHub authentication, project clone refresh,
+secondmate liveness and convergence, and pending handoff delivery were not run.
+They need the fleet lock, and this session must not spawn, steer, or merge, so it
+has no action they would gate. The session holding the lock runs them.
+
+================================================================================
+CONTEXT
+================================================================================
+
+data/projects.md
+--------------------------------------------------------------------------------
+ABSENT
+
+data/secondmates.md
+--------------------------------------------------------------------------------
+ABSENT
+
+data/captain.md
+--------------------------------------------------------------------------------
+ABSENT
+
+data/captain-shared.md (shared, main-authoritative, read-only in secondmate homes)
+--------------------------------------------------------------------------------
+ABSENT
+
+data/learnings.md
+--------------------------------------------------------------------------------
+ABSENT
+
+================================================================================
+NEXT STEP
+================================================================================
+This session did not acquire the fleet lock. Stay read-only: do not arm,
+drain, spawn, steer, merge, or repair fleet state from here. Only a session
+with verified fleet-lock ownership may perform mutable follow-up.
+
+The digest above is complete for this session start. The READ-ONCE CONTRACT
+section near the top of it governs what may still be read from disk.
+[exit 0]
+
+ASSERTION: Startup manual digest preserves prose, literal percent text and marker-like text exactly
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-afk-return.sh check
+=== Return brief ===
+Supervisor health:
+  - GAP: the watcher beat was 999999s old at return (grace 300s)
+Your instructions:
+  (no away-posture record for this window; legacy away flag only)
+Waiting on you:
+  held in the backlog:
+    tasks[3]{id,state,kind,repo,title,hold_kind,hold_reason,hold_until}:
+      prose,queued,captain,firstmate,"Investigate literal %28 and fm-hold-v1:bm9ydGg=",captain,"Pick route (north); say \"yes\"\nNext line","-"
+      marker,queued,captain,firstmate,Marker-like input,captain,"fm-hold-v1:bm9ydGg=","-"
+      legacy,queued,captain,"-",Legacy title %28,captain,"Visit https://example.test/%28literal%29 and %0A","-"
+Tried and failed, or could not be fixed:
+  (nothing)
+Landed, cleanup due:
+  (nothing)
+Handled while away:
+  0 outcome(s) handled by the away session (0 routine, 0 escalated above)
+  (no routine outcomes recorded in the store for this window)
+Cost: 0 supervision outcome(s) recorded (0 routine, 0 captain); 0 task(s) live at return.
+catch-up health: GAP: the watcher beat was 999999s old at return (grace 300s)
+fm-afk-return: catch-up clear; ordinary captain work may proceed
+[exit 0]
+
+ASSERTION: Real return check renders the same reason and leaves legacy, title and marker-like text unchanged
+
+
+===== baseline-reproduction =====
+Target: fadcf45b24e4ea3d9103e6d118431222c8e2e6bf
+Real tasks-axi 0.2.6; no fake CLI or backend.
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-lab-home.sh create /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pxttrvna/baseline
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pxttrvna/baseline
+[exit 0]
+
+$ git archive 8f756bbc287c5bdfacc64a7cc09e8516c64fc919 bin .tasks.toml (extracted only into disposable workspace)
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/bin/fm-tasks-axi.sh add origin Origin --kind scout
+ok: added origin (scout) -> Queued
+task:
+  id: origin
+  title: Origin
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: scout
+  repo: "-"
+  priority: "-"
+  created: 2026-10-01
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start origin` to move it to in flight
+  - Run `tasks-axi block origin --by <other>` to record a dependency
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pxttrvna/base-code/bin/fm-captain-hold.sh hold origin --reason 'Choose a route'
+origin
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pxttrvna/base-code/bin/fm-captain-hold.sh hold origin --reason 'Choose (north); "yes"'
+stderr:
+fm-captain-hold: reason must not contain parentheses (tasks-axi hold contract)
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pxttrvna/base-code/bin/fm-captain-hold.sh hold origin --reason 'Choose (north); "yes"
+Next'
+stderr:
+fm-captain-hold: reason must be one line
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W33QQYV7FCM041WC2819ZB/.fm5712-live-pxttrvna/base-code/bin/fm-captain-hold.sh complete origin origin
+complete: origin captain-call inventory reviewed (origin)
+[exit 0]
+
+ASSERTION: The base rejects ordinary prose then accepts circular completion on the durable origin; target scenarios reject that completion and accept the prose
+
