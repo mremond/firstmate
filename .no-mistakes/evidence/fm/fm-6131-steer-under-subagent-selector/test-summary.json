@@ -1,0 +1,14 @@
+{
+  "target": "e1a6b78cb5b8c21605eddaaa980d2b4a33814891",
+  "target_tree": "d61d68f5c7ae63eab4fc9c8626180d6cfdd17bc7",
+  "base": "8f756bbc287c5bdfacc64a7cc09e8516c64fc919",
+  "composer_checks": 43,
+  "inbox_checks": 30,
+  "baseline_comparison": "New inbox regression fails on base: expected ring refusal exit 2, got 1; fixture-based, not live.",
+  "claude_live": "Installed Claude Code 2.1.286; existing opt-in guard exits 1 at readiness because this gate checkout shows workspace trust. No trust answer or registration performed.",
+  "codex_live": "Installed Codex CLI 0.156.1; task /status, explicit target /status, and inbox steer pass after one injected real tmux capture failure per route. Inbox action file contains LIVE_INBOX_ACK and 001.msg is in handled/.",
+  "isolation": "Private non-default tmux servers with 160x50 grids; worktree-local homes; user credentials unchanged; marked lab helper owned private socket directories.",
+  "cleanup": "Both private tmux servers stopped and lab helper socket directories removed; transient worktree files removed.",
+  "visual_evidence": "PNGs render live captured terminal text, not native GUI screenshots; incidental account and quota rows removed.",
+  "final_git_status": ""
+}

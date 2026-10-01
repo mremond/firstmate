@@ -1,0 +1,9 @@
+{
+  "test": "tests/fm-send-inbox-claude-selector-live-e2e.test.sh",
+  "pid": 52478,
+  "socket": "fm-selector-live-52478",
+  "tmux_tmpdir": "/tmp/fml.alZnOC",
+  "FM_HOME": "/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3W1X8TZ8MMD0NJ8S8NAMZNR/.test-phase-tmp/guard-parent",
+  "grid": "160x50",
+  "target": "e1a6b78cb5b8c21605eddaaa980d2b4a33814891"
+}

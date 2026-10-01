@@ -1,0 +1,50 @@
+╭─────────────────────────────────────────────────╮
+│ ✨ Update available! 0.156.1 -> 0.159.3         │
+│ Run brew upgrade --cask codex to update.        │
+│                                                 │
+│ See full release notes:                         │
+│ https://github.com/openai/codex/releases/latest │
+╰─────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.156.1)                               │
+│                                                          │
+│ model:       GPT-6-Astra xhigh   /model to change        │
+│ directory:   ~/…/acf4a767348a/01M3W1X8TZ8MMD0NJ8S8NAMZNR │
+│ permissions: YOLO mode                                   │
+╰──────────────────────────────────────────────────────────╯
+
+  Tip: Use /agents to open the agent command center.
+
+
+› Ask Codex to do anything
+
+  GPT-6-Astra xhigh · ~/.no-mistakes/worktrees/acf4a767348a/01M3W1X8TZ8MMD0NJ8S8NAMZNR                                                 ⚠ 1 warning · f2 to view
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

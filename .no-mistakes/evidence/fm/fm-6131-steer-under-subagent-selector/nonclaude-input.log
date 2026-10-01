@@ -1,0 +1,6 @@
+send-keys -t primary:codex -l /status
+send-keys -t primary:codex Enter
+send-keys -t primary:codex -l /status
+send-keys -t primary:codex Enter
+send-keys -t primary:codex -l : Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'worker.inbox' steering inbox, read and act on each in numeric order, then mv each into its handled/.
+send-keys -t primary:codex Enter
