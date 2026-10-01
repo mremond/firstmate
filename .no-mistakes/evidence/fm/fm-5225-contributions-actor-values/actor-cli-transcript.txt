@@ -1,0 +1,380 @@
+Live execution of the real contributions CLI; synthetic durable input only, no product stubs, forge calls, or lifecycle operations.
+Target: b72ebc0f0c304a9246ef2f44fe970dfcea61870d
+Base: 589ccec821bf6310ce888e2a702e4fc9258eb1e8
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh --help
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=0
+Observe published contributions owned by this home's durable task records.
+
+Usage:
+  fm-contributions.sh snapshot <input.json> [--all]
+  fm-contributions.sh poll
+  fm-contributions.sh pending
+  fm-contributions.sh verdict <task> <url> <judged-head> <source-url> <captain|fleet|maintainer|nobody> <summary>
+  fm-contributions.sh ack <task> <url> <event-token>
+  fm-contributions.sh arm [--if-owned]
+
+snapshot is read-only and never contacts a forge. Its input is the canonical
+fleet snapshot's backlog/tasks pair; --all adds rows for supervisor inspection.
+Every URL explicitly linked by a structured backlog row or a task's pr= is
+owned. Previously observed URLs remain in data/<task>/contributions.json after
+endpoint teardown. Repository-wide PR discovery never establishes ownership.
+GitHub PRs and issues are supported; other forges remain visibly unmeasured.
+
+This script owns fm-contributions.v1: one atomic file per durable task with
+task and records[]. Each record contains url, kind, checked_at, error,
+observation, verdict, seen event tokens, pending events, and notified tokens.
+observation is one coherent forge read (a PR head is rechecked after fetching
+checks/reviews). Checks are normalized by name, id, started_at, status and
+conclusion; projection picks the newest attempt per distinct name. The last
+observation's lane names also disclose a lane absent from the next head.
+A verdict records the EXACT judged head, source URL, actor and summary. The
+actor is exactly one of captain, fleet, maintainer or nobody; any other value
+is refused. A comment's arrival time never supplies its judged head. Record a
+prose verdict only after its source identifies that head; otherwise leave it unbound and
+triage its signal. Formal reviews carry GitHub's own commit_id. Neither kind
+can grant merge authority. Captain-actor prose requires an existing live hold;
+an eligible merge remains a captain call, never an automatic forge action.
+
+poll consumes fm-fleet-snapshot.sh --contribution-input, a local-only read,
+and spends at most FM_CONTRIBUTIONS_BUDGET seconds on forge reads (default 20,
+1..25). A configured value rides the generated check shim into watcher runs
+and is cut down to the watcher's own per-check bound (FM_CHECK_TIMEOUT,
+default 30, read from the poll's environment because the watcher runs it as
+a direct child) with a three-second margin. Every read is capped at five
+seconds, and a read killed at that bound or at the deadline is budget
+refusal, never a forge failure. A pull observation has three
+dependent waves: core, six independent reads, then the closing head read;
+an issue has two waves. Before starting a URL, poll reserves the smaller of
+the effective budget and 15 seconds for those waves. URLs needing forge
+reads are sorted by URL and rotated by the current five-minute epoch bucket
+modulo their count, without stored scheduling state or freshness-based
+reordering. Terminal URLs settle separately before the forge budget starts
+and consume no rotation slots.
+A deliberately smaller configured budget remains bounded and may be
+unmeasured, rather than being mislabeled unavailable. Each distinct URL is
+attempted at most once per poll and its observation applied to every owner.
+A final observation applies
+to every owner without another forge read. When the budget refuses a read
+mid-observation, that URL's records stay untouched and the poll moves to the
+next URL that still has a full observation reserve; only a genuine forge
+failure or head change records an error.
+API failure leaves error evidence; an expired or absent observation is not
+silence. FM_CONTRIBUTIONS_MAX_AGE (default 900 seconds) bounds freshness.
+A URL whose last good observation is merged or closed is final: it is
+never re-read, stays fresh, and every owner's saved row converges on that
+observation, with a stale error beside it cleared.
+A genuine failure prints its unavailable line only when it starts an episode
+(no prior owner has an error); a successful read ends the episode.
+FM_CONTRIBUTIONS_NOW supplies an ISO UTC clock for tests, otherwise UTC now.
+FM_CONTRIBUTIONS_READY_LABEL selects the equivalent triage label, default
+ready-for-pr. Labels are matched case-insensitively and exactly.
+
+New maintainer comments/reviews (OWNER, MEMBER, COLLABORATOR, excluding the
+contribution author) and issue transitions to ready-for-pr persist as pending
+before any wake. poll appends ordinary durable check wakes through fm-wake-lib
+and emits only newly durable signals for the authenticated check to surface.
+ack removes
+only the named pending token. A crash after enqueue can duplicate a wake but
+cannot consume the pending signal. Source bodies are data, never commands.
+All mutations serialize on this home's .contributions.lock. Writes refuse
+symlinks and publish by rename. No forge writes are performed.
+
+arm registers the existing authenticated custom-check path. Startup and PR
+registration call it; when filing a linked upstream issue, call arm as well.
+jq_lib receives literal jq programs, not shell expressions.
+shellcheck disable=SC2016
+PASS: --help advertises exactly the four accepted actors
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh -h
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=0
+Observe published contributions owned by this home's durable task records.
+
+Usage:
+  fm-contributions.sh snapshot <input.json> [--all]
+  fm-contributions.sh poll
+  fm-contributions.sh pending
+  fm-contributions.sh verdict <task> <url> <judged-head> <source-url> <captain|fleet|maintainer|nobody> <summary>
+  fm-contributions.sh ack <task> <url> <event-token>
+  fm-contributions.sh arm [--if-owned]
+
+snapshot is read-only and never contacts a forge. Its input is the canonical
+fleet snapshot's backlog/tasks pair; --all adds rows for supervisor inspection.
+Every URL explicitly linked by a structured backlog row or a task's pr= is
+owned. Previously observed URLs remain in data/<task>/contributions.json after
+endpoint teardown. Repository-wide PR discovery never establishes ownership.
+GitHub PRs and issues are supported; other forges remain visibly unmeasured.
+
+This script owns fm-contributions.v1: one atomic file per durable task with
+task and records[]. Each record contains url, kind, checked_at, error,
+observation, verdict, seen event tokens, pending events, and notified tokens.
+observation is one coherent forge read (a PR head is rechecked after fetching
+checks/reviews). Checks are normalized by name, id, started_at, status and
+conclusion; projection picks the newest attempt per distinct name. The last
+observation's lane names also disclose a lane absent from the next head.
+A verdict records the EXACT judged head, source URL, actor and summary. The
+actor is exactly one of captain, fleet, maintainer or nobody; any other value
+is refused. A comment's arrival time never supplies its judged head. Record a
+prose verdict only after its source identifies that head; otherwise leave it unbound and
+triage its signal. Formal reviews carry GitHub's own commit_id. Neither kind
+can grant merge authority. Captain-actor prose requires an existing live hold;
+an eligible merge remains a captain call, never an automatic forge action.
+
+poll consumes fm-fleet-snapshot.sh --contribution-input, a local-only read,
+and spends at most FM_CONTRIBUTIONS_BUDGET seconds on forge reads (default 20,
+1..25). A configured value rides the generated check shim into watcher runs
+and is cut down to the watcher's own per-check bound (FM_CHECK_TIMEOUT,
+default 30, read from the poll's environment because the watcher runs it as
+a direct child) with a three-second margin. Every read is capped at five
+seconds, and a read killed at that bound or at the deadline is budget
+refusal, never a forge failure. A pull observation has three
+dependent waves: core, six independent reads, then the closing head read;
+an issue has two waves. Before starting a URL, poll reserves the smaller of
+the effective budget and 15 seconds for those waves. URLs needing forge
+reads are sorted by URL and rotated by the current five-minute epoch bucket
+modulo their count, without stored scheduling state or freshness-based
+reordering. Terminal URLs settle separately before the forge budget starts
+and consume no rotation slots.
+A deliberately smaller configured budget remains bounded and may be
+unmeasured, rather than being mislabeled unavailable. Each distinct URL is
+attempted at most once per poll and its observation applied to every owner.
+A final observation applies
+to every owner without another forge read. When the budget refuses a read
+mid-observation, that URL's records stay untouched and the poll moves to the
+next URL that still has a full observation reserve; only a genuine forge
+failure or head change records an error.
+API failure leaves error evidence; an expired or absent observation is not
+silence. FM_CONTRIBUTIONS_MAX_AGE (default 900 seconds) bounds freshness.
+A URL whose last good observation is merged or closed is final: it is
+never re-read, stays fresh, and every owner's saved row converges on that
+observation, with a stale error beside it cleared.
+A genuine failure prints its unavailable line only when it starts an episode
+(no prior owner has an error); a successful read ends the episode.
+FM_CONTRIBUTIONS_NOW supplies an ISO UTC clock for tests, otherwise UTC now.
+FM_CONTRIBUTIONS_READY_LABEL selects the equivalent triage label, default
+ready-for-pr. Labels are matched case-insensitively and exactly.
+
+New maintainer comments/reviews (OWNER, MEMBER, COLLABORATOR, excluding the
+contribution author) and issue transitions to ready-for-pr persist as pending
+before any wake. poll appends ordinary durable check wakes through fm-wake-lib
+and emits only newly durable signals for the authenticated check to surface.
+ack removes
+only the named pending token. A crash after enqueue can duplicate a wake but
+cannot consume the pending signal. Source bodies are data, never commands.
+All mutations serialize on this home's .contributions.lock. Writes refuse
+symlinks and publish by rename. No forge writes are performed.
+
+arm registers the existing authenticated custom-check path. Startup and PR
+registration call it; when filing a linked upstream issue, call arm as well.
+jq_lib receives literal jq programs, not shell expressions.
+shellcheck disable=SC2016
+PASS: -h advertises exactly the four accepted actors
+PASS: help leaves contribution data unchanged
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' captain 'Recorded through the public CLI for captain'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=0
+PASS: captain is accepted and persists only the exact requested verdict
+Persisted verdict: {"actor": "captain", "head": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "source": "https://github.com/o/r/pull/8#issuecomment-99", "summary": "Recorded through the public CLI for captain"}
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' fleet 'Recorded through the public CLI for fleet'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=0
+PASS: fleet is accepted and persists only the exact requested verdict
+Persisted verdict: {"actor": "fleet", "head": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "source": "https://github.com/o/r/pull/8#issuecomment-99", "summary": "Recorded through the public CLI for fleet"}
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' maintainer 'Recorded through the public CLI for maintainer'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=0
+PASS: maintainer is accepted and persists only the exact requested verdict
+Persisted verdict: {"actor": "maintainer", "head": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "source": "https://github.com/o/r/pull/8#issuecomment-99", "summary": "Recorded through the public CLI for maintainer"}
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' nobody 'Recorded through the public CLI for nobody'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=0
+PASS: nobody is accepted and persists only the exact requested verdict
+Persisted verdict: {"actor": "nobody", "head": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "source": "https://github.com/o/r/pull/8#issuecomment-99", "summary": "Recorded through the public CLI for nobody"}
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' bogus 'Must be refused'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=1
+fm-contributions: invalid required actor 'bogus'; expected one of: captain, fleet, maintainer, nobody
+PASS: invalid actor 'bogus' is explained and causes no stored mutation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' '' 'Must be refused'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=1
+fm-contributions: invalid required actor ''; expected one of: captain, fleet, maintainer, nobody
+PASS: invalid actor '' is explained and causes no stored mutation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' Captain 'Must be refused'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=1
+fm-contributions: invalid required actor 'Captain'; expected one of: captain, fleet, maintainer, nobody
+PASS: invalid actor 'Captain' is explained and causes no stored mutation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' FLEET 'Must be refused'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=1
+fm-contributions: invalid required actor 'FLEET'; expected one of: captain, fleet, maintainer, nobody
+PASS: invalid actor 'FLEET' is explained and causes no stored mutation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' none 'Must be refused'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=1
+fm-contributions: invalid required actor 'none'; expected one of: captain, fleet, maintainer, nobody
+PASS: invalid actor 'none' is explained and causes no stored mutation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' all 'Must be refused'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=1
+fm-contributions: invalid required actor 'all'; expected one of: captain, fleet, maintainer, nobody
+PASS: invalid actor 'all' is explained and causes no stored mutation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' 'maintainer ' 'Must be refused'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=1
+fm-contributions: invalid required actor 'maintainer '; expected one of: captain, fleet, maintainer, nobody
+PASS: invalid actor 'maintainer ' is explained and causes no stored mutation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' 'captain|fleet|maintainer|nobody' 'Must be refused'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=1
+fm-contributions: invalid required actor 'captain|fleet|maintainer|nobody'; expected one of: captain, fleet, maintainer, nobody
+PASS: invalid actor 'captain|fleet|maintainer|nobody' is explained and causes no stored mutation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' 'Summary without actor'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=1
+fm-contributions: verdict needs judged-head, source-url, actor and summary
+PASS: omitted actor still refuses with no default or persisted mutation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 short 'https://github.com/o/r/pull/8#issuecomment-99' fleet 'Guard check'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=1
+fm-contributions: an exact judged commit is required
+PASS: bad head still refuses with no default or persisted mutation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/9#issuecomment-1' fleet 'Guard check'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=1
+fm-contributions: verdict source must be a comment or review on this contribution
+PASS: foreign source still refuses with no default or persisted mutation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/9 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' fleet 'Guard check'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/target-home
+exit=1
+fm-contributions: contribution is not owned by this durable task
+PASS: unowned contribution still refuses with no default or persisted mutation
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/baseline-code/bin/fm-contributions.sh --help
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/baseline-home
+exit=0
+Observe published contributions owned by this home's durable task records.
+
+Usage:
+  fm-contributions.sh snapshot <input.json> [--all]
+  fm-contributions.sh poll
+  fm-contributions.sh pending
+  fm-contributions.sh verdict <task> <url> <judged-head> <source-url> <actor> <summary>
+  fm-contributions.sh ack <task> <url> <event-token>
+  fm-contributions.sh arm [--if-owned]
+
+snapshot is read-only and never contacts a forge. Its input is the canonical
+fleet snapshot's backlog/tasks pair; --all adds rows for supervisor inspection.
+Every URL explicitly linked by a structured backlog row or a task's pr= is
+owned. Previously observed URLs remain in data/<task>/contributions.json after
+endpoint teardown. Repository-wide PR discovery never establishes ownership.
+GitHub PRs and issues are supported; other forges remain visibly unmeasured.
+
+This script owns fm-contributions.v1: one atomic file per durable task with
+task and records[]. Each record contains url, kind, checked_at, error,
+observation, verdict, seen event tokens, pending events, and notified tokens.
+observation is one coherent forge read (a PR head is rechecked after fetching
+checks/reviews). Checks are normalized by name, id, started_at, status and
+conclusion; projection picks the newest attempt per distinct name. The last
+observation's lane names also disclose a lane absent from the next head.
+A verdict records the EXACT judged head, source URL, actor and summary. A
+comment's arrival time never supplies its judged head. Record a prose verdict
+only after its source identifies that head; otherwise leave it unbound and
+triage its signal. Formal reviews carry GitHub's own commit_id. Neither kind
+can grant merge authority. Captain-actor prose requires an existing live hold;
+an eligible merge remains a captain call, never an automatic forge action.
+
+poll consumes fm-fleet-snapshot.sh --contribution-input, a local-only read,
+and spends at most FM_CONTRIBUTIONS_BUDGET seconds on forge reads (default 20,
+1..25). A configured value rides the generated check shim into watcher runs
+and is cut down to the watcher's own per-check bound (FM_CHECK_TIMEOUT,
+default 30, read from the poll's environment because the watcher runs it as
+a direct child) with a three-second margin. Every read is capped at five
+seconds, and a read killed at that bound or at the deadline is budget
+refusal, never a forge failure. A pull observation has three
+dependent waves: core, six independent reads, then the closing head read;
+an issue has two waves. Before starting a URL, poll reserves the smaller of
+the effective budget and 15 seconds for those waves. URLs needing forge
+reads are sorted by URL and rotated by the current five-minute epoch bucket
+modulo their count, without stored scheduling state or freshness-based
+reordering. Terminal URLs settle separately before the forge budget starts
+and consume no rotation slots.
+A deliberately smaller configured budget remains bounded and may be
+unmeasured, rather than being mislabeled unavailable. Each distinct URL is
+attempted at most once per poll and its observation applied to every owner.
+A final observation applies
+to every owner without another forge read. When the budget refuses a read
+mid-observation, that URL's records stay untouched and the poll moves to the
+next URL that still has a full observation reserve; only a genuine forge
+failure or head change records an error.
+API failure leaves error evidence; an expired or absent observation is not
+silence. FM_CONTRIBUTIONS_MAX_AGE (default 900 seconds) bounds freshness.
+A URL whose last good observation is merged or closed is final: it is
+never re-read, stays fresh, and every owner's saved row converges on that
+observation, with a stale error beside it cleared.
+A genuine failure prints its unavailable line only when it starts an episode
+(no prior owner has an error); a successful read ends the episode.
+FM_CONTRIBUTIONS_NOW supplies an ISO UTC clock for tests, otherwise UTC now.
+FM_CONTRIBUTIONS_READY_LABEL selects the equivalent triage label, default
+ready-for-pr. Labels are matched case-insensitively and exactly.
+
+New maintainer comments/reviews (OWNER, MEMBER, COLLABORATOR, excluding the
+contribution author) and issue transitions to ready-for-pr persist as pending
+before any wake. poll appends ordinary durable check wakes through fm-wake-lib
+and emits only newly durable signals for the authenticated check to surface.
+ack removes
+only the named pending token. A crash after enqueue can duplicate a wake but
+cannot consume the pending signal. Source bodies are data, never commands.
+All mutations serialize on this home's .contributions.lock. Writes refuse
+symlinks and publish by rename. No forge writes are performed.
+
+arm registers the existing authenticated custom-check path. Startup and PR
+registration call it; when filing a linked upstream issue, call arm as well.
+jq_lib receives literal jq programs, not shell expressions.
+shellcheck disable=SC2016
+PASS: base reproduces help discoverability failure
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/baseline-code/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' bogus 'Must be refused'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/baseline-home
+exit=1
+fm-contributions: invalid required actor
+PASS: base reproduces opaque invalid-actor refusal
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/baseline-code/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' captain 'Baseline actor'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/baseline-home
+exit=0
+PASS: base already accepts captain
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/baseline-code/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' fleet 'Baseline actor'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/baseline-home
+exit=0
+PASS: base already accepts fleet
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/baseline-code/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' maintainer 'Baseline actor'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/baseline-home
+exit=0
+PASS: base already accepts maintainer
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/baseline-code/bin/fm-contributions.sh verdict delivery https://github.com/o/r/pull/8 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 'https://github.com/o/r/pull/8#issuecomment-99' nobody 'Baseline actor'
+isolated FM_HOME=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M3VG1X6F50QPEEWXVJPGFS9T/.actor-validation-be5rnboy/baseline-home
+exit=0
+PASS: base already accepts nobody

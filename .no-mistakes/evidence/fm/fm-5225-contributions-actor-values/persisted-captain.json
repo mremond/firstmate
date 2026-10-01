@@ -1,0 +1,40 @@
+{
+  "schema": "fm-contributions.v1",
+  "task": "delivery",
+  "records": [
+    {
+      "url": "https://github.com/o/r/pull/8",
+      "kind": "pr",
+      "checked_at": "2026-10-01T10:32:21Z",
+      "error": null,
+      "pending": [],
+      "seen": [],
+      "notified": [],
+      "verdict": {
+        "head": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source": "https://github.com/o/r/pull/8#issuecomment-99",
+        "actor": "captain",
+        "summary": "Recorded through the public CLI for captain"
+      },
+      "observation": {
+        "head": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "state": "open",
+        "draft": false,
+        "mergeable": "mergeable",
+        "review_decision": "APPROVED",
+        "can_merge": false,
+        "checks": [
+          {
+            "name": "test",
+            "id": 1,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-10-01T10:32:21Z"
+          }
+        ],
+        "reviews": [],
+        "events": []
+      }
+    }
+  ]
+}

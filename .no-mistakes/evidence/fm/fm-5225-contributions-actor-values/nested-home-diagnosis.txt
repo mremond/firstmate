@@ -1,0 +1,3 @@
+Runtime guard check on a disposable child inside the worktree:
+exit=1
+reason=secondmate home cannot be inside the firstmate repo
