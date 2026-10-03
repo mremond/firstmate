@@ -1,0 +1,14 @@
+npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+
+added 121 packages in 5s
+npm warn allow-scripts 3 packages have install scripts not yet covered by allowScripts:
+npm warn allow-scripts   esbuild@0.28.2 (postinstall: node install.js)
+npm warn allow-scripts   @google/genai@2.21.0 (preinstall: echo 'preinstall: no-op')
+npm warn allow-scripts   protobufjs@7.6.6 (postinstall: node scripts/postinstall)
+npm warn allow-scripts
+npm warn allow-scripts Run `npm install -g --allow-scripts=esbuild,@google/genai,protobufjs` to allow these scripts once, or `npm config set allow-scripts=esbuild,@google/genai,protobufjs --location=user` to allow them for all global installs.
+npm notice
+npm notice New minor version of npm available! 11.17.0 -> 11.21.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.21.0
+npm notice To update run: npm install -g npm@11.21.0
+npm notice

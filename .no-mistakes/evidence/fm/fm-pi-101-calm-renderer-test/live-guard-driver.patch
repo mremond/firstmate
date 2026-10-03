@@ -1,0 +1,39 @@
+--- tests/fm-calm-pi-extension.test.sh
++++ tests/.fm-calm-pi-live-guard.test.sh
+@@ -4391,6 +4391,17 @@
+   hash_before=$(shasum -a 256 "$session_file" | awk '{print $1}')
+ 
+   tmux -L "$TMUX_SOCKET" send-keys -t "$TMUX_SESSION" -l "/export $export_file"
++  tmux -L "$TMUX_SOCKET" send-keys -t "$TMUX_SESSION" Enter
++  local negative_tick
++  for negative_tick in {1..20}; do
++    sleep 0.025
++    tmux -L "$TMUX_SOCKET" capture-pane -p -t "$TMUX_SESSION" -S -600 >"$TMP_ROOT/remapped-enter.txt"
++    [ ! -e "$export_file" ] || fail "Enter submitted export despite Alt+S remapping"
++    assert_not_contains "$(cat "$TMP_ROOT/remapped-enter.txt")" "watcher: started Pi extension arm child" "non-submit Enter revealed hidden tool output"
++    assert_not_contains "$(cat "$TMP_ROOT/remapped-enter.txt")" "Session exported to:" "non-submit Enter performed export"
++  done
++  assert_contains "$(cat "$TMP_ROOT/remapped-enter.txt")" "/export $export_file" "non-submit Enter consumed the editor command"
++  pass "live remapped Enter leaves the export command in the editor, writes no HTML, and keeps tool output hidden"
+   tmux -L "$TMUX_SOCKET" send-keys -t "$TMUX_SESSION" M-s
+   wait_for_text "$export_snapshot" "Session exported to: $export_file" \
+     || fail "/export did not complete while calm mode was on"
+@@ -4909,18 +4920,4 @@
+   pass "Pi calm native E2E replaces the stock working row with a moving, resize-clamped working ship that freezes and resumes across two working periods in one Pi session, clears on abort, keeps captain turns visible, hides exact operational user rows without changing persistence, restores stock rendering Calm-off, survives restart, and preserves export plus Ctrl+O behavior"
+ }
+ 
+-test_home_resolution
+-test_pi_compat_no_upper_bound
+-test_pi_compat_degraded_adapter
+-test_pi_compat_missing_adapter_exports
+-test_queued_operational_rows
+-test_builtin_gate_load_time
+-test_calm_activation_collision_and_regression_bound
+-test_rendering_and_session_lifecycle
+-test_calm_mid_turn_working_notes
+-test_operational_followup_turn_e2e
+-test_queued_operational_escape_e2e
+-test_hidden_block_geometry_e2e
+-test_working_ship_geometry_and_lifecycle
+-test_export_dom_render_guard
+ test_interactive_terminal_e2e

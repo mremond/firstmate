@@ -1,0 +1,53 @@
+[
+  {
+    "run": "target-pi-1.0.1-short",
+    "renderedTools": {
+      "call_grep_e2e": {
+        "callHtml": "<div class=\"ansi-line\"><span style=\"font-weight:bold\">grep</span> <span style=\"color:#800080\">/CALM_EXPORT_GREP/</span><span style=\"opacity:0.6\"> in .</span>                                                                        </div>",
+        "resultHtmlExpanded": "<div class=\"ansi-line\"><span style=\"opacity:0.6\">sample.txt:1:CALM_EXPORT_GREP</span>                                                                       </div>"
+      },
+      "call_find_e2e": {
+        "callHtml": "<div class=\"ansi-line\"><span style=\"font-weight:bold\">find</span> <span style=\"color:#800080\">CALM_EXPORT_FIND*</span><span style=\"opacity:0.6\"> in .</span>                                                                         </div>",
+        "resultHtmlExpanded": "<div class=\"ansi-line\"><span style=\"opacity:0.6\">CALM_EXPORT_FIND.txt</span>                                                                                </div>"
+      },
+      "call_watch_e2e": {
+        "callHtml": "<div class=\"ansi-line\"><span style=\"font-weight:bold\">fm_watch_arm_pi</span>                                                                                     </div>",
+        "resultHtmlExpanded": "<div class=\"ansi-line\"><span style=\"opacity:0.6\">watcher: started Pi extension arm child 1</span>                                                           </div>"
+      }
+    }
+  },
+  {
+    "run": "pi-1.0.0",
+    "renderedTools": {
+      "call_grep_e2e": {
+        "callHtml": "<div class=\"ansi-line\"><span style=\"font-weight:bold\">grep</span> <span style=\"color:#800080\">/CALM_EXPORT_GREP/</span><span style=\"opacity:0.6\"> in .</span>                                                                        </div>",
+        "resultHtmlExpanded": "<div class=\"ansi-line\"><span style=\"opacity:0.6\">sample.txt:1:CALM_EXPORT_GREP</span>                                                                       </div>"
+      },
+      "call_find_e2e": {
+        "callHtml": "<div class=\"ansi-line\"><span style=\"font-weight:bold\">find</span> <span style=\"color:#800080\">CALM_EXPORT_FIND*</span><span style=\"opacity:0.6\"> in .</span>                                                                         </div>",
+        "resultHtmlExpanded": "<div class=\"ansi-line\"><span style=\"opacity:0.6\">CALM_EXPORT_FIND.txt</span>                                                                                </div>"
+      },
+      "call_watch_e2e": {
+        "callHtml": "<div class=\"ansi-line\"><span style=\"font-weight:bold\">fm_watch_arm_pi</span>                                                                                     </div>",
+        "resultHtmlExpanded": "<div class=\"ansi-line\"><span style=\"opacity:0.6\">watcher: started Pi extension arm child 1</span>                                                           </div>"
+      }
+    }
+  },
+  {
+    "run": "live-guard",
+    "renderedTools": {
+      "call_grep_e2e": {
+        "callHtml": "<div class=\"ansi-line\"><span style=\"font-weight:bold\">grep</span> <span style=\"color:#800080\">/CALM_EXPORT_GREP/</span><span style=\"opacity:0.6\"> in .</span>                                                                        </div>",
+        "resultHtmlExpanded": "<div class=\"ansi-line\"><span style=\"opacity:0.6\">sample.txt:1:CALM_EXPORT_GREP</span>                                                                       </div>"
+      },
+      "call_find_e2e": {
+        "callHtml": "<div class=\"ansi-line\"><span style=\"font-weight:bold\">find</span> <span style=\"color:#800080\">CALM_EXPORT_FIND*</span><span style=\"opacity:0.6\"> in .</span>                                                                         </div>",
+        "resultHtmlExpanded": "<div class=\"ansi-line\"><span style=\"opacity:0.6\">CALM_EXPORT_FIND.txt</span>                                                                                </div>"
+      },
+      "call_watch_e2e": {
+        "callHtml": "<div class=\"ansi-line\"><span style=\"font-weight:bold\">fm_watch_arm_pi</span>                                                                                     </div>",
+        "resultHtmlExpanded": "<div class=\"ansi-line\"><span style=\"opacity:0.6\">watcher: started Pi extension arm child 1</span>                                                           </div>"
+      }
+    }
+  }
+]
