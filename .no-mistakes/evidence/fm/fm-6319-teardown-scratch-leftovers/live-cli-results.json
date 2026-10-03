@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Generate ship instructions in all three delivery modes",
+    "result": "pass",
+    "live": true,
+    "details": "The emitted worker contract names the correct task data directory, permits temporary scratch, limits outside writes, and requires a clean worktree before done in no-mistakes, direct-PR and local-only modes. This checks emitted instructions, not model compliance."
+  },
+  {
+    "name": "no-mistakes: refuse clean unpushed work",
+    "result": "pass",
+    "live": true,
+    "details": "Exit 1; unlanded commit, task branch, file bytes, and metadata are preserved."
+  },
+  {
+    "name": "no-mistakes: untracked dirt refuses without deleting work",
+    "result": "pass",
+    "live": true,
+    "details": "Exit 1; untracked-only leftovers; all file bytes, Git status, HEAD, branch and metadata unchanged. Listing caps at ten non-exempt paths and reports overflow; repeated scratch-only cleanup also preserves everything."
+  },
+  {
+    "name": "no-mistakes: mixed dirt refuses without deleting work",
+    "result": "pass",
+    "live": true,
+    "details": "Exit 1; includes tracked edits; all file bytes, Git status, HEAD, branch and metadata unchanged. Listing caps at ten non-exempt paths and reports overflow; repeated scratch-only cleanup also preserves everything."
+  },
+  {
+    "name": "no-mistakes: tracked dirt refuses without deleting work",
+    "result": "pass",
+    "live": true,
+    "details": "Exit 1; includes tracked edits; all file bytes, Git status, HEAD, branch and metadata unchanged. No untracked paths are invented."
+  },
+  {
+    "name": "no-mistakes: clean landed task returns its real pool slot and retains proof",
+    "result": "pass",
+    "live": true,
+    "details": "Ordinary cleanup exited 0 without --force or a discard decision, removed task metadata, closed the real tasks-axi backlog item, and retained every task-data proof file byte-for-byte. Real Treehouse status captured after return."
+  },
+  {
+    "name": "local-only: refuse clean unpushed work",
+    "result": "pass",
+    "live": true,
+    "details": "Exit 1; unlanded commit, task branch, file bytes, and metadata are preserved."
+  },
+  {
+    "name": "local-only: untracked dirt refuses without deleting work",
+    "result": "pass",
+    "live": true,
+    "details": "Exit 1; untracked-only leftovers; all file bytes, Git status, HEAD, branch and metadata unchanged. Listing caps at ten non-exempt paths and reports overflow; repeated scratch-only cleanup also preserves everything."
+  },
+  {
+    "name": "local-only: mixed dirt refuses without deleting work",
+    "result": "pass",
+    "live": true,
+    "details": "Exit 1; includes tracked edits; all file bytes, Git status, HEAD, branch and metadata unchanged. Listing caps at ten non-exempt paths and reports overflow; repeated scratch-only cleanup also preserves everything."
+  },
+  {
+    "name": "local-only: tracked dirt refuses without deleting work",
+    "result": "pass",
+    "live": true,
+    "details": "Exit 1; includes tracked edits; all file bytes, Git status, HEAD, branch and metadata unchanged. No untracked paths are invented."
+  },
+  {
+    "name": "local-only: clean landed task returns its real pool slot and retains proof",
+    "result": "pass",
+    "live": true,
+    "details": "Ordinary cleanup exited 0 without --force or a discard decision, removed task metadata, closed the real tasks-axi backlog item, and retained every task-data proof file byte-for-byte. Real Treehouse status captured after return."
+  }
+]

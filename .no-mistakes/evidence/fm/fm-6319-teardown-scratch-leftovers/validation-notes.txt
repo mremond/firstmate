@@ -1,0 +1,31 @@
+Target: 3b5b5d6422207a289c2c656f59a9bd00ed290b9d
+Target tree: 5d5f35862a03bf0fd2df5b44dbb7d087ed69e62c
+Base: 1f3e769616fdf9f31f85f4c3e6a9f71606634238
+
+Focused regression execution:
+A temporary runner loaded the unchanged definitions from tests/fm-teardown.test.sh and called only:
+- test_untracked_only_refusal_diagnostic
+- test_tracked_edit_refusal_diagnostic
+- test_mixed_refusal_diagnostic
+- test_local_only_truly_unpushed_refuses
+- test_no_mistakes_truly_unpushed_refuses
+The first three run remote-backed and local-only variants. All eight cases passed.
+Command: TMPDIR="$PWD/.qa-6319/tmp" GIT_CEILING_DIRECTORIES="$PWD" bash tests/.fm-6319-selected-qa.sh
+Output: targeted-regression.log
+
+Counterfactual regression:
+The same untracked-only regression ran against the base revision's fm-teardown.sh, with unchanged current helper dependencies. It exited 1 at the expected missing untracked-only classification assertion.
+Command: TMPDIR="$PWD/.qa-6319/tmp" GIT_CEILING_DIRECTORIES="$PWD" bash tests/.fm-6319-baseline-qa.sh
+Output: baseline-regression.log
+These fixture tests use mocked ancillary tools and are not labelled live.
+
+Live product validation:
+Command: python3 live-cli-validation.py (using the evidence directory's absolute script path).
+Real fm-brief.sh, fm-teardown.sh, Git, Treehouse and tasks-axi ran against marked disposable lab homes, local Git repositories, and a real local worktree pool inside the gate worktree. The 11 successful observations are in live-cli-results.json. Generated briefs for all three ship delivery modes are retained as public emitted-output contracts.
+The completed worker fixtures used the supported windowless record shape; no LLM, real primary, Herdr session, default tmux session, external PR or production credentials were used.
+The initial setup attempt omitted node from the restricted PATH and failed before task creation. Adding a link to the already-installed node resolved this; the full final run passed.
+The sandbox permitted writes only inside the disposable workspace and evidence directory, and prevented signals outside its child processes. The unrelated host-wide orphan scan consequently reported it could not scan account processes; the actual worktree return and backlog close both completed. Watcher-down notices are expected in a fixture with no supervisor. Treehouse printed an update notice; no update was performed.
+No screenshots: this change's exercised user surface is generated Markdown and command-line output, captured directly.
+
+Cleanup:
+All disposable lab homes, Git repositories, real pool leases, tool links, temporary selected-test runners and copied base script were removed. Evidence is retained here. No source files were changed. No linters, formatters, full repository suite, pipeline control, publication or CI commands were run.

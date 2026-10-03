@@ -1,0 +1,295 @@
+Real CLI output excerpts from live-cli-transcript.log.
+Target: 3b5b5d6422207a289c2c656f59a9bd00ed290b9d
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-teardown.sh task-x1
+
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes/pool/.treehouse/sample-0951c5/1/sample has work not on any remote and not landed.
+unpushed commits:
+47f787c Landed feature
+Push the branch, land its PR, or get the captain's explicit OK to discard, then --force.
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-teardown.sh task-x1
+
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+REFUSED: worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes/pool/.treehouse/sample-0951c5/1/sample has uncommitted changes.
+uncommitted changes present (untracked-only leftovers)
+untracked paths (up to 10):
+  "00 proof scratch/"
+  01-scratch.txt
+  02-scratch.txt
+  03-scratch.txt
+  04-scratch.txt
+  05-scratch.txt
+  06-scratch.txt
+  07-scratch.txt
+  08-scratch.txt
+  09-scratch.txt
+  ... additional untracked paths omitted
+Commit them (or get the captain's explicit OK to discard, then --force).
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-teardown.sh task-x1
+
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+REFUSED: worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes/pool/.treehouse/sample-0951c5/1/sample has uncommitted changes.
+uncommitted changes present (untracked-only leftovers)
+untracked paths (up to 10):
+  "00 proof scratch/"
+  01-scratch.txt
+  02-scratch.txt
+  03-scratch.txt
+  04-scratch.txt
+  05-scratch.txt
+  06-scratch.txt
+  07-scratch.txt
+  08-scratch.txt
+  09-scratch.txt
+  ... additional untracked paths omitted
+Commit them (or get the captain's explicit OK to discard, then --force).
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-teardown.sh task-x1
+
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+REFUSED: worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes/pool/.treehouse/sample-0951c5/1/sample has uncommitted changes.
+uncommitted changes present (includes tracked edits)
+untracked paths (up to 10):
+  "00 proof scratch/"
+  01-scratch.txt
+  02-scratch.txt
+  03-scratch.txt
+  04-scratch.txt
+  05-scratch.txt
+  06-scratch.txt
+  07-scratch.txt
+  08-scratch.txt
+  09-scratch.txt
+  ... additional untracked paths omitted
+Commit them (or get the captain's explicit OK to discard, then --force).
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-teardown.sh task-x1
+
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+REFUSED: worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes/pool/.treehouse/sample-0951c5/1/sample has uncommitted changes.
+uncommitted changes present (includes tracked edits)
+Commit them (or get the captain's explicit OK to discard, then --force).
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-teardown.sh task-x1
+A new version of treehouse is available: v2.3.0 → v3.1.1
+Run "treehouse update" to update
+
+🌳 Worktree returned to pool.
+sample: already current
+teardown task-x1 complete (window none, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes/pool/.treehouse/sample-0951c5/1/sample, legacy record accepted without spawn_gen: endpoint missing, incarnation legacy-20261003T162634Z-3864)
+Backlog: task-x1 is closed in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+fm-remote-job-reap-orphans: cannot scan this account's processes for remote job workers
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-tasks-axi.sh show task-x1
+task:
+  id: task-x1
+  title: Synthetic scratch cleanup check
+  state: done
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: "-"
+  closed: 2026-10-03
+  deps: none
+  links: none
+  body: ""
+
+[exit 0]
+
+$ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes/projects/sample && treehouse status
+1     available    ~/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/no-mistakes/pool/.treehouse/sample-0951c5/1/sample
+A new version of treehouse is available: v2.3.0 → v3.1.1
+Run "treehouse update" to update
+[exit 0]
+Retained task data SHA256:
+{
+  "05-scratch.txt": "e323e35d2e65a062c806f9f05e9cd982e1c8203b4c80d2dc67527f24adbc9ace",
+  "10-scratch.txt": "b03b6de55c8e3916ebf5f2908e97d103aa551149dd41d0fee3d4fb4f5dba2b8c",
+  "09-scratch.txt": "00193d3e98ad9b000fcd94e09539ea981160ecc0e6de295e2ee000f923ca373f",
+  "helper.sh": "5fcf483e78bc31378aff9bfa4488d8a9b7d38a7378e146779f2f75234af29c90",
+  "company.json": "e80d9eaf0eefac48beffe9fd2b86370414fd758b48ab1cfbbcdf799120a826f0",
+  "03-scratch.txt": "b4b300181635681c83f5d9370f9d2ba320dfdae3f0a18e0fdb637f8828337c57",
+  "06-scratch.txt": "6e0726c6176a87aa748dd495630dcb502fbf62d938d144b5a9cc1aacfa31a3b7",
+  "01-scratch.txt": "acecbc561dc7b3aa64159327704c10ca72a4729730ed47c236eb3ba74cf1bd6c",
+  "08-scratch.txt": "5163c8c1f98116a29e75f600f01731f14a7db3e4cda09d50d8c813a5a1477e5c",
+  "11-scratch.txt": "c8182fde26c5804f0cb51deb499e2a372ca2c9e151e9c49233c067d736dff41b",
+  "04-scratch.txt": "c3a7b515c4b96f4cbd0e892a7ea833e2b45d231090ea6968ce56935292e19d44",
+  "07-scratch.txt": "92e69311c8223d2b20aa01df6bcd72f63ceaff4bbe6f8f7e42a810ac70830c46",
+  "server.log": "5396ca46ab06a1c5395cef1fc76ecb84805d1e890895962a4425683a6eaedb7f",
+  "02-scratch.txt": "21592e1245076ead1d037e9695fd619073f7de9f879362b568e3d775e786d766",
+  "moved-proof-scratch/server.log": "599a59d4aa30b2a9b82a5ebe0e96c32f0e2c8cbdb931ae85ab3ffed2a52cfac3"
+}
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-teardown.sh task-x1
+
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: local-only worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only/pool/.treehouse/sample-c1076a/1/sample has work not yet merged into main and not on any remote.
+commits not yet on main:
+2fa093a Landed feature
+Merge the branch into local main first (bin/fm-merge-local.sh after the captain approves), or push to a fork/remote, or get the captain's explicit OK to discard, then --force.
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-teardown.sh task-x1
+
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+REFUSED: local-only worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only/pool/.treehouse/sample-c1076a/1/sample has work not yet merged into main and not on any remote.
+uncommitted changes present (untracked-only leftovers)
+untracked paths (up to 10):
+  "00 proof scratch/"
+  01-scratch.txt
+  02-scratch.txt
+  03-scratch.txt
+  04-scratch.txt
+  05-scratch.txt
+  06-scratch.txt
+  07-scratch.txt
+  08-scratch.txt
+  09-scratch.txt
+  ... additional untracked paths omitted
+Merge the branch into local main first (bin/fm-merge-local.sh after the captain approves), or push to a fork/remote, or get the captain's explicit OK to discard, then --force.
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-teardown.sh task-x1
+
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+REFUSED: local-only worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only/pool/.treehouse/sample-c1076a/1/sample has work not yet merged into main and not on any remote.
+uncommitted changes present (untracked-only leftovers)
+untracked paths (up to 10):
+  "00 proof scratch/"
+  01-scratch.txt
+  02-scratch.txt
+  03-scratch.txt
+  04-scratch.txt
+  05-scratch.txt
+  06-scratch.txt
+  07-scratch.txt
+  08-scratch.txt
+  09-scratch.txt
+  ... additional untracked paths omitted
+Merge the branch into local main first (bin/fm-merge-local.sh after the captain approves), or push to a fork/remote, or get the captain's explicit OK to discard, then --force.
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-teardown.sh task-x1
+
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+REFUSED: local-only worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only/pool/.treehouse/sample-c1076a/1/sample has work not yet merged into main and not on any remote.
+uncommitted changes present (includes tracked edits)
+untracked paths (up to 10):
+  "00 proof scratch/"
+  01-scratch.txt
+  02-scratch.txt
+  03-scratch.txt
+  04-scratch.txt
+  05-scratch.txt
+  06-scratch.txt
+  07-scratch.txt
+  08-scratch.txt
+  09-scratch.txt
+  ... additional untracked paths omitted
+Merge the branch into local main first (bin/fm-merge-local.sh after the captain approves), or push to a fork/remote, or get the captain's explicit OK to discard, then --force.
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-teardown.sh task-x1
+
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+REFUSED: local-only worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only/pool/.treehouse/sample-c1076a/1/sample has work not yet merged into main and not on any remote.
+uncommitted changes present (includes tracked edits)
+Merge the branch into local main first (bin/fm-merge-local.sh after the captain approves), or push to a fork/remote, or get the captain's explicit OK to discard, then --force.
+[exit 1]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-teardown.sh task-x1
+A new version of treehouse is available: v2.3.0 → v3.1.1
+Run "treehouse update" to update
+
+🌳 Worktree returned to pool.
+teardown task-x1 complete (window none, worktree /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only/pool/.treehouse/sample-c1076a/1/sample, legacy record accepted without spawn_gen: endpoint missing, incarnation legacy-20261003T162645Z-10979)
+Backlog: task-x1 is closed in /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+fm-remote-job-reap-orphans: cannot scan this account's processes for remote job workers
+[exit 0]
+
+$ /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/bin/fm-tasks-axi.sh show task-x1
+task:
+  id: task-x1
+  title: Synthetic scratch cleanup check
+  state: done
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: "-"
+  closed: 2026-10-03
+  deps: none
+  links: none
+  body: local main
+
+[exit 0]
+
+$ cd /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only/projects/sample && treehouse status
+1     available    ~/.no-mistakes/worktrees/acf4a767348a/01M418J4Y0Z6WQQPFEBCJ3HQNR/.qa-6319/live/local-only/pool/.treehouse/sample-c1076a/1/sample
+A new version of treehouse is available: v2.3.0 → v3.1.1
+Run "treehouse update" to update
+[exit 0]
+Retained task data SHA256:
+{
+  "05-scratch.txt": "e323e35d2e65a062c806f9f05e9cd982e1c8203b4c80d2dc67527f24adbc9ace",
+  "10-scratch.txt": "b03b6de55c8e3916ebf5f2908e97d103aa551149dd41d0fee3d4fb4f5dba2b8c",
+  "09-scratch.txt": "00193d3e98ad9b000fcd94e09539ea981160ecc0e6de295e2ee000f923ca373f",
+  "helper.sh": "5fcf483e78bc31378aff9bfa4488d8a9b7d38a7378e146779f2f75234af29c90",
+  "company.json": "e80d9eaf0eefac48beffe9fd2b86370414fd758b48ab1cfbbcdf799120a826f0",
+  "03-scratch.txt": "b4b300181635681c83f5d9370f9d2ba320dfdae3f0a18e0fdb637f8828337c57",
+  "06-scratch.txt": "6e0726c6176a87aa748dd495630dcb502fbf62d938d144b5a9cc1aacfa31a3b7",
+  "01-scratch.txt": "acecbc561dc7b3aa64159327704c10ca72a4729730ed47c236eb3ba74cf1bd6c",
+  "08-scratch.txt": "5163c8c1f98116a29e75f600f01731f14a7db3e4cda09d50d8c813a5a1477e5c",
+  "11-scratch.txt": "c8182fde26c5804f0cb51deb499e2a372ca2c9e151e9c49233c067d736dff41b",
+  "04-scratch.txt": "c3a7b515c4b96f4cbd0e892a7ea833e2b45d231090ea6968ce56935292e19d44",
+  "07-scratch.txt": "92e69311c8223d2b20aa01df6bcd72f63ceaff4bbe6f8f7e42a810ac70830c46",
+  "server.log": "5396ca46ab06a1c5395cef1fc76ecb84805d1e890895962a4425683a6eaedb7f",
+  "02-scratch.txt": "21592e1245076ead1d037e9695fd619073f7de9f879362b568e3d775e786d766",
+  "moved-proof-scratch/server.log": "599a59d4aa30b2a9b82a5ebe0e96c32f0e2c8cbdb931ae85ab3ffed2a52cfac3"
+}
