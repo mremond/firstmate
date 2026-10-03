@@ -1,0 +1,80 @@
+[
+  {
+    "label": "predecessor-idle-ring",
+    "output": "",
+    "busy_budget": null,
+    "ring_state": "002.msg\t1\t1791057660\n"
+  },
+  {
+    "label": "successor-busy-1",
+    "output": "",
+    "busy_budget": "003.msg\t1\n",
+    "ring_state": "002.msg\t1\t1791057660\n"
+  },
+  {
+    "label": "successor-busy-2",
+    "output": "stale: fm-lab-busy6445-64250-27605:w4:p1 (unread firstmate instruction: stuck-busy after 2 consecutive busy-deferred due doorbells; /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/pi-worker.inbox/003.msg stays unhandled and no doorbell was typed; inspect the worker)\n",
+    "busy_budget": "003.msg\t2\n",
+    "ring_state": "002.msg\t1\t1791057660\n"
+  },
+  {
+    "label": "successor-busy-3",
+    "output": "",
+    "busy_budget": "003.msg\t2\n",
+    "ring_state": "002.msg\t1\t1791057660\n"
+  },
+  {
+    "label": "successor-busy-4",
+    "output": "",
+    "busy_budget": "003.msg\t2\n",
+    "ring_state": "002.msg\t1\t1791057660\n"
+  },
+  {
+    "label": "reset-first-busy",
+    "output": "",
+    "busy_budget": "004.msg\t1\n",
+    "ring_state": "002.msg\t1\t1791057660\n"
+  },
+  {
+    "label": "reset-protected-nonbusy",
+    "output": "",
+    "busy_budget": null,
+    "ring_state": "004.msg\t1\t1791057696\n"
+  },
+  {
+    "label": "reset-new-busy-1",
+    "output": "",
+    "busy_budget": "004.msg\t1\n",
+    "ring_state": "004.msg\t1\t1791057696\n"
+  },
+  {
+    "label": "reset-new-busy-2",
+    "output": "stale: fm-lab-busy6445-64250-27605:w4:p1 (unread firstmate instruction: stuck-busy after 2 consecutive busy-deferred due doorbells; /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/pi-worker.inbox/004.msg stays unhandled and no doorbell was typed; inspect the worker)\n",
+    "busy_budget": "004.msg\t2\n",
+    "ring_state": "004.msg\t1\t1791057696\n"
+  },
+  {
+    "label": "reset-new-busy-3",
+    "output": "",
+    "busy_budget": "004.msg\t2\n",
+    "ring_state": "004.msg\t1\t1791057696\n"
+  },
+  {
+    "label": "busy-bookkeeping-write-failure",
+    "output": "stale: fm-lab-busy6445-64250-27605:w4:p1 (steering-inbox busy bookkeeping unwritable: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/pi-worker.inbox/.busy-state cannot be written while /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/pi-worker.inbox/005.msg stays unhandled; inspect the inbox directory)\n",
+    "busy_budget": null,
+    "ring_state": "004.msg\t1\t1791057696\n"
+  },
+  {
+    "label": "busy-bookkeeping-write-failure-dedup",
+    "output": "",
+    "busy_budget": null,
+    "ring_state": "004.msg\t1\t1791057696\n"
+  },
+  {
+    "label": "busy-bookkeeping-reset-failure",
+    "output": "stale: fm-lab-busy6445-64250-27605:w4:p1 (steering-inbox busy bookkeeping unwritable: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/pi-worker.inbox/.busy-state cannot be reset after a non-busy check; inspect the inbox directory)\n",
+    "busy_budget": null,
+    "ring_state": "004.msg\t1\t1791057696\n"
+  }
+]

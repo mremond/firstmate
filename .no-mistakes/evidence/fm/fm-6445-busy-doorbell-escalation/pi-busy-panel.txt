@@ -1,0 +1,28 @@
+bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/launch-pi-worker.sh
+mremond@mac-mini 01M41JF8PZQEQWCHFEW097SGNE % bash /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFE
+W097SGNE/.test-busy-lab/launch-pi-worker.sh
+
+ pi v0.85.1
+ escape interrupt · ctrl+c/ctrl+d clear/exit · / commands · ! bash · ctrl+o more
+ Press ctrl+o to show full startup help and loaded resources.
+
+ Pi can explain its own features and look up its docs. Ask it how to use or extend Pi.
+
+[Extensions]
+  pi-worker.pi-ext.ts
+
+
+ Wait now: run exactly sleep 30, then reply WAIT_DONE. Do not inspect files or run anything else.
+
+
+
+ $ sleep 30
+
+ Elapsed 3.0s
+
+
+── ⠼ Working ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+~/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE (detached)
+↑232 ↓20 $0.002 (sub) 0.1%/272k (auto)                                                   (openai-codex) gpt-5.5 • medium

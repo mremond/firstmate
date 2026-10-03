@@ -1,0 +1,72 @@
+{
+  "target": "0e1083e793462bd62a370a7d997d1fe9bd136401",
+  "tree": "a7f4fa3b66eef99eedd2bafabed30c19add9bbaa",
+  "base": "1f3e769616fdf9f31f85f4c3e6a9f71606634238",
+  "completed_at": "2026-10-03T20:11:20.001309+00:00",
+  "lab_session": "fm-lab-busy6445-64250-27605",
+  "versions": {
+    "herdr": "0.9.1 protocol 22",
+    "pi": "0.85.1",
+    "codex": "0.156.1",
+    "claude": "2.1.288 (Claude Code)"
+  },
+  "focused_scripts": {
+    "tests/fm-task-inbox.test.sh": "exit 0",
+    "tests/fm-daemon.test.sh": "exit 0"
+  },
+  "mutation_cases": 13,
+  "mutations_detected": true,
+  "live_busy_watcher": {
+    "harness": "Pi with production worker extension native agent_start and agent_settled",
+    "baseline_busy_checks": 4,
+    "baseline_wakes": 0,
+    "target_wake_counts": [
+      0,
+      1,
+      1
+    ],
+    "default_busy_limit": 2,
+    "grace_override_seconds": 0,
+    "ring_history_created_while_busy": false
+  },
+  "live_regression_labels": [
+    "predecessor-idle-ring",
+    "successor-busy-1",
+    "successor-busy-2",
+    "successor-busy-3",
+    "successor-busy-4",
+    "reset-first-busy",
+    "reset-protected-nonbusy",
+    "reset-new-busy-1",
+    "reset-new-busy-2",
+    "reset-new-busy-3",
+    "busy-bookkeeping-write-failure",
+    "busy-bookkeeping-write-failure-dedup",
+    "busy-bookkeeping-reset-failure"
+  ],
+  "consumer": {
+    "runtime": "real production handle_durable_wakes, housekeeping, escalate_flush; real wake drain and Herdr transport; real Codex supervisor",
+    "modes": [
+      "away",
+      "quiet"
+    ],
+    "reasons": [
+      "stuck-busy",
+      "busy bookkeeping write failure",
+      "busy bookkeeping reset failure"
+    ],
+    "failed_buffer_preserved_queue": true,
+    "real_watcher_to_supervisor_handoff": true
+  },
+  "claude_fresh_live": "untested: normal authenticated launch stopped at workspace trust; isolated config lacks login; no trust or credential configuration modified",
+  "historical_claude_evidence_binding": {
+    "supplied_proof_commit": "23b0232908a5adc7fbf7339ef48c34a091a7a799",
+    "watcher_and_inbox_files_unchanged": true
+  },
+  "teardown": {
+    "helper_exit": 0,
+    "default_session_tripwire": "passed",
+    "review_browser_tab": "closed"
+  },
+  "source_changes": false
+}

@@ -1,0 +1,6 @@
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+special escalation has no transient recovery marker
+ordinary stale retained its normal recovery marker
+fm-lab-busy6445-64250-27605:w4:p1 (unread firstmate instruction: stuck-busy after 2 consecutive busy-deferred due doorbells; /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/pi-worker.inbox/007.msg stays unhandled and no doorbell was typed; inspect the worker)
+real watcher escalation delivered to real supervisor; original steer remains unhandled

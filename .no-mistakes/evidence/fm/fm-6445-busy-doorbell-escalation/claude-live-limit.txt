@@ -1,0 +1,1 @@
+normal login: authenticated; isolated CLAUDE_CONFIG_DIR: unauthenticated; normal launch blocked by workspace trust

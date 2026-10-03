@@ -1,0 +1,9 @@
+{
+  "variant": "target",
+  "check": 3,
+  "exit": 0,
+  "output": "busy=yes\n",
+  "busy_budget": "001.msg\t2\n",
+  "wakes": 1,
+  "time": "2026-10-03T19:59:10Z"
+}

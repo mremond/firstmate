@@ -1,0 +1,171 @@
+[
+  {
+    "name": "R1-busy",
+    "selector": "test_watcher_successor_escalation_stays_quiet busy",
+    "target": {
+      "exit": 0,
+      "output": "ok - watcher: busy successor escalates once despite stale predecessor ring history"
+    },
+    "mutant": {
+      "exit": 1,
+      "output": "not ok - busy successor escalation repeated with stale predecessor ring history"
+    },
+    "mutation_detected": true
+  },
+  {
+    "name": "R1-dead",
+    "selector": "test_watcher_successor_escalation_stays_quiet dead",
+    "target": {
+      "exit": 0,
+      "output": "ok - watcher: dead successor escalates once despite stale predecessor ring history"
+    },
+    "mutant": {
+      "exit": 1,
+      "output": "not ok - dead successor escalation repeated with stale predecessor ring history"
+    },
+    "mutation_detected": true
+  },
+  {
+    "name": "R1-missing",
+    "selector": "test_watcher_successor_escalation_stays_quiet missing",
+    "target": {
+      "exit": 0,
+      "output": "ok - watcher: missing successor escalates once despite stale predecessor ring history"
+    },
+    "mutant": {
+      "exit": 1,
+      "output": "not ok - missing successor escalation repeated with stale predecessor ring history"
+    },
+    "mutation_detected": true
+  },
+  {
+    "name": "R1-unwritable",
+    "selector": "test_watcher_successor_escalation_stays_quiet unwritable",
+    "target": {
+      "exit": 0,
+      "output": "ok - watcher: unwritable successor escalates once despite stale predecessor ring history"
+    },
+    "mutant": {
+      "exit": 1,
+      "output": "not ok - unwritable successor escalation repeated with stale predecessor ring history"
+    },
+    "mutation_detected": true
+  },
+  {
+    "name": "R2-protected",
+    "selector": "test_watcher_nonbusy_attempt_resets_busy_streak protected",
+    "target": {
+      "exit": 0,
+      "output": "ok - watcher: a non-busy protected delivery breaks the busy streak and preserves the attempt ladder"
+    },
+    "mutant": {
+      "exit": 1,
+      "output": "not ok - protected non-busy delivery did not reset the busy streak"
+    },
+    "mutation_detected": true
+  },
+  {
+    "name": "R2-failed",
+    "selector": "test_watcher_nonbusy_attempt_resets_busy_streak failed",
+    "target": {
+      "exit": 0,
+      "output": "ok - watcher: a non-busy failed delivery breaks the busy streak and preserves the attempt ladder"
+    },
+    "mutant": {
+      "exit": 1,
+      "output": "not ok - failed non-busy delivery did not reset the busy streak"
+    },
+    "mutation_detected": true
+  },
+  {
+    "name": "R4-stuck-away",
+    "selector": "test_busy_inbox_escalation_reaches_supervision stuck away",
+    "target": {
+      "exit": 0,
+      "output": "ok - stuck inbox escalation reaches supervision in away mode and survives buffering failure"
+    },
+    "mutant": {
+      "exit": 1,
+      "output": "not ok - stuck away inbox escalation was absorbed before supervision"
+    },
+    "mutation_detected": true
+  },
+  {
+    "name": "R4-stuck-quiet",
+    "selector": "test_busy_inbox_escalation_reaches_supervision stuck quiet",
+    "target": {
+      "exit": 0,
+      "output": "ok - stuck inbox escalation reaches supervision in quiet mode and survives buffering failure"
+    },
+    "mutant": {
+      "exit": 1,
+      "output": "not ok - stuck quiet inbox escalation was absorbed before supervision"
+    },
+    "mutation_detected": true
+  },
+  {
+    "name": "R4-write-away",
+    "selector": "test_busy_inbox_escalation_reaches_supervision write away",
+    "target": {
+      "exit": 0,
+      "output": "ok - write inbox escalation reaches supervision in away mode and survives buffering failure"
+    },
+    "mutant": {
+      "exit": 1,
+      "output": "not ok - write away inbox escalation was absorbed before supervision"
+    },
+    "mutation_detected": true
+  },
+  {
+    "name": "R4-write-quiet",
+    "selector": "test_busy_inbox_escalation_reaches_supervision write quiet",
+    "target": {
+      "exit": 0,
+      "output": "ok - write inbox escalation reaches supervision in quiet mode and survives buffering failure"
+    },
+    "mutant": {
+      "exit": 1,
+      "output": "not ok - write quiet inbox escalation was absorbed before supervision"
+    },
+    "mutation_detected": true
+  },
+  {
+    "name": "R4-reset-away",
+    "selector": "test_busy_inbox_escalation_reaches_supervision reset away",
+    "target": {
+      "exit": 0,
+      "output": "ok - reset inbox escalation reaches supervision in away mode and survives buffering failure"
+    },
+    "mutant": {
+      "exit": 1,
+      "output": "not ok - reset away inbox escalation was absorbed before supervision"
+    },
+    "mutation_detected": true
+  },
+  {
+    "name": "R4-reset-quiet",
+    "selector": "test_busy_inbox_escalation_reaches_supervision reset quiet",
+    "target": {
+      "exit": 0,
+      "output": "ok - reset inbox escalation reaches supervision in quiet mode and survives buffering failure"
+    },
+    "mutant": {
+      "exit": 1,
+      "output": "not ok - reset quiet inbox escalation was absorbed before supervision"
+    },
+    "mutation_detected": true
+  },
+  {
+    "name": "R4-scope",
+    "selector": "test_busy_inbox_dispatch_preserves_other_stale_reasons",
+    "target": {
+      "exit": 0,
+      "output": "ok - inbox dispatch preserves ordinary stale, busy-turn, and other doorbell routing"
+    },
+    "mutant": {
+      "exit": 1,
+      "output": "not ok - inbox dispatch changed another stale reason:"
+    },
+    "mutation_detected": true
+  }
+]

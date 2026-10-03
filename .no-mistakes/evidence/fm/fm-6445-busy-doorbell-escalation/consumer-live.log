@@ -1,0 +1,50 @@
+head=0e1083e793462bd62a370a7d997d1fe9bd136401
+QUEUED mode=away reason=stale: fm-lab-busy6445-64250-27605:w1:p1 (unread firstmate instruction: stuck-busy after 2 consecutive busy-deferred due doorbells; /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/002.msg stays unhandled and no doorbell was typed; inspect the worker)
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/bin/fm-supervise-daemon.sh: line 753: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/.subsuper-escalations: Is a directory
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+BUFFERED mode=away count=1 status-offset=0 queue-retained-after-failure=yes
+DELIVERED mode=away buffer-empty=yes
+QUEUED mode=away reason=stale: fm-lab-busy6445-64250-27605:w1:p1 (steering-inbox busy bookkeeping unwritable: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/.busy-state cannot be written while /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/002.msg stays unhandled; inspect the inbox directory)
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/bin/fm-supervise-daemon.sh: line 753: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/.subsuper-escalations: Is a directory
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+BUFFERED mode=away count=1 status-offset=0 queue-retained-after-failure=yes
+DELIVERED mode=away buffer-empty=yes
+QUEUED mode=away reason=stale: fm-lab-busy6445-64250-27605:w1:p1 (steering-inbox busy bookkeeping unwritable: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/.busy-state cannot be reset after a non-busy check; inspect the inbox directory)
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/bin/fm-supervise-daemon.sh: line 753: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/.subsuper-escalations: Is a directory
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+BUFFERED mode=away count=1 status-offset=0 queue-retained-after-failure=yes
+DELIVERED mode=away buffer-empty=yes
+QUEUED mode=quiet reason=stale: fm-lab-busy6445-64250-27605:w1:p1 (unread firstmate instruction: stuck-busy after 2 consecutive busy-deferred due doorbells; /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/002.msg stays unhandled and no doorbell was typed; inspect the worker)
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/bin/fm-supervise-daemon.sh: line 753: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/.subsuper-escalations: Is a directory
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+BUFFERED mode=quiet count=1 status-offset=0 queue-retained-after-failure=yes
+DELIVERED mode=quiet buffer-empty=yes
+QUEUED mode=quiet reason=stale: fm-lab-busy6445-64250-27605:w1:p1 (steering-inbox busy bookkeeping unwritable: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/.busy-state cannot be written while /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/002.msg stays unhandled; inspect the inbox directory)
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/bin/fm-supervise-daemon.sh: line 753: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/.subsuper-escalations: Is a directory
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+BUFFERED mode=quiet count=1 status-offset=0 queue-retained-after-failure=yes
+DELIVERED mode=quiet buffer-empty=yes
+QUEUED mode=quiet reason=stale: fm-lab-busy6445-64250-27605:w1:p1 (steering-inbox busy bookkeeping unwritable: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/.busy-state cannot be reset after a non-busy check; inspect the inbox directory)
+/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/bin/fm-supervise-daemon.sh: line 753: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/.subsuper-escalations: Is a directory
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+BUFFERED mode=quiet count=1 status-offset=0 queue-retained-after-failure=yes
+DELIVERED mode=quiet buffer-empty=yes
+DONE original instruction remains unhandled

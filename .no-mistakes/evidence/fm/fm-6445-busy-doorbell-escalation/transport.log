@@ -1,0 +1,362 @@
+status --json 
+pane read w2:p1 --source visible --format ansi 
+status --json 
+agent get w2:p1 
+pane get w2:p1 
+status --json 
+agent get w2:p1 
+status --json 
+pane read w2:p1 --source recent --lines 200 
+status --json 
+pane read w2:p1 --source visible --format ansi 
+agent get w2:p1 
+status --json 
+pane send-text w2:p1 $'\342\201\243FIRSTMATE_OP: v1 away-supervisor: Supervisor escalate (1 event(s)): fm-lab-busy6445-64250-27605:w1:p1 (unread firstmate instruction: stuck-busy after 2 consecutive busy-deferred due doorbells; /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/002.msg stays unhandled and no doorbell was typed; inspect the worker) (pre-read; re-arm not needed — watcher daemon-managed)' 
+agent get w2:p1 
+status --json 
+pane send-keys w2:p1 enter 
+agent get w2:p1 
+agent get w2:p1 
+agent get w2:p1 
+pane get w2:p1 
+status --json 
+agent get w2:p1 
+pane process-info --pane w2:p1 
+pane get w2:p1 
+status --json 
+agent get w2:p1 
+status --json 
+pane read w2:p1 --source recent --lines 200 
+status --json 
+pane read w2:p1 --source visible --format ansi 
+agent get w2:p1 
+status --json 
+pane send-text w2:p1 $'\342\201\243FIRSTMATE_OP: v1 away-supervisor: Supervisor escalate (1 event(s)): fm-lab-busy6445-64250-27605:w1:p1 (steering-inbox busy bookkeeping unwritable: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/.busy-state cannot be written while /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/002.msg stays unhandled; inspect the inbox directory) (pre-read; re-arm not needed — watcher daemon-managed)' 
+agent get w2:p1 
+status --json 
+pane send-keys w2:p1 enter 
+agent get w2:p1 
+agent get w2:p1 
+pane get w2:p1 
+status --json 
+agent get w2:p1 
+status --json 
+pane read w2:p1 --source recent --lines 200 
+status --json 
+pane read w2:p1 --source visible --format ansi 
+agent get w2:p1 
+status --json 
+pane send-text w2:p1 $'\342\201\243FIRSTMATE_OP: v1 away-supervisor: Supervisor escalate (1 event(s)): fm-lab-busy6445-64250-27605:w1:p1 (steering-inbox busy bookkeeping unwritable: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/.busy-state cannot be reset after a non-busy check; inspect the inbox directory) (pre-read; re-arm not needed — watcher daemon-managed)' 
+agent get w2:p1 
+status --json 
+pane send-keys w2:p1 enter 
+agent get w2:p1 
+agent get w2:p1 
+pane get w2:p1 
+status --json 
+agent get w2:p1 
+pane process-info --pane w2:p1 
+pane get w2:p1 
+status --json 
+agent get w2:p1 
+status --json 
+pane read w2:p1 --source recent --lines 200 
+status --json 
+pane read w2:p1 --source visible --format ansi 
+agent get w2:p1 
+status --json 
+pane send-text w2:p1 $'\342\201\243FIRSTMATE_OP: v1 away-supervisor: Supervisor escalate (1 event(s)): fm-lab-busy6445-64250-27605:w1:p1 (unread firstmate instruction: stuck-busy after 2 consecutive busy-deferred due doorbells; /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/002.msg stays unhandled and no doorbell was typed; inspect the worker) (pre-read; re-arm not needed — watcher daemon-managed)' 
+agent get w2:p1 
+status --json 
+pane send-keys w2:p1 enter 
+agent get w2:p1 
+agent get w2:p1 
+pane get w2:p1 
+status --json 
+agent get w2:p1 
+status --json 
+pane read w2:p1 --source recent --lines 200 
+status --json 
+pane read w2:p1 --source visible --format ansi 
+agent get w2:p1 
+status --json 
+pane send-text w2:p1 $'\342\201\243FIRSTMATE_OP: v1 away-supervisor: Supervisor escalate (1 event(s)): fm-lab-busy6445-64250-27605:w1:p1 (steering-inbox busy bookkeeping unwritable: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/.busy-state cannot be written while /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/002.msg stays unhandled; inspect the inbox directory) (pre-read; re-arm not needed — watcher daemon-managed)' 
+agent get w2:p1 
+status --json 
+pane send-keys w2:p1 enter 
+agent get w2:p1 
+agent get w2:p1 
+pane get w2:p1 
+status --json 
+agent get w2:p1 
+status --json 
+pane read w2:p1 --source recent --lines 200 
+status --json 
+pane read w2:p1 --source visible --format ansi 
+agent get w2:p1 
+status --json 
+pane send-text w2:p1 $'\342\201\243FIRSTMATE_OP: v1 away-supervisor: Supervisor escalate (1 event(s)): fm-lab-busy6445-64250-27605:w1:p1 (steering-inbox busy bookkeeping unwritable: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/worker.inbox/.busy-state cannot be reset after a non-busy check; inspect the inbox directory) (pre-read; re-arm not needed — watcher daemon-managed)' 
+agent get w2:p1 
+status --json 
+pane send-keys w2:p1 enter 
+agent get w2:p1 
+agent get w2:p1 
+pane get w3:p1 
+agent get w3:p1 
+pane process-info --pane w3:p1 
+status --json 
+pane read w3:p1 --source visible --format ansi 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+status --json 
+agent get w3:p1 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+pane get w3:p1 
+agent get w3:p1 
+pane process-info --pane w3:p1 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+pane get w3:p1 
+agent get w3:p1 
+pane process-info --pane w3:p1 
+status --json 
+pane read w3:p1 --source visible --format ansi 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+status --json 
+agent get w3:p1 
+pane process-info --pane w3:p1 
+status --json 
+agent get w3:p1 
+pane get w3:p1 
+agent get w3:p1 
+pane process-info --pane w3:p1 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+pane get w3:p1 
+agent get w3:p1 
+pane process-info --pane w3:p1 
+status --json 
+pane read w3:p1 --source visible --format ansi 
+agent get w3:p1 
+status --json 
+pane send-text w3:p1 :\ Firstmate\ instruction\ waiting:\ list\ \"\$FM_TASK_INBOX\"/\*.msg\ in\ your\ \'codex-worker.inbox\'\ steering\ inbox\,\ read\ and\ act\ on\ each\ in\ numeric\ order\,\ then\ mv\ each\ into\ its\ handled/. 
+agent get w3:p1 
+status --json 
+pane send-keys w3:p1 enter 
+agent get w3:p1 
+agent get w3:p1 
+status --json 
+agent get w3:p1 
+pane process-info --pane w3:p1 
+status --json 
+agent get w3:p1 
+pane get w3:p1 
+agent get w3:p1 
+pane process-info --pane w3:p1 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+pane get w3:p1 
+agent get w3:p1 
+pane process-info --pane w3:p1 
+status --json 
+pane read w3:p1 --source visible --format ansi 
+agent get w3:p1 
+status --json 
+pane send-text w3:p1 :\ Firstmate\ instruction\ waiting:\ list\ \"\$FM_TASK_INBOX\"/\*.msg\ in\ your\ \'codex-worker.inbox\'\ steering\ inbox\,\ read\ and\ act\ on\ each\ in\ numeric\ order\,\ then\ mv\ each\ into\ its\ handled/. 
+agent get w3:p1 
+status --json 
+pane send-keys w3:p1 enter 
+agent get w3:p1 
+agent get w3:p1 
+pane get w3:p1 
+agent get w3:p1 
+pane process-info --pane w3:p1 
+status --json 
+pane read w3:p1 --source recent --lines 200 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source visible --format ansi 
+agent get w4:p1 
+agent get w4:p1 
+status --json 
+pane send-text w4:p1 :\ Firstmate\ instruction\ waiting:\ list\ \"\$FM_TASK_INBOX\"/\*.msg\ in\ your\ \'pi-worker.inbox\'\ steering\ inbox\,\ read\ and\ act\ on\ each\ in\ numeric\ order\,\ then\ mv\ each\ into\ its\ handled/. 
+agent get w4:p1 
+status --json 
+pane send-keys w4:p1 enter 
+agent get w4:p1 
+agent get w4:p1 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source visible --format ansi 
+agent get w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source recent --lines 200 
+pane get w2:p1 
+status --json 
+agent get w2:p1 
+status --json 
+pane read w2:p1 --source recent --lines 200 
+status --json 
+pane read w2:p1 --source visible --format ansi 
+agent get w2:p1 
+status --json 
+pane send-text w2:p1 $'\342\201\243FIRSTMATE_OP: v1 away-supervisor: Supervisor escalate (1 event(s)): fm-lab-busy6445-64250-27605:w4:p1 (unread firstmate instruction: stuck-busy after 2 consecutive busy-deferred due doorbells; /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/pi-worker.inbox/007.msg stays unhandled and no doorbell was typed; inspect the worker) (pre-read; re-arm not needed — watcher daemon-managed)' 
+agent get w2:p1 
+status --json 
+pane send-keys w2:p1 enter 
+agent get w2:p1 
+agent get w2:p1 
+pane get w4:p1 
+agent get w4:p1 
+pane process-info --pane w4:p1 
+status --json 
+pane read w4:p1 --source visible --format ansi 
+agent get w4:p1 
+agent get w4:p1 
+status --json 
+pane send-text w4:p1 /quit 
+agent get w4:p1 
+status --json 
+pane send-keys w4:p1 enter 
+agent get w4:p1 
+agent get w4:p1 
+agent get w4:p1 
+agent get w4:p1 
+agent get w4:p1 
+agent get w4:p1 
+status --json 
+pane read w4:p1 --source visible --format ansi 
+agent get w4:p1 
+pane get w4:p1 
+agent get w4:p1 
+pane get w4:p1 
+agent get w4:p1 
+pane get w4:p1 
+agent get w4:p1 
+pane get w4:p1 
+pane get w4:p1 

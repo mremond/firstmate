@@ -1,0 +1,9 @@
+{
+  "variant": "baseline",
+  "check": 2,
+  "exit": 0,
+  "output": "busy=yes\n",
+  "busy_budget": "",
+  "wakes": 0,
+  "time": "2026-10-03T19:59:07Z"
+}

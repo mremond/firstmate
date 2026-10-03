@@ -1,0 +1,8 @@
+{"mode": "dead", "check": 1, "output": "stale: fm-lab-busy6445-64250-27605:w4:p1 (unread firstmate instruction: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/pi-worker.inbox/008.msg is unhandled and the worker's agent has exited or its endpoint is missing, so the doorbell was not typed; recover the worker)\n", "wakes": 1}
+{"mode": "dead", "check": 2, "output": "", "wakes": 1}
+{"mode": "dead", "check": 3, "output": "", "wakes": 1}
+{"mode": "dead", "check": 4, "output": "", "wakes": 1}
+{"mode": "missing", "check": 1, "output": "stale: fm-lab-busy6445-64250-27605:w4:p1 (unread firstmate instruction: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/pi-worker.inbox/009.msg is unhandled and the worker's agent has exited or its endpoint is missing, so the doorbell was not typed; recover the worker)\n", "wakes": 1}
+{"mode": "missing", "check": 2, "output": "", "wakes": 1}
+{"mode": "missing", "check": 3, "output": "", "wakes": 1}
+{"mode": "missing", "check": 4, "output": "", "wakes": 1}

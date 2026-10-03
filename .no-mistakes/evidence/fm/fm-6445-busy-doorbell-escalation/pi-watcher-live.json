@@ -1,0 +1,65 @@
+[
+  {
+    "variant": "baseline",
+    "check": 1,
+    "exit": 0,
+    "output": "busy=yes\n",
+    "busy_budget": "",
+    "wakes": 0,
+    "time": "2026-10-03T19:59:06Z"
+  },
+  {
+    "variant": "baseline",
+    "check": 2,
+    "exit": 0,
+    "output": "busy=yes\n",
+    "busy_budget": "",
+    "wakes": 0,
+    "time": "2026-10-03T19:59:07Z"
+  },
+  {
+    "variant": "baseline",
+    "check": 3,
+    "exit": 0,
+    "output": "busy=yes\n",
+    "busy_budget": "",
+    "wakes": 0,
+    "time": "2026-10-03T19:59:07Z"
+  },
+  {
+    "variant": "baseline",
+    "check": 4,
+    "exit": 0,
+    "output": "busy=yes\n",
+    "busy_budget": "",
+    "wakes": 0,
+    "time": "2026-10-03T19:59:08Z"
+  },
+  {
+    "variant": "target",
+    "check": 1,
+    "exit": 0,
+    "output": "busy=yes\n",
+    "busy_budget": "001.msg\t1\n",
+    "wakes": 0,
+    "time": "2026-10-03T19:59:09Z"
+  },
+  {
+    "variant": "target",
+    "check": 2,
+    "exit": 0,
+    "output": "busy=yes\nstale: fm-lab-busy6445-64250-27605:w4:p1 (unread firstmate instruction: stuck-busy after 2 consecutive busy-deferred due doorbells; /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M41JF8PZQEQWCHFEW097SGNE/.test-busy-lab/home/state/pi-worker.inbox/001.msg stays unhandled and no doorbell was typed; inspect the worker)\n",
+    "busy_budget": "001.msg\t2\n",
+    "wakes": 1,
+    "time": "2026-10-03T19:59:09Z"
+  },
+  {
+    "variant": "target",
+    "check": 3,
+    "exit": 0,
+    "output": "busy=yes\n",
+    "busy_budget": "001.msg\t2\n",
+    "wakes": 1,
+    "time": "2026-10-03T19:59:10Z"
+  }
+]
