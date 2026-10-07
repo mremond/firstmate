@@ -1,0 +1,4 @@
+Normal login: Claude Max authenticated (claude auth status --text).
+Normal-store launch from gate worktree stopped at workspace-trust dialog before native readiness; no prompt submitted.
+Same installed Claude with CLAUDE_CONFIG_DIR set to token-free disposable config: Not logged in. Run claude auth login to authenticate.
+Accepting trust changes user-global configuration; logging in or changing credential stores is prohibited by this phase boundary. Neither was performed.

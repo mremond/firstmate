@@ -1,0 +1,58 @@
+[
+  {
+    "case": "stall-sentinel",
+    "stdout": "",
+    "stderr": "native discard timed out at fill-issued: uncertain, the clear may still land; retaining input lock until any issued replacement settles or Claude stops\nnative-control: native discard timed out; outcome uncertain; do not retry blindly\nerror: native discard refused or unconfirmed; no terminal fallback attempted\n",
+    "pid": 7684,
+    "refused": true
+  },
+  {
+    "case": "stall-empty",
+    "stdout": "",
+    "stderr": "native discard timed out at fill-issued: uncertain, the clear may still land; retaining input lock until any issued replacement settles or Claude stops\nnative-control: native discard timed out; outcome uncertain; do not retry blindly\nerror: native discard refused or unconfirmed; no terminal fallback attempted\n",
+    "pid": 28883,
+    "refused": true
+  },
+  {
+    "case": "guard-harness",
+    "stdout": "",
+    "stderr": "error: --discard-pending supports only native Claude 2.1.288 or 2.1.292 on Herdr\n",
+    "pid": 48142,
+    "refused": true
+  },
+  {
+    "case": "guard-version",
+    "stdout": "",
+    "stderr": "native-control: native capability is stale, unsupported, or belongs to another process\nerror: native discard capability unavailable; nothing discarded\n",
+    "pid": 49852,
+    "refused": true
+  },
+  {
+    "case": "guard-task",
+    "stdout": "",
+    "stderr": "native-control: native capability is stale, unsupported, or belongs to another process\nerror: native discard capability unavailable; nothing discarded\n",
+    "pid": 51931,
+    "refused": true
+  },
+  {
+    "case": "guard-target",
+    "stdout": "",
+    "stderr": "native-control: native capability is stale, unsupported, or belongs to another process\nerror: native discard capability unavailable; nothing discarded\n",
+    "pid": 53756,
+    "refused": true
+  },
+  {
+    "case": "guard-process",
+    "stdout": "",
+    "stderr": "native-control: native capability is stale, unsupported, or belongs to another process\nerror: native discard capability unavailable; nothing discarded\n",
+    "pid": 55655,
+    "refused": true
+  },
+  {
+    "case": "guard-missing",
+    "stdout": "",
+    "stderr": "native-control: [Errno 2] No such file or directory: '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.uhwuCH/home/state/.guard-missing.native-ycfgjbuu/ready.json'\nerror: native discard capability unavailable; nothing discarded\n",
+    "pid": 57171,
+    "refused": true
+  }
+]

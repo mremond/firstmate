@@ -1,0 +1,39 @@
+e.uhwuCH/stall-empty/claude-debug.log --plugin-dir /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBF
+QHB3V6A5/.test-6202/tmp/fm-native-live.uhwuCH/stall-empty/observer
+ ▐▛███▛█   Claude Code v2.1.292
+▝▜██████▀  Opus 5.5 · API Usage Billing
+ ▝▝   ▝▝   ~/…/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.uhwuCH/stall-empty/project
+
+▎ Debug mode enabled · logging to /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-62
+▎ 02/tmp/fm-native-live.uhwuCH/stall-empty/claude-debug.log
+
+⏺ Auto mode lets Claude handle permission prompts automatically — Claude checks each tool call for risky actions
+  and prompt injection before executing. Actions Claude identifies as safe are executed, while actions Claude
+  identifies as risky are blocked and Claude may try a different approach. Ideal for long-running tasks.
+  Sessions are slightly more expensive. Claude can make mistakes that allow harmful commands to run, it's
+  recommended to only use in isolated environments. Shift+Tab to change mode.
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ FM_DISCARD_c6b6d76810ff7bacd14677f3ea86bde7zsh: suspended (signal)  env -u CLAUDECODE  DISABLE_AUTOUPDATER=1  CLAUDE_C
+ODE_SEND_FEEDBACK=0       '─────────────────────────────────────────────────────────────────────────────────────────────
+mremond@mac-mini project % fg
+[1]  + continued  env -u CLAUDECODE  DISABLE_AUTOUPDATER=1  CLAUDE_CODE_SEND_FEEDBACK=0       '
+ ▐▛███▛█   Claude Code v2.1.292
+▝▜██████▀  Opus 5.5 · API Usage Billing
+ ▝▝   ▝▝   ~/…/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.uhwuCH/stall-empty/project
+
+▎ Debug mode enabled · logging to /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-62
+▎ 02/tmp/fm-native-live.uhwuCH/stall-empty/claude-debug.log
+
+⏺ Auto mode lets Claude handle permission prompts automatically — Claude checks each tool call for risky actions
+  and prompt injection before executing. Actions Claude identifies as safe are executed, while actions Claude
+  identifies as risky are blocked and Claude may try a different approach. Ideal for long-running tasks.
+  Sessions are slightly more expensive. Claude can make mistakes that allow harmful commands to run, it's
+  recommended to only use in isolated environments. Shift+Tab to change mode.
+
+⏺ native-live-observer: prompt.fill hook skipped: ran past its 10s budget
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ [0m[7m [0m
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ auto mode on (shift+tab to cycle) · ← for agents                                       Not logged in · Run /login

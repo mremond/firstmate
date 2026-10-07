@@ -1,0 +1,5 @@
+{
+  "stdout": "",
+  "stderr": "native-control: [Errno 2] No such file or directory: '/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.uhwuCH/home/state/.guard-missing.native-ycfgjbuu/ready.json'\nerror: native discard capability unavailable; nothing discarded\n",
+  "exit": 1
+}

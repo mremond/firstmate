@@ -1,0 +1,34 @@
+mremond@mac-mini project % env -u CLAUDECODE PATH=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQ
+HB3V6A5/.test-6202/tmp/fm-native-live.uhwuCH/bin:/opt/homebrew/Caskroom/codex/0.160.0/codex-path:/Users/mremond/.local/b
+in:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/
+run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/b
+ootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/
+Library/Apple/usr/bin:/usr/local/MacGPG2/bin:/opt/homebrew/bin:/Users/mremond/.codex/tmp/arg0/codex-arg0E5GU7H:/opt/home
+brew/Caskroom/codex/0.160.0/codex-path:/Users/mremond/.local/bin:/opt/homebrew/sbin:/Users/mremond/go/bin:/Users/mremond
+/.cargo/bin:/Users/mremond/bin:/usr/local/sbin DISABLE_AUTOUPDATER=1 CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION=false CLAUDE_C
+ODE_SEND_FEEDBACK=0 CLAUDE_CONFIG_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.tes
+t-6202/tmp/fm-native-live.uhwuCH/guard-version/claude-config /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10
+ZC7N8D2XBFQHB3V6A5/bin/fm-claude-native-launch.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQ
+HB3V6A5/.test-6202/tmp/fm-native-live.uhwuCH/home/state/.guard-version.native-t21gjww0 --session-id c8205386-b1a1-4655-9
+3b4-2a3e08f6aa6b --setting-sources '' --strict-mcp-config --mcp-config '{"mcpServers":{}}' --permission-mode auto --tool
+s '' --debug-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native
+-live.uhwuCH/guard-version/claude-debug.log --plugin-dir /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N
+8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.uhwuCH/guard-version/observer
+ ▐▛███▛█   Claude Code v2.1.292
+▝▜██████▀  Opus 5.5 · API Usage Billing
+ ▝▝   ▝▝   ~/…/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.uhwuCH/guard-version/project
+
+▎ Debug mode enabled · logging to /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-62
+▎ 02/tmp/fm-native-live.uhwuCH/guard-version/claude-debug.log
+
+⏺ Auto mode lets Claude handle permission prompts automatically — Claude checks each tool call for risky actions
+  and prompt injection before executing. Actions Claude identifies as safe are executed, while actions Claude
+  identifies as risky are blocked and Claude may try a different approach. Ideal for long-running tasks.
+  Sessions are slightly more expensive. Claude can make mistakes that allow harmful commands to run, it's
+  recommended to only use in isolated environments. Shift+Tab to change mode.
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ PRESERVE THIS DRAFT[0m[7m [0m
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ auto mode on (shift+tab to cycle)                                                      Not logged in · Run /login
+                                                                                                    ◐ medium · /effort

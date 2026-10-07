@@ -1,0 +1,7 @@
+["pane", "get", "w3:p1"]
+["agent", "get", "w3:p1"]
+["pane", "process-info", "--pane", "w3:p1"]
+["pane", "process-info", "--pane", "w3:p1"]
+["status", "--json"]
+["agent", "get", "w3:p1"]
+["pane", "process-info", "--pane", "w3:p1"]

@@ -1,0 +1,15 @@
+{
+  "target": "b09cdc071ea3471d4f58b2c8a0ab1f548ed84fbf",
+  "tree": "b69d07bf0528ce7ac4adc705e7c883ae87ab48b1",
+  "date": "2026-10-07",
+  "claude": "2.1.292",
+  "herdr": "0.9.1",
+  "protocol": 22,
+  "live_cases_passed": 21,
+  "busy": "untested: normal authenticated launch hit workspace trust; isolated configuration lacks login; global trust and credential mutations prohibited",
+  "focused": "native-control, ordinary-control, send-inbox, task-inbox passed; relaunch initially refused secondmate homes located under code root, then passed from a git-archive copy of the target with sibling temporary homes",
+  "setup_retries": "First delayed-fill setup hit 10-second hook budget; second paused-process setup resumed in background and failed foreground assertion; final run restored foreground with fg and passed both fill variants. First postcondition setup had a driver KeyError; second attempted command rewrite did not delay exit; final 6-second handoff with a 1-second exit wait proved receipt-without-death refusal.",
+  "fixture_scope": "Invocation retirement during final read, malformed/replayed/reloaded protocol, admitted 2.1.288, pending-fill process-death and missing-status paths were covered by fixtures, not live Claude.",
+  "teardown": "Every named lab teardown passed; helper tripwire directory empty before cleanup.",
+  "visual": "Direct pane ANSI snapshots and terminal-captures.html retained; helper only exports text/ANSI, so no native desktop screenshot was taken."
+}

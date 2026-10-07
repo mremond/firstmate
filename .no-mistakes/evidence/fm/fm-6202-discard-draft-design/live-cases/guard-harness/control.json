@@ -1,0 +1,5 @@
+{
+  "stdout": "",
+  "stderr": "error: --discard-pending supports only native Claude 2.1.288 or 2.1.292 on Herdr\n",
+  "exit": 1
+}

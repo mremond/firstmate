@@ -1,0 +1,39 @@
+QHB3V6A5/.test-6202/tmp/fm-native-live.WuYWpE/bin:/opt/homebrew/Caskroom/codex/0.160.0/codex-path:/Users/mremond/.local
+/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/v
+ar/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.syst
+em/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/
+bin:/Library/Apple/usr/bin:/usr/local/MacGPG2/bin:/opt/homebrew/bin:/Users/mremond/.codex/tmp/arg0/codex-arg0E5GU7H:/op
+t/homebrew/Caskroom/codex/0.160.0/codex-path:/Users/mremond/.local/bin:/opt/homebrew/sbin:/Users/mremond/go/bin:/Users/
+mremond/.cargo/bin:/Users/mremond/bin:/usr/local/sbin DISABLE_AUTOUPDATER=1 CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION=false 
+CLAUDE_CODE_SEND_FEEDBACK=0 CLAUDE_CONFIG_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3
+V6A5/.test-6202/tmp/fm-native-live.WuYWpE/receipt-without-death/claude-config /Users/mremond/.no-mistakes/worktrees/acf
+4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/bin/fm-claude-native-launch.sh /Users/mremond/.no-mistakes/worktrees/acf4a767348a/
+01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.WuYWpE/home/state/.receipt-without-death.native-suq6_xdn --ses
+sion-id 6e5dcf1e-598a-4c0e-ad28-6451fdd2bfde --setting-sources '' --strict-mcp-config --mcp-config '{"mcpServers":{}}' 
+--permission-mode auto --tools '' --debug-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB
+3V6A5/.test-6202/tmp/fm-native-live.WuYWpE/receipt-without-death/claude-debug.log --plugin-dir /Users/mremond/.no-mista
+kes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.WuYWpE/receipt-without-death/observ
+er
+ ▐▛███▛█   Claude Code v2.1.292
+▝▜██████▀  Opus 5.5 · API Usage Billing
+ ▝▝   ▝▝   ~/…/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.WuYWpE/receipt-without-death/project
+
+▎ Debug mode enabled · logging to /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6
+▎ 202/tmp/fm-native-live.WuYWpE/receipt-without-death/claude-debug.log
+
+⏺ Auto mode lets Claude handle permission prompts automatically — Claude checks each tool call for risky
+  actions and prompt injection before executing. Actions Claude identifies as safe are executed, while actions
+  Claude identifies as risky are blocked and Claude may try a different approach. Ideal for long-running tasks.
+  Sessions are slightly more expensive. Claude can make mistakes that allow harmful commands to run, it's
+  recommended to only use in isolated environments. Shift+Tab to change mode.
+
+› Prompt from the firstmate-native-control plugin
+❯ /exit
+
+· Whirlpooling…
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ [0m[7m [0m
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ auto mode on (shift+tab to cycle) · esc to interrupt · ← for agents                   Not logged in · Run /login
+                                                                                                   ◐ medium · /effort

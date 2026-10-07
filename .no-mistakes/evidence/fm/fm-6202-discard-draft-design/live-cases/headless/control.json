@@ -1,0 +1,5 @@
+{
+  "stdout": "",
+  "stderr": "native-control: native discard refused: Error: composer unavailable: no_composer; draft-may-be-discarded=False\nerror: native discard refused or unconfirmed; no terminal fallback attempted\n",
+  "exit": 1
+}

@@ -1,0 +1,4 @@
+["pane", "get", "w8:p1"]
+["agent", "get", "w8:p1"]
+["pane", "process-info", "--pane", "w8:p1"]
+["pane", "process-info", "--pane", "w8:p1"]

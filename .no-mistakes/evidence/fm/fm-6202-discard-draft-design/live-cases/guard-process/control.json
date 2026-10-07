@@ -1,0 +1,5 @@
+{
+  "stdout": "",
+  "stderr": "native-control: native capability is stale, unsupported, or belongs to another process\nerror: native discard capability unavailable; nothing discarded\n",
+  "exit": 1
+}

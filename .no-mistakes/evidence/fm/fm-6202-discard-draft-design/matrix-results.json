@@ -1,0 +1,79 @@
+[
+  {
+    "case": "empty",
+    "stdout": "stopped empty harness=claude backend=herdr endpoint=fm-lab-fm-6202-discard-43249-20342:w1:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.TUycej/empty/project\n",
+    "stderr": "{\"nonce\": \"6163b3c74409be803e86d1dbec15b88f\", \"instance\": \"236ae2bc6cbc9efd5d6001694844ce5e\", \"session\": \"21949373-dc24-4868-ac78-0bc4b70d06ea\", \"pid\": 43569, \"task\": \"empty\", \"target\": \"fm-lab-fm-6202-discard-43249-20342:w1:p1\", \"phase\": \"exit-sent\", \"mutated\": true, \"reason\": \"\"}\n",
+    "pid": 43569,
+    "refused": false
+  },
+  {
+    "case": "beginning",
+    "stdout": "stopped beginning harness=claude backend=herdr endpoint=fm-lab-fm-6202-discard-43249-20342:w2:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.TUycej/beginning/project\n",
+    "stderr": "{\"nonce\": \"d688236ce8308fc923c0ffe7adc4b793\", \"instance\": \"e21663695f86d752768dc29e19a18008\", \"session\": \"b9e46b5e-13d7-43b7-91f3-6937629bd3b4\", \"pid\": 45688, \"task\": \"beginning\", \"target\": \"fm-lab-fm-6202-discard-43249-20342:w2:p1\", \"phase\": \"exit-sent\", \"mutated\": true, \"reason\": \"\"}\n",
+    "pid": 45688,
+    "refused": false
+  },
+  {
+    "case": "middle",
+    "stdout": "stopped middle harness=claude backend=herdr endpoint=fm-lab-fm-6202-discard-43249-20342:w3:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.TUycej/middle/project\n",
+    "stderr": "{\"nonce\": \"353879016e37340eb611e9087feaf845\", \"instance\": \"ebcca3559734bec7610ac12e98b6f7d7\", \"session\": \"16991062-8edc-44b7-9478-64562b1a8f73\", \"pid\": 48442, \"task\": \"middle\", \"target\": \"fm-lab-fm-6202-discard-43249-20342:w3:p1\", \"phase\": \"exit-sent\", \"mutated\": true, \"reason\": \"\"}\n",
+    "pid": 48442,
+    "refused": false
+  },
+  {
+    "case": "multiline",
+    "stdout": "stopped multiline harness=claude backend=herdr endpoint=fm-lab-fm-6202-discard-43249-20342:w4:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.TUycej/multiline/project\n",
+    "stderr": "{\"nonce\": \"5b6ff663e5c1f15115b64d5c988bb386\", \"instance\": \"e329ca332006b7f6daf9f8c98ed9163d\", \"session\": \"bc4f670e-e450-47b5-888d-22bacf66f92f\", \"pid\": 49703, \"task\": \"multiline\", \"target\": \"fm-lab-fm-6202-discard-43249-20342:w4:p1\", \"phase\": \"exit-sent\", \"mutated\": true, \"reason\": \"\"}\n",
+    "pid": 49703,
+    "refused": false
+  },
+  {
+    "case": "paste",
+    "stdout": "stopped paste harness=claude backend=herdr endpoint=fm-lab-fm-6202-discard-43249-20342:w5:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.TUycej/paste/project\n",
+    "stderr": "{\"nonce\": \"d61190452841c6aa19b8b6729b8cb095\", \"instance\": \"2ea68e8b2b738a97d14ebec08371e21c\", \"session\": \"d39a3120-d751-40a1-9d23-5014dbbff1f1\", \"pid\": 53682, \"task\": \"paste\", \"target\": \"fm-lab-fm-6202-discard-43249-20342:w5:p1\", \"phase\": \"exit-sent\", \"mutated\": true, \"reason\": \"\"}\n",
+    "pid": 53682,
+    "refused": false
+  },
+  {
+    "case": "literal-markers",
+    "stdout": "stopped literal-markers harness=claude backend=herdr endpoint=fm-lab-fm-6202-discard-43249-20342:w6:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.TUycej/literal-markers/project\n",
+    "stderr": "{\"nonce\": \"f875ce3c78227a67a3e1397a678511e5\", \"instance\": \"cf23ccf3b44ce0b3a2ae30223272752e\", \"session\": \"da5e343e-eda5-4a1b-a747-e193a1b9bbad\", \"pid\": 59163, \"task\": \"literal-markers\", \"target\": \"fm-lab-fm-6202-discard-43249-20342:w6:p1\", \"phase\": \"exit-sent\", \"mutated\": true, \"reason\": \"\"}\n",
+    "pid": 59163,
+    "refused": false
+  },
+  {
+    "case": "image",
+    "stdout": "stopped image harness=claude backend=herdr endpoint=fm-lab-fm-6202-discard-43249-20342:w7:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.TUycej/image/project\n",
+    "stderr": "{\"nonce\": \"19cfc8941fb114e724c8ae9b48b30ebc\", \"instance\": \"168019bb3f0b75550e71d44b9531e19b\", \"session\": \"dab67c09-1c54-4723-8842-b546c5ca7258\", \"pid\": 61304, \"task\": \"image\", \"target\": \"fm-lab-fm-6202-discard-43249-20342:w7:p1\", \"phase\": \"exit-sent\", \"mutated\": true, \"reason\": \"\"}\n",
+    "pid": 61304,
+    "refused": false
+  },
+  {
+    "case": "modal",
+    "stdout": "",
+    "stderr": "native-control: native discard refused: Error: composer unavailable: dialog; draft-may-be-discarded=False\nerror: native discard refused or unconfirmed; no terminal fallback attempted\n",
+    "pid": 63307,
+    "refused": true
+  },
+  {
+    "case": "rewrite",
+    "stdout": "",
+    "stderr": "native-control: native discard refused: Error: sentinel readback failed; draft-may-be-discarded=True\nerror: native discard refused or unconfirmed; no terminal fallback attempted\n",
+    "pid": 64778,
+    "refused": true
+  },
+  {
+    "case": "edit",
+    "stdout": "",
+    "stderr": "native-control: native discard refused: Error: empty readback failed; draft-may-be-discarded=True\nerror: native discard refused or unconfirmed; no terminal fallback attempted\n",
+    "pid": 68376,
+    "refused": true
+  },
+  {
+    "case": "doorbell",
+    "stdout": "stopped doorbell harness=claude backend=herdr endpoint=fm-lab-fm-6202-discard-43249-20342:wB:p1 worktree=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.TUycej/doorbell/project\n",
+    "stderr": "{\"nonce\": \"b5a83d09eaa523171de7ead45d714bec\", \"instance\": \"2b4b33a9e46c97bca5db08a2d7cde334\", \"session\": \"ed962661-97f9-457e-b0a2-7a63a1f8a2d8\", \"pid\": 70427, \"task\": \"doorbell\", \"target\": \"fm-lab-fm-6202-discard-43249-20342:wB:p1\", \"phase\": \"exit-sent\", \"mutated\": true, \"reason\": \"\"}\n",
+    "pid": 70427,
+    "refused": false
+  }
+]

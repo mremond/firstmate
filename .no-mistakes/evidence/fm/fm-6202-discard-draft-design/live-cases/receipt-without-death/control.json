@@ -1,0 +1,5 @@
+{
+  "stdout": "",
+  "stderr": "{\"nonce\": \"1f82fe6f0a137c8209e9be0d2d306cfd\", \"instance\": \"1f0500526d451e801a3781d3f2fdd50b\", \"session\": \"6e5dcf1e-598a-4c0e-ad28-6451fdd2bfde\", \"pid\": 24419, \"task\": \"receipt-without-death\", \"target\": \"fm-lab-fm-6202-discard-24302-29018:w1:p1\", \"phase\": \"exit-sent\", \"mutated\": true, \"reason\": \"\"}\nerror: native exit requested for receipt-without-death but agent-state=alive; exit=unconfirmed\n",
+  "exit": 1
+}

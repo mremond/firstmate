@@ -1,0 +1,17 @@
+mremond@mac-mini project % tail -f /dev/null | env -u CLAUDECODE PATH=/Users/mremond/.no-mistakes/worktrees/acf4a767348
+a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.S284sL/bin:/opt/homebrew/Caskroom/codex/0.160.0/codex-path:/
+Users/mremond/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bi
+n:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security
+.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/
+bin:/pkg/env/global/bin:/Library/Apple/usr/bin:/usr/local/MacGPG2/bin:/opt/homebrew/bin:/Users/mremond/.codex/tmp/arg0/
+codex-arg0E5GU7H:/opt/homebrew/Caskroom/codex/0.160.0/codex-path:/Users/mremond/.local/bin:/opt/homebrew/sbin:/Users/mr
+emond/go/bin:/Users/mremond/.cargo/bin:/Users/mremond/bin:/usr/local/sbin DISABLE_AUTOUPDATER=1 CLAUDE_CODE_ENABLE_PROM
+PT_SUGGESTION=false CLAUDE_CODE_SEND_FEEDBACK=0 CLAUDE_CONFIG_DIR=/Users/mremond/.no-mistakes/worktrees/acf4a767348a/01
+M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.S284sL/headless/claude-config /Users/mremond/.no-mistakes/worktr
+ees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/bin/fm-claude-native-launch.sh /Users/mremond/.no-mistakes/worktrees/acf4a7
+67348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.S284sL/home/state/.headless.native-9ip42to5 --session-i
+d 59eac834-d648-4f22-8311-0d1dbdd9f18e --setting-sources '' --strict-mcp-config --mcp-config '{"mcpServers":{}}' --perm
+ission-mode auto --tools '' --debug-file /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/
+.test-6202/tmp/fm-native-live.S284sL/headless/claude-debug.log --plugin-dir /Users/mremond/.no-mistakes/worktrees/acf4a
+767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.S284sL/headless/observer --print --input-format stream
+-json --output-format stream-json --verbose

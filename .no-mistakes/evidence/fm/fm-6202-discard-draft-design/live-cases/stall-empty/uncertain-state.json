@@ -1,0 +1,22 @@
+{
+  "control_running": true,
+  "input_locked": true,
+  "request": {
+    "task": "stall-empty",
+    "target": "fm-lab-fm-6202-discard-6917-17694:w3:p1",
+    "session": "f9e2db0c-7342-43b1-b52e-32d2f4043f25",
+    "instance": "84572d7f145bad3b2e3bf723af33d237",
+    "pid": 28883,
+    "schema": 1,
+    "discard": true,
+    "nonce": "c6b6d76810ff7bacd14677f3ea86bde7",
+    "caller": 30138,
+    "owner": 29513,
+    "expires": 1791371677.062772,
+    "fill_pending": true,
+    "revoked": true
+  },
+  "queued_message": "schema=fm-task-inbox.v1\nat=2026-10-07T11:14:37Z\n--\nRetain this steer through the uncertain stalled clear.",
+  "send_stdout": "",
+  "send_stderr": "WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.\nfm-send: doorbell deferred while task input is locked; the steer is durably recorded at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4AX10ZC7N8D2XBFQHB3V6A5/.test-6202/tmp/fm-native-live.uhwuCH/home/state/stall-empty.inbox/001.msg and the watcher will re-ring\n"
+}

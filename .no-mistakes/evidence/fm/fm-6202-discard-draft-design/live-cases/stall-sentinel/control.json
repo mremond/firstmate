@@ -1,0 +1,5 @@
+{
+  "stdout": "",
+  "stderr": "native discard timed out at fill-issued: uncertain, the clear may still land; retaining input lock until any issued replacement settles or Claude stops\nnative-control: native discard timed out; outcome uncertain; do not retry blindly\nerror: native discard refused or unconfirmed; no terminal fallback attempted\n",
+  "exit": 1
+}
