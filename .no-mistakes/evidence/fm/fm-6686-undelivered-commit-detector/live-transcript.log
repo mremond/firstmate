@@ -1,0 +1,12 @@
+eligible: state: committed-not-shipped · source: git · head: 8a01a1f4c86d2063928aaa72831050197752cd22; 2 commit(s) ahead of main; clean idle ship has no no-mistakes run
+dirty: state: unknown · source: none · no current-state source available
+busy: state: working · source: pane · harness busy (claude-hook)
+fresh: state: done · source: status-log · handoff
+expired: state: committed-not-shipped · source: git · head: 8a01a1f4c86d2063928aaa72831050197752cd22; 2 commit(s) ahead of main; clean idle ship has no no-mistakes run
+untimed: state: committed-not-shipped · source: git · head: 8a01a1f4c86d2063928aaa72831050197752cd22; 2 commit(s) ahead of main; clean idle ship has no no-mistakes run
+check: committed-not-shipped: task head=8a01a1f4c86d2063928aaa72831050197752cd22
+1791810683	1	check	committed-not-shipped:task:8a01a1f4c86d2063928aaa72831050197752cd22	check: committed-not-shipped: task head=8a01a1f4c86d2063928aaa72831050197752cd22
+default: no worker message
+second check: queue remains one
+check: committed-not-shipped: task head=1bbfae7d03399ddfe54a615ffd9754eed15df46b (opt-in pipeline steer could not be delivered)
+cat: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4R354Y15JCR9DTWAA9Y4WJP/.test-live/home/state/task.inbox/*.msg: No such file or directory
