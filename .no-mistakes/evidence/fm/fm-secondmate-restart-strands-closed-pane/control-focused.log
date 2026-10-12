@@ -25,6 +25,6 @@ ok - fm-control relaunch: the retired incarnation's global turn-end token is rev
 ok - fm-control relaunch: wiring cleanup failure refuses replacement arming
 ok - fm-control-lib: one owner resolves each harness's turn-end registry entry, and refuses a malformed token
 not ok - a configured secondmate harness should relaunch
-error: secondmate home cannot be inside the firstmate repo: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4R08GSF08B80C9A2QZ1YKYV/.test-live-tmp/fm-control-relaunch.wlYWdd/smpin-8004/smhome
+error: secondmate home cannot be inside the firstmate repo: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4R08GSF08B80C9A2QZ1YKYV/.test-tmp/fm-control-relaunch.kaUQgE/smpin-17817/smhome
 error: the replacement agent for sm3 could not be launched on codex
-error: sm3's agent was stopped but the replacement did not launch; no agent is running, and its work plus the recorded progress note are preserved at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4R08GSF08B80C9A2QZ1YKYV/.test-live-tmp/fm-control-relaunch.wlYWdd/smpin-8004/smhome: expected exit 0, got 1
+error: sm3's agent was stopped but the replacement did not launch; no agent is running, and its work plus the recorded progress note are preserved at /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4R08GSF08B80C9A2QZ1YKYV/.test-tmp/fm-control-relaunch.kaUQgE/smpin-17817/smhome: expected exit 0, got 1
