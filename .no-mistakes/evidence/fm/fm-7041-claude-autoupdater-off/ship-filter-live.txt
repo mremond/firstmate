@@ -1,0 +1,12 @@
+/var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T//fm-lab.LDSihG
+[
+  {
+    "pid": "72096",
+    "command": "claude",
+    "environment": {
+      "DISABLE_AUTOUPDATER": "1",
+      "CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION": "false",
+      "FM_HOME": null
+    }
+  }
+]

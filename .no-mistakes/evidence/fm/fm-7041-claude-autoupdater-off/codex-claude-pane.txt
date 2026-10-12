@@ -1,0 +1,40 @@
+mremond@mac-mini demo % treehouse get
+🌳 Setting up worktree...
+🌳 Entered worktree at /var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/fm-lab.LdjNId/pool/.treehouse/demo-5df754/1/demo
+. Type 'exit' to return.
+mremond@mac-mini demo % cd -- '/private/var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/fm-lab.LdjNId/pool/.treehouse/de
+mo-5df754/1/demo'
+mremond@mac-mini demo % export GOTMPDIR=/tmp/fm-AU-live/gotmp
+mremond@mac-mini demo % export COMPACT_ADVISER_DISABLE=1
+mremond@mac-mini demo % export FM_TASK_ID=AU-live
+mremond@mac-mini demo % . '/tmp/fm-AU-live+ae31493a55237ff87619a40c32b8c37e67172f50cfeb11949a2a1d3fd8cc6f84/launch.s1791
+807960.6668.1286.sh'
+WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary di
+r "/var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/" (codex_home: AbsolutePathBuf("/var/folders/_v/ydbf105x0n9bnb74b098
+5xt40000gn/T/fm-lab.LdjNId/user/.codex"))
+codex-cli 0.160.0
+UPDATER_VALUE=<unset>
+mremond@mac-mini demo %
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

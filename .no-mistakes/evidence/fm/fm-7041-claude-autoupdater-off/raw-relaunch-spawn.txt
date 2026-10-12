@@ -1,0 +1,4 @@
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T//fm-lab.OTNYPc
+spawned AU-live harness=claude kind=scout window=primary:fm-AU-live worktree=/private/var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/fm-lab.OTNYPc/pool/.treehouse/demo-c859c5/1/demo
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T//fm-lab.OTNYPc
+spawned AU-live harness=claude kind=scout window=primary:fm-AU-live worktree=/private/var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/fm-lab.OTNYPc/pool/.treehouse/demo-c859c5/1/demo

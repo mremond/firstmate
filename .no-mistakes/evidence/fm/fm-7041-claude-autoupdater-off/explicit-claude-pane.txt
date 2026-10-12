@@ -1,0 +1,40 @@
+mremond@mac-mini demo % treehouse get
+🌳 Setting up worktree...
+🌳 Entered worktree at /var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/fm-lab.QmwHcs/pool/.treehouse/demo-43aafd/1/demo
+. Type 'exit' to return.
+mremond@mac-mini demo % cd -- '/private/var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/fm-lab.QmwHcs/pool/.treehouse/de
+mo-43aafd/1/demo'
+mremond@mac-mini demo % export GOTMPDIR=/tmp/fm-AU-live/gotmp
+mremond@mac-mini demo % export COMPACT_ADVISER_DISABLE=1
+mremond@mac-mini demo % export FM_TASK_ID=AU-live
+mremond@mac-mini demo % . '/tmp/fm-AU-live+507096d8fa82bd0b24c500545598c3c69c80d383f2dba44e9ed222eccb61dd3b/launch.s1791
+807930.93770.23118.sh'
+2.1.108 (Claude Code)
+UPDATER_VALUE=<explicit ' value>
+mremond@mac-mini demo %
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

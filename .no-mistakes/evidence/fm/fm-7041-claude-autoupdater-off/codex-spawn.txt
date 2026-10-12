@@ -1,0 +1,2 @@
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T//fm-lab.LdjNId
+spawned AU-live harness=codex kind=scout window=primary:fm-AU-live worktree=/private/var/folders/_v/ydbf105x0n9bnb74b0985xt40000gn/T/fm-lab.LdjNId/pool/.treehouse/demo-5df754/1/demo
