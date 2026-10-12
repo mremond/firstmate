@@ -1,0 +1,68 @@
+Note: switching to 'ea48630bca654d0062a30f135aa77a6284e3bf85'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+ok - remote-backed subhome seeding names the mismatched clones without repeating their origins
+Note: switching to 'ea48630bca654d0062a30f135aa77a6284e3bf85'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+ok - seeding points at the source clone instead of printing its origin when the seeded clone has none
+ok - remote seeding names the refused command-line argument without echoing the origin back
+ok - remote seeding names the clone that supplied a refused origin without printing it
+Note: switching to 'ea48630bca654d0062a30f135aa77a6284e3bf85'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+ok - home seeding resolves relative source origins against the source project
+
+Scenario: wrong-origin
+error: seeded project alpha at /Users/mremond/.no-mistakes/evidence/01M4R06WRB39DPDHGFYC70PSGR/disposable-origin-fixtures/fm-secondmate-safety.pz0U7s/wrong-origin-subhome/projects/alpha has a different origin than the source clone at /Users/mremond/.no-mistakes/evidence/01M4R06WRB39DPDHGFYC70PSGR/disposable-origin-fixtures/fm-secondmate-safety.pz0U7s/wrong-origin-home/projects/alpha; read each clone's "git remote get-url origin" to compare them
+
+Scenario: missing-dst-origin
+error: seeded project alpha at /Users/mremond/.no-mistakes/evidence/01M4R06WRB39DPDHGFYC70PSGR/disposable-origin-fixtures/fm-secondmate-safety.pz0U7s/missing-dst-origin-subhome/projects/alpha has no origin remote; it must match the origin of the source clone at /Users/mremond/.no-mistakes/evidence/01M4R06WRB39DPDHGFYC70PSGR/disposable-origin-fixtures/fm-secondmate-safety.pz0U7s/missing-dst-origin-home/projects/alpha
+
+Scenario: remote-supplied-origin
+error: project alpha origin is not an accepted clone URL; check the origin you passed as alpha=<origin-url>
+
+Scenario: remote-clone-origin
+error: project alpha origin is not an accepted clone URL; inspect the origin of the clone at /Users/mremond/.no-mistakes/evidence/01M4R06WRB39DPDHGFYC70PSGR/disposable-origin-fixtures/fm-secondmate-safety.pz0U7s/remote-clone-origin-home/projects/alpha, or pass an accepted one as alpha=<origin-url>
