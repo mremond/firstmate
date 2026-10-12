@@ -1,0 +1,4 @@
+ok - T1 persist is a gate, and asks for open records and task status only
+not ok - restart should complete while the liveness tick defers
+unreached: sm1: the restart outcome is unknown: secondmate home cannot be inside the firstmate repo: /Users/mremond/.no-mistakes/worktrees/acf4a767348a/01M4R08GSF08B80C9A2QZ1YKYV/.test-live-tmp/fm-secondmate-restart.IPlyO5/liveness-restart-27742/sm1-home
+summary: 0 of 1 restarted, 0 nudged, 1 unreached: expected exit 0, got 3
